@@ -28,24 +28,54 @@ MCP 生態現在的問題不是「找不到」——中文圈已經有魔搭、�
 
 ## 安裝
 
-需求：Python 3.9+、[GitHub CLI](https://cli.github.com/)（已 `gh auth login`）。
+需求：Python 3.9+、[GitHub CLI](https://cli.github.com/)（需已執行 `gh auth login`）。
 
 ```bash
-git clone <this-repo> && cd mcp-guard
+git clone https://github.com/rfobelieve-crypto/mcp-guard
+cd mcp-guard
+pip install .
 ```
 
-無第三方相依，直接可跑。
+**零第三方相依**——一個稽核工具不該反過來擴大你的供應鏈。
 
 ## 用法
 
+安裝後在任何目錄都能直接使用：
+
 ```bash
-python -m mcp_guard owner/repo                      # GitHub 專案
-python -m mcp_guard https://github.com/owner/repo    # 網址亦可
-python -m mcp_guard npm:some-mcp-server              # 從 npm 套件反查
-python -m mcp_guard owner/repo --md 報告.md          # 輸出 Markdown 報告
+mcp-guard owner/repo                       # GitHub 專案
+mcp-guard https://github.com/owner/repo    # 貼網址亦可
+mcp-guard npm:some-mcp-server              # 從 npm 套件反查原始碼
+mcp-guard owner/repo --md 報告.md          # 輸出完整 Markdown 報告
 ```
 
-退出碼：`0` = 未發現明顯風險、`1` = 嚴重或多項高風險（可直接接進 CI）。
+不想安裝也可以直接跑：`python -m mcp_guard owner/repo`
+
+退出碼：`0` = 未發現明顯風險、`1` = 嚴重或多項高風險，可直接接進 CI：
+
+```yaml
+- run: mcp-guard ${{ matrix.mcp }}     # 有風險就讓 job 失敗
+```
+
+### 怎麼判讀結果
+
+| 結論 | 意思 | 該怎麼做 |
+|---|---|---|
+| 🔴 不要安裝 | 出現找不到正當理由的問題（repo 不存在、描述投毒、隱藏字元） | 別裝 |
+| 🟡 需人工複核 | 有需要你自己判斷的項目 | 重點看標示 **⚠ 超出宣稱用途** 的那幾行 |
+| 🟢 未發現明顯風險 | 已知風險樣式均未命中 | 可裝，但憑證只給最小權限 |
+
+兩個最該留意的字樣：
+
+- **`⚠ …（超出宣稱用途）`** — 它要的權限超出它自稱的功能範圍
+- **`安裝時會自動執行腳本：postinstall`** — 你還沒開始用，程式碼就已經跑過一次
+
+### 批次掃描
+
+```bash
+python batch.py              # 掃內建名單，產出總表 + 個別報告到 reports/
+python batch.py 清單.txt      # 自訂名單，一行一個 owner/repo
+```
 
 ---
 
