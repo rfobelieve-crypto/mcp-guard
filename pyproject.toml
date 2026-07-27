@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-guard"
+version = "0.1.0"
+description = "MCP 安檢：安裝任何 MCP 前，先看清楚它是誰、要什麼權限、有沒有對模型下暗示"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []          # 刻意零相依：稽核工具本身不該擴大供應鏈
+
+[project.urls]
+Homepage = "https://github.com/rfobelieve-crypto/mcp-guard"
+
+[project.scripts]
+mcp-guard = "mcp_guard.cli:main"
+
+[tool.setuptools]
+packages = ["mcp_guard"]

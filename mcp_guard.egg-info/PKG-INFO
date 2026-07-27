@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: mcp-guard
+Version: 0.1.0
+Summary: MCP 安檢：安裝任何 MCP 前，先看清楚它是誰、要什麼權限、有沒有對模型下暗示
+License: MIT
+Project-URL: Homepage, https://github.com/rfobelieve-crypto/mcp-guard
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# MCP 安檢 · mcp-guard
+
+**安裝任何 MCP 之前，先看清楚它是誰、要什麼權限、有沒有對模型下暗示。**
+
+繁體中文優先的 MCP 獨立安全稽核工具。唯讀、不執行目標程式碼、結果可自行複現。
+
+---
+
+## 為什麼需要這個
+
+MCP 生態現在的問題不是「找不到」——中文圈已經有魔搭、百度、阿里雲百煉、騰訊雲等
+好幾個 MCP 廣場，數量以千計。真正缺的是**敢不敢裝**的那個判斷。
+
+而廣場方有結構性的利益衝突：**平台不會公告自己上架的東西有毒**。
+
+這個工具處理的是廣場不會幫你做的事：
+
+| 情境 | 廣場會告訴你嗎 |
+|---|---|
+| 社群瘋傳的安裝指令，其實 repo 根本不存在（名稱可被任意搶註） | ❌ |
+| 套件 `postinstall` 在你安裝當下就執行了程式碼 | ❌ |
+| npm 套件宣稱的來源跟實際 repo 對不上（仿冒） | ❌ |
+| **工具描述裡藏著給模型看、你看不到的指令** | ❌ |
+
+最後一項是 MCP 獨有的攻擊面，也是本工具的重點。
+
+---
+
+## 安裝
+
+需求：Python 3.9+、[GitHub CLI](https://cli.github.com/)（已 `gh auth login`）。
+
+```bash
+git clone <this-repo> && cd mcp-guard
+```
+
+無第三方相依，直接可跑。
+
+## 用法
+
+```bash
+python -m mcp_guard owner/repo                      # GitHub 專案
+python -m mcp_guard https://github.com/owner/repo    # 網址亦可
+python -m mcp_guard npm:some-mcp-server              # 從 npm 套件反查
+python -m mcp_guard owner/repo --md 報告.md          # 輸出 Markdown 報告
+```
+
+退出碼：`0` = 未發現明顯風險、`1` = 嚴重或多項高風險（可直接接進 CI）。
+
+---
+
+## 五項檢查
+
+| 檢查 | 抓什麼 |
+|---|---|
+| **身分** | repo／作者是否真的存在、是否為新建搶註、是否已封存、授權 |
+| **供應鏈** | `preinstall`/`postinstall` 安裝期腳本、依賴是否鎖版、npm 與 repo 是否對應 |
+| **權限** | 是否開子行程、`eval`、讀寫檔案、讀環境變數、連往哪些外部主機、需要哪些金鑰 |
+| **工具描述投毒** | 描述中要求模型「忽略先前指令／對使用者隱瞞／強制先呼叫某工具」、提及憑證路徑、異常冗長、**零寬與雙向覆寫字元** |
+| **維護** | 最後更新距今多久、未處理 issue 數 |
+
+工具描述會從三種寫法抽取：JS/TS 的 `description:` 欄位、Python `@mcp.tool()`
+裝飾函式的 docstring、以及 `server.tool("名稱", "描述", …)` 位置參數。
+
+## 紅隊測試
+
+偵測器最危險的失敗是**靜默漏報**，因此樣本測試常駐：
+
+```bash
+python -m tests.test_poisoning
+```
+
+涵蓋 5 種真實投毒手法 + 2 個乾淨樣本（確認不誤報）。
+
+---
+
+## 這份工具不保證什麼
+
+- 這是**靜態稽核**：只讀原始碼與公開中繼資料，**不執行**目標程式，
+  因此無法涵蓋只在執行期出現的行為（動態下載、遠端下發指令等）。
+- 「未發現明顯風險」代表已知樣式沒命中，**不等於安全背書**。
+- 遠端型（hosted）MCP 的真實行為在對方伺服器上，原始碼不代表線上版本。
+- 安裝任何 MCP，都請只給**最小權限、可隨時撤銷**的憑證。
+
+## 給被列出的專案維護者：更正政策
+
+本專案會公開指名真實專案的稽核結果，因此把更正管道寫在最前面：
+
+1. **我們預設自己會錯。** 開發過程中，本工具對 Figma-Context-MCP、git-mcp、
+   Windows-MCP、DesktopCommanderMCP、BrowserMCP 產生過 6 次誤報，全部在發布前
+   被攔下並修正，誤報樣本已原文收進 `tests/` 當回歸測試。
+2. **認為結果有誤，請開 issue**，附上你認為被誤判的項目。經確認的誤報會：
+   - 立即修正報告，並在該報告標註更正紀錄；
+   - 把該案例加進 `tests/` 的乾淨樣本，確保不再重犯。
+3. **🟡 不是指控。** 它代表「有需要人工判讀的項目」，最常見的原因是這個工具
+   本來就需要大權限。我們刻意不用單一分數掩蓋這件事。
+4. 所有結論都附**可自行複現的證據**（檔案路徑與原文片段）。你可以自己跑
+   `python -m mcp_guard <你的專案>` 得到相同結果。
+
+## 路線圖
+
+- [ ] 沙箱實跑：在隔離環境啟動 server、實際 `list_tools` 比對宣告與實際暴露的工具
+- [ ] 批次掃描 + 靜態站台：產出前 100 個常用 MCP 的中文安檢報告
+- [ ] 已知惡意／搶註名稱清單
+- [ ] PyPI 生態支援（目前供應鏈檢查以 npm 為主）
