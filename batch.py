@@ -1,0 +1,140 @@
+# -*- coding: utf-8 -*-
+"""批次安檢：掃一批 MCP 專案，產出總表 + 個別報告。
+
+用法：
+    python batch.py                 # 掃內建名單
+    python batch.py 清單.txt         # 一行一個 owner/repo
+輸出：
+    reports/總表.md      排序後的安檢總表
+    reports/<repo>.md    個別完整報告
+"""
+from __future__ import annotations
+
+import sys
+import time
+import traceback
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from mcp_guard.checks import CRITICAL, HIGH, LOW, MEDIUM, run_all
+from mcp_guard.fetch import collect
+from mcp_guard.report import render, verdict
+
+OUT = Path(__file__).resolve().parent / "reports"
+
+# 首批名單：實際是 MCP server / 官方工具，且以高星與台港常用場景為主。
+# 刻意納入幾個「權限天生就大」的（桌面控制、瀏覽器、資料庫），
+# 因為那正是使用者最需要在安裝前看懂的類型。
+TARGETS = [
+    "modelcontextprotocol/servers",
+    "modelcontextprotocol/inspector",
+    "modelcontextprotocol/registry",
+    "microsoft/playwright-mcp",
+    "github/github-mcp-server",
+    "googleapis/mcp-toolbox",
+    "GLips/Figma-Context-MCP",
+    "hangwin/mcp-chrome",
+    "wonderwhy-er/DesktopCommanderMCP",
+    "CursorTouch/Windows-MCP",
+    "idosal/git-mcp",
+    "firecrawl/firecrawl-mcp-server",
+    "BrowserMCP/mcp",
+    "awslabs/mcp",
+    "LaurieWired/GhidraMCP",
+    "DeusData/codebase-memory-mcp",
+    "BeehiveInnovations/pal-mcp-server",
+    "PrefectHQ/fastmcp",
+]
+
+RANK = {"🔴 不要安裝": 0, "🟡 需人工複核": 1, "🟢 未發現明顯風險": 2}
+
+
+def scan_one(slug: str) -> dict:
+    b = collect(slug)
+    findings = run_all(b)
+    v, why = verdict(findings)
+    OUT.mkdir(exist_ok=True)
+    safe = slug.replace("/", "__")
+    (OUT / f"{safe}.md").write_text(render(b, findings, slug), encoding="utf-8")
+    return {
+        "slug": slug,
+        "verdict": v,
+        "stars": b.meta.get("stargazers_count", 0) if b.exists else 0,
+        "pushed": (b.meta.get("pushed_at", "") or "")[:10],
+        "files": len(b.files),
+        "crit": sum(f.severity == CRITICAL for f in findings),
+        "high": sum(f.severity == HIGH for f in findings),
+        "med": sum(f.severity == MEDIUM for f in findings),
+        "poison": sum(f.check == "工具描述投毒" and f.severity == CRITICAL
+                      for f in findings),
+        "top": next((f.title for f in findings
+                     if f.severity in (CRITICAL, HIGH)), "—"),
+    }
+
+
+def main() -> int:
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+    targets = TARGETS
+    if len(sys.argv) > 1:
+        targets = [ln.strip() for ln in
+                   Path(sys.argv[1]).read_text(encoding="utf-8").splitlines()
+                   if ln.strip() and not ln.startswith("#")]
+
+    rows, t0 = [], time.time()
+    for i, slug in enumerate(targets, 1):
+        print(f"[{i}/{len(targets)}] {slug} …", flush=True)
+        try:
+            r = scan_one(slug)
+            rows.append(r)
+            print(f"    {r['verdict']}  嚴重{r['crit']} 高{r['high']} "
+                  f"中{r['med']}  ({r['files']} 檔)", flush=True)
+        except Exception as e:
+            print(f"    掃描失敗：{type(e).__name__}: {e}", flush=True)
+            traceback.print_exc()
+
+    rows.sort(key=lambda r: (RANK.get(r["verdict"], 9), -r["high"], -r["stars"]))
+
+    md = [
+        "# MCP 安檢總表",
+        "",
+        f"掃描時間：{time.strftime('%Y-%m-%d %H:%M')}　"
+        f"對象：{len(rows)} 個專案　耗時 {time.time()-t0:.0f} 秒",
+        "",
+        "> 這是**靜態稽核**結果：只讀原始碼與公開中繼資料，不執行目標程式。",
+        "> 「未發現明顯風險」代表已知樣式沒命中，**不等於安全背書**。",
+        "> 權限大不等於惡意——工具型 MCP 本來就需要大權限，重點是你**知情**。",
+        "",
+        "| 專案 | 結論 | ⭐ | 嚴重 | 高 | 中 | 投毒 | 最主要風險 | 最後更新 |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in rows:
+        md.append(
+            f"| [`{r['slug']}`](https://github.com/{r['slug']}) | {r['verdict']} "
+            f"| {r['stars']:,} | {r['crit']} | {r['high']} | {r['med']} "
+            f"| {r['poison']} | {r['top']} | {r['pushed']} |")
+
+    md += [
+        "",
+        "## 怎麼讀這張表",
+        "",
+        "- **🔴 不要安裝**：出現嚴重問題（倉庫不存在、工具描述投毒、隱藏字元等）。",
+        "- **🟡 需人工複核**：有高風險項目——多半是「會開子行程」「會讀寫檔案」，",
+        "  對桌面控制、瀏覽器、資料庫類 MCP 屬正常，但你必須知道自己授予了什麼。",
+        "- **投毒欄**：工具描述中偵測到可疑指令的數量，**這欄非 0 就要停下來看**。",
+        "",
+        "個別完整報告見同目錄下 `<owner>__<repo>.md`。",
+        "",
+        "*由 MCP 安檢（mcp-guard）產生 · 繁體中文*",
+    ]
+    OUT.mkdir(exist_ok=True)
+    (OUT / "總表.md").write_text("\n".join(md), encoding="utf-8")
+    print(f"\n完成：{len(rows)} 個，總表 → reports/總表.md")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
