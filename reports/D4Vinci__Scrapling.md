@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `D4Vinci/Scrapling` |
 | 專案說明 | 🕷️ An adaptive Web Scraping framework that handles everything from a single requ |
-| 星數 / Fork | ⭐ 71534 / 7094 |
+| 星數 / Fork | ⭐ 71541 / 7096 |
 | 最後更新 | 2026-07-27 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
 | 已掃描檔案 | 211 個 |
-| 檢查時間 | 2026-07-28 14:57 |
+| 檢查時間 | 2026-07-28 16:03 |
 
 ## 風險摘要
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 71534｜fork 7094｜語言 Python｜建立 2024-10-13｜最後推送 2026-07-27
+⭐ 71541｜fork 7096｜語言 Python｜建立 2024-10-13｜最後推送 2026-07-27
 
 ---
 

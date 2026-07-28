@@ -11,7 +11,7 @@
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 15:02 |
+| 檢查時間 | 2026-07-28 16:07 |
 
 ## 風險摘要
 

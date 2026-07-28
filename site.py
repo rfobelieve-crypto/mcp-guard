@@ -265,6 +265,46 @@ summary:hover{background:var(--surface-2)}
 .pub[data-k="domain"]{color:var(--ink-2)}
 .pub[data-k="none"]{opacity:.55}
 
+/* 簡介：收合狀態就要看得到。限制兩行，長描述不會把列撐開破壞掃讀節奏。 */
+.brief{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;margin-top:6px;font-size:12.5px;line-height:1.55;
+  color:var(--muted);max-width:92ch}
+.brief i{font-style:normal;opacity:.6}
+.cat{display:inline-block;font-size:11px;color:var(--ink-2);
+  border:1px solid var(--line);border-radius:3px;padding:1px 6px;
+  margin-right:8px;white-space:nowrap;vertical-align:1px}
+
+/* 用途篩選：和結論篩選分開兩排——它們是不同的問題（是幹嘛的／安不安全） */
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.cat-chip{font-size:12.5px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  cursor:pointer;transition:.18s;font-family:inherit}
+.cat-chip:hover{color:var(--ink-2);border-color:var(--ink-2)}
+.cat-chip[aria-pressed="true"]{background:var(--surface-2);color:var(--ink);
+  border-color:var(--seal)}
+.cat-chip b{font-family:var(--mono);font-size:11px;font-weight:400;
+  opacity:.6;margin-left:5px}
+.hits{font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  margin-left:auto;white-space:nowrap}
+.hits b{color:var(--ink-2);font-weight:400}
+
+/* ── 該裝哪個 ─────────────────────────────────────────── */
+.scenes{display:flex;flex-direction:column;gap:66px}
+.scene h2{font-size:clamp(21px,2.5vw,29px);letter-spacing:-.025em;max-width:24ch}
+.scene .lede{margin-top:12px;font-size:15px;max-width:62ch}
+.pk-list{margin-top:26px;border-top:1px solid var(--line)}
+.pk{display:grid;grid-template-columns:auto 1fr auto;gap:16px;
+  align-items:center;padding:15px 0;border-bottom:1px solid var(--line);
+  text-decoration:none;color:inherit;transition:padding-left .28s var(--ease)}
+.pk:hover{padding-left:10px}
+.pk:hover .name{color:var(--seal)}
+.pk-b{min-width:0}
+.pk-d{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-more{display:inline-block;margin-top:18px;font-size:13.5px;
+  color:var(--seal);text-decoration:none;border-bottom:1px solid transparent}
+.pk-more:hover{border-bottom-color:var(--seal)}
+
 .name{font-family:var(--mono);font-size:14px;font-weight:600;
   word-break:break-all}
 .top{font-size:12.5px;color:var(--muted);margin-top:4px}
@@ -613,21 +653,38 @@ FILTER_JS = """
 (function(){
   var rows=[].slice.call(document.querySelectorAll('details.row'));
   var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var cats=[].slice.call(document.querySelectorAll('.cat-chip'));
   var q=document.getElementById('q'), empty=document.getElementById('empty');
-  var filter='all';
+  var count=document.getElementById('count');
+  // 兩個獨立維度：結論（安不安全）與用途（是幹嘛的）。
+  // 使用者的問題通常是「我要找瀏覽器工具，而且要能裝的」——兩者要能疊加。
+  var filter='all', cat='all';
   function apply(){
     var t=(q.value||'').toLowerCase().trim(), shown=0;
     rows.forEach(function(r){
       var vis=(filter==='all'||r.dataset.v===filter) &&
+              (cat==='all'||r.dataset.c===cat) &&
               (!t||r.dataset.search.indexOf(t)>-1);
       r.hidden=!vis; if(vis) shown++;
     });
     empty.hidden=shown>0;
+    if(count) count.textContent=shown;
   }
   chips.forEach(function(c){ c.addEventListener('click',function(){
     chips.forEach(function(o){o.setAttribute('aria-pressed',o===c);});
     filter=c.dataset.f; apply(); }); });
+  cats.forEach(function(c){ c.addEventListener('click',function(){
+    cats.forEach(function(o){o.setAttribute('aria-pressed',o===c);});
+    cat=c.dataset.c; apply(); }); });
   q.addEventListener('input',apply);
+
+  // 從網址帶入分類：/registry/?c=browser 可以直接連到某一類，
+  // 「該裝什麼」那一頁就靠這個把讀者送過來。
+  var want=new URLSearchParams(location.search).get('c');
+  if(want){
+    var hit=cats.filter(function(c){return c.dataset.c===want;})[0];
+    if(hit) hit.click();
+  }
 })();
 """
 
@@ -664,9 +721,11 @@ def render_rows(projects: list) -> str:
     for p in projects:
         v = VKEY.get(p["verdict"][0], "pass")
         label = p["verdict"][2:]
-        # 發布者身分也進搜尋字串：想只看官方發布的，直接搜「官方」就行
+        # 用途、簡介、topics、發布者身分全部進搜尋字串：使用者想的是
+        # 「我要找瀏覽器的」而不是「我要找 idosal/git-mcp」。
         search = (f"{p['slug']} {p.get('desc','')} {p['top']} "
-                  f"{p.get('pub','')}").lower()
+                  f"{p.get('pub','')} {p.get('profile_zh','')} "
+                  f"{' '.join(p.get('topics') or [])}").lower()
         fs = []
         for f in p["findings"]:
             ev = (f'<div class="ev">{esc(f["evidence"])}</div>'
@@ -680,15 +739,22 @@ def render_rows(projects: list) -> str:
         top = esc(p["top"])
         if "超出宣稱用途" in p["top"] or p["crit"]:
             top = f"<b>{top}</b>"
+        # 簡介必須在收合狀態就看得到——「這東西是幹嘛的」是掃讀時最先要
+        # 回答的問題，藏在展開後等於沒有。原文照登不翻譯：那是專案自述，
+        # 改寫它就是在替別人說話。
+        desc = (p.get("desc") or "").strip()
+        brief = (f'<span class="brief">'
+                 f'<span class="cat">{esc(p.get("profile_zh", ""))}</span>'
+                 f'{esc(desc) if desc else "<i>此專案未填寫說明</i>"}</span>')
         out.append(
-            f'<details class="row rv" data-v="{v}" data-search="{esc(search)}">'
+            f'<details class="row rv" data-v="{v}" '
+            f'data-c="{esc(p.get("profile", ""))}" data-search="{esc(search)}">'
             f'<summary><span class="seal {v}">{esc(label)}</span>'
             f'<span><span class="name">{esc(p["slug"])}</span>'
             f'{pub_tag(p)}'
-            f'<span class="top">{top}</span></span>'
+            f'<span class="top">{top}</span>{brief}</span>'
             f'<span class="nums">★{p["stars"]:,}<br>{esc(p["pushed"])}</span>'
             f'</summary><div class="body">'
-            f'<p class="desc">{esc(p.get("desc") or "（此專案未填寫說明）")}</p>'
             f'{"".join(fs)}<p class="links">'
             f'<a href="https://github.com/{esc(p["slug"])}" target="_blank" '
             f'rel="noopener">GitHub 專案 ↗</a>　'
@@ -702,9 +768,37 @@ def render_rows(projects: list) -> str:
 # 每頁都是獨立 HTML 檔（目錄形式），因此在 Vercel 與 GitHub Pages 的子路徑
 # 部署下都能運作——資源一律用相對路徑，不用絕對路徑。
 PAGES = [
+    ("pick", "該裝哪個"),
     ("registry", "稽核總表"),
     ("method", "怎麼查的"),
     ("trust", "為什麼可信"),
+]
+
+# 用途分類 → 讀者實際在問的問題。分類本身由 profile.py 從專案自述推斷，
+# 這裡只是把代號翻成「使用者想做的事」。
+SCENES = [
+    ("browser", "讓 AI 操作瀏覽器",
+     "自動填表、抓網頁、跑測試。這類工具會開瀏覽器行程並讀寫暫存檔，"
+     "權限天生就大——重點不是它要不要，是你知不知道。"),
+    ("code", "讓 AI 讀寫我的程式碼",
+     "讀 repo、查 commit、做靜態分析。會存取本機檔案與 git 憑證。"),
+    ("database", "讓 AI 查我的資料庫",
+     "接 SQL／NoSQL 下查詢。連線字串通常放在環境變數裡，"
+     "所以「會讀環境變數」對這類工具是本份。"),
+    ("cloud", "讓 AI 管我的雲端資源",
+     "接 AWS／GCP／Kubernetes。這類憑證的破壞力最大，"
+     "務必給最小權限、可隨時撤銷的金鑰。"),
+    ("desktop", "讓 AI 操作我的電腦",
+     "下終端指令、控制視窗、截圖。權限最大的一類，"
+     "等於把 shell 交給模型——裝之前務必讀懂它的工具清單。"),
+    ("api", "讓 AI 接第三方服務",
+     "GitHub、Figma、Slack、Notion 之類的串接。多半只需要網路與 API 金鑰。"),
+    ("docs", "讓 AI 查文件與知識庫",
+     "文件檢索、RAG、長期記憶。注意它把你的內容送到哪裡。"),
+    ("filesystem", "讓 AI 讀寫本機檔案",
+     "直接的檔案系統存取。確認它能碰到的路徑範圍。"),
+    ("devtool", "我要自己開發 MCP",
+     "SDK、框架、除錯工具、註冊表。這類是給開發者用的，不是終端工具。"),
 ]
 REPO = "https://github.com/rfobelieve-crypto/mcp-guard"
 
@@ -823,27 +917,46 @@ def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
                 (SCENE_JS, REVEAL_JS))
 
 
+def cat_chips(projects: list) -> str:
+    """用途篩選列。只列實際存在的分類，數量從資料算出來。"""
+    counts = {}
+    for p in projects:
+        code = p.get("profile") or "general"
+        zh = p.get("profile_zh") or "其他"
+        counts.setdefault(code, [zh, 0])
+        counts[code][1] += 1
+    items = [f'<button class="cat-chip" data-c="all" aria-pressed="true">'
+             f'全部用途<b>{len(projects)}</b></button>']
+    for code, (zh, n) in sorted(counts.items(), key=lambda kv: -kv[1][1]):
+        items.append(f'<button class="cat-chip" data-c="{esc(code)}" '
+                     f'aria-pressed="false">{esc(zh)}<b>{n}</b></button>')
+    return "".join(items)
+
+
 def page_registry(projects: list, when: str) -> str:
     body = f"""
 <section class="phead">
   <div class="wrap">
     <p class="eyebrow rv">稽核總表</p>
     <h1 class="rv">{len(projects)} 個熱門 MCP，逐一查過</h1>
-    <p class="lede rv">點任一列可展開完整的檢查發現與證據路徑。
-      「需人工複核」<b>不是指控</b>——最常見的原因是這個工具本來就需要大權限，
-      重點是你知情。每日 05:00 自動重新驗證，最近一次 {when}。</p>
+    <p class="lede rv">先用<b>用途</b>找到你要的那類，再用<b>結論</b>篩掉不能裝的。
+      點任一列可展開完整的檢查發現與證據路徑。「需人工複核」<b>不是指控</b>——
+      最常見的原因是這個工具本來就需要大權限，重點是你知情。
+      每日 05:00 自動重新驗證，最近一次 {when}。</p>
   </div>
 </section>
 
 <section class="blk" id="registry">
   <div class="wrap">
+    <div class="cats rv">{cat_chips(projects)}</div>
     <div class="controls rv">
       <button class="chip" data-f="all" aria-pressed="true">全部</button>
       <button class="chip" data-f="crit" aria-pressed="false">不要安裝</button>
       <button class="chip" data-f="warn" aria-pressed="false">需複核</button>
       <button class="chip" data-f="pass" aria-pressed="false">已通過</button>
-      <input type="search" id="q" placeholder="搜尋專案名稱或風險…"
+      <input type="search" id="q" placeholder="搜尋用途、專案名稱或風險…"
              aria-label="搜尋專案">
+      <span class="hits">符合 <b id="count">{len(projects)}</b> 個</span>
     </div>
     <div class="rows">{render_rows(projects)}</div>
     <p class="empty" id="empty" hidden>沒有符合條件的專案。</p>
@@ -854,6 +967,62 @@ def page_registry(projects: list, when: str) -> str:
                 f"{len(projects)} 個熱門 MCP 的獨立安全稽核結果，"
                 "每個結論都附可自行複現的證據。", body, when,
                 (REVEAL_JS, FILTER_JS))
+
+
+def page_pick(projects: list, when: str) -> str:
+    """依「使用者想做什麼」分組，每組給出可以先看的幾個。
+
+    排序判準刻意寫在頁面上：先通過稽核的、再依星數。這不是背書——
+    我們驗證的是「沒踩到已知風險樣式」，不是「這個工具好不好用」。
+    """
+    by = {}
+    for p in projects:
+        by.setdefault(p.get("profile") or "general", []).append(p)
+    rank = {"🟢": 0, "🟡": 1, "🔴": 2}
+    blocks = []
+    for code, title, why in SCENES:
+        group = by.get(code) or []
+        if not group:
+            continue
+        group.sort(key=lambda p: (rank.get(p["verdict"][0], 9), -p["stars"]))
+        rows = []
+        for p in group[:5]:
+            v = VKEY.get(p["verdict"][0], "pass")
+            desc = (p.get("desc") or "").strip()
+            rows.append(
+                f'<a class="pk" href="../registry/?c={esc(code)}">'
+                f'<span class="seal {v}">{esc(p["verdict"][2:])}</span>'
+                f'<span class="pk-b"><span class="name">{esc(p["slug"])}</span>'
+                f'<span class="pk-d">{esc(desc) if desc else "（未填寫說明）"}'
+                f'</span></span>'
+                f'<span class="nums">★{p["stars"]:,}</span></a>')
+        more = (f'<a class="pk-more" href="../registry/?c={esc(code)}">'
+                f'看這類全部 {len(group)} 個 →</a>' if len(group) > 5 else "")
+        blocks.append(
+            f'<section class="scene rv"><h2>{esc(title)}</h2>'
+            f'<p class="lede">{esc(why)}</p>'
+            f'<div class="pk-list">{"".join(rows)}</div>{more}</section>')
+
+    body = f"""
+<section class="phead">
+  <div class="wrap">
+    <p class="eyebrow rv">該裝哪個</p>
+    <h1 class="rv">你想讓 AI 幫你做什麼？</h1>
+    <p class="lede rv">依用途分組，每組列出<b>先通過稽核、再依使用人數</b>排序的
+      前幾個。這<b>不是背書</b>——我們驗證的是「沒踩到已知的風險樣式」，
+      不是「這個工具好不好用」。權限天生就大的類型（桌面控制、瀏覽器）
+      不代表有問題，重點是你裝之前知道它要什麼。</p>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap scenes">{"".join(blocks)}</div>
+</section>
+"""
+    return page("pick", "該裝哪個｜MCP 安檢",
+                "依用途分組的 MCP 選擇指南：讓 AI 操作瀏覽器、讀寫程式碼、"
+                "查資料庫、管雲端資源——每組都先過安全稽核。", body, when,
+                (REVEAL_JS,))
 
 
 def page_method(when: str) -> str:
@@ -1016,6 +1185,7 @@ def build(data: dict) -> dict[str, str]:
 
     return {
         "index.html": page_home(projects, n, total_f, when),
+        "pick/index.html": page_pick(projects, when),
         "registry/index.html": page_registry(projects, when),
         "method/index.html": page_method(when),
         "trust/index.html": page_trust(when),

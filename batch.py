@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from mcp_guard.checks import CRITICAL, HIGH, LOW, MEDIUM, run_all
 from mcp_guard.fetch import collect
+from mcp_guard.profile import infer as infer_profile
 from mcp_guard.report import render, verdict
 
 OUT = Path(__file__).resolve().parent / "reports"
@@ -70,6 +71,7 @@ def scan_one(slug: str, registry: dict | None = None) -> dict:
     if registry is not None:
         b.registry = registry
     findings = run_all(b)
+    prof_code, prof_zh, _caps = infer_profile(b)
     v, why = verdict(findings)
     OUT.mkdir(exist_ok=True)
     safe = slug.replace("/", "__")
@@ -83,6 +85,11 @@ def scan_one(slug: str, registry: dict | None = None) -> dict:
         "stars": b.meta.get("stargazers_count", 0) if b.exists else 0,
         "pushed": (b.meta.get("pushed_at", "") or "")[:10],
         "lang": (b.meta.get("language") or "") if b.exists else "",
+        # 用途分類：本來只在報告內文出現，但「這東西是幹嘛的」是掃讀時
+        # 最先要回答的問題，得拉到頂層讓總表與分類頁都能用。
+        "profile": prof_code,
+        "profile_zh": prof_zh,
+        "topics": (b.meta.get("topics") or [])[:6] if b.exists else [],
         # 發布者身分：驗證到什麼程度，不是安全性評價
         "pub": (b.registry.get("label", "") if b.registry.get("registered")
                 else "未登錄 registry"),

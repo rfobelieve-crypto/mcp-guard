@@ -11,7 +11,7 @@
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 429 個 |
-| 檢查時間 | 2026-07-28 15:00 |
+| 檢查時間 | 2026-07-28 16:05 |
 
 ## 風險摘要
 

@@ -11,7 +11,7 @@
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
 | 已掃描檔案 | 163 個 |
-| 檢查時間 | 2026-07-28 15:01 |
+| 檢查時間 | 2026-07-28 16:06 |
 
 ## 風險摘要
 

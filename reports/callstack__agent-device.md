@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3715 / 220 |
+| 星數 / Fork | ⭐ 3716 / 220 |
 | 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 15:00 |
+| 檢查時間 | 2026-07-28 16:06 |
 
 ## 風險摘要
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3715｜fork 220｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-28
+⭐ 3716｜fork 220｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-28
 
 ---
 

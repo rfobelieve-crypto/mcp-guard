@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-07-28 14:58 |
+| 檢查時間 | 2026-07-28 16:03 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 > 證據：`.design-sync/previews/AlertDialog.tsx、.design-sync/previews/ComboboxRoot.tsx、.design-sync/previews/ContextMenu.tsx、.design-sync/previews/Dialog.tsx、.design-sync/previews/DropdownMenu.tsx`
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 22 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -59,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
