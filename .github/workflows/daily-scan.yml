@@ -1,0 +1,65 @@
+name: 每日重掃並發布
+
+# 「最近驗證時間」要是活的才有意義——這正是各家 MCP 廣場給不了的東西。
+on:
+  schedule:
+    - cron: "0 21 * * *"      # UTC 21:00 = 台北時間每天 05:00
+  workflow_dispatch:           # 也可以在 Actions 頁面手動觸發
+
+permissions:
+  contents: write              # 把掃描結果寫回 repo，形成可稽核的歷史
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 這一步是刻意放在掃描之前的安全閥：
+      # 一個連自己紅隊測試都沒過的掃描器，不該對外發布任何結論。
+      - name: 紅隊測試（未通過就中止）
+        run: python -m tests.test_poisoning
+
+      - name: 執行批次安檢
+        env:
+          GH_TOKEN: ${{ github.token }}   # runner 內建的 gh CLI 用它認證
+        run: python batch.py
+
+      - name: 產生網站
+        run: python site.py
+
+      - name: 把結果寫回 repo（保留驗證歷史）
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports site
+          if git diff --staged --quiet; then
+            echo "掃描結果與上次相同，略過提交"
+          else
+            git commit -m "chore: 每日重掃 $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: scan
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
