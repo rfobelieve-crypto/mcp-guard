@@ -8,7 +8,7 @@
 
 ```
 site/            靜態頁(site.py 產出)
-api/index.py     唯一的 serverless function,處理所有 /api/*
+api/rpc.py     唯一的 serverless function,處理所有 /api/*
                  (GitHub OAuth 登入、session、提交掃描請求 → GitHub issue)
 ```
 

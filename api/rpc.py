@@ -167,7 +167,10 @@ class handler(BaseHTTPRequestHandler):
         path = s.path.rstrip("/")
         # vercel.json 的 rewrite 會把原始子路徑放進 __path;多數情況下
         # self.path 就是原始路徑,這裡只是把兩種行為都接住。
-        if path in ("/api/index", "/api"):
+        # 注意 function 檔名刻意不叫 index:cleanUrls 會把 /api/index
+        # 重寫成 /api/,rewrite 又攔截一切 /api/*,兩者相加 function
+        # 永遠不可命中——rpc 這個名字是避開那個魔法的。
+        if path in ("/api/rpc", "/api"):
             sub = (urllib.parse.parse_qs(s.query).get("__path") or [""])[0]
             if sub:
                 path = "/api/" + sub.strip("/")

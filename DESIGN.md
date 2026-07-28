@@ -45,7 +45,7 @@
 ## 技術立場
 
 - **零相依**。首屏動畫是手寫 canvas 狀態機，不是 WebGL；後端
-  （`api/index.py`）只用 Python 標準函式庫。
+  （`api/rpc.py`）只用 Python 標準函式庫。
 - **產生器**。`site.py` 產出全部頁面；script 一律外部檔——CSP 的
   `script-src 'self'` 因此成立，行內指令碼一律拒收。對一個安全稽核
   網站，自己的內容安全政策就是招牌的一部分。

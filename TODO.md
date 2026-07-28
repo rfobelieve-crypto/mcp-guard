@@ -82,7 +82,7 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
       零第三方套件、無資料庫）；session = HMAC 簽名 cookie；
       收藏清單存 localStorage（不上傳）；「提交掃描請求／回報誤判」
       登入後開成公開 GitHub issue。後端單一 serverless function
-      （`api/index.py`，Python 標準函式庫）。設定見 `docs/DEPLOY.md`
+      （`api/rpc.py`，Python 標準函式庫）。設定見 `docs/DEPLOY.md`
 - ✅ **安全 headers 強化**（2026-07-28）－ CSP `script-src 'self'`
       （頁面 script 全部外部檔化，行內一律拒收）、HSTS、
       Permissions-Policy、COOP。順帶修掉 `[hidden]` 被 class display
