@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>為什麼可信｜MCP 安檢</title>
+<meta name="description" content="這個工具誤報過 8 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
+<meta property="og:title" content="為什麼可信｜MCP 安檢">
+<meta property="og:description" content="這個工具誤報過 8 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mcp-guard-iota.vercel.app/trust/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://mcp-guard-iota.vercel.app/trust/">
+<link rel="stylesheet" href="../style.css">
+<link rel="preload" href="../display.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<header class="nav"><div class="wrap"><a class="brand" href="../">MCP 安檢<span>mcp-guard</span></a><menu><li><a href="../registry/">稽核總表</a></li><li><a href="../method/">怎麼查的</a></li><li><a href="../trust/" aria-current="page">為什麼可信</a></li></menu><a class="gh" href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">GitHub ↗</a></div></header>
+
+<section class="phead">
+  <div class="wrap">
+    <p class="eyebrow rv">為什麼可信</p>
+    <h1 class="rv">我們預設自己會錯。</h1>
+    <p class="lede rv">這個工具公開指名真實專案的稽核結果，
+      所以把「它錯過幾次、錯了怎麼辦」寫在最前面。</p>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow rv">為什麼需要這個</p>
+        <h2 class="rv">一個被瘋傳的 MCP，<br>其實不存在。</h2>
+        <p class="lede rv">社群上流傳一組安裝指令，畫面做得很好看。
+          查證後發現：那個倉庫不存在，連作者帳號都沒註冊過。</p>
+        <p class="lede rv">問題不在那則貼文——而在於一個<b>被公開宣傳、
+          卻空著的名字，任何人都能搶先註冊</b>。之後照著裝的人，
+          裝到的會是陌生人放的程式碼。而安裝一個 MCP，
+          等於授予它在你電腦上執行程式碼的權限。</p>
+      </div>
+      <div class="rv">
+        <div class="term">
+<span class="c">$</span> mcp-guard &lt;帳號&gt;/watch-mcp
+
+<span class="r">🔴 不要安裝</span>　發現 1 項嚴重問題
+
+<span class="r">嚴重</span> <span class="p">[身分]</span> 倉庫與作者帳號都不存在
+<span class="c">    證據：GET /repos/… → 404
+          GET /users/… → 404</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk alt">
+  <div class="wrap">
+    <p class="eyebrow rv">我們自己也會錯</p>
+    <h2 class="rv">這個工具誤報過 8 次，<br>全部在發布前攔下。</h2>
+    <p class="lede rv">第一次批次掃描時，它把 5 個知名專案判成「不要安裝」——
+      包含一個 15k star 的專案。證據是 <code>"Path to custom .env file"</code>，
+      那其實只是一個 CLI 參數說明。</p>
+    <p class="lede rv">根本錯誤是：<b>把「關鍵字命中」當成了「惡意意圖」</b>。
+      正常的 MCP 本來就會寫 always call this first，本來就會提到 .env。
+      修正方式是排除測試檔、依「有無正當用途」分級、
+      並要求同一段描述命中多種手法才升級為嚴重。</p>
+    <p class="lede rv">最近一次更能說明問題：某個專案的 skill 寫著
+      「別把下載的腳本直接餵進 shell」。那是<b>一份在教模型別踩雷的安全指引，
+      卻被判成要求下載執行遠端腳本</b>：防禦方被指控成攻擊方。</p>
+    <p class="lede rv">那 8 個誤報樣本已原文收進回歸測試。
+      <b>對真實專案的不實指控，傷害不比漏報小。</b></p>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap">
+    <p class="eyebrow rv">邊界</p>
+    <h2 class="rv">這份報告不保證什麼</h2>
+    <ul class="plain">
+      <li><b>這是靜態稽核</b>：不執行目標程式，因此看不到只在執行期才出現的行為
+          （動態下載、遠端下發指令等）。</li>
+      <li><b>「未發現明顯風險」不等於安全背書</b>，只代表已知樣式沒有命中。</li>
+      <li><b>「需人工複核」不是指控</b>，最常見的原因是這個工具本來就需要大權限。</li>
+      <li>遠端型（hosted）MCP 的真實行為在對方伺服器上，原始碼不代表線上版本。</li>
+      <li>安裝任何 MCP，都請只給<b>最小權限、可隨時撤銷</b>的憑證。</li>
+    </ul>
+    <p class="lede rv" style="margin-top:30px">
+      <b>若你是被列出的專案維護者且認為結果有誤，請開 issue</b>。
+      經確認的誤報會立即修正報告、標註更正紀錄，
+      並把該案例加進回歸測試確保不再重犯。</p>
+  </div>
+</section>
+
+<footer><div class="wrap"><div class="foot-end"><span>最近驗證 2026-07-28 10:42</span><a href="../trust/">不保證什麼與更正政策</a><a href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">原始碼 ↗</a><span>MIT</span></div></div></footer>
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||
+     matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in');}); return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{rootMargin:'0px 0px -12% 0px'});
+  els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i,6)*55)+'ms';
+                             io.observe(e); });
+})();
+</script>
+</body>
+</html>

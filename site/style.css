@@ -1,0 +1,260 @@
+
+/* 標題顯示字體：思源黑體子集，只含本站標題用到的一百多個字。
+   整套繁中字型是 5–10MB，子集後 38KB——這就是「中文網站做不出 premium
+   排版」這個說法真正的破口。字重是可變軸，一個檔案供所有標題使用。
+   授權：SIL Open Font License 1.1（assets/fonts/OFL.txt）。 */
+@font-face{
+  font-family:"DisplayTC";
+  src:url("display.woff2") format("woff2");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+:root{
+  --bg:#07090E; --bg-2:#0C1016; --surface:#11161F; --surface-2:#161C27;
+  --ink:#EEF2F9; --ink-2:#9AA7BE; --muted:#66738C; --line:#1E2632;
+  --seal:#7FA6E0;
+  --crit:#F0827A; --warn:#DCAE4A; --pass:#5FC79B;
+  --crit-bg:#2A1512; --warn-bg:#241C0C; --pass-bg:#0F2219;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+  --sans:system-ui,-apple-system,"Noto Sans TC","PingFang TC",
+        "Microsoft JhengHei","Heiti TC",sans-serif;
+  --display:"DisplayTC",var(--sans);
+  --r:8px; --ease:cubic-bezier(.16,.84,.44,1);
+}
+/* 這個設計刻意承諾單一深色世界（見模組 docstring），但仍尊重
+   明確選擇淺色主題的使用者。 */
+:root[data-theme="light"]{
+  --bg:#F5F7FA; --bg-2:#EDF1F6; --surface:#FFFFFF; --surface-2:#EDF1F6;
+  --ink:#101622; --ink-2:#47536A; --muted:#6B7788; --line:#DCE2EB;
+  --seal:#2C4A72; --crit:#B3261E; --warn:#8A6100; --pass:#1B6B4A;
+  --crit-bg:#FBEAE8; --warn-bg:#FAF2DF; --pass-bg:#E6F2EC;
+}
+
+*{box-sizing:border-box}
+/* 60px 的 sticky 導覽列會蓋住錨點目標，捲動時預留它的高度 */
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+
+/* 捲動揭露：讓內容依序抵達，而不是一次全部攤開 */
+.rv{opacity:0;transform:translateY(18px);
+    transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+}
+
+/* 標題一律走顯示字體；內文維持系統字（子集裡沒有內文那幾千個字） */
+h1,h2,h3{font-family:var(--display)}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  color:var(--seal);text-transform:uppercase;margin:0 0 18px}
+
+/* ── 導覽 ─────────────────────────────────────────────── */
+/* 模糊在這裡是功能性的：內容捲到導覽列下方時仍要讀得清楚，
+   不是為了玻璃感。 */
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,9,14,.80);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+:root[data-theme="light"] .nav{background:rgba(245,247,250,.82)}
+.nav .wrap{display:flex;align-items:center;gap:32px;height:60px}
+.brand{font-family:var(--display);font-weight:700;font-size:15.5px;
+  letter-spacing:-.015em;text-decoration:none;color:var(--ink);flex:none}
+.brand span{color:var(--muted);font-weight:400;margin-left:9px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em}
+.nav menu{display:flex;gap:24px;margin:0;padding:0;list-style:none}
+.nav menu a{font-size:14px;color:var(--ink-2);text-decoration:none;
+  padding:19px 0;display:block;border-bottom:2px solid transparent;
+  transition:color .18s,border-color .18s}
+.nav menu a:hover{color:var(--ink)}
+.nav menu a[aria-current]{color:var(--ink);border-bottom-color:var(--seal)}
+.nav .gh{margin-left:auto;font-family:var(--mono);font-size:12px;
+  color:var(--muted);text-decoration:none;transition:color .18s}
+.nav .gh:hover{color:var(--ink-2)}
+@media (max-width:720px){
+  .nav .wrap{gap:18px;height:auto;padding-top:12px;padding-bottom:2px;
+    flex-wrap:wrap}
+  .nav menu{gap:18px;order:3;width:100%}
+  .nav menu a{padding:10px 0;font-size:13.5px}
+  .nav .gh{margin-left:auto}
+}
+
+/* 內頁頁首：首屏的動畫留給首頁，其餘頁面用安靜的標題區起手 */
+.phead{padding:76px 0 46px;border-bottom:1px solid var(--line);
+  background:var(--bg)}
+.phead h1{margin:0;font-size:clamp(29px,4.6vw,52px);line-height:1.12;
+  font-weight:800;letter-spacing:-.035em;max-width:19ch;text-wrap:balance}
+.phead .lede{margin-top:18px;font-size:16.5px;max-width:62ch}
+/* 頁首後面緊接的第一個區塊：不要再疊一次區塊間距，也不要疊出雙線。
+   區塊間的 110px 是給「區塊之間」的，不是給標題與它自己的內容之間。 */
+.phead + section.blk{padding-top:54px;border-top:0}
+/* .checks 與 .controls 的上邊距原本是用來和「同一區塊內的標題」拉開距離。
+   標題搬到頁首後那段距離就成了多餘的空白，區塊自己的 padding 已經夠了。 */
+.wrap > .checks:first-child,
+.wrap > .controls:first-child{margin-top:0}
+
+/* ── 首屏 ─────────────────────────────────────────────── */
+.hero{position:relative;min-height:calc(100vh - 60px);
+  min-height:calc(100svh - 60px);display:flex;
+  align-items:center;overflow:hidden;background:var(--bg)}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 55% at 50% 50%,
+    transparent 0%,rgba(7,9,14,.55) 62%,var(--bg) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding:120px 0 90px}
+.hero h1{margin:0;font-size:clamp(38px,7.4vw,86px);line-height:1.02;
+  font-weight:800;letter-spacing:-.045em;max-width:14ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--seal)}
+.hero .sub{margin:30px 0 0;font-size:clamp(15px,1.7vw,19px);
+  color:var(--ink-2);max-width:44ch;line-height:1.7}
+.cta{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.cta code{font-family:var(--mono);font-size:14px;background:var(--surface);
+  border:1px solid var(--line);color:var(--seal);padding:13px 20px;
+  border-radius:var(--r)}
+.btn{font-size:14px;text-decoration:none;color:var(--ink-2);
+  border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s}
+.btn:hover{color:var(--ink);border-bottom-color:var(--seal)}
+.facts{margin-top:64px;display:flex;gap:40px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  letter-spacing:.05em}
+.facts b{display:block;font-size:26px;color:var(--ink);font-weight:700;
+  margin-bottom:5px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+/* ── 內容區塊 ─────────────────────────────────────────── */
+section.blk{padding:110px 0;border-top:1px solid var(--line);background:var(--bg)}
+section.blk.alt{background:var(--bg-2)}
+h2{margin:0;font-size:clamp(26px,3.6vw,42px);font-weight:800;
+  letter-spacing:-.03em;line-height:1.15;max-width:20ch;text-wrap:balance}
+.lede{margin:20px 0 0;color:var(--ink-2);max-width:60ch;font-size:16px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media (max-width:840px){.split{grid-template-columns:1fr;gap:36px}}
+
+.term{background:#05070B;border:1px solid var(--line);border-radius:var(--r);
+  padding:20px 22px;font-family:var(--mono);font-size:13px;line-height:1.85;
+  overflow-x:auto;color:var(--ink-2)}
+.term .c{color:var(--muted)}
+.term .r{color:var(--crit);font-weight:600}
+.term .g{color:var(--pass)}
+.term .p{color:var(--seal)}
+
+/* 首頁入口：用大型連結列而不是卡片——同尺寸卡片堆疊是偷懶的容器，
+   而這三個入口的份量本來就不相等。 */
+.gates{margin-top:54px;border-top:1px solid var(--line)}
+.gate{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+  padding:29px 0;border-bottom:1px solid var(--line);text-decoration:none;
+  color:inherit;transition:padding-left .3s var(--ease)}
+.gate:hover{padding-left:14px}
+.gate h3{margin:0 0 8px;font-size:20.5px;font-weight:700;letter-spacing:-.02em}
+.gate p{margin:0;color:var(--ink-2);font-size:14.5px;max-width:58ch;
+  line-height:1.6}
+.gate .arw{font-family:var(--mono);font-size:15px;color:var(--muted);
+  transition:color .22s,transform .3s var(--ease)}
+.gate:hover .arw{color:var(--seal);transform:translateX(5px)}
+.gate:hover h3{color:var(--seal)}
+
+/* 300px 下限讓 1120px 容器算出 3 欄：六張卡剛好 3×2 排滿，不留空格。
+   窄一級是 2×3，最窄 1×6——因為 6 有 3 和 2 兩個因數，每一級都排得齊。 */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2px;margin-top:52px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden}
+.chk{background:var(--bg);padding:26px 24px}
+.chk .n{font-family:var(--mono);font-size:11px;color:var(--seal);
+  letter-spacing:.14em;margin-bottom:12px}
+.chk h3{margin:0 0 9px;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.chk p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65}
+
+.quote{border-left:2px solid var(--crit);padding:4px 0 4px 22px;
+  margin:26px 0 0;font-family:var(--mono);font-size:13px;line-height:1.8;
+  color:var(--ink-2)}
+.quote b{color:var(--crit);font-weight:600}
+
+/* ── 稽核總表 ─────────────────────────────────────────── */
+.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:44px 0 18px}
+.chip{font:inherit;font-size:13px;padding:8px 16px;border-radius:100px;
+  cursor:pointer;background:transparent;color:var(--muted);
+  border:1px solid var(--line);transition:.18s}
+.chip:hover{border-color:var(--seal);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);
+  border-color:var(--ink)}
+input[type=search]{flex:1;min-width:190px;font:inherit;font-size:14px;
+  padding:9px 15px;border-radius:var(--r);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink)}
+input[type=search]::placeholder{color:var(--muted)}
+input[type=search]:focus-visible,.chip:focus-visible,summary:focus-visible,
+a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+
+.rows{display:flex;flex-direction:column;gap:9px}
+/* 狀態不靠彩色粗邊條表達——每列最左的結論標籤已經帶了顏色與文字，
+   再加一條 3px 色邊是冗餘，而且那正是一眼認得出的「模板感」來源。
+   顏色留給 hover：需要時才出現，掃讀時不吵。 */
+details.row{background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;transition:border-color .18s}
+details.row:hover{border-color:var(--tone)}
+details.row[data-v="crit"]{--tone:var(--crit)}
+details.row[data-v="warn"]{--tone:var(--warn)}
+details.row[data-v="pass"]{--tone:var(--pass)}
+details.row[hidden]{display:none}
+summary{list-style:none;cursor:pointer;padding:15px 18px;display:grid;
+  grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--surface-2)}
+.seal{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  font-weight:700;padding:5px 9px;border:1px solid currentColor;
+  border-radius:3px;white-space:nowrap}
+.seal.crit{color:var(--crit);background:var(--crit-bg)}
+.seal.warn{color:var(--warn);background:var(--warn-bg)}
+.seal.pass{color:var(--pass);background:var(--pass-bg)}
+.name{font-family:var(--mono);font-size:14px;font-weight:600;
+  word-break:break-all}
+.top{font-size:12.5px;color:var(--muted);margin-top:4px}
+.top b{color:var(--crit);font-weight:600}
+.nums{font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.body{padding:6px 18px 20px;border-top:1px solid var(--line)}
+.desc{font-size:13px;color:var(--muted);margin:14px 0 16px}
+.f{padding:12px 0;border-top:1px dashed var(--line)}
+.f:first-of-type{border-top:none}
+.fh{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+.sev{font-family:var(--mono);font-size:9.5px;font-weight:700;
+  letter-spacing:.09em;padding:3px 7px;border-radius:3px;white-space:nowrap}
+.sev.CRITICAL{color:var(--crit);background:var(--crit-bg)}
+.sev.HIGH{color:var(--warn);background:var(--warn-bg)}
+.sev.MEDIUM{color:var(--ink-2);background:var(--surface-2)}
+.sev.LOW,.sev.INFO{color:var(--muted);border:1px solid var(--line)}
+.ft{font-size:14px;font-weight:600}
+.fc{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.fd{font-size:13.5px;color:var(--muted);margin:6px 0 0;max-width:70ch}
+.ev{margin-top:8px;font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  background:var(--bg-2);padding:8px 11px;border-radius:5px;overflow-x:auto;
+  white-space:pre-wrap;word-break:break-all}
+.links{margin-top:16px;font-size:13px}
+.links a{color:var(--seal);text-decoration:none}
+.links a:hover{text-decoration:underline}
+.empty{padding:40px;text-align:center;color:var(--muted);font-size:14px}
+
+/* ── 頁尾 ─────────────────────────────────────────────── */
+/* 免責條款已獨立成 /trust/ 一頁，頁尾只留識別與時間戳 */
+footer{padding:40px 0 44px;border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--muted);background:var(--bg-2)}
+/* 條列式說明：不套用清單記號，靠行距與粗體分層即可 */
+ul.plain{margin:34px 0 0;padding:0;list-style:none;max-width:70ch;
+  color:var(--ink-2);font-size:15.5px;line-height:1.8}
+ul.plain li{padding:14px 0 14px 22px;border-bottom:1px solid var(--line);
+  position:relative}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+ul.plain b{color:var(--ink)}
+.foot-end{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;
+  display:flex;gap:22px;flex-wrap:wrap}
+.foot-end a{color:var(--seal);text-decoration:none}
+@media (max-width:620px){
+  summary{grid-template-columns:auto 1fr}
+  .nums{grid-column:2;text-align:left;margin-top:6px}
+  section.blk{padding:76px 0}
+  .facts{gap:26px}
+}
