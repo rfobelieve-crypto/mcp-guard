@@ -12,3 +12,10 @@ assets/fonts/_*.ttf
 
 .vercel
 .env*
+
+# Next.js 電影感重新設計原型(REDESIGN-PROPOSAL.md)——建置產物不進版控
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
