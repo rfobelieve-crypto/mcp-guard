@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 26871 / 2191 |
-| 最後更新 | 2026-07-27 |
+| 星數 / Fork | ⭐ 26884 / 2194 |
+| 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-27 19:25 |
+| 檢查時間 | 2026-07-28 09:05 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 55 個外部主機
+### 🟡 中｜[權限] 會連往 64 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth0.config.url、block.github.io、bsky.social…`
+> 證據：`YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth.yourdomain.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -42,11 +42,11 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/install/claude_code.py、fastmcp_slim/fastmcp/cli/install/gemini_cli.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（257 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（252 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 85 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 87 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,11 +64,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-07-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26871｜fork 2191｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-27
+⭐ 26884｜fork 2194｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-28
 
 ---
 

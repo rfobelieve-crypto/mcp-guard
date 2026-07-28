@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `awslabs/mcp` |
 | 專案說明 | Open source MCP Servers for AWS |
-| 星數 / Fork | ⭐ 9506 / 1662 |
+| 星數 / Fork | ⭐ 9509 / 1664 |
 | 最後更新 | 2026-07-27 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-27 19:25 |
+| 檢查時間 | 2026-07-28 09:05 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 38 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、agentcore.aws、agentcore.example.com、api.example.com、attacker.com、aws.amazon.com、aws.github.io、awslabs.github.io、bad.com、boto3.amazonaws.com…`
+> 證據：`a.com、agentcore.aws、agentcore.example.com、api.example.com、attacker.com、aws.amazon.com、aws.github.io、awslabs.github.io、bad.com、bad.example.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/pull-request-lint.yml、samples/mcp-integration-with-kb/clients/client_server.py、samples/mcp-integration-with-nova-canvas/clients/client_server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/tools/browser/browser_client.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（325 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（321 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9506｜fork 1662｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-27
+⭐ 9509｜fork 1664｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-27
 
 ---
 

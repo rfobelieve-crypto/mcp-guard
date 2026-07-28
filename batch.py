@@ -57,11 +57,15 @@ def scan_one(slug: str) -> dict:
     OUT.mkdir(exist_ok=True)
     safe = slug.replace("/", "__")
     (OUT / f"{safe}.md").write_text(render(b, findings, slug), encoding="utf-8")
+    order = {CRITICAL: 0, HIGH: 1, MEDIUM: 2, LOW: 3, "INFO": 4}
     return {
         "slug": slug,
         "verdict": v,
+        "why": why,
+        "desc": (b.meta.get("description") or "") if b.exists else "",
         "stars": b.meta.get("stargazers_count", 0) if b.exists else 0,
         "pushed": (b.meta.get("pushed_at", "") or "")[:10],
+        "lang": (b.meta.get("language") or "") if b.exists else "",
         "files": len(b.files),
         "crit": sum(f.severity == CRITICAL for f in findings),
         "high": sum(f.severity == HIGH for f in findings),
@@ -70,6 +74,12 @@ def scan_one(slug: str) -> dict:
                       for f in findings),
         "top": next((f.title for f in findings
                      if f.severity in (CRITICAL, HIGH)), "—"),
+        # 完整發現供網站展開顯示——結論一定要能一路追到證據
+        "findings": [
+            {"check": f.check, "severity": f.severity, "title": f.title,
+             "detail": f.detail, "evidence": f.evidence}
+            for f in sorted(findings, key=lambda x: order.get(x.severity, 9))
+        ],
     }
 
 
@@ -132,7 +142,16 @@ def main() -> int:
     ]
     OUT.mkdir(exist_ok=True)
     (OUT / "總表.md").write_text("\n".join(md), encoding="utf-8")
-    print(f"\n完成：{len(rows)} 個，總表 → reports/總表.md")
+
+    # 結構化輸出：網站產生器（site.py）的唯一資料來源
+    import json
+    (OUT / "data.json").write_text(json.dumps({
+        "scanned_at": time.strftime("%Y-%m-%d %H:%M"),
+        "elapsed_sec": round(time.time() - t0),
+        "projects": rows,
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    print(f"\n完成：{len(rows)} 個 → reports/總表.md、reports/data.json")
     return 0
 
 

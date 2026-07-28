@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10490 / 1441 |
-| 最後更新 | 2026-07-27 |
+| 星數 / Fork | ⭐ 10495 / 1442 |
+| 最後更新 | 2026-07-28 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 173 個 |
-| 檢查時間 | 2026-07-27 19:24 |
+| 檢查時間 | 2026-07-28 09:04 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`cli/__tests__/helpers/fixtures.ts、cli/src/cli.ts、client/bin/client.js、client/bin/start.js、client/src/components/AppRenderer.tsx`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（304 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,11 +77,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-07-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10490｜fork 1441｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-27
+⭐ 10495｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
 
 ---
 
