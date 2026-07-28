@@ -28,6 +28,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "reports" / "data.json"
+
+# 正式網址。同一份 HTML 也部署在 GitHub Pages 上作為備援，因此需要
+# canonical 指向這裡，避免兩個網址被當成重複內容各自計分。
+SITE_URL = "https://mcp-guard-iota.vercel.app/"
 OUTDIR = ROOT / "site"
 
 CSS = """
@@ -781,6 +785,8 @@ def main() -> int:
             '<meta name="description" content="MCP 安檢：繁體中文的 MCP 獨立'
             '安全稽核。安裝前先看清楚它是誰、要什麼權限、有沒有對模型下指令。">\n'
             '<meta property="og:title" content="MCP 安檢｜獨立稽核總表">\n'
+            f'<meta property="og:url" content="{SITE_URL}">\n'
+            f'<link rel="canonical" href="{SITE_URL}">\n'
             '<meta property="og:description" content="裝下去之前，'
             '先知道它要什麼權限。每個結論都附可自行複現的證據。">\n'
             '<meta property="og:type" content="website">\n'

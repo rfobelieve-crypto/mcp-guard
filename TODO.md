@@ -84,7 +84,9 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 - ✅ 第一篇文章〈一個被瘋傳的 MCP，其實不存在〉
 - ✅ README 更正政策（公開指名真實專案的前提）
 - ✅ GitHub Actions 每日 05:00 重掃 → 部署 Pages（紅隊測試沒過即中止）
-- ✅ 網站上線 https://rfobelieve-crypto.github.io/mcp-guard/
+- ✅ 網站上線 https://mcp-guard-iota.vercel.app/
+      （備援：https://rfobelieve-crypto.github.io/mcp-guard/ ）
+      Vercel 已連 GitHub repo：每日重掃 commit 進 `site/` 後會自動重新部署
 - ✅ **首屏改為 3D 深空觀測站**（2026-07-28）
       － 手寫透視投影，**非 WebGL**：體積感來自「背面的線比正面暗」＋加色
         混合的光。Three.js 本體就比整個頁面大，這裡用五十行三維數學就夠
