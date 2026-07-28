@@ -7,3 +7,5 @@ batch_targets.txt
 build/
 dist/
 site/fragment.html
+# 字型原始檔（11.9MB）只是子集化的輸入，產物 display.woff2 才進版控
+assets/fonts/_*.ttf
