@@ -317,5 +317,10 @@ class handler(BaseHTTPRequestHandler):
             return self._json(502, {"error": "issue create failed"})
         return self._json(200, {"ok": True, "url": url})
 
+    def do_HEAD(self):  # noqa: N802 — 健康檢查與爬蟲會發 HEAD
+        self.send_response(200)
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+
     def log_message(self, *a):  # 安靜:Vercel 自己有請求紀錄
         pass
