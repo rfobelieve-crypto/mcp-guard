@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 20 MB lightweight cross-platform database client for 70+ databases, including My |
-| 星數 / Fork | ⭐ 12123 / 1153 |
+| 星數 / Fork | ⭐ 12142 / 1157 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 426 個 |
-| 檢查時間 | 2026-07-28 16:03 |
+| 檢查時間 | 2026-07-28 17:05 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/label-issue-database.mjs、.github/scripts/suggest-similar-issues.mjs、.github/workflows/i18n-autofill.yml、.github/workflows/mcp-release.yml、.github/workflows/notify.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1062 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1076 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12123｜fork 1153｜語言 Rust｜建立 2026-04-29｜最後推送 2026-07-28
+⭐ 12142｜fork 1157｜語言 Rust｜建立 2026-04-29｜最後推送 2026-07-28
 
 ---
 

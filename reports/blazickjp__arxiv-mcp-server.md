@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A Model Context Protocol server for searching and analyzing arXiv papers |
-| 星數 / Fork | ⭐ 2992 / 241 |
+| 星數 / Fork | ⭐ 2993 / 241 |
 | 最後更新 | 2026-07-26 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 71 個 |
-| 檢查時間 | 2026-07-28 16:06 |
+| 檢查時間 | 2026-07-28 17:08 |
 
 ## 風險摘要
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2992｜fork 241｜語言 Python｜建立 2024-11-29｜最後推送 2026-07-26
+⭐ 2993｜fork 241｜語言 Python｜建立 2024-11-29｜最後推送 2026-07-26
 
 ---
 

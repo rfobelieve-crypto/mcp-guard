@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from mcp_guard.checks import CRITICAL, HIGH, LOW, MEDIUM, run_all
 from mcp_guard.fetch import collect
+from mcp_guard.domain import infer_domain
 from mcp_guard.profile import infer as infer_profile
 from mcp_guard.report import render, verdict
 
@@ -72,6 +73,7 @@ def scan_one(slug: str, registry: dict | None = None) -> dict:
         b.registry = registry
     findings = run_all(b)
     prof_code, prof_zh, _caps = infer_profile(b)
+    dom_code, dom_zh = infer_domain(b)
     v, why = verdict(findings)
     OUT.mkdir(exist_ok=True)
     safe = slug.replace("/", "__")
@@ -89,6 +91,9 @@ def scan_one(slug: str, registry: dict | None = None) -> dict:
         # 最先要回答的問題，得拉到頂層讓總表與分類頁都能用。
         "profile": prof_code,
         "profile_zh": prof_zh,
+        # 應用領域：回答「我要做 X 該裝什麼」，與 profile 是不同維度
+        "domain": dom_code,
+        "domain_zh": dom_zh,
         "topics": (b.meta.get("topics") or [])[:6] if b.exists else [],
         # 發布者身分：驗證到什麼程度，不是安全性評價
         "pub": (b.registry.get("label", "") if b.registry.get("registered")

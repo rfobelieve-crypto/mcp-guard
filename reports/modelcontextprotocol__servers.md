@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 88976 / 11302 |
+| 星數 / Fork | ⭐ 88977 / 11302 |
 | 最後更新 | 2026-07-26 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 122 個 |
-| 檢查時間 | 2026-07-28 16:01 |
+| 檢查時間 | 2026-07-28 17:03 |
 
 ## 風險摘要
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 88976｜fork 11302｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26
+⭐ 88977｜fork 11302｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26
 
 ---
 

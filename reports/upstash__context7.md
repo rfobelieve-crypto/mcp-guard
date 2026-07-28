@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 59874 / 2868 |
+| 星數 / Fork | ⭐ 59878 / 2868 |
 | 最後更新 | 2026-07-25 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
 | 已掃描檔案 | 205 個 |
-| 檢查時間 | 2026-07-28 16:03 |
+| 檢查時間 | 2026-07-28 17:04 |
 
 ## 風險摘要
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 59874｜fork 2868｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-07-25
+⭐ 59878｜fork 2868｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-07-25
 
 ---
 

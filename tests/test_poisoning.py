@@ -189,6 +189,16 @@ AGENT_CLEAN = {
         "`get_recent_tool_calls(maxResults=200)` returns recent activity. "
         "`list_processes` shows what's still alive. Together they reconstruct "
         "the work without asking the user to recap.\n"),
+    # 2026-07-28 對 WenyuChiou/research-hub 的**真實誤報**，原文照抄。
+    # 「Don't tell the user to ignore X」是「別叫使用者忽略 X」，
+    # 下一句還要求模型主動告知——意圖與隱瞞正好相反。
+    "fp_dont_tell_user_to": (
+        "skills/notebooklm-brief-verifier/SKILL.md",
+        "- Don't OCR figures embedded in PDFs.\n"
+        "- Don't infer support for a claim from \"general knowledge\" — only from\n"
+        "  the actual source bundle.\n"
+        "- Don't tell the user to ignore NLM. Tell them which parts to trust and\n"
+        "  which to spot-check.\n"),
     # 安全類專案**引述**攻擊手法——本專案自己的文件就長這樣。
     # 這是最重要的一筆：分不出「說明」與「指示」，防禦方會被自己的工具指控。
     "clean_security_doc": (

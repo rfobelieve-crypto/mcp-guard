@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3716 / 220 |
+| 星數 / Fork | ⭐ 3717 / 221 |
 | 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 16:06 |
+| 檢查時間 | 2026-07-28 17:07 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 6　⚪ 資訊 6
+🟡 中 1　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -41,17 +41,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/test-app/pnpm-lock.yaml、scripts/clean-daemon.ts、scripts/help-conformance-bench.mjs、scripts/maestro-conformance/differential/run.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/test-app/pnpm-lock.yaml、scripts/clean-daemon.ts、scripts/help-conformance-bench.mjs、scripts/lib/lane-envelope.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、scripts/__tests__/help-conformance-bench.test.ts、scripts/build-xcuitest-apple.sh、scripts/depgraph/build.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -63,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -85,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3716｜fork 220｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-28
+⭐ 3717｜fork 221｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-28
 
 ---
 

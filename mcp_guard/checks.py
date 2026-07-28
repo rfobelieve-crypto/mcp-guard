@@ -433,9 +433,16 @@ def check_permissions(b: RepoBundle) -> list[Finding]:
 RE_IGNORE_PRIOR = (
     r"ignore\s+(all\s+)?(the\s+)?previous|disregard\s+(the\s+)?(above|previous)|"
     r"忽略(前面|上述|之前|先前)")
+# `(?!\s+to\s)` 是 2026-07-28 對 WenyuChiou/research-hub 誤報後加的：
+# 原文是「Don't tell the user **to ignore** NLM. Tell them which parts to
+# trust…」——那是「別叫使用者忽略某物」，下一句還要求模型主動告知，
+# 意圖與隱瞞完全相反。英文這兩種句型只差一個 to：
+#   Don't tell the user.        → 隱瞞
+#   Don't tell the user to X.   → 別叫使用者做 X
 RE_HIDE_FROM_USER = (
-    r"do\s*not\s+(tell|inform|reveal|mention)\s+(the\s+)?user|"
-    r"don'?t\s+tell\s+the\s+user|without\s+(telling|informing)\s+the\s+user|"
+    r"do\s*not\s+(tell|inform|reveal|mention)\s+(the\s+)?user(?!\s+to\s)|"
+    r"don'?t\s+(tell|inform)\s+(the\s+)?user(?!\s+to\s)|"
+    r"without\s+(telling|informing)\s+the\s+user|"
     r"不要(告訴|通知|讓)(使用者|用戶|用户)")
 
 INJECTION_PATTERNS = [

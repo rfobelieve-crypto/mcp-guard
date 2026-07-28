@@ -10,7 +10,7 @@
 | 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-07-28 16:04 |
+| 檢查時間 | 2026-07-28 17:05 |
 
 ## 風險摘要
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

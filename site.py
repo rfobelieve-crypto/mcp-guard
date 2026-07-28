@@ -288,6 +288,18 @@ summary:hover{background:var(--surface-2)}
   margin-left:auto;white-space:nowrap}
 .hits b{color:var(--ink-2);font-weight:400}
 
+/* 領域篩選提示：從「該裝哪個」連過來時顯示，可一鍵清除。
+   不做成第三排按鈕——三排 chips 會把總表變成控制面板。 */
+.dombar{margin:0 0 16px;font-size:13.5px;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:10px 14px;display:flex;
+  align-items:center;gap:12px}
+.dombar b{color:var(--ink)}
+.dombar button{margin-left:auto;font-family:var(--mono);font-size:11.5px;
+  background:transparent;border:1px solid var(--line);color:var(--muted);
+  border-radius:4px;padding:4px 9px;cursor:pointer;transition:.18s}
+.dombar button:hover{color:var(--ink);border-color:var(--ink-2)}
+
 /* ── 該裝哪個 ─────────────────────────────────────────── */
 .scenes{display:flex;flex-direction:column;gap:66px}
 .scene h2{font-size:clamp(21px,2.5vw,29px);letter-spacing:-.025em;max-width:24ch}
@@ -658,12 +670,14 @@ FILTER_JS = """
   var count=document.getElementById('count');
   // 兩個獨立維度：結論（安不安全）與用途（是幹嘛的）。
   // 使用者的問題通常是「我要找瀏覽器工具，而且要能裝的」——兩者要能疊加。
-  var filter='all', cat='all';
+  var filter='all', cat='all', dom='all';
+  var domBar=document.getElementById('dombar');
   function apply(){
     var t=(q.value||'').toLowerCase().trim(), shown=0;
     rows.forEach(function(r){
       var vis=(filter==='all'||r.dataset.v===filter) &&
               (cat==='all'||r.dataset.c===cat) &&
+              (dom==='all'||r.dataset.d===dom) &&
               (!t||r.dataset.search.indexOf(t)>-1);
       r.hidden=!vis; if(vis) shown++;
     });
@@ -678,12 +692,26 @@ FILTER_JS = """
     cat=c.dataset.c; apply(); }); });
   q.addEventListener('input',apply);
 
-  // 從網址帶入分類：/registry/?c=browser 可以直接連到某一類，
-  // 「該裝什麼」那一頁就靠這個把讀者送過來。
-  var want=new URLSearchParams(location.search).get('c');
-  if(want){
-    var hit=cats.filter(function(c){return c.dataset.c===want;})[0];
+  // 從網址帶入篩選：?c=browser（能力）或 ?d=finance（領域）。
+  // 「該裝哪個」那一頁靠這個把讀者送過來。領域不做成第三排 chips——
+  // 三排按鈕會把這頁變成控制面板，改用一條可以關掉的提示列。
+  var qs=new URLSearchParams(location.search);
+  var wantC=qs.get('c'), wantD=qs.get('d');
+  if(wantC){
+    var hit=cats.filter(function(c){return c.dataset.c===wantC;})[0];
     if(hit) hit.click();
+  }
+  if(wantD && domBar){
+    var row=rows.filter(function(r){return r.dataset.d===wantD;})[0];
+    if(row){
+      dom=wantD;
+      domBar.hidden=false;
+      domBar.querySelector('b').textContent=row.dataset.dz||wantD;
+      domBar.querySelector('button').addEventListener('click',function(){
+        dom='all'; domBar.hidden=true; apply();
+      });
+      apply();
+    }
   }
 })();
 """
@@ -748,7 +776,9 @@ def render_rows(projects: list) -> str:
                  f'{esc(desc) if desc else "<i>此專案未填寫說明</i>"}</span>')
         out.append(
             f'<details class="row rv" data-v="{v}" '
-            f'data-c="{esc(p.get("profile", ""))}" data-search="{esc(search)}">'
+            f'data-c="{esc(p.get("profile", ""))}" '
+            f'data-d="{esc(p.get("domain", ""))}" '
+            f'data-dz="{esc(p.get("domain_zh", ""))}" data-search="{esc(search)}">'
             f'<summary><span class="seal {v}">{esc(label)}</span>'
             f'<span><span class="name">{esc(p["slug"])}</span>'
             f'{pub_tag(p)}'
@@ -772,6 +802,31 @@ PAGES = [
     ("registry", "稽核總表"),
     ("method", "怎麼查的"),
     ("trust", "為什麼可信"),
+]
+
+# 應用領域 → 讀者實際在做的事。這一組回答「我要做 X」，
+# 下面的 SCENES 回答「我要 X 能力」——兩種找法都留著。
+DOMAIN_SCENES = [
+    ("finance", "做交易策略、看盤或記帳",
+     "行情資料、回測、投資組合分析、支付與記帳。這類工具會碰到金流憑證，"
+     "把 API 金鑰的權限開到最小、而且要能隨時撤銷。"),
+    ("data", "做資料分析與圖表",
+     "統計、視覺化、儀表板、報表。多半要讀你的資料來源，"
+     "確認它把資料送去哪裡運算。"),
+    ("web", "做網站或前端",
+     "建站、改版、CMS、部署。會動到專案檔案與部署憑證。"),
+    ("media", "做影音與設計",
+     "生圖、生影片、語音、設計稿。注意上傳的素材會流向哪個服務。"),
+    ("productivity", "整理文件與日常事務",
+     "筆記、行事曆、郵件、任務、團隊訊息。這類拿到的是你的私人內容，"
+     "授權範圍值得逐項看。"),
+    ("health", "做健康與醫療應用",
+     "病歷格式、醫學編碼、營養與體能資料。牽涉個人健康資料，"
+     "法遵與去識別化要自己確認，工具不會幫你做。"),
+    ("research", "做研究與查文獻",
+     "論文檢索、引用、資料集搜尋。"),
+    ("infra", "管基礎設施與維運",
+     "容器、監控、部署、事故處理。憑證破壞力大，最小權限原則在這裡最重要。"),
 ]
 
 # 用途分類 → 讀者實際在問的問題。分類本身由 profile.py 從專案自述推斷，
@@ -948,6 +1003,8 @@ def page_registry(projects: list, when: str) -> str:
 
 <section class="blk" id="registry">
   <div class="wrap">
+    <p class="dombar" id="dombar" hidden>只顯示「<b></b>」領域
+      <button type="button">清除 ✕</button></p>
     <div class="cats rv">{cat_chips(projects)}</div>
     <div class="controls rv">
       <button class="chip" data-f="all" aria-pressed="true">全部</button>
@@ -975,49 +1032,66 @@ def page_pick(projects: list, when: str) -> str:
     排序判準刻意寫在頁面上：先通過稽核的、再依星數。這不是背書——
     我們驗證的是「沒踩到已知風險樣式」，不是「這個工具好不好用」。
     """
-    by = {}
-    for p in projects:
-        by.setdefault(p.get("profile") or "general", []).append(p)
     rank = {"🟢": 0, "🟡": 1, "🔴": 2}
-    blocks = []
-    for code, title, why in SCENES:
-        group = by.get(code) or []
-        if not group:
-            continue
-        group.sort(key=lambda p: (rank.get(p["verdict"][0], 9), -p["stars"]))
-        rows = []
-        for p in group[:5]:
-            v = VKEY.get(p["verdict"][0], "pass")
-            desc = (p.get("desc") or "").strip()
-            rows.append(
-                f'<a class="pk" href="../registry/?c={esc(code)}">'
-                f'<span class="seal {v}">{esc(p["verdict"][2:])}</span>'
-                f'<span class="pk-b"><span class="name">{esc(p["slug"])}</span>'
-                f'<span class="pk-d">{esc(desc) if desc else "（未填寫說明）"}'
-                f'</span></span>'
-                f'<span class="nums">★{p["stars"]:,}</span></a>')
-        more = (f'<a class="pk-more" href="../registry/?c={esc(code)}">'
-                f'看這類全部 {len(group)} 個 →</a>' if len(group) > 5 else "")
-        blocks.append(
-            f'<section class="scene rv"><h2>{esc(title)}</h2>'
-            f'<p class="lede">{esc(why)}</p>'
-            f'<div class="pk-list">{"".join(rows)}</div>{more}</section>')
+
+    def group_blocks(key: str, scenes: list, param: str) -> str:
+        by = {}
+        for p in projects:
+            by.setdefault(p.get(key) or "general", []).append(p)
+        out = []
+        for code, title, why in scenes:
+            g = by.get(code) or []
+            if not g:
+                continue
+            g.sort(key=lambda p: (rank.get(p["verdict"][0], 9), -p["stars"]))
+            rows = []
+            for p in g[:5]:
+                v = VKEY.get(p["verdict"][0], "pass")
+                desc = (p.get("desc") or "").strip()
+                rows.append(
+                    f'<a class="pk" href="https://github.com/{esc(p["slug"])}" '
+                    f'target="_blank" rel="noopener">'
+                    f'<span class="seal {v}">{esc(p["verdict"][2:])}</span>'
+                    f'<span class="pk-b"><span class="name">{esc(p["slug"])}</span>'
+                    f'<span class="pk-d">{esc(desc) if desc else "（未填寫說明）"}'
+                    f'</span></span>'
+                    f'<span class="nums">★{p["stars"]:,}</span></a>')
+            more = (f'<a class="pk-more" href="../registry/?{param}={esc(code)}">'
+                    f'看這類全部 {len(g)} 個 →</a>' if len(g) > 5 else "")
+            out.append(
+                f'<section class="scene rv"><h2>{esc(title)}</h2>'
+                f'<p class="lede">{esc(why)}</p>'
+                f'<div class="pk-list">{"".join(rows)}</div>{more}</section>')
+        return "".join(out)
+
+    by_domain = group_blocks("domain", DOMAIN_SCENES, "d")
+    by_cap = group_blocks("profile", SCENES, "c")
+
+    def wrap_sec(eyebrow: str, inner: str, alt: bool = False) -> str:
+        # 沒有內容就整段不輸出：留一個只有標題的空白段比沒有這段更糟
+        if not inner:
+            return ""
+        return (f'<section class="blk{" alt" if alt else ""}"><div class="wrap">'
+                f'<p class="eyebrow rv">{eyebrow}</p>'
+                f'<div class="scenes">{inner}</div></div></section>')
+
+    lead = ("兩種找法：上半按<b>你要做的事</b>（做交易策略、做網站），"
+            "下半按<b>你要的能力</b>（操作瀏覽器、讀寫檔案）。"
+            if by_domain else "依你要的能力分組。")
 
     body = f"""
 <section class="phead">
   <div class="wrap">
     <p class="eyebrow rv">該裝哪個</p>
     <h1 class="rv">你想讓 AI 幫你做什麼？</h1>
-    <p class="lede rv">依用途分組，每組列出<b>先通過稽核、再依使用人數</b>排序的
-      前幾個。這<b>不是背書</b>——我們驗證的是「沒踩到已知的風險樣式」，
-      不是「這個工具好不好用」。權限天生就大的類型（桌面控制、瀏覽器）
-      不代表有問題，重點是你裝之前知道它要什麼。</p>
+    <p class="lede rv">{lead}每組列出<b>先通過稽核、再依使用人數</b>排序的前幾個。</p>
+    <p class="lede rv">這<b>不是背書</b>——我們驗證的是「沒踩到已知的風險樣式」，
+      不是「這個工具好不好用」。權限天生就大的類型不代表有問題，
+      重點是你裝之前知道它要什麼。</p>
   </div>
 </section>
-
-<section class="blk">
-  <div class="wrap scenes">{"".join(blocks)}</div>
-</section>
+{wrap_sec("按你要做的事", by_domain)}
+{wrap_sec("按你要的能力", by_cap, alt=bool(by_domain))}
 """
     return page("pick", "該裝哪個｜MCP 安檢",
                 "依用途分組的 MCP 選擇指南：讓 AI 操作瀏覽器、讀寫程式碼、"

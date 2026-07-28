@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `agentskills/agentskills` |
 | 專案說明 | Specification and documentation for Agent Skills |
-| 星數 / Fork | ⭐ 23565 / 1610 |
+| 星數 / Fork | ⭐ 23569 / 1610 |
 | 最後更新 | 2026-07-10 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `agentskills`（registry 查無） |
 | 已掃描檔案 | 25 個 |
-| 檢查時間 | 2026-07-28 16:03 |
+| 檢查時間 | 2026-07-28 17:05 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23565｜fork 1610｜語言 Python｜建立 2025-12-16｜最後推送 2026-07-10
+⭐ 23569｜fork 1610｜語言 Python｜建立 2025-12-16｜最後推送 2026-07-10
 
 ---
 
