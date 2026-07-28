@@ -102,8 +102,11 @@ def main() -> int:
     for p in projects:
         n[VKEY.get(p["verdict"][0], "pass")] += 1
 
-    stat = (f'<b>{n["pass"]}</b> 未發現明顯風險　'
-            f'<i>{n["warn"]}</i> 需人工複核<br>每日 05:00 自動重新驗證')
+    # 刻意不放「幾個通過／幾個需複核」：那是每天重掃都會變的數字，而 OG 圖
+    # 是靜態資產、不會跟著重製。放上去只會讓分享卡片長期顯示過期資訊。
+    # 專案總數只在重新同步名單時才變，穩定得多。
+    stat = (f'<b>{len(projects)}</b> 個熱門 MCP，逐一查過<br>'
+            '每日 05:00 自動重新驗證')
 
     OUT.mkdir(parents=True, exist_ok=True)
     # 字體以 style.css 為基準寫死成 display.woff2，OG 頁不在同一層，

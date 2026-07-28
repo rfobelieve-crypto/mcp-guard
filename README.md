@@ -75,9 +75,31 @@ mcp-guard owner/repo --md 報告.md          # 輸出完整 Markdown 報告
 ### 批次掃描
 
 ```bash
-python batch.py              # 掃內建名單，產出總表 + 個別報告到 reports/
-python batch.py 清單.txt      # 自訂名單，一行一個 owner/repo
+python sync_targets.py       # 從官方 registry 同步名單 → targets.txt
+python batch.py              # 掃 targets.txt（沒有的話退回內建核心名單）
+python batch.py 清單.txt      # 指定名單，一行一個 owner/repo
 ```
+
+`sync_targets.py` 從 [官方 MCP registry](https://registry.modelcontextprotocol.io)
+取得清單。registry 上有**一萬多個** GitHub 專案，全掃一輪要下載上萬個原始碼
+壓縮檔，因此依星數排序取前段；同時**永遠保留手動維護的核心名單**——那裡面有
+刻意納入的低星專案（權限天生就大的類型，正是最需要在安裝前看懂的）。
+
+### 發布者身分
+
+同步時會一併記錄每個專案在 registry 上的**命名空間**，那本身就是驗證強度：
+
+| 標示 | 代表什麼 |
+|---|---|
+| **MCP 官方** | `io.modelcontextprotocol/*`，官方團隊自己發布 |
+| **網域驗證** | 發布者以 DNS 記錄證明擁有該網域，背後是可追究的組織 |
+| **GitHub 帳號** | `io.github.*`，只證明擁有那個 GitHub 帳號 |
+| **未登錄** | 不在官方 registry 中 |
+
+> **這是身分驗證程度，不是安全背書。** 登錄 registry 只需要證明「我是這個帳號
+> 或網域的人」，不需要通過任何內容審查。官方發布的 MCP 一樣可能要求大權限，
+> 所以六項檢查照跑。網站上刻意用中性色顯示這個標籤，不與紅／黃／綠的風險
+> 結論混用。
 
 ---
 

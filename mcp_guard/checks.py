@@ -81,12 +81,46 @@ def check_identity(b: RepoBundle) -> list[Finding]:
         out.append(Finding("身分", LOW, "沒有授權條款（License）",
                            "沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。"))
 
+    out.extend(_check_registry(b))
+
     out.append(Finding(
         "身分", INFO, "倉庫基本資料",
         f"⭐ {stars}｜fork {m.get('forks_count', 0)}｜"
         f"語言 {m.get('language') or '未標示'}｜"
         f"建立 {created[:10]}｜最後推送 {pushed[:10]}"))
     return out
+
+
+# 官方 registry 的登錄狀態。**這一段只陳述發布者身分被驗證到什麼程度，
+# 完全不是程式碼安全性的背書**——登錄只需要證明「我是這個帳號／網域的人」，
+# 不需要通過任何內容審查。措辭必須守住這條線。
+REG_DETAIL = {
+    "official": ("這個 MCP 由 MCP 官方團隊自己發布。這代表發布者身分明確，"
+                 "**不代表**它的權限比較小或程式碼比較安全——下面的權限"
+                 "與投毒檢查仍然照跑。"),
+    "domain": ("發布者以 DNS 記錄證明自己擁有這個網域，因此它背後對應到一個"
+               "真實可追究的組織。這比只驗證 GitHub 帳號強，但**驗證的是身分"
+               "不是程式碼**。"),
+    "github": ("發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並"
+               "登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。"),
+}
+
+
+def _check_registry(b: RepoBundle) -> list[Finding]:
+    reg = b.registry
+    if not reg:
+        return []
+    if not reg.get("registered"):
+        return [Finding(
+            "身分", LOW, "未登錄官方 MCP registry",
+            "這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。"
+            "很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何"
+            "第三方驗證過「發布者是誰」，你得自己確認來源。")]
+    kind = reg.get("kind", "github")
+    return [Finding(
+        "身分", INFO, f"官方 registry：{reg.get('label', '已登錄')}",
+        REG_DETAIL.get(kind, REG_DETAIL["github"]),
+        evidence=f"registry 名稱 {reg.get('name', '')}")]
 
 
 # ── 2. 供應鏈 ───────────────────────────────────────────────────────────────
@@ -429,8 +463,23 @@ TEST_PATH_RE = re.compile(
     r"(^|/)(tests?|__tests__|__mocks__|spec|fixtures?|examples?|e2e|samples?)(/|$)"
     r"|\.(test|spec)\.[jt]sx?$|(^|/)test_[^/]+\.py$|_test\.py$", re.I)
 
-# 零寬、雙向覆寫、BOM、私有區——正常說明文字不會用到
-HIDDEN_CHARS = re.compile(r"[​-‏‪-‮⁠-⁤﻿-]")
+# 2026-07-28 校準（一次對 9 個真實專案的誤報，含 Figma 官方與 ★18k 的
+# oh-my-posh）：初版把「零寬 + BOM + 私有使用區 + 方向標記」通通判為
+# CRITICAL，結果抓到的全是正常用途——
+#   · U+E000–F8FF 私有使用區 → Nerd Font 圖示。oh-my-posh 是 shell 主題
+#     工具，它就是靠這些字元畫圖示的
+#   · U+FEFF → BOM。命中點正好在某專案的 csv.ts，處理 Excel CSV 必須用
+#   · U+200D → emoji 組合（ZWJ）的必要字元
+#   · U+200E/200F → 方向標記，任何 i18n 專案都會用
+#
+# 真正「你讀到的程式碼 ≠ 實際執行的程式碼」的手法是 Trojan Source
+# （CVE-2021-42574），用的是雙向覆寫與隔離字元，沒有正當用途，留 CRITICAL。
+BIDI_CHARS = re.compile("[‪-‮⁦-⁩]")
+
+# 零寬字元用於**隱藏文字**，是另一種攻擊，但在原始碼裡太常見（emoji、
+# CJK 排版、壓縮過的 JS），全檔掃描必然誤報。因此只在「會被送進模型的
+# 文字」裡查——工具描述與代理指令檔——那裡出現零寬字元才真的沒道理。
+ZERO_WIDTH = re.compile("[​‌‍⁠-⁤]")
 
 # MCP 工具描述會出現在三種寫法，三種都要抓，否則投毒檢查會漏掉整個生態：
 #   1. 明寫 description 欄位（JS/TS 物件、Python kwarg）
@@ -477,6 +526,18 @@ def check_tool_poisoning(b: RepoBundle) -> list[Finding]:
             continue
         for body in iter_descriptions(text):
             scanned += 1
+            # 零寬字元在**工具描述**裡才是訊號：那是一段給人和模型讀的短文字，
+            # 沒有理由需要不可見字元。（整份原始碼掃就會抓到 emoji 與壓縮 JS）
+            zw = ZERO_WIDTH.search(body)
+            if zw and ("zw", "") not in seen:
+                seen.add(("zw", ""))
+                out.append(Finding(
+                    "工具描述投毒", MEDIUM, "工具描述含零寬字元",
+                    "描述裡有看不見的字元。emoji 組合會用到零寬連接字元，"
+                    "所以不一定是惡意；但它也是把指令藏進描述、讓人讀不出來的"
+                    "手法。請確認那個位置為什麼需要它。",
+                    evidence=f"{path}｜U+{ord(zw.group()):04X}｜"
+                             f"「{' '.join(body.split())[:90]}」"))
             matched = [(sev, label, why) for pat, sev, label, why
                        in INJECTION_PATTERNS if re.search(pat, body, re.I)]
             if not matched:
@@ -514,11 +575,14 @@ def check_tool_poisoning(b: RepoBundle) -> list[Finding]:
                     "的位置的手法。若前面沒有其他命中，通常不必緊張。",
                     evidence=f"{path}｜長度 {len(body)} 字"))
 
-        for hit in HIDDEN_CHARS.finditer(text):
+        # 全檔只掃 bidi 覆寫。零寬字元改在下方的「工具描述」層級查——
+        # 那裡出現才沒有正當理由，掃整份原始碼只會抓到 emoji 與壓縮過的 JS。
+        for hit in BIDI_CHARS.finditer(text):
             out.append(Finding(
-                "工具描述投毒", CRITICAL, "原始碼含不可見／雙向覆寫字元",
-                "零寬字元或 bidi 覆寫字元可讓「你讀到的程式碼」與「實際執行的程式碼」"
-                "不一致，也可用來在工具描述中藏匿指令。正常原始碼沒有理由出現它們。",
+                "工具描述投毒", CRITICAL, "原始碼含雙向覆寫字元",
+                "bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實際讀到的」"
+                "順序不同，是 Trojan Source（CVE-2021-42574）的手法。"
+                "除了處理雙向文字的函式庫，正常原始碼沒有理由出現它們。",
                 evidence=f"{path}｜位置 {hit.start()}｜U+{ord(hit.group()):04X}"))
             break   # 每個檔案報一次就夠
 
@@ -690,13 +754,18 @@ def check_agent_instructions(b: RepoBundle) -> list[Finding]:
     hits: dict[tuple[str, str, str, str], list[str]] = {}
 
     for path, text, _k in sorted(targets):
-        for hit in HIDDEN_CHARS.finditer(text):
-            key = (CRITICAL, "指令檔含不可見／雙向覆寫字元",
-                   "零寬或 bidi 字元可讓「你在 GitHub 上讀到的內容」與「模型實際"
-                   "收到的指令」不一致。一份給人讀的說明文件沒有理由用到它們。",
+        # 指令檔本身就是一段要送進模型的說明文字，不是程式碼——這裡出現
+        # 零寬或 bidi 字元都沒有正當理由，兩者都留在高風險。
+        for pat, sev, label in ((BIDI_CHARS, CRITICAL, "雙向覆寫字元"),
+                                (ZERO_WIDTH, HIGH, "零寬字元")):
+            hit = pat.search(text)
+            if not hit:
+                continue
+            key = (sev, f"指令檔含{label}",
+                   "這類字元可讓「你在 GitHub 上讀到的內容」與「模型實際收到的"
+                   "指令」不一致。一份給人讀的說明文件沒有理由用到它們。",
                    f"位置 {hit.start()}｜U+{ord(hit.group()):04X}")
             hits.setdefault(key, []).append(path)
-            break
 
         for block in _blocks(text):
             for pat, sev, label, why, warn_ok in AGENT_PATTERNS:

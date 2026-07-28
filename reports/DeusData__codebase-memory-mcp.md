@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 35991 / 2812 |
+| 星數 / Fork | ⭐ 36009 / 2814 |
 | 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 258 個 |
-| 檢查時間 | 2026-07-28 13:51 |
+| 檢查時間 | 2026-07-28 14:57 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 6
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`pkg/npm/install.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、scripts/audit-grammar-security.sh、scripts/extract_nomic_vectors.py、scripts/run-test-wave.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（376 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（377 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -82,9 +82,15 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`最後推送 2026-07-28`
 
+### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
+
+發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。
+
+> 證據：`registry 名稱 io.github.DeusData/codebase-memory-mcp`
+
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 35991｜fork 2812｜語言 C｜建立 2026-02-24｜最後推送 2026-07-28
+⭐ 36009｜fork 2814｜語言 C｜建立 2026-02-24｜最後推送 2026-07-28
 
 ---
 

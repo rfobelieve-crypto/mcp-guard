@@ -255,6 +255,16 @@ summary:hover{background:var(--surface-2)}
 .seal.crit{color:var(--crit);background:var(--crit-bg)}
 .seal.warn{color:var(--warn);background:var(--warn-bg)}
 .seal.pass{color:var(--pass);background:var(--pass-bg)}
+/* 發布者身分：中性色。紅黃綠留給「結論」，身分驗證程度與風險高低是
+   兩件不同的事，用同一套顏色會讓人誤以為官方發布就比較安全。 */
+.pub{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;
+  padding:2px 6px;border-radius:3px;border:1px solid var(--line);
+  color:var(--muted);white-space:nowrap;margin-left:9px;
+  vertical-align:2px;cursor:help}
+.pub[data-k="official"]{color:var(--seal);border-color:var(--seal)}
+.pub[data-k="domain"]{color:var(--ink-2)}
+.pub[data-k="none"]{opacity:.55}
+
 .name{font-family:var(--mono);font-size:14px;font-weight:600;
   word-break:break-all}
 .top{font-size:12.5px;color:var(--muted);margin-top:4px}
@@ -630,12 +640,33 @@ def esc(s) -> str:
 VKEY = {"🔴": "crit", "🟡": "warn", "🟢": "pass"}
 
 
+# 發布者身分的短標籤。刻意用中性色：紅黃綠已經被「結論」佔走，
+# 身分驗證程度和風險高低是兩件事，不該用同一套顏色暗示。
+PUB_SHORT = {"official": "MCP 官方", "domain": "網域驗證",
+             "github": "GitHub 帳號", "none": "未登錄"}
+
+
+def pub_tag(p: dict) -> str:
+    kind = p.get("pub_kind") or ""
+    if not kind:
+        return ""
+    short = PUB_SHORT.get(kind, "")
+    if not short:
+        return ""
+    full = p.get("pub") or short
+    return (f'<span class="pub" data-k="{esc(kind)}" '
+            f'title="發布者身分：{esc(full)}（驗證的是身分，不是程式碼）">'
+            f'{esc(short)}</span>')
+
+
 def render_rows(projects: list) -> str:
     out = []
     for p in projects:
         v = VKEY.get(p["verdict"][0], "pass")
         label = p["verdict"][2:]
-        search = f"{p['slug']} {p.get('desc','')} {p['top']}".lower()
+        # 發布者身分也進搜尋字串：想只看官方發布的，直接搜「官方」就行
+        search = (f"{p['slug']} {p.get('desc','')} {p['top']} "
+                  f"{p.get('pub','')}").lower()
         fs = []
         for f in p["findings"]:
             ev = (f'<div class="ev">{esc(f["evidence"])}</div>'
@@ -653,6 +684,7 @@ def render_rows(projects: list) -> str:
             f'<details class="row rv" data-v="{v}" data-search="{esc(search)}">'
             f'<summary><span class="seal {v}">{esc(label)}</span>'
             f'<span><span class="name">{esc(p["slug"])}</span>'
+            f'{pub_tag(p)}'
             f'<span class="top">{top}</span></span>'
             f'<span class="nums">★{p["stars"]:,}<br>{esc(p["pushed"])}</span>'
             f'</summary><div class="body">'

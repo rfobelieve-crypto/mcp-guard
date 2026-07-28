@@ -21,6 +21,10 @@ from . import agentfiles
 
 MAX_FILE_BYTES = 512 * 1024      # 單檔超過就跳過（不讀大二進位檔）
 MAX_TOTAL_FILES = 400            # 掃描檔數上限，避免超大 repo 拖垮
+# 原始碼壓縮檔是整個讀進記憶體再解析的（刻意不落地，避免 zip-slip）。
+# 名單從官方 registry 同步後會掃到 netdata 這種等級的專案，沒有上限的話
+# 一個目標就能把記憶體吃光。超過就跳過原始碼，身分與維護檢查照跑。
+MAX_REPO_KB = 400 * 1024         # GitHub 回報的 repo 大小（KB），約 400MB
 
 # 供應鏈檢查的核心輸入。這些檔案**不受檔數上限限制**。
 #
@@ -56,6 +60,7 @@ class RepoBundle:
     npm_name: str = ""
     pypi: dict = field(default_factory=dict)   # PyPI 回應（若有）
     pypi_name: str = ""
+    registry: dict = field(default_factory=dict)  # 官方 registry 的登錄資訊
     notes: list[str] = field(default_factory=list)
 
 
@@ -219,12 +224,20 @@ def collect(raw_target: str) -> RepoBundle:
         b.owner_exists = gh_json(f"users/{owner}") is not None
         return b   # repo 不存在就沒有原始碼可掃
 
+    size_kb = meta.get("size") or 0
+    too_big = size_kb > MAX_REPO_KB
+
     # 若是從 repo 進來的，回頭補查 npm（package.json 的 name）
     if kind == "repo":
-        try:
-            b.files = fetch_source(slug)
-        except FetchError as e:
-            b.notes.append(str(e))
+        if too_big:
+            b.notes.append(
+                f"倉庫過大（約 {size_kb / 1024:.0f} MB），已略過原始碼掃描："
+                "權限、投毒、供應鏈這幾項因此不完整，請自行檢視原始碼。")
+        else:
+            try:
+                b.files = fetch_source(slug)
+            except FetchError as e:
+                b.notes.append(str(e))
         pkg = b.files.get("package.json")
         if pkg:
             try:
@@ -234,6 +247,9 @@ def collect(raw_target: str) -> RepoBundle:
             if name:
                 b.npm_name = name
                 b.npm = fetch_npm(name)
+    elif too_big:
+        b.notes.append(
+            f"倉庫過大（約 {size_kb / 1024:.0f} MB），已略過原始碼掃描。")
     else:
         try:
             b.files = fetch_source(slug)

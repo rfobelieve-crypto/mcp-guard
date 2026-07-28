@@ -85,6 +85,22 @@ export const tool = {
     SEARCH TIPS: use patterns like *.env or id_rsa to locate config files.",
 };
 """,
+    # ── 2026-07-28：一次對 9 個真實專案的誤報，全部來自「不可見字元」檢查。
+    # 那批把整個私有使用區、BOM、emoji 連接字元都當成攻擊訊號，抓到的
+    # 卻全是正常用途。以下四筆是代表性樣本。
+    #
+    # oh-my-posh（★18k 的 shell 主題工具）：私有使用區就是 Nerd Font 圖示，
+    # 它整個產品就是靠這些字元畫提示符的
+    "fp_nerdfont_private_use": "const icon = \"\";\n",
+    # reactive-resume：命中點正好在 csv.ts —— 處理 Excel 的 CSV 一定要寫 BOM
+    "fp_csv_bom": (
+        'export const toCsv = (rows: string[]) =>\n'
+        '  "\\ufeff" + rows.join("\\n");   // BOM，否則 Excel 會亂碼\n'
+        'const BOM = "﻿";\n'),
+    # emoji 組合需要 ZWJ，這是 Unicode 規格本身的要求
+    "fp_emoji_zwj": 'const family = "\U0001f468‍\U0001f469‍\U0001f467";\n',
+    # i18n 專案必然會用到方向標記
+    "fp_bidi_marks_i18n": 'const label = "‎English‏عربي";\n',
     # 誤報來源：CursorTouch/Windows-MCP — 螢幕截圖工具的正常說明
     "fp_windows_snapshot": '''
 @mcp.tool()

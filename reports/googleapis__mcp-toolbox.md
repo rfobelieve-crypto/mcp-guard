@@ -6,53 +6,29 @@
 |---|---|
 | 稽核對象 | `googleapis/mcp-toolbox` |
 | 專案說明 | MCP Toolbox for Databases is an open source MCP server for databases. |
-| 星數 / Fork | ⭐ 16034 / 1655 |
+| 星數 / Fork | ⭐ 16037 / 1656 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-07-28 13:50 |
+| 已掃描檔案 | 0 個 |
+| 檢查時間 | 2026-07-28 14:56 |
+
+> ⚠️ 倉庫過大（約 1342 MB），已略過原始碼掃描：權限、投毒、供應鏈這幾項因此不完整，請自行檢視原始碼。
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 6
+🔵 低 1　⚪ 資訊 6
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
-
-確認這些連線是功能必需的，而不是把你的資料送到第三方。
-
-> 證據：`api.cloudflare.com、bar.com、cloud.google.com、dotenvx.com、feross.org、foo.com、geraintluff.github.io、go.dev、mcp-toolbox.dev、medium.com…`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.ci/lint-docs-source-page.sh、.ci/lint-docs-tool-page.sh、.github/workflows/nightly_tier_report.yml、.hugo/static/js/w3.js、cmd/internal/skills/generator.go`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/workflows/cloud_build_failure_reporter.yml、.github/workflows/docs_preview_deploy_cf.yaml、cmd/internal/skills/generator.go、cmd/internal/skills/generator_test.go、docs/en/documentation/configuration/pre-post-processing/js/adk/agent.js`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`cmd/internal/skills/generator.go`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（252 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（248 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
-這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-> 證據：`GEMINI.md（Gemini CLI 指令）、docs/en/documentation/configuration/embedding-models/gemini.md（Gemini CLI 指令）、skills/maintainer/triage-issues/SKILL.md（Agent Skill 指令（SKILL.md））`
-
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -60,21 +36,21 @@
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
-### ⚪ 資訊｜[權限] 需要的憑證類設定
-
-安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
-
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
-
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
 > 證據：`最後推送 2026-07-28`
 
+### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
+
+發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。
+
+> 證據：`registry 名稱 io.github.googleapis/mcp-toolbox`
+
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 16034｜fork 1655｜語言 Go｜建立 2024-06-07｜最後推送 2026-07-28
+⭐ 16037｜fork 1656｜語言 Go｜建立 2024-06-07｜最後推送 2026-07-28
 
 ---
 

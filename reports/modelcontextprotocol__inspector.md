@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10500 / 1442 |
+| 星數 / Fork | ⭐ 10504 / 1442 |
 | 最後更新 | 2026-07-28 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 13:50 |
+| 檢查時間 | 2026-07-28 14:56 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 7　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -55,13 +55,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（309 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 沒有授權條款（License）
 
 沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。
+
+### 🔵 低｜[身分] 未登錄官方 MCP registry
+
+這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -91,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10500｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
+⭐ 10504｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
 
 ---
 

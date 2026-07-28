@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `GLips/Figma-Context-MCP` |
 | 專案說明 | MCP server to provide Figma layout information to AI coding agents like Cursor |
-| 星數 / Fork | ⭐ 15513 / 1225 |
+| 星數 / Fork | ⭐ 15516 / 1226 |
 | 最後更新 | 2026-07-03 |
 | 授權 | MIT License |
 | npm 套件 | `figma-developer-mcp` |
 | 已掃描檔案 | 100 個 |
-| 檢查時間 | 2026-07-28 13:50 |
+| 檢查時間 | 2026-07-28 14:56 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -75,9 +75,15 @@
 
 > 證據：`最後推送 2026-07-03`
 
+### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
+
+發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。
+
+> 證據：`registry 名稱 io.github.GLips/Figma-Context-MCP`
+
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15513｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03
+⭐ 15516｜fork 1226｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03
 
 ---
 

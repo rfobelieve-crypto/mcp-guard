@@ -18,6 +18,9 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
+    # 名單從官方 registry 同步後有近百個目標，每個都要下載原始碼壓縮檔。
+    # 給足時間，但別讓卡住的一輪佔用 runner 六小時。
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +33,10 @@ jobs:
       - name: 紅隊測試（未通過就中止）
         run: python -m tests.test_poisoning
 
+      # 名單來自版控中的 targets.txt（由 sync_targets.py 從官方 registry 同步）。
+      # 這裡刻意**不**每天重新同步：名單每天變動的話，前後兩天的報告就不能
+      # 互相比較，而「同一個專案昨天在今天不在」對讀者是雜訊不是資訊。
+      # 要更新名單就在本機跑 sync_targets.py 並提交，那是一次有意識的決定。
       - name: 執行批次安檢
         env:
           GH_TOKEN: ${{ github.token }}   # runner 內建的 gh CLI 用它認證

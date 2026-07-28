@@ -1,0 +1,549 @@
+{
+ "synced_at": "2026-07-28",
+ "registry_total": 13824,
+ "servers": {
+  "modelcontextprotocol/servers": {
+   "registered": false
+  },
+  "modelcontextprotocol/inspector": {
+   "registered": false
+  },
+  "modelcontextprotocol/registry": {
+   "registered": true,
+   "name": "ai.com.mcp/registry",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "microsoft/playwright-mcp": {
+   "registered": true,
+   "name": "io.github.microsoft/playwright-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "github/github-mcp-server": {
+   "registered": true,
+   "name": "io.github.github/github-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "googleapis/mcp-toolbox": {
+   "registered": true,
+   "name": "io.github.googleapis/mcp-toolbox",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "GLips/Figma-Context-MCP": {
+   "registered": true,
+   "name": "io.github.GLips/Figma-Context-MCP",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "hangwin/mcp-chrome": {
+   "registered": false
+  },
+  "wonderwhy-er/DesktopCommanderMCP": {
+   "registered": true,
+   "name": "io.github.wonderwhy-er/desktop-commander",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "CursorTouch/Windows-MCP": {
+   "registered": true,
+   "name": "io.github.CursorTouch/Windows-MCP",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "idosal/git-mcp": {
+   "registered": false
+  },
+  "firecrawl/firecrawl-mcp-server": {
+   "registered": true,
+   "name": "io.github.firecrawl/firecrawl-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "BrowserMCP/mcp": {
+   "registered": false
+  },
+  "awslabs/mcp": {
+   "registered": false
+  },
+  "LaurieWired/GhidraMCP": {
+   "registered": false
+  },
+  "DeusData/codebase-memory-mcp": {
+   "registered": true,
+   "name": "io.github.DeusData/codebase-memory-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "BeehiveInnovations/pal-mcp-server": {
+   "registered": false
+  },
+  "PrefectHQ/fastmcp": {
+   "registered": false
+  },
+  "paperclipai/paperclip": {
+   "registered": true,
+   "name": "io.github.IncorporatedPartners/labelhead-artist-momentum",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "D4Vinci/Scrapling": {
+   "registered": true,
+   "name": "io.github.D4Vinci/Scrapling",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "ruvnet/ruflo": {
+   "registered": false
+  },
+  "upstash/context7": {
+   "registered": true,
+   "name": "io.github.upstash/context7",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "tldraw/tldraw": {
+   "registered": true,
+   "name": "io.github.tldraw/tldraw",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "registered": true,
+   "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "HeyPuter/puter": {
+   "registered": true,
+   "name": "com.puter/mcp-server",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "amruthpillai/reactive-resume": {
+   "registered": true,
+   "name": "io.github.amruthpillai/reactive-resume",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "bytedance/UI-TARS-desktop": {
+   "registered": true,
+   "name": "io.github.bytedance/mcp-server-browser",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "PostHog/posthog": {
+   "registered": true,
+   "name": "io.github.PostHog/mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "agentskills/agentskills": {
+   "registered": true,
+   "name": "ai.com.mcp/skills-search",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "JanDeDobbeleer/oh-my-posh": {
+   "registered": true,
+   "name": "dev.ohmyposh/validator",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "Skyvern-AI/skyvern": {
+   "registered": true,
+   "name": "io.github.Skyvern-AI/skyvern",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "screenpipe/screenpipe": {
+   "registered": true,
+   "name": "io.github.screenpipe/screenpipe-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "modelscope/FunASR": {
+   "registered": true,
+   "name": "io.github.modelscope/funasr-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "coder/coder": {
+   "registered": true,
+   "name": "io.github.coder/coder",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "t8y2/dbx": {
+   "registered": true,
+   "name": "io.github.t8y2/dbx",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "kubeshark/kubeshark": {
+   "registered": true,
+   "name": "io.github.kubeshark/mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "droidrun/mobilerun": {
+   "registered": true,
+   "name": "io.github.droidrun/mobilerun",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "MervinPraison/PraisonAI": {
+   "registered": true,
+   "name": "io.github.MervinPraison/praisonai",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "MystenLabs/sui": {
+   "registered": true,
+   "name": "io.github.jessiemongeon1/sui-kapa",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "airweave-ai/airweave": {
+   "registered": true,
+   "name": "io.github.airweave-ai/search",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "getsentry/XcodeBuildMCP": {
+   "registered": true,
+   "name": "com.xcodebuildmcp/XcodeBuildMCP",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "Klavis-AI/klavis": {
+   "registered": true,
+   "name": "ai.klavis/strata",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "mobile-next/mobile-mcp": {
+   "registered": true,
+   "name": "io.github.mobile-next/mobile-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "JerBouma/FinanceToolkit": {
+   "registered": true,
+   "name": "io.github.JerBouma/financetoolkit",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "mock-server/mockserver-monorepo": {
+   "registered": true,
+   "name": "com.mock-server/mockserver",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "exa-labs/exa-mcp-server": {
+   "registered": true,
+   "name": "ai.exa/exa",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "firebase/firebase-tools": {
+   "registered": true,
+   "name": "io.github.firebase/firebase-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "antvis/mcp-server-chart": {
+   "registered": true,
+   "name": "io.github.antvis/mcp-server-chart",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "repowise-dev/repowise": {
+   "registered": true,
+   "name": "dev.repowise/repowise",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "txn2/kubefwd": {
+   "registered": true,
+   "name": "io.github.txn2/kubefwd",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "homeassistant-ai/ha-mcp": {
+   "registered": true,
+   "name": "io.github.homeassistant-ai/ha-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "tolgee/tolgee-platform": {
+   "registered": true,
+   "name": "io.github.tolgee/tolgee",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "cloudflare/mcp-server-cloudflare": {
+   "registered": true,
+   "name": "com.cloudflare.mcp/mcp",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "KnockOutEZ/wigolo": {
+   "registered": true,
+   "name": "io.github.KnockOutEZ/wigolo",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "callstack/agent-device": {
+   "registered": false
+  },
+  "IvanMurzak/Unity-MCP": {
+   "registered": true,
+   "name": "io.github.IvanMurzak/Unity-MCP",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "basicmachines-co/basic-memory": {
+   "registered": true,
+   "name": "io.github.basicmachines-co/basic-memory",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "revolist/revogrid": {
+   "registered": true,
+   "name": "io.github.revolist/revogrid-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "nowork-studio/NotFair": {
+   "registered": false
+  },
+  "Ataraxy-Labs/sem": {
+   "registered": true,
+   "name": "io.github.Ataraxy-Labs/sem",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "bytebase/dbhub": {
+   "registered": true,
+   "name": "io.github.bytebase/dbhub",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "codeaashu/claude-code": {
+   "registered": true,
+   "name": "io.github.divu2025/codemaster",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "giancarloerra/SocratiCode": {
+   "registered": false
+  },
+  "blazickjp/arxiv-mcp-server": {
+   "registered": true,
+   "name": "io.github.blazickjp/arxiv-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "signerlabs/ShipSwift": {
+   "registered": true,
+   "name": "io.github.signerlabs/shipswift",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "supabase/mcp": {
+   "registered": true,
+   "name": "com.supabase/mcp",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "nteract/semiotic": {
+   "registered": true,
+   "name": "io.github.nteract/semiotic",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "medplum/medplum": {
+   "registered": true,
+   "name": "com.medplum/mcp",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "dgunning/edgartools": {
+   "registered": true,
+   "name": "io.github.dgunning/edgartools",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "apify/apify-mcp-server": {
+   "registered": true,
+   "name": "com.apify/apify-mcp-server",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "jgravelle/jcodemunch-mcp": {
+   "registered": true,
+   "name": "io.github.jgravelle/jcodemunch-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "tavily-ai/tavily-mcp": {
+   "registered": true,
+   "name": "io.github.tavily-ai/tavily-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "llmsresearch/paperbanana": {
+   "registered": true,
+   "name": "io.github.llmsresearch/paperbanana",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "vmoranv/jshookmcp": {
+   "registered": true,
+   "name": "io.github.vmoranv/jshookmcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "containers/kubernetes-mcp-server": {
+   "registered": true,
+   "name": "io.github.containers/kubernetes-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "zereight/gitlab-mcp": {
+   "registered": true,
+   "name": "io.github.zereight/gitlab-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "figma/mcp-server-guide": {
+   "registered": true,
+   "name": "com.figma.mcp/mcp",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "MicrosoftDocs/mcp": {
+   "registered": true,
+   "name": "com.microsoft/microsoft-learn-mcp",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "timescale/pg-aiguide": {
+   "registered": true,
+   "name": "io.github.timescale/pg-aiguide",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "blitzdotdev/blitz-mac": {
+   "registered": true,
+   "name": "io.github.blitzdotdev/blitz",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "stripe/ai": {
+   "registered": false
+  },
+  "bergside/typeui": {
+   "registered": true,
+   "name": "io.github.bergside/typeui",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "kubeshop/testkube": {
+   "registered": true,
+   "name": "io.github.kubeshop/testkube-mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "LetsFG/LetsFG": {
+   "registered": false
+  },
+  "mims-harvard/ToolUniverse": {
+   "registered": true,
+   "name": "io.github.mims-harvard/tooluniverse",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "NuGet/Home": {
+   "registered": true,
+   "name": "com.microsoft/nuget",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "dongdongbh/Mindwtr": {
+   "registered": true,
+   "name": "io.github.dongdongbh/mindwtr",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "hashicorp/terraform-mcp-server": {
+   "registered": true,
+   "name": "io.github.hashicorp/terraform-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "svnscha/mcp-windbg": {
+   "registered": true,
+   "name": "io.github.svnscha/mcp-windbg",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "winedarksea/AutoTS": {
+   "registered": true,
+   "name": "io.github.winedarksea/AutoTS",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "nrwl/nx-console": {
+   "registered": true,
+   "name": "io.github.nrwl/nx-console",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "mnemox-ai/tradememory-protocol": {
+   "registered": true,
+   "name": "io.github.mnemox-ai/tradememory-protocol",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "robotmcp/ros-mcp-server": {
+   "registered": true,
+   "name": "io.github.robotmcp/ros-mcp-server",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "mbailey/voicemode": {
+   "registered": true,
+   "name": "dev.voicemode/voicemode",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "anypost/emailmd": {
+   "registered": true,
+   "name": "dev.emailmd/emailmd",
+   "kind": "domain",
+   "label": "網域驗證"
+  },
+  "sceneview/sceneview": {
+   "registered": true,
+   "name": "io.github.sceneview/mcp",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "BetterDB-inc/monitor": {
+   "registered": true,
+   "name": "io.github.BetterDB-inc/monitor",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  },
+  "Intuition-Lab/personal-model": {
+   "registered": true,
+   "name": "io.github.Intuition-Lab/personal-model",
+   "kind": "github",
+   "label": "GitHub 帳號驗證"
+  }
+ }
+}

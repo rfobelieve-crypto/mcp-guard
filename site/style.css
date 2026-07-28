@@ -209,6 +209,16 @@ summary:hover{background:var(--surface-2)}
 .seal.crit{color:var(--crit);background:var(--crit-bg)}
 .seal.warn{color:var(--warn);background:var(--warn-bg)}
 .seal.pass{color:var(--pass);background:var(--pass-bg)}
+/* 發布者身分：中性色。紅黃綠留給「結論」，身分驗證程度與風險高低是
+   兩件不同的事，用同一套顏色會讓人誤以為官方發布就比較安全。 */
+.pub{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;
+  padding:2px 6px;border-radius:3px;border:1px solid var(--line);
+  color:var(--muted);white-space:nowrap;margin-left:9px;
+  vertical-align:2px;cursor:help}
+.pub[data-k="official"]{color:var(--seal);border-color:var(--seal)}
+.pub[data-k="domain"]{color:var(--ink-2)}
+.pub[data-k="none"]{opacity:.55}
+
 .name{font-family:var(--mono);font-size:14px;font-weight:600;
   word-break:break-all}
 .top{font-size:12.5px;color:var(--muted);margin-top:4px}
