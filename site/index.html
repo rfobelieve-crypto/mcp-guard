@@ -9,7 +9,12 @@
 <meta property="og:description" content="繁體中文的 MCP 獨立安全稽核。安裝前先看清楚它是誰、要什麼權限、有沒有對模型下指令。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mcp-guard-iota.vercel.app/">
+<meta property="og:image" content="https://mcp-guard-iota.vercel.app/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MCP 安檢｜獨立稽核總表">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mcp-guard-iota.vercel.app/og/home.jpg">
 <meta name="color-scheme" content="dark light">
 <link rel="canonical" href="https://mcp-guard-iota.vercel.app/">
 <link rel="stylesheet" href="style.css">
@@ -314,7 +319,10 @@
   }
 
   function loop(){ draw(); requestAnimationFrame(loop); }
-  addEventListener('resize', function(){ size(); init(); });
+  function settle(){ for(var i=0;i<220;i++) draw(); }
+  // 設定 canvas.width 會清空畫布。動畫模式下一幀就補回來了，但靜態模式
+  // 不會——少了這裡的重繪，關閉動畫的使用者一調整視窗，場景就永久空白。
+  addEventListener('resize', function(){ size(); init(); if(still) settle(); });
   addEventListener('pointermove', function(e){
     if(e.clientY>innerHeight*1.15) return;
     tYaw=(e.clientX/innerWidth-0.5)*0.40;
@@ -324,8 +332,7 @@
   size(); init();
   // 不播動畫時仍跑滿一段，讓畫面停在「已經運作一陣子」的狀態：
   // 有判定過的封包、有滯留待複核的，而不是一圈空環。
-  if(still){ for(var i=0;i<220;i++) draw(); }
-  else loop();
+  if(still) settle(); else loop();
 })();
 </script><script>
 (function(){
