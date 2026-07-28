@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 1711 / 315 |
+| 星數 / Fork | ⭐ 1711 / 316 |
 | 最後更新 | 2026-07-27 |
 | 授權 | MIT License |
 | 已掃描檔案 | 445 個 |
-| 檢查時間 | 2026-07-28 17:09 |
+| 檢查時間 | 2026-07-28 22:07 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`benchmarks/furever/environment/app/(dashboard)/settings/layout.tsx、benchmarks/furever/environment/scripts/setup-accounts.py、benchmarks/furever/grader/payments.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（74 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -64,7 +64,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -72,7 +72,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1711｜fork 315｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-07-27
+⭐ 1711｜fork 316｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-07-27
 
 ---
 

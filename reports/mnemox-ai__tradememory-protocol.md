@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
-| 星數 / Fork | ⭐ 1401 / 164 |
-| 最後更新 | 2026-07-14 |
+| 星數 / Fork | ⭐ 1402 / 164 |
+| 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-07-28 17:09 |
+| 檢查時間 | 2026-07-28 22:08 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`alembic.sqlalchemy.org、api.binance.com、api.deepseek.com、api.etherscan.io、cdn.jsdelivr.net、data-api.binance.vision、eslint.org、freetsa.org、glama.ai、locize.com…`
 
-### 🔵 低｜[供應鏈] 有 7 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -40,7 +40,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docker-compose.hosted.yml、research/level2/compare_maxdd.py、research/level2/h_sensitivity.py、research/level2/h_sensitivity_sync.py、research/level2/robustness_without_btc1h.py`
+> 證據：`docker-compose.hosted.yml、research/level2/analyze.py、research/level2/compare_maxdd.py、research/level2/h_sensitivity.py、research/level2/h_sensitivity_sync.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -54,7 +54,7 @@
 
 > 證據：`.skills/strategy-validator/SKILL.md（Agent Skill 指令（SKILL.md））、.skills/tradememory/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/binance-skills-hub/trade-memory/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 101 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 102 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 14 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-14`
+> 證據：`最後推送 2026-07-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1401｜fork 164｜語言 Python｜建立 2026-02-23｜最後推送 2026-07-14
+⭐ 1402｜fork 164｜語言 Python｜建立 2026-02-23｜最後推送 2026-07-28
 
 ---
 

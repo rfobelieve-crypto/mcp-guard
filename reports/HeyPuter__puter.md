@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 42886 / 3963 |
+| 星數 / Fork | ⭐ 42888 / 3964 |
 | 最後更新 | 2026-07-28 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-07-28 17:05 |
+| 檢查時間 | 2026-07-28 22:05 |
 
 ## 風險摘要
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42886｜fork 3963｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-07-28
+⭐ 42888｜fork 3964｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-07-28
 
 ---
 

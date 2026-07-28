@@ -11,7 +11,7 @@
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
 | 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-07-28 17:10 |
+| 檢查時間 | 2026-07-28 22:08 |
 
 ## 風險摘要
 

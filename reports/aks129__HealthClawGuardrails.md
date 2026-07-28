@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 17:10 |
+| 檢查時間 | 2026-07-28 22:08 |
 
 ## 風險摘要
 

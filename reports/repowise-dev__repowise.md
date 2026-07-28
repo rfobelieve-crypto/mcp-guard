@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 4258 / 479 |
+| 星數 / Fork | ⭐ 4265 / 482 |
 | 最後更新 | 2026-07-28 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 429 個 |
-| 檢查時間 | 2026-07-28 17:06 |
+| 檢查時間 | 2026-07-28 22:06 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -35,7 +35,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/design/contrast_check.py、packages/cli/src/repowise/cli/commands/augment_cmd/command.py、packages/cli/src/repowise/cli/commands/coverage_cmd.py、packages/cli/src/repowise/cli/commands/login_cmd.py、packages/cli/src/repowise/cli/commands/serve_cmd.py`
+> 證據：`docs/design/contrast_check.py、packages/cli/src/repowise/cli/commands/augment_cmd/command.py、packages/cli/src/repowise/cli/commands/coverage_cmd.py、packages/cli/src/repowise/cli/commands/export_structurizr.py、packages/cli/src/repowise/cli/commands/login_cmd.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/doctor_cmd/workspace_checks.py、packages/cli/src/repowise/cli/commands/init_cmd/command.py、packages/cli/src/repowise/cli/commands/init_cmd/workspace.py、packages/cli/src/repowise/cli/commands/serve_cmd.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（77 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4258｜fork 479｜語言 Python｜建立 2026-03-23｜最後推送 2026-07-28
+⭐ 4265｜fork 482｜語言 Python｜建立 2026-03-23｜最後推送 2026-07-28
 
 ---
 

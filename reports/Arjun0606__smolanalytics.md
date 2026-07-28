@@ -1,6 +1,6 @@
 # MCP 安檢報告：Arjun0606/smolanalytics
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
@@ -9,12 +9,12 @@
 | 星數 / Fork | ⭐ 3 / 1 |
 | 最後更新 | 2026-07-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 241 個 |
-| 檢查時間 | 2026-07-28 17:11 |
+| 已掃描檔案 | 249 個 |
+| 檢查時間 | 2026-07-28 22:09 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟠 高 2　🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -24,7 +24,17 @@
 
 > 證據：`internal/api/llms.txt｜「…TE_KEY=<key> ghcr.io/arjun0606/smolanalytics:latest serve` - binary: `curl -fsSL https://raw.githubusercontent.com/Arjun0606/smolanalytics/main/install.sh | sh`」（另 1 個檔案有相同內容）`
 
-### 🟡 中｜[權限] 會連往 28 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`internal/api/sdktest/env.test.mjs`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -34,7 +44,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、internal/api/auth.go、internal/paths/paths_test.go、internal/store/file/file_test.go、internal/store/segment/deleteuser_test.go`
+> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、internal/api/auth.go、internal/api/sdktest/env.test.mjs、internal/paths/paths_test.go`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`cli/bin/smolanalytics.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 

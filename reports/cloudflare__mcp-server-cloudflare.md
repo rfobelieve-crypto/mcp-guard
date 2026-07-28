@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cloudflare/mcp-server-cloudflare` |
 | 專案說明 | （無） |
-| 星數 / Fork | ⭐ 3999 / 460 |
-| 最後更新 | 2026-07-21 |
+| 星數 / Fork | ⭐ 4003 / 462 |
+| 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cloudflare/mcp-server-cloudflare` |
-| 已掃描檔案 | 350 個 |
-| 檢查時間 | 2026-07-28 17:07 |
+| 已掃描檔案 | 359 個 |
+| 檢查時間 | 2026-07-28 22:06 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 43 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-gateway.mcp.cloudflare.com、ai.google.dev、api.cloudflare.com、arktype.io、auditlogs.mcp.cloudflare.com、bindings.mcp.cloudflare.com、blog.cloudflare.com、blog.mcp.cloudflare.com、browser.mcp.cloudflare.com、builds.mcp.cloudflare.com…`
+> 證據：`ai-gateway.mcp.cloudflare.com、api.cloudflare.com、app.example.com、arktype.io、auditlogs.mcp.cloudflare.com、autorag.mcp.cloudflare.com、bindings.mcp.cloudflare.com、blog.cloudflare.com、blog.mcp.cloudflare.com、browser.mcp.cloudflare.com…`
 
 ### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
 
@@ -33,23 +33,23 @@
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`apps/demo-day/frontend/script.js、apps/sandbox-container/container/sandbox.container.app.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`apps/sandbox-container/container/sandbox.container.app.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/tools/src/changesets.ts、packages/tools/src/test/setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（75 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -57,11 +57,11 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 113 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 175 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -71,11 +71,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-21`
+> 證據：`最後推送 2026-07-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3999｜fork 460｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-07-21
+⭐ 4003｜fork 462｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-07-28
 
 ---
 
