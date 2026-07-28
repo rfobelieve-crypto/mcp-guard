@@ -19,6 +19,42 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "reports" / "data.json"
 OUTDIR = ROOT / "site"
 
+"""首屏採 premium 處理、總表維持可掃描——兩者共用同一套 token。
+
+刻意不把電影感動態套到稽核表格上：那會傷害掃讀效率，而且對一個
+「信任」產品來說，過度炫技反而扣信譽。表格這裡的高級＝精準。
+"""
+
+# ── 首屏（深色、獨立於下方主題切換：這是刻意承諾單一視覺世界）──────────
+HERO_CSS = """
+.hero{position:relative;background:#080B11;color:#E8EDF7;overflow:hidden;
+  min-height:min(88vh,720px);display:flex;align-items:center;
+  border-bottom:1px solid #1B2331}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;
+  display:block;opacity:.9}
+.hero-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;
+  padding:80px 20px;width:100%}
+.hero .eyebrow{color:#6E93C9;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,6.4vw,68px);line-height:1.08;font-weight:800;
+  letter-spacing:-.035em;margin:0;max-width:16ch;text-wrap:balance;
+  color:#F2F5FB}
+.hero h1 em{font-style:normal;color:#6E93C9}
+.hero p.sub{margin:26px 0 0;font-size:clamp(15px,2vw,19px);line-height:1.65;
+  color:#93A0B8;max-width:46ch}
+.hero .cta{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap;
+  align-items:center}
+.hero .cta code{font-family:var(--mono);font-size:14px;background:#111726;
+  border:1px solid #222D40;color:#C6D3E8;padding:12px 18px;border-radius:6px}
+.hero .cta a{font-size:14px;color:#93A0B8;text-decoration:none;
+  border-bottom:1px solid #2A3548;padding-bottom:2px}
+.hero .cta a:hover{color:#E8EDF7;border-bottom-color:#6E93C9}
+.hero .facts{margin-top:56px;display:flex;gap:34px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;color:#63718A;letter-spacing:.04em}
+.hero .facts b{display:block;font-size:22px;color:#E8EDF7;font-weight:700;
+  margin-bottom:4px;font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.hero canvas{opacity:.45}}
+"""
+
 CSS = """
 :root{
   --paper:#F4F6F9; --surface:#FFFFFF; --surface-2:#EDF1F6;
@@ -153,6 +189,64 @@ footer li{margin-bottom:6px}
 }
 """
 
+# 動畫本身就是產品隱喻：一道掃描光束掃過節點場，多數通過、少數示警。
+# 不是裝飾——它在說明這個網站在做什麼。
+HERO_JS = """
+(function(){
+  var c=document.getElementById('field'); if(!c) return;
+  var x=c.getContext('2d'), dpr=Math.min(devicePixelRatio||1,2);
+  var W,H,nodes=[],sweep=0,still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var PASS='rgba(94,193,148,', WARN='rgba(217,169,60,', CRIT='rgba(240,128,121,',
+      IDLE='rgba(110,147,201,';
+  function size(){
+    W=c.clientWidth; H=c.clientHeight;
+    c.width=W*dpr; c.height=H*dpr; x.setTransform(dpr,0,0,dpr,0,0);
+    build();
+  }
+  function build(){
+    nodes=[]; var step=Math.max(52,Math.min(78,W/16));
+    for(var gx=step*0.5; gx<W+step; gx+=step)
+      for(var gy=step*0.5; gy<H+step; gy+=step){
+        var r=Math.random();
+        nodes.push({
+          x:gx+(Math.random()-0.5)*step*0.55,
+          y:gy+(Math.random()-0.5)*step*0.55,
+          r:Math.random()*1.3+0.9, lit:0,
+          // 比例貼近真實掃描結果：多數通過、少數需複核、極少嚴重
+          tone: r>0.965?CRIT : (r>0.80?WARN:PASS)
+        });
+      }
+  }
+  function frame(){
+    x.clearRect(0,0,W,H);
+    var band=170;
+    for(var i=0;i<nodes.length;i++){
+      var n=nodes[i], d=Math.abs(n.x-sweep);
+      if(d<band) n.lit=Math.max(n.lit,1-d/band);
+      n.lit*=0.985;
+      var a=0.10+n.lit*0.85, col=n.lit>0.16?n.tone:IDLE;
+      x.beginPath(); x.fillStyle=col+a.toFixed(3)+')';
+      x.arc(n.x,n.y,n.r+n.lit*1.5,0,6.284); x.fill();
+      if(n.lit>0.45){
+        x.beginPath(); x.strokeStyle=col+(n.lit*0.16).toFixed(3)+')';
+        x.lineWidth=1; x.arc(n.x,n.y,4+n.lit*9,0,6.284); x.stroke();
+      }
+    }
+    // 掃描線本身：一道極細的亮邊，不搶戲
+    var g=x.createLinearGradient(sweep-120,0,sweep+8,0);
+    g.addColorStop(0,'rgba(110,147,201,0)');
+    g.addColorStop(1,'rgba(140,178,235,0.18)');
+    x.fillStyle=g; x.fillRect(sweep-120,0,128,H);
+    x.fillStyle='rgba(168,200,247,0.30)'; x.fillRect(sweep,0,1,H);
+  }
+  function loop(){ sweep+=1.7; if(sweep>W+200) sweep=-120; frame();
+                   requestAnimationFrame(loop); }
+  addEventListener('resize',size); size();
+  if(still){ sweep=W*0.62; for(var k=0;k<70;k++) frame(); }
+  else loop();
+})();
+"""
+
 JS = """
 (function(){
   var rows=[].slice.call(document.querySelectorAll('details.row'));
@@ -235,28 +329,39 @@ def build(data: dict) -> str:
             f'<span class="fc">已掃描 {p["files"]} 個檔案</span></p>'
             f'</div></details>')
 
+    total_f = sum(len(p["findings"]) for p in projects)
     return f"""<title>MCP 安檢｜獨立稽核總表</title>
-<style>{CSS}</style>
-<div class="wrap">
-<header>
-  <p class="eyebrow">獨立稽核 · 繁體中文</p>
-  <h1>MCP 安檢總表</h1>
-  <p class="tagline">安裝任何 MCP 之前，先看清楚它是誰、要什麼權限、
-  有沒有對模型下你看不到的指令。全部結論都附可自行複現的證據。</p>
-  <p class="meta">最近驗證 {esc(data['scanned_at'])}　·　{len(projects)} 個專案　·
-  耗時 {data.get('elapsed_sec', 0)} 秒</p>
-</header>
+<style>{CSS}{HERO_CSS}</style>
 
-<section class="summary">
-  <div class="stat pass"><div class="n">{n['pass']}</div>
-    <div class="k">未發現明顯風險</div></div>
-  <div class="stat warn"><div class="n">{n['warn']}</div>
-    <div class="k">需人工複核</div></div>
-  <div class="stat crit"><div class="n">{n['crit']}</div>
-    <div class="k">不要安裝</div></div>
-  <div class="stat total"><div class="n">{sum(len(p['findings']) for p in projects)}</div>
-    <div class="k">累計檢查發現</div></div>
+<section class="hero">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <p class="eyebrow">獨立稽核 · 繁體中文</p>
+    <h1>裝下去之前，<br>先知道它<em>要什麼權限</em>。</h1>
+    <p class="sub">一個 MCP 拿到的不只是你的檔案，是你正在用的那個 AI
+    會被誰下指令。我們逐一稽核，每個結論都附你能自己複現的證據。</p>
+    <div class="cta">
+      <code>mcp-guard owner/repo</code>
+      <a href="#registry">看 {len(projects)} 份稽核結果 ↓</a>
+    </div>
+    <div class="facts">
+      <div><b>{n['pass']}</b>未發現明顯風險</div>
+      <div><b>{n['warn']}</b>需人工複核</div>
+      <div><b>{total_f}</b>累計檢查發現</div>
+      <div><b>{esc(data['scanned_at'][:10])}</b>最近驗證</div>
+    </div>
+  </div>
 </section>
+
+<div class="wrap" id="registry">
+<header>
+  <p class="eyebrow">稽核總表</p>
+  <h1>18 個熱門 MCP，逐一查過</h1>
+  <p class="tagline">點任一列展開，可看到完整的檢查發現與證據路徑。
+  「需人工複核」不是指控——最常見的原因是這個工具本來就需要大權限。</p>
+  <p class="meta">最近驗證 {esc(data['scanned_at'])}　·　{len(projects)} 個專案　·
+  耗時 {data.get('elapsed_sec', 0)} 秒　·　每日自動重掃</p>
+</header>
 
 <div class="controls">
   <button class="chip" data-f="all" aria-pressed="true">全部</button>
@@ -285,6 +390,7 @@ def build(data: dict) -> str:
      target="_blank" rel="noopener">原始碼與更正政策 ↗</a></p>
 </footer>
 </div>
+<script>{HERO_JS}</script>
 <script>{JS}</script>"""
 
 
