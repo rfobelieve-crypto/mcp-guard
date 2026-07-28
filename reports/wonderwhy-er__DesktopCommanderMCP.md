@@ -10,12 +10,12 @@
 | 最後更新 | 2026-07-27 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 267 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 已掃描檔案 | 269 個 |
+| 檢查時間 | 2026-07-28 10:42 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 5
+🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -64,6 +64,12 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 ### 🔵 低｜[維護] 未處理 issue 偏多（194 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 20 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`plugins/claude/skills/ai-tools-setup/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/computer-health-check/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/desktop-commander-overview/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/knowledge-base/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/obsidian-vault/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/terminal/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
 

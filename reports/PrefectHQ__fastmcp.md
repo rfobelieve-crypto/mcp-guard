@@ -9,20 +9,20 @@
 | 星數 / Fork | ⭐ 26884 / 2194 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 01:12 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-07-28 10:42 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 5
+🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 64 個外部主機
+### 🟡 中｜[權限] 會連往 62 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth.yourdomain.com…`
+> 證據：`YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth0.config.url…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -34,7 +34,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/require-issue-link.yml、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py、examples/auth/azure_oauth/server.py`
+> 證據：`.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,11 +42,17 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/install/claude_code.py、fastmcp_slim/fastmcp/cli/install/gemini_cli.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（251 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（252 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 87 段 description）
+### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`.claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.cursor/rules/core-mcp-objects.mdc（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））…`
+
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 

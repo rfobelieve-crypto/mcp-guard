@@ -9,12 +9,12 @@
 | 星數 / Fork | ⭐ 9509 / 1664 |
 | 最後更新 | 2026-07-27 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 已掃描檔案 | 409 個 |
+| 檢查時間 | 2026-07-28 10:42 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 5
+🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -39,6 +39,12 @@
 ### 🔵 低｜[維護] 未處理 issue 偏多（321 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`src/aurora-dsql-mcp-server/skills/amazon-aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aws-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-postgres-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-sql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 322 段 description）
 

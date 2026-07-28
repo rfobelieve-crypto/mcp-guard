@@ -1,14 +1,14 @@
 {
- "scanned_at": "2026-07-28 01:12",
- "elapsed_sec": 60,
+ "scanned_at": "2026-07-28 10:42",
+ "elapsed_sec": 93,
  "projects": [
   {
    "slug": "DeusData/codebase-memory-mcp",
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
-   "stars": 35926,
-   "pushed": "2026-07-27",
+   "stars": 35956,
+   "pushed": "2026-07-28",
    "lang": "C",
    "files": 257,
    "crit": 0,
@@ -62,7 +62,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（373 則）",
+     "title": "未處理 issue 偏多（374 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -70,7 +70,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 35926｜fork 2809｜語言 C｜建立 2026-02-24｜最後推送 2026-07-27",
+     "detail": "⭐ 35956｜fork 2811｜語言 C｜建立 2026-02-24｜最後推送 2026-07-28",
      "evidence": ""
     },
     {
@@ -95,11 +95,18 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 1 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "docs/llms.txt（給模型讀的站點說明（llms.txt））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-07-27"
+     "evidence": "最後推送 2026-07-28"
     }
    ]
   },
@@ -187,6 +194,13 @@
      "title": "未發現可疑工具描述（已掃描 17 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
+     "evidence": ""
     }
    ]
   },
@@ -239,6 +253,13 @@
      "title": "未發現可疑工具描述（已掃描 28 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
+     "evidence": ""
     }
    ]
   },
@@ -250,7 +271,7 @@
    "stars": 8896,
    "pushed": "2026-07-27",
    "lang": "TypeScript",
-   "files": 267,
+   "files": 269,
    "crit": 0,
    "high": 1,
    "med": 2,
@@ -340,6 +361,13 @@
      "title": "未發現可疑工具描述（已掃描 38 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 20 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "plugins/claude/skills/ai-tools-setup/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/computer-health-check/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/desktop-commander-overview/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/knowledge-base/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/obsidian-vault/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/skills/terminal/SKILL.md（Agent Skill 指令（SKILL.md））…"
     },
     {
      "check": "維護",
@@ -441,6 +469,13 @@
      "title": "未發現可疑工具描述（已掃描 0 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
+     "evidence": ""
     }
    ]
   },
@@ -505,7 +540,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 88961｜fork 11303｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26",
+     "detail": "⭐ 88961｜fork 11302｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26",
      "evidence": ""
     },
     {
@@ -537,6 +572,13 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、src/everything/AGENTS.md（Agent 指令（AGENTS.md 慣例））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 2 天內有更新",
@@ -550,7 +592,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Playwright MCP server",
-   "stars": 35543,
+   "stars": 35545,
    "pushed": "2026-07-25",
    "lang": "TypeScript",
    "files": 26,
@@ -599,7 +641,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 35543｜fork 2966｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-07-25",
+     "detail": "⭐ 35545｜fork 2967｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-07-25",
      "evidence": ""
     },
     {
@@ -624,6 +666,13 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".claude/skills/release.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 3 天內有更新",
@@ -637,7 +686,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "GitHub's official MCP Server",
-   "stars": 31777,
+   "stars": 31779,
    "pushed": "2026-07-27",
    "lang": "Go",
    "files": 296,
@@ -679,7 +728,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 31777｜fork 4657｜語言 Go｜建立 2025-03-04｜最後推送 2026-07-27",
+     "detail": "⭐ 31779｜fork 4659｜語言 Go｜建立 2025-03-04｜最後推送 2026-07-27",
      "evidence": ""
     },
     {
@@ -704,6 +753,13 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 1 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".github/copilot-instructions.md（GitHub Copilot 指令）"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 0 天內有更新",
@@ -720,7 +776,7 @@
    "stars": 26884,
    "pushed": "2026-07-28",
    "lang": "Python",
-   "files": 400,
+   "files": 401,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -730,9 +786,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 64 個外部主機",
+     "title": "會連往 62 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth.yourdomain.com…"
+     "evidence": "YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth0.config.url…"
     },
     {
      "check": "權限",
@@ -746,7 +802,7 @@
      "severity": "LOW",
      "title": "會讀取環境變數（符合宣稱用途）",
      "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": ".github/workflows/require-issue-link.yml、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py、examples/auth/azure_oauth/server.py"
+     "evidence": ".github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py"
     },
     {
      "check": "權限",
@@ -758,7 +814,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（251 則）",
+     "title": "未處理 issue 偏多（252 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -786,9 +842,16 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 87 段 description）",
+     "title": "未發現可疑工具描述（已掃描 89 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 10 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.cursor/rules/core-mcp-objects.mdc（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））…"
     },
     {
      "check": "維護",
@@ -807,7 +870,7 @@
    "stars": 16034,
    "pushed": "2026-07-28",
    "lang": "Go",
-   "files": 400,
+   "files": 401,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -845,7 +908,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（248 則）",
+     "title": "未處理 issue 偏多（252 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -878,6 +941,13 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 3 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "GEMINI.md（Gemini CLI 指令）、docs/en/documentation/configuration/embedding-models/gemini.md（Gemini CLI 指令）、skills/maintainer/triage-issues/SKILL.md（Agent Skill 指令（SKILL.md））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 0 天內有更新",
@@ -891,7 +961,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP server to provide Figma layout information to AI coding agents like Cursor",
-   "stars": 15509,
+   "stars": 15510,
    "pushed": "2026-07-03",
    "lang": "TypeScript",
    "files": 100,
@@ -940,7 +1010,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 15509｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03",
+     "detail": "⭐ 15510｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03",
      "evidence": ""
     },
     {
@@ -965,9 +1035,16 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".claude/commands/release.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 24 天內有更新",
+     "title": "最近 25 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-03"
     }
@@ -1057,6 +1134,13 @@
      "title": "未發現可疑工具描述（已掃描 167 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 3 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".claude/commands/fix-github-issue.md（AI 客戶端設定目錄下的指令檔）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
     }
    ]
   },
@@ -1065,7 +1149,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Visual testing tool for MCP servers",
-   "stars": 10495,
+   "stars": 10498,
    "pushed": "2026-07-28",
    "lang": "TypeScript",
    "files": 173,
@@ -1120,7 +1204,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（312 則）",
+     "title": "未處理 issue 偏多（310 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1128,7 +1212,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 10495｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28",
+     "detail": "⭐ 10498｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28",
      "evidence": ""
     },
     {
@@ -1153,6 +1237,13 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 0 天內有更新",
@@ -1169,7 +1260,7 @@
    "stars": 9509,
    "pushed": "2026-07-27",
    "lang": "Python",
-   "files": 400,
+   "files": 409,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -1231,6 +1322,13 @@
      "title": "未發現可疑工具描述（已掃描 322 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 9 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": "src/aurora-dsql-mcp-server/skills/amazon-aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aws-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-postgres-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-sql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））…"
     },
     {
      "check": "維護",
@@ -1334,9 +1432,16 @@
      "evidence": "API_KEY、PASSWORD、SECRET、TOKEN"
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
+     "evidence": ""
+    },
+    {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 80 天內有更新",
+     "title": "最近 81 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-05-08"
     }
@@ -1375,7 +1480,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7076｜fork 913｜語言 Go｜建立 2025-02-05｜最後推送 2026-07-27",
+     "detail": "⭐ 7076｜fork 914｜語言 Go｜建立 2025-02-05｜最後推送 2026-07-27",
      "evidence": ""
     },
     {
@@ -1400,9 +1505,16 @@
      "evidence": ""
     },
     {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
+    },
+    {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-27"
     }
@@ -1413,7 +1525,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
-   "stars": 7058,
+   "stars": 7059,
    "pushed": "2026-07-27",
    "lang": "JavaScript",
    "files": 27,
@@ -1476,7 +1588,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7058｜fork 821｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-07-27",
+     "detail": "⭐ 7059｜fork 821｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-07-27",
      "evidence": ""
     },
     {
@@ -1498,6 +1610,13 @@
      "severity": "INFO",
      "title": "未發現可疑工具描述（已掃描 31 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
+     "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
      "evidence": ""
     },
     {
@@ -1579,6 +1698,13 @@
      "title": "需要的憑證類設定",
      "detail": "安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。",
      "evidence": "API_KEY、PASSWORD、SECRET、TOKEN"
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "已掃描 2 個代理指令檔",
+     "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+     "evidence": ".claude/skills/windows-mcp-tool-tester/SKILL.md（Agent Skill 指令（SKILL.md））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））"
     },
     {
      "check": "維護",

@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `GLips/Figma-Context-MCP` |
 | 專案說明 | MCP server to provide Figma layout information to AI coding agents like Cursor |
-| 星數 / Fork | ⭐ 15509 / 1225 |
+| 星數 / Fork | ⭐ 15510 / 1225 |
 | 最後更新 | 2026-07-03 |
 | 授權 | MIT License |
 | npm 套件 | `figma-developer-mcp` |
 | 已掃描檔案 | 100 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 檢查時間 | 2026-07-28 10:41 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 5
+🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -49,6 +49,12 @@
 
 > 證據：`src/tests/image-processing.test.ts、src/utils/common.ts、src/utils/logger.ts`
 
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`.claude/commands/release.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
@@ -63,7 +69,7 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 24 天內有更新
+### ⚪ 資訊｜[維護] 最近 25 天內有更新
 
 專案仍在活躍維護中。
 
@@ -71,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15509｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03
+⭐ 15510｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03
 
 ---
 

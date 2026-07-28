@@ -10,11 +10,11 @@
 | 最後更新 | 2026-07-24 |
 | 授權 | MIT License |
 | 已掃描檔案 | 108 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 檢查時間 | 2026-07-28 10:42 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 4
+🟡 中 1　🔵 低 4　⚪ 資訊 5
 
 ## 詳細發現
 
@@ -47,6 +47,12 @@
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`src/windows_mcp/filesystem/service.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py、tests/test_analytics.py`
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`.claude/skills/windows-mcp-tool-tester/SKILL.md（Agent Skill 指令（SKILL.md））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
 ### ⚪ 資訊｜[權限] 判定用途：桌面／終端控制
 

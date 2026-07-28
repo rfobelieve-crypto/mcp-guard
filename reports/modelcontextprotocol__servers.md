@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 88961 / 11303 |
+| 星數 / Fork | ⭐ 88961 / 11302 |
 | 最後更新 | 2026-07-26 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 122 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 檢查時間 | 2026-07-28 10:41 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 6
+🟡 中 1　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -53,6 +53,12 @@
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、src/everything/AGENTS.md（Agent 指令（AGENTS.md 慣例））`
+
 ### ⚪ 資訊｜[供應鏈] npm 上查無此套件（@modelcontextprotocol/servers）
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
@@ -79,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 88961｜fork 11303｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26
+⭐ 88961｜fork 11302｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26
 
 ---
 

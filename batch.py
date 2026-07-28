@@ -70,8 +70,10 @@ def scan_one(slug: str) -> dict:
         "crit": sum(f.severity == CRITICAL for f in findings),
         "high": sum(f.severity == HIGH for f in findings),
         "med": sum(f.severity == MEDIUM for f in findings),
-        "poison": sum(f.check == "工具描述投毒" and f.severity == CRITICAL
-                      for f in findings),
+        # 投毒欄位涵蓋兩種載體：tool description 與代理指令檔。
+        # 對讀者而言兩者是同一件事——「模型讀得到、你讀不到的指令」。
+        "poison": sum(f.check in ("工具描述投毒", "代理指令檔")
+                      and f.severity == CRITICAL for f in findings),
         "top": next((f.title for f in findings
                      if f.severity in (CRITICAL, HIGH)), "—"),
         # 完整發現供網站展開顯示——結論一定要能一路追到證據

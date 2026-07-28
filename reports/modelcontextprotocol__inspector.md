@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10495 / 1442 |
+| 星數 / Fork | ⭐ 10498 / 1442 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 173 個 |
-| 檢查時間 | 2026-07-28 01:11 |
+| 檢查時間 | 2026-07-28 10:41 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 5　⚪ 資訊 5
+🟡 中 2　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -55,9 +55,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`cli/__tests__/helpers/fixtures.ts、cli/src/cli.ts、client/bin/client.js、client/bin/start.js、client/src/components/AppRenderer.tsx`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（312 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（310 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 31 段 description）
 
@@ -81,7 +87,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10495｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
+⭐ 10498｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
 
 ---
 

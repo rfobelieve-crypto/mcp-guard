@@ -17,6 +17,8 @@ from dataclasses import dataclass, field
 
 import urllib.request
 
+from . import agentfiles
+
 MAX_FILE_BYTES = 512 * 1024      # 單檔超過就跳過（不讀大二進位檔）
 MAX_TOTAL_FILES = 400            # 掃描檔數上限，避免超大 repo 拖垮
 TEXT_EXT = {
@@ -112,7 +114,7 @@ def fetch_source(slug: str) -> dict[str, str]:
     files: dict[str, str] = {}
     with tarfile.open(fileobj=io.BytesIO(blob), mode="r:gz") as tf:
         for member in tf:
-            if not member.isfile() or len(files) >= MAX_TOTAL_FILES:
+            if not member.isfile():
                 continue
             if member.size > MAX_FILE_BYTES:
                 continue
@@ -120,8 +122,14 @@ def fetch_source(slug: str) -> dict[str, str]:
             path = member.name.split("/", 1)[-1]
             if not path or "/." in f"/{path}":
                 pass  # 隱藏檔仍收，設定檔常藏風險
-            if "." + path.rsplit(".", 1)[-1] not in TEXT_EXT:
-                continue
+            # 代理指令檔（SKILL.md/AGENTS.md/CLAUDE.md/.cursorrules…）一律收：
+            # 它們是投毒的主要落點，若被大型 repo 的一般原始碼擠出檔數上限，
+            # 或因為沒有副檔名而落在 TEXT_EXT 之外，就是靜默漏報。
+            if not agentfiles.kind(path):
+                if len(files) >= MAX_TOTAL_FILES:
+                    continue
+                if "." + path.rsplit(".", 1)[-1] not in TEXT_EXT:
+                    continue
             try:
                 data = tf.extractfile(member)
                 if data is None:

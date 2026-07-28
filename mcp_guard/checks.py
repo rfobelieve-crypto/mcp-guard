@@ -10,6 +10,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
+from . import agentfiles
 from .fetch import RepoBundle
 from .profile import CAP_ZH, ENV, EVAL_, EXEC, FS, NET
 from .profile import infer as infer_profile
@@ -260,14 +261,22 @@ def check_permissions(b: RepoBundle) -> list[Finding]:
 # 誤報對真實專案是不實指控，比漏報更該避免，因此改成下列分級：
 #   CRITICAL 只留「找不到正當理由」的手法（要求忽略指令、要求隱瞞、隱藏字元）
 #   其餘一律降級為需人工判讀的提示。
+
+# 這兩個手法「不管載體是什麼都沒有正當用途」，工具描述與代理指令檔（第 6 項）
+# 共用同一份定義——拆成兩份會隨時間漂移，改了一邊忘了另一邊等於開一個洞。
+RE_IGNORE_PRIOR = (
+    r"ignore\s+(all\s+)?(the\s+)?previous|disregard\s+(the\s+)?(above|previous)|"
+    r"忽略(前面|上述|之前|先前)")
+RE_HIDE_FROM_USER = (
+    r"do\s*not\s+(tell|inform|reveal|mention)\s+(the\s+)?user|"
+    r"don'?t\s+tell\s+the\s+user|without\s+(telling|informing)\s+the\s+user|"
+    r"不要(告訴|通知|讓)(使用者|用戶|用户)")
+
 INJECTION_PATTERNS = [
     # ── 無正當用途：正常說明文字不會這樣寫 ──
-    (r"ignore\s+(all\s+)?(the\s+)?previous|disregard\s+(the\s+)?(above|previous)|"
-     r"忽略(前面|上述|之前|先前)", CRITICAL, "要求模型忽略先前指令",
+    (RE_IGNORE_PRIOR, CRITICAL, "要求模型忽略先前指令",
      "正常的工具說明沒有任何理由叫模型忽略既有指令。這是提示詞注入的典型開頭。"),
-    (r"do\s*not\s+(tell|inform|reveal|mention)\s+(the\s+)?user|"
-     r"don'?t\s+tell\s+the\s+user|without\s+(telling|informing)\s+the\s+user|"
-     r"不要(告訴|通知|讓)(使用者|用戶|用户)", CRITICAL, "要求模型對使用者隱瞞",
+    (RE_HIDE_FROM_USER, CRITICAL, "要求模型對使用者隱瞞",
      "要求模型隱瞞自身行為，沒有正當用途——這正是資料外送類攻擊會做的事。"),
 
     # ── 有正當用途，但也是投毒常見載體：降級為人工判讀 ──
@@ -390,7 +399,213 @@ def check_tool_poisoning(b: RepoBundle) -> list[Finding]:
     return out
 
 
-# ── 5. 維護活躍度 ───────────────────────────────────────────────────────────
+# ── 5. 代理指令檔投毒（SKILL.md / AGENTS.md / CLAUDE.md …）──────────────────
+# 2026-07-28 dogfooding 時發現的自家漏洞：掃一個 Claude Code plugin 時，整份
+# SKILL.md 因為副檔名是 .md 被跳過，只能手動 grep 才確認乾淨。
+#
+# 這類檔案會被客戶端自動讀進上下文，和 tool description 是同一種攻擊面——
+# 而且**更直接**：tool description 還得偽裝成功能說明才不突兀，指令檔本身
+# 就是純指令，攻擊者不必偽裝任何東西。
+
+AGENT_CHECK = "代理指令檔"
+
+# 判準和第 4 項不同：指令檔**本來就是**在對模型下指令，所以「務必先呼叫 X」
+# 在這裡是完全正常的寫法（幾乎每個 skill 都會寫），列入樣式等於全體誤報。
+# 這裡只留「即使身為指令檔也解釋不通」的手法。
+#
+# 末欄 warn_ok＝這條規則可否被「警告語境」豁免。前兩條是 False：講解時會用
+# 引號或防禦語境詞，而「不要告訴使用者」本身就含否定詞，開放警告豁免等於
+# 讓真投毒靠一個 don't 就降級。
+AGENT_PATTERNS = [
+    (RE_IGNORE_PRIOR, CRITICAL, "指令檔要求模型忽略先前指令",
+     "這份檔案會被自動讀進模型上下文。要求模型丟棄既有指令（包含你自己的和"
+     "客戶端的安全規則），沒有任何正當用途。", False),
+    (RE_HIDE_FROM_USER, CRITICAL, "指令檔要求模型對使用者隱瞞",
+     "指令檔叫模型不要告訴你它做了什麼——這正是資料外送與靜默破壞會需要的"
+     "前置條件，正常的操作說明不需要它。", False),
+    (r"--dangerously-skip-permissions|--yolo\b|"
+     r"\"?(auto[_-]?approve|autoApprove|alwaysAllow)\"?\s*[:=]\s*(true|\[)",
+     HIGH, "指令檔要求關閉權限確認",
+     "它指示客戶端跳過工具呼叫的人工確認。一旦生效，後續所有動作都不會再"
+     "問過你——包含這份指令檔自己叫模型做的事。", True),
+    # 必須帶 URL（或變數）才算：`curl … | sh` 這種佔位寫法是在**舉例**，
+    # 不是可執行的指令。2026-07-28 校準，見 WARNING_CONTEXT_RE 的說明。
+    (r"(curl|wget)\s+[^\n|]{0,160}(https?://|\$\w)[^\n|]{0,160}\|\s*"
+     r"(sudo\s+)?(ba|z|k|d)?sh|"
+     r"i(wr|rm)\s+[^\n|]{0,160}(https?://|\$\w)[^\n|]{0,160}\|\s*iex",
+     HIGH, "指令檔要求下載並直接執行遠端腳本",
+     "叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——"
+     "你稽核過的原始碼完全管不到它。", True),
+    (r"<\s*system\s*>|\[\s*system\s*\]|</\s*system\s*>", MEDIUM,
+     "指令檔出現系統訊息標記",
+     "文字裡插入 <system> 這類標記，常見目的是讓自己的內容看起來像是"
+     "客戶端下達的系統指令，藉此取得更高的服從度。", True),
+    (r"\.ssh/|id_rsa|BEGIN\s+(RSA|OPENSSH)\s+PRIVATE\s+KEY|私鑰", MEDIUM,
+     "指令檔提及金鑰或 SSH 路徑",
+     "若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明"
+     "為什麼需要讓模型知道私鑰放在哪裡。", True),
+]
+
+# 刻意**不做**的一條規則：「要求不經詢問就執行」。
+# 2026-07-28 對 DesktopCommanderMCP 實測時，它命中的是
+# 「…reconstruct the work without asking the user to recap」——語意完全良性。
+# 這類措辭在正常 skill 裡到處都是，自然語言層面分不出「不問就刪檔」和
+# 「不用再請使用者複述」。真正危險的自動核准已由上面的具名旗標涵蓋，
+# 那條精準得多。訊號弱到只能製造噪音的規則，不如不要。
+
+# 安全類專案的文件會**引述**攻擊手法（本專案自己的 README 就是最好的例子），
+# 一律判 CRITICAL 等於把防禦方當成攻擊方。命中防禦／說明語境時降一級並註明。
+#
+# 代價很明確：攻擊者可以在投毒段落裡加一句「以下為範例」來規避降級門檻。
+# 仍然這樣做，是因為降級後該項**依舊會出現在報告裡**由人判讀，而對真實專案
+# 的不實指控是收不回來的——這個取捨和第 4 項的校準一致。
+DEFENSIVE_CONTEXT_RE = re.compile(
+    r"prompt\s*injection|jailbreak|red[\s-]*team|malicious|attack|exploit|"
+    r"vulnerab|threat\s*model|for\s+example|e\.g\.|"
+    r"注入|投毒|惡意|攻擊|紅隊|弱點|漏洞|偵測|防禦|稽核|手法|樣式|"
+    r"例如|範例|示例|示範", re.I)
+
+# 第三種豁免訊號：**警告**語境。
+# 2026-07-28 實測誤報：DesktopCommanderMCP 的 terminal skill 寫著
+# 「Be careful with anything that pipes a downloaded script straight into a
+# shell (`curl ... | sh`) — that's untrusted code execution; confirm first」——
+# 一份在教模型「別這樣做」的安全指引，被判成要求下載執行遠端腳本。
+# 只看命中點附近，不看整段：長文件裡出現一次 "avoid" 就全體豁免太寬。
+WARNING_CONTEXT_RE = re.compile(
+    r"be\s+careful|caution|never\b|avoid|do\s*not\b|don'?t\b|refuse|"
+    r"untrusted|unsafe|dangerous|risky|confirm\s+first|ask\s+first|"
+    r"require[sd]?\s+(approval|confirmation)|"
+    r"不要|勿|避免|禁止|危險|不安全|風險|先確認|需(要)?確認", re.I)
+WARNING_WINDOW = 160        # 命中點前後各看這麼多字
+
+# 比關鍵字更結構化的一個訊號：**引述**幾乎都被引號包住（安全文件寫
+# 「ignore all previous instructions」時是在指名一種手法），**指示**則是裸句。
+# 這條比字面關鍵字難規避——把指令放進引號，對模型的指示力本身就會下降。
+#
+# 反引號與括號**刻意排除**：markdown 的 `code` 是程式碼標記不是引述，被
+# 反引號包住的 `curl … | sh` 反而更像是真的要執行它。初版把反引號算進來，
+# 結果兩個真投毒樣本被降級——降級訊號選錯，等於替攻擊者做了規避。
+QUOTE_OPEN, QUOTE_CLOSE = "「『“‘《\"'", "」』”’》\"'"
+
+_DOWNGRADE = {CRITICAL: MEDIUM, HIGH: MEDIUM, MEDIUM: LOW, LOW: LOW}
+
+
+MAX_AGENT_FINDINGS = 12     # 同型問題散落幾十個 skill 時，不要洗掉整份報告
+
+
+def _is_quoted(block: str, start: int, end: int) -> bool:
+    """命中片段是否被同一行的引號包住（→ 傾向為引述而非指示）。"""
+    line_start = block.rfind("\n", 0, start) + 1
+    line_end = block.find("\n", end)
+    line_end = len(block) if line_end < 0 else line_end
+    before, after = block[line_start:start], block[end:line_end]
+    return (any(c in before for c in QUOTE_OPEN)
+            and any(c in after for c in QUOTE_CLOSE))
+
+
+def _excused(block: str, m: re.Match, warn_ok: bool) -> bool:
+    """這次命中比較像「引述／警告」而不是「指示」嗎？
+
+    語境一律取命中片段**以外**的文字。否則會出現這種笑話：
+    `--dangerously-skip-permissions` 因為旗標名稱裡有 "dangerous"，
+    被自己判定成一句安全警告而降級。
+    """
+    s, e = m.span()
+    if _is_quoted(block, s, e):
+        return True
+    if DEFENSIVE_CONTEXT_RE.search(block[:s] + "\n" + block[e:]):
+        return True
+    if not warn_ok:
+        return False
+    near = (block[max(0, s - WARNING_WINDOW):s] + "\n"
+            + block[e:e + WARNING_WINDOW])
+    return bool(WARNING_CONTEXT_RE.search(near))
+
+
+def _snippet(block: str, start: int, end: int, pad: int = 70) -> str:
+    """取命中片段**周圍**的文字當證據。
+
+    早期版本秀段落開頭，長段落一路截到看不見命中點——讀者無從判斷對錯，
+    等於逼人重新自己找一次。
+    """
+    a, b_ = max(0, start - pad), min(len(block), end + pad)
+    body = " ".join(block[a:b_].split())
+    return ("…" if a > 0 else "") + body + ("…" if b_ < len(block) else "")
+
+
+def _blocks(text: str):
+    """把指令檔切成段落逐段判斷。
+
+    整檔當成一段會讓「同段命中多項」失去意義，證據也會指不到位置。
+    """
+    for raw in re.split(r"\n\s*\n", text):
+        s = raw.strip()
+        if s:
+            yield s
+
+
+def check_agent_instructions(b: RepoBundle) -> list[Finding]:
+    targets = [(p, t, k) for p, t in b.files.items() if (k := agentfiles.kind(p))]
+    if not targets:
+        return [Finding(
+            AGENT_CHECK, INFO, "沒有代理指令檔",
+            "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類"
+            "會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。")]
+
+    # (嚴重度, 標題, 說明, 命中片段) -> 出現在哪些檔案。
+    # 用命中片段當去重鍵，因為 plugin 專案常把同一份 SKILL.md 複製到
+    # plugins/claude/、plugins/cursor/、根目錄——同一句話報三次是雜訊不是證據。
+    hits: dict[tuple[str, str, str, str], list[str]] = {}
+
+    for path, text, _k in sorted(targets):
+        for hit in HIDDEN_CHARS.finditer(text):
+            key = (CRITICAL, "指令檔含不可見／雙向覆寫字元",
+                   "零寬或 bidi 字元可讓「你在 GitHub 上讀到的內容」與「模型實際"
+                   "收到的指令」不一致。一份給人讀的說明文件沒有理由用到它們。",
+                   f"位置 {hit.start()}｜U+{ord(hit.group()):04X}")
+            hits.setdefault(key, []).append(path)
+            break
+
+        for block in _blocks(text):
+            for pat, sev, label, why, warn_ok in AGENT_PATTERNS:
+                m = re.search(pat, block, re.I)
+                if not m:
+                    continue
+                if _excused(block, m, warn_ok):
+                    sev, label = _DOWNGRADE[sev], f"{label}（疑為引述或警告）"
+                    why += ("\n\n這段文字帶有講解或警告的語氣（被引號包住、"
+                            "或鄰近出現「不要／避免／untrusted」之類的字眼），"
+                            "因此已降級——安全類專案的文件經常引述這些寫法，"
+                            "把防禦方指控成攻擊方是更難挽回的錯誤。"
+                            "請確認它確實是在說明，而不是在指示。")
+                hits.setdefault((sev, label, why, _snippet(block, *m.span())),
+                                []).append(path)
+
+    out: list[Finding] = []
+    for (sev, label, why, snippet), paths in hits.items():
+        ev = f"{paths[0]}｜「{snippet}」"
+        if len(paths) > 1:
+            ev += f"（另 {len(paths) - 1} 個檔案有相同內容）"
+        out.append(Finding(AGENT_CHECK, sev, label, why, evidence=ev))
+
+    if len(out) > MAX_AGENT_FINDINGS:
+        rest = len(out) - MAX_AGENT_FINDINGS
+        out = out[:MAX_AGENT_FINDINGS]
+        out.append(Finding(
+            AGENT_CHECK, INFO, f"另有 {rest} 項同類發現未列出",
+            "同型問題散落在多個指令檔中，此處只列前面幾項；"
+            "請直接檢視這些檔案本身。"))
+
+    listed = "、".join(f"{p}（{k}）" for p, _t, k in sorted(targets)[:6])
+    out.append(Finding(
+        AGENT_CHECK, INFO, f"已掃描 {len(targets)} 個代理指令檔",
+        "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字"
+        "讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
+        evidence=listed + ("…" if len(targets) > 6 else "")))
+    return out
+
+
+# ── 6. 維護活躍度 ───────────────────────────────────────────────────────────
 
 def check_maintenance(b: RepoBundle) -> list[Finding]:
     if not b.exists:
@@ -418,7 +633,7 @@ def check_maintenance(b: RepoBundle) -> list[Finding]:
 
 
 ALL_CHECKS = (check_identity, check_supply_chain, check_permissions,
-              check_tool_poisoning, check_maintenance)
+              check_tool_poisoning, check_agent_instructions, check_maintenance)
 
 
 def run_all(b: RepoBundle) -> list[Finding]:
