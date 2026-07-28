@@ -10,7 +10,7 @@
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 09:05 |
+| 檢查時間 | 2026-07-28 01:12 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/install/claude_code.py、fastmcp_slim/fastmcp/cli/install/gemini_cli.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（252 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（251 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

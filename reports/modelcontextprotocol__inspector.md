@@ -11,7 +11,7 @@
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 173 個 |
-| 檢查時間 | 2026-07-28 09:04 |
+| 檢查時間 | 2026-07-28 01:11 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`cli/__tests__/helpers/fixtures.ts、cli/src/cli.ts、client/bin/client.js、client/bin/start.js、client/src/components/AppRenderer.tsx`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（312 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

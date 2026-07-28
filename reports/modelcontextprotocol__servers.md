@@ -11,7 +11,7 @@
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 122 個 |
-| 檢查時間 | 2026-07-28 09:04 |
+| 檢查時間 | 2026-07-28 01:11 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`src/everything/__tests__/tools.test.ts、src/everything/tools/get-env.ts、src/everything/tools/gzip-file-as-resource.ts、src/everything/transports/sse.ts、src/everything/transports/streamableHttp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（687 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（686 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

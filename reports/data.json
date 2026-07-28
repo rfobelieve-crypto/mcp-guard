@@ -1,13 +1,13 @@
 {
- "scanned_at": "2026-07-28 09:05",
- "elapsed_sec": 91,
+ "scanned_at": "2026-07-28 01:12",
+ "elapsed_sec": 60,
  "projects": [
   {
    "slug": "DeusData/codebase-memory-mcp",
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
-   "stars": 35924,
+   "stars": 35926,
    "pushed": "2026-07-27",
    "lang": "C",
    "files": 257,
@@ -70,7 +70,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 35924｜fork 2809｜語言 C｜建立 2026-02-24｜最後推送 2026-07-27",
+     "detail": "⭐ 35926｜fork 2809｜語言 C｜建立 2026-02-24｜最後推送 2026-07-27",
      "evidence": ""
     },
     {
@@ -497,7 +497,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（687 則）",
+     "title": "未處理 issue 偏多（686 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -758,7 +758,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（252 則）",
+     "title": "未處理 issue 偏多（251 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -891,7 +891,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP server to provide Figma layout information to AI coding agents like Cursor",
-   "stars": 15508,
+   "stars": 15509,
    "pushed": "2026-07-03",
    "lang": "TypeScript",
    "files": 100,
@@ -940,7 +940,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 15508｜fork 1224｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03",
+     "detail": "⭐ 15509｜fork 1225｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-07-03",
      "evidence": ""
     },
     {
@@ -1120,7 +1120,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（311 則）",
+     "title": "未處理 issue 偏多（312 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
