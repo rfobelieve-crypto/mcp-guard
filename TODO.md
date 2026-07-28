@@ -49,8 +49,6 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 - [ ] **把第一篇文章發到中文社群**（Threads / 方格子 / 知乎 / FB 社團）
       ← 目前最大瓶頸是分發不是功能：站已上線但 ⭐ 0、沒人知道它存在。
       素材現成：`docs/01-一個不存在的MCP.md`
-- [ ] **OG 分享圖** — 目前貼連結沒有預覽圖，直接影響社群點擊率。
-      這是靜態素材、不需反映資料，適合用 Higgsfield 生成。
 
 ### 中優先
 - [ ] **沙箱實跑**：在隔離環境啟動 server、`list_tools` 比對「宣告的工具」vs
@@ -84,6 +82,13 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 - ✅ 第一篇文章〈一個被瘋傳的 MCP，其實不存在〉
 - ✅ README 更正政策（公開指名真實專案的前提）
 - ✅ GitHub Actions 每日 05:00 重掃 → 部署 Pages（紅隊測試沒過即中止）
+- ✅ **改為多頁網站**（2026-07-28）－ 依讀者意圖分四頁而非依內容型態：
+      `/`（首屏＋入口）、`/registry/`（總表，產品核心）、`/method/`（怎麼查的）、
+      `/trust/`（為什麼可信）。首頁 126KB → 15KB，總表不再擋在敘事後面
+- ✅ **OG 分享圖**（2026-07-28）－ 四頁各一張，**用網站自己的場景渲染**，
+      不是生成的：同一份 CSS、同一顆字體、同一個深空觀測站，因此點進去
+      看到的畫面會和分享卡片呼應，而且帶得上真實數字。
+      存 JPEG 不存 PNG（來源本就是 JPEG，PNG 只會讓體積大 5 倍）
 - ✅ 網站上線 https://mcp-guard-iota.vercel.app/
       （備援：https://rfobelieve-crypto.github.io/mcp-guard/ ）
       Vercel 已連 GitHub repo：每日重掃 commit 進 `site/` 後會自動重新部署
