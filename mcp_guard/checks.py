@@ -146,6 +146,138 @@ def check_supply_chain(b: RepoBundle) -> list[Finding]:
                     "套件明確指向的 repo 跟我們稽核的這個不是同一個。"
                     "這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。",
                     evidence=f"npm repository={repo_url[:120]}｜稽核對象={b.slug}"))
+
+    out.extend(_check_python_supply(b))
+    return out
+
+
+# ── 2b. Python 生態的供應鏈 ─────────────────────────────────────────────────
+# 2026-07-28：18 個掃描目標中有 10 個供應鏈檢查完全落空，Python 專案 4 個
+# 全中——因為原本只讀 package.json。而 Python 的安裝期執行點其實更隱蔽：
+# `pip install` 會直接把 setup.py 當程式跑，沒有 postinstall 那種明確欄位。
+
+# setup.py 幾乎人人都有，光是存在不構成風險；有風險的是它在安裝當下做什麼。
+# 依「有沒有正當理由」分級，和第 4 項的校準原則一致。
+#
+# 2026-07-28 校準（對 googleapis/mcp-toolbox 的真實誤報）：初版三條規則
+# 都太寬。命中的關鍵字要能對應到「安裝當下真的會發生的事」，否則就是在
+# 指控正常的打包寫法：
+#   · 裸 urllib      → `import urllib.parse` 只是解析網址，根本沒連網
+#   · 裸 cmdclass    → 覆寫 bdist_wheel 是**建置期**（打包者端）的正當做法，
+#                      內含二進位檔的套件都得這樣寫，使用者安裝時不會跑
+#   · 裸 exec(       → `exec(open("_version.py").read())` 是讀版本號的常見寫法
+SETUP_PATTERNS = [
+    (r"urlopen|urlretrieve|requests\s*\.\s*(get|post|put)|"
+     r"httpx\s*\.\s*(get|post|Client)|socket\s*\.\s*(socket|create_connection)|"
+     r"\bcurl\s+http|\bwget\s+http",
+     HIGH, "setup.py 會在安裝時連線網路",
+     "`pip install` 會直接執行 setup.py。在那個時間點連外，代表實際安裝到的"
+     "內容由對方伺服器當下決定——你稽核過的原始碼管不到它。"),
+    (r"base64\s*\.\s*b64decode|codecs\s*\.\s*decode|marshal\s*\.\s*loads|"
+     r"zlib\s*\.\s*decompress",
+     HIGH, "setup.py 含編碼或壓縮過的內容",
+     "安裝腳本沒有正當理由需要解碼混淆內容，這是隱藏真實行為最常見的手法。"),
+    # 只抓**安裝期**指令。bdist_wheel／sdist／build_ext 屬於建置期，
+    # 由打包者執行而不是使用者，不列入。
+    (r"cmdclass\s*=\s*\{[^}]{0,400}?[\"'](install|develop|install_lib|"
+     r"install_scripts)[\"']\s*:|"
+     r"class\s+\w+\s*\(\s*_?(install|develop)\s*\)",
+     HIGH, "setup.py 覆寫了安裝期指令",
+     "它以自訂類別接管 install／develop 步驟，等同 npm 的 postinstall："
+     "你還沒開始用，程式碼已經跑過一次了。"),
+    (r"\bsubprocess\b|os\s*\.\s*system|os\s*\.\s*popen",
+     MEDIUM, "setup.py 會在安裝時執行外部指令",
+     "常見的正當用途是呼叫 git 取版本號或編譯原生模組；"
+     "但這確實是安裝當下就會執行的程式碼，值得逐行讀懂。"),
+    (r"\bexec\s*\(|\beval\s*\(",
+     LOW, "setup.py 使用動態執行",
+     "讀版本號時寫 `exec(open('_version.py').read())` 是常見的正當做法。"
+     "確認被執行的內容來自這個 repo 內的檔案，而不是下載或解碼來的。"),
+]
+
+# 標準建置後端。清單外的後端不等於惡意，但它會在安裝時被下載並執行。
+KNOWN_BACKENDS = ("setuptools", "hatchling", "flit", "poetry", "pdm",
+                  "maturin", "scikit_build", "scikit-build", "meson",
+                  "mesonpy", "setuptools_scm", "hatch")
+
+PY_DEP_RE = re.compile(r"^\s*[\"']([A-Za-z0-9._-]+)\s*([^\"']*)[\"']\s*,?\s*$", re.M)
+
+# 註解與 docstring 不會在安裝時被執行，比對前先剝掉——否則說明文字裡
+# 出現的 subprocess 之類的字眼會被當成證據。
+COMMENT_RE = re.compile(r"#[^\n]*")
+DOCSTRING_RE = re.compile(r'"""[\s\S]*?"""' + r"|'''[\s\S]*?'''")
+
+
+def _check_python_supply(b: RepoBundle) -> list[Finding]:
+    out: list[Finding] = []
+    pyproject = b.files.get("pyproject.toml")
+
+    # monorepo（例如 awslabs/mcp）在 src/*/ 下各有一份打包檔，而**每一個
+    # setup.py 都會在安裝對應套件時執行**——只看根目錄等於漏掉全部子套件。
+    setups = {p: t for p, t in b.files.items()
+              if p == "setup.py" or p.endswith("/setup.py")}
+    hits: dict[tuple, list[str]] = {}
+    for path, text in sorted(setups.items()):
+        # 註解與 docstring 不會被執行，先剝掉再比對，避免拿說明文字當證據
+        code = DOCSTRING_RE.sub("", COMMENT_RE.sub("", text))
+        for pat, sev, title, detail in SETUP_PATTERNS:
+            m = re.search(pat, code, re.I)
+            if m:
+                line = code[:m.start()].count("\n") + 1
+                hits.setdefault((sev, title, detail, m.group()[:60]),
+                                []).append(f"{path}:{line}")
+    for (sev, title, detail, snippet), where in hits.items():
+        ev = f"{where[0]}｜{snippet}"
+        if len(where) > 1:
+            ev += f"（另 {len(where) - 1} 個 setup.py 相同）"
+        out.append(Finding("供應鏈", sev, title, detail, evidence=ev))
+
+    if pyproject:
+        m = re.search(r"build-backend\s*=\s*[\"']([^\"']+)", pyproject)
+        if m:
+            backend = m.group(1)
+            root = backend.split(".")[0].split(":")[0].lower()
+            if root not in KNOWN_BACKENDS:
+                out.append(Finding(
+                    "供應鏈", MEDIUM, "使用非標準的建置後端",
+                    "建置後端會在安裝時被下載並執行。這可能是合理的專案選擇，"
+                    "但那個後端本身也需要被信任——請確認它是什麼。",
+                    evidence=f"build-backend={backend}"))
+
+        dep = re.search(r"^\s*dependencies\s*=\s*\[(.*?)\]", pyproject,
+                        re.M | re.S)
+        if dep:
+            floating = [f"{n}{v}".strip() for n, v in PY_DEP_RE.findall(dep.group(1))
+                        if not v.strip() or v.strip().startswith((">", "^", "~", "!"))]
+            if floating:
+                out.append(Finding(
+                    "供應鏈", LOW, f"有 {len(floating)} 個依賴未鎖定版本",
+                    "依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的"
+                    "內容不同。",
+                    evidence="、".join(floating[:6]) + ("…" if len(floating) > 6 else "")))
+
+    # PyPI 與原始碼是否互相對應（與 npm 那段同一道防線）
+    if b.pypi_name:
+        if not b.pypi:
+            out.append(Finding(
+                "供應鏈", INFO, f"PyPI 上查無此套件（{b.pypi_name}）",
+                "原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。"))
+        else:
+            info = b.pypi.get("info") or {}
+            urls = {k.lower(): v for k, v in (info.get("project_urls") or {}).items()}
+            home = " ".join(str(v) for v in urls.values()) + " " + str(info.get("home_page") or "")
+            if not home.strip():
+                out.append(Finding(
+                    "供應鏈", LOW, "PyPI 套件未標示原始碼位置",
+                    "套件沒有填任何專案連結，因此**無法自動核對**它是否真的由這個 "
+                    "repo 建置。這不代表有問題，但也代表少了一道可驗證性。",
+                    evidence=f"PyPI: {b.pypi_name}"))
+            elif b.slug and b.slug.lower() not in home.lower():
+                out.append(Finding(
+                    "供應鏈", HIGH, "PyPI 套件標示的倉庫與實際來源不一致",
+                    "套件指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／"
+                    "monorepo，也可能是仿冒（typosquatting），需人工確認。",
+                    evidence=f"PyPI 連結={home.strip()[:110]}｜稽核對象={b.slug}"))
     return out
 
 

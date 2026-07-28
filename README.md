@@ -86,7 +86,7 @@ python batch.py 清單.txt      # 自訂名單，一行一個 owner/repo
 | 檢查 | 抓什麼 |
 |---|---|
 | **身分** | repo／作者是否真的存在、是否為新建搶註、是否已封存、授權 |
-| **供應鏈** | `preinstall`/`postinstall` 安裝期腳本、依賴是否鎖版、npm 與 repo 是否對應 |
+| **供應鏈** | **npm**：`preinstall`/`postinstall` 安裝期腳本；**Python**：`pip install` 會直接執行的 `setup.py`（安裝時連網、解碼混淆內容、覆寫 install 指令）、非標準建置後端。兩者都查依賴是否鎖版、registry 與 repo 是否對應 |
 | **權限** | 是否開子行程、`eval`、讀寫檔案、讀環境變數、連往哪些外部主機、需要哪些金鑰 |
 | **工具描述投毒** | 描述中要求模型「忽略先前指令／對使用者隱瞞／強制先呼叫某工具」、提及憑證路徑、異常冗長、**零寬與雙向覆寫字元** |
 | **代理指令檔** | `SKILL.md`／`AGENTS.md`／`CLAUDE.md`／`.cursorrules` 等**會被 AI 客戶端自動讀進上下文**的檔案：要求忽略指令、要求隱瞞、關閉權限確認、`curl … \| sh`、隱藏字元 |
@@ -108,8 +108,8 @@ python batch.py 清單.txt      # 自訂名單，一行一個 owner/repo
 python -m tests.test_poisoning
 ```
 
-涵蓋 10 種真實投毒手法（工具描述 5 種、代理指令檔 5 種）、
-13 個乾淨樣本（其中 **8 個是本工具開發期間對真實專案產生的誤報**，原文照抄），
+涵蓋 13 種真實攻擊手法（工具描述投毒、代理指令檔、Python 安裝期執行）、
+19 個乾淨樣本（其中 **9 個是本工具開發期間對真實專案產生的誤報**，原文照抄），
 外加代理指令檔的路徑辨識——抓不到的檔案永遠掃不到，那一層錯了上面全部白做。
 
 ---
@@ -127,7 +127,7 @@ python -m tests.test_poisoning
 本專案會公開指名真實專案的稽核結果，因此把更正管道寫在最前面：
 
 1. **我們預設自己會錯。** 開發過程中，本工具對 Figma-Context-MCP、git-mcp、
-   Windows-MCP、DesktopCommanderMCP、BrowserMCP 產生過 8 次誤報，全部在發布前
+   Windows-MCP、DesktopCommanderMCP、BrowserMCP、mcp-toolbox 產生過 9 次誤報，全部在發布前
    被攔下並修正，誤報樣本已原文收進 `tests/` 當回歸測試。
    最近一次（2026-07-28）很能說明問題：DesktopCommanderMCP 的 skill 寫著
    「別把下載的腳本直接餵進 shell（`curl ... | sh`）」——一份在教模型別踩雷的

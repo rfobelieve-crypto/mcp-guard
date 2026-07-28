@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 6513 / 794 |
+| 星數 / Fork | ⭐ 6513 / 795 |
 | 最後更新 | 2026-07-24 |
 | 授權 | MIT License |
 | 已掃描檔案 | 108 個 |
-| 檢查時間 | 2026-07-28 10:42 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 5
+🟡 中 1　🔵 低 5　⚪ 資訊 5
 
 ## 詳細發現
 
@@ -23,6 +23,12 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`composio.dev、cursortouch.com、docs.github.com、docs.microsoft.com、learn.microsoft.com、my-client.example.com、static.modelcontextprotocol.io、us.i.posthog.com、youtu.be`
+
+### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
+
+依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
+
+> 證據：`click>=8.2.1、comtypes>=1.4.15、dxcam>=0.3.0、fastmcp>=3.0、fuzzywuzzy>=0.18.0、markdownify>=1.1.0…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -64,7 +70,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 4 天內有更新
 
 專案仍在活躍維護中。
 
@@ -72,7 +78,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6513｜fork 794｜語言 Python｜建立 2025-05-13｜最後推送 2026-07-24
+⭐ 6513｜fork 795｜語言 Python｜建立 2025-05-13｜最後推送 2026-07-24
 
 ---
 

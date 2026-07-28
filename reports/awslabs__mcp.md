@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `awslabs/mcp` |
 | 專案說明 | Open source MCP Servers for AWS |
-| 星數 / Fork | ⭐ 9509 / 1664 |
+| 星數 / Fork | ⭐ 9510 / 1664 |
 | 最後更新 | 2026-07-27 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-07-28 10:42 |
+| 已掃描檔案 | 467 個 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
@@ -46,7 +46,7 @@
 
 > 證據：`src/aurora-dsql-mcp-server/skills/amazon-aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aws-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-postgres-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-sql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 322 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 379 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9509｜fork 1664｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-27
+⭐ 9510｜fork 1664｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-27
 
 ---
 

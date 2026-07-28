@@ -9,12 +9,13 @@
 | 星數 / Fork | ⭐ 12213 / 1109 |
 | 最後更新 | 2026-01-06 |
 | 授權 | MIT License |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-07-28 10:41 |
+| npm 套件 | `mcp-chrome-bridge-monorepo`（registry 查無） |
+| 已掃描檔案 | 405 個 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 3　🔵 低 2　⚪ 資訊 5
+🟠 高 1　🟡 中 4　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -23,6 +24,12 @@
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`app/chrome-extension/entrypoints/background/record-replay/actions/handlers/extract.ts、app/chrome-extension/entrypoints/background/record-replay/actions/handlers/script.ts、app/chrome-extension/entrypoints/background/record-replay/nodes/conditional.ts、app/chrome-extension/entrypoints/background/tools/browser/inject-script.ts、app/chrome-extension/entrypoints/background/tools/browser/userscript.ts`
+
+### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
+
+npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
+
+> 證據：`"prepare": "husky"`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -40,6 +47,12 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`最後推送 2026-01-06`
 
+### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
+
+依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
+
+> 證據：`@commitlint/cli@^19.8.1、@commitlint/config-conventional@^19.8.1、@eslint/js@^9.25.1、@typescript-eslint/eslint-plugin@^8.32.0、@typescript-eslint/parser@^8.32.0、eslint@^9.26.0…`
+
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
@@ -53,6 +66,10 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
+
+### ⚪ 資訊｜[供應鏈] npm 上查無此套件（mcp-chrome-bridge-monorepo）
+
+原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 

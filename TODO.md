@@ -53,7 +53,6 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 ### 中優先
 - [ ] **沙箱實跑**：在隔離環境啟動 server、`list_tools` 比對「宣告的工具」vs
       「實際暴露的工具」。這是靜態掃描給不了、也是各家 MCP 廣場做不到的護城河。
-- [ ] **PyPI 生態支援**：供應鏈檢查目前以 npm 為主。
 
 ### 低優先
 - [ ] 已知惡意／搶註名稱清單
@@ -64,6 +63,15 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 ## 已完成（2026-07-27 ～ 07-28）
 
 - ✅ 掃描引擎六項檢查（身分／供應鏈／權限／工具描述投毒／代理指令檔／維護）
+- ✅ **Python 生態的供應鏈檢查**（2026-07-28）
+      － 起點是一個數字：18 個目標中有 **10 個供應鏈檢查完全落空**，
+        4 個 Python 專案全中，因為原本只讀 `package.json`
+      － `pip install` 會**直接執行 setup.py**，那是比 postinstall 更少人
+        知道的安裝期執行點；monorepo 的每個子套件各有一份，全都要掃
+      － 順帶修掉一個**穩定性 bug**：`inspector` 前一輪掃出 2 個供應鏈發現、
+        下一輪變成 0——400 檔上限是先到先得，而 tarball 順序不保證穩定，
+        `package.json` 被一般原始碼擠掉了。打包宣告檔現在一律不受上限限制
+      － 落空 10 → 7（其中 3 個是 Go，本來就沒有安裝腳本這種東西）
 - ✅ **代理指令檔納入掃描**（`SKILL.md`／`AGENTS.md`／`CLAUDE.md`／
       `.cursorrules`／`.claude/**`／Copilot `.instructions.md`）
       － 自家漏洞：dogfooding 掃 getlayers-plugin 時只能手動 grep 才能確認

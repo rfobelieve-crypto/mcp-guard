@@ -9,8 +9,8 @@
 | 星數 / Fork | ⭐ 16034 / 1655 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 10:41 |
+| 已掃描檔案 | 410 個 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、docs/en/documentation/configuration/embedding-models/gemini.md（Gemini CLI 指令）、skills/maintainer/triage-issues/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 88 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 

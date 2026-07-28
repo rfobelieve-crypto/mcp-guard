@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7059 / 821 |
+| 星數 / Fork | ⭐ 7062 / 821 |
 | 最後更新 | 2026-07-27 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
 | 已掃描檔案 | 27 個 |
-| 檢查時間 | 2026-07-28 10:42 |
+| 檢查時間 | 2026-07-28 13:50 |
 
 ## 風險摘要
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7059｜fork 821｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-07-27
+⭐ 7062｜fork 821｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-07-27
 
 ---
 

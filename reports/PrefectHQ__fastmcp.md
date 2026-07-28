@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 26884 / 2194 |
+| 星數 / Fork | ⭐ 26887 / 2194 |
 | 最後更新 | 2026-07-28 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 10:42 |
+| 已掃描檔案 | 404 個 |
+| 檢查時間 | 2026-07-28 13:51 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 > 證據：`.claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.cursor/rules/core-mcp-objects.mdc（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 92 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26884｜fork 2194｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-28
+⭐ 26887｜fork 2194｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-28
 
 ---
 
