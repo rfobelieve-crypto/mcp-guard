@@ -33,6 +33,8 @@
 }
 
 *{box-sizing:border-box}
+/* class 上的 display 會蓋過 UA 的 [hidden]，這裡把優先權要回來 */
+[hidden]{display:none!important}
 /* 60px 的 sticky 導覽列會蓋住錨點目標，捲動時預留它的高度 */
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
@@ -103,9 +105,11 @@ h1,h2,h3{font-family:var(--display)}
   min-height:calc(100svh - 60px);display:flex;
   align-items:center;overflow:hidden;background:var(--bg)}
 #scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+/* 邊緣融合：只壓四角與底緣，讓場景融進頁面背景。中心偏向機器人
+   （62%），它是首屏的主角，不能被自己的舞台燈壓暗。 */
 .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 70% 55% at 50% 50%,
-    transparent 0%,rgba(7,9,14,.55) 62%,var(--bg) 100%)}
+  background:radial-gradient(ellipse 130% 100% at 62% 50%,
+    transparent 58%,var(--bg) 100%)}
 .hero-in{position:relative;z-index:2;width:100%;padding:120px 0 90px}
 .hero h1{margin:0;font-size:clamp(38px,7.4vw,86px);line-height:1.02;
   font-weight:800;letter-spacing:-.045em;max-width:14ch;text-wrap:balance}
@@ -201,7 +205,7 @@ details.row[data-v="warn"]{--tone:var(--warn)}
 details.row[data-v="pass"]{--tone:var(--pass)}
 details.row[hidden]{display:none}
 summary{list-style:none;cursor:pointer;padding:15px 18px;display:grid;
-  grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+  grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center}
 summary::-webkit-details-marker{display:none}
 summary:hover{background:var(--surface-2)}
 .seal{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
@@ -219,6 +223,58 @@ summary:hover{background:var(--surface-2)}
 .pub[data-k="official"]{color:var(--seal);border-color:var(--seal)}
 .pub[data-k="domain"]{color:var(--ink-2)}
 .pub[data-k="none"]{opacity:.55}
+
+/* 簡介：收合狀態就要看得到。限制兩行，長描述不會把列撐開破壞掃讀節奏。 */
+.brief{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;margin-top:6px;font-size:12.5px;line-height:1.55;
+  color:var(--muted);max-width:92ch}
+.brief i{font-style:normal;opacity:.6}
+.cat{display:inline-block;font-size:11px;color:var(--ink-2);
+  border:1px solid var(--line);border-radius:3px;padding:1px 6px;
+  margin-right:8px;white-space:nowrap;vertical-align:1px}
+
+/* 用途篩選：和結論篩選分開兩排——它們是不同的問題（是幹嘛的／安不安全） */
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.cat-chip{font-size:12.5px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  cursor:pointer;transition:.18s;font-family:inherit}
+.cat-chip:hover{color:var(--ink-2);border-color:var(--ink-2)}
+.cat-chip[aria-pressed="true"]{background:var(--surface-2);color:var(--ink);
+  border-color:var(--seal)}
+.cat-chip b{font-family:var(--mono);font-size:11px;font-weight:400;
+  opacity:.6;margin-left:5px}
+.hits{font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  margin-left:auto;white-space:nowrap}
+.hits b{color:var(--ink-2);font-weight:400}
+
+/* 領域篩選提示：從「該裝哪個」連過來時顯示，可一鍵清除。
+   不做成第三排按鈕——三排 chips 會把總表變成控制面板。 */
+.dombar{margin:0 0 16px;font-size:13.5px;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:10px 14px;display:flex;
+  align-items:center;gap:12px}
+.dombar b{color:var(--ink)}
+.dombar button{margin-left:auto;font-family:var(--mono);font-size:11.5px;
+  background:transparent;border:1px solid var(--line);color:var(--muted);
+  border-radius:4px;padding:4px 9px;cursor:pointer;transition:.18s}
+.dombar button:hover{color:var(--ink);border-color:var(--ink-2)}
+
+/* ── 該裝哪個 ─────────────────────────────────────────── */
+.scenes{display:flex;flex-direction:column;gap:66px}
+.scene h2{font-size:clamp(21px,2.5vw,29px);letter-spacing:-.025em;max-width:24ch}
+.scene .lede{margin-top:12px;font-size:15px;max-width:62ch}
+.pk-list{margin-top:26px;border-top:1px solid var(--line)}
+.pk{display:grid;grid-template-columns:auto 1fr auto;gap:16px;
+  align-items:center;padding:15px 0;border-bottom:1px solid var(--line);
+  text-decoration:none;color:inherit;transition:padding-left .28s var(--ease)}
+.pk:hover{padding-left:10px}
+.pk:hover .name{color:var(--seal)}
+.pk-b{min-width:0}
+.pk-d{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-more{display:inline-block;margin-top:18px;font-size:13.5px;
+  color:var(--seal);text-decoration:none;border-bottom:1px solid transparent}
+.pk-more:hover{border-bottom-color:var(--seal)}
 
 .name{font-family:var(--mono);font-size:14px;font-weight:600;
   word-break:break-all}
@@ -264,11 +320,58 @@ ul.plain b{color:var(--ink)}
   display:flex;gap:22px;flex-wrap:wrap}
 .foot-end a{color:var(--seal);text-decoration:none}
 @media (max-width:620px){
-  summary{grid-template-columns:auto 1fr}
+  summary{grid-template-columns:auto 1fr auto}
   .nums{grid-column:2;text-align:left;margin-top:6px}
   section.blk{padding:76px 0}
   .facts{gap:26px}
 }
+
+/* ── 登入狀態（導覽列右端） ───────────────────────────── */
+/* 由 auth.js 填入。後端不在時保持空白：不擺按不動的死按鈕。 */
+.auth{display:flex;align-items:center;gap:9px;font-size:13px;flex:none}
+.auth img{width:22px;height:22px;border-radius:50%;display:block;
+  border:1px solid var(--line)}
+.auth .u{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.auth a{color:var(--muted);text-decoration:none;transition:color .18s}
+.auth a:hover{color:var(--ink)}
+
+/* ── 收藏 ─────────────────────────────────────────────── */
+/* 平常退到近乎不可見：收藏是次要動作，不該跟結論標籤搶掃讀。 */
+.fav{font:inherit;font-size:15px;line-height:1;background:none;border:0;
+  color:var(--muted);opacity:.45;cursor:pointer;padding:6px 8px;
+  border-radius:5px;transition:opacity .15s,color .15s}
+summary:hover .fav,.fav:focus-visible{opacity:1}
+.fav:hover{color:var(--warn)}
+.fav[aria-pressed="true"]{color:var(--warn);opacity:.9}
+.chip b{font-family:var(--mono);font-size:11px;font-weight:400;
+  opacity:.65;margin-left:5px}
+
+/* ── 提交掃描請求／回報誤判 ───────────────────────────── */
+.ask{margin:34px 0 0;font-size:14px;color:var(--muted)}
+.linkish{font:inherit;background:none;border:0;padding:0;cursor:pointer;
+  color:var(--seal);border-bottom:1px solid transparent;transition:.18s}
+.linkish:hover{border-bottom-color:var(--seal)}
+dialog#subDlg{background:var(--surface);color:var(--ink);
+  border:1px solid var(--line);border-radius:12px;padding:26px 26px 18px;
+  width:min(92vw,460px);box-shadow:0 24px 80px rgba(0,0,0,.5)}
+dialog#subDlg::backdrop{background:rgba(4,6,10,.72);
+  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+#subDlg h3{margin:0 0 8px;font-size:19px;letter-spacing:-.02em}
+.dlg-hint{margin:0 0 18px;font-size:13.5px;color:var(--muted);line-height:1.65}
+.dlg-l{display:block;font-size:13px;color:var(--ink-2);margin-bottom:14px}
+.dlg-l input,.dlg-l textarea{display:block;width:100%;margin-top:6px;
+  font:inherit;font-size:14px;padding:9px 12px;border-radius:var(--r);
+  border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
+  resize:vertical;box-sizing:border-box}
+.dlg-l input:focus-visible,.dlg-l textarea:focus-visible{
+  outline:2px solid var(--seal);outline-offset:1px}
+.dlg-act{display:flex;gap:9px;justify-content:flex-end;margin-top:4px}
+.chip.go{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.go[disabled]{opacity:.55;cursor:default}
+.dlg-msg{margin:12px 0 0;font-size:13px;color:var(--ink-2);min-height:1.2em}
+.dlg-msg a{color:var(--seal)}
+.correction-cta{margin-top:30px}
+.correction-cta .linkish{font-size:inherit}
 </style>
 <style>
 html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden}
@@ -299,7 +402,7 @@ html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden}
   <canvas id="scene"></canvas>
   <div class="og-in"><h1>六項檢查，<br><em>全程唯讀</em>。</h1></div>
   <div class="mark"><b>MCP 安檢</b><span>怎麼查的</span></div>
-  <div class="stat"><b>98</b> 個熱門 MCP，逐一查過<br>每日 05:00 自動重新驗證</div>
+  <div class="stat"><b>178</b> 個熱門 MCP，逐一查過<br>每日 05:00 自動重新驗證</div>
 </div>
 <script>
 (function(){var m=window.matchMedia.bind(window);
@@ -309,266 +412,241 @@ html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden}
 (function(){
   var c=document.getElementById('scene'); if(!c) return;
   var g=c.getContext('2d'), dpr=Math.min(devicePixelRatio||1,2);
-  var W,H,cx,cy,S, pk=[], dust=[], items=[], t=0, pulse=0, drift=0;
+  var W,H,rx,ry,RS,wide, t=0, pulse=0;
+  var parX=0,parY=0,tpX=0,tpY=0;
   var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var yaw=0, pit=0, tYaw=0, tPit=0;
 
   var PASS=[95,199,155], WARN=[220,174,74], CRIT=[240,130,122],
-      IDLE=[118,146,192], CORE=[168,199,250];
+      IDLE=[136,164,208], CORE=[168,199,250];
   function rgba(q,a){ return 'rgba('+q[0]+','+q[1]+','+q[2]+','+a+')'; }
 
-  // 世界單位：篩選環半徑為 1。FOV 偏小，讓遠處封包明顯縮小＝景深。
-  var FOV=520, RING=1.0, CR=0.44;
-  // 固定俯角。少了它，赤道面上的環會退化成一條直線，整個場景就塌回 2D。
-  var BASE_PIT=-0.34;
+  // 機器人素材:黑底圖,以 screen 混合繪製(黑=透明),與整個首屏
+  // 「加色混合、光是主體」同一套物理,也免去去背的白邊。
+  var img=new Image(), imgOk=false, imgA=0;
+  img.onload=function(){ imgOk=true; if(still) settle(); };
+  img.src='../robot/robot.webp';
+  // 素材內的錨點(翻轉後、相對中心、單位 RS):鏡頭、判定點、待複核環。
+  // 判定點貼著前爪、隊伍往左下斜排——首屏左上是標題的領土,
+  // 封包流走對角線才不會埋在字底下。
+  var LENS={x:0.006,y:-0.067}, JPT={x:-0.42,y:0.10}, RING={x:-0.28,y:0.20};
+
+  var dust=[], pk=[], queue=[], scanning=null, scanT=0, cool=26, ringN=0;
+  var RING_MAX=6;
 
   function size(){
     W=c.clientWidth; H=c.clientHeight;
     c.width=W*dpr; c.height=H*dpr; g.setTransform(dpr,0,0,dpr,0,0);
-    // 寬螢幕把核心讓到右側，標題才不會壓在它身上；窄螢幕改為置中偏下。
-    var wide=W>860;
-    cx=wide?W*0.68:W*0.5; cy=wide?H*0.5:H*0.62;
-    S=Math.min(W,H)*(wide?0.32:0.26);
+    // 寬螢幕機器人讓到右側,標題才不會壓在它身上;窄螢幕置中偏下。
+    wide=W>860;
+    rx=wide?W*0.70:W*0.56; ry=wide?H*0.48:H*0.68;
+    RS=Math.min(W,H)*(wide?0.66:0.80);
   }
+  // 機器人錨點:含滑鼠視差與慢速浮動。所有局部座標經同一組旋轉,
+  // 光束的出發點才會黏在鏡頭上,不因浮動而脫節。
+  function ax(){ return rx+parX*10; }
+  function ay(){ return ry+parY*8+Math.sin(t*0.9)*RS*0.012; }
+  function pt(p){ var r=Math.sin(t*0.63)*0.022, ca=Math.cos(r), sa=Math.sin(r),
+                  x=p.x*RS, y=p.y*RS;
+                  return {x:ax()+x*ca-y*sa, y:ay()+x*sa+y*ca}; }
 
-  // 世界座標 → 螢幕。z 越大越遠；回傳 null 代表在相機後方。
-  function proj(x,y,z){
-    var ca=Math.cos(yaw), sa=Math.sin(yaw);
-    var x1=x*ca-z*sa, z1=x*sa+z*ca;
-    var cb=Math.cos(pit), sb=Math.sin(pit);
-    var y1=y*cb-z1*sb, z2=y*sb+z1*cb;
-    var dd=FOV+z2*S;
-    if(dd<90) return null;
-    var f=FOV/dd;
-    return {x:cx+x1*S*f, y:cy+y1*S*f, f:f, z:z2};
-  }
+  // 比例貼著真實稽核結果:絕大多數通過,三成需人工複核,
+  // 嚴重問題罕見——罕見不代表不存在,那正是這個工具的用途。
+  function verdict(){ var r=Math.random();
+    return r>0.97?'crit':(r>0.66?'warn':'pass'); }
 
   function spawn(){
-    var r=Math.random();
-    return {a:Math.random()*6.283, e:(Math.random()-0.5)*1.3,
-            d:3.2+Math.random()*2.2, sp:0.0055+Math.random()*0.0060,
-            sz:2.3+Math.random()*2.2,
-            // 比例貼著真實稽核結果：絕大多數通過，三成需人工複核，
-            // 嚴重問題罕見——罕見不代表不存在，那正是這個工具的用途。
-            v: r>0.97?'crit' : (r>0.66?'warn':'pass'),
-            judged:0, hold:0, orb:0, dead:0, spin:Math.random()<0.5?1:-1};
+    var j=pt(JPT);
+    return {st:'in', v:verdict(),
+            x:-W*0.06+Math.random()*W*0.12,
+            y:j.y+(Math.random()*0.55-0.08)*H,
+            vx:0, vy:0, u:0, a:0, fl:0, ph:Math.random()*6.283,
+            sz:3.2+Math.random()*2.2, col:IDLE, dead:0};
   }
 
   function init(){
-    pk=[];
-    for(var i=0;i<58;i++){ var p=spawn(); p.d=RING+0.1+Math.random()*4.2; pk.push(p); }
+    pk=[]; queue=[]; scanning=null; scanT=0; cool=26; ringN=0;
+    for(var i=0;i<8;i++){ var p=spawn(); p.x=Math.random()*W*0.42; pk.push(p); }
     dust=[];
-    for(var j=0;j<120;j++){
-      var a=Math.random()*6.283, e=(Math.random()-0.5)*2.7, d=5+Math.random()*5.5,
-          ce=Math.cos(e);
-      dust.push({x:d*ce*Math.cos(a), y:d*Math.sin(e), z:d*ce*Math.sin(a),
-                 s:0.4+Math.random()*0.9, tw:Math.random()*6.283});
+    for(var j=0;j<110;j++)
+      dust.push({x:Math.random(), y:Math.random(), s:0.4+Math.random()*1.1,
+                 tw:Math.random()*6.283, ly:0.25+Math.random()*0.75});
+  }
+
+  // 排隊位:判定點往左下斜排。「排隊、逐一」是這個畫面的重點,
+  // 所以封包不是各自亂飛,而是進隊等待被叫號。
+  function slot(i){ var j=pt(JPT);
+    return {x:j.x-(i+1)*RS*0.075+Math.sin(t*1.1+i*2.3)*2,
+            y:j.y+(i+1)*RS*0.048+Math.sin(t*1.3+i*1.7)*3}; }
+
+  function step(p){
+    var j, k;
+    if(p.st==='in'){
+      k=queue.indexOf(p); if(k<0){ queue.push(p); k=queue.length-1; }
+      j=slot(k);
+      p.x+=(j.x-p.x)*0.045; p.y+=(j.y-p.y)*0.045;
+      if(Math.abs(j.x-p.x)+Math.abs(j.y-p.y)<7) p.st='queue';
+      p.a=Math.min(1,p.a+0.02);
+    } else if(p.st==='queue'){
+      k=queue.indexOf(p); j=slot(k);
+      p.x+=(j.x-p.x)*0.10; p.y+=(j.y-p.y)*0.10; p.a=Math.min(1,p.a+0.02);
+    } else if(p.st==='scan'){
+      j=pt(JPT);
+      p.x+=(j.x-p.x)*0.16; p.y+=(j.y-p.y)*0.16;
+    } else if(p.st==='pass'){
+      // 通過:收進機器人下方的綠色流,再流出畫面右緣——「收集」的意象
+      p.u+=0.006+p.u*0.004;
+      var a0=pt(JPT), a1={x:ax(), y:ay()+RS*0.44}, a2={x:W+80, y:ay()+RS*0.55},
+          s2=1-p.u, b=2*s2*p.u, c2=p.u*p.u;
+      p.x=a0.x*s2*s2+a1.x*b+a2.x*c2; p.y=a0.y*s2*s2+a1.y*b+a2.y*c2;
+      if(p.u>=1) p.dead=1;
+    } else if(p.st==='warn'){
+      p.ph+=0.016; j=pt(RING);
+      p.x+=(j.x+Math.cos(p.ph)*RS*0.155-p.x)*0.08;
+      p.y+=(j.y+Math.sin(p.ph)*RS*0.052-p.y)*0.08;
+      // 偶爾放行一顆:待複核是狀態不是終點,環也不該無限累積
+      if(Math.random()<0.0016){ p.st='pass'; p.u=0; ringN--; }
+    } else if(p.st==='crit'){
+      p.x+=p.vx; p.y+=p.vy; p.vx*=1.012;
+      p.a-=0.011; if(p.a<=0||p.x<-60) p.dead=1;
     }
   }
 
-  function step(p,i){
-    if(!p.judged){
-      p.d-=p.sp*2.4;
-      if(p.d<=RING){                       // 抵達篩選環 → 判定
-        p.judged=1; p.hold=1; pulse=1;
-        if(p.v==='crit'){ p.sp=-0.011-Math.random()*0.006; }   // 拒絕：彈回深空
-        else if(p.v==='warn'){ p.orb=1; }                      // 複核：滯留環上
-        else { p.sp=0.0085; }                                  // 通過：續行入核心
-      }
-    } else if(p.orb){
-      p.a+=0.0017*p.spin;
-      p.d=RING+Math.sin(t*1.5+i)*0.014;
-      // 放行速率決定環上同時滯留幾顆。太慢的話，黃色會累積成一片，
-      // 亮度壓過核心——需人工複核是常態，但它不是這個畫面的主角。
-      if(Math.random()<0.0065) p.dead=1;
-    } else {
-      p.d-=p.sp*2.4;
-      if(p.v==='pass'&&p.d<CR*0.5) p.dead=1;
-      if(p.v==='crit'&&p.d>6.2) p.dead=1;
-    }
-    p.hold*=0.93;
-  }
-
-  function seg(q1,q2,k,al){
-    if(!q1||!q2) return;
-    items.push({z:(q1.z+q2.z)*0.5, k:k, x1:q1.x, y1:q1.y, x2:q2.x, y2:q2.y, a:al});
-  }
-
-  // 核心球體：經緯線各自成 3D 圓，投影後自然構成體積。
-  function pushCore(){
-    var i,j,th,q,prev,lat,rr,yy,lon;
-    for(i=-1;i<=1;i++){
-      lat=i*0.52; rr=CR*Math.cos(lat); yy=CR*Math.sin(lat); prev=null;
-      for(j=0;j<=40;j++){
-        th=j/40*6.283+t*0.38;
-        q=proj(Math.cos(th)*rr, yy, Math.sin(th)*rr);
-        seg(prev,q,2,1); prev=q;
-      }
-    }
-    for(i=0;i<3;i++){
-      lon=i/3*3.1416+t*0.38; prev=null;
-      for(j=0;j<=40;j++){
-        th=j/40*6.283;
-        q=proj(Math.cos(th)*CR*Math.cos(lon), Math.sin(th)*CR, Math.cos(th)*CR*Math.sin(lon));
-        seg(prev,q,2,1); prev=q;
-      }
-    }
-  }
-
-  // 篩選邊界：三個正交大圓構成迴轉儀。
-  // 判定發生在半徑 RING 的**球面**上，只畫赤道圓的話，從高仰角飛來的封包
-  // 會在環外就被攔下，看起來像穿幫——邊界是什麼形狀，就得畫成什麼形狀。
-  var RINGS=[[[1,0,0],[0,0,1]], [[1,0,0],[0,1,0]], [[0,1,0],[0,0,1]]];
-  // 赤道圈最實，另兩圈只是把「這是一顆球殼」交代清楚，不該搶讀。
-  var RING_A=[0.40, 0.20, 0.17];
-  function pushRing(){
-    for(var r=0;r<3;r++){
-      var u=RINGS[r][0], v=RINGS[r][1], prev=null,
-          rot=t*(r===0?0.14:(r===1?-0.10:0.07));
-      for(var i=0;i<=72;i++){
-        var th=i/72*6.283+rot, ct=Math.cos(th)*RING, st=Math.sin(th)*RING;
-        var q=proj(u[0]*ct+v[0]*st, u[1]*ct+v[1]*st, u[2]*ct+v[2]*st);
-        if(i%3) seg(prev,q,1,RING_A[r]);
-        prev=q;
-      }
-    }
+  function judge(){
+    var p=scanning; if(!p) return;
+    p.col=p.v==='crit'?CRIT:p.v==='warn'?WARN:PASS;
+    pulse=1; p.fl=1;                       // 判定瞬間:封包上的擴散環
+    if(p.v==='pass'){ p.st='pass'; p.u=0; }
+    else if(p.v==='warn'){
+      if(ringN>=RING_MAX){ p.st='pass'; p.u=0; }   // 環滿了就先放行離場
+      else { var rc=pt(RING); p.st='warn'; ringN++;
+             p.ph=Math.atan2(p.y-rc.y, p.x-rc.x); }
+    } else { p.st='crit'; p.vx=-(2.6+Math.random()*1.6);
+             p.vy=(Math.random()-0.5)*1.6; }
+    scanning=null; cool=12+Math.random()*22;
   }
 
   function draw(){
-    t+=0.006; pulse*=0.94; drift+=0.0011;
-    yaw+=((tYaw+Math.sin(drift)*0.11)-yaw)*0.045;
-    pit+=((BASE_PIT+tPit+Math.cos(drift*0.83)*0.045)-pit)*0.045;
+    t+=0.0165; pulse*=0.94;
+    parX+=(tpX-parX)*0.05; parY+=(tpY-parY)*0.05;
+    if(imgOk) imgA=Math.min(1,imgA+0.03);
+    // 鋪不透明的深空底色,不能只 clear:透明底上 screen 混合會把
+    // 素材的黑當成實色蓋掉頁面背景,方形邊界就浮出來了。
+    g.fillStyle='#07090E'; g.fillRect(0,0,W,H);
 
-    g.clearRect(0,0,W,H);
-    items.length=0;
-
-    // 深空塵埃：只隨視角位移，給出「這是一個空間」的視差底層
+    // 星塵:視差層,給出「這是一個空間」的底
     g.globalCompositeOperation='lighter';
-    for(var k=0;k<dust.length;k++){
-      var u=dust[k], q=proj(u.x,u.y,u.z);
-      if(!q) continue;
-      var tw=0.30+Math.sin(t*1.7+u.tw)*0.16;
-      g.fillStyle=rgba(IDLE, tw*Math.min(q.f*1.5,1)*0.60);
-      g.beginPath(); g.arc(q.x,q.y,u.s*q.f*1.4,0,6.283); g.fill();
+    for(var i=0;i<dust.length;i++){
+      var u=dust[i],
+          x=u.x*W-parX*22*u.ly, y=u.y*H-parY*16*u.ly,
+          tw=0.24+Math.sin(t*1.7+u.tw)*0.14;
+      g.fillStyle=rgba(IDLE, tw*u.ly*0.55);
+      g.beginPath(); g.arc(x,y,u.s*u.ly*1.5,0,6.283); g.fill();
     }
     g.globalCompositeOperation='source-over';
 
-    pushRing(); pushCore();
-    items.push({z:0, k:3});          // 核心輝光：排在球心的深度，被正面線壓住
+    // 排程:一次只檢查一顆——「逐一評估」就是這個狀態機本身
+    if(scanning){ scanT--; if(scanT<=0) judge(); }
+    else if(cool>0){ cool--; }
+    else if(queue.length){ scanning=queue.shift(); scanning.st='scan'; scanT=40; }
+    if(pk.length<18&&Math.random()<0.05) pk.push(spawn());
 
-    for(var i=0;i<pk.length;i++){
-      var p=pk[i];
-      step(p,i);
-      if(p.dead){ pk[i]=spawn(); continue; }
-      var ce=Math.cos(p.e), ca=Math.cos(p.a), sa=Math.sin(p.a), se=Math.sin(p.e);
-      var q=proj(p.d*ce*ca, p.d*se, p.d*ce*sa);
-      if(!q) continue;
-      // 尾跡另一端：固定世界長度。用速度乘算的話，遠處封包會拖出
-      // 一條橫越整個畫面的長線。
-      var dt=p.d+(p.orb?0:(p.sp>0?0.26:-0.30));
-      var q2=proj(dt*ce*ca, dt*se, dt*ce*sa);
-      items.push({z:q.z, k:0, q:q, q2:q2, p:p});
+    // 待複核環的軌道:極淡,只是暗示那裡有一個「等待區」
+    var rc=pt(RING);
+    g.strokeStyle=rgba(WARN,0.10); g.lineWidth=1;
+    g.beginPath();
+    g.ellipse(rc.x,rc.y,RS*0.155,RS*0.052,0,0,6.283); g.stroke();
+
+    drawRobot();
+
+    for(var n=pk.length-1;n>=0;n--){
+      var p=pk[n]; step(p);
+      if(p.dead){ pk.splice(n,1); var q=queue.indexOf(p);
+                  if(q>-1) queue.splice(q,1); continue; }
+      drawPk(p);
     }
 
-    items.sort(function(a,b){ return b.z-a.z; });   // 遠的先畫
-
-    for(var n=0;n<items.length;n++){
-      var it=items[n];
-      if(it.k===0){ drawPacket(it); continue; }
-      if(it.k===3){ drawGlow(); continue; }
-      // 背面比正面暗：這一行就是整顆球的體積感來源。
-      // 線刻意壓得比光暗——這顆球該讀作「發光的核心」，不是線框地球儀。
-      var back=it.z>0;
-      var col=it.k===2?CORE:IDLE;
-      // 每次判定，整圈邊界亮一下——讓「攔下了什麼」這件事看得到。
-      // 核心的經緯線壓到幾乎只剩暗示：那顆球要讀作「光」，線一旦搶讀，
-      // 整個畫面就退化成一團線球。唯一該成立的線結構是判定邊界。
-      var base=it.k===2?(back?0.03:0.115)+pulse*0.10
-                      : it.a*(back?0.42:1)+pulse*0.16;
-      g.strokeStyle=rgba(col, base);
-      g.lineWidth=1;
-      g.beginPath(); g.moveTo(it.x1,it.y1); g.lineTo(it.x2,it.y2); g.stroke();
-    }
+    if(scanning) drawBeam(scanning);
   }
 
-  function drawGlow(){
-    var q=proj(0,0,0); if(!q) return;
-    var ph=0.5+Math.sin(t*2.6)*0.5, r0=CR*S*q.f, rad=r0*3.0;
-
-    g.globalCompositeOperation='lighter';   // 光要相加，不是相疊
-
-    // 體積光：從核心往外散，遠比線框亮——光才是這個世界的主體
-    var lg=g.createRadialGradient(q.x,q.y,0,q.x,q.y,rad);
-    lg.addColorStop(0, rgba(CORE, 0.34+ph*0.10+pulse*0.30));
-    lg.addColorStop(0.14, rgba(CORE, 0.15+ph*0.04));
-    lg.addColorStop(0.42, rgba(CORE, 0.042));
-    lg.addColorStop(1, rgba(CORE, 0));
-    g.fillStyle=lg; g.beginPath(); g.arc(q.x,q.y,rad,0,6.283); g.fill();
-
-    // 邊緣光：球體輪廓只在邊緣亮起，這是體積的最後一道證據
-    var rg=g.createRadialGradient(q.x,q.y,r0*0.70,q.x,q.y,r0);
-    rg.addColorStop(0, rgba(CORE,0));
-    rg.addColorStop(0.88, rgba(CORE,0.13+pulse*0.09));
-    rg.addColorStop(1, rgba(CORE,0));
-    g.fillStyle=rg; g.beginPath(); g.arc(q.x,q.y,r0,0,6.283); g.fill();
-
-    // 核：一個小而極亮的點。有它，這才是恆星；沒它，只是一團霧。
-    var kr=r0*0.16*(0.9+ph*0.2);
-    var kg=g.createRadialGradient(q.x,q.y,0,q.x,q.y,kr);
-    kg.addColorStop(0,'rgba(228,240,255,'+(0.72+pulse*0.28)+')');
-    kg.addColorStop(1, rgba(CORE,0));
-    g.fillStyle=kg; g.beginPath(); g.arc(q.x,q.y,kr,0,6.283); g.fill();
-
+  function drawRobot(){
+    if(!imgOk||imgA<=0) return;
+    var r=Math.sin(t*0.63)*0.022;
+    g.save();
+    g.translate(ax(),ay()); g.rotate(r); g.scale(-1,1);   // 面朝左,迎向封包
+    g.globalCompositeOperation='screen'; g.globalAlpha=imgA;
+    g.drawImage(img,-RS/2,-RS/2,RS,RS);
+    // 再疊一層低透明度的加色:screen 保形,lighter 補亮——
+    // 深色機身在深空背景上需要這半檔的提亮才站得出來。
+    g.globalCompositeOperation='lighter'; g.globalAlpha=imgA*0.22;
+    g.drawImage(img,-RS/2,-RS/2,RS,RS);
+    g.restore();
+    // 鏡頭的呼吸與判定脈衝:光疊在素材上,加色
+    var L=pt(LENS), ph=0.5+Math.sin(t*2.2)*0.5,
+        rr=RS*(0.055+ph*0.008+pulse*0.05);
+    g.globalCompositeOperation='lighter';
+    var lg=g.createRadialGradient(L.x,L.y,0,L.x,L.y,rr*3.4);
+    lg.addColorStop(0,rgba(CORE,(0.30+ph*0.08+pulse*0.45)*imgA));
+    lg.addColorStop(0.3,rgba(CORE,0.10*imgA));
+    lg.addColorStop(1,rgba(CORE,0));
+    g.fillStyle=lg; g.beginPath(); g.arc(L.x,L.y,rr*3.4,0,6.283); g.fill();
     g.globalCompositeOperation='source-over';
   }
 
-  function drawPacket(it){
-    var p=it.p, q=it.q, col=p.judged?(p.v==='crit'?CRIT:p.v==='warn'?WARN:PASS):IDLE;
-    var da=Math.max(0.14, Math.min(q.f*1.05,1));      // 遠的淡＝景深
-    if(p.orb) da*=0.62;                                // 滯留待複核的不該搶戲
-    var rad=(p.sz+p.hold*2.2)*q.f;
-
+  function drawBeam(p){
+    var L=pt(LENS), k=scanT>26?(34-scanT)/8:scanT<8?scanT/8:1;
     g.globalCompositeOperation='lighter';
+    var bg=g.createLinearGradient(L.x,L.y,p.x,p.y);
+    bg.addColorStop(0,rgba(CORE,0.80*k)); bg.addColorStop(1,rgba(CORE,0.18*k));
+    g.strokeStyle=bg; g.lineWidth=2;
+    g.beginPath(); g.moveTo(L.x,L.y); g.lineTo(p.x,p.y); g.stroke();
+    // 掃描口徑:在封包上收攏成一個檢查圈
+    g.strokeStyle=rgba(CORE,0.5*k); g.lineWidth=1;
+    g.beginPath(); g.arc(p.x,p.y,p.sz+5+(1-k)*3,0,6.283); g.stroke();
+    g.globalCompositeOperation='source-over';
+  }
 
-    if(it.q2&&!p.orb){                                 // 尾跡：方向感
-      var tg=g.createLinearGradient(q.x,q.y,it.q2.x,it.q2.y);
-      tg.addColorStop(0,rgba(col,0.34*da)); tg.addColorStop(1,rgba(col,0));
-      g.strokeStyle=tg; g.lineWidth=1.2*Math.max(q.f,0.4);
-      g.beginPath(); g.moveTo(q.x,q.y); g.lineTo(it.q2.x,it.q2.y); g.stroke();
+  function drawPk(p){
+    var col=p.col, a=p.a, rad=p.sz;
+    if(p.st==='scan'){ a=1; rad=p.sz+1.4; }
+    if(p.st==='warn') a*=0.75;
+    g.globalCompositeOperation='lighter';
+    if(p.st==='crit'){                       // 拒絕:紅色拖尾,彈回深空
+      g.strokeStyle=rgba(col,0.30*a); g.lineWidth=1.2;
+      g.beginPath(); g.moveTo(p.x,p.y); g.lineTo(p.x-p.vx*7,p.y-p.vy*7);
+      g.stroke();
     }
-    // 每顆都帶一圈暈：遠處讀作散焦，近處讀作發光
-    g.fillStyle=rgba(col,(q.f<0.62?0.11:0.07)*da);
-    g.beginPath(); g.arc(q.x,q.y,rad*(q.f<0.62?2.6:2.0),0,6.283); g.fill();
-
-    g.fillStyle=rgba(col,(0.62+p.hold*0.38)*da);
-    g.beginPath(); g.arc(q.x,q.y,Math.max(rad,0.5),0,6.283); g.fill();
-
-    if(p.hold>0.10){                                   // 判定瞬間：擴散環
-      g.strokeStyle=rgba(col,p.hold*0.45*da); g.lineWidth=1;
-      g.beginPath(); g.arc(q.x,q.y,rad+3+p.hold*13*q.f,0,6.283); g.stroke();
-      if(!p.orb){                                      // 核心拉出的檢查線
-        var o=proj(0,0,0);
-        if(o){ g.strokeStyle=rgba(col,p.hold*0.18*da); g.lineWidth=0.8;
-               g.beginPath(); g.moveTo(o.x,o.y); g.lineTo(q.x,q.y); g.stroke(); }
-      }
+    if(p.st==='pass'&&p.u>0){                // 通過:綠色的流
+      g.strokeStyle=rgba(col,0.22*a); g.lineWidth=1.1;
+      g.beginPath(); g.moveTo(p.x,p.y); g.lineTo(p.x-8,p.y-2); g.stroke();
+    }
+    g.fillStyle=rgba(col,0.16*a);
+    g.beginPath(); g.arc(p.x,p.y,rad*2.8,0,6.283); g.fill();
+    g.fillStyle=rgba(col,0.92*a);
+    g.beginPath(); g.arc(p.x,p.y,rad,0,6.283); g.fill();
+    if(p.fl>0.08){                           // 判定閃光:一圈往外散的環
+      g.strokeStyle=rgba(col,p.fl*0.55); g.lineWidth=1.2;
+      g.beginPath(); g.arc(p.x,p.y,rad+4+(1-p.fl)*26,0,6.283); g.stroke();
+      p.fl*=0.94;
     }
     g.globalCompositeOperation='source-over';
   }
 
   function loop(){ draw(); requestAnimationFrame(loop); }
-  function settle(){ for(var i=0;i<220;i++) draw(); }
-  // 設定 canvas.width 會清空畫布。動畫模式下一幀就補回來了，但靜態模式
-  // 不會——少了這裡的重繪，關閉動畫的使用者一調整視窗，場景就永久空白。
-  addEventListener('resize', function(){ size(); init(); if(still) settle(); });
-  addEventListener('pointermove', function(e){
+  // 不播動畫時仍跑滿一段,讓畫面停在「已經運作一陣子」的狀態,
+  // 然後再走到「光束正在檢查一顆封包」的瞬間才停——靜態讀者
+  // (reduce-motion、OG 截圖)看到的必須是產品隱喻最強的那一格。
+  function settle(){
+    var i;
+    for(i=0;i<560;i++) draw();
+    for(i=0;i<600&&!(scanning&&scanT<30&&scanT>16);i++) draw();
+  }
+  addEventListener('resize',function(){ size(); init(); if(still) settle(); });
+  addEventListener('pointermove',function(e){
     if(e.clientY>innerHeight*1.15) return;
-    tYaw=(e.clientX/innerWidth-0.5)*0.40;
-    tPit=(e.clientY/innerHeight-0.5)*-0.26;
-  }, {passive:true});
+    tpX=(e.clientX/innerWidth-0.5)*2; tpY=(e.clientY/innerHeight-0.5)*2;
+  },{passive:true});
 
   size(); init();
-  // 不播動畫時仍跑滿一段，讓畫面停在「已經運作一陣子」的狀態：
-  // 有判定過的封包、有滯留待複核的，而不是一圈空環。
   if(still) settle(); else loop();
 })();
 </script></body></html>

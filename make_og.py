@@ -113,10 +113,14 @@ def main() -> int:
     # 因此把該行改寫成指得到的相對路徑。
     css = CSS.replace('url("display.woff2")', 'url("../fonts/display.woff2")')
 
+    # 機器人素材同理:OG 頁在 assets/og/ 下,改寫成指得到的路徑。
+    scene = SCENE_JS.replace("img.src='robot.webp'",
+                             "img.src='../robot/robot.webp'")
+
     for slug, title, foot in CARDS:
         title = title.format(n=len(projects))
         plain = title.replace("<br>", "").replace("<em>", "").replace("</em>", "")
-        html = PAGE.format(css=css, scene=SCENE_JS, freeze=FREEZE,
+        html = PAGE.format(css=css, scene=scene, freeze=FREEZE,
                            title=title, foot=esc(foot), stat=stat,
                            size=64 if len(plain) > 14 else 72)
         (OUT / f"{slug}.html").write_text(html, encoding="utf-8")
