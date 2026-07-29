@@ -17,14 +17,11 @@ const config: Config = {
         violet: "#9A7BFF",
       },
       fontFamily: {
-        display: ["var(--font-display)"],
-        sans: [
-          "var(--font-sans)",
-          "PingFang TC",
-          "Microsoft JhengHei",
-          "Heiti TC",
-          "sans-serif",
-        ],
+        // DisplayTC 是手動 @font-face(globals.css)自架的思源黑體子集,
+        // 不是走 next/font,所以直接引用字型名稱,不需要 CSS 變數包一層。
+        display: ["DisplayTC", "sans-serif"],
+        // 內文交給系統 CJK 字型——見 layout.tsx 移除 Noto Sans TC 的說明。
+        sans: ["PingFang TC", "Microsoft JhengHei", "Heiti TC", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       letterSpacing: {

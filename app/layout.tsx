@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Noto_Sans_TC } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const mono = JetBrains_Mono({
@@ -9,14 +9,12 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-// 內文中文字：Noto Sans TC 子集只抓實際用到的字重，體感仍是系統字的補強而非
-// 取代——CJK 全字集網頁字型動輒數 MB，不值得為了「不用系統字」犧牲效能。
-const sansTC = Noto_Sans_TC({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
+// 內文中文字刻意不用 next/font/google 的 Noto Sans TC:實測發現即使宣告
+// subsets:['latin'],Google 仍把完整 CJK unicode-range 一併送出——
+// 301KB 的 CSS + 一整批 30-85KB 的字型檔,在節流網路下直接把 FCP 拖到
+// 6 秒以上,是先前那版 35-44 分的真正主因,不是 3D 場景。
+// 這正是 site.py 自己的註解警告過的陷阱(「整套繁中字型是 5–10MB」)——
+// 內文交給系統 CJK 字型即可,見 tailwind.config.ts 的 fontFamily.sans。
 
 export const metadata: Metadata = {
   title: "MCP 安檢 · mcp-guard",
@@ -30,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-Hant" className={`${mono.variable} ${sansTC.variable}`}>
+    <html lang="zh-Hant" className={mono.variable}>
       <body className="grain font-sans antialiased">
         <div
           className="pointer-events-none fixed inset-0 z-30"
