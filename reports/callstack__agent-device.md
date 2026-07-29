@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3733 / 222 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 3755 / 224 |
+| 最後更新 | 2026-07-29 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-28 22:06 |
+| 檢查時間 | 2026-07-29 22:03 |
 
 ## 風險摘要
 
@@ -19,13 +19,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 39 個外部主機
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、android.example、api.example.com、assets.example、bridge.agent-device.dev、bridge.example.com、bridge.example.test、bundle.example.test、cloud.example、custom.example.test…`
+> 證據：`agent-device.dev、api.example.com、bridge.agent-device.dev、bridge.example.com、bridge.example.test、cloud.example、custom.example.test、daemon.example.test、docs.renovatebot.com、en.wikipedia.org…`
 
-### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -77,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-29`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3733｜fork 222｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-28
+⭐ 3755｜fork 224｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-29
 
 ---
 

@@ -1,25 +1,37 @@
 # MCP 安檢報告：ganapativs/microcharts
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 70 / 2 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 75 / 2 |
+| 最後更新 | 2026-07-29 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-07-28 22:08 |
+| 檢查時間 | 2026-07-29 22:05 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 3　🟡 中 1　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[身分] 倉庫非常新（建立於 22 天前）
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`apps/docs/scripts/gen-chart-modules.mjs、apps/docs/scripts/gen-docs-code.mjs、apps/docs/scripts/gen-entries.mjs、apps/docs/scripts/gen-playground-caps.mjs、apps/docs/scripts/gen-preview-live.mjs`
+
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`apps/docs/src/components/brand/shared.tsx`
+
+### 🟠 高｜[身分] 倉庫非常新（建立於 23 天前）
 
 新建立的 repo 本身不等於惡意，但若它同時被大量宣傳、或使用了熱門既有名稱，要特別留意是否為搶註／仿冒。
 
@@ -29,31 +41,19 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.indexnow.org、argos-ci.com、developer.chrome.com、fumadocs.dev、json.schemastore.org、mcr.microsoft.com、meetguns.com、microcharts.dev、schema.org、stackblitz.com…`
+> 證據：`api.indexnow.org、developer.chrome.com、fumadocs.dev、json.schemastore.org、mcr.microsoft.com、meetguns.com、microcharts.dev、schema.org、stackblitz.com、unpkg.com…`
 
-### 🔵 低｜[供應鏈] 有 30 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.3.7、@axe-core/playwright@^4.12.1、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`apps/docs/scripts/gen-chart-modules.mjs、apps/docs/scripts/gen-docs-code.mjs、apps/docs/scripts/gen-entries.mjs、apps/docs/scripts/gen-playground-caps.mjs、apps/docs/scripts/gen-preview-live.mjs`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`apps/docs/src/components/brand/shared.tsx`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.4.0、@axe-core/playwright@^4.12.1、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/docs/src/components/home/hero-modules-live.ts`
+> 證據：`apps/docs/src/components/analytics.tsx`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -61,13 +61,13 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 475 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 418 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 70｜fork 2｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-07-28
+⭐ 75｜fork 2｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-07-29
 
 ---
 

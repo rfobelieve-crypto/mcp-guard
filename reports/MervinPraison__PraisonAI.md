@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 8520 / 1338 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 8520 / 1339 |
+| 最後更新 | 2026-07-29 |
 | 授權 | MIT License |
 | 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-07-28 22:05 |
+| 檢查時間 | 2026-07-29 22:02 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 2　🟡 中 3　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -64,10 +64,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（62 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -92,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -102,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8520｜fork 1338｜語言 Python｜建立 2024-03-19｜最後推送 2026-07-28
+⭐ 8520｜fork 1339｜語言 Python｜建立 2024-03-19｜最後推送 2026-07-29
 
 ---
 
