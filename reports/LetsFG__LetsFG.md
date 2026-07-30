@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
-| 專案說明 | Agent-native flight search & booking. 400+ airlines, zero markup, $116 saved vs  |
-| 星數 / Fork | ⭐ 1620 / 97 |
-| 最後更新 | 2026-07-28 |
+| 專案說明 | Agent-native flight search & booking. Hundreds of airlines plus the major bookin |
+| 星數 / Fork | ⭐ 1623 / 97 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Other |
 | 已掃描檔案 | 108 個 |
-| 檢查時間 | 2026-07-29 22:04 |
+| 檢查時間 | 2026-07-30 22:09 |
 
 ## 風險摘要
 
@@ -68,15 +68,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1620｜fork 97｜語言 Python｜建立 2026-03-01｜最後推送 2026-07-28
+⭐ 1623｜fork 97｜語言 Python｜建立 2026-03-01｜最後推送 2026-07-30
 
 ---
 

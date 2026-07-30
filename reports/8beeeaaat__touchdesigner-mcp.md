@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `8beeeaaat/touchdesigner-mcp` |
 | 專案說明 | MCP server for TouchDesigner |
-| 星數 / Fork | ⭐ 452 / 48 |
-| 最後更新 | 2026-07-23 |
+| 星數 / Fork | ⭐ 453 / 48 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | npm 套件 | `touchdesigner-mcp-server` |
-| 已掃描檔案 | 153 個 |
-| 檢查時間 | 2026-07-29 22:06 |
+| 已掃描檔案 | 151 個 |
+| 檢查時間 | 2026-07-30 22:11 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 8
+🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -35,6 +35,12 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs.derivative.ca、docs.github.com、feross.org、host.docker.internal、json.schemastore.org、opencollective.com、paulmillr.com、static.modelcontextprotocol.io、tidelift.com、www.patreon.com`
 
+### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
+
+依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
+
+> 證據：`@modelcontextprotocol/core@^2.0.0、@modelcontextprotocol/express@^2.0.0、@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、@modelcontextprotocol/client@^2.0.0`
+
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
@@ -45,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/integration-test-guard.mjs、scripts/syncMcpServerVersions.ts、tests/unit/genHandlers.test.ts`
+> 證據：`.claude/hooks/integration-test-guard.mjs、scripts/syncMcpServerVersions.ts、tests/e2e/helpers/serverProcess.ts、tests/unit/genHandlers.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,7 +75,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 22 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +89,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-23`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 452｜fork 48｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-07-23
+⭐ 453｜fork 48｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-07-30
 
 ---
 

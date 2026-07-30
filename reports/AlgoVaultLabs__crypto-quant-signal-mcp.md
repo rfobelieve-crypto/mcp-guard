@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 5 / 4 |
-| 最後更新 | 2026-07-29 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-29 22:05 |
+| 檢查時間 | 2026-07-30 22:10 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/monitoring/check-stripe-webhook-events.mjs、ops/monitoring/llm-spend-monitor.py、ops/monitoring/postgres-cpu-autopilot.py`
+> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/monitoring/check-stripe-webhook-events.mjs、ops/monitoring/llm-spend-monitor.py`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -37,7 +37,7 @@
 
 > 證據：`.claude/commands/geo-decide.md｜「…decision from Postgres (the cross-host boundary): ``` ssh -i ~/.ssh/algovault_deploy root@204.168.185.24 \ "docker exec crypto-quant-…」`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 21 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-29`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-07-29
+⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-07-30
 
 ---
 

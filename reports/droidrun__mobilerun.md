@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `droidrun/mobilerun` |
 | 專案說明 | Automate your mobile devices with natural language commands - an LLM agnostic mo |
-| 星數 / Fork | ⭐ 8893 / 950 |
-| 最後更新 | 2026-07-29 |
+| 星數 / Fork | ⭐ 8907 / 953 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
-| 已掃描檔案 | 178 個 |
-| 檢查時間 | 2026-07-29 22:02 |
+| 已掃描檔案 | 181 個 |
+| 檢查時間 | 2026-07-30 22:06 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`accounts.google.com、api.anthropic.com、api.deepseek.com、api.example.com、api.minimax.io、api.minimaxi.chat、api.minimaxi.com、api.mobilerun.ai、api.openai.com、api.z.ai…`
 
-### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-29`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8893｜fork 950｜語言 Python｜建立 2025-04-12｜最後推送 2026-07-29
+⭐ 8907｜fork 953｜語言 Python｜建立 2025-04-12｜最後推送 2026-07-30
 
 ---
 

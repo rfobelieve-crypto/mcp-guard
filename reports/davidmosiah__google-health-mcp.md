@@ -7,11 +7,11 @@
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
 | 星數 / Fork | ⭐ 33 / 7 |
-| 最後更新 | 2026-07-27 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 94 個 |
-| 檢查時間 | 2026-07-29 22:05 |
+| 已掃描檔案 | 101 個 |
+| 檢查時間 | 2026-07-30 22:10 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、src/cli/auth.ts`
+> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/test-synthetic-demo.mjs、src/cli/auth.ts`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -37,11 +37,11 @@
 
 > 證據：`accounts.google.com、api.example、console.cloud.google.com、developers.fitbit.com、developers.google.com、feross.org、glama.ai、health.googleapis.com、oauth2.googleapis.com、opencollective.com…`
 
-### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、better-sqlite3@^12.9.0、cors@^2.8.6、express@^5.2.1、zod@^4.4.1、@types/better-sqlite3@^7.6.13…`
+> 證據：`@modelcontextprotocol/sdk@^1.29.0、better-sqlite3@^12.9.0、cors@^2.8.6、delx-mcp-kit@^0.1.0、express@^5.2.1、zod@^4.4.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 33｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-07-27
+⭐ 33｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-07-30
 
 ---
 
