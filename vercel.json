@@ -7,7 +7,21 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "github": { "silent": true },
+  "functions": {
+    "api/scan.py": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
   "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    },
     {
       "source": "/display.woff2",
       "headers": [

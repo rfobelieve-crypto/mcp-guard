@@ -30,6 +30,28 @@
     <h1 class="rv">裝下去之前，<br>先知道它<em>要什麼權限</em>。</h1>
     <p class="sub rv">一個 MCP 拿到的不只是你的檔案，而是你正在用的那個 AI
       會被誰下指令。我們逐一稽核，每個結論都附你能自己複現的證據。</p>
+
+    <!-- action/method 不是裝飾：JS 失效時這張表單仍然可用，會把查詢字串
+         送到稽核總表（那一頁自己會讀 ?q= 並展開命中的那一列）。
+         JS 正常時 ASK_JS 會 preventDefault，改走秒開／即時掃描。 -->
+    <form class="ask rv" id="ask" autocomplete="off"
+          action="registry/" method="get">
+      <div class="ask-row">
+        <label for="ask-q" class="sr-only">要稽核的 MCP</label>
+        <input id="ask-q" name="q" type="text" spellcheck="false"
+               placeholder="貼上你要裝的 MCP：安裝指令、網址或 owner/repo"
+               aria-describedby="ask-hint">
+        <button id="ask-go" type="submit">安檢</button>
+      </div>
+      <p class="ask-hint" id="ask-hint">
+        直接貼你手上的東西就好——<code>npx -y @scope/pkg</code>、
+        GitHub 網址、<code>owner/repo</code>，
+        或整段 <code>claude_desktop_config.json</code> 都能認得。
+        <b>已收錄的 178 個秒開；沒收錄的當場即時掃。</b>
+      </p>
+      <div class="res" id="ask-res" hidden role="status" aria-live="polite"></div>
+    </form>
+
     <div class="cta rv">
       <code>mcp-guard owner/repo</code>
       <a class="btn" href="registry/">看 178 份稽核結果 →</a>
@@ -348,6 +370,98 @@
   },{rootMargin:'0px 0px -12% 0px'});
   els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i,6)*55)+'ms';
                              io.observe(e); });
+})();
+</script><script>window.__MCPG_INDEX__={"paperclipai/paperclip":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"mims-harvard/ToolUniverse":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"Klavis-AI/klavis":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"JerBouma/FinanceToolkit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"homeassistant-ai/ha-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"aks129/HealthClawGuardrails":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"iowarp/clio-kit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"BerkKilicoglu/google-health-fitbit-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 21 天前）"},"upstash/context7":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"amruthpillai/reactive-resume":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"bytedance/UI-TARS-desktop":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"t8y2/dbx":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"MervinPraison/PraisonAI":{"v":"🟡 需人工複核","t":"setup.py 覆寫了安裝期指令"},"blazickjp/arxiv-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"vmoranv/jshookmcp":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"timescale/pg-aiguide":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"blitzdotdev/blitz-mac":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"svnscha/mcp-windbg":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"burningion/video-editing-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"Dave-London/Pare":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"codefuturist/email-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"waystation-ai/mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"WenyuChiou/research-hub":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"umbraco/Umbraco-CMS-MCP-Dev":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"davidmosiah/google-health-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"akutishevsky/nutrition-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"LaZZy0v0/tijori-finance-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"davidmosiah/samsung-health-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"JosueM1109/personal-finance-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"AlgoVaultLabs/crypto-quant-signal-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"L337-org/docker-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"PhilipAD/health-export-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"ChromeDevTools/chrome-devtools-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"HeyPuter/puter":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"DeusData/codebase-memory-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"modelscope/FunASR":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"hangwin/mcp-chrome":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"modelcontextprotocol/inspector":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"LaurieWired/GhidraMCP":{"v":"🟡 需人工複核","t":"超過 13 個月沒有更新"},"wonderwhy-er/DesktopCommanderMCP":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"BrowserMCP/mcp":{"v":"🟡 需人工複核","t":"超過 15 個月沒有更新"},"antvis/mcp-server-chart":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"revolist/revogrid":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"Ataraxy-Labs/sem":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"bytebase/dbhub":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"medplum/medplum":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"jgravelle/jcodemunch-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"bergside/typeui":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"winedarksea/AutoTS":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"mbailey/voicemode":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"Intuition-Lab/personal-model":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 18 天前）"},"Vrun-design/openflowkit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"8beeeaaat/touchdesigner-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"awkoy/notion-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"pulsemcp/mcp-servers":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"freema/mcp-design-system-extractor":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"ganapativs/microcharts":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 22 天前）"},"Kastalien-Research/thoughtbox":{"v":"🟡 需人工複核","t":"指令檔含零寬字元"},"Grey-Iris/easy-notion-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"n24q02m/better-notion-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"AION-Analytics/aion-indian-market-intelligence":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"hollaugo/tutorials":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"blantian/lanhu-design-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 9 天前）"},"Arjun0606/smolanalytics":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"RetrogradeLabs/lune-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"alexalexalex222/frontend-design-loop-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"SpikeyCoder/website-auditor-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 27 天前）"},"AIops-tools/Monitoring-AIops":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 16 天前）"},"modelcontextprotocol/servers":{"v":"🟢 未發現明顯風險","t":"—"},"D4Vinci/Scrapling":{"v":"🟢 未發現明顯風險","t":"—"},"ruvnet/ruflo":{"v":"🟢 未發現明顯風險","t":"—"},"tldraw/tldraw":{"v":"🟢 未發現明顯風險","t":"—"},"PostHog/posthog":{"v":"🟢 未發現明顯風險","t":"—"},"microsoft/playwright-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"github/github-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"PrefectHQ/fastmcp":{"v":"🟢 未發現明顯風險","t":"—"},"agentskills/agentskills":{"v":"🟢 未發現明顯風險","t":"—"},"JanDeDobbeleer/oh-my-posh":{"v":"🟢 未發現明顯風險","t":"—"},"Skyvern-AI/skyvern":{"v":"🟢 未發現明顯風險","t":"—"},"screenpipe/screenpipe":{"v":"🟢 未發現明顯風險","t":"—"},"googleapis/mcp-toolbox":{"v":"🟢 未發現明顯風險","t":"—"},"GLips/Figma-Context-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"coder/coder":{"v":"🟢 未發現明顯風險","t":"—"},"kubeshark/kubeshark":{"v":"🟢 未發現明顯風險","t":"—"},"BeehiveInnovations/pal-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"awslabs/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"droidrun/mobilerun":{"v":"🟢 未發現明顯風險","t":"—"},"idosal/git-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"MystenLabs/sui":{"v":"🟢 未發現明顯風險","t":"—"},"modelcontextprotocol/registry":{"v":"🟢 未發現明顯風險","t":"—"},"firecrawl/firecrawl-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"CursorTouch/Windows-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"airweave-ai/airweave":{"v":"🟢 未發現明顯風險","t":"—"},"getsentry/XcodeBuildMCP":{"v":"🟢 未發現明顯風險","t":"—"},"mobile-next/mobile-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"mock-server/mockserver-monorepo":{"v":"🟢 未發現明顯風險","t":"—"},"exa-labs/exa-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"firebase/firebase-tools":{"v":"🟢 未發現明顯風險","t":"—"},"repowise-dev/repowise":{"v":"🟢 未發現明顯風險","t":"—"},"txn2/kubefwd":{"v":"🟢 未發現明顯風險","t":"—"},"tolgee/tolgee-platform":{"v":"🟢 未發現明顯風險","t":"—"},"cloudflare/mcp-server-cloudflare":{"v":"🟢 未發現明顯風險","t":"—"},"KnockOutEZ/wigolo":{"v":"🟢 未發現明顯風險","t":"—"},"callstack/agent-device":{"v":"🟢 未發現明顯風險","t":"—"},"IvanMurzak/Unity-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"basicmachines-co/basic-memory":{"v":"🟢 未發現明顯風險","t":"—"},"nowork-studio/NotFair":{"v":"🟢 未發現明顯風險","t":"—"},"codeaashu/claude-code":{"v":"🟢 未發現明顯風險","t":"—"},"giancarloerra/SocratiCode":{"v":"🟢 未發現明顯風險","t":"—"},"signerlabs/ShipSwift":{"v":"🟢 未發現明顯風險","t":"—"},"supabase/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"nteract/semiotic":{"v":"🟢 未發現明顯風險","t":"—"},"dgunning/edgartools":{"v":"🟢 未發現明顯風險","t":"—"},"apify/apify-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"tavily-ai/tavily-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"llmsresearch/paperbanana":{"v":"🟢 未發現明顯風險","t":"—"},"containers/kubernetes-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"zereight/gitlab-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"figma/mcp-server-guide":{"v":"🟢 未發現明顯風險","t":"—"},"MicrosoftDocs/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"stripe/ai":{"v":"🟢 未發現明顯風險","t":"—"},"kubeshop/testkube":{"v":"🟢 未發現明顯風險","t":"—"},"LetsFG/LetsFG":{"v":"🟢 未發現明顯風險","t":"—"},"NuGet/Home":{"v":"🟢 未發現明顯風險","t":"—"},"dongdongbh/Mindwtr":{"v":"🟢 未發現明顯風險","t":"—"},"hashicorp/terraform-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"nrwl/nx-console":{"v":"🟢 未發現明顯風險","t":"—"},"mnemox-ai/tradememory-protocol":{"v":"🟢 未發現明顯風險","t":"—"},"robotmcp/ros-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"anypost/emailmd":{"v":"🟢 未發現明顯風險","t":"—"},"sceneview/sceneview":{"v":"🟢 未發現明顯風險","t":"—"},"BetterDB-inc/monitor":{"v":"🟢 未發現明顯風險","t":"—"},"codespar/mcp-dev-latam":{"v":"🟢 未發現明顯風險","t":"—"},"surendranb/google-analytics-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"jpicklyk/task-orchestrator":{"v":"🟢 未發現明顯風險","t":"—"},"nirholas/three.ws":{"v":"🟢 未發現明顯風險","t":"—"},"Tapetide-hq/nse-bse-indian-stock-market-data-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"norman-finance/norman-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"shibayu36/slack-explorer-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"JuzzyDee/audio-analyzer-rs":{"v":"🟢 未發現明顯風險","t":"—"},"counterpoint-studio/audio-file-mcp-app":{"v":"🟢 未發現明顯風險","t":"—"},"KyuRish/mcp-dashboards":{"v":"🟢 未發現明顯風險","t":"—"},"truss44/mcp-crypto-price":{"v":"🟢 未發現明顯風險","t":"—"},"debridge-finance/debridge-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"mcparmory/registry":{"v":"🟢 未發現明顯風險","t":"—"},"jtalk22/slack-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"jonradoff/lightcms":{"v":"🟢 未發現明顯風險","t":"—"},"grahammccain/chart-library-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"danishashko/yahoo-finance-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"marlinjai/email-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"coyaSONG/youtube-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"mindstone/mcp-servers":{"v":"🟢 未發現明顯風險","t":"—"},"CryptoCultCurt/appfolio-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"base76-research-lab/token-compressor":{"v":"🟢 未發現明顯風險","t":"—"},"amcharts/amcharts5-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"MidOSresearch/midos":{"v":"🟢 未發現明顯風險","t":"—"},"SidneyBissoli/medical-terminologies-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"embeddedlayers/mcp-analytics":{"v":"🟢 未發現明顯風險","t":"—"},"arcadia-finance/mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"thinkchainai/mcpbundles":{"v":"🟢 未發現明顯風險","t":"—"},"chia-health/chia-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"clueso-ai/clueso-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"friendlygeorge/docker-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"studiomeyer-io/mcp-video":{"v":"🟢 未發現明顯風險","t":"—"},"cyanheads/cdc-health-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"megberts/mcp-websitepublisher-ai":{"v":"🟢 未發現明顯風險","t":"—"},"gattjoe/ACMS":{"v":"🟢 未發現明顯風險","t":"—"},"DIALLOUBE-RESEARCH/hypernatt-terminal":{"v":"🟢 未發現明顯風險","t":"—"},"alisaitteke/docker-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"ofershap/mcp-server-docker":{"v":"🟢 未發現明顯風險","t":"—"},"webtoolbox/websitetoolbox-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"NomaCMS/nomacms-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"deployment-io/cursor-plugin":{"v":"🟢 未發現明顯風險","t":"—"},"timergy-app/timergy":{"v":"🟢 未發現明顯風險","t":"—"},"rog0x/mcp-docker-tools":{"v":"🟢 未發現明顯風險","t":"—"},"edesent/custom-website-editor":{"v":"🟢 未發現明顯風險","t":"—"},"pipeworx-io/mcp-cms":{"v":"🟢 未發現明顯風險","t":"—"},"uptimemonitoring/examples":{"v":"🟢 未發現明顯風險","t":"—"}};</script><script>
+(function(){
+  var form=document.getElementById('ask');
+  if(!form) return;
+  var input=document.getElementById('ask-q');
+  var btn=document.getElementById('ask-go');
+  var box=document.getElementById('ask-res');
+  var INDEX=window.__MCPG_INDEX__||{};
+
+  function esc(s){ return String(s==null?'':s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  // 使用者手上真正有的是安裝指令或設定檔片段，不是乾淨的 owner/repo。
+  // 這裡只做「夠用的」前端正規化，用來比對本地已收錄名單；真正權威的
+  // 正規化在後端 mcp_guard/userinput.py，兩邊不一致時以後端為準。
+  function guessSlug(raw){
+    var s=(raw||'').trim();
+    var m=s.match(/github\.com[\/:]([\w.-]+\/[\w.-]+)/);
+    if(m) return m[1].replace(/\.git$/,'');
+    if(/^[\w.-]+\/[\w.-]+$/.test(s)) return s;
+    return '';
+  }
+
+  function show(html){ box.innerHTML=html; box.hidden=false; }
+
+  // 結論字串 → 樣式類別。務必比對整個 emoji，不要比對 charAt(0)：
+  // 🔴 🟡 🟢 的第一個 UTF-16 單元都是 \ud83d，用單一 code unit 判斷會讓
+  // 三種結論全部落進同一類——實際發生過，通過的專案被渲染成紅色警示。
+  function seal(v){
+    var cls = v.indexOf('🔴')===0 ? 'crit'
+            : v.indexOf('🟡')===0 ? 'warn'
+            : 'pass';
+    return '<span class="seal '+cls+'">'+esc(v.slice(2).trim())+'</span>';
+  }
+
+  function renderLocal(slug,rec){
+    show('<div class="res-head">'+seal(rec.v)+
+      '<span class="res-name">'+esc(slug)+'</span></div>'+
+      '<p class="res-why">'+esc(rec.t)+'</p>'+
+      '<p class="res-more"><a href="registry/?q='+encodeURIComponent(slug)+
+      '">看完整檢查發現與證據 →</a></p>');
+  }
+
+  function renderRemote(d){
+    var top=(d.findings||[]).filter(function(f){
+      return f.severity==='CRITICAL'||f.severity==='HIGH'; }).slice(0,5);
+    var items=top.map(function(f){
+      return '<li><b>'+esc(f.title)+'</b><br>'+esc(f.detail)+'</li>'; }).join('');
+    var notes=(d.notes||[]).map(function(n){
+      return '<li>'+esc(n)+'</li>'; }).join('');
+    show('<div class="res-head">'+seal(d.verdict)+
+      '<span class="res-name">'+esc(d.slug||d.target)+'</span></div>'+
+      '<p class="res-why">'+esc(d.why)+
+      '　<span style="color:var(--muted)">已掃描 '+(d.files_scanned||0)+
+      ' 個檔案</span></p>'+
+      (items?'<ul class="res-list">'+items+'</ul>':'')+
+      (notes?'<ul class="res-list">'+notes+'</ul>':'')+
+      '<p class="res-more">這份結果是<b>現在即時掃的</b>，未收錄在總表中。'+
+      '你可以自己複現：<code>mcp-guard '+esc(d.target)+'</code></p>');
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var raw=(input.value||'').trim();
+    if(!raw) return;
+
+    var slug=guessSlug(raw);
+    if(slug && INDEX[slug]){ renderLocal(slug,INDEX[slug]); return; }
+
+    btn.disabled=true;
+    show('<span class="spin"></span>正在即時稽核，約需數秒…');
+
+    fetch('/api/scan?target='+encodeURIComponent(raw))
+      .then(function(r){ return r.json().then(function(j){
+        return {status:r.status, body:j}; }); })
+      .then(function(res){
+        if(res.body && res.body.ok){ renderRemote(res.body); return; }
+        // 抓取失敗刻意不假裝成結論——沒查到事實就不給答案。
+        show('<p class="res-why res-err">'+
+          esc((res.body&&res.body.error)||'稽核失敗。')+'</p>'+
+          '<p class="res-more">你也可以在本機自己跑：'+
+          '<code>mcp-guard '+esc(raw)+'</code></p>');
+      })
+      .catch(function(){
+        show('<p class="res-why res-err">連不上稽核服務。</p>'+
+          '<p class="res-more">在本機自己跑一樣能得到結果：'+
+          '<code>mcp-guard '+esc(raw)+'</code></p>');
+      })
+      .then(function(){ btn.disabled=false; });
+  });
 })();
 </script>
 </body>

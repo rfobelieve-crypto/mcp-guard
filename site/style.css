@@ -32,6 +32,10 @@
 }
 
 *{box-sizing:border-box}
+/* 給螢幕閱讀器的標籤：視覺上不佔位，但不能用 display:none（那會讓
+   輔助技術也讀不到，等於沒有標籤）。 */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* 60px 的 sticky 導覽列會蓋住錨點目標，捲動時預留它的高度 */
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
@@ -123,6 +127,48 @@ h1,h2,h3{font-family:var(--display)}
   letter-spacing:.05em}
 .facts b{display:block;font-size:26px;color:var(--ink);font-weight:700;
   margin-bottom:5px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+/* ── 首屏查詢：整個產品的入口 ─────────────────────────────
+   價值主張是「裝下去之前先知道」，所以畫面上第一個可操作的東西，
+   就該是「告訴我你要裝什麼」——而不是一段介紹。 */
+.ask{margin-top:38px;max-width:620px}
+.ask-row{display:flex;gap:10px;flex-wrap:wrap}
+.ask input{flex:1;min-width:240px;font:inherit;font-size:15px;
+  padding:15px 18px;border-radius:var(--r);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);font-family:var(--mono)}
+.ask input::placeholder{color:var(--muted);font-family:var(--sans)}
+.ask input:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.ask button{font:inherit;font-size:15px;font-weight:600;padding:15px 26px;
+  border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);
+  color:var(--bg);cursor:pointer;transition:.18s;white-space:nowrap}
+.ask button:hover{background:var(--seal);border-color:var(--seal);color:#fff}
+.ask button[disabled]{opacity:.55;cursor:progress}
+.ask-hint{margin:11px 0 0;font-size:12.5px;color:var(--muted);line-height:1.7}
+.ask-hint code{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+
+/* 結果卡：直接長在查詢框下面，不換頁。使用者問的是一個問題，
+   不該為了看答案而失去他剛才輸入的內容。 */
+.res{margin-top:20px;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--surface);padding:20px 22px;font-size:14px}
+.res[hidden]{display:none}
+.res-head{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.res-name{font-family:var(--mono);font-weight:600;word-break:break-all}
+.res-why{margin:10px 0 0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+.res-list{margin:16px 0 0;padding:0;list-style:none;
+  border-top:1px solid var(--line)}
+.res-list li{padding:11px 0;border-bottom:1px solid var(--line);
+  font-size:13px;color:var(--ink-2);line-height:1.65}
+.res-list li:last-child{border-bottom:0}
+.res-list b{color:var(--ink);font-weight:600}
+.res-more{margin:14px 0 0;font-size:13px}
+.res-more a{color:var(--seal);text-decoration:none}
+.res-more a:hover{text-decoration:underline}
+.res-err{color:var(--warn)}
+.spin{display:inline-block;width:13px;height:13px;border-radius:50%;
+  border:2px solid var(--line);border-top-color:var(--seal);
+  animation:sp .7s linear infinite;vertical-align:-2px;margin-right:7px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:2.4s}}
 
 /* ── 內容區塊 ─────────────────────────────────────────── */
 section.blk{padding:110px 0;border-top:1px solid var(--line);background:var(--bg)}

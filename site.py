@@ -78,6 +78,10 @@ CSS = """
 }
 
 *{box-sizing:border-box}
+/* 給螢幕閱讀器的標籤：視覺上不佔位，但不能用 display:none（那會讓
+   輔助技術也讀不到，等於沒有標籤）。 */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* 60px 的 sticky 導覽列會蓋住錨點目標，捲動時預留它的高度 */
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
@@ -169,6 +173,48 @@ h1,h2,h3{font-family:var(--display)}
   letter-spacing:.05em}
 .facts b{display:block;font-size:26px;color:var(--ink);font-weight:700;
   margin-bottom:5px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+/* ── 首屏查詢：整個產品的入口 ─────────────────────────────
+   價值主張是「裝下去之前先知道」，所以畫面上第一個可操作的東西，
+   就該是「告訴我你要裝什麼」——而不是一段介紹。 */
+.ask{margin-top:38px;max-width:620px}
+.ask-row{display:flex;gap:10px;flex-wrap:wrap}
+.ask input{flex:1;min-width:240px;font:inherit;font-size:15px;
+  padding:15px 18px;border-radius:var(--r);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);font-family:var(--mono)}
+.ask input::placeholder{color:var(--muted);font-family:var(--sans)}
+.ask input:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.ask button{font:inherit;font-size:15px;font-weight:600;padding:15px 26px;
+  border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);
+  color:var(--bg);cursor:pointer;transition:.18s;white-space:nowrap}
+.ask button:hover{background:var(--seal);border-color:var(--seal);color:#fff}
+.ask button[disabled]{opacity:.55;cursor:progress}
+.ask-hint{margin:11px 0 0;font-size:12.5px;color:var(--muted);line-height:1.7}
+.ask-hint code{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+
+/* 結果卡：直接長在查詢框下面，不換頁。使用者問的是一個問題，
+   不該為了看答案而失去他剛才輸入的內容。 */
+.res{margin-top:20px;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--surface);padding:20px 22px;font-size:14px}
+.res[hidden]{display:none}
+.res-head{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.res-name{font-family:var(--mono);font-weight:600;word-break:break-all}
+.res-why{margin:10px 0 0;color:var(--ink-2);font-size:13.5px;line-height:1.7}
+.res-list{margin:16px 0 0;padding:0;list-style:none;
+  border-top:1px solid var(--line)}
+.res-list li{padding:11px 0;border-bottom:1px solid var(--line);
+  font-size:13px;color:var(--ink-2);line-height:1.65}
+.res-list li:last-child{border-bottom:0}
+.res-list b{color:var(--ink);font-weight:600}
+.res-more{margin:14px 0 0;font-size:13px}
+.res-more a{color:var(--seal);text-decoration:none}
+.res-more a:hover{text-decoration:underline}
+.res-err{color:var(--warn)}
+.spin{display:inline-block;width:13px;height:13px;border-radius:50%;
+  border:2px solid var(--line);border-top-color:var(--seal);
+  animation:sp .7s linear infinite;vertical-align:-2px;margin-right:7px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:2.4s}}
 
 /* ── 內容區塊 ─────────────────────────────────────────── */
 section.blk{padding:110px 0;border-top:1px solid var(--line);background:var(--bg)}
@@ -661,6 +707,100 @@ REVEAL_JS = """
 })();
 """
 
+ASK_JS = """
+(function(){
+  var form=document.getElementById('ask');
+  if(!form) return;
+  var input=document.getElementById('ask-q');
+  var btn=document.getElementById('ask-go');
+  var box=document.getElementById('ask-res');
+  var INDEX=window.__MCPG_INDEX__||{};
+
+  function esc(s){ return String(s==null?'':s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  // 使用者手上真正有的是安裝指令或設定檔片段，不是乾淨的 owner/repo。
+  // 這裡只做「夠用的」前端正規化，用來比對本地已收錄名單；真正權威的
+  // 正規化在後端 mcp_guard/userinput.py，兩邊不一致時以後端為準。
+  function guessSlug(raw){
+    var s=(raw||'').trim();
+    var m=s.match(/github\\.com[\\/:]([\\w.-]+\\/[\\w.-]+)/);
+    if(m) return m[1].replace(/\\.git$/,'');
+    if(/^[\\w.-]+\\/[\\w.-]+$/.test(s)) return s;
+    return '';
+  }
+
+  function show(html){ box.innerHTML=html; box.hidden=false; }
+
+  // 結論字串 → 樣式類別。務必比對整個 emoji，不要比對 charAt(0)：
+  // 🔴 🟡 🟢 的第一個 UTF-16 單元都是 \\ud83d，用單一 code unit 判斷會讓
+  // 三種結論全部落進同一類——實際發生過，通過的專案被渲染成紅色警示。
+  function seal(v){
+    var cls = v.indexOf('🔴')===0 ? 'crit'
+            : v.indexOf('🟡')===0 ? 'warn'
+            : 'pass';
+    return '<span class="seal '+cls+'">'+esc(v.slice(2).trim())+'</span>';
+  }
+
+  function renderLocal(slug,rec){
+    show('<div class="res-head">'+seal(rec.v)+
+      '<span class="res-name">'+esc(slug)+'</span></div>'+
+      '<p class="res-why">'+esc(rec.t)+'</p>'+
+      '<p class="res-more"><a href="registry/?q='+encodeURIComponent(slug)+
+      '">看完整檢查發現與證據 →</a></p>');
+  }
+
+  function renderRemote(d){
+    var top=(d.findings||[]).filter(function(f){
+      return f.severity==='CRITICAL'||f.severity==='HIGH'; }).slice(0,5);
+    var items=top.map(function(f){
+      return '<li><b>'+esc(f.title)+'</b><br>'+esc(f.detail)+'</li>'; }).join('');
+    var notes=(d.notes||[]).map(function(n){
+      return '<li>'+esc(n)+'</li>'; }).join('');
+    show('<div class="res-head">'+seal(d.verdict)+
+      '<span class="res-name">'+esc(d.slug||d.target)+'</span></div>'+
+      '<p class="res-why">'+esc(d.why)+
+      '　<span style="color:var(--muted)">已掃描 '+(d.files_scanned||0)+
+      ' 個檔案</span></p>'+
+      (items?'<ul class="res-list">'+items+'</ul>':'')+
+      (notes?'<ul class="res-list">'+notes+'</ul>':'')+
+      '<p class="res-more">這份結果是<b>現在即時掃的</b>，未收錄在總表中。'+
+      '你可以自己複現：<code>mcp-guard '+esc(d.target)+'</code></p>');
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var raw=(input.value||'').trim();
+    if(!raw) return;
+
+    var slug=guessSlug(raw);
+    if(slug && INDEX[slug]){ renderLocal(slug,INDEX[slug]); return; }
+
+    btn.disabled=true;
+    show('<span class="spin"></span>正在即時稽核，約需數秒…');
+
+    fetch('/api/scan?target='+encodeURIComponent(raw))
+      .then(function(r){ return r.json().then(function(j){
+        return {status:r.status, body:j}; }); })
+      .then(function(res){
+        if(res.body && res.body.ok){ renderRemote(res.body); return; }
+        // 抓取失敗刻意不假裝成結論——沒查到事實就不給答案。
+        show('<p class="res-why res-err">'+
+          esc((res.body&&res.body.error)||'稽核失敗。')+'</p>'+
+          '<p class="res-more">你也可以在本機自己跑：'+
+          '<code>mcp-guard '+esc(raw)+'</code></p>');
+      })
+      .catch(function(){
+        show('<p class="res-why res-err">連不上稽核服務。</p>'+
+          '<p class="res-more">在本機自己跑一樣能得到結果：'+
+          '<code>mcp-guard '+esc(raw)+'</code></p>');
+      })
+      .then(function(){ btn.disabled=false; });
+  });
+})();
+"""
+
 FILTER_JS = """
 (function(){
   var rows=[].slice.call(document.querySelectorAll('details.row'));
@@ -696,6 +836,17 @@ FILTER_JS = """
   // 「該裝哪個」那一頁靠這個把讀者送過來。領域不做成第三排 chips——
   // 三排按鈕會把這頁變成控制面板，改用一條可以關掉的提示列。
   var qs=new URLSearchParams(location.search);
+  // ?q=owner/repo：首頁查詢命中已收錄專案時，用這個把人送到那一列。
+  var wantQ=qs.get('q');
+  if(wantQ){
+    q.value=wantQ;
+    apply();
+    var hit=rows.filter(function(r){ return !r.hidden; })[0];
+    if(hit){
+      hit.open=true;
+      hit.scrollIntoView({block:'center'});
+    }
+  }
   var wantC=qs.get('c'), wantD=qs.get('d');
   if(wantC){
     var hit=cats.filter(function(c){return c.dataset.c===wantC;})[0];
@@ -920,6 +1071,16 @@ def page(slug: str, title: str, desc: str, body: str, when: str,
 
 # ── 各頁內容 ────────────────────────────────────────────────────────────────
 
+def home_index(projects: list) -> str:
+    """首頁用的極簡索引：已收錄的專案要能**秒開**，不必等 API。
+
+    只放比對與摘要需要的三個欄位。完整資料在 /registry/，這裡放全部
+    等於把總表那 1MB 搬到首頁——那正是總表現在最大的效能問題。
+    """
+    idx = {p["slug"]: {"v": p["verdict"], "t": p["top"]} for p in projects}
+    return json.dumps(idx, ensure_ascii=False, separators=(",", ":"))
+
+
 def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
     body = f"""
 <section class="hero">
@@ -929,6 +1090,28 @@ def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
     <h1 class="rv">裝下去之前，<br>先知道它<em>要什麼權限</em>。</h1>
     <p class="sub rv">一個 MCP 拿到的不只是你的檔案，而是你正在用的那個 AI
       會被誰下指令。我們逐一稽核，每個結論都附你能自己複現的證據。</p>
+
+    <!-- action/method 不是裝飾：JS 失效時這張表單仍然可用，會把查詢字串
+         送到稽核總表（那一頁自己會讀 ?q= 並展開命中的那一列）。
+         JS 正常時 ASK_JS 會 preventDefault，改走秒開／即時掃描。 -->
+    <form class="ask rv" id="ask" autocomplete="off"
+          action="registry/" method="get">
+      <div class="ask-row">
+        <label for="ask-q" class="sr-only">要稽核的 MCP</label>
+        <input id="ask-q" name="q" type="text" spellcheck="false"
+               placeholder="貼上你要裝的 MCP：安裝指令、網址或 owner/repo"
+               aria-describedby="ask-hint">
+        <button id="ask-go" type="submit">安檢</button>
+      </div>
+      <p class="ask-hint" id="ask-hint">
+        直接貼你手上的東西就好——<code>npx -y @scope/pkg</code>、
+        GitHub 網址、<code>owner/repo</code>，
+        或整段 <code>claude_desktop_config.json</code> 都能認得。
+        <b>已收錄的 {len(projects)} 個秒開；沒收錄的當場即時掃。</b>
+      </p>
+      <div class="res" id="ask-res" hidden role="status" aria-live="polite"></div>
+    </form>
+
     <div class="cta rv">
       <code>mcp-guard owner/repo</code>
       <a class="btn" href="registry/">看 {len(projects)} 份稽核結果 →</a>
@@ -966,10 +1149,12 @@ def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
   </div>
 </section>
 """
+    # 索引在 ASK_JS 之前掛上 window，順序不能顛倒。
+    index_js = f"window.__MCPG_INDEX__={home_index(projects)};"
     return page("", "MCP 安檢｜獨立稽核總表",
                 "繁體中文的 MCP 獨立安全稽核。安裝前先看清楚它是誰、"
                 "要什麼權限、有沒有對模型下指令。", body, when,
-                (SCENE_JS, REVEAL_JS))
+                (SCENE_JS, REVEAL_JS, index_js, ASK_JS))
 
 
 def cat_chips(projects: list) -> str:
