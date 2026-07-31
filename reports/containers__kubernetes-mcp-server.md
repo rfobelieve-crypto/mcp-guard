@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 1866 / 402 |
-| 最後更新 | 2026-07-29 |
+| 星數 / Fork | ⭐ 1870 / 404 |
+| 最後更新 | 2026-07-31 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-07-30 22:09 |
+| 檢查時間 | 2026-07-31 22:08 |
 
 ## 風險摘要
 
@@ -30,7 +30,7 @@
 
 > 證據：`npm/kubernetes-mcp-server/bin/index.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（89 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（87 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -40,7 +40,7 @@
 
 > 證據：`.agents/skills/toolset-design/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 13 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -54,11 +54,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-29`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1866｜fork 402｜語言 Go｜建立 2025-02-11｜最後推送 2026-07-29
+⭐ 1870｜fork 404｜語言 Go｜建立 2025-02-11｜最後推送 2026-07-31
 
 ---
 

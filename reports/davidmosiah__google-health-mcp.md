@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
-| 星數 / Fork | ⭐ 33 / 7 |
+| 星數 / Fork | ⭐ 34 / 7 |
 | 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
 | 已掃描檔案 | 101 個 |
-| 檢查時間 | 2026-07-30 22:10 |
+| 檢查時間 | 2026-07-31 22:09 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 33｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-07-30
+⭐ 34｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-07-30
 
 ---
 

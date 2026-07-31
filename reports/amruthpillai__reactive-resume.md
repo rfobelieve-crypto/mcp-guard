@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 39890 / 4533 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 39912 / 4537 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-07-30 22:05 |
+| 檢查時間 | 2026-07-31 22:05 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.6、@commitlint/cli@^21.2.1、@commitlint/config-conventional@^21.2.0、@playwright/test@^1.62.0、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.0…`
+> 證據：`@biomejs/biome@^2.5.6、@commitlint/cli@^21.2.1、@commitlint/config-conventional@^21.2.0、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts、apps/server/src/openapi/generator.test.ts、apps/server/src/services/stylesheet-preflight.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（96 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（99 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39890｜fork 4533｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-07-30
+⭐ 39912｜fork 4537｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-07-31
 
 ---
 

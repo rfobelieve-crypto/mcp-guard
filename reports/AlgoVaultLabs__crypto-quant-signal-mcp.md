@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 5 / 4 |
-| 最後更新 | 2026-07-30 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-30 22:10 |
+| 檢查時間 | 2026-07-31 22:09 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@
 
 > 證據：`.claude/commands/geo-decide.md｜「…decision from Postgres (the cross-host boundary): ``` ssh -i ~/.ssh/algovault_deploy root@204.168.185.24 \ "docker exec crypto-quant-…」`
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-07-30
+⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-07-31
 
 ---
 

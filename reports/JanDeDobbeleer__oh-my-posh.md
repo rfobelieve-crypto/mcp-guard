@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23184 / 2767 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 23190 / 2770 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-07-30 22:05 |
+| 檢查時間 | 2026-07-31 22:05 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 1　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -28,11 +28,17 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 33 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、api.brewfather.app、api.carbonintensity.org.uk、api.cf.eu10.hana.ondemand.com、api.example.com、api.ipify.org、bazel.build、cdn.ohmyposh.dev、cmake.org、containers.dev…`
+> 證據：`aka.ms、api.brewfather.app、api.carbonintensity.org.uk、api.cf.eu10.hana.ondemand.com、bazel.build、cdn.ohmyposh.dev、cmake.org、containers.dev、dev.azure.com、discord.com…`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/binary_size.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -60,11 +66,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23184｜fork 2767｜語言 Go｜建立 2019-03-13｜最後推送 2026-07-30
+⭐ 23190｜fork 2770｜語言 Go｜建立 2019-03-13｜最後推送 2026-07-31
 
 ---
 

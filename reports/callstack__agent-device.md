@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3776 / 224 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 3794 / 226 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-07-30 22:07 |
+| 檢查時間 | 2026-07-31 22:07 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、metro.example.dev、news.ycombinator.com、reactnative.dev、shop.example…`
+> 證據：`agent-device.dev、android.example、api-cloud.browserstack.com、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、hub-cloud.browserstack.com…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -41,13 +41,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/maestro/test/conformance/differential/run.ts、scripts/clean-daemon.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/maestro/test/conformance/differential/run.ts、packages/provider-webdriver/src/index.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts、scripts/__tests__/help-conformance-bench.test.ts`
+> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -59,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3776｜fork 224｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-30
+⭐ 3794｜fork 226｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-07-31
 
 ---
 

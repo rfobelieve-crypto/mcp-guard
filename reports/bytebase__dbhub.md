@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
-| 專案說明 | Zero-dependency, token-efficient database MCP server for Postgres, MySQL, SQL Se |
-| 星數 / Fork | ⭐ 3258 / 280 |
-| 最後更新 | 2026-07-30 |
+| 專案說明 | Token efficient, zero-dependency database MCP server for Postgres, MySQL, SQL Se |
+| 星數 / Fork | ⭐ 3263 / 280 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
-| 已掃描檔案 | 232 個 |
-| 檢查時間 | 2026-07-30 22:08 |
+| 已掃描檔案 | 241 個 |
+| 檢查時間 | 2026-07-31 22:07 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`CLAUDE.md｜「…SH_PASSPHRASE` - SSH config file support: Automatically reads from `~/.ssh/config` when using host aliases - Implementation in `src/utils/ssh-tun…」`
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`app.internal、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、mintlify.com、static.modelcontextprotocol.io、ui.shadcn.com、vite.dev…`
+> 證據：`app.internal、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、mintlify.com、registry.modelcontextprotocol.io、static.modelcontextprotocol.io、ui.shadcn.com…`
 
 ### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/__tests__/plugin-consistency.test.ts、src/config/__tests__/env.test.ts、src/config/__tests__/toml-loader.test.ts`
+> 證據：`scripts/sync-version.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/__tests__/plugin-consistency.test.ts、src/config/__tests__/env.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
@@ -85,7 +85,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3258｜fork 280｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-07-30
+⭐ 3263｜fork 280｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-07-31
 
 ---
 
