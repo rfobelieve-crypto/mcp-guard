@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
-| 星數 / Fork | ⭐ 229 / 46 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 230 / 46 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 57 個 |
-| 檢查時間 | 2026-07-28 17:11 |
+| 已掃描檔案 | 75 個 |
+| 檢查時間 | 2026-07-30 22:10 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`mcp>=1.2.0`
+> 證據：`mcp>=1.2.0,<2.0.0`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -48,11 +48,11 @@
 
 > 證據：`ga4_mcp/telemetry.py、npm/bin/index.js`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 16 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））、skills/bot-traffic-detection/SKILL.md（Agent Skill 指令（SKILL.md））、skills/channel-acquisition/SKILL.md（Agent Skill 指令（SKILL.md））、skills/common-metric-names/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 229｜fork 46｜語言 Python｜建立 2025-05-24｜最後推送 2026-07-28
+⭐ 230｜fork 46｜語言 Python｜建立 2025-05-24｜最後推送 2026-07-30
 
 ---
 

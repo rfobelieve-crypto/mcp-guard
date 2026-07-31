@@ -72,6 +72,21 @@ getlayers -> https://mcp.getlayers.ai/mcp (HTTP)
 
 ## 已完成（2026-07-27 ～ 07-28）
 
+- ✅ **首屏改版：稽核機器人**（2026-07-28）－ 球體 → 一隻精密的稽核
+      機器人在收集與篩選封包（產品隱喻更直白）。素材 Higgsfield 生成、
+      `make_robot.py` 後製（去光球與光束——那兩樣歸 canvas 動態演；
+      修補式去痕、邊緣壓黑）。素材以 screen 混合繪製（黑=透明）。
+      劇本手寫狀態機：湧入 → **排隊** → 掃描光束**逐一**檢查 → 依真實
+      比例分流（綠收進流、黃滯留待判環、紅彈回深空）
+- ✅ **登入 + 會員功能**（2026-07-28）－ GitHub OAuth（零 scope、
+      零第三方套件、無資料庫）；session = HMAC 簽名 cookie；
+      收藏清單存 localStorage（不上傳）；「提交掃描請求／回報誤判」
+      登入後開成公開 GitHub issue。後端單一 serverless function
+      （`api/rpc.py`，Python 標準函式庫）。設定見 `docs/DEPLOY.md`
+- ✅ **安全 headers 強化**（2026-07-28）－ CSP `script-src 'self'`
+      （頁面 script 全部外部檔化，行內一律拒收）、HSTS、
+      Permissions-Policy、COOP。順帶修掉 `[hidden]` 被 class display
+      蓋過的 bug
 - ✅ 掃描引擎六項檢查（身分／供應鏈／權限／工具描述投毒／代理指令檔／維護）
 - ✅ **Python 生態的供應鏈檢查**（2026-07-28）
       － 起點是一個數字：18 個目標中有 **10 個供應鏈檢查完全落空**，

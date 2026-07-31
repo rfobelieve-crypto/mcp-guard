@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
 | 專案說明 | Zero-dependency, token-efficient database MCP server for Postgres, MySQL, SQL Se |
-| 星數 / Fork | ⭐ 3242 / 276 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 3258 / 280 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
-| 已掃描檔案 | 230 個 |
-| 檢查時間 | 2026-07-28 17:08 |
+| 已掃描檔案 | 232 個 |
+| 檢查時間 | 2026-07-30 22:08 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@
 
 > 證據：`app.internal、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、mintlify.com、static.modelcontextprotocol.io、ui.shadcn.com、vite.dev…`
 
-### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@iarna/toml@^2.2.5、@modelcontextprotocol/sdk@^1.25.1、dotenv@^16.4.7、express@^4.18.2、ssh-config@^5.0.3、ssh2@^1.16.0…`
+> 證據：`@iarna/toml@^2.2.5、@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、dotenv@^16.4.7、express@^4.18.2、ssh-config@^5.0.3…`
 
 ### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
 
@@ -85,7 +85,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3242｜fork 276｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-07-28
+⭐ 3258｜fork 280｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-07-30
 
 ---
 

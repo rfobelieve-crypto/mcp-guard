@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Dave-London/Pare` |
 | 專案說明 | Dev tools, optimized for agents. Structured, token-efficient MCP servers for git |
-| 星數 / Fork | ⭐ 135 / 12 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 136 / 12 |
+| 最後更新 | 2026-07-29 |
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 437 個 |
-| 檢查時間 | 2026-07-28 17:13 |
+| 檢查時間 | 2026-07-30 22:12 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.0、@modelcontextprotocol/sdk@^1.29.0、@typescript-eslint/eslint-plugin@^8.64.0、@typescript-eslint/parser@^8.64.0、@vitest/coverage-v8@^4.1.10…`
+> 證據：`@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@modelcontextprotocol/sdk@^1.30.0、@typescript-eslint/eslint-plugin@^8.65.0、@typescript-eslint/parser@^8.65.0、@vitest/coverage-v8@^4.1.10…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 135｜fork 12｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-07-28
+⭐ 136｜fork 12｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-07-29
 
 ---
 

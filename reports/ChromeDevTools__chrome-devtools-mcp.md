@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 47723 / 3225 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 48010 / 3257 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
 | 已掃描檔案 | 239 個 |
-| 檢查時間 | 2026-07-28 17:04 |
+| 檢查時間 | 2026-07-30 22:05 |
 
 ## 風險摘要
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@blackwell-systems/gcf@^2.2.2、@eslint/js@^9.35.0、@google/genai@^2.0.1、@rollup/plugin-commonjs@^29.0.0、@rollup/plugin-json@^6.1.0、@rollup/plugin-node-resolve@^16.0.3…`
+> 證據：`@blackwell-systems/gcf@^2.2.2、@eslint/js@^10.0.1、@google/genai@^2.0.1、@rollup/plugin-commonjs@^29.0.0、@rollup/plugin-json@^6.1.0、@rollup/plugin-node-resolve@^16.0.3…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/test.mjs、scripts/update-lighthouse.ts、scripts/verify-npm-package.mjs、scripts/verify-server-json-version.ts、src/bin/check-latest-version.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（117 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（112 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 47723｜fork 3225｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-07-28
+⭐ 48010｜fork 3257｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-07-30
 
 ---
 

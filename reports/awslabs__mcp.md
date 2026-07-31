@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `awslabs/mcp` |
 | 專案說明 | Open source MCP Servers for AWS |
-| 星數 / Fork | ⭐ 9510 / 1664 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 9518 / 1673 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 467 個 |
-| 檢查時間 | 2026-07-28 17:04 |
+| 檢查時間 | 2026-07-30 22:04 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/pull-request-lint.yml、samples/mcp-integration-with-kb/clients/client_server.py、samples/mcp-integration-with-nova-canvas/clients/client_server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/tools/browser/browser_client.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（321 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（313 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -50,7 +50,7 @@
 
 > 證據：`src/aurora-dsql-mcp-server/skills/amazon-aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aurora-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/aws-dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-postgres-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/distributed-sql-skill/SKILL.md（Agent Skill 指令（SKILL.md））、src/aurora-dsql-mcp-server/skills/dsql-skill/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 379 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 382 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,11 +68,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9510｜fork 1664｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-28
+⭐ 9518｜fork 1673｜語言 Python｜建立 2025-03-21｜最後推送 2026-07-30
 
 ---
 

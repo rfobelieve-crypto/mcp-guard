@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4928 / 1113 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 4930 / 1113 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 536 個 |
-| 檢查時間 | 2026-07-28 17:06 |
+| 檢查時間 | 2026-07-30 22:07 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.buildkite.com、api.nuget.org、blog.jamesdbloom.com、central.sonatype.com、deb.nodesource.com、dl.k8s.io、docs.rs、downloads.mock-server.com、get.helm.sh、maven.apache.org…`
+> 證據：`api.buildkite.com、api.nuget.org、blog.jamesdbloom.com、central.sonatype.com、dl.k8s.io、docs.rs、downloads.mock-server.com、get.helm.sh、maven.apache.org、mock-server.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4928｜fork 1113｜語言 Java｜建立 2013-02-26｜最後推送 2026-07-28
+⭐ 4930｜fork 1113｜語言 Java｜建立 2013-02-26｜最後推送 2026-07-30
 
 ---
 

@@ -19,9 +19,10 @@
 <link rel="canonical" href="https://mcp-guard-iota.vercel.app/">
 <link rel="stylesheet" href="style.css">
 <link rel="preload" href="display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="robot.webp" as="image" type="image/webp">
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="">MCP 安檢<span>mcp-guard</span></a><menu><li><a href="pick/">該裝哪個</a></li><li><a href="registry/">稽核總表</a></li><li><a href="method/">怎麼查的</a></li><li><a href="trust/">為什麼可信</a></li></menu><a class="gh" href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">GitHub ↗</a></div></header>
+<header class="nav"><div class="wrap"><a class="brand" href="">MCP 安檢<span>mcp-guard</span></a><menu><li><a href="pick/">該裝哪個</a></li><li><a href="registry/">稽核總表</a></li><li><a href="method/">怎麼查的</a></li><li><a href="trust/">為什麼可信</a></li></menu><a class="gh" href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">GitHub ↗</a><span class="auth" id="auth" data-signin="登入"></span></div></header>
 
 <section class="hero">
   <canvas id="scene" aria-hidden="true"></canvas>
@@ -33,23 +34,23 @@
 
     <!-- action/method 不是裝飾：JS 失效時這張表單仍然可用，會把查詢字串
          送到稽核總表（那一頁自己會讀 ?q= 並展開命中的那一列）。
-         JS 正常時 ASK_JS 會 preventDefault，改走秒開／即時掃描。 -->
-    <form class="ask rv" id="ask" autocomplete="off"
+         JS 正常時 PROBE_JS 會 preventDefault，改走秒開／即時掃描。 -->
+    <form class="probe rv" id="probe" autocomplete="off"
           action="registry/" method="get">
-      <div class="ask-row">
-        <label for="ask-q" class="sr-only">要稽核的 MCP</label>
-        <input id="ask-q" name="q" type="text" spellcheck="false"
+      <div class="probe-row">
+        <label for="probe-q" class="sr-only">要稽核的 MCP</label>
+        <input id="probe-q" name="q" type="text" spellcheck="false"
                placeholder="貼上你要裝的 MCP：安裝指令、網址或 owner/repo"
-               aria-describedby="ask-hint">
-        <button id="ask-go" type="submit">安檢</button>
+               aria-describedby="probe-hint">
+        <button id="probe-go" type="submit">安檢</button>
       </div>
-      <p class="ask-hint" id="ask-hint">
+      <p class="probe-hint" id="probe-hint">
         直接貼你手上的東西就好——<code>npx -y @scope/pkg</code>、
         GitHub 網址、<code>owner/repo</code>，
         或整段 <code>claude_desktop_config.json</code> 都能認得。
         <b>已收錄的 178 個秒開；沒收錄的當場即時掃。</b>
       </p>
-      <div class="res" id="ask-res" hidden role="status" aria-live="polite"></div>
+      <div class="res" id="probe-res" hidden role="status" aria-live="polite"></div>
     </form>
 
     <div class="cta rv">
@@ -57,9 +58,9 @@
       <a class="btn" href="registry/">看 178 份稽核結果 →</a>
     </div>
     <div class="facts rv">
-      <div><b>110</b>未發現明顯風險</div>
-      <div><b>68</b>需人工複核</div>
-      <div><b>2044</b>累計檢查發現</div>
+      <div><b>109</b>未發現明顯風險</div>
+      <div><b>69</b>需人工複核</div>
+      <div><b>2054</b>累計檢查發現</div>
       <div><b>每日</b>自動重新驗證</div>
     </div>
   </div></div>
@@ -89,380 +90,7 @@
   </div>
 </section>
 
-<footer><div class="wrap"><div class="foot-end"><span>最近驗證 2026-07-28 17:14</span><a href="trust/">不保證什麼與更正政策</a><a href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">原始碼 ↗</a><span>MIT</span></div></div></footer>
-<script>
-(function(){
-  var c=document.getElementById('scene'); if(!c) return;
-  var g=c.getContext('2d'), dpr=Math.min(devicePixelRatio||1,2);
-  var W,H,cx,cy,S, pk=[], dust=[], items=[], t=0, pulse=0, drift=0;
-  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var yaw=0, pit=0, tYaw=0, tPit=0;
-
-  var PASS=[95,199,155], WARN=[220,174,74], CRIT=[240,130,122],
-      IDLE=[118,146,192], CORE=[168,199,250];
-  function rgba(q,a){ return 'rgba('+q[0]+','+q[1]+','+q[2]+','+a+')'; }
-
-  // 世界單位：篩選環半徑為 1。FOV 偏小，讓遠處封包明顯縮小＝景深。
-  var FOV=520, RING=1.0, CR=0.44;
-  // 固定俯角。少了它，赤道面上的環會退化成一條直線，整個場景就塌回 2D。
-  var BASE_PIT=-0.34;
-
-  function size(){
-    W=c.clientWidth; H=c.clientHeight;
-    c.width=W*dpr; c.height=H*dpr; g.setTransform(dpr,0,0,dpr,0,0);
-    // 寬螢幕把核心讓到右側，標題才不會壓在它身上；窄螢幕改為置中偏下。
-    var wide=W>860;
-    cx=wide?W*0.68:W*0.5; cy=wide?H*0.5:H*0.62;
-    S=Math.min(W,H)*(wide?0.32:0.26);
-  }
-
-  // 世界座標 → 螢幕。z 越大越遠；回傳 null 代表在相機後方。
-  function proj(x,y,z){
-    var ca=Math.cos(yaw), sa=Math.sin(yaw);
-    var x1=x*ca-z*sa, z1=x*sa+z*ca;
-    var cb=Math.cos(pit), sb=Math.sin(pit);
-    var y1=y*cb-z1*sb, z2=y*sb+z1*cb;
-    var dd=FOV+z2*S;
-    if(dd<90) return null;
-    var f=FOV/dd;
-    return {x:cx+x1*S*f, y:cy+y1*S*f, f:f, z:z2};
-  }
-
-  function spawn(){
-    var r=Math.random();
-    return {a:Math.random()*6.283, e:(Math.random()-0.5)*1.3,
-            d:3.2+Math.random()*2.2, sp:0.0055+Math.random()*0.0060,
-            sz:2.3+Math.random()*2.2,
-            // 比例貼著真實稽核結果：絕大多數通過，三成需人工複核，
-            // 嚴重問題罕見——罕見不代表不存在，那正是這個工具的用途。
-            v: r>0.97?'crit' : (r>0.66?'warn':'pass'),
-            judged:0, hold:0, orb:0, dead:0, spin:Math.random()<0.5?1:-1};
-  }
-
-  function init(){
-    pk=[];
-    for(var i=0;i<58;i++){ var p=spawn(); p.d=RING+0.1+Math.random()*4.2; pk.push(p); }
-    dust=[];
-    for(var j=0;j<120;j++){
-      var a=Math.random()*6.283, e=(Math.random()-0.5)*2.7, d=5+Math.random()*5.5,
-          ce=Math.cos(e);
-      dust.push({x:d*ce*Math.cos(a), y:d*Math.sin(e), z:d*ce*Math.sin(a),
-                 s:0.4+Math.random()*0.9, tw:Math.random()*6.283});
-    }
-  }
-
-  function step(p,i){
-    if(!p.judged){
-      p.d-=p.sp*2.4;
-      if(p.d<=RING){                       // 抵達篩選環 → 判定
-        p.judged=1; p.hold=1; pulse=1;
-        if(p.v==='crit'){ p.sp=-0.011-Math.random()*0.006; }   // 拒絕：彈回深空
-        else if(p.v==='warn'){ p.orb=1; }                      // 複核：滯留環上
-        else { p.sp=0.0085; }                                  // 通過：續行入核心
-      }
-    } else if(p.orb){
-      p.a+=0.0017*p.spin;
-      p.d=RING+Math.sin(t*1.5+i)*0.014;
-      // 放行速率決定環上同時滯留幾顆。太慢的話，黃色會累積成一片，
-      // 亮度壓過核心——需人工複核是常態，但它不是這個畫面的主角。
-      if(Math.random()<0.0065) p.dead=1;
-    } else {
-      p.d-=p.sp*2.4;
-      if(p.v==='pass'&&p.d<CR*0.5) p.dead=1;
-      if(p.v==='crit'&&p.d>6.2) p.dead=1;
-    }
-    p.hold*=0.93;
-  }
-
-  function seg(q1,q2,k,al){
-    if(!q1||!q2) return;
-    items.push({z:(q1.z+q2.z)*0.5, k:k, x1:q1.x, y1:q1.y, x2:q2.x, y2:q2.y, a:al});
-  }
-
-  // 核心球體：經緯線各自成 3D 圓，投影後自然構成體積。
-  function pushCore(){
-    var i,j,th,q,prev,lat,rr,yy,lon;
-    for(i=-1;i<=1;i++){
-      lat=i*0.52; rr=CR*Math.cos(lat); yy=CR*Math.sin(lat); prev=null;
-      for(j=0;j<=40;j++){
-        th=j/40*6.283+t*0.38;
-        q=proj(Math.cos(th)*rr, yy, Math.sin(th)*rr);
-        seg(prev,q,2,1); prev=q;
-      }
-    }
-    for(i=0;i<3;i++){
-      lon=i/3*3.1416+t*0.38; prev=null;
-      for(j=0;j<=40;j++){
-        th=j/40*6.283;
-        q=proj(Math.cos(th)*CR*Math.cos(lon), Math.sin(th)*CR, Math.cos(th)*CR*Math.sin(lon));
-        seg(prev,q,2,1); prev=q;
-      }
-    }
-  }
-
-  // 篩選邊界：三個正交大圓構成迴轉儀。
-  // 判定發生在半徑 RING 的**球面**上，只畫赤道圓的話，從高仰角飛來的封包
-  // 會在環外就被攔下，看起來像穿幫——邊界是什麼形狀，就得畫成什麼形狀。
-  var RINGS=[[[1,0,0],[0,0,1]], [[1,0,0],[0,1,0]], [[0,1,0],[0,0,1]]];
-  // 赤道圈最實，另兩圈只是把「這是一顆球殼」交代清楚，不該搶讀。
-  var RING_A=[0.40, 0.20, 0.17];
-  function pushRing(){
-    for(var r=0;r<3;r++){
-      var u=RINGS[r][0], v=RINGS[r][1], prev=null,
-          rot=t*(r===0?0.14:(r===1?-0.10:0.07));
-      for(var i=0;i<=72;i++){
-        var th=i/72*6.283+rot, ct=Math.cos(th)*RING, st=Math.sin(th)*RING;
-        var q=proj(u[0]*ct+v[0]*st, u[1]*ct+v[1]*st, u[2]*ct+v[2]*st);
-        if(i%3) seg(prev,q,1,RING_A[r]);
-        prev=q;
-      }
-    }
-  }
-
-  function draw(){
-    t+=0.006; pulse*=0.94; drift+=0.0011;
-    yaw+=((tYaw+Math.sin(drift)*0.11)-yaw)*0.045;
-    pit+=((BASE_PIT+tPit+Math.cos(drift*0.83)*0.045)-pit)*0.045;
-
-    g.clearRect(0,0,W,H);
-    items.length=0;
-
-    // 深空塵埃：只隨視角位移，給出「這是一個空間」的視差底層
-    g.globalCompositeOperation='lighter';
-    for(var k=0;k<dust.length;k++){
-      var u=dust[k], q=proj(u.x,u.y,u.z);
-      if(!q) continue;
-      var tw=0.30+Math.sin(t*1.7+u.tw)*0.16;
-      g.fillStyle=rgba(IDLE, tw*Math.min(q.f*1.5,1)*0.60);
-      g.beginPath(); g.arc(q.x,q.y,u.s*q.f*1.4,0,6.283); g.fill();
-    }
-    g.globalCompositeOperation='source-over';
-
-    pushRing(); pushCore();
-    items.push({z:0, k:3});          // 核心輝光：排在球心的深度，被正面線壓住
-
-    for(var i=0;i<pk.length;i++){
-      var p=pk[i];
-      step(p,i);
-      if(p.dead){ pk[i]=spawn(); continue; }
-      var ce=Math.cos(p.e), ca=Math.cos(p.a), sa=Math.sin(p.a), se=Math.sin(p.e);
-      var q=proj(p.d*ce*ca, p.d*se, p.d*ce*sa);
-      if(!q) continue;
-      // 尾跡另一端：固定世界長度。用速度乘算的話，遠處封包會拖出
-      // 一條橫越整個畫面的長線。
-      var dt=p.d+(p.orb?0:(p.sp>0?0.26:-0.30));
-      var q2=proj(dt*ce*ca, dt*se, dt*ce*sa);
-      items.push({z:q.z, k:0, q:q, q2:q2, p:p});
-    }
-
-    items.sort(function(a,b){ return b.z-a.z; });   // 遠的先畫
-
-    for(var n=0;n<items.length;n++){
-      var it=items[n];
-      if(it.k===0){ drawPacket(it); continue; }
-      if(it.k===3){ drawGlow(); continue; }
-      // 背面比正面暗：這一行就是整顆球的體積感來源。
-      // 線刻意壓得比光暗——這顆球該讀作「發光的核心」，不是線框地球儀。
-      var back=it.z>0;
-      var col=it.k===2?CORE:IDLE;
-      // 每次判定，整圈邊界亮一下——讓「攔下了什麼」這件事看得到。
-      // 核心的經緯線壓到幾乎只剩暗示：那顆球要讀作「光」，線一旦搶讀，
-      // 整個畫面就退化成一團線球。唯一該成立的線結構是判定邊界。
-      var base=it.k===2?(back?0.03:0.115)+pulse*0.10
-                      : it.a*(back?0.42:1)+pulse*0.16;
-      g.strokeStyle=rgba(col, base);
-      g.lineWidth=1;
-      g.beginPath(); g.moveTo(it.x1,it.y1); g.lineTo(it.x2,it.y2); g.stroke();
-    }
-  }
-
-  function drawGlow(){
-    var q=proj(0,0,0); if(!q) return;
-    var ph=0.5+Math.sin(t*2.6)*0.5, r0=CR*S*q.f, rad=r0*3.0;
-
-    g.globalCompositeOperation='lighter';   // 光要相加，不是相疊
-
-    // 體積光：從核心往外散，遠比線框亮——光才是這個世界的主體
-    var lg=g.createRadialGradient(q.x,q.y,0,q.x,q.y,rad);
-    lg.addColorStop(0, rgba(CORE, 0.34+ph*0.10+pulse*0.30));
-    lg.addColorStop(0.14, rgba(CORE, 0.15+ph*0.04));
-    lg.addColorStop(0.42, rgba(CORE, 0.042));
-    lg.addColorStop(1, rgba(CORE, 0));
-    g.fillStyle=lg; g.beginPath(); g.arc(q.x,q.y,rad,0,6.283); g.fill();
-
-    // 邊緣光：球體輪廓只在邊緣亮起，這是體積的最後一道證據
-    var rg=g.createRadialGradient(q.x,q.y,r0*0.70,q.x,q.y,r0);
-    rg.addColorStop(0, rgba(CORE,0));
-    rg.addColorStop(0.88, rgba(CORE,0.13+pulse*0.09));
-    rg.addColorStop(1, rgba(CORE,0));
-    g.fillStyle=rg; g.beginPath(); g.arc(q.x,q.y,r0,0,6.283); g.fill();
-
-    // 核：一個小而極亮的點。有它，這才是恆星；沒它，只是一團霧。
-    var kr=r0*0.16*(0.9+ph*0.2);
-    var kg=g.createRadialGradient(q.x,q.y,0,q.x,q.y,kr);
-    kg.addColorStop(0,'rgba(228,240,255,'+(0.72+pulse*0.28)+')');
-    kg.addColorStop(1, rgba(CORE,0));
-    g.fillStyle=kg; g.beginPath(); g.arc(q.x,q.y,kr,0,6.283); g.fill();
-
-    g.globalCompositeOperation='source-over';
-  }
-
-  function drawPacket(it){
-    var p=it.p, q=it.q, col=p.judged?(p.v==='crit'?CRIT:p.v==='warn'?WARN:PASS):IDLE;
-    var da=Math.max(0.14, Math.min(q.f*1.05,1));      // 遠的淡＝景深
-    if(p.orb) da*=0.62;                                // 滯留待複核的不該搶戲
-    var rad=(p.sz+p.hold*2.2)*q.f;
-
-    g.globalCompositeOperation='lighter';
-
-    if(it.q2&&!p.orb){                                 // 尾跡：方向感
-      var tg=g.createLinearGradient(q.x,q.y,it.q2.x,it.q2.y);
-      tg.addColorStop(0,rgba(col,0.34*da)); tg.addColorStop(1,rgba(col,0));
-      g.strokeStyle=tg; g.lineWidth=1.2*Math.max(q.f,0.4);
-      g.beginPath(); g.moveTo(q.x,q.y); g.lineTo(it.q2.x,it.q2.y); g.stroke();
-    }
-    // 每顆都帶一圈暈：遠處讀作散焦，近處讀作發光
-    g.fillStyle=rgba(col,(q.f<0.62?0.11:0.07)*da);
-    g.beginPath(); g.arc(q.x,q.y,rad*(q.f<0.62?2.6:2.0),0,6.283); g.fill();
-
-    g.fillStyle=rgba(col,(0.62+p.hold*0.38)*da);
-    g.beginPath(); g.arc(q.x,q.y,Math.max(rad,0.5),0,6.283); g.fill();
-
-    if(p.hold>0.10){                                   // 判定瞬間：擴散環
-      g.strokeStyle=rgba(col,p.hold*0.45*da); g.lineWidth=1;
-      g.beginPath(); g.arc(q.x,q.y,rad+3+p.hold*13*q.f,0,6.283); g.stroke();
-      if(!p.orb){                                      // 核心拉出的檢查線
-        var o=proj(0,0,0);
-        if(o){ g.strokeStyle=rgba(col,p.hold*0.18*da); g.lineWidth=0.8;
-               g.beginPath(); g.moveTo(o.x,o.y); g.lineTo(q.x,q.y); g.stroke(); }
-      }
-    }
-    g.globalCompositeOperation='source-over';
-  }
-
-  function loop(){ draw(); requestAnimationFrame(loop); }
-  function settle(){ for(var i=0;i<220;i++) draw(); }
-  // 設定 canvas.width 會清空畫布。動畫模式下一幀就補回來了，但靜態模式
-  // 不會——少了這裡的重繪，關閉動畫的使用者一調整視窗，場景就永久空白。
-  addEventListener('resize', function(){ size(); init(); if(still) settle(); });
-  addEventListener('pointermove', function(e){
-    if(e.clientY>innerHeight*1.15) return;
-    tYaw=(e.clientX/innerWidth-0.5)*0.40;
-    tPit=(e.clientY/innerHeight-0.5)*-0.26;
-  }, {passive:true});
-
-  size(); init();
-  // 不播動畫時仍跑滿一段，讓畫面停在「已經運作一陣子」的狀態：
-  // 有判定過的封包、有滯留待複核的，而不是一圈空環。
-  if(still) settle(); else loop();
-})();
-</script><script>
-(function(){
-  var els=[].slice.call(document.querySelectorAll('.rv'));
-  if(!('IntersectionObserver' in window)||
-     matchMedia('(prefers-reduced-motion:reduce)').matches){
-    els.forEach(function(e){e.classList.add('in');}); return;
-  }
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  },{rootMargin:'0px 0px -12% 0px'});
-  els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i,6)*55)+'ms';
-                             io.observe(e); });
-})();
-</script><script>window.__MCPG_INDEX__={"paperclipai/paperclip":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"mims-harvard/ToolUniverse":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"Klavis-AI/klavis":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"JerBouma/FinanceToolkit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"homeassistant-ai/ha-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"aks129/HealthClawGuardrails":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"iowarp/clio-kit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"BerkKilicoglu/google-health-fitbit-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 21 天前）"},"upstash/context7":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"amruthpillai/reactive-resume":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"bytedance/UI-TARS-desktop":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"t8y2/dbx":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"MervinPraison/PraisonAI":{"v":"🟡 需人工複核","t":"setup.py 覆寫了安裝期指令"},"blazickjp/arxiv-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"vmoranv/jshookmcp":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"timescale/pg-aiguide":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"blitzdotdev/blitz-mac":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"svnscha/mcp-windbg":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"burningion/video-editing-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"Dave-London/Pare":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"codefuturist/email-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"waystation-ai/mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"WenyuChiou/research-hub":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"umbraco/Umbraco-CMS-MCP-Dev":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"davidmosiah/google-health-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"akutishevsky/nutrition-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"LaZZy0v0/tijori-finance-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"davidmosiah/samsung-health-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"JosueM1109/personal-finance-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"AlgoVaultLabs/crypto-quant-signal-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"L337-org/docker-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"PhilipAD/health-export-mcp":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"ChromeDevTools/chrome-devtools-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"HeyPuter/puter":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"DeusData/codebase-memory-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"modelscope/FunASR":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"hangwin/mcp-chrome":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"modelcontextprotocol/inspector":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"LaurieWired/GhidraMCP":{"v":"🟡 需人工複核","t":"超過 13 個月沒有更新"},"wonderwhy-er/DesktopCommanderMCP":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"BrowserMCP/mcp":{"v":"🟡 需人工複核","t":"超過 15 個月沒有更新"},"antvis/mcp-server-chart":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"revolist/revogrid":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"Ataraxy-Labs/sem":{"v":"🟡 需人工複核","t":"安裝時會自動執行腳本：postinstall"},"bytebase/dbhub":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"medplum/medplum":{"v":"🟡 需人工複核","t":"npm 套件標示的倉庫與實際來源不一致"},"jgravelle/jcodemunch-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"bergside/typeui":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"winedarksea/AutoTS":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"mbailey/voicemode":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"Intuition-Lab/personal-model":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 18 天前）"},"Vrun-design/openflowkit":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"8beeeaaat/touchdesigner-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"awkoy/notion-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"pulsemcp/mcp-servers":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"freema/mcp-design-system-extractor":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"ganapativs/microcharts":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 22 天前）"},"Kastalien-Research/thoughtbox":{"v":"🟡 需人工複核","t":"指令檔含零寬字元"},"Grey-Iris/easy-notion-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"n24q02m/better-notion-mcp":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"AION-Analytics/aion-indian-market-intelligence":{"v":"🟡 需人工複核","t":"⚠ 會讀寫本機檔案（超出宣稱用途）"},"hollaugo/tutorials":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"blantian/lanhu-design-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 9 天前）"},"Arjun0606/smolanalytics":{"v":"🟡 需人工複核","t":"指令檔要求下載並直接執行遠端腳本"},"RetrogradeLabs/lune-mcp-server":{"v":"🟡 需人工複核","t":"⚠ 會執行外部指令 / 開子行程（超出宣稱用途）"},"alexalexalex222/frontend-design-loop-mcp":{"v":"🟡 需人工複核","t":"⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）"},"SpikeyCoder/website-auditor-mcp":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 27 天前）"},"AIops-tools/Monitoring-AIops":{"v":"🟡 需人工複核","t":"倉庫非常新（建立於 16 天前）"},"modelcontextprotocol/servers":{"v":"🟢 未發現明顯風險","t":"—"},"D4Vinci/Scrapling":{"v":"🟢 未發現明顯風險","t":"—"},"ruvnet/ruflo":{"v":"🟢 未發現明顯風險","t":"—"},"tldraw/tldraw":{"v":"🟢 未發現明顯風險","t":"—"},"PostHog/posthog":{"v":"🟢 未發現明顯風險","t":"—"},"microsoft/playwright-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"github/github-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"PrefectHQ/fastmcp":{"v":"🟢 未發現明顯風險","t":"—"},"agentskills/agentskills":{"v":"🟢 未發現明顯風險","t":"—"},"JanDeDobbeleer/oh-my-posh":{"v":"🟢 未發現明顯風險","t":"—"},"Skyvern-AI/skyvern":{"v":"🟢 未發現明顯風險","t":"—"},"screenpipe/screenpipe":{"v":"🟢 未發現明顯風險","t":"—"},"googleapis/mcp-toolbox":{"v":"🟢 未發現明顯風險","t":"—"},"GLips/Figma-Context-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"coder/coder":{"v":"🟢 未發現明顯風險","t":"—"},"kubeshark/kubeshark":{"v":"🟢 未發現明顯風險","t":"—"},"BeehiveInnovations/pal-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"awslabs/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"droidrun/mobilerun":{"v":"🟢 未發現明顯風險","t":"—"},"idosal/git-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"MystenLabs/sui":{"v":"🟢 未發現明顯風險","t":"—"},"modelcontextprotocol/registry":{"v":"🟢 未發現明顯風險","t":"—"},"firecrawl/firecrawl-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"CursorTouch/Windows-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"airweave-ai/airweave":{"v":"🟢 未發現明顯風險","t":"—"},"getsentry/XcodeBuildMCP":{"v":"🟢 未發現明顯風險","t":"—"},"mobile-next/mobile-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"mock-server/mockserver-monorepo":{"v":"🟢 未發現明顯風險","t":"—"},"exa-labs/exa-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"firebase/firebase-tools":{"v":"🟢 未發現明顯風險","t":"—"},"repowise-dev/repowise":{"v":"🟢 未發現明顯風險","t":"—"},"txn2/kubefwd":{"v":"🟢 未發現明顯風險","t":"—"},"tolgee/tolgee-platform":{"v":"🟢 未發現明顯風險","t":"—"},"cloudflare/mcp-server-cloudflare":{"v":"🟢 未發現明顯風險","t":"—"},"KnockOutEZ/wigolo":{"v":"🟢 未發現明顯風險","t":"—"},"callstack/agent-device":{"v":"🟢 未發現明顯風險","t":"—"},"IvanMurzak/Unity-MCP":{"v":"🟢 未發現明顯風險","t":"—"},"basicmachines-co/basic-memory":{"v":"🟢 未發現明顯風險","t":"—"},"nowork-studio/NotFair":{"v":"🟢 未發現明顯風險","t":"—"},"codeaashu/claude-code":{"v":"🟢 未發現明顯風險","t":"—"},"giancarloerra/SocratiCode":{"v":"🟢 未發現明顯風險","t":"—"},"signerlabs/ShipSwift":{"v":"🟢 未發現明顯風險","t":"—"},"supabase/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"nteract/semiotic":{"v":"🟢 未發現明顯風險","t":"—"},"dgunning/edgartools":{"v":"🟢 未發現明顯風險","t":"—"},"apify/apify-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"tavily-ai/tavily-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"llmsresearch/paperbanana":{"v":"🟢 未發現明顯風險","t":"—"},"containers/kubernetes-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"zereight/gitlab-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"figma/mcp-server-guide":{"v":"🟢 未發現明顯風險","t":"—"},"MicrosoftDocs/mcp":{"v":"🟢 未發現明顯風險","t":"—"},"stripe/ai":{"v":"🟢 未發現明顯風險","t":"—"},"kubeshop/testkube":{"v":"🟢 未發現明顯風險","t":"—"},"LetsFG/LetsFG":{"v":"🟢 未發現明顯風險","t":"—"},"NuGet/Home":{"v":"🟢 未發現明顯風險","t":"—"},"dongdongbh/Mindwtr":{"v":"🟢 未發現明顯風險","t":"—"},"hashicorp/terraform-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"nrwl/nx-console":{"v":"🟢 未發現明顯風險","t":"—"},"mnemox-ai/tradememory-protocol":{"v":"🟢 未發現明顯風險","t":"—"},"robotmcp/ros-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"anypost/emailmd":{"v":"🟢 未發現明顯風險","t":"—"},"sceneview/sceneview":{"v":"🟢 未發現明顯風險","t":"—"},"BetterDB-inc/monitor":{"v":"🟢 未發現明顯風險","t":"—"},"codespar/mcp-dev-latam":{"v":"🟢 未發現明顯風險","t":"—"},"surendranb/google-analytics-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"jpicklyk/task-orchestrator":{"v":"🟢 未發現明顯風險","t":"—"},"nirholas/three.ws":{"v":"🟢 未發現明顯風險","t":"—"},"Tapetide-hq/nse-bse-indian-stock-market-data-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"norman-finance/norman-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"shibayu36/slack-explorer-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"JuzzyDee/audio-analyzer-rs":{"v":"🟢 未發現明顯風險","t":"—"},"counterpoint-studio/audio-file-mcp-app":{"v":"🟢 未發現明顯風險","t":"—"},"KyuRish/mcp-dashboards":{"v":"🟢 未發現明顯風險","t":"—"},"truss44/mcp-crypto-price":{"v":"🟢 未發現明顯風險","t":"—"},"debridge-finance/debridge-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"mcparmory/registry":{"v":"🟢 未發現明顯風險","t":"—"},"jtalk22/slack-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"jonradoff/lightcms":{"v":"🟢 未發現明顯風險","t":"—"},"grahammccain/chart-library-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"danishashko/yahoo-finance-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"marlinjai/email-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"coyaSONG/youtube-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"mindstone/mcp-servers":{"v":"🟢 未發現明顯風險","t":"—"},"CryptoCultCurt/appfolio-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"base76-research-lab/token-compressor":{"v":"🟢 未發現明顯風險","t":"—"},"amcharts/amcharts5-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"MidOSresearch/midos":{"v":"🟢 未發現明顯風險","t":"—"},"SidneyBissoli/medical-terminologies-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"embeddedlayers/mcp-analytics":{"v":"🟢 未發現明顯風險","t":"—"},"arcadia-finance/mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"thinkchainai/mcpbundles":{"v":"🟢 未發現明顯風險","t":"—"},"chia-health/chia-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"clueso-ai/clueso-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"friendlygeorge/docker-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"studiomeyer-io/mcp-video":{"v":"🟢 未發現明顯風險","t":"—"},"cyanheads/cdc-health-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"megberts/mcp-websitepublisher-ai":{"v":"🟢 未發現明顯風險","t":"—"},"gattjoe/ACMS":{"v":"🟢 未發現明顯風險","t":"—"},"DIALLOUBE-RESEARCH/hypernatt-terminal":{"v":"🟢 未發現明顯風險","t":"—"},"alisaitteke/docker-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"ofershap/mcp-server-docker":{"v":"🟢 未發現明顯風險","t":"—"},"webtoolbox/websitetoolbox-mcp":{"v":"🟢 未發現明顯風險","t":"—"},"NomaCMS/nomacms-mcp-server":{"v":"🟢 未發現明顯風險","t":"—"},"deployment-io/cursor-plugin":{"v":"🟢 未發現明顯風險","t":"—"},"timergy-app/timergy":{"v":"🟢 未發現明顯風險","t":"—"},"rog0x/mcp-docker-tools":{"v":"🟢 未發現明顯風險","t":"—"},"edesent/custom-website-editor":{"v":"🟢 未發現明顯風險","t":"—"},"pipeworx-io/mcp-cms":{"v":"🟢 未發現明顯風險","t":"—"},"uptimemonitoring/examples":{"v":"🟢 未發現明顯風險","t":"—"}};</script><script>
-(function(){
-  var form=document.getElementById('ask');
-  if(!form) return;
-  var input=document.getElementById('ask-q');
-  var btn=document.getElementById('ask-go');
-  var box=document.getElementById('ask-res');
-  var INDEX=window.__MCPG_INDEX__||{};
-
-  function esc(s){ return String(s==null?'':s)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
-  // 使用者手上真正有的是安裝指令或設定檔片段，不是乾淨的 owner/repo。
-  // 這裡只做「夠用的」前端正規化，用來比對本地已收錄名單；真正權威的
-  // 正規化在後端 mcp_guard/userinput.py，兩邊不一致時以後端為準。
-  function guessSlug(raw){
-    var s=(raw||'').trim();
-    var m=s.match(/github\.com[\/:]([\w.-]+\/[\w.-]+)/);
-    if(m) return m[1].replace(/\.git$/,'');
-    if(/^[\w.-]+\/[\w.-]+$/.test(s)) return s;
-    return '';
-  }
-
-  function show(html){ box.innerHTML=html; box.hidden=false; }
-
-  // 結論字串 → 樣式類別。務必比對整個 emoji，不要比對 charAt(0)：
-  // 🔴 🟡 🟢 的第一個 UTF-16 單元都是 \ud83d，用單一 code unit 判斷會讓
-  // 三種結論全部落進同一類——實際發生過，通過的專案被渲染成紅色警示。
-  function seal(v){
-    var cls = v.indexOf('🔴')===0 ? 'crit'
-            : v.indexOf('🟡')===0 ? 'warn'
-            : 'pass';
-    return '<span class="seal '+cls+'">'+esc(v.slice(2).trim())+'</span>';
-  }
-
-  function renderLocal(slug,rec){
-    show('<div class="res-head">'+seal(rec.v)+
-      '<span class="res-name">'+esc(slug)+'</span></div>'+
-      '<p class="res-why">'+esc(rec.t)+'</p>'+
-      '<p class="res-more"><a href="registry/?q='+encodeURIComponent(slug)+
-      '">看完整檢查發現與證據 →</a></p>');
-  }
-
-  function renderRemote(d){
-    var top=(d.findings||[]).filter(function(f){
-      return f.severity==='CRITICAL'||f.severity==='HIGH'; }).slice(0,5);
-    var items=top.map(function(f){
-      return '<li><b>'+esc(f.title)+'</b><br>'+esc(f.detail)+'</li>'; }).join('');
-    var notes=(d.notes||[]).map(function(n){
-      return '<li>'+esc(n)+'</li>'; }).join('');
-    show('<div class="res-head">'+seal(d.verdict)+
-      '<span class="res-name">'+esc(d.slug||d.target)+'</span></div>'+
-      '<p class="res-why">'+esc(d.why)+
-      '　<span style="color:var(--muted)">已掃描 '+(d.files_scanned||0)+
-      ' 個檔案</span></p>'+
-      (items?'<ul class="res-list">'+items+'</ul>':'')+
-      (notes?'<ul class="res-list">'+notes+'</ul>':'')+
-      '<p class="res-more">這份結果是<b>現在即時掃的</b>，未收錄在總表中。'+
-      '你可以自己複現：<code>mcp-guard '+esc(d.target)+'</code></p>');
-  }
-
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var raw=(input.value||'').trim();
-    if(!raw) return;
-
-    var slug=guessSlug(raw);
-    if(slug && INDEX[slug]){ renderLocal(slug,INDEX[slug]); return; }
-
-    btn.disabled=true;
-    show('<span class="spin"></span>正在即時稽核，約需數秒…');
-
-    fetch('/api/scan?target='+encodeURIComponent(raw))
-      .then(function(r){ return r.json().then(function(j){
-        return {status:r.status, body:j}; }); })
-      .then(function(res){
-        if(res.body && res.body.ok){ renderRemote(res.body); return; }
-        // 抓取失敗刻意不假裝成結論——沒查到事實就不給答案。
-        show('<p class="res-why res-err">'+
-          esc((res.body&&res.body.error)||'稽核失敗。')+'</p>'+
-          '<p class="res-more">你也可以在本機自己跑：'+
-          '<code>mcp-guard '+esc(raw)+'</code></p>');
-      })
-      .catch(function(){
-        show('<p class="res-why res-err">連不上稽核服務。</p>'+
-          '<p class="res-more">在本機自己跑一樣能得到結果：'+
-          '<code>mcp-guard '+esc(raw)+'</code></p>');
-      })
-      .then(function(){ btn.disabled=false; });
-  });
-})();
-</script>
+<footer><div class="wrap"><div class="foot-end"><span>最近驗證 2026-07-30 22:12</span><a href="trust/">不保證什麼與更正政策</a><a href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">原始碼 ↗</a><span>MIT</span></div></div></footer>
+<script src="home.js" defer></script>
 </body>
 </html>

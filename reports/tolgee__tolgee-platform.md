@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4053 / 364 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 4054 / 365 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-07-28 17:07 |
+| 檢查時間 | 2026-07-30 22:07 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 28 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、app.tolgee.io、cdn.jsdelivr.net、cdndev.tolg.ee、docs.tolgee.io、dummy-url.com、eslint.org、feross.org、grafana.com、hibernate.atlassian.net…`
+> 證據：`accounts.google.com、app.tolgee.io、cdn.jsdelivr.net、cdndev.tolg.ee、docs.tolgee.io、dummy-url.com、feross.org、grafana.com、hibernate.atlassian.net、host.docker.internal…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4053｜fork 364｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-07-28
+⭐ 4054｜fork 365｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-07-30
 
 ---
 

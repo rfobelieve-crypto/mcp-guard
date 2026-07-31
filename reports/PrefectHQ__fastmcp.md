@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 26892 / 2194 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 26976 / 2205 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-07-28 17:04 |
+| 檢查時間 | 2026-07-30 22:05 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 62 個外部主機
+### 🟡 中｜[權限] 會連往 59 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -42,7 +42,7 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/install/claude_code.py、fastmcp_slim/fastmcp/cli/install/gemini_cli.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（252 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（255 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26892｜fork 2194｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-28
+⭐ 26976｜fork 2205｜語言 Python｜建立 2024-11-30｜最後推送 2026-07-30
 
 ---
 

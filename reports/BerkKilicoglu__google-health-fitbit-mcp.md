@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `google-health-fitbit-mcp` |
 | 已掃描檔案 | 69 個 |
-| 檢查時間 | 2026-07-28 17:10 |
+| 檢查時間 | 2026-07-30 22:10 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 > 證據：`src/services/connection-status.ts、src/services/profile-store.ts、src/services/token-store.ts`
 
-### 🟠 高｜[身分] 倉庫非常新（建立於 21 天前）
+### 🟠 高｜[身分] 倉庫非常新（建立於 23 天前）
 
 新建立的 repo 本身不等於惡意，但若它同時被大量宣傳、或使用了熱門既有名稱，要特別留意是否為搶註／仿冒。
 
@@ -75,7 +75,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 

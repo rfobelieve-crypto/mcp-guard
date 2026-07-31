@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 88977 / 11302 |
-| 最後更新 | 2026-07-26 |
+| 星數 / Fork | ⭐ 89059 / 11334 |
+| 最後更新 | 2026-07-29 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 122 個 |
-| 檢查時間 | 2026-07-28 17:03 |
+| 已掃描檔案 | 123 個 |
+| 檢查時間 | 2026-07-30 22:04 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 5 個外部主機
+### 🟡 中｜[權限] 會連往 7 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.com、opencollective.com、proxy.example.com、registry.modelcontextprotocol.io、tidelift.com`
+> 證據：`api.example.com、feross.org、opencollective.com、proxy.example.com、registry.modelcontextprotocol.io、tidelift.com、www.patreon.com`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`src/everything/__tests__/tools.test.ts、src/everything/tools/get-env.ts、src/everything/tools/gzip-file-as-resource.ts、src/everything/transports/sse.ts、src/everything/transports/streamableHttp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（686 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（480 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,15 +81,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-26`
+> 證據：`最後推送 2026-07-29`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 88977｜fork 11302｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-26
+⭐ 89059｜fork 11334｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-07-29
 
 ---
 

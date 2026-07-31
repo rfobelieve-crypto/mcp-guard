@@ -1,28 +1,38 @@
 # MCP 安檢報告：JanDeDobbeleer/oh-my-posh
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23177 / 2766 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 23184 / 2767 |
+| 最後更新 | 2026-07-30 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-07-28 17:05 |
+| 檢查時間 | 2026-07-30 22:05 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 1　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 52 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「桌面／終端控制」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`src/cli/dsc/shell.go、src/cli/dsc/shell_test.go`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 37 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、api.brewfather.app、api.carbonintensity.org.uk、api.cf.eu10.hana.ondemand.com、api.example.com、api.ipify.org、api.openweathermap.org、bazel.build、cdn.nba.com、cdn.ohmyposh.dev…`
+> 證據：`aka.ms、api.brewfather.app、api.carbonintensity.org.uk、api.cf.eu10.hana.ondemand.com、api.example.com、api.ipify.org、bazel.build、cdn.ohmyposh.dev、cmake.org、containers.dev…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -54,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -64,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23177｜fork 2766｜語言 Go｜建立 2019-03-13｜最後推送 2026-07-28
+⭐ 23184｜fork 2767｜語言 Go｜建立 2019-03-13｜最後推送 2026-07-30
 
 ---
 

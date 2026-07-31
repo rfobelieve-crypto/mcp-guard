@@ -21,7 +21,7 @@
 <link rel="preload" href="../display.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="../">MCP 安檢<span>mcp-guard</span></a><menu><li><a href="../pick/">該裝哪個</a></li><li><a href="../registry/">稽核總表</a></li><li><a href="../method/">怎麼查的</a></li><li><a href="../trust/" aria-current="page">為什麼可信</a></li></menu><a class="gh" href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">GitHub ↗</a></div></header>
+<header class="nav"><div class="wrap"><a class="brand" href="../">MCP 安檢<span>mcp-guard</span></a><menu><li><a href="../pick/">該裝哪個</a></li><li><a href="../registry/">稽核總表</a></li><li><a href="../method/">怎麼查的</a></li><li><a href="../trust/" aria-current="page">為什麼可信</a></li></menu><a class="gh" href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">GitHub ↗</a><span class="auth" id="auth" data-signin="登入"></span></div></header>
 
 <section class="phead">
   <div class="wrap">
@@ -91,29 +91,32 @@
       <li>遠端型（hosted）MCP 的真實行為在對方伺服器上，原始碼不代表線上版本。</li>
       <li>安裝任何 MCP，都請只給<b>最小權限、可隨時撤銷</b>的憑證。</li>
     </ul>
-    <p class="lede rv" style="margin-top:30px">
-      <b>若你是被列出的專案維護者且認為結果有誤，請開 issue</b>。
-      經確認的誤報會立即修正報告、標註更正紀錄，
+    <p class="lede rv correction-cta">
+      <b>若你是被列出的專案維護者且認為結果有誤</b>——
+      <button class="linkish" data-submit="correction">回報誤判</button>
+      或直接開 issue。經確認的誤報會立即修正報告、標註更正紀錄，
       並把該案例加進回歸測試確保不再重犯。</p>
   </div>
 </section>
 
-<footer><div class="wrap"><div class="foot-end"><span>最近驗證 2026-07-28 17:14</span><a href="../trust/">不保證什麼與更正政策</a><a href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">原始碼 ↗</a><span>MIT</span></div></div></footer>
-<script>
-(function(){
-  var els=[].slice.call(document.querySelectorAll('.rv'));
-  if(!('IntersectionObserver' in window)||
-     matchMedia('(prefers-reduced-motion:reduce)').matches){
-    els.forEach(function(e){e.classList.add('in');}); return;
-  }
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  },{rootMargin:'0px 0px -12% 0px'});
-  els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i,6)*55)+'ms';
-                             io.observe(e); });
-})();
-</script>
+<dialog id="subDlg">
+  <h3 id="subTitle">提交掃描請求</h3>
+  <p class="dlg-hint" id="subHint"></p>
+  <label class="dlg-l">GitHub 專案
+    <input id="subRepo" placeholder="owner/repo 或 GitHub 網址"
+           autocomplete="off" spellcheck="false"></label>
+  <label class="dlg-l">補充說明（選填）
+    <textarea id="subNote" rows="3"
+      placeholder="例如：社群瘋傳但查不到來源、權限看起來過大…"></textarea></label>
+  <div class="dlg-act">
+    <button class="chip" id="subCancel">取消</button>
+    <button class="chip go" id="subGo">送出</button>
+  </div>
+  <p class="dlg-msg" id="subMsg" aria-live="polite"></p>
+</dialog>
+
+
+<footer><div class="wrap"><div class="foot-end"><span>最近驗證 2026-07-30 22:12</span><a href="../trust/">不保證什麼與更正政策</a><a href="https://github.com/rfobelieve-crypto/mcp-guard" target="_blank" rel="noopener">原始碼 ↗</a><span>MIT</span></div></div></footer>
+<script src="../trust.js" defer></script>
 </body>
 </html>

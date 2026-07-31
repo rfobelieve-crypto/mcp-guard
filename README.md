@@ -138,6 +138,22 @@ python batch.py 清單.txt      # 指定名單，一行一個 owner/repo
 在指令檔裡是正常寫法（幾乎每份 skill 都會寫），只有「即使身為指令檔也解釋
 不通」的手法才計入。
 
+## 網站
+
+總表網站由 `python site.py` 產出(`site/`,純靜態、零框架),部署在 Vercel。
+
+- **首屏**:稽核機器人收集湧入的封包、逐一掃描、依真實比例分流——
+  產品隱喻本身。視覺決策記錄在 [DESIGN.md](DESIGN.md)。
+- **登入**(選配):GitHub OAuth,零 scope、零第三方套件、無資料庫。
+  session 是 HMAC 簽名的 cookie。
+- **收藏**:存在使用者自己的瀏覽器(localStorage),不上傳。
+- **提交掃描請求／回報誤判**:登入後可從網站送出,會開成公開的
+  GitHub issue——回報管道不私藏。
+- **安全 headers**:CSP `script-src 'self'`(全站無行內 script)、
+  HSTS、Permissions-Policy。詳見 [vercel.json](vercel.json)。
+
+登入與提交功能的部署設定(OAuth App、環境變數):[docs/DEPLOY.md](docs/DEPLOY.md)。
+
 ## 紅隊測試
 
 偵測器最危險的失敗是**靜默漏報**，因此樣本測試常駐：

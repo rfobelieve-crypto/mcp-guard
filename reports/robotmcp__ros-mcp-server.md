@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `robotmcp/ros-mcp-server` |
 | 專案說明 | Connect AI models like Claude & GPT with robots using MCP and ROS. |
-| 星數 / Fork | ⭐ 1361 / 202 |
-| 最後更新 | 2026-07-27 |
+| 星數 / Fork | ⭐ 1370 / 202 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 136 個 |
-| 檢查時間 | 2026-07-28 17:10 |
+| 檢查時間 | 2026-07-30 22:09 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 > 證據：`ros_mcp/utils/network_utils.py、tests/installation/conftest.py、tests/integration/conftest.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -76,11 +76,11 @@
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1361｜fork 202｜語言 Python｜建立 2025-04-11｜最後推送 2026-07-27
+⭐ 1370｜fork 202｜語言 Python｜建立 2025-04-11｜最後推送 2026-07-30
 
 ---
 

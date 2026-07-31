@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `CryptoCultCurt/appfolio-mcp-server` |
 | 專案說明 | MCP (Model Context Protocol) Server for AI Agents to access the Appfolio Reporti |
-| 星數 / Fork | ⭐ 9 / 4 |
+| 星數 / Fork | ⭐ 9 / 5 |
 | 最後更新 | 2026-01-12 |
 | 授權 | ISC License |
 | npm 套件 | `@fluegeldao/appfolio-mcp-server` |
 | 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-07-28 17:10 |
+| 檢查時間 | 2026-07-30 22:10 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9｜fork 4｜語言 TypeScript｜建立 2025-04-16｜最後推送 2026-01-12
+⭐ 9｜fork 5｜語言 TypeScript｜建立 2025-04-16｜最後推送 2026-01-12
 
 ---
 

@@ -1,26 +1,49 @@
 # MCP 安檢報告：dongdongbh/Mindwtr
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1534 / 89 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 1568 / 89 |
+| 最後更新 | 2026-07-30 |
 | 授權 | GNU Affero General Public License v3.0 |
-| 已掃描檔案 | 0 個 |
-| 檢查時間 | 2026-07-28 17:09 |
-
-> ⚠️ 倉庫過大（約 1679 MB），已略過原始碼掃描：權限、投毒、供應鏈這幾項因此不完整，請自行檢視原始碼。
+| npm 套件 | `mindwtr-monorepo`（registry 查無） |
+| 已掃描檔案 | 408 個 |
+| 檢查時間 | 2026-07-30 22:09 |
 
 ## 風險摘要
 
-🔵 低 1　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
-### 🔵 低｜[維護] 未處理 issue 偏多（68 則）
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/workflows/ci.yml、.github/workflows/publish-mcp.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml`
+
+### 🟡 中｜[權限] 會連往 32 個外部主機
+
+確認這些連線是功能必需的，而不是把你的資料送到第三方。
+
+> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、azure.archive.ubuntu.com、calendar.example、cloud.example、cloud.example.com…`
+
+### 🔵 低｜[供應鏈] 有 63 個依賴未鎖定版本
+
+依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
+
+> 證據：`@babel/runtime@^7.28.4、@radix-ui/react-compose-refs@^1.1.2、@radix-ui/react-slot@^1.2.4、@react-native/assets-registry@^0.82.1、@react-native/normalize-colors@^0.82.1、@react-native/virtualized-lists@^0.82.1…`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml、.github/workflows/update-aur-beta.yml`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -28,19 +51,29 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
+### ⚪ 資訊｜[供應鏈] npm 上查無此套件（mindwtr-monorepo）
+
+原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
+
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 6 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：一般用途（未能明確判定）
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+
+### ⚪ 資訊｜[權限] 需要的憑證類設定
+
+安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
+
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -50,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1534｜fork 89｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-07-28
+⭐ 1568｜fork 89｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-07-30
 
 ---
 

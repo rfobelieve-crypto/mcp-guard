@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `medplum/medplum` |
 | 專案說明 | Medplum is a healthcare platform that helps you quickly develop high-quality com |
-| 星數 / Fork | ⭐ 2552 / 867 |
-| 最後更新 | 2026-07-28 |
+| 星數 / Fork | ⭐ 2566 / 871 |
+| 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `root` |
 | 已掃描檔案 | 441 個 |
-| 檢查時間 | 2026-07-28 17:08 |
+| 檢查時間 | 2026-07-30 22:08 |
 
 ## 風險摘要
 
@@ -43,15 +43,15 @@
 
 > 證據：`.github/workflows/publish.yml、examples/medplum-eligibility-demo/src/pages/SearchPage.tsx、examples/medplum-eligibility-demo/src/scripts/deploy-bots.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（611 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（605 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`packages/docs/src/pages/solutions/agent.md（Agent 指令（AGENT.md））`
+> 證據：`.claude/skills/comment-compactor/SKILL.md（Agent Skill 指令（SKILL.md））、packages/docs/src/pages/solutions/agent.md（Agent 指令（AGENT.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
@@ -71,7 +71,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-28`
+> 證據：`最後推送 2026-07-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2552｜fork 867｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-07-28
+⭐ 2566｜fork 871｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-07-30
 
 ---
 
