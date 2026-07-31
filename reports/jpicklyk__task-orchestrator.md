@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
-| 星數 / Fork | ⭐ 197 / 22 |
-| 最後更新 | 2026-07-27 |
+| 星數 / Fork | ⭐ 198 / 22 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
-| 已掃描檔案 | 111 個 |
-| 檢查時間 | 2026-07-30 22:11 |
+| 已掃描檔案 | 125 個 |
+| 檢查時間 | 2026-07-31 22:10 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-ack.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-backstop.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-trigger.test.mjs、claude-plugins/task-orchestrator/hooks/tests/session-start.test.mjs`
+> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-ack.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-backstop.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-trigger.test.mjs`
 
 ### 🔵 低｜[權限] 會連往 1 個外部主機
 
@@ -36,7 +36,7 @@
 
 > 證據：`static.modelcontextprotocol.io`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 30 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 31 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -56,11 +56,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 197｜fork 22｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-07-27
+⭐ 198｜fork 22｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-07-31
 
 ---
 

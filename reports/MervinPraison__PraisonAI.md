@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 8524 / 1340 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 8530 / 1339 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
-| 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-07-30 22:06 |
+| 已掃描檔案 | 433 個 |
+| 檢查時間 | 2026-07-31 22:05 |
 
 ## 風險摘要
 
@@ -70,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/skills/pdf-processing/SKILL.md（Agent Skill 指令（SKILL.md））、src/praisonai-agents/.cursorrules（Cursor 規則）、src/praisonai-agents/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/praisonai-agents/tests/.windsurfrules（Windsurf 規則）、src/praisonai-rust/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 24 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8524｜fork 1340｜語言 Python｜建立 2024-03-19｜最後推送 2026-07-30
+⭐ 8530｜fork 1339｜語言 Python｜建立 2024-03-19｜最後推送 2026-07-31
 
 ---
 

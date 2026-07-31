@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `8beeeaaat/touchdesigner-mcp` |
 | 專案說明 | MCP server for TouchDesigner |
-| 星數 / Fork | ⭐ 453 / 48 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 457 / 48 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `touchdesigner-mcp-server` |
-| 已掃描檔案 | 151 個 |
-| 檢查時間 | 2026-07-30 22:11 |
+| 已掃描檔案 | 152 個 |
+| 檢查時間 | 2026-07-31 22:10 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`td/genHandlers.js、td/import_modules.py、tests/unit/genHandlers.test.ts`
+> 證據：`td/genHandlers.js、td/import_modules.py、tests/unit/genHandlers.test.ts、tests/unit/toolListingsSync.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 453｜fork 48｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-07-30
+⭐ 457｜fork 48｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-07-31
 
 ---
 

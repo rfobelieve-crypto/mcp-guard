@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 75207 / 14002 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 75277 / 14012 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 485 個 |
-| 檢查時間 | 2026-07-30 22:05 |
+| 已掃描檔案 | 486 個 |
+| 檢查時間 | 2026-07-31 22:05 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-security.mjs、.github/scripts/tests/check-pr-security.test.mjs、cli/src/__tests__/company-import-export-e2e.test.ts`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-security.mjs、.github/scripts/tests/check-pr-security.test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -69,13 +69,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-dedup-search.mjs、.github/scripts/check-pr-dependencies.mjs、.github/scripts/check-pr-linked-issue.mjs`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-dedup-search.mjs、.github/scripts/check-pr-dependencies.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5029 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（4973 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 69 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 71 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 75207｜fork 14002｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-07-30
+⭐ 75277｜fork 14012｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-07-31
 
 ---
 

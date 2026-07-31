@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 48010 / 3257 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 48278 / 3273 |
+| 最後更新 | 2026-07-31 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 239 個 |
-| 檢查時間 | 2026-07-30 22:05 |
+| 已掃描檔案 | 241 個 |
+| 檢查時間 | 2026-07-31 22:05 |
 
 ## 風險摘要
 
@@ -35,11 +35,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟡 中｜[權限] 會連往 29 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、b.com、chromeuxreport.googleapis.com、developer.chrome.com、developers.chrome.com、docs.github.com、eslint.org、feross.org、ffmpeg.org、mobile.web.dev…`
+> 證據：`127.0.0.1.example.com、a.com、app.dev.localhost、b.com、chromeuxreport.googleapis.com、developer.chrome.com、developers.chrome.com、docs.github.com、eslint.org、feross.org…`
 
 ### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/test.mjs、scripts/update-lighthouse.ts、scripts/verify-npm-package.mjs、scripts/verify-server-json-version.ts、src/bin/check-latest-version.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（112 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（105 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 48010｜fork 3257｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-07-30
+⭐ 48278｜fork 3273｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-07-31
 
 ---
 

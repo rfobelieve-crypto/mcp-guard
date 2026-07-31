@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 6538 / 796 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 6543 / 796 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
-| 已掃描檔案 | 110 個 |
-| 檢查時間 | 2026-07-30 22:04 |
+| 已掃描檔案 | 111 個 |
+| 檢查時間 | 2026-07-31 22:04 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/windows_mcp/filesystem/service.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py、tests/test_analytics.py`
+> 證據：`src/windows_mcp/filesystem/service.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py、src/windows_mcp/uia/comtypes_cache.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -74,7 +74,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -84,7 +84,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6538｜fork 796｜語言 Python｜建立 2025-05-13｜最後推送 2026-07-30
+⭐ 6543｜fork 796｜語言 Python｜建立 2025-05-13｜最後推送 2026-07-31
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 78 / 2 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 91 / 2 |
+| 最後更新 | 2026-07-31 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-07-30 22:10 |
+| 檢查時間 | 2026-07-31 22:09 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 > 證據：`apps/docs/src/components/brand/shared.tsx`
 
-### 🟠 高｜[身分] 倉庫非常新（建立於 24 天前）
+### 🟠 高｜[身分] 倉庫非常新（建立於 25 天前）
 
 新建立的 repo 本身不等於惡意，但若它同時被大量宣傳、或使用了熱門既有名稱，要特別留意是否為搶註／仿冒。
 
@@ -61,7 +61,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 418 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 408 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-07-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 78｜fork 2｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-07-30
+⭐ 91｜fork 2｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-07-31
 
 ---
 
