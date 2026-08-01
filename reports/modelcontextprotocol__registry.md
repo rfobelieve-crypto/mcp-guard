@@ -10,7 +10,7 @@
 | 最後更新 | 2026-07-29 |
 | 授權 | Other |
 | 已掃描檔案 | 215 個 |
-| 檢查時間 | 2026-07-31 22:04 |
+| 檢查時間 | 2026-08-01 21:54 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`Registry.Example.COM、accounts.google.com、acme-v02.api.letsencrypt.org、airtable.com、api-a.example.com、api-b.example.com、api-c.example.com、api.allversions.com、api.deleted.com、api.example.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（121 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -48,7 +48,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 

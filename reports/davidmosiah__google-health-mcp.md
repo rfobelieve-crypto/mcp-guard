@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
-| 星數 / Fork | ⭐ 34 / 7 |
-| 最後更新 | 2026-07-30 |
+| 星數 / Fork | ⭐ 35 / 7 |
+| 最後更新 | 2026-08-01 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 101 個 |
-| 檢查時間 | 2026-07-31 22:09 |
+| 已掃描檔案 | 104 個 |
+| 檢查時間 | 2026-08-01 21:59 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`src/services/connection-status.ts、src/services/profile-store.ts、src/services/token-store.ts`
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、api.example、console.cloud.google.com、developers.fitbit.com、developers.google.com、feross.org、glama.ai、health.googleapis.com、oauth2.googleapis.com、opencollective.com…`
+> 證據：`accounts.google.com、api.example、console.cloud.google.com、developers.fitbit.com、developers.google.com、example.invalid、feross.org、glama.ai、health.googleapis.com、oauth2.googleapis.com…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-08-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 34｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-07-30
+⭐ 35｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-08-01
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 5 / 4 |
-| 最後更新 | 2026-07-31 |
+| 最後更新 | 2026-08-01 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-07-31 22:09 |
+| 檢查時間 | 2026-08-01 21:59 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/monitoring/check-stripe-webhook-events.mjs、ops/monitoring/llm-spend-monitor.py`
+> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/cron/candle-basis-shadow-report.sh、ops/monitoring/check-stripe-webhook-events.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py、ops/monitoring/book-liveness-canary.py、ops/monitoring/directional-label-freshness.py、ops/monitoring/funnel-leak-detector.py、ops/monitoring/llm-spend-monitor.py`
+> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py、ops/monitoring/book-liveness-canary.py、ops/monitoring/directional-label-freshness.py、ops/monitoring/funnel-leak-detector.py`
 
 ### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
 
@@ -61,7 +61,7 @@
 
 > 證據：`.claude/commands/geo-decide.md（AI 客戶端設定目錄下的指令檔）、landing/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-31`
+> 證據：`最後推送 2026-08-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-07-31
+⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-08-01
 
 ---
 
