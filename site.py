@@ -184,12 +184,47 @@ h1,h2,h3{font-family:var(--display)}
    就該是「告訴我你要裝什麼」。收錄的 178 個秒開，其餘即時掃描。
    類別名用 .probe 而非 .ask——後者已經是「提交掃描請求」在用的。 */
 .probe{margin-top:36px;max-width:620px}
-.probe-row{display:flex;gap:10px;flex-wrap:wrap}
-.probe input{flex:1;min-width:240px;font:inherit;font-size:15px;
+/* align-items 必須指定:textarea 會隨設定檔長高,flex 預設的 stretch
+   會把送出鈕拉成一整條。 */
+.probe-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+/* 兩種都要顧：HTML 出貨的是 input（無 JS 時 Enter 才送得出去），
+   JS 載入後換成 textarea（設定檔是多行的，要看得見自己貼了什麼）。
+   textarea 預設一行高、有內容才長高，所以單筆查詢的體感一模一樣。 */
+.probe input,.probe textarea{flex:1;min-width:240px;font:inherit;font-size:15px;
   padding:15px 18px;border-radius:var(--r);border:1px solid var(--line);
-  background:var(--surface);color:var(--ink);font-family:var(--mono)}
-.probe input::placeholder{color:var(--muted);font-family:var(--sans)}
-.probe input:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+  background:var(--surface);color:var(--ink);font-family:var(--mono);
+  line-height:1.5}
+.probe textarea{resize:none;overflow:hidden;max-height:260px}
+.probe input::placeholder,.probe textarea::placeholder{
+  color:var(--muted);font-family:var(--sans)}
+.probe input:focus-visible,.probe textarea:focus-visible{
+  outline:2px solid var(--seal);outline-offset:2px}
+
+/* ── 設定檔健檢 ─────────────────────────────────────────
+   一次盤點使用者已經裝的所有 MCP。結論那句話要能單獨成立：
+   「你正在跑 9 個，其中 3 個要求超出宣稱用途的權限。」 */
+.inv-sum{margin:0 0 4px;font-size:15px;line-height:1.7;color:var(--ink)}
+.inv-sum b{font-weight:700}
+.inv-sum .warn-n{color:var(--warn)}
+.inv-tally{margin:10px 0 0;display:flex;gap:18px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;color:var(--muted)}
+.inv-priv{margin:12px 0 0;font-size:12px;color:var(--muted);line-height:1.6;
+  border-left:2px solid var(--line);padding-left:12px}
+.inv-list{margin:16px 0 0;padding:0;list-style:none;
+  border-top:1px solid var(--line)}
+.inv-item{display:grid;grid-template-columns:auto 1fr auto;gap:12px;
+  align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.inv-item:last-child{border-bottom:0}
+.inv-key{font-family:var(--mono);font-size:13px;color:var(--ink);
+  word-break:break-all}
+.inv-pkg{display:block;font-size:11.5px;color:var(--muted);margin-top:3px;
+  word-break:break-all}
+.inv-flag{font-size:11.5px;color:var(--warn);white-space:nowrap}
+.inv-wait{font-size:12px;color:var(--muted);white-space:nowrap}
+@media (max-width:620px){
+  .inv-item{grid-template-columns:auto 1fr;row-gap:6px}
+  .inv-flag,.inv-wait{grid-column:2}
+}
 .probe button{font:inherit;font-size:15px;font-weight:600;padding:15px 26px;
   border-radius:var(--r);border:1px solid var(--ink);background:var(--ink);
   color:var(--bg);cursor:pointer;transition:.18s;white-space:nowrap}
@@ -759,7 +794,20 @@ PROBE_JS = """
 (function(){
   var form=document.getElementById('probe');
   if(!form) return;
+  // 漸進增強的第二步:HTML 出貨的是 <input>(沒有 JS 時 Enter 仍能送出
+  // 到 /registry/?q=)。有 JS 才換成 textarea,因為設定檔是多行的,
+  // 貼進單行輸入框看不到自己貼了什麼。
   var input=document.getElementById('probe-q');
+  if(input&&input.tagName==='INPUT'){
+    var ta=document.createElement('textarea');
+    ta.id=input.id; ta.name=input.name; ta.rows=1;
+    ta.placeholder=input.placeholder; ta.spellcheck=false;
+    ta.className=input.className;
+    var desc=input.getAttribute('aria-describedby');
+    if(desc) ta.setAttribute('aria-describedby',desc);
+    input.parentNode.replaceChild(ta,input);
+    input=ta;
+  }
   var btn=document.getElementById('probe-go');
   var box=document.getElementById('probe-res');
   var INDEX=window.__MCPG_INDEX__||{};
@@ -767,6 +815,22 @@ PROBE_JS = """
   function esc(s){ return String(s==null?'':s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  // textarea 隨內容長高:單筆查詢時看起來就是一行輸入框,
+  // 貼進設定檔才展開——使用者要看得見自己貼了什麼。
+  function autogrow(){
+    input.style.height='auto';
+    input.style.height=Math.min(input.scrollHeight,260)+'px';
+  }
+  input.addEventListener('input',autogrow);
+  // 單行時 Enter 直接送出(維持輸入框的直覺);多行內容按 Enter 是換行,
+  // 那時候用按鈕送出。Shift+Enter 一律換行。
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'&&!e.shiftKey&&input.value.indexOf('\\n')<0){
+      e.preventDefault();
+      form.dispatchEvent(new Event('submit',{cancelable:true}));
+    }
+  });
 
   // 使用者手上真正有的是安裝指令或設定檔片段，不是乾淨的 owner/repo。
   // 這裡只做「夠用的」前端比對；權威的正規化在 mcp_guard/userinput.py，
@@ -817,10 +881,164 @@ PROBE_JS = """
       '你可以自己複現：<code>mcp-guard '+esc(d.target)+'</code></p>');
   }
 
+  // ── 設定檔健檢 ──────────────────────────────────────────────
+  // 解析一律在瀏覽器完成,原始設定檔一個位元組都不送出去。
+  // 理由不是潔癖:Claude Desktop 設定檔的 env 區塊裡放的就是使用者的
+  // GitHub token、Slack token、資料庫連線字串。一個教人檢查供應鏈風險
+  // 的網站,自己變成金鑰外洩管道會非常諷刺。只有萃取出來的套件名會離開
+  // 這台裝置。
+  var RUNNERS={npx:1,uvx:1,pnpx:1,bunx:1,npm:1,pnpm:1,yarn:1,bun:1,
+               pip:1,pip3:1,pipx:1,uv:1,dlx:1,exec:1,install:1,add:1,run:1};
+  var FLAGS={'-y':1,'--yes':1,'-q':1,'--quiet':1,'--silent':1,'-f':1,
+             '--force':1,'-g':1,'--global':1,'-p':1,'--package':1};
+
+  function stripVer(s){
+    if(s.charAt(0)==='@'){
+      var i=s.indexOf('/');
+      if(i<0) return s;
+      return s.slice(0,i+1)+s.slice(i+1).split('@')[0];
+    }
+    return s.split('@')[0];
+  }
+  function fromArgs(args){
+    for(var i=0;i<args.length;i++){
+      var t=String(args[i]||'').trim();
+      if(!t||FLAGS[t]||RUNNERS[t.toLowerCase()]) continue;
+      if(t.charAt(0)==='-') continue;
+      if(/^[\\/.~]/.test(t)||/^[A-Za-z]:[\\\\/]/.test(t)) continue;  // 路徑參數
+      if(t.indexOf('=')>-1&&t.charAt(0)!=='@') continue;              // 環境變數
+      return stripVer(t);
+    }
+    return '';
+  }
+  // 回傳 [{key:設定檔裡的名稱, pkg:套件名}],找不到就跳過那一項。
+  function parseConfig(text){
+    var obj;
+    try{ obj=JSON.parse(text); }catch(err){ return null; }
+    var out=[];
+    function fromServer(key,s){
+      if(!s||typeof s!=='object') return;
+      var pkg=Array.isArray(s.args)?fromArgs(s.args):'';
+      if(!pkg&&typeof s.command==='string'&&!RUNNERS[s.command.toLowerCase()])
+        pkg=stripVer(s.command);
+      if(pkg) out.push({key:key,pkg:pkg});
+    }
+    function walk(o){
+      if(!o||typeof o!=='object') return;
+      var holder=o.mcpServers||o.servers||o.mcp;
+      if(holder&&typeof holder==='object'){
+        Object.keys(holder).forEach(function(k){ fromServer(k,holder[k]); });
+        return;
+      }
+      if(o.command||o.args){ fromServer(o.name||'(未命名)',o); return; }
+      Object.keys(o).forEach(function(k){ walk(o[k]); });
+    }
+    walk(obj);
+    return out;
+  }
+
+  function tally(rows){
+    var t={crit:0,warn:0,pass:0,over:0,done:0};
+    rows.forEach(function(r){
+      if(!r.verdict) return;
+      t.done++;
+      if(r.verdict.indexOf('🔴')===0) t.crit++;
+      else if(r.verdict.indexOf('🟡')===0) t.warn++;
+      else t.pass++;
+      if(r.over) t.over++;
+    });
+    return t;
+  }
+
+  function renderInventory(rows){
+    var t=tally(rows);
+    var head='<p class="inv-sum">你正在跑 <b>'+rows.length+'</b> 個 MCP。'+
+      (t.done<rows.length
+        ? '<span class="inv-wait">（已檢查 '+t.done+'/'+rows.length+'…）</span>'
+        : (t.over
+            ? '其中 <b class="warn-n">'+t.over+' 個要求了超出宣稱用途的權限</b>。'
+            : '沒有任何一個要求超出宣稱用途的權限。'))+'</p>';
+    var sum='<p class="inv-tally">'+
+      '<span>🔴 '+t.crit+' 不要安裝</span>'+
+      '<span>🟡 '+t.warn+' 需複核</span>'+
+      '<span>🟢 '+t.pass+' 未發現明顯風險</span></p>';
+    var items=rows.map(function(r){
+      var right = r.verdict
+        ? (r.over?'<span class="inv-flag">⚠ 超出宣稱用途</span>':'')
+        : (r.err?'<span class="inv-wait">'+esc(r.err)+'</span>'
+                :'<span class="inv-wait"><span class="spin"></span>檢查中…</span>');
+      var badge=r.verdict?seal(r.verdict):'<span class="seal">—</span>';
+      var name=r.slug
+        ? '<a href="registry/?q='+encodeURIComponent(r.slug)+'">'+esc(r.slug)+'</a>'
+        : esc(r.pkg);
+      return '<li class="inv-item">'+badge+
+        '<span class="inv-key">'+name+
+        '<span class="inv-pkg">設定檔名稱：'+esc(r.key)+'　套件：'+esc(r.pkg)+
+        '</span></span>'+right+'</li>';
+    }).join('');
+    show(head+sum+
+      '<p class="inv-priv">設定檔在你的瀏覽器裡解析，<b>原始內容沒有送出</b>——'+
+      '裡面的 env 金鑰不會離開這台裝置，只有套件名被拿去查。</p>'+
+      '<ul class="inv-list">'+items+'</ul>');
+  }
+
+  function runInventory(list){
+    var rows=list.map(function(x){
+      return {key:x.key,pkg:x.pkg,verdict:'',over:false,slug:'',err:''};
+    });
+    renderInventory(rows);
+    btn.disabled=true;
+
+    var queue=rows.slice(), active=0, MAX=3;
+    function next(){
+      if(!queue.length&&active===0){ btn.disabled=false; return; }
+      while(active<MAX&&queue.length){
+        (function(r){
+          active++;
+          // 已收錄的直接命中索引,不打 API。索引是以 owner/repo 為鍵,
+          // 而設定檔給的是 npm 套件名,所以目前多半要走即時掃描——
+          // 若日後 data.json 補上 npm 名,這裡多數會變成秒開。
+          var hit=INDEX[r.pkg];
+          if(hit){
+            r.verdict=hit.v; r.over=!!hit.x; r.slug=r.pkg;
+            active--; renderInventory(rows); next(); return;
+          }
+          fetch('/api/scan?target='+encodeURIComponent(r.pkg),
+                {credentials:'same-origin'})
+            .then(function(res){ return res.json(); })
+            .then(function(d){
+              if(d&&d.ok){
+                r.verdict=d.verdict; r.slug=d.slug||'';
+                r.over=(d.findings||[]).some(function(f){
+                  return f.title.indexOf('超出宣稱用途')>-1; });
+              }else{
+                r.err='查不動';
+              }
+            })
+            .catch(function(){ r.err='連線失敗'; })
+            .then(function(){ active--; renderInventory(rows); next(); });
+        })(queue.shift());
+      }
+    }
+    next();
+  }
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var raw=(input.value||'').trim();
     if(!raw) return;
+
+    // 看起來像設定檔就走健檢
+    if(raw.charAt(0)==='{'||raw.charAt(0)==='['){
+      var list=parseConfig(raw);
+      if(list&&list.length){ runInventory(list); return; }
+      if(list&&!list.length){
+        show('<p class="res-why res-err">這份設定檔裡找不到任何 MCP server。</p>'+
+             '<p class="res-more">預期會有 <code>mcpServers</code> 區塊。</p>');
+        return;
+      }
+      // JSON 解析失敗 → 落回單筆流程,交給後端的正規化去處理
+    }
 
     var slug=guessSlug(raw);
     if(slug && INDEX[slug]){ renderLocal(slug,INDEX[slug]); return; }
@@ -1270,10 +1488,21 @@ def page(slug: str, title: str, desc: str, body: str, when: str,
 def home_index(projects: list) -> str:
     """首頁用的極簡索引：已收錄的專案要能**秒開**，不必等 API。
 
-    只放比對與摘要需要的兩個欄位。完整資料在 /registry/，這裡放全部
-    等於把總表那 1MB 搬到首頁——那正是總表現在最大的效能問題。
+    欄位刻意壓到最少——完整資料在 /registry/，這裡放全部等於把整份總表
+    搬到首頁：
+        v  結論字串
+        t  最高風險的一句話
+        x  有沒有「超出宣稱用途」的發現（設定檔健檢的重點指標）
+
+    x 在建置期從 findings 算出來，不需要動 batch.py：那是稽核引擎那一側，
+    而這裡只是把既有結果換個方式呈現。
     """
-    idx = {p["slug"]: {"v": p["verdict"], "t": p["top"]} for p in projects}
+    idx = {}
+    for p in projects:
+        rec = {"v": p["verdict"], "t": p["top"]}
+        if any("超出宣稱用途" in f["title"] for f in p.get("findings", [])):
+            rec["x"] = 1
+        idx[p["slug"]] = rec
     return json.dumps(idx, ensure_ascii=False, separators=(",", ":"))
 
 
@@ -1293,16 +1522,20 @@ def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
     <form class="probe rv" id="probe" autocomplete="off"
           action="registry/" method="get">
       <div class="probe-row">
-        <label for="probe-q" class="sr-only">要稽核的 MCP</label>
+        <label for="probe-q" class="sr-only">要稽核的 MCP，或整份設定檔</label>
+        <!-- 出貨的是 input 而不是 textarea：textarea 的 Enter 是換行，
+             沒有 JS 的話就送不出去。PROBE_JS 載入後會就地換成可長高的
+             textarea，讓使用者貼得下整份設定檔——沒有 JS 時則退回單行
+             輸入，Enter 依然原生送出到 /registry/?q=。 -->
         <input id="probe-q" name="q" type="text" spellcheck="false"
-               placeholder="貼上你要裝的 MCP：安裝指令、網址或 owner/repo"
+               placeholder="貼上你要裝的 MCP，或整份設定檔做一次總體檢"
                aria-describedby="probe-hint">
         <button id="probe-go" type="submit">安檢</button>
       </div>
       <p class="probe-hint" id="probe-hint">
         直接貼你手上的東西就好——<code>npx -y @scope/pkg</code>、
         GitHub 網址、<code>owner/repo</code>，
-        或整段 <code>claude_desktop_config.json</code> 都能認得。
+        或整份 <code>claude_desktop_config.json</code>（會逐一盤點裡面所有 MCP）。
         <b>已收錄的 {len(projects)} 個秒開；沒收錄的當場即時掃。</b>
       </p>
       <div class="res" id="probe-res" hidden role="status" aria-live="polite"></div>
