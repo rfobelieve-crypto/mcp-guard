@@ -244,7 +244,15 @@ a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
    再加一條 3px 色邊是冗餘，而且那正是一眼認得出的「模板感」來源。
    顏色留給 hover：需要時才出現，掃讀時不吵。 */
 details.row{background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--r);overflow:hidden;transition:border-color .18s}
+  border-radius:var(--r);overflow:hidden;transition:border-color .18s;
+  /* 這一頁最貴的不是傳輸（壓縮後約 105KB），是版面計算：178 列的完整
+     發現內容即使收合著也全在 DOM 裡，實測 Style & Layout 佔 1,149ms。
+     content-visibility 讓瀏覽器跳過畫面外的版面與繪製，只算看得到的幾列。
+     contain-intrinsic-size 給一個收合列的高度估計值，捲軸才不會亂跳；
+     真正捲到時會用實際高度取代這個估計。
+     不支援的瀏覽器會忽略這兩行、照舊全部渲染——退化是安靜的。 */
+  content-visibility:auto;
+  contain-intrinsic-size:auto 118px}
 details.row:hover{border-color:var(--tone)}
 details.row[data-v="crit"]{--tone:var(--crit)}
 details.row[data-v="warn"]{--tone:var(--warn)}
@@ -310,11 +318,20 @@ summary:hover{background:var(--surface-2)}
 .scene h2{font-size:clamp(21px,2.5vw,29px);letter-spacing:-.025em;max-width:24ch}
 .scene .lede{margin-top:12px;font-size:15px;max-width:62ch}
 .pk-list{margin-top:26px;border-top:1px solid var(--line)}
+/* 每一列是「稽核結果連結 + GitHub 次要連結」兩個東西，用 grid 排在同一行，
+   邊框畫在容器上而不是主連結上，兩者才對得齊。 */
+.pk-row{display:grid;grid-template-columns:1fr auto;align-items:center;
+  border-bottom:1px solid var(--line)}
 .pk{display:grid;grid-template-columns:auto 1fr auto;gap:16px;
-  align-items:center;padding:15px 0;border-bottom:1px solid var(--line);
+  align-items:center;padding:15px 0;
   text-decoration:none;color:inherit;transition:padding-left .28s var(--ease)}
 .pk:hover{padding-left:10px}
 .pk:hover .name{color:var(--seal)}
+/* GitHub 是次要出口：平常退到近乎不可見，需要時才找得到。 */
+.pk-gh{padding:10px 6px 10px 14px;color:var(--muted);text-decoration:none;
+  font-size:13px;transition:color .18s}
+.pk-gh:hover{color:var(--seal)}
+.pk-gh:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
 .pk-b{min-width:0}
 .pk-d{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

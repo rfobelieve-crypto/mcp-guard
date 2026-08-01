@@ -35,6 +35,7 @@ import json
 import shutil
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "reports" / "data.json"
@@ -290,7 +291,15 @@ a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
    再加一條 3px 色邊是冗餘，而且那正是一眼認得出的「模板感」來源。
    顏色留給 hover：需要時才出現，掃讀時不吵。 */
 details.row{background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--r);overflow:hidden;transition:border-color .18s}
+  border-radius:var(--r);overflow:hidden;transition:border-color .18s;
+  /* 這一頁最貴的不是傳輸（壓縮後約 105KB），是版面計算：178 列的完整
+     發現內容即使收合著也全在 DOM 裡，實測 Style & Layout 佔 1,149ms。
+     content-visibility 讓瀏覽器跳過畫面外的版面與繪製，只算看得到的幾列。
+     contain-intrinsic-size 給一個收合列的高度估計值，捲軸才不會亂跳；
+     真正捲到時會用實際高度取代這個估計。
+     不支援的瀏覽器會忽略這兩行、照舊全部渲染——退化是安靜的。 */
+  content-visibility:auto;
+  contain-intrinsic-size:auto 118px}
 details.row:hover{border-color:var(--tone)}
 details.row[data-v="crit"]{--tone:var(--crit)}
 details.row[data-v="warn"]{--tone:var(--warn)}
@@ -356,11 +365,20 @@ summary:hover{background:var(--surface-2)}
 .scene h2{font-size:clamp(21px,2.5vw,29px);letter-spacing:-.025em;max-width:24ch}
 .scene .lede{margin-top:12px;font-size:15px;max-width:62ch}
 .pk-list{margin-top:26px;border-top:1px solid var(--line)}
+/* 每一列是「稽核結果連結 + GitHub 次要連結」兩個東西，用 grid 排在同一行，
+   邊框畫在容器上而不是主連結上，兩者才對得齊。 */
+.pk-row{display:grid;grid-template-columns:1fr auto;align-items:center;
+  border-bottom:1px solid var(--line)}
 .pk{display:grid;grid-template-columns:auto 1fr auto;gap:16px;
-  align-items:center;padding:15px 0;border-bottom:1px solid var(--line);
+  align-items:center;padding:15px 0;
   text-decoration:none;color:inherit;transition:padding-left .28s var(--ease)}
 .pk:hover{padding-left:10px}
 .pk:hover .name{color:var(--seal)}
+/* GitHub 是次要出口：平常退到近乎不可見，需要時才找得到。 */
+.pk-gh{padding:10px 6px 10px 14px;color:var(--muted);text-decoration:none;
+  font-size:13px;transition:color .18s}
+.pk-gh:hover{color:var(--seal)}
+.pk-gh:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
 .pk-b{min-width:0}
 .pk-d{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1422,13 +1440,22 @@ def page_pick(projects: list, when: str) -> str:
                 v = VKEY.get(p["verdict"][0], "pass")
                 desc = (p.get("desc") or "").strip()
                 rows.append(
-                    f'<a class="pk" href="https://github.com/{esc(p["slug"])}" '
-                    f'target="_blank" rel="noopener">'
+                    # 主連結指向**我們自己的稽核結果**，不是 GitHub。
+                    # 先前每一列都直接跳出去，等於在讀者最可能問
+                    # 「它為什麼是這個結論」的那一刻，把他送離現場——
+                    # 而那份證據正是這個站唯一給得出、別處沒有的東西。
+                    # GitHub 仍然一鍵可達，但降為次要連結。
+                    f'<div class="pk-row">'
+                    f'<a class="pk" href="../registry/?q={quote(p["slug"])}">'
                     f'<span class="seal {v}">{esc(p["verdict"][2:])}</span>'
                     f'<span class="pk-b"><span class="name">{esc(p["slug"])}</span>'
                     f'<span class="pk-d">{esc(desc) if desc else "（未填寫說明）"}'
                     f'</span></span>'
-                    f'<span class="nums">★{p["stars"]:,}</span></a>')
+                    f'<span class="nums">★{p["stars"]:,}</span></a>'
+                    f'<a class="pk-gh" href="https://github.com/{esc(p["slug"])}" '
+                    f'target="_blank" rel="noopener" '
+                    f'aria-label="在 GitHub 開啟 {esc(p["slug"])}">↗</a>'
+                    f'</div>')
             more = (f'<a class="pk-more" href="../registry/?{param}={esc(code)}">'
                     f'看這類全部 {len(g)} 個 →</a>' if len(g) > 5 else "")
             out.append(
