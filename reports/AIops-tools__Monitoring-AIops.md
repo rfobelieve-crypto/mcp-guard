@@ -7,18 +7,18 @@
 | 稽核對象 | `AIops-tools/Monitoring-AIops` |
 | 專案說明 | Governed SolarWinds Orion + PRTG ops: canned SWQL, alert rollup, 31 MCP tools (p |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-07-25 |
+| 最後更新 | 2026-08-02 |
 | 授權 | MIT License |
 | 已掃描檔案 | 91 個 |
-| 檢查時間 | 2026-08-01 22:01 |
+| 檢查時間 | 2026-08-02 22:02 |
 
 ## 風險摘要
 
-🟠 高 1　🔵 低 5　⚪ 資訊 7
+🟠 高 1　🔵 低 6　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[身分] 倉庫非常新（建立於 21 天前）
+### 🟠 高｜[身分] 倉庫非常新（建立於 22 天前）
 
 新建立的 repo 本身不等於惡意，但若它同時被大量宣傳、或使用了熱門既有名稱，要特別留意是否為搶註／仿冒。
 
@@ -48,6 +48,12 @@
 
 > 證據：`mcp_server/_shared.py、mcp_server/server.py、monitoring_aiops/config.py、monitoring_aiops/governance/audit.py、monitoring_aiops/governance/budget.py`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`tests/test_undo_executor.py`
+
 ### 🔵 低｜[權限] 會連往 3 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
@@ -74,11 +80,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-25`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -88,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 Python｜建立 2026-07-12｜最後推送 2026-07-25
+⭐ 0｜fork 0｜語言 Python｜建立 2026-07-12｜最後推送 2026-08-02
 
 ---
 

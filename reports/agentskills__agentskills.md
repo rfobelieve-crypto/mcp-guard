@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `agentskills/agentskills` |
 | 專案說明 | Specification and documentation for Agent Skills |
-| 星數 / Fork | ⭐ 23730 / 1657 |
+| 星數 / Fork | ⭐ 23761 / 1660 |
 | 最後更新 | 2026-07-10 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `agentskills`（registry 查無） |
 | 已掃描檔案 | 25 個 |
-| 檢查時間 | 2026-08-01 21:56 |
+| 檢查時間 | 2026-08-02 21:56 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`agentman.ai、ampcode.com、autohand.ai、block.github.io、bub.build、claude.ai、code.claude.com、code.visualstudio.com、commandcode.ai、cursor.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -47,7 +47,7 @@
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
 
-### ⚪ 資訊｜[維護] 最近 23 天內有更新
+### ⚪ 資訊｜[維護] 最近 24 天內有更新
 
 專案仍在活躍維護中。
 
@@ -61,7 +61,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23730｜fork 1657｜語言 Python｜建立 2025-12-16｜最後推送 2026-07-10
+⭐ 23761｜fork 1660｜語言 Python｜建立 2025-12-16｜最後推送 2026-07-10
 
 ---
 

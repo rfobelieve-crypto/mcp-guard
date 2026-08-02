@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4053 / 365 |
+| 星數 / Fork | ⭐ 4055 / 366 |
 | 最後更新 | 2026-08-01 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-08-01 21:57 |
+| 檢查時間 | 2026-08-02 21:57 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4053｜fork 365｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-08-01
+⭐ 4055｜fork 366｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-08-01
 
 ---
 

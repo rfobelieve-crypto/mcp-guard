@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-08-01 |
+| 最後更新 | 2026-08-02 |
 | 授權 | Other |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 66 個 |
-| 檢查時間 | 2026-08-01 22:00 |
+| 已掃描檔案 | 68 個 |
+| 檢查時間 | 2026-08-02 22:01 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.Example.com、api.example.com、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、schema.org、static.modelcontextprotocol.io、tidelift.com、website-auditor.io`
+> 證據：`WWW.Example.com、api.example.com、api.example.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、schema.org、static.modelcontextprotocol.io、tidelift.com、website-auditor.io`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -35,7 +35,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/config.ts、src/index.ts、src/telemetry/installId.ts`
+> 證據：`src/config.ts、src/index.ts、src/telemetry/installId.ts、tests/telemetry/httpSink.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -59,7 +59,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-01
+⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-02
 
 ---
 

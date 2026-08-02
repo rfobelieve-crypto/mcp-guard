@@ -1,23 +1,29 @@
 # MCP 安檢報告：8beeeaaat/touchdesigner-mcp
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `8beeeaaat/touchdesigner-mcp` |
 | 專案說明 | MCP server for TouchDesigner |
-| 星數 / Fork | ⭐ 457 / 49 |
-| 最後更新 | 2026-07-31 |
+| 星數 / Fork | ⭐ 459 / 49 |
+| 最後更新 | 2026-08-02 |
 | 授權 | MIT License |
 | npm 套件 | `touchdesigner-mcp-server` |
 | 已掃描檔案 | 152 個 |
-| 檢查時間 | 2026-08-01 22:00 |
+| 檢查時間 | 2026-08-02 22:01 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 8
+🟠 高 2　🟡 中 2　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[供應鏈] PyPI 套件標示的倉庫與實際來源不一致
+
+套件指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。
+
+> 證據：`PyPI 連結=https://github.com/quentinR2/TouchDesignerMcp https://github.com/quentinR2/TouchDesignerMcp/issues｜稽核對象=8beeeaaat/touchdesigner-mcp`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -71,10 +77,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/agents/release-manager.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/integration-test-guard/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/prepare-release/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/prepare-release/references/changelog-format.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/prepare-release/references/version-policy.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/release-test-audit/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[供應鏈] PyPI 上查無此套件（touchdesigner-mcp）
-
-原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
-
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
@@ -89,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-31`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 457｜fork 49｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-07-31
+⭐ 459｜fork 49｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-08-02
 
 ---
 

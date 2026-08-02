@@ -7,11 +7,11 @@
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 27 / 8 |
-| 最後更新 | 2026-08-01 |
+| 最後更新 | 2026-08-02 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-01 21:59 |
+| 檢查時間 | 2026-08-02 22:00 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、adapters/healthclaw_bridge.py、careagents/static/home.js、deploy/careagents/deploy.sh、deploy/careagents/imessage_relay.py`
+> 證據：`.github/workflows/ci.yml、.github/workflows/prod-watch.yml、adapters/healthclaw_bridge.py、careagents/healthcheck.py、careagents/static/home.js`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -35,13 +35,13 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`r6/rate_limit.py、tests/test_oauth_redis.py、tests/test_rate_limit_store.py、tests/test_runtime_security_config.py`
+> 證據：`r6/rate_limit.py、tests/test_oauth_redis.py`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 86 個外部主機
+### 🟡 中｜[權限] 會連往 87 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -57,9 +57,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`api/index.py、app.py、careagents/config.py、deploy/careagents/imessage_relay.py、e2e/playwright.config.ts`
+> 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27｜fork 8｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-01
+⭐ 27｜fork 8｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-02
 
 ---
 

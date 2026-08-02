@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2463 / 334 |
-| 最後更新 | 2026-08-01 |
+| 星數 / Fork | ⭐ 2476 / 333 |
+| 最後更新 | 2026-08-02 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-01 21:58 |
+| 檢查時間 | 2026-08-02 21:58 |
 
 ## 風險摘要
 
@@ -20,7 +20,7 @@
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「桌面／終端控制」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`munch-bench/results/anthropic_claude-haiku-4-5_flask.json、src/jcodemunch_mcp/server.py`
 
@@ -42,19 +42,19 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`benchmarks/cache_stability/measure.py、benchmarks/goldset/measure.py、benchmarks/harness/run_rag_baseline.py、benchmarks/profile_language_filter.py、munch-bench/corpus/flask.yaml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`benchmarks/profile_language_filter.py、examples/groq_validate.py、munch-bench/munch_bench/inference.py、munch-bench/results/anthropic_claude-haiku-4-5_flask.json、munch-bench/results/anthropic_claude-sonnet-4-6_flask.json`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`speedreview/review.py、src/jcodemunch_mcp/cli/hooks.py、src/jcodemunch_mcp/cli/init.py、src/jcodemunch_mcp/cli/upgrade.py、src/jcodemunch_mcp/enrichment/lsp_bridge.py`
 
@@ -68,7 +68,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：桌面／終端控制
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2463｜fork 334｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-01
+⭐ 2476｜fork 333｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-02
 
 ---
 

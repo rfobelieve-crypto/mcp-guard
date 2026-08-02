@@ -7,10 +7,10 @@
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | open-source web + product analytics in one Go binary. ask your data in plain eng |
 | 星數 / Fork | ⭐ 2 / 1 |
-| 最後更新 | 2026-08-01 |
+| 最後更新 | 2026-08-02 |
 | 授權 | MIT License |
-| 已掃描檔案 | 271 個 |
-| 檢查時間 | 2026-08-01 22:00 |
+| 已掃描檔案 | 289 個 |
+| 檢查時間 | 2026-08-02 22:00 |
 
 ## 風險摘要
 
@@ -34,11 +34,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、chat.example.com、chatgpt.com、claude.ai、download.db-ip.com、eu.posthog.com、glama.ai、google.com、hooks.example.com、hooks.slack.com…`
+> 證據：`accounts.google.com、ahrefs.com、anthropic.com、chat.example.com、chatgpt.com、claude.ai、cohere.com、commoncrawl.org、developer.amazon.com、developers.facebook.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-01
+⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-02
 
 ---
 
