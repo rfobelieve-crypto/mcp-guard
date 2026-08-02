@@ -1,23 +1,29 @@
 # MCP 安檢報告：akutishevsky/nutrition-mcp
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 29 / 16 |
+| 星數 / Fork | ⭐ 30 / 17 |
 | 最後更新 | 2026-07-27 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
 | 已掃描檔案 | 60 個 |
-| 檢查時間 | 2026-07-31 22:09 |
+| 檢查時間 | 2026-08-01 21:59 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 3　🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[供應鏈] npm 套件標示的倉庫與實際來源不一致
+
+套件明確指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。
+
+> 證據：`npm repository=git+https://github.com/daveremy/nutrition-mcp.git｜稽核對象=akutishevsky/nutrition-mcp`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -47,12 +53,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`@modelcontextprotocol/sdk@^1.29.0、@supabase/supabase-js@^2.110.5、hono@^4.12.30、prettier@^3.9.5`
 
-### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
-
-套件沒有填 repository 欄位，因此**無法自動核對**它是否真的由這個 repo 建置。這不代表有問題，但也代表少了一道可驗證性；安裝前建議自行確認發布者身分。
-
-> 證據：`npm: nutrition-mcp（repository 欄位空白）`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
@@ -79,7 +79,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 6 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 29｜fork 16｜語言 HTML｜建立 2026-03-08｜最後推送 2026-07-27
+⭐ 30｜fork 17｜語言 HTML｜建立 2026-03-08｜最後推送 2026-07-27
 
 ---
 

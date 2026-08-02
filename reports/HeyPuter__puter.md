@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 42915 / 3973 |
-| 最後更新 | 2026-07-31 |
+| 星數 / Fork | ⭐ 42923 / 3972 |
+| 最後更新 | 2026-08-01 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-07-31 22:05 |
+| 檢查時間 | 2026-08-01 21:56 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 90 個外部主機
+### 🟡 中｜[權限] 會連往 102 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.test、ai.google.dev、an-app.puter.site、anything.example.test、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.minimax.io、api.moonshot.ai、api.prelude.dev…`
+> 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.minimax.io、api.moonshot.ai、api.prelude.dev、api.puter.test…`
 
 ### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
@@ -43,17 +43,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`@ai-sdk/openai@^3.0.25、@aws-sdk/client-s3@^3.1020.0、@aws-sdk/s3-request-presigner@^3.1028.0、@heyputer/putility@^1.0.2、ai@^6.0.73、dedent@^1.5.3…`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`extensions/devWatcher.test.ts、extensions/devWatcher.ts、src/backend/clients/database/PostgresDatabaseClient.integration.test.ts、src/backend/controllers/system/SystemController.js、src/backend/drivers/ai-chat/utils/Streaming.js`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`extensions/devWatcher.ts`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`extensions/devWatcher.ts、src/backend/clients/database/PostgresDatabaseClient.integration.test.ts、src/backend/controllers/system/SystemController.js、src/backend/drivers/ai-chat/utils/Streaming.js、src/backend/drivers/integrationTestUtil.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-31`
+> 證據：`最後推送 2026-08-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42915｜fork 3973｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-07-31
+⭐ 42923｜fork 3972｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-01
 
 ---
 

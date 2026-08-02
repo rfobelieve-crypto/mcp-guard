@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 230 / 46 |
-| 最後更新 | 2026-07-30 |
+| 最後更新 | 2026-08-01 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 75 個 |
-| 檢查時間 | 2026-07-31 22:09 |
+| 已掃描檔案 | 79 個 |
+| 檢查時間 | 2026-08-01 21:59 |
 
 ## 風險摘要
 
@@ -28,13 +28,13 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`mcp>=1.2.0,<2.0.0`
+> 證據：`mcp>=2.0.0,<3`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`ga4_mcp/coordinator.py、ga4_mcp/telemetry.py、ga4_mcp/tools/skills.py、scripts/generate_downloads_banner.py`
+> 證據：`ga4_mcp/coordinator.py、ga4_mcp/telemetry.py、ga4_mcp/tools/skills.py、scripts/generate_downloads_banner.py、tests/test_v2_telemetry.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-08-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 230｜fork 46｜語言 Python｜建立 2025-05-24｜最後推送 2026-07-30
+⭐ 230｜fork 46｜語言 Python｜建立 2025-05-24｜最後推送 2026-08-01
 
 ---
 

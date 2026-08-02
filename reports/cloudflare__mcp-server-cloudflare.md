@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `cloudflare/mcp-server-cloudflare` |
 | 專案說明 | （無） |
-| 星數 / Fork | ⭐ 4010 / 461 |
+| 星數 / Fork | ⭐ 4017 / 464 |
 | 最後更新 | 2026-07-30 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cloudflare/mcp-server-cloudflare` |
 | 已掃描檔案 | 372 個 |
-| 檢查時間 | 2026-07-31 22:06 |
+| 檢查時間 | 2026-08-01 21:57 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -49,6 +49,10 @@
 
 > 證據：`packages/tools/src/changesets.ts、packages/tools/src/test/setup.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
@@ -67,7 +71,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -81,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4010｜fork 461｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-07-30
+⭐ 4017｜fork 464｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-07-30
 
 ---
 
