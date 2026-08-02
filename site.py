@@ -1571,7 +1571,7 @@ def page_home(projects: list, n: dict, total_f: int, when: str) -> str:
         <span class="arw">→</span></a>
       <a class="gate rv" href="trust/">
         <div><h3>為什麼可信</h3>
-          <p>一個被瘋傳卻不存在的 MCP、這個工具自己誤報過的 8 次，
+          <p>一個被瘋傳卻不存在的 MCP、這個工具自己誤報過的 9 次，
              以及被列出的專案維護者可以怎麼要求更正。</p></div>
         <span class="arw">→</span></a>
     </div>
@@ -1840,7 +1840,7 @@ def page_trust(when: str) -> str:
 <section class="blk alt">
   <div class="wrap">
     <p class="eyebrow rv">我們自己也會錯</p>
-    <h2 class="rv">這個工具誤報過 8 次，<br>全部在發布前攔下。</h2>
+    <h2 class="rv">這個工具誤報過 9 次，<br>全部在發布前攔下。</h2>
     <p class="lede rv">第一次批次掃描時，它把 5 個知名專案判成「不要安裝」——
       包含一個 15k star 的專案。證據是 <code>"Path to custom .env file"</code>，
       那其實只是一個 CLI 參數說明。</p>
@@ -1851,7 +1851,9 @@ def page_trust(when: str) -> str:
     <p class="lede rv">最近一次更能說明問題：某個專案的 skill 寫著
       「別把下載的腳本直接餵進 shell」。那是<b>一份在教模型別踩雷的安全指引，
       卻被判成要求下載執行遠端腳本</b>：防禦方被指控成攻擊方。</p>
-    <p class="lede rv">那 8 個誤報樣本已原文收進回歸測試。
+    <p class="lede rv">那 9 個誤報樣本已原文收進回歸測試。<b>這裡的「次」
+      指的就是收進測試的樣本數</b>——可以自己數：
+      <code>python -m tests.test_poisoning</code>。
       <b>對真實專案的不實指控，傷害不比漏報小。</b></p>
   </div>
 </section>
@@ -1878,7 +1880,7 @@ def page_trust(when: str) -> str:
 {SUBMIT_DLG}
 """
     return page("trust", "為什麼可信｜MCP 安檢",
-                "這個工具誤報過 8 次，全部在發布前攔下。"
+                "這個工具誤報過 9 次，全部在發布前攔下。"
                 "誤報樣本原文收進回歸測試；被列出的專案可要求更正。",
                 body, when, (REVEAL_JS, AUTH_JS, SUBMIT_JS))
 
