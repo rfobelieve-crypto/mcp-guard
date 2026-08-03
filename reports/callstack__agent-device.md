@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3820 / 228 |
-| 最後更新 | 2026-08-02 |
+| 星數 / Fork | ⭐ 3919 / 233 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-08-02 21:57 |
+| 已掃描檔案 | 406 個 |
+| 檢查時間 | 2026-08-03 22:10 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、android.example、api-cloud.browserstack.com、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、hub-cloud.browserstack.com…`
+> 證據：`agent-device.dev、android.example、api-cloud.browserstack.com、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、ios.example…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -35,13 +35,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/contracts/src/interactor-types.ts、packages/maestro/src/index.test.ts、packages/maestro/src/internal/__tests__/program-loader.test.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/interactor-types.ts、packages/maestro/src/index.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/maestro/test/conformance/differential/run.ts、packages/provider-webdriver/src/index.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts、packages/maestro/test/conformance/differential/run.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -71,17 +71,17 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-02`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3820｜fork 228｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-02
+⭐ 3919｜fork 233｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-03
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `agentskills/agentskills` |
 | 專案說明 | Specification and documentation for Agent Skills |
-| 星數 / Fork | ⭐ 23761 / 1660 |
-| 最後更新 | 2026-07-10 |
+| 星數 / Fork | ⭐ 23796 / 1702 |
+| 最後更新 | 2026-08-03 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `agentskills`（registry 查無） |
-| 已掃描檔案 | 25 個 |
-| 檢查時間 | 2026-08-02 21:56 |
+| 已掃描檔案 | 24 個 |
+| 檢查時間 | 2026-08-03 22:09 |
 
 ## 風險摘要
 
@@ -25,15 +25,15 @@
 
 > 證據：`agentman.ai、ampcode.com、autohand.ai、block.github.io、bub.build、claude.ai、code.claude.com、code.visualstudio.com、commandcode.ai、cursor.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`docs/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills-ref/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
 ### ⚪ 資訊｜[供應鏈] npm 上查無此套件（agentskills）
 
@@ -47,11 +47,11 @@
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
 
-### ⚪ 資訊｜[維護] 最近 24 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-10`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -61,7 +61,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23761｜fork 1660｜語言 Python｜建立 2025-12-16｜最後推送 2026-07-10
+⭐ 23796｜fork 1702｜語言 Python｜建立 2025-12-16｜最後推送 2026-08-03
 
 ---
 

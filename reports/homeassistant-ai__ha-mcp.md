@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4238 / 176 |
-| 最後更新 | 2026-08-02 |
+| 星數 / Fork | ⭐ 4254 / 177 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-08-02 21:57 |
+| 檢查時間 | 2026-08-03 22:10 |
 
 ## 風險摘要
 
@@ -44,13 +44,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`abcdef123.ui.nabu.casa、astral.sh、astro.build、attacker.com、attacker.example.com、cdn.example.com、claude.ai、code.claude.com、community.home-assistant.io、dash.cloudflare.com…`
+> 證據：`abcdef123.ui.nabu.casa、astral.sh、astro.build、attacker.com、attacker.example.com、cdn.example.com、claude.ai、code.claude.com、coderabbit.ai、community.home-assistant.io…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/codex-fetch-pr-context/action.yml、.github/actions/codex-run/action.yml、.github/actions/codex-update-auth/action.yml、.github/workflows/issue-triage.yml、custom_components/ha_mcp_tools/embedded_server.py`
+> 證據：`.github/actions/codex-fetch-pr-context/action.yml、.github/actions/codex-run/action.yml、.github/actions/codex-update-auth/action.yml、custom_components/ha_mcp_tools/embedded_server.py、homeassistant-addon-webhook-proxy-dev/start.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-02`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4238｜fork 176｜語言 Python｜建立 2025-09-14｜最後推送 2026-08-02
+⭐ 4254｜fork 177｜語言 Python｜建立 2025-09-14｜最後推送 2026-08-03
 
 ---
 

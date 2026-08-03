@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3556 / 245 |
-| 最後更新 | 2026-08-02 |
+| 星數 / Fork | ⭐ 3569 / 248 |
+| 最後更新 | 2026-08-03 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-02 21:58 |
+| 檢查時間 | 2026-08-03 22:11 |
 
 ## 風險摘要
 
@@ -34,21 +34,21 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py、benchmarks/src/basic_memory_benchmarks/utils.py、benchmarks/tests/llm/test_runners.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py、benchmarks/src/basic_memory_benchmarks/utils.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/cli.py、benchmarks/src/basic_memory_benchmarks/datasets/convomem.py、benchmarks/src/basic_memory_benchmarks/datasets/longmemeval.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/cli.py、benchmarks/src/basic_memory_benchmarks/datasets/convomem.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/providers/bm_cloud.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py、benchmarks/src/basic_memory_benchmarks/providers/mem0_local.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/providers/bm_cloud.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（76 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -58,7 +58,7 @@
 
 > 證據：`.agents/skills/adversarial-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-pr-issues/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/infographics/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/instrumentation/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/pr-create/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 75 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 71 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -76,7 +76,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-02`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3556｜fork 245｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-02
+⭐ 3569｜fork 248｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-03
 
 ---
 

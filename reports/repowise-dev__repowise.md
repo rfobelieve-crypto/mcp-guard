@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 4598 / 514 |
-| 最後更新 | 2026-08-02 |
+| 星數 / Fork | ⭐ 4640 / 515 |
+| 最後更新 | 2026-08-03 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 429 個 |
-| 檢查時間 | 2026-08-02 21:57 |
+| 檢查時間 | 2026-08-03 22:10 |
 
 ## 風險摘要
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/doctor_cmd/workspace_checks.py、packages/cli/src/repowise/cli/commands/init_cmd/command.py、packages/cli/src/repowise/cli/commands/init_cmd/workspace.py、packages/cli/src/repowise/cli/commands/serve_cmd.py`
+> 證據：`packages/cli/src/repowise/cli/commands/augment_cmd/read_skeleton.py、packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/doctor_cmd/workspace_checks.py、packages/cli/src/repowise/cli/commands/init_cmd/command.py、packages/cli/src/repowise/cli/commands/init_cmd/workspace.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（97 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（95 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-02`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4598｜fork 514｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-02
+⭐ 4640｜fork 515｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-03
 
 ---
 

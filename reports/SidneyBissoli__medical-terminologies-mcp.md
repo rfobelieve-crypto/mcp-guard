@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, M |
 | 星數 / Fork | ⭐ 7 / 2 |
-| 最後更新 | 2026-07-31 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
 | 已掃描檔案 | 117 個 |
-| 檢查時間 | 2026-08-02 22:00 |
+| 檢查時間 | 2026-08-03 22:12 |
 
 ## 風險摘要
 
@@ -57,11 +57,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-31`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +71,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7｜fork 2｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-07-31
+⭐ 7｜fork 2｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-08-03
 
 ---
 
