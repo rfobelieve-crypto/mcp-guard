@@ -146,11 +146,12 @@ python3 site.py                    # 1. 只要動過 site.py 或 reports/ 就要
 python3 -m tests.test_poisoning    # 2. 紅隊測試 38 項
 python3 -m tests.test_lookup       #    身分查詢失敗模式 3 項
 python3 -m tests.test_userinput    #    輸入正規化 16 項
+python3 -m tests.test_routing      #    API 路由 10 項
 git add -A && git commit -m "說明改了什麼"
 git push
 ```
 
-三套測試都必須是綠的才推。理由與 `daily-scan.yml` 裡寫的一樣：
+四套測試都必須是綠的才推。理由與 `daily-scan.yml` 裡寫的一樣：
 
 > 一個連自己紅隊測試都沒過的掃描器，不該對外發布任何結論。
 
@@ -179,18 +180,18 @@ git 不會自己推。**這是刻意的**：自動推送等於把還沒測過的
 ```bash
 cat > .git/hooks/pre-push <<'EOF'
 #!/bin/sh
-# 推送前跑一次三套測試,沒過就擋下。
+# 推送前跑一次四套測試,沒過就擋下。
 # 與 daily-scan.yml 同一個原則:沒過測試就不該對外發布。
 cd "$(git rev-parse --show-toplevel)" || exit 1
 [ -f .venv/bin/activate ] && . .venv/bin/activate
-for t in test_poisoning test_lookup test_userinput; do
+for t in test_poisoning test_lookup test_userinput test_routing; do
   if ! python3 -m tests.$t >/dev/null 2>&1; then
     echo "✗ tests.$t 未通過,推送已中止。"
     echo "  自己跑一次看細節:python3 -m tests.$t"
     exit 1
   fi
 done
-echo "✓ 三套測試通過"
+echo "✓ 四套測試通過"
 EOF
 chmod +x .git/hooks/pre-push
 ```
@@ -253,6 +254,7 @@ python3 sync_targets.py              # 從官方 registry 同步名單
 python3 -m tests.test_poisoning      # 紅隊測試
 python3 -m tests.test_lookup         # 身分查詢失敗模式
 python3 -m tests.test_userinput      # 輸入正規化
+python3 -m tests.test_routing        # API 路由（cleanUrls/trailingSlash/rewrites）
 ```
 
 CLI 退出碼（可接進 CI）：`0` 無明顯風險／`1` 有嚴重或多項高風險／`2` 抓取失敗。
