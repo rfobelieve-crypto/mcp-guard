@@ -238,7 +238,35 @@ python3 -m mcp_guard owner/repo
 
 ---
 
-## 八、常用指令速查
+## 八、離線備份
+
+GitHub 與 Vercel 是**運作**環境，不是**保險**——Vercel 部署的來源就是那個
+倉庫，所以倉庫被刪、帳號登不進去、或被誤 force-push 時，兩者會一起消失。
+
+```bash
+python3 make_backup.py --verify
+```
+
+產出 `backup/`（已在 `.gitignore` 內，不會進版控）：
+
+| 檔案 | 內容 | 約略大小 |
+|---|---|---|
+| `mcp-guard-source.tgz` | 全部原始碼、四套測試、文件、workflow、字型與機器人素材 | 240 KB |
+| `data.json.gz` | 178 個專案的完整掃描結果 | 88 KB |
+
+刻意不含 `site/`、`reports/*.md`、`assets/og/*.jpg`、`robot_a.png`——
+那些都能重建，而**備份的體積直接決定它多久被更新一次**。
+`data.json` 是唯一不可再生的部分：沒有 GitHub 存取與 11 分鐘就重跑不出來。
+
+`--verify` 會解到暫存目錄、重建網站、與正式產物逐位元組比對，再跑完四套
+測試。沒有實際還原過的備份只是一個「看起來像備份的檔案」，所以平常就加著跑。
+
+還原方式寫在 Google Drive 的〈mcp-guard 離線備份 — 還原說明〉裡，
+指令與這份文件第二、三節相同。
+
+---
+
+## 九、常用指令速查
 
 ```bash
 mcp-guard owner/repo                 # 掃單一專案
@@ -255,6 +283,8 @@ python3 -m tests.test_poisoning      # 紅隊測試
 python3 -m tests.test_lookup         # 身分查詢失敗模式
 python3 -m tests.test_userinput      # 輸入正規化
 python3 -m tests.test_routing        # API 路由（cleanUrls/trailingSlash/rewrites）
+
+python3 make_backup.py --verify      # 產生離線備份並實際還原驗證
 ```
 
 CLI 退出碼（可接進 CI）：`0` 無明顯風險／`1` 有嚴重或多項高風險／`2` 抓取失敗。
