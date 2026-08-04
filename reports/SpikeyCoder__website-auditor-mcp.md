@@ -1,29 +1,35 @@
 # MCP 安檢報告：SpikeyCoder/website-auditor-mcp
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-08-02 |
+| 最後更新 | 2026-08-04 |
 | 授權 | Other |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 68 個 |
-| 檢查時間 | 2026-08-03 22:13 |
+| 已掃描檔案 | 74 個 |
+| 檢查時間 | 2026-08-04 22:16 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`scripts/release.sh`
+
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.Example.com、api.example.com、api.example.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、schema.org、static.modelcontextprotocol.io、tidelift.com、website-auditor.io`
+> 證據：`WWW.Example.com、api.example.com、api.example.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、registry.modelcontextprotocol.io、schema.org、static.modelcontextprotocol.io、tidelift.com…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -53,13 +59,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-02`
+> 證據：`最後推送 2026-08-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -69,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-02
+⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-04
 
 ---
 

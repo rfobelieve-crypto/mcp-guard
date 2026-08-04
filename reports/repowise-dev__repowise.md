@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 4640 / 515 |
-| 最後更新 | 2026-08-03 |
+| 星數 / Fork | ⭐ 4659 / 518 |
+| 最後更新 | 2026-08-04 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 429 個 |
-| 檢查時間 | 2026-08-03 22:10 |
+| 檢查時間 | 2026-08-04 22:13 |
 
 ## 風險摘要
 
@@ -37,19 +37,19 @@
 
 > 證據：`docs/design/contrast_check.py、packages/cli/src/repowise/cli/commands/augment_cmd/command.py、packages/cli/src/repowise/cli/commands/coverage_cmd.py、packages/cli/src/repowise/cli/commands/export_structurizr.py、packages/cli/src/repowise/cli/commands/login_cmd.py`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`packages/cli/src/repowise/cli/commands/augment_cmd/_shared.py、packages/cli/src/repowise/cli/commands/augment_cmd/fast_lookup.py、packages/cli/src/repowise/cli/commands/augment_cmd/read_skeleton.py、packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/doctor_cmd/workspace_checks.py`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py、packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/security_cmd.py`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`packages/cli/src/repowise/cli/commands/augment_cmd/read_skeleton.py、packages/cli/src/repowise/cli/commands/distill_cmd.py、packages/cli/src/repowise/cli/commands/doctor_cmd/workspace_checks.py、packages/cli/src/repowise/cli/commands/init_cmd/command.py、packages/cli/src/repowise/cli/commands/init_cmd/workspace.py`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（95 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（100 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-03`
+> 證據：`最後推送 2026-08-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4640｜fork 515｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-03
+⭐ 4659｜fork 518｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-04
 
 ---
 

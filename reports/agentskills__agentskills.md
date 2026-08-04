@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `agentskills/agentskills` |
 | 專案說明 | Specification and documentation for Agent Skills |
-| 星數 / Fork | ⭐ 23796 / 1702 |
+| 星數 / Fork | ⭐ 23842 / 1713 |
 | 最後更新 | 2026-08-03 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `agentskills`（registry 查無） |
 | 已掃描檔案 | 24 個 |
-| 檢查時間 | 2026-08-03 22:09 |
+| 檢查時間 | 2026-08-04 22:11 |
 
 ## 風險摘要
 
@@ -19,13 +19,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 56 個外部主機
+### 🟡 中｜[權限] 會連往 57 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agentman.ai、ampcode.com、autohand.ai、block.github.io、bub.build、claude.ai、code.claude.com、code.visualstudio.com、commandcode.ai、cursor.com…`
+> 證據：`agentman.ai、ampcode.com、autohand.ai、block.github.io、bub.build、chatgpt.com、claude.ai、code.claude.com、code.visualstudio.com、commandcode.ai…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -47,7 +47,7 @@
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -61,7 +61,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23796｜fork 1702｜語言 Python｜建立 2025-12-16｜最後推送 2026-08-03
+⭐ 23842｜fork 1713｜語言 Python｜建立 2025-12-16｜最後推送 2026-08-03
 
 ---
 
