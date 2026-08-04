@@ -960,11 +960,17 @@ PROBE_JS = """
     return out;
   }
 
+  // done  = 拿到結論的
+  // failed = 查不動的（限流、連線失敗）
+  // settled = 已經有下文的，不論成敗——摘要句要靠它才知道跑完了沒。
+  // 只數 done 的話,只要有一筆失敗,摘要就會永遠停在「已檢查 1/2…」,
+  // 那個刪節號會讓人一直等一個不會來的結果。
   function tally(rows){
-    var t={crit:0,warn:0,pass:0,over:0,done:0};
+    var t={crit:0,warn:0,pass:0,over:0,done:0,failed:0,settled:0};
     rows.forEach(function(r){
+      if(r.err){ t.failed++; t.settled++; return; }
       if(!r.verdict) return;
-      t.done++;
+      t.done++; t.settled++;
       if(r.verdict.indexOf('🔴')===0) t.crit++;
       else if(r.verdict.indexOf('🟡')===0) t.warn++;
       else t.pass++;
@@ -975,16 +981,29 @@ PROBE_JS = """
 
   function renderInventory(rows){
     var t=tally(rows);
+    // 跑完之後的結論句。三種狀況要講不同的話,尤其是「一筆都沒查成」——
+    // 那時候不能講「沒有任何一個超出宣稱用途」,那會把「查不到」講成「查過了沒事」。
+    var done;
+    if(!t.done){
+      done = '<span class="inv-wait">全部都查不動，可能是暫時限流，稍後再試一次。</span>';
+    }else{
+      done = (t.over
+        ? '其中 <b class="warn-n">'+t.over+' 個要求了超出宣稱用途的權限</b>。'
+        : '沒有任何一個要求超出宣稱用途的權限。')
+        + (t.failed
+            ? '<span class="inv-wait">（另有 '+t.failed+' 個查不動，未列入計算）</span>'
+            : '');
+    }
     var head='<p class="inv-sum">你正在跑 <b>'+rows.length+'</b> 個 MCP。'+
-      (t.done<rows.length
-        ? '<span class="inv-wait">（已檢查 '+t.done+'/'+rows.length+'…）</span>'
-        : (t.over
-            ? '其中 <b class="warn-n">'+t.over+' 個要求了超出宣稱用途的權限</b>。'
-            : '沒有任何一個要求超出宣稱用途的權限。'))+'</p>';
+      // 還在跑：用「已檢查 N/M…」表示進度
+      (t.settled<rows.length
+        ? '<span class="inv-wait">（已檢查 '+t.settled+'/'+rows.length+'…）</span>'
+        : done)+'</p>';
     var sum='<p class="inv-tally">'+
       '<span>🔴 '+t.crit+' 不要安裝</span>'+
       '<span>🟡 '+t.warn+' 需複核</span>'+
-      '<span>🟢 '+t.pass+' 未發現明顯風險</span></p>';
+      '<span>🟢 '+t.pass+' 未發現明顯風險</span>'+
+      (t.failed ? '<span>⚠ '+t.failed+' 查不動</span>' : '')+'</p>';
     var items=rows.map(function(r){
       var right = r.verdict
         ? (r.over?'<span class="inv-flag">⚠ 超出宣稱用途</span>':'')
