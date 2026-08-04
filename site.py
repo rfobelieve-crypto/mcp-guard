@@ -138,6 +138,15 @@ html:not(.js) .theme-toggle{display:none}
   border-radius:var(--r);background:transparent;color:var(--ink-2);
   cursor:pointer;transition:color .18s,border-color .18s}
 .theme-toggle:hover{color:var(--ink);border-color:var(--muted)}
+/* 觸控裝置上把可點範圍撐到 44px（無障礙建議值），但**不改變外觀**——
+   34px 的方框是刻意的視覺大小，這裡只是用一層看不見的區域把手指接得住。
+   只在 coarse 指標（手指）生效，滑鼠使用者的版面完全不受影響。 */
+@media (pointer:coarse){
+  .theme-toggle{position:relative}
+  .theme-toggle::after{content:"";position:absolute;
+    top:50%;left:50%;transform:translate(-50%,-50%);
+    width:44px;height:44px}
+}
 .theme-toggle svg{width:17px;height:17px;display:block}
 .theme-toggle .icon-sun{display:none}
 :root[data-theme="light"] .theme-toggle .icon-moon{display:none}
