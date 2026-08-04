@@ -7,11 +7,11 @@
 | 稽核對象 | `embeddedlayers/mcp-analytics` |
 | 專案說明 | The statistical analyst in your AI chat — bring data and a question, own a citab |
 | 星數 / Fork | ⭐ 7 / 1 |
-| 最後更新 | 2026-08-01 |
+| 最後更新 | 2026-08-02 |
 | 授權 | MIT License |
 | npm 套件 | `@mcp-analytics/mcp-analytics` |
 | 已掃描檔案 | 37 個 |
-| 檢查時間 | 2026-08-01 22:00 |
+| 檢查時間 | 2026-08-03 22:13 |
 
 ## 風險摘要
 
@@ -61,11 +61,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -75,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7｜fork 1｜語言 JavaScript｜建立 2025-09-17｜最後推送 2026-08-01
+⭐ 7｜fork 1｜語言 JavaScript｜建立 2025-09-17｜最後推送 2026-08-02
 
 ---
 

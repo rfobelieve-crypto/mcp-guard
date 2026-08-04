@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 5 / 4 |
-| 最後更新 | 2026-08-01 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-01 21:59 |
+| 檢查時間 | 2026-08-03 22:12 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/cron/candle-basis-shadow-report.sh、ops/monitoring/check-stripe-webhook-events.mjs`
+> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/cron/candle-basis-shadow-report.sh`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py、ops/monitoring/book-liveness-canary.py、ops/monitoring/directional-label-freshness.py、ops/monitoring/funnel-leak-detector.py`
+> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py`
 
 ### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
 
@@ -37,13 +37,13 @@
 
 > 證據：`.claude/commands/geo-decide.md｜「…decision from Postgres (the cross-host boundary): ``` ssh -i ~/.ssh/algovault_deploy root@204.168.185.24 \ "docker exec crypto-quant-…」`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`algovault.com、api.algovault.com、api.babyblueviper.com、api.stripe.com、avatars.githubusercontent.com、basescan.org、cdn.tailwindcss.com、chat-plugins.lobehub.com、checkout.stripe.com、crypto-quant-signal-mcp--algovault.run.tools…`
+> 證據：`algovault.com、api.algovault.com、api.babyblueviper.com、avatars.githubusercontent.com、basescan.org、cdn.tailwindcss.com、chat-plugins.lobehub.com、checkout.stripe.com、crypto-quant-signal-mcp--algovault.run.tools、docs.stripe.com…`
 
-### 🔵 低｜[供應鏈] 有 46 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 47 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -53,7 +53,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py、audits/api-erc-8004-reputation-shape-snapshot-2026-05-16.json、examples/governance-handoff/demo.py、hardhat.config.ts、ops/monitoring/check-stripe-webhook-events.mjs`
+> 證據：`audits/ACTIVATION-FUNNEL-AUDIT-W1-funnel-leak-detector.py、audits/api-erc-8004-reputation-shape-snapshot-2026-05-16.json、examples/governance-handoff/demo.py、hardhat.config.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-08-01
+⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-08-03
 
 ---
 

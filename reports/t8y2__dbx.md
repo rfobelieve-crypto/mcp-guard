@@ -1,21 +1,21 @@
 # MCP 安檢報告：t8y2/dbx
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 20 MB lightweight cross-platform database client for 70+ databases, including My |
-| 星數 / Fork | ⭐ 12912 / 1249 |
-| 最後更新 | 2026-08-01 |
+| 星數 / Fork | ⭐ 13087 / 1313 |
+| 最後更新 | 2026-08-03 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 426 個 |
-| 檢查時間 | 2026-08-01 21:56 |
+| 檢查時間 | 2026-08-03 22:09 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 3　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -29,7 +29,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs、.github/scripts/i18n-autofill.mjs、.github/scripts/issue-commands.mjs`
+> 證據：`.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-agent-versions.test.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs、.github/scripts/i18n-autofill.mjs`
+
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`apps/desktop/src/__tests__/startupInputGuard.spec.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -37,13 +43,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.adoptium.net、api.changed.example.com、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.example.com、api.github.test、cnb.cool、dbx.example.com、dbxio.com…`
+> 證據：`api.adoptium.net、api.changed.example.com、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.example.com、api.github.test、cnb.cool、dbxio.com、dl.dbxio.com…`
 
-### 🔵 低｜[供應鏈] 有 71 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 77 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -61,7 +71,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/database-issue-catalog.mjs、.github/scripts/label-issue-database.mjs、.github/scripts/label-issue-database.test.mjs、.github/scripts/label-pull-request.mjs、.github/scripts/suggest-similar-issues.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1130 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1052 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1224 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -89,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +109,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12912｜fork 1249｜語言 Rust｜建立 2026-04-29｜最後推送 2026-08-01
+⭐ 13087｜fork 1313｜語言 Rust｜建立 2026-04-29｜最後推送 2026-08-03
 
 ---
 

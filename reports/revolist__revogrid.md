@@ -7,11 +7,11 @@
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
 | 星數 / Fork | ⭐ 3430 / 212 |
-| 最後更新 | 2026-07-29 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
-| 已掃描檔案 | 225 個 |
-| 檢查時間 | 2026-08-01 21:57 |
+| 已掃描檔案 | 230 個 |
+| 檢查時間 | 2026-08-03 22:11 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@angular/core@^20.3.0、@playwright/test@^1.58.2、@revolist/stencil-angular-output@^1.1.3、@revolist/stencil-dash-output-target@^1.0.4、@revolist/stencil-vue2-output-target@^0.0.6、@stencil/playwright@^0.2.3…`
+> 證據：`@angular/core@^20.3.0、@playwright/test@^1.58.2、@revolist/stencil-angular-output@^1.1.3、@revolist/stencil-dash-output-target@^1.0.4、@revolist/stencil-vue2-output-target@^0.0.6、@stencil/playwright@^0.5.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -63,11 +63,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-29`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3430｜fork 212｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-07-29
+⭐ 3430｜fork 212｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-08-03
 
 ---
 

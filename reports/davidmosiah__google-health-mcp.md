@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
-| 星數 / Fork | ⭐ 35 / 7 |
-| 最後更新 | 2026-08-01 |
+| 星數 / Fork | ⭐ 36 / 7 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 104 個 |
-| 檢查時間 | 2026-08-01 21:59 |
+| 已掃描檔案 | 106 個 |
+| 檢查時間 | 2026-08-03 22:12 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/test-synthetic-demo.mjs、src/cli/auth.ts`
+> 證據：`scripts/cli-ux-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/test-synthetic-demo.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -47,7 +47,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/endpoint-contract-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/http-cache-test.mjs、scripts/http-retry-test.mjs`
+> 證據：`scripts/cli-ux-test.mjs、scripts/endpoint-contract-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/http-cache-test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 35｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-08-01
+⭐ 36｜fork 7｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-08-03
 
 ---
 

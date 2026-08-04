@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 103 / 3 |
-| 最後更新 | 2026-08-01 |
+| 星數 / Fork | ⭐ 118 / 3 |
+| 最後更新 | 2026-08-03 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-08-01 21:59 |
+| 檢查時間 | 2026-08-03 22:13 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 > 證據：`apps/docs/src/components/brand/shared.tsx`
 
-### 🟠 高｜[身分] 倉庫非常新（建立於 26 天前）
+### 🟠 高｜[身分] 倉庫非常新（建立於 28 天前）
 
 新建立的 repo 本身不等於惡意，但若它同時被大量宣傳、或使用了熱門既有名稱，要特別留意是否為搶註／仿冒。
 
@@ -47,7 +47,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.4.0、@axe-core/playwright@^4.12.1、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.4.2、@axe-core/playwright@^4.12.1、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -75,11 +75,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-01`
+> 證據：`最後推送 2026-08-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 103｜fork 3｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-08-01
+⭐ 118｜fork 3｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-08-03
 
 ---
 
