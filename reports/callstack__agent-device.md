@@ -6,36 +6,36 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3919 / 233 |
-| 最後更新 | 2026-08-03 |
+| 星數 / Fork | ⭐ 3956 / 237 |
+| 最後更新 | 2026-08-04 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-08-03 22:10 |
+| 已掃描檔案 | 407 個 |
+| 檢查時間 | 2026-08-04 22:13 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 6
+🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、android.example、api-cloud.browserstack.com、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、ios.example…`
+> 證據：`agent-device.dev、android.example、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、ios.example、metro.example.dev…`
 
-### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@limrun/api@^0.24.5、pngjs@^7.0.0、yaml@^2.9.0、@chenglou/freerange@^0.0.1、@types/node@^22.19.21、@types/pngjs@^6.0.5…`
+> 證據：`@limrun/api@^0.24.5、yaml@^2.9.0、@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.1、@types/node@^22.19.21、@types/pngjs@^6.0.5…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/interactor-types.ts、packages/maestro/src/index.test.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/interactor-types.ts、packages/contracts/src/snapshot-tap-point-policy.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -48,6 +48,10 @@
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -77,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-03`
+> 證據：`最後推送 2026-08-04`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3919｜fork 233｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-03
+⭐ 3956｜fork 237｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-04
 
 ---
 

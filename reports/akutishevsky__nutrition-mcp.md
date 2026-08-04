@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 32 / 19 |
-| 最後更新 | 2026-07-27 |
+| 星數 / Fork | ⭐ 33 / 20 |
+| 最後更新 | 2026-08-04 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 60 個 |
-| 檢查時間 | 2026-08-03 22:12 |
+| 已掃描檔案 | 64 個 |
+| 檢查時間 | 2026-08-04 22:15 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`public/widgets/macros.test.ts`
+> 證據：`public/widgets/import-run.test.ts、public/widgets/import-time.test.ts、public/widgets/macros.test.ts`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-08-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 32｜fork 19｜語言 HTML｜建立 2026-03-08｜最後推送 2026-07-27
+⭐ 33｜fork 20｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-08-04
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2493 / 333 |
-| 最後更新 | 2026-08-03 |
+| 星數 / Fork | ⭐ 2502 / 335 |
+| 最後更新 | 2026-08-04 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-03 22:11 |
+| 檢查時間 | 2026-08-04 22:14 |
 
 ## 風險摘要
 
@@ -50,13 +50,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/harness/run_benchmark.py、speedreview/review.py、src/jcodemunch_mcp/cli/hooks.py、src/jcodemunch_mcp/cli/init.py、src/jcodemunch_mcp/cli/upgrade.py`
+> 證據：`benchmarks/harness/run_benchmark.py、benchmarks/offload/run_offload_criterion.py、speedreview/review.py、src/jcodemunch_mcp/cli/hooks.py、src/jcodemunch_mcp/cli/init.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/profile_language_filter.py、examples/groq_validate.py、munch-bench/munch_bench/inference.py、munch-bench/results/anthropic_claude-haiku-4-5_flask.json、munch-bench/results/anthropic_claude-sonnet-4-6_flask.json`
+> 證據：`benchmarks/offload/run_offload_criterion.py、benchmarks/profile_language_filter.py、examples/groq_validate.py、munch-bench/munch_bench/inference.py、munch-bench/results/anthropic_claude-haiku-4-5_flask.json`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 57 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 56 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-03`
+> 證據：`最後推送 2026-08-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2493｜fork 333｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-03
+⭐ 2502｜fork 335｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-04
 
 ---
 
