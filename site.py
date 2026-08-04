@@ -123,6 +123,20 @@ h1,h2,h3{font-family:var(--display)}
 .nav .gh{margin-left:auto;font-family:var(--mono);font-size:12px;
   color:var(--muted);text-decoration:none;transition:color .18s}
 .nav .gh:hover{color:var(--ink-2)}
+/* 主題切換：圖示代表「目前狀態」（深色時顯示月亮），純 CSS 屬性選擇器
+   驅動可見性，不靠 JS 在載入當下同步視覺——JS 只負責存偏好與切屬性。
+   按鈕預設不顯示，靠 theme.js 在 <head> 同步補上的 html.js 才現身：
+   JS 沒跑起來就不擺一顆按不動的死按鈕（同 auth 那格的原則）。 */
+html:not(.js) .theme-toggle{display:none}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;padding:0;flex:none;border:1px solid var(--line);
+  border-radius:var(--r);background:transparent;color:var(--ink-2);
+  cursor:pointer;transition:color .18s,border-color .18s}
+.theme-toggle:hover{color:var(--ink);border-color:var(--muted)}
+.theme-toggle svg{width:17px;height:17px;display:block}
+.theme-toggle .icon-sun{display:none}
+:root[data-theme="light"] .theme-toggle .icon-moon{display:none}
+:root[data-theme="light"] .theme-toggle .icon-sun{display:block}
 @media (max-width:720px){
   .nav .wrap{gap:18px;height:auto;padding-top:12px;padding-bottom:2px;
     flex-wrap:wrap}
@@ -236,7 +250,7 @@ input[type=search]{flex:1;min-width:190px;font:inherit;font-size:14px;
   background:var(--surface);color:var(--ink)}
 input[type=search]::placeholder{color:var(--muted)}
 input[type=search]:focus-visible,.chip:focus-visible,summary:focus-visible,
-a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+a:focus-visible,.theme-toggle:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
 
 .rows{display:flex;flex-direction:column;gap:9px}
 /* 狀態不靠彩色粗邊條表達——每列最左的結論標籤已經帶了顏色與文字，
@@ -800,6 +814,62 @@ AUTH_JS = """
 })();
 """
 
+# 淺色／深色切換：這段必須同步執行（不可 defer），因為它要在第一次
+# 繪製前把已存的偏好套到 <html data-theme>——晚了就會先閃深色再變淺色。
+# 這段 script 跑在 <head>，此刻 <body> 還沒解析，.theme-toggle 尚不存在，
+# 所以點擊改用事件代理掛在 document 上，不是 querySelector 抓按鈕。
+#
+# 這份檔案會被引用兩次：一次在 <head>（搶在繪製前定調 data-theme，此時
+# 按鈕還不存在，sync() 掃到空集合、等於沒事發生），一次緊跟在按鈕標籤
+# 後面（此時按鈕剛解析完，sync() 立刻把 aria-pressed 校正成真實狀態，
+# 不用等到 DOMContentLoaded——把「按鈕存在但 aria-pressed 說謊」的視窗
+# 從「整份文件解析完」縮到「這顆按鈕自己解析完」）。用 __mgThemeInit
+# 擋住第二次引用重覆掛 click 監聽器，否則點一下會被切兩次主題。
+# 同一支 script 也負責在 <html> 補上 .js class：CSS 靠這個 class 決定
+# 要不要顯示按鈕（見 .theme-toggle 規則），JS 沒跑起來就不會有一顆
+# 按不動的死按鈕——跟 auth 那格「fetch 沒回來就留白」是同一個原則。
+THEME_JS = """
+(function(){
+  var KEY='mg_theme';
+
+  function sync(){
+    var on=document.documentElement.getAttribute('data-theme')==='light';
+    var btns=document.querySelectorAll('.theme-toggle');
+    for(var i=0;i<btns.length;i++){
+      btns[i].setAttribute('aria-pressed', String(on));
+    }
+  }
+
+  if(!window.__mgThemeInit){
+    window.__mgThemeInit=true;
+    document.documentElement.classList.add('js');
+    try{
+      if(localStorage.getItem(KEY)==='light'){
+        document.documentElement.setAttribute('data-theme','light');
+      }
+    }catch(e){}
+
+    document.addEventListener('click', function(e){
+      var btn=e.target.closest&&e.target.closest('.theme-toggle');
+      if(!btn) return;
+      var wasLight=document.documentElement.getAttribute('data-theme')==='light';
+      if(wasLight){
+        document.documentElement.removeAttribute('data-theme');
+        try{ localStorage.removeItem(KEY); }catch(e){}
+      }else{
+        document.documentElement.setAttribute('data-theme','light');
+        try{ localStorage.setItem(KEY,'light'); }catch(e){}
+      }
+      sync();
+    });
+
+    document.addEventListener('DOMContentLoaded', sync);
+  }
+
+  sync();
+})();
+"""
+
 # 提交掃描請求／回報誤判：包成一顆 GitHub issue。表單只是入口，
 # 真正的流程仍在 GitHub 上公開進行——這個網站不私藏任何回報管道。
 SUBMIT_JS = """
@@ -1035,6 +1105,25 @@ def nav(slug: str) -> str:
         f'<menu>{"".join(items)}</menu>'
         f'<a class="gh" href="{REPO}" target="_blank" rel="noopener">'
         'GitHub ↗</a>'
+        # 淺色/深色由 theme.js 控制：切 <html data-theme> 並存 localStorage。
+        # 圖示顯示靠 CSS 屬性選擇器（見 .theme-toggle 規則），不靠 JS 算初始狀態。
+        '<button type="button" class="theme-toggle" aria-pressed="false" '
+        'aria-label="切換淺色／深色主題">'
+        '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" '
+        'stroke="currentColor" stroke-width="1.75" stroke-linecap="round" '
+        'aria-hidden="true"><circle cx="12" cy="12" r="4.5"/>'
+        '<path d="M12 2.5v2.5M12 19v2.5M4.5 12H2M22 12h-2.5'
+        'M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8'
+        'M7.4 16.6l-1.8 1.8"/></svg>'
+        '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" '
+        'stroke="currentColor" stroke-width="1.75" stroke-linecap="round" '
+        'stroke-linejoin="round" aria-hidden="true">'
+        '<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>'
+        '</svg></button>'
+        # 按鈕剛解析完就再引一次 theme.js：讓它把 aria-pressed 校正成
+        # 真實狀態，不用等到 DOMContentLoaded（瀏覽器快取，不算多打一次
+        # 網路請求；__mgThemeInit 擋住重覆掛 click 監聽器）。
+        f'<script src="{up}theme.js"></script>'
         # 登入狀態由 auth.js 填入：後端沒部署（本機預覽、Pages 備援）時
         # fetch 會失敗，這一格保持空白——不擺一顆按不動的死按鈕。
         '<span class="auth" id="auth" data-signin="登入"></span>'
@@ -1055,6 +1144,9 @@ def foot(when: str, up: str) -> str:
 # CSP：script-src 只留 'self'，行內指令碼一律拒收——對一個安全稽核
 # 網站，自己的內容安全政策就是招牌的一部分。
 SCRIPTS_OUT: dict[str, str] = {}
+# 主題切換要在每一頁都跑，且要在 <head> 同步執行——獨立於各頁自己的
+# scripts 參數，直接在模組層級注入，不必動到下面五個 page_*() 呼叫點。
+SCRIPTS_OUT["theme.js"] = THEME_JS
 
 
 def page(slug: str, title: str, desc: str, body: str, when: str,
@@ -1088,6 +1180,10 @@ def page(slug: str, title: str, desc: str, body: str, when: str,
         '<meta name="color-scheme" content="dark light">\n'
         f'<link rel="canonical" href="{url}">\n'
         f'<link rel="stylesheet" href="{up}style.css">\n'
+        # 不加 defer：要在畫面第一次繪製前套用已存的主題偏好，避免
+        # 先閃預設深色、載入後才跳成淺色。css 連結已先送出去平行下載，
+        # 這顆同步 script 只擋 body 解析，不擋 CSS 請求本身。
+        f'<script src="{up}theme.js"></script>\n'
         f'<link rel="preload" href="{up}display.woff2" as="font" '
         'type="font/woff2" crossorigin>\n'
         f'{head}'
