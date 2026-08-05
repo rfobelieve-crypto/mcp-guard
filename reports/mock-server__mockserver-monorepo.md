@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4930 / 1113 |
+| 星數 / Fork | ⭐ 4932 / 1113 |
 | 最後更新 | 2026-08-04 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 536 個 |
-| 檢查時間 | 2026-08-04 22:12 |
+| 檢查時間 | 2026-08-05 22:14 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4930｜fork 1113｜語言 Java｜建立 2013-02-26｜最後推送 2026-08-04
+⭐ 4932｜fork 1113｜語言 Java｜建立 2013-02-26｜最後推送 2026-08-04
 
 ---
 

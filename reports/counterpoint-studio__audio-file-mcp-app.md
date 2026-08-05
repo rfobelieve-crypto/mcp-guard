@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `counterpoint-studio/audio-file-mcp-app` |
 | 專案說明 | An MCP App for playing and inspecting local audio files in an MCP host. |
-| 星數 / Fork | ⭐ 42 / 2 |
+| 星數 / Fork | ⭐ 42 / 3 |
 | 最後更新 | 2026-07-10 |
 | 授權 | ISC License |
 | npm 套件 | `@counterpoint-studio/audio-file-mcp-app` |
 | 已掃描檔案 | 161 個 |
-| 檢查時間 | 2026-08-04 22:16 |
+| 檢查時間 | 2026-08-05 22:18 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 > 證據：`PASSWORD、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 25 天內有更新
+### ⚪ 資訊｜[維護] 最近 26 天內有更新
 
 專案仍在活躍維護中。
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42｜fork 2｜語言 TypeScript｜建立 2026-05-13｜最後推送 2026-07-10
+⭐ 42｜fork 3｜語言 TypeScript｜建立 2026-05-13｜最後推送 2026-07-10
 
 ---
 

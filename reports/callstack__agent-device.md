@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 3956 / 237 |
-| 最後更新 | 2026-08-04 |
+| 星數 / Fork | ⭐ 3973 / 238 |
+| 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-08-04 22:13 |
+| 已掃描檔案 | 408 個 |
+| 檢查時間 | 2026-08-05 22:14 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 6　⚪ 資訊 6
+🟡 中 1　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -49,10 +49,6 @@
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -63,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3956｜fork 237｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-04
+⭐ 3973｜fork 238｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-05
 
 ---
 

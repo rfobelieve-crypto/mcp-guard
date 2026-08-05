@@ -7,11 +7,11 @@
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Apple Health MCP server: query 190 HealthKit metrics from Claude, ChatGPT, Curso |
 | 星數 / Fork | ⭐ 2 / 0 |
-| 最後更新 | 2026-07-27 |
+| 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 19 個 |
-| 檢查時間 | 2026-08-04 22:15 |
+| 已掃描檔案 | 20 個 |
+| 檢查時間 | 2026-08-05 22:17 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、healthstore.mjs、receiver.mjs、receiver.test.mjs`
+> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、healthstore.mjs、healthstore.test.mjs、receiver.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apply-mcp-config.test.mjs、test/integration.mjs`
+> 證據：`apply-mcp-config.test.mjs、healthstore.test.mjs、test/integration.mjs`
 
 ### 🟡 中｜[權限] 會連往 8 個外部主機
 
@@ -41,7 +41,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「一般用途（未能明確判定）」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、healthstore.mjs、receiver.mjs、server.mjs`
+> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、healthstore.mjs、healthstore.test.mjs、receiver.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -49,7 +49,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 20 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -63,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-07-27
+⭐ 2｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-08-05
 
 ---
 

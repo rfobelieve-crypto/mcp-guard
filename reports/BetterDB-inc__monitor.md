@@ -7,11 +7,11 @@
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
 | 星數 / Fork | ⭐ 1231 / 71 |
-| 最後更新 | 2026-08-04 |
+| 最後更新 | 2026-08-05 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-08-04 22:15 |
+| 檢查時間 | 2026-08-05 22:16 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1231｜fork 71｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-04
+⭐ 1231｜fork 71｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-05
 
 ---
 
