@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `kubeshark/kubeshark` |
 | 專案說明 | eBPF-powered network observability for Kubernetes. Indexes L4/L7 traffic with fu |
-| 星數 / Fork | ⭐ 12030 / 544 |
+| 星數 / Fork | ⭐ 12031 / 543 |
 | 最後更新 | 2026-08-04 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 139 個 |
-| 檢查時間 | 2026-08-04 22:12 |
+| 檢查時間 | 2026-08-05 22:13 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`acme-v02.api.letsencrypt.org、api.kubeshark.com、charts.jetstack.io、docs.github.com、gh.io、golang.org、helm.kubeshark.com、kubeshark.com、kubeshark.example.com、kubeshark.github.io…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（142 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（141 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -48,7 +48,7 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12030｜fork 544｜語言 Go｜建立 2021-04-19｜最後推送 2026-08-04
+⭐ 12031｜fork 543｜語言 Go｜建立 2021-04-19｜最後推送 2026-08-04
 
 ---
 

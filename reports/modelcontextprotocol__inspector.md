@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10580 / 1461 |
-| 最後更新 | 2026-08-03 |
+| 星數 / Fork | ⭐ 10599 / 1464 |
+| 最後更新 | 2026-08-05 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-04 22:10 |
+| 檢查時間 | 2026-08-05 22:11 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 27 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、ctx.example、eslint.org…`
+> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、ctx.example、discord.gg…`
 
 ### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（71 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（80 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -67,11 +67,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
 
@@ -87,15 +87,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-03`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10580｜fork 1461｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-03
+⭐ 10599｜fork 1464｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-05
 
 ---
 

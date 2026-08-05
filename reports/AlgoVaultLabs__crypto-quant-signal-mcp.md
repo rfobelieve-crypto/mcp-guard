@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 5 / 4 |
-| 最後更新 | 2026-08-04 |
+| 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-04 22:15 |
+| 檢查時間 | 2026-08-05 22:17 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json、ops/cron/candle-basis-shadow-report.sh`
+> 證據：`.github/workflows/deploy.yml、audits/knowledge-shape-snapshot-2026-05-18.json`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-08-04
+⭐ 5｜fork 4｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-08-05
 
 ---
 

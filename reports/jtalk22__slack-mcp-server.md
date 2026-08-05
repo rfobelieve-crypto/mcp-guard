@@ -7,11 +7,11 @@
 | 稽核對象 | `jtalk22/slack-mcp-server` |
 | 專案說明 | Slack for your AI agent — session tokens, not OAuth. No app to register, no admi |
 | 星數 / Fork | ⭐ 29 / 20 |
-| 最後更新 | 2026-08-04 |
+| 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
-| 已掃描檔案 | 114 個 |
-| 檢查時間 | 2026-08-04 22:17 |
+| 已掃描檔案 | 117 個 |
+| 檢查時間 | 2026-08-05 22:18 |
 
 ## 風險摘要
 
@@ -35,13 +35,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`lib/lifeboat.js、lib/token-store.js、scripts/cloudflare-browser-tool.js、scripts/record-demo.js、scripts/release-preflight.js`
+> 證據：`lib/lifeboat.js、lib/token-store.js、scripts/browser-smoke.js、scripts/cloudflare-browser-tool.js、scripts/record-demo.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`lib/token-store.js、scripts/build-mobile-demo.js、scripts/check-public-surface-integrity.js、scripts/record-demo.js、scripts/release-preflight.js`
+> 證據：`lib/token-store.js、scripts/build-mobile-demo.js、scripts/check-public-surface-integrity.js、scripts/media-manifest.js、scripts/record-demo.js`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 29｜fork 20｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-08-04
+⭐ 29｜fork 20｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-08-05
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MicrosoftDocs/mcp` |
 | 專案說明 | Official Microsoft Learn MCP Server and CLI tool – powering LLMs and AI agents w |
-| 星數 / Fork | ⭐ 1811 / 222 |
-| 最後更新 | 2026-08-04 |
+| 星數 / Fork | ⭐ 1814 / 222 |
+| 最後更新 | 2026-08-05 |
 | 授權 | Creative Commons Attribution 4.0 International |
 | 已掃描檔案 | 40 個 |
-| 檢查時間 | 2026-08-04 22:14 |
+| 檢查時間 | 2026-08-05 22:16 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -64,7 +64,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1811｜fork 222｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-08-04
+⭐ 1814｜fork 222｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-08-05
 
 ---
 

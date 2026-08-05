@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
-| 專案說明 | Flights and hotels for AI agents. Hundreds of airlines plus the major booking si |
-| 星數 / Fork | ⭐ 1637 / 98 |
-| 最後更新 | 2026-08-04 |
+| 專案說明 | Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS  |
+| 星數 / Fork | ⭐ 1638 / 99 |
+| 最後更新 | 2026-08-05 |
 | 授權 | Other |
-| 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-08-04 22:14 |
+| 已掃描檔案 | 114 個 |
+| 檢查時間 | 2026-08-05 22:16 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 35 個外部主機
+### 🟡 中｜[權限] 會連往 36 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、context7.com、glama.ai、letsfg.co、letsfg.test、opencollective.com…`
+> 證據：`agent.example.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com、context7.com、glama.ai、letsfg.co、letsfg.test…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -34,13 +34,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`sdk/js/src/index.ts、sdk/mcp/src/index.ts、sdk/python/letsfg/cli.py、sdk/python/letsfg/client.py、sdk/python/letsfg/config.py`
+> 證據：`sdk/js/src/auth.test.ts、sdk/js/src/auth.ts、sdk/js/src/cli.ts、sdk/js/src/index.ts、sdk/mcp/src/index.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`sdk/mcp/src/index.test.ts`
+> 證據：`sdk/js/src/auth.ts、sdk/mcp/src/index.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -68,15 +68,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1637｜fork 98｜語言 Python｜建立 2026-03-01｜最後推送 2026-08-04
+⭐ 1638｜fork 99｜語言 Python｜建立 2026-03-01｜最後推送 2026-08-05
 
 ---
 

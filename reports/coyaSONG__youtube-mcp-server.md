@@ -7,11 +7,11 @@
 | 稽核對象 | `coyaSONG/youtube-mcp-server` |
 | 專案說明 | Citation-ready YouTube research for AI agents — transcript search, exact timesta |
 | 星數 / Fork | ⭐ 15 / 3 |
-| 最後更新 | 2026-08-04 |
+| 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | npm 套件 | `@coyasong/youtube-mcp-server` |
 | 已掃描檔案 | 40 個 |
-| 檢查時間 | 2026-08-04 22:17 |
+| 檢查時間 | 2026-08-05 22:18 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-04`
+> 證據：`最後推送 2026-08-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15｜fork 3｜語言 JavaScript｜建立 2025-03-31｜最後推送 2026-08-04
+⭐ 15｜fork 3｜語言 JavaScript｜建立 2025-03-31｜最後推送 2026-08-05
 
 ---
 
