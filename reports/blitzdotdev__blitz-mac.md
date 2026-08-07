@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `blitzdotdev/blitz-mac` |
 | 專案說明 | Native macOS App Store Connect tool with MCP. Submit iOS apps to App Store with  |
-| 星數 / Fork | ⭐ 1736 / 139 |
+| 星數 / Fork | ⭐ 1737 / 139 |
 | 最後更新 | 2026-07-14 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `blitz-macos`（registry 查無） |
 | 已掃描檔案 | 83 個 |
-| 檢查時間 | 2026-08-07 01:04 |
+| 檢查時間 | 2026-08-07 21:41 |
 
 ## 風險摘要
 
@@ -73,7 +73,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 24 天內有更新
+### ⚪ 資訊｜[維護] 最近 25 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1736｜fork 139｜語言 Swift｜建立 2026-03-10｜最後推送 2026-07-14
+⭐ 1737｜fork 139｜語言 Swift｜建立 2026-03-10｜最後推送 2026-07-14
 
 ---
 

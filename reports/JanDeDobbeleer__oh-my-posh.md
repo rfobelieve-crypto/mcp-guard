@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23223 / 2774 |
-| 最後更新 | 2026-08-06 |
+| 星數 / Fork | ⭐ 23233 / 2773 |
+| 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-08-07 01:01 |
+| 檢查時間 | 2026-08-07 21:38 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 25 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、api.brewfather.app、api.carbonintensity.org.uk、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org…`
+> 證據：`aka.ms、api.brewfather.app、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org、example.awsapps.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -70,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23223｜fork 2774｜語言 Go｜建立 2019-03-13｜最後推送 2026-08-06
+⭐ 23233｜fork 2773｜語言 Go｜建立 2019-03-13｜最後推送 2026-08-07
 
 ---
 

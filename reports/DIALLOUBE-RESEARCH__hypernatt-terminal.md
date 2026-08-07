@@ -10,8 +10,8 @@
 | 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `natt-node-mcp`（registry 查無） |
-| 已掃描檔案 | 59 個 |
-| 檢查時間 | 2026-08-07 01:06 |
+| 已掃描檔案 | 62 個 |
+| 檢查時間 | 2026-08-07 21:45 |
 
 ## 風險摘要
 
@@ -29,19 +29,19 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@coinbase/cdp-sdk@^1.51.0、@coinbase/x402@^2.1.0、@modelcontextprotocol/sdk@^1.12.1、@x402/core@^2.11.0、@x402/evm@^2.11.0、axios@^1.7.0…`
+> 證據：`@coinbase/cdp-sdk@^1.51.0、@coinbase/x402@^2.1.0、@modelcontextprotocol/sdk@^1.12.1、@x402/core@^2.11.0、@x402/evm@^2.11.0、axios@^1.19.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`agent-payment-error.mjs、base-tokens.mjs、examples/cdp_swap_execute.mjs、examples/swap_after_signal.py、examples/swap_readiness_check.py`
+> 證據：`agent-payment-error.mjs、base-tokens.mjs、examples/cdp_swap_execute.mjs、examples/hyperliquid/read_terrain.py、examples/liq_radar_interpret.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/btc_trap_aware_min.py、examples/swap_after_signal.py、examples/swap_readiness_check.py、scripts/verify-mcp-tool-count.mjs、server-card-tools.mjs`
+> 證據：`examples/hyperliquid/read_terrain.py、examples/liq_radar_interpret.py、examples/liq_radar_min.py、examples/swap_after_liq_radar.py、examples/swap_readiness_check.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -53,7 +53,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 

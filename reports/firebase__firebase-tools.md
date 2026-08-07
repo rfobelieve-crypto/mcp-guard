@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firebase/firebase-tools` |
 | 專案說明 | The Firebase Command Line Tools |
-| 星數 / Fork | ⭐ 4450 / 1235 |
+| 星數 / Fork | ⭐ 4451 / 1236 |
 | 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-08-07 01:02 |
+| 檢查時間 | 2026-08-07 21:39 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/agent-evals/src/runner/gemini-cli-runner.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（989 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（992 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4450｜fork 1235｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-08-07
+⭐ 4451｜fork 1236｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-08-07
 
 ---
 

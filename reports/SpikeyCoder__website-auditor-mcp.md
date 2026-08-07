@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-08-06 |
+| 最後更新 | 2026-08-07 |
 | 授權 | Other |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 78 個 |
-| 檢查時間 | 2026-08-07 01:05 |
+| 已掃描檔案 | 84 個 |
+| 檢查時間 | 2026-08-07 21:43 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`scripts/release.sh`
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.Example.com、api.example.com、api.example.test、api.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、registry.modelcontextprotocol.io、schema.org、static.modelcontextprotocol.io…`
+> 證據：`WWW.Example.com、api.example.com、api.example.test、api.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、portal.example.test、registry.modelcontextprotocol.io、schema.org…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -47,7 +47,7 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 22 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -65,7 +65,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -75,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-06
+⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-07
 
 ---
 

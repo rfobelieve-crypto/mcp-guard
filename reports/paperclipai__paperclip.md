@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 75764 / 14104 |
+| 星數 / Fork | ⭐ 75829 / 14120 |
 | 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 486 個 |
-| 檢查時間 | 2026-08-07 01:01 |
+| 已掃描檔案 | 487 個 |
+| 檢查時間 | 2026-08-07 21:38 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`cli/src/__tests__/agent-jwt-env.test.ts、cli/src/__tests__/allowed-hostname.test.ts、cli/src/__tests__/common.test.ts、cli/src/__tests__/configure.test.ts、cli/src/__tests__/connect.test.ts`
+> 證據：`cli/src/__tests__/agent-jwt-env.test.ts、cli/src/__tests__/allowed-hostname.test.ts、cli/src/__tests__/common.test.ts、cli/src/__tests__/config-store.test.ts、cli/src/__tests__/configure-repair.test.ts`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -71,11 +71,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-dedup-search.mjs、.github/scripts/check-pr-dependencies.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5066 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5078 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 71 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 72 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 75764｜fork 14104｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-07
+⭐ 75829｜fork 14120｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-07
 
 ---
 

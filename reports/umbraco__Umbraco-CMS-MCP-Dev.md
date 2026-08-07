@@ -7,11 +7,11 @@
 | 稽核對象 | `umbraco/Umbraco-CMS-MCP-Dev` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 39 / 4 |
-| 最後更新 | 2026-08-06 |
+| 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `@umbraco-cms/mcp-dev` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-07 01:05 |
+| 檢查時間 | 2026-08-07 21:43 |
 
 ## 風險摘要
 
@@ -31,23 +31,23 @@
 
 > 證據：`scripts/test-changed.mjs`
 
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`docs.umbraco.com、dotenvx.com、json.schemastore.org、opencollective.com、patreon.com、paulmillr.com、picsum.photos、static.modelcontextprotocol.io、tidelift.com`
+> 證據：`docs.umbraco.com、dotenvx.com、json.schemastore.org、opencollective.com、patreon.com、paulmillr.com、paypal.me、picsum.photos、polar.sh、static.modelcontextprotocol.io…`
 
-### 🔵 低｜[供應鏈] 有 32 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 33 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.28.0、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.31、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.31、dotenv@^16.5.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.28.0、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.35、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.35、dotenv@^16.5.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`jest.config.ts、jest.setup.ts、scripts/smoke-media-upload.mjs、scripts/test-changed.mjs`
+> 證據：`jest.config.ts、jest.setup.ts、scripts/smoke-media-upload.mjs、scripts/test-changed.mjs、src/index.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 16 個代理指令檔
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39｜fork 4｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-08-06
+⭐ 39｜fork 4｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-08-07
 
 ---
 
