@@ -7,10 +7,10 @@
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | open-source web + product analytics in one Go binary. ask your data in plain eng |
 | 星數 / Fork | ⭐ 2 / 1 |
-| 最後更新 | 2026-08-05 |
+| 最後更新 | 2026-08-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-05 22:17 |
+| 檢查時間 | 2026-08-07 01:05 |
 
 ## 風險摘要
 
@@ -28,23 +28,23 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`internal/api/sdktest/env.test.mjs`
+> 證據：`internal/api/sdk_flag_parity_test.go、internal/api/sdktest/env.test.mjs`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.example.com、attacker.example、chatgpt.com、claude.ai、cohere.com、commoncrawl.org、developer.amazon.com…`
+> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.example.com、attacker.example、chatgpt.com、claude.ai、cohere.com、commoncrawl.org、data.mixpanel.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、internal/api/auth.go、internal/api/sdk_regress_test.go、internal/api/sdktest/env.test.mjs`
+> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、internal/api/auth.go、internal/api/sdk_flag_parity_test.go、internal/api/sdk_regress_test.go`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-05
+⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-06
 
 ---
 

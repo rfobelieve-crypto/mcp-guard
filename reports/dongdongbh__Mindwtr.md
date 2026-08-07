@@ -1,21 +1,21 @@
 # MCP 安檢報告：dongdongbh/Mindwtr
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1603 / 92 |
-| 最後更新 | 2026-08-05 |
+| 星數 / Fork | ⭐ 1611 / 93 |
+| 最後更新 | 2026-08-07 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
-| 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-08-05 22:16 |
+| 已掃描檔案 | 409 個 |
+| 檢查時間 | 2026-08-07 01:04 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -25,7 +25,13 @@
 
 > 證據：`.github/workflows/ci.yml、.github/workflows/publish-mcp.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml`
 
-### 🟡 中｜[權限] 會連往 35 個外部主機
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`apps/cloud/src/server.test.ts`
+
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -43,7 +49,7 @@
 
 > 證據：`.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml、.github/workflows/update-aur-beta.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1603｜fork 92｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-05
+⭐ 1611｜fork 93｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-07
 
 ---
 

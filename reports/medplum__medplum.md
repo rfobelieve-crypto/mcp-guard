@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `medplum/medplum` |
 | 專案說明 | Medplum is a healthcare platform that helps you quickly develop high-quality com |
-| 星數 / Fork | ⭐ 2594 / 877 |
-| 最後更新 | 2026-08-05 |
+| 星數 / Fork | ⭐ 2596 / 878 |
+| 最後更新 | 2026-08-07 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `root` |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-08-05 22:15 |
+| 檢查時間 | 2026-08-07 01:04 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@
 
 > 證據：`.github/workflows/publish.yml、examples/medplum-eligibility-demo/src/pages/SearchPage.tsx、examples/medplum-eligibility-demo/src/scripts/deploy-bots.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（625 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（635 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +71,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2594｜fork 877｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-08-05
+⭐ 2596｜fork 878｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-08-07
 
 ---
 

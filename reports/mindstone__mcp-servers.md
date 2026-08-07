@@ -7,10 +7,10 @@
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
 | 星數 / Fork | ⭐ 10 / 4 |
-| 最後更新 | 2026-08-05 |
+| 最後更新 | 2026-08-06 |
 | 授權 | Other |
-| 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-08-05 22:17 |
+| 已掃描檔案 | 434 個 |
+| 檢查時間 | 2026-08-07 01:05 |
 
 ## 風險摘要
 
@@ -27,11 +27,11 @@
 WHEN TO USE:
 - Ins」`
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analyticsadmin.googleapis.com、analyticsdata.googleapis.com、api.elevenlabs.io、api.example.com、api.fathom.ai、attacker.example、cdn.gamma.app、docs.github.com、elevenlabs.io、evilgamma.app…`
+> 證據：`analyticsadmin.googleapis.com、analyticsdata.googleapis.com、api.elevenlabs.io、api.example.com、api.fathom.ai、attacker.example、cdn.gamma.app、docs.github.com、elevenlabs.io、evil.example…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -45,7 +45,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`connectors/_template/src/bridge.ts、connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/test/eval-gate-and-schemes.test.ts、connectors/browser-automation/test/security.test.ts`
+> 證據：`connectors/_template/src/bridge.ts、connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/path-safety.ts、connectors/browser-automation/test/eval-gate-and-schemes.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -59,11 +59,11 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`connectors/apple-shortcuts/__tests__/timeout.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/browser-client.ts、connectors/browser-automation/test/browser-client.test.ts、connectors/browser-automation/test/error-handling.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、connectors/office/AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
 ### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
 
@@ -79,7 +79,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-08-05
+⭐ 10｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-08-06
 
 ---
 

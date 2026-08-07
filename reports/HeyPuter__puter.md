@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 42978 / 3979 |
-| 最後更新 | 2026-08-05 |
+| 星數 / Fork | ⭐ 42987 / 3984 |
+| 最後更新 | 2026-08-06 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-08-05 22:13 |
+| 檢查時間 | 2026-08-07 01:01 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 102 個外部主機
+### 🟡 中｜[權限] 會連往 103 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.minimax.io、api.moonshot.ai、api.prelude.dev、api.puter.test…`
+> 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.minimax.io、api.moonshot.ai、api.neuralwatt.com、api.prelude.dev…`
 
 ### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42978｜fork 3979｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-05
+⭐ 42987｜fork 3984｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-06
 
 ---
 
