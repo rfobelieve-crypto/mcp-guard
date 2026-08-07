@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation via MCP for entrepreneurs at th |
-| 星數 / Fork | ⭐ 53 / 14 |
+| 星數 / Fork | ⭐ 54 / 14 |
 | 最後更新 | 2026-08-05 |
 | 授權 | MIT License |
 | 已掃描檔案 | 88 個 |
-| 檢查時間 | 2026-08-05 22:17 |
+| 檢查時間 | 2026-08-07 01:05 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 53｜fork 14｜語言 Python｜建立 2025-04-16｜最後推送 2026-08-05
+⭐ 54｜fork 14｜語言 Python｜建立 2025-04-16｜最後推送 2026-08-05
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `DIALLOUBE-RESEARCH/hypernatt-terminal` |
 | 專案說明 | BTC Decision Terminal for AI Agents — live vault-backed signals, on-chain proof, |
 | 星數 / Fork | ⭐ 3 / 0 |
-| 最後更新 | 2026-07-27 |
+| 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `natt-node-mcp`（registry 查無） |
 | 已掃描檔案 | 59 個 |
-| 檢查時間 | 2026-08-05 22:18 |
+| 檢查時間 | 2026-08-07 01:06 |
 
 ## 風險摘要
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 10 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-27`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-07-27
+⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-08-07
 
 ---
 

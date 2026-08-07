@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2691 / 137 |
-| 最後更新 | 2026-08-05 |
+| 最後更新 | 2026-08-07 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-08-05 22:15 |
+| 檢查時間 | 2026-08-07 01:03 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 74 個外部主機
+### 🟡 中｜[權限] 會連往 69 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.mapbox.com、api.maptiler.com、api.usaspending.gov、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、blog.stdlib.io、bost.ocks.org、chartability.github.io…`
+> 證據：`api.mapbox.com、api.maptiler.com、api.usaspending.gov、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、bost.ocks.org、chartability.github.io、creativecommons.org…`
 
 ### 🔵 低｜[供應鏈] 有 74 個依賴未鎖定版本
 
@@ -49,11 +49,11 @@
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.clinerules（Cline 規則）、.cursorrules（Cursor 規則）、.github/copilot-instructions.md（GitHub Copilot 指令）、.windsurfrules（Windsurf 規則）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、agent-skill/semiotic-charts/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.agents/skills/blog-post/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、agent-skill/semiotic-charts/SKILL.md（Agent Skill 指令（SKILL.md））、chatgpt-app-submission/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1493 段 description）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-08-05
+⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-08-07
 
 ---
 

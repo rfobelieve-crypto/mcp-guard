@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 37605 / 2991 |
-| 最後更新 | 2026-08-05 |
+| 星數 / Fork | ⭐ 37838 / 3018 |
+| 最後更新 | 2026-08-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 268 個 |
-| 檢查時間 | 2026-08-05 22:12 |
+| 檢查時間 | 2026-08-07 01:01 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`pkg/npm/install.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、scripts/audit-grammar-security.sh、scripts/extract_nomic_vectors.py、scripts/lint-mem-gate.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（408 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（422 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 37605｜fork 2991｜語言 C｜建立 2026-02-24｜最後推送 2026-08-05
+⭐ 37838｜fork 3018｜語言 C｜建立 2026-02-24｜最後推送 2026-08-06
 
 ---
 

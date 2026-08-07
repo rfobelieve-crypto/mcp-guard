@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
 | 專案說明 | Goal-driven, loop-powered marketing agents that crush your business goals 24/7 |
-| 星數 / Fork | ⭐ 3320 / 411 |
-| 最後更新 | 2026-07-31 |
+| 星數 / Fork | ⭐ 3325 / 411 |
+| 最後更新 | 2026-08-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-08-05 22:15 |
+| 檢查時間 | 2026-08-07 01:03 |
 
 ## 風險摘要
 
@@ -18,11 +18,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`MCP.ACME.DEV、access.stripe.com、accounts.google.com、acme.com、acme.test、api.openai.com、auth.acme.dev、broken.example.com、chatgpt.com、developers.facebook.com…`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`notfair-nextjs-blog/src/index.ts、notfair/bin/cli.mjs、notfair/src/app/api/agents/[agent]/threads/[thread]/live/route.ts、notfair/src/app/api/restart/route.test.ts、notfair/src/app/api/restart/route.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -34,13 +40,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`notfair/bin/cli.mjs、notfair/src/server/browser/chrome.ts、notfair/src/server/harness-usage.ts、notfair/src/server/mcp-server/tools.test.ts、notfair/src/server/mcp-server/tools.ts`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`notfair/bin/cli.mjs、notfair/src/app/api/agents/[agent]/threads/[thread]/live/route.ts、notfair/src/app/api/restart/route.test.ts、notfair/src/app/api/restart/route.ts、notfair/src/app/api/upgrade/route.test.ts`
+> 證據：`notfair/bin/cli.mjs、notfair/src/server/browser/chrome.ts、notfair/src/server/harness-usage.ts`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -52,7 +52,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、gemini/SKILL.md（Agent Skill 指令（SKILL.md））、google-ads/audit/SKILL.md（Agent Skill 指令（SKILL.md））、google-ads/copy/SKILL.md（Agent Skill 指令（SKILL.md））、google-ads/landing/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 43 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,15 +66,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-31`
+> 證據：`最後推送 2026-08-06`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3320｜fork 411｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-07-31
+⭐ 3325｜fork 411｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-06
 
 ---
 
