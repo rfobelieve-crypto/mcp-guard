@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `jtalk22/slack-mcp-server` |
-| 專案說明 | Slack for your AI agent — session tokens, not OAuth. No app to register, no admi |
-| 星數 / Fork | ⭐ 29 / 20 |
-| 最後更新 | 2026-08-06 |
+| 專案說明 | Slack for AI agents: DMs, search, threads, triage, actions - browser-session or  |
+| 星數 / Fork | ⭐ 29 / 21 |
+| 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
-| 已掃描檔案 | 117 個 |
-| 檢查時間 | 2026-08-07 01:06 |
+| 已掃描檔案 | 120 個 |
+| 檢查時間 | 2026-08-07 21:44 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.27.0、express@^5.2.1、playwright@^1.57.0`
+> 證據：`@modelcontextprotocol/sdk@^1.27.0、express@^5.2.1、playwright@^1.62.1`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`lib/lifeboat.js、lib/token-store.js、scripts/browser-smoke.js、scripts/cloudflare-browser-tool.js、scripts/record-demo.js`
+> 證據：`lib/lifeboat.js、lib/slack-client.js、lib/token-store.js、lib/tools.js、scripts/browser-smoke.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -55,7 +55,7 @@
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 151 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 152 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 29｜fork 20｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-08-06
+⭐ 29｜fork 21｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-08-07
 
 ---
 

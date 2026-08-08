@@ -7,15 +7,15 @@
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Apple Health MCP server: query 190 HealthKit metrics from Claude, ChatGPT, Curso |
 | 星數 / Fork | ⭐ 2 / 0 |
-| 最後更新 | 2026-08-06 |
+| 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 21 個 |
-| 檢查時間 | 2026-08-07 01:05 |
+| 已掃描檔案 | 22 個 |
+| 檢查時間 | 2026-08-07 21:43 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 1　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -36,12 +36,6 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`apps.apple.com、evil.example.com、glama.ai、insiders.vscode.dev、opencode.ai、smithery.ai、static.modelcontextprotocol.io、www.healthexport.dev`
-
-### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
-
-套件沒有填 repository 欄位，因此**無法自動核對**它是否真的由這個 repo 建置。這不代表有問題，但也代表少了一道可驗證性；安裝前建議自行確認發布者身分。
-
-> 證據：`npm: health-export-mcp（repository 欄位空白）`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-08-06
+⭐ 2｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-08-07
 
 ---
 

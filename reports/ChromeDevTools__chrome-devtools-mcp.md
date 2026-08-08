@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 48647 / 3377 |
-| 最後更新 | 2026-08-06 |
+| 星數 / Fork | ⭐ 48716 / 3382 |
+| 最後更新 | 2026-08-07 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 242 個 |
-| 檢查時間 | 2026-08-07 01:01 |
+| 已掃描檔案 | 248 個 |
+| 檢查時間 | 2026-08-07 21:38 |
 
 ## 風險摘要
 
@@ -35,11 +35,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`127.0.0.1.example.com、a.com、app.dev.localhost、b.com、chromeuxreport.googleapis.com、developer.chrome.com、developers.chrome.com、developers.google.com、docs.github.com、eslint.org…`
+> 證據：`127.0.0.1.example.com、a.com、app.dev.localhost、b.com、chromeuxreport.googleapis.com、developer.chrome.com、developers.chrome.com、docs.github.com、eslint.org、feross.org…`
 
 ### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
@@ -51,21 +51,21 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-to-npm-on-tag.yml、rollup.config.mjs、scripts/append-lighthouse-notices.ts、scripts/eval_gemini.ts、scripts/generate-cli.ts`
+> 證據：`.github/workflows/publish-to-npm-on-tag.yml、rollup.config.js、scripts/append-lighthouse-notices.ts、scripts/eval_gemini.ts、scripts/generate-cli.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`rollup.config.mjs、scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/generate-cli.ts、scripts/profile_mcp.ts`
+> 證據：`rollup.config.js、scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/generate-cli.ts、scripts/profile/profile_mcp.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/prepare.ts、scripts/test.mjs、scripts/update-lighthouse.ts、scripts/verify-npm-package.mjs、scripts/verify-server-json-version.ts`
+> 證據：`scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts、scripts/verify-npm-package.js、scripts/verify-server-json-version.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（119 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（109 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 48647｜fork 3377｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-08-06
+⭐ 48716｜fork 3382｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-08-07
 
 ---
 
