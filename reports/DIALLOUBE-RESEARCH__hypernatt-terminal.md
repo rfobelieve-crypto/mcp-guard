@@ -10,8 +10,8 @@
 | 最後更新 | 2026-08-07 |
 | 授權 | MIT License |
 | npm 套件 | `natt-node-mcp`（registry 查無） |
-| 已掃描檔案 | 62 個 |
-| 檢查時間 | 2026-08-07 21:45 |
+| 已掃描檔案 | 63 個 |
+| 檢查時間 | 2026-08-08 21:34 |
 
 ## 風險摘要
 
@@ -43,11 +43,11 @@
 
 > 證據：`examples/hyperliquid/read_terrain.py、examples/liq_radar_interpret.py、examples/liq_radar_min.py、examples/swap_after_liq_radar.py、examples/swap_readiness_check.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`skills/hypernatt-terminal/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`skills/hypernatt-liq-radar/SKILL.md（Agent Skill 指令（SKILL.md））、skills/hypernatt-terminal/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[供應鏈] npm 上查無此套件（natt-node-mcp）
 
@@ -67,7 +67,7 @@
 
 > 證據：`API_KEY、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 4017 / 245 |
-| 最後更新 | 2026-08-07 |
+| 星數 / Fork | ⭐ 4021 / 246 |
+| 最後更新 | 2026-08-08 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-08-07 21:40 |
+| 檢查時間 | 2026-08-08 21:31 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-07`
+> 證據：`最後推送 2026-08-08`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4017｜fork 245｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-07
+⭐ 4021｜fork 246｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-08
 
 ---
 

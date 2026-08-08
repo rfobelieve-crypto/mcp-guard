@@ -7,15 +7,15 @@
 | 稽核對象 | `RetrogradeLabs/lune-mcp-server` |
 | 專案說明 | Official MCP server for Lune Research: search top-tier papers and methodology gu |
 | 星數 / Fork | ⭐ 3 / 1 |
-| 最後更新 | 2026-06-13 |
+| 最後更新 | 2026-08-08 |
 | 授權 | MIT License |
 | npm 套件 | `@retrograde-labs/lune-mcp-server` |
-| 已掃描檔案 | 57 個 |
-| 檢查時間 | 2026-08-07 21:45 |
+| 已掃描檔案 | 62 個 |
+| 檢查時間 | 2026-08-08 21:34 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -31,11 +31,11 @@
 
 > 證據：`api.luneresearch.com、chatgpt.com、claude.ai、claude.com、developers.openai.com、evil.example.com、json.schemastore.org、luneresearch.com、mcp.luneresearch.com、platform.openai.com…`
 
-### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、express@^5.2.1、jose@^4.15.9、ky@^2.0.2、redis@^6.0.0、zod@^4.4.3…`
+> 證據：`@modelcontextprotocol/sdk@^1.30.0、express@^5.2.1、jose@^6.2.3、ky@^2.0.2、redis@^6.2.0、zod@^4.4.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -43,11 +43,17 @@
 
 > 證據：`src/api/client.ts、src/auth/token.ts、src/auth/verify.ts、src/cache.ts、src/cli.ts`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「文件／知識檢索」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`tests/unit/verify.test.ts`
+
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 34 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 30 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -61,11 +67,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 55 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-06-13`
+> 證據：`最後推送 2026-08-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -75,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-06-13
+⭐ 3｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-08-08
 
 ---
 
