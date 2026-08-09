@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
-| 星數 / Fork | ⭐ 44 / 7 |
+| 星數 / Fork | ⭐ 45 / 7 |
 | 最後更新 | 2026-07-21 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-08 21:34 |
+| 檢查時間 | 2026-08-09 21:37 |
 
 ## 風險摘要
 
@@ -68,7 +68,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 18 天內有更新
+### ⚪ 資訊｜[維護] 最近 19 天內有更新
 
 專案仍在活躍維護中。
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44｜fork 7｜語言 Python｜建立 2026-04-06｜最後推送 2026-07-21
+⭐ 45｜fork 7｜語言 Python｜建立 2026-04-06｜最後推送 2026-07-21
 
 ---
 

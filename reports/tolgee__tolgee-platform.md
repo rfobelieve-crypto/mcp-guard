@@ -11,7 +11,7 @@
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-08-08 21:31 |
+| 檢查時間 | 2026-08-09 21:33 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@
 
 > 證據：`e2e/cypress/common/flakyReport.ts、e2e/scripts/baseQuery/perf-test.sh`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（192 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（191 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +71,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

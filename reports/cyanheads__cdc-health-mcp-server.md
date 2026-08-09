@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
-| 星數 / Fork | ⭐ 3 / 0 |
-| 最後更新 | 2026-07-11 |
+| 星數 / Fork | ⭐ 4 / 0 |
+| 最後更新 | 2026-08-09 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 123 個 |
-| 檢查時間 | 2026-08-08 21:33 |
+| 已掃描檔案 | 127 個 |
+| 檢查時間 | 2026-08-09 21:35 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.10.14、pino-pretty@^13.1.3、zod@^4.4.3、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^4.1.9…`
+> 證據：`@cyanheads/mcp-ts-core@^0.11.1、pino-pretty@^13.1.3、zod@^4.4.3、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^4.1.9…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -41,7 +41,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/devcheck.ts、tests/config/server-config-edge.test.ts、tests/config/server-config.test.ts、tests/security/tools-security.test.ts`
+> 證據：`scripts/devcheck.ts、tests/config/server-config-edge.test.ts、tests/config/server-config.test.ts、tests/services/wonder/database-ids.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 33 個代理指令檔
 
@@ -63,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 29 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-11`
+> 證據：`最後推送 2026-08-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-07-11
+⭐ 4｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-08-09
 
 ---
 

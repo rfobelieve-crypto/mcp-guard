@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 4021 / 246 |
-| 最後更新 | 2026-08-08 |
+| 星數 / Fork | ⭐ 4031 / 247 |
+| 最後更新 | 2026-08-09 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-08-08 21:31 |
+| 檢查時間 | 2026-08-09 21:33 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`agent-device.dev、android.example、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、ios.example、metro.example.dev…`
 
-### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@limrun/api@^0.24.5、yaml@^2.9.0、@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.1、@types/node@^22.19.21、@types/pngjs@^6.0.5…`
+> 證據：`@limrun/api@^0.24.5、ipaddr.js@^2.5.0、tar-stream@^3.2.0、yaml@^2.9.0、yauzl@^3.4.0、@arethetypeswrong/cli@^0.18.5…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-08`
+> 證據：`最後推送 2026-08-09`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4021｜fork 246｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-08
+⭐ 4031｜fork 247｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-09
 
 ---
 
