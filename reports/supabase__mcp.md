@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2856 / 390 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 2857 / 390 |
+| 最後更新 | 2026-08-10 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 109 個 |
-| 檢查時間 | 2026-08-09 21:33 |
+| 已掃描檔案 | 110 個 |
+| 檢查時間 | 2026-08-10 21:43 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`packages/mcp-server-supabase/src/transports/stdio.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（104 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（101 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -46,7 +46,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 35 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2856｜fork 390｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-09
+⭐ 2857｜fork 390｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-10
 
 ---
 

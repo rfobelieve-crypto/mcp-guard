@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 4031 / 247 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 4046 / 247 |
+| 最後更新 | 2026-08-10 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-08-09 21:33 |
+| 已掃描檔案 | 417 個 |
+| 檢查時間 | 2026-08-10 21:42 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 15 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、android.example、assets.example、docs.renovatebot.com、en.wikipedia.org、example.test、get.maestro.mobile.dev、glama.ai、ios.example、metro.example.dev…`
+> 證據：`agent-device.dev、api.example.com、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev、glama.ai、metro.example.dev…`
 
 ### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
 
@@ -41,15 +41,15 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts、packages/maestro/test/conformance/differential/run.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts、packages/maestro/test/conformance/differential/run.ts`
+> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -57,11 +57,11 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/android-emulator/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ios-simulator/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
 
@@ -75,17 +75,17 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4031｜fork 247｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-09
+⭐ 4046｜fork 247｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-10
 
 ---
 

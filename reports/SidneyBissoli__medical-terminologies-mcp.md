@@ -1,35 +1,45 @@
 # MCP 安檢報告：SidneyBissoli/medical-terminologies-mcp
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, M |
-| 星數 / Fork | ⭐ 7 / 2 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 8 / 2 |
+| 最後更新 | 2026-08-10 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
-| 已掃描檔案 | 143 個 |
-| 檢查時間 | 2026-08-09 21:35 |
+| 已掃描檔案 | 157 個 |
+| 檢查時間 | 2026-08-10 21:44 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 30 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`src/evals/catalog.ts`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.com、api.example.test、browser.ihtsdotools.org、clinicaltables.nlm.nih.gov、confluence.ihtsdotools.org、exemplo.invalid、glama.ai、icd.who.int、icdaccessmanagement.who.int、icdcdn.who.int…`
+> 證據：`api.example.com、api.example.test、atcddd.fhi.no、browser.ihtsdotools.org、clinicaltables.nlm.nih.gov、confluence.ihtsdotools.org、creativecommons.org、exemplo.invalid、glama.ai、icd.who.int…`
 
-### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、pino@^10.2.1、zod@^4.4.3、@modelcontextprotocol/client@^2.0.0、@types/node@^26.1.2、esbuild@^0.28.0…`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.1.0、pino@^10.2.1、zod@^4.4.3、@modelcontextprotocol/client@^2.0.0、@sbissoli/mcp-evals@^0.1.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -67,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7｜fork 2｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-08-09
+⭐ 8｜fork 2｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-08-10
 
 ---
 

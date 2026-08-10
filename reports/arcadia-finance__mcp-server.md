@@ -7,11 +7,11 @@
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-05-04 |
+| 最後更新 | 2026-08-10 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
-| 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-08-09 21:35 |
+| 已掃描檔案 | 115 個 |
+| 檢查時間 | 2026-08-10 21:44 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 12 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -43,7 +43,7 @@
 
 > 證據：`.claude/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/clamm-liquidity/SKILL.md（Agent Skill 指令（SKILL.md））、skills/openclaw/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 73 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 60 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -55,13 +55,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`SECRET、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 97 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-05-04`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +71,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-05-04
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-08-10
 
 ---
 

@@ -11,7 +11,7 @@
 | 授權 | 無 |
 | npm 套件 | `@alisaitteke/docker-mcp` |
 | 已掃描檔案 | 27 個 |
-| 檢查時間 | 2026-08-09 21:37 |
+| 檢查時間 | 2026-08-10 21:46 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`eslint.org、feross.org、ghcr.io、hub.docker.com、opencollective.com、static.modelcontextprotocol.io、tidelift.com、www.patreon.com`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 
