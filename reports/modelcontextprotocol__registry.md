@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7125 / 937 |
-| 最後更新 | 2026-08-06 |
+| 星數 / Fork | ⭐ 7127 / 936 |
+| 最後更新 | 2026-08-09 |
 | 授權 | Other |
 | 已掃描檔案 | 215 個 |
-| 檢查時間 | 2026-08-08 21:28 |
+| 檢查時間 | 2026-08-09 21:30 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`Registry.Example.COM、accounts.google.com、acme-v02.api.letsencrypt.org、airtable.com、api-a.example.com、api-b.example.com、api-c.example.com、api.allversions.com、api.deleted.com、api.example.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -48,11 +48,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-06`
+> 證據：`最後推送 2026-08-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7125｜fork 937｜語言 Go｜建立 2025-02-05｜最後推送 2026-08-06
+⭐ 7127｜fork 936｜語言 Go｜建立 2025-02-05｜最後推送 2026-08-09
 
 ---
 

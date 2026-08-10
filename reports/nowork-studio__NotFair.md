@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
 | 專案說明 | Goal-driven, loop-powered marketing agents that crush your business goals 24/7 |
-| 星數 / Fork | ⭐ 3335 / 414 |
-| 最後更新 | 2026-08-08 |
+| 星數 / Fork | ⭐ 3336 / 414 |
+| 最後更新 | 2026-08-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 433 個 |
-| 檢查時間 | 2026-08-08 21:31 |
+| 檢查時間 | 2026-08-09 21:33 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`notfair-nextjs-blog/src/index.ts、notfair/bin/cli.mjs、notfair/src/app/api/agents/[agent]/threads/[thread]/live/route.ts、notfair/src/app/api/restart/route.test.ts、notfair/src/app/api/restart/route.ts`
+> 證據：`notfair-nextjs-blog/src/index.ts、notfair-nextjs-blog/test/merge.test.mjs、notfair/bin/cli.mjs、notfair/src/app/api/agents/[agent]/threads/[thread]/live/route.ts、notfair/src/app/api/restart/route.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -70,11 +70,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-08`
+> 證據：`最後推送 2026-08-09`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3335｜fork 414｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-08
+⭐ 3336｜fork 414｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-09
 
 ---
 

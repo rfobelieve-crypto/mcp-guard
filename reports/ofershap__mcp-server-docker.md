@@ -7,11 +7,11 @@
 | 稽核對象 | `ofershap/mcp-server-docker` |
 | 專案說明 | MCP server for Docker — manage containers, images, volumes from your IDE |
 | 星數 / Fork | ⭐ 2 / 1 |
-| 最後更新 | 2026-03-10 |
+| 最後更新 | 2026-08-09 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-docker-server` |
-| 已掃描檔案 | 16 個 |
-| 檢查時間 | 2026-08-08 21:35 |
+| 已掃描檔案 | 19 個 |
+| 檢查時間 | 2026-08-09 21:37 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 7 個外部主機
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`eslint.org、feross.org、opencollective.com、paulmillr.com、static.modelcontextprotocol.io、tidelift.com、www.patreon.com`
+> 證據：`agent-plugins.org、eslint.org、feross.org、opencollective.com、paulmillr.com、static.modelcontextprotocol.io、tidelift.com、www.patreon.com`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`@modelcontextprotocol/sdk@^1.26.0、dockerode@^4.0.0、zod@^3.25.0、@eslint/js@^9.0.0、@types/dockerode@^3.3.0、@types/node@^22.0.0…`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`skills/docker-management/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`llms.txt（給模型讀的站點說明（llms.txt））、skills/docker-management/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 10 段 description）
 
@@ -57,11 +57,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 152 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-03-10`
+> 證據：`最後推送 2026-08-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +71,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 1｜語言 TypeScript｜建立 2026-02-19｜最後推送 2026-03-10
+⭐ 2｜fork 1｜語言 TypeScript｜建立 2026-02-19｜最後推送 2026-08-09
 
 ---
 

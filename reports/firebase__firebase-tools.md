@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-08-08 21:30 |
+| 檢查時間 | 2026-08-09 21:32 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/agent-evals/src/runner/gemini-cli-runner.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（992 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（995 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
