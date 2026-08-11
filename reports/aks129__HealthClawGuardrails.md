@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
-| 星數 / Fork | ⭐ 28 / 9 |
-| 最後更新 | 2026-08-10 |
+| 星數 / Fork | ⭐ 29 / 9 |
+| 最後更新 | 2026-08-11 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-10 21:44 |
+| 檢查時間 | 2026-08-11 21:48 |
 
 ## 風險摘要
 
@@ -41,11 +41,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 78 個外部主機
+### 🟡 中｜[權限] 會連往 77 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.org、api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.healthex.io、api.linkedin.com、api.medplum.com、api.openai.com、api.resend.com、api.telegram.org…`
+> 證據：`agent.example.org、aidbox.app、api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.healthex.io、api.linkedin.com、api.medplum.com、api.openai.com、api.resend.com…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（91 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（89 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 97 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 93 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-10`
+> 證據：`最後推送 2026-08-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28｜fork 9｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-10
+⭐ 29｜fork 9｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-11
 
 ---
 

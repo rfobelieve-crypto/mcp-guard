@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
-| 專案說明 | Minimal database MCP server for Postgres, MySQL, SQL Server, MariaDB, SQLite. |
-| 星數 / Fork | ⭐ 3320 / 286 |
+| 專案說明 | Token conscious database MCP server for Postgres, MySQL, SQL Server, MariaDB, SQ |
+| 星數 / Fork | ⭐ 3335 / 286 |
 | 最後更新 | 2026-08-08 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
 | 已掃描檔案 | 241 個 |
-| 檢查時間 | 2026-08-10 21:42 |
+| 檢查時間 | 2026-08-11 21:47 |
 
 ## 風險摘要
 
@@ -81,7 +81,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 
@@ -95,7 +95,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3320｜fork 286｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-08-08
+⭐ 3335｜fork 286｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-08-08
 
 ---
 

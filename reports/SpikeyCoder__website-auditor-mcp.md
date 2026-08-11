@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-08-07 |
+| 最後更新 | 2026-08-11 |
 | 授權 | Other |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 84 個 |
-| 檢查時間 | 2026-08-10 21:45 |
+| 已掃描檔案 | 98 個 |
+| 檢查時間 | 2026-08-11 21:49 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`scripts/release.sh`
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.Example.com、api.example.com、api.example.test、api.test、api.website-auditor.io、not-a-real-domain-zzz.example、opencollective.com、portal.example.test、registry.modelcontextprotocol.io、schema.org…`
+> 證據：`WWW.Example.com、api.example.com、api.example.test、api.test、api.website-auditor.io、example.org、not-a-real-domain-zzz.example、opencollective.com、portal.example.test、registry.modelcontextprotocol.io…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -41,11 +41,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/config.ts、src/index.ts、src/telemetry/installId.ts、src/tools/context.ts、tests/keyRequiresRestart.test.ts`
+> 證據：`src/config.ts、src/http.ts、src/index.ts、src/telemetry/installId.ts、src/tools/context.ts`
 
-### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
-這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`codex-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/check-ai-visibility/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/compare-to-competitor/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/see-sample-report/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 22 段 description）
 
@@ -61,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-07`
+> 證據：`最後推送 2026-08-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -75,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-07
+⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-11
 
 ---
 
