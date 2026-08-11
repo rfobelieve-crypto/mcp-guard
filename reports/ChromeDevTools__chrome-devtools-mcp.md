@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 48814 / 3400 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 48872 / 3406 |
+| 最後更新 | 2026-08-10 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 248 個 |
-| 檢查時間 | 2026-08-09 21:31 |
+| 已掃描檔案 | 253 個 |
+| 檢查時間 | 2026-08-10 21:40 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 30 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts、scripts/verify-npm-package.js、scripts/verify-server-json-version.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（135 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（113 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,7 +75,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/a11y-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools-cli/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools/SKILL.md（Agent Skill 指令（SKILL.md））、skills/debug-optimize-lcp/SKILL.md（Agent Skill 指令（SKILL.md））、skills/memory-leak-debugging/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 225 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 239 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 48814｜fork 3400｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-08-09
+⭐ 48872｜fork 3406｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-08-10
 
 ---
 

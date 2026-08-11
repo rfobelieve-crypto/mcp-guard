@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2533 / 345 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 2539 / 348 |
+| 最後更新 | 2026-08-10 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-09 21:34 |
+| 檢查時間 | 2026-08-10 21:43 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 23 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、api.minimax.io、api.openai.com、api.z.ai、cdn.jsdelivr.net、claude.com、console.groq.com、domain.com、expressjs.com、fastapi.tiangolo.com…`
+> 證據：`api.groq.com、api.minimax.io、api.openai.com、api.z.ai、bford.info、cdn.jsdelivr.net、claude.com、console.groq.com、domain.com、expressjs.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -44,19 +44,19 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/benchmark.yml、benchmarks/cache_stability/measure.py、benchmarks/goldset/measure.py、benchmarks/harness/run_rag_baseline.py、benchmarks/profile_language_filter.py`
+> 證據：`.github/workflows/benchmark.yml、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/goldset/measure.py、benchmarks/harness/run_rag_baseline.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/harness/run_benchmark.py、benchmarks/offload/run_offload_criterion.py、speedreview/review.py、src/jcodemunch_mcp/cli/hooks.py、src/jcodemunch_mcp/cli/init.py`
+> 證據：`benchmarks/codex_surface/run_codex_arms.py、benchmarks/harness/run_benchmark.py、benchmarks/offload/run_offload_criterion.py、speedreview/review.py、src/jcodemunch_mcp/cli/hooks.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/offload/run_offload_criterion.py、benchmarks/profile_language_filter.py、examples/groq_validate.py、munch-bench/munch_bench/inference.py、munch-bench/results/anthropic_claude-haiku-4-5_flask.json`
+> 證據：`benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/profile_language_filter.py、examples/groq_validate.py、munch-bench/munch_bench/inference.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2533｜fork 345｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-09
+⭐ 2539｜fork 348｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-10
 
 ---
 

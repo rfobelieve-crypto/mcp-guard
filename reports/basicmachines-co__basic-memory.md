@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3611 / 251 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 3617 / 252 |
+| 最後更新 | 2026-08-10 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-09 21:33 |
+| 檢查時間 | 2026-08-10 21:42 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/providers/bm_cloud.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（67 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -58,7 +58,7 @@
 
 > 證據：`.agents/skills/adversarial-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-pr-issues/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/infographics/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/instrumentation/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/pr-create/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 70 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -76,7 +76,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3611｜fork 251｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-09
+⭐ 3617｜fork 252｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-10
 
 ---
 

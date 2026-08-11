@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27138 / 2237 |
-| 最後更新 | 2026-08-08 |
+| 星數 / Fork | ⭐ 27161 / 2239 |
+| 最後更新 | 2026-08-10 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-08-09 21:31 |
+| 檢查時間 | 2026-08-10 21:40 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 59 個外部主機
+### 🟡 中｜[權限] 會連往 56 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、accounts.google.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth.example.com、auth0.config.url…`
+> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth0.config.url、block.github.io、bsky.social…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -40,9 +40,9 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/install/claude_code.py、fastmcp_slim/fastmcp/cli/install/gemini_cli.py`
+> 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/deploy/state.py、fastmcp_slim/fastmcp/cli/install/claude_code.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（256 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（266 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.cursor/rules/core-mcp-objects.mdc（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 92 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 90 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,15 +70,15 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-08`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27138｜fork 2237｜語言 Python｜建立 2024-11-30｜最後推送 2026-08-08
+⭐ 27161｜fork 2239｜語言 Python｜建立 2024-11-30｜最後推送 2026-08-10
 
 ---
 

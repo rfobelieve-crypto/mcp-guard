@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation via MCP for entrepreneurs at th |
 | 星數 / Fork | ⭐ 54 / 14 |
-| 最後更新 | 2026-08-05 |
+| 最後更新 | 2026-08-10 |
 | 授權 | MIT License |
 | 已掃描檔案 | 88 個 |
-| 檢查時間 | 2026-08-09 21:35 |
+| 檢查時間 | 2026-08-10 21:44 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））、skills/expense-report/SKILL.md（Agent Skill 指令（SKILL.md））、skills/financial-overview/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 277 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 284 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -56,11 +56,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-05`
+> 證據：`最後推送 2026-08-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54｜fork 14｜語言 Python｜建立 2025-04-16｜最後推送 2026-08-05
+⭐ 54｜fork 14｜語言 Python｜建立 2025-04-16｜最後推送 2026-08-10
 
 ---
 
