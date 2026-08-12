@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `BeehiveInnovations/pal-mcp-server` |
 | 專案說明 | The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter  |
-| 星數 / Fork | ⭐ 11722 / 1034 |
+| 星數 / Fork | ⭐ 11723 / 1035 |
 | 最後更新 | 2025-12-15 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-08-11 21:45 |
+| 檢查時間 | 2026-08-12 21:43 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 6　⚪ 資訊 6
+🟡 中 2　🔵 低 7　⚪ 資訊 5
 
 ## 詳細發現
 
@@ -36,6 +36,12 @@
 
 > 證據：`mcp>=1.0.0、google-genai>=1.19.0、openai>=1.55.2、pydantic>=2.0.0、python-dotenv>=1.0.0`
 
+### 🔵 低｜[供應鏈] PyPI 套件未標示原始碼位置
+
+套件沒有填任何專案連結，因此**無法自動核對**它是否真的由這個 repo 建置。這不代表有問題，但也代表少了一道可驗證性。
+
+> 證據：`PyPI: pal-mcp-server`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「雲端服務串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
@@ -54,7 +60,7 @@
 
 > 證據：`clink/agents/base.py、run-server.sh、simulator_tests/test_analyze_validation.py、simulator_tests/test_codereview_validation.py、simulator_tests/test_debug_validation.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（145 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（144 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -67,10 +73,6 @@
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.claude/commands/fix-github-issue.md（AI 客戶端設定目錄下的指令檔）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
-
-### ⚪ 資訊｜[供應鏈] PyPI 上查無此套件（pal-mcp-server）
-
-原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 167 段 description）
 
@@ -88,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11722｜fork 1034｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15
+⭐ 11723｜fork 1035｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15
 
 ---
 

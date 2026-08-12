@@ -1,22 +1,28 @@
 # MCP 安檢報告：nowork-studio/NotFair
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
-| 專案說明 | Goal-driven, loop-powered marketing agents that crush your business goals 24/7 |
-| 星數 / Fork | ⭐ 3344 / 416 |
-| 最後更新 | 2026-08-11 |
+| 專案說明 | Open-source SEO, GEO, and marketing skills for AI agents. |
+| 星數 / Fork | ⭐ 3346 / 417 |
+| 最後更新 | 2026-08-12 |
 | 授權 | MIT License |
 | 已掃描檔案 | 433 個 |
-| 檢查時間 | 2026-08-11 21:47 |
+| 檢查時間 | 2026-08-12 21:45 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「文件／知識檢索」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`notfair/bin/cli.mjs、notfair/bin/native-bindings.mjs、notfair/scripts/copy-standalone-assets.mjs、notfair/src/app/api/chat/route.ts、notfair/src/app/api/restart/route.test.ts`
 
 ### 🟡 中｜[權限] 會連往 34 個外部主機
 
@@ -26,19 +32,13 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「文件／知識檢索」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`notfair-nextjs-blog/src/index.ts、notfair-nextjs-blog/test/merge.test.mjs、notfair/bin/cli.mjs、notfair/src/app/api/agents/[agent]/threads/[thread]/live/route.ts、notfair/src/app/api/restart/route.test.ts`
 
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`notfair/bin/cli.mjs、notfair/bin/native-bindings.mjs、notfair/scripts/copy-standalone-assets.mjs、notfair/src/app/api/chat/route.ts、notfair/src/app/api/restart/route.test.ts`
-
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「文件／知識檢索」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`notfair/bin/cli.mjs、notfair/src/server/browser/chrome.ts、notfair/src/server/harness-usage.ts`
 
@@ -56,9 +56,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
+### ⚪ 資訊｜[權限] 判定用途：文件／知識檢索
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -70,11 +70,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-11`
+> 證據：`最後推送 2026-08-12`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3344｜fork 416｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-11
+⭐ 3346｜fork 417｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-12
 
 ---
 

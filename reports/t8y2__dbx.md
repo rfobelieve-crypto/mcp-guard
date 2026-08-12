@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 20 MB lightweight cross-platform database client for 70+ databases, including My |
-| 星數 / Fork | ⭐ 14127 / 1447 |
-| 最後更新 | 2026-08-11 |
+| 星數 / Fork | ⭐ 14295 / 1467 |
+| 最後更新 | 2026-08-12 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-08-11 21:45 |
+| 檢查時間 | 2026-08-12 21:44 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/database-issue-catalog.mjs、.github/scripts/label-issue-database.mjs、.github/scripts/label-issue-database.test.mjs、.github/scripts/label-pull-request.mjs、.github/scripts/suggest-similar-issues.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1210 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1135 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-11`
+> 證據：`最後推送 2026-08-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 14127｜fork 1447｜語言 Rust｜建立 2026-04-29｜最後推送 2026-08-11
+⭐ 14295｜fork 1467｜語言 Rust｜建立 2026-04-29｜最後推送 2026-08-12
 
 ---
 
