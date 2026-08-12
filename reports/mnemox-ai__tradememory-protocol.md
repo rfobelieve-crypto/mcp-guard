@@ -7,10 +7,10 @@
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
 | 星數 / Fork | ⭐ 1408 / 165 |
-| 最後更新 | 2026-07-30 |
+| 最後更新 | 2026-08-11 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-08-10 21:44 |
+| 檢查時間 | 2026-08-11 21:48 |
 
 ## 風險摘要
 
@@ -48,11 +48,11 @@
 
 > 證據：`docs/research/build_arxiv_pdf.py、scripts/generate_index.py、src/tradememory/onboarding/setup_wizard.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.skills/strategy-validator/SKILL.md（Agent Skill 指令（SKILL.md））、.skills/tradememory/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/binance-skills-hub/trade-memory/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.skills/strategy-validator/SKILL.md（Agent Skill 指令（SKILL.md））、.skills/tradememory/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、llms.txt（給模型讀的站點說明（llms.txt））、skills/binance-skills-hub/trade-memory/SKILL.md（Agent Skill 指令（SKILL.md））、skills/tradememory-bridge/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 102 段 description）
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 11 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-30`
+> 證據：`最後推送 2026-08-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1408｜fork 165｜語言 Python｜建立 2026-02-23｜最後推送 2026-07-30
+⭐ 1408｜fork 165｜語言 Python｜建立 2026-02-23｜最後推送 2026-08-11
 
 ---
 

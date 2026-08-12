@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `AION-Analytics/aion-indian-market-intelligence` |
 | 專案說明 | Structured market intelligence for Indian financial events, macro context, and s |
-| 星數 / Fork | ⭐ 23 / 1 |
+| 星數 / Fork | ⭐ 22 / 1 |
 | 最後更新 | 2026-06-11 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 54 個 |
-| 檢查時間 | 2026-08-10 21:44 |
+| 檢查時間 | 2026-08-11 21:49 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@
 
 > 證據：`API_KEY`
 
-### ⚪ 資訊｜[維護] 最近 60 天內有更新
+### ⚪ 資訊｜[維護] 最近 61 天內有更新
 
 專案仍在活躍維護中。
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-06-11
+⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-06-11
 
 ---
 
