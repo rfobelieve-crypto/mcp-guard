@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `droidrun/mobilerun` |
 | 專案說明 | Automate your mobile devices with natural language commands - an LLM agnostic mo |
-| 星數 / Fork | ⭐ 9042 / 973 |
-| 最後更新 | 2026-08-12 |
+| 星數 / Fork | ⭐ 9050 / 975 |
+| 最後更新 | 2026-08-13 |
 | 授權 | MIT License |
-| 已掃描檔案 | 186 個 |
-| 檢查時間 | 2026-08-12 21:44 |
+| 已掃描檔案 | 193 個 |
+| 檢查時間 | 2026-08-13 21:44 |
 
 ## 風險摘要
 
@@ -18,13 +18,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 45 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、api.anthropic.com、api.deepseek.com、api.example.com、api.minimax.io、api.minimaxi.chat、api.minimaxi.com、api.mobilerun.ai、api.openai.com、api.z.ai…`
+> 證據：`accounts.google.com、accounts.x.ai、another-attacker.invalid、api.anthropic.com、api.deepseek.com、api.example.com、api.minimax.io、api.minimaxi.chat、api.minimaxi.com、api.mobilerun.ai…`
 
-### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -40,7 +40,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`mobilerun/agent/trajectory/writer.py、mobilerun/agent/utils/chat_utils.py、mobilerun/agent/utils/oauth/anthropic_oauth_llm.py、mobilerun/agent/utils/oauth/gemini_oauth_code_assist_llm.py、mobilerun/agent/utils/oauth/openai_oauth_llm.py`
+> 證據：`mobilerun/agent/trajectory/writer.py、mobilerun/agent/utils/chat_utils.py、mobilerun/agent/utils/oauth/login_timeout.py、mobilerun/agent/utils/tracing_setup.py、mobilerun/agent/utils/trajectory.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -60,13 +60,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-12`
+> 證據：`最後推送 2026-08-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9042｜fork 973｜語言 Python｜建立 2025-04-12｜最後推送 2026-08-12
+⭐ 9050｜fork 975｜語言 Python｜建立 2025-04-12｜最後推送 2026-08-13
 
 ---
 

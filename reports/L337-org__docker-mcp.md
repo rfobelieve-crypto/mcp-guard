@@ -7,10 +7,10 @@
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
 | 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-08-10 |
+| 最後更新 | 2026-08-13 |
 | 授權 | MIT License |
-| 已掃描檔案 | 108 個 |
-| 檢查時間 | 2026-08-12 21:49 |
+| 已掃描檔案 | 129 個 |
+| 檢查時間 | 2026-08-13 21:49 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 12 個外部主機
+### 🟡 中｜[權限] 會連往 13 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、formulae.brew.sh、glama.ai、hub.docker.com、nodejs.org…`
+> 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、formulae.brew.sh、glama.ai、hub.docker.com…`
 
 ### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
 
@@ -72,13 +72,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、tests/integration/test_buildx.py、tests/integration/test_compose.py`
+> 證據：`docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、tests/integration/test_buildx.py、tests/integration/test_cli_flag_drift.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/commands/docker-sdk.md（AI 客戶端設定目錄下的指令檔）、.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.claude/commands/docker-sdk.md（AI 客戶端設定目錄下的指令檔）、.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills/l337-docker/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 32 段 description）
 
@@ -94,11 +94,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-10`
+> 證據：`最後推送 2026-08-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -108,7 +108,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-10
+⭐ 5｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-13
 
 ---
 

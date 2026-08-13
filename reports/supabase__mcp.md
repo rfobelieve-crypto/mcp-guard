@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2859 / 391 |
-| 最後更新 | 2026-08-12 |
+| 星數 / Fork | ⭐ 2862 / 392 |
+| 最後更新 | 2026-08-13 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 110 個 |
-| 檢查時間 | 2026-08-12 21:46 |
+| 檢查時間 | 2026-08-13 21:46 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-sdk.dev、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、linear.app、login.acme.com、mcp.supabase.com、postgrest.org、registry.modelcontextprotocol.io…`
+> 證據：`ai-sdk.dev、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、firewall.depthfirst.com、linear.app、login.acme.com、mcp.supabase.com、postgrest.org…`
 
 ### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
 
@@ -36,7 +36,7 @@
 
 > 證據：`packages/mcp-server-supabase/src/transports/stdio.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（102 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（103 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -60,11 +60,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-12`
+> 證據：`最後推送 2026-08-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2859｜fork 391｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-12
+⭐ 2862｜fork 392｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-13
 
 ---
 
