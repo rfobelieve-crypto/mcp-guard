@@ -7,11 +7,11 @@
 | 稽核對象 | `truss44/mcp-crypto-price` |
 | 專案說明 | A Model Context Protocol (MCP) server that provides real-time cryptocurrency ana |
 | 星數 / Fork | ⭐ 39 / 9 |
-| 最後更新 | 2026-08-09 |
+| 最後更新 | 2026-08-12 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-crypto-price` |
 | 已掃描檔案 | 53 個 |
-| 檢查時間 | 2026-08-11 21:48 |
+| 檢查時間 | 2026-08-12 21:47 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、hono@^4.12.27、zod@^4.4.3、@eslint/js@^10.0.1、@semantic-release/changelog@^6.0.3、@semantic-release/exec@^7.1.0…`
+> 證據：`@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、zod@^4.4.3、@eslint/js@^10.0.1、@semantic-release/changelog@^6.0.3、@semantic-release/exec@^7.1.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,11 +69,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-09
+⭐ 39｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-12
 
 ---
 

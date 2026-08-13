@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10646 / 1471 |
-| 最後更新 | 2026-08-11 |
+| 星數 / Fork | ⭐ 10653 / 1471 |
+| 最後更新 | 2026-08-12 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-11 21:44 |
+| 檢查時間 | 2026-08-12 21:42 |
 
 ## 風險摘要
 
@@ -25,13 +25,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 27 個外部主機
+### 🟡 中｜[權限] 會連往 26 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、ctx.example、discord.gg…`
 
-### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 23 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（74 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（78 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,11 +91,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-11`
+> 證據：`最後推送 2026-08-12`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10646｜fork 1471｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-11
+⭐ 10653｜fork 1471｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-12
 
 ---
 
