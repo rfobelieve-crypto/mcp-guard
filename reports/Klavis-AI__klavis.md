@@ -10,7 +10,7 @@
 | 最後更新 | 2026-06-01 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 514 個 |
-| 檢查時間 | 2026-08-12 21:44 |
+| 檢查時間 | 2026-08-13 21:45 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`examples/agno-klavis/main.py、examples/claude-klavis/python/main.py、examples/crewai-klavis/python/main.py、examples/google_adk-klavis/python/my_agent/agent.py、examples/google_genai-klavis/python/main.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（294 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（295 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 72 天內有更新
+### ⚪ 資訊｜[維護] 最近 73 天內有更新
 
 專案仍在活躍維護中。
 
