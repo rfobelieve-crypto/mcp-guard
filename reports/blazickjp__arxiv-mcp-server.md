@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A Model Context Protocol server for searching and analyzing arXiv papers |
-| 星數 / Fork | ⭐ 3047 / 246 |
-| 最後更新 | 2026-07-29 |
+| 星數 / Fork | ⭐ 3053 / 246 |
+| 最後更新 | 2026-08-14 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 71 個 |
-| 檢查時間 | 2026-08-13 21:46 |
+| 已掃描檔案 | 75 個 |
+| 檢查時間 | 2026-08-14 21:27 |
 
 ## 風險摘要
 
@@ -18,23 +18,23 @@
 
 ## 詳細發現
 
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/workflows/build-mcpb.yml、scripts/smoke_installed_wheel.py、tests/test_import_boundaries.py、tests/test_release_metadata.py`
+
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`scripts/build-mcpb.sh、src/arxiv_mcp_server/arxiv_api.py、src/arxiv_mcp_server/resources/papers.py、src/arxiv_mcp_server/tools/latex.py、tests/tools/test_latex.py`
 
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`tests/test_import_boundaries.py`
-
 ### 🟡 中｜[權限] 會連往 7 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`anthropic.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io`
+> 證據：`api.semanticscholar.org、arxiv.example.com、arxiv.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.schemastore.org`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish.yml`
+> 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -68,11 +68,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 16 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-29`
+> 證據：`最後推送 2026-08-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3047｜fork 246｜語言 Python｜建立 2024-11-29｜最後推送 2026-07-29
+⭐ 3053｜fork 246｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-14
 
 ---
 
