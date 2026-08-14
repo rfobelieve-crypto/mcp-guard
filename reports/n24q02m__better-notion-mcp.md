@@ -7,11 +7,11 @@
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 36 / 12 |
-| 最後更新 | 2026-08-13 |
+| 最後更新 | 2026-08-14 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/better-notion-mcp` |
-| 已掃描檔案 | 124 個 |
-| 檢查時間 | 2026-08-13 21:48 |
+| 已掃描檔案 | 125 個 |
+| 檢查時間 | 2026-08-14 21:31 |
 
 ## 風險摘要
 
@@ -25,17 +25,17 @@
 
 > 證據：`scripts/cf-deploy.mjs、scripts/clean-venv.mjs、scripts/deploy_cf.py、tests/live/stdio-direct.live.test.ts、tests/test-oauth-mcp.mjs`
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟡 中｜[權限] 會連往 22 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.notion.com、attacker.example、better-notion-mcp.example.com、better-notion-mcp.n24q02m.com、biomejs.dev、docs.renovatebot.com、glama.ai、host.docker.internal、kv.internal、mcp.example.com…`
+> 證據：`api.notion.com、attacker.example、better-notion-mcp.example.com、biomejs.dev、docs.renovatebot.com、glama.ai、host.docker.internal、kv.internal、mcp.example.com、mcp.n24q02m.com…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cloudflare/containers@^0.3.7、@modelcontextprotocol/sdk@^1.29.0、@notionhq/client@^5.23.2、zod@^4.4.3、@biomejs/biome@^2.5.4、@cloudflare/workers-types@^5.20260718.1…`
+> 證據：`@cloudflare/containers@^0.3.7、@modelcontextprotocol/sdk@^1.30.0、@notionhq/client@^5.25.2、zod@^4.4.3、@biomejs/biome@^2.5.7、@cloudflare/workers-types@^5.20260804.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 12｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-08-13
+⭐ 36｜fork 12｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-08-14
 
 ---
 

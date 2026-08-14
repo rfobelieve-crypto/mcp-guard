@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 5729 / 591 |
-| 最後更新 | 2026-08-13 |
+| 星數 / Fork | ⭐ 5840 / 602 |
+| 最後更新 | 2026-08-14 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-08-13 21:45 |
+| 檢查時間 | 2026-08-14 21:26 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`aistudio.google.com、api.example.dev、api.repowise.dev、code.visualstudio.com、console.anthropic.com、cursor.com、developers.openai.com、docs.claude.com、docs.litellm.ai、glama.ai…`
 
-### 🔵 低｜[供應鏈] 有 26 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py、packages/cli/src/repowise/cli/commands/distill_cmd.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（121 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（131 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5729｜fork 591｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-13
+⭐ 5840｜fork 602｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-14
 
 ---
 
