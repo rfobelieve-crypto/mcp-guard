@@ -1,29 +1,23 @@
 # MCP 安檢報告：bytebase/dbhub
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
 | 專案說明 | Token conscious database MCP server for Postgres, MySQL, SQL Server, MariaDB, SQ |
-| 星數 / Fork | ⭐ 3355 / 287 |
-| 最後更新 | 2026-08-08 |
+| 星數 / Fork | ⭐ 3360 / 286 |
+| 最後更新 | 2026-08-15 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
 | 已掃描檔案 | 241 個 |
-| 檢查時間 | 2026-08-14 21:27 |
+| 檢查時間 | 2026-08-15 21:22 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟡 中 2　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/build-mcpb.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts`
 
 ### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
 
@@ -49,15 +43,21 @@
 
 > 證據：`npm: dbhub（repository 欄位空白）`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/build-mcpb.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/mcpb-common.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/config/__tests__/env.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/sync-version.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/__tests__/plugin-consistency.test.ts、src/config/__tests__/env.test.ts`
 
@@ -71,9 +71,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：資料庫存取
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -81,11 +81,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-08`
+> 證據：`最後推送 2026-08-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3355｜fork 287｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-08-08
+⭐ 3360｜fork 286｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-08-15
 
 ---
 
