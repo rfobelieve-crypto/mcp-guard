@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 235 / 47 |
-| 最後更新 | 2026-08-10 |
+| 最後更新 | 2026-08-15 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 78 個 |
-| 檢查時間 | 2026-08-14 21:29 |
+| 已掃描檔案 | 76 個 |
+| 檢查時間 | 2026-08-15 21:24 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 6 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.google.com、astral.sh、console.cloud.google.com、files.pythonhosted.org、ga4.builditwithai.xyz、ga4mcp.com、static.modelcontextprotocol.io、us.i.posthog.com`
+> 證據：`analytics.google.com、astral.sh、files.pythonhosted.org、ga4.builditwithai.xyz、ga4mcp.com、static.modelcontextprotocol.io`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -66,13 +66,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、SECRET、TOKEN`
+> 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-10`
+> 證據：`最後推送 2026-08-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 235｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-08-10
+⭐ 235｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-08-15
 
 ---
 
