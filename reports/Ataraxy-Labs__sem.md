@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
-| 星數 / Fork | ⭐ 3302 / 97 |
-| 最後更新 | 2026-08-13 |
+| 星數 / Fork | ⭐ 3302 / 99 |
+| 最後更新 | 2026-08-16 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
-| 已掃描檔案 | 90 個 |
-| 檢查時間 | 2026-08-15 21:22 |
+| 已掃描檔案 | 104 個 |
+| 檢查時間 | 2026-08-16 21:21 |
 
 ## 風險摘要
 
-🟠 高 1　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -24,6 +24,12 @@
 npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
 
 > 證據：`"postinstall": "node ./scripts/postinstall.mjs"`
+
+### 🟡 中｜[權限] 會連往 4 個外部主機
+
+確認這些連線是功能必需的，而不是把你的資料送到第三方。
+
+> 證據：`app.com、ataraxy-labs.com、code.claude.com、static.modelcontextprotocol.io`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -42,12 +48,6 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、scripts/package-meta.mjs`
-
-### 🔵 低｜[權限] 會連往 3 個外部主機
-
-確認這些連線是功能必需的，而不是把你的資料送到第三方。
-
-> 證據：`app.com、ataraxy-labs.com、static.modelcontextprotocol.io`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
@@ -69,11 +69,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3302｜fork 97｜語言 Rust｜建立 2026-02-05｜最後推送 2026-08-13
+⭐ 3302｜fork 99｜語言 Rust｜建立 2026-02-05｜最後推送 2026-08-16
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 40370 / 4589 |
-| 最後更新 | 2026-08-14 |
+| 星數 / Fork | ⭐ 40560 / 4598 |
+| 最後更新 | 2026-08-16 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-08-15 21:20 |
+| 檢查時間 | 2026-08-16 21:19 |
 
 ## 風險摘要
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts、apps/server/src/openapi/generator.test.ts、apps/server/src/services/stylesheet-preflight.ts`
+> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts、apps/server/src/openapi/generator.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（102 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（90 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,11 +73,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-14`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 40370｜fork 4589｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-14
+⭐ 40560｜fork 4598｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-16
 
 ---
 
