@@ -7,11 +7,11 @@
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 29 / 9 |
-| 最後更新 | 2026-08-15 |
+| 最後更新 | 2026-08-16 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-15 21:23 |
+| 檢查時間 | 2026-08-16 21:23 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（91 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（89 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-15`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 29｜fork 9｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-15
+⭐ 29｜fork 9｜語言 Python｜建立 2025-03-31｜最後推送 2026-08-16
 
 ---
 

@@ -6,19 +6,25 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4940 / 1114 |
-| 最後更新 | 2026-08-15 |
+| 星數 / Fork | ⭐ 4942 / 1114 |
+| 最後更新 | 2026-08-16 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 536 個 |
-| 檢查時間 | 2026-08-15 21:21 |
+| 檢查時間 | 2026-08-16 21:20 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
+
+若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
+
+> 證據：`.opencode/skills/renew-test-certs/SKILL.md｜「- `authentication/mtls/leaf-key.pem` is **PKCS#1** (`-----BEGIN RSA PRIVATE KEY-----`) and is consumed by `PEMToFileTest` for traditional-RSA encod…」`
+
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -36,7 +42,7 @@
 
 > 證據：`.opencode/plugins/buildkite-status.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 58 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 59 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -56,11 +62,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-15`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4940｜fork 1114｜語言 Java｜建立 2013-02-26｜最後推送 2026-08-15
+⭐ 4942｜fork 1114｜語言 Java｜建立 2013-02-26｜最後推送 2026-08-16
 
 ---
 

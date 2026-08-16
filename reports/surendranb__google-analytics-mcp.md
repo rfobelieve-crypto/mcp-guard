@@ -1,22 +1,34 @@
 # MCP 安檢報告：surendranb/google-analytics-mcp
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 235 / 47 |
-| 最後更新 | 2026-08-15 |
-| 授權 | Apache License 2.0 |
-| 已掃描檔案 | 76 個 |
-| 檢查時間 | 2026-08-15 21:24 |
+| 最後更新 | 2026-08-16 |
+| 授權 | MIT License |
+| 已掃描檔案 | 82 個 |
+| 檢查時間 | 2026-08-16 21:24 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`AGENTS.md｜「…taller (Configures Claude Code, Cursor, Claude Desktop & Antigravity) curl -fsSL "https://ga4.builditwithai.xyz/install" | bash」`
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」`
 
 ### 🟡 中｜[權限] 會連往 6 個外部主機
 
@@ -48,11 +60,11 @@
 
 > 證據：`ga4_mcp/telemetry.py、npm/bin/index.js`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 16 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 18 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））、skills/bot-traffic-detection/SKILL.md（Agent Skill 指令（SKILL.md））、skills/channel-acquisition/SKILL.md（Agent Skill 指令（SKILL.md））、skills/common-metric-names/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））、skills/bot-traffic-detection/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 16 段 description）
 
@@ -68,11 +80,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-15`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 235｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-08-15
+⭐ 235｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-08-16
 
 ---
 

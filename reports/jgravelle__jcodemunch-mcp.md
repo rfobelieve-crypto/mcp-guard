@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2564 / 354 |
-| 最後更新 | 2026-08-15 |
+| 星數 / Fork | ⭐ 2567 / 355 |
+| 最後更新 | 2026-08-16 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-15 21:22 |
+| 檢查時間 | 2026-08-16 21:22 |
 
 ## 風險摘要
 
@@ -44,7 +44,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/benchmark.yml、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/goldset/measure.py、benchmarks/harness/run_rag_baseline.py`
+> 證據：`.github/workflows/benchmark.yml、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/description_smells/score_descriptions.py、benchmarks/goldset/measure.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 56 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 55 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-15`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2564｜fork 354｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-15
+⭐ 2567｜fork 355｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-16
 
 ---
 

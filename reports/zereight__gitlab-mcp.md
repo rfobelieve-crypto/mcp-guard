@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | First gitlab mcp for you, building together |
-| 星數 / Fork | ⭐ 1889 / 341 |
-| 最後更新 | 2026-08-10 |
+| 星數 / Fork | ⭐ 1889 / 340 |
+| 最後更新 | 2026-08-16 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
-| 已掃描檔案 | 291 個 |
-| 檢查時間 | 2026-08-15 21:22 |
+| 已掃描檔案 | 295 個 |
+| 檢查時間 | 2026-08-16 21:22 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`gitlab-client-pool.ts、index.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs`
+> 證據：`gitlab-client-pool.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs、oauth.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -75,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-10`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1889｜fork 341｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-08-10
+⭐ 1889｜fork 340｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-08-16
 
 ---
 

@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 4098 / 254 |
-| 最後更新 | 2026-08-14 |
+| 星數 / Fork | ⭐ 4106 / 255 |
+| 最後更新 | 2026-08-16 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-08-15 21:21 |
+| 檢查時間 | 2026-08-16 21:21 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 6　⚪ 資訊 6
+🟡 中 1　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -35,7 +35,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/interactor-types.ts、packages/contracts/src/snapshot-tap-point-policy.test.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -48,10 +48,6 @@
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -77,15 +73,15 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-14`
+> 證據：`最後推送 2026-08-16`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4098｜fork 254｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-14
+⭐ 4106｜fork 255｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-16
 
 ---
 
