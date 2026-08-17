@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7158 / 947 |
+| 星數 / Fork | ⭐ 7162 / 948 |
 | 最後更新 | 2026-08-12 |
 | 授權 | Other |
 | 已掃描檔案 | 213 個 |
-| 檢查時間 | 2026-08-16 21:18 |
+| 檢查時間 | 2026-08-17 21:24 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 5 天內有更新
 
 專案仍在活躍維護中。
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7158｜fork 947｜語言 Go｜建立 2025-02-05｜最後推送 2026-08-12
+⭐ 7162｜fork 948｜語言 Go｜建立 2025-02-05｜最後推送 2026-08-12
 
 ---
 

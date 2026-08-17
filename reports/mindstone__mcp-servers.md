@@ -7,14 +7,14 @@
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
 | 星數 / Fork | ⭐ 10 / 4 |
-| 最後更新 | 2026-08-13 |
+| 最後更新 | 2026-08-17 |
 | 授權 | Other |
-| 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-08-16 21:24 |
+| 已掃描檔案 | 436 個 |
+| 檢查時間 | 2026-08-17 21:30 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 4　⚪ 資訊 6
+🟡 中 2　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -22,16 +22,13 @@
 
 描述裡出現 <system> 之類的標記，可能是想偽裝成系統訊息。請確認上下文。
 
-> 證據：`connectors/elevenlabs-agents/src/tools/agents.ts｜「Get full configuration for one ElevenLabs agent, including prompts and nested conversation settings.
+> 證據：`connectors/browserbase/src/tools/agent-runs.ts｜「Start an agent run: an AI agent drives a cloud browser to accomplish a natural-language task (extract data, fill forms, 」`
 
-WHEN TO USE:
-- Ins」`
-
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analyticsadmin.googleapis.com、analyticsdata.googleapis.com、api.elevenlabs.io、api.example.com、api.fathom.ai、attacker.example、cdn.gamma.app、docs.github.com、elevenlabs.io、evil.example…`
+> 證據：`api.browserbase.com、api.elevenlabs.io、api.example.com、api.fathom.ai、cdn.browserbase.com、docs.github.com、elevenlabs.io、evil.example、example.org、fathom.video…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -40,6 +37,12 @@ WHEN TO USE:
 > 證據：`connectors/browser-automation/src/tools/observation.ts｜「Get the page accessibility tree with interactive element references.
 
 THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
+
+### 🔵 低｜[工具描述投毒] 工具描述異常冗長
+
+長描述在功能複雜的工具上很常見，但也是把指令埋在人不會滑到的位置的手法。若前面沒有其他命中，通常不必緊張。
+
+> 證據：`connectors/browserbase/src/tools/agent-runs.ts｜長度 1669 字`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -75,11 +78,11 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +92,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-08-13
+⭐ 10｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-08-17
 
 ---
 

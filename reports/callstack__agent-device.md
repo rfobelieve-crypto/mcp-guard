@@ -1,23 +1,35 @@
 # MCP 安檢報告：callstack/agent-device
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
-| 專案說明 | CLI to control iOS and Android devices for AI agents |
-| 星數 / Fork | ⭐ 4106 / 255 |
-| 最後更新 | 2026-08-16 |
+| 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
+| 星數 / Fork | ⭐ 4112 / 256 |
+| 最後更新 | 2026-08-17 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-08-16 21:21 |
+| 檢查時間 | 2026-08-17 21:27 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
+
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts`
 
 ### 🟡 中｜[權限] 會連往 16 個外部主機
 
@@ -31,23 +43,15 @@
 
 > 證據：`@limrun/api@^0.24.5、ipaddr.js@^2.5.0、tar-stream@^3.2.0、yaml@^2.9.0、yauzl@^3.4.0、@arethetypeswrong/cli@^0.18.5…`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
 
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
-這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.oxlintrc.json、linux/atspi-dump.py、packages/kernel/src/errors.ts`
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -63,9 +67,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -77,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-16`
+> 證據：`最後推送 2026-08-17`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4106｜fork 255｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-16
+⭐ 4112｜fork 256｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-17
 
 ---
 
