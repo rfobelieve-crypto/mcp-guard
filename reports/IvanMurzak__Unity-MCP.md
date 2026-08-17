@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 3913 / 357 |
-| 最後更新 | 2026-08-16 |
+| 星數 / Fork | ⭐ 3934 / 357 |
+| 最後更新 | 2026-08-17 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 302 個 |
-| 檢查時間 | 2026-08-16 21:21 |
+| 已掃描檔案 | 311 個 |
+| 檢查時間 | 2026-08-17 21:27 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`cli/src/commands/install-plugin.ts、cli/src/utils/config.ts、cli/src/utils/input.ts、cli/src/utils/managed-server.ts、cli/src/utils/manifest.ts`
+> 證據：`cli/src/commands/install-plugin.ts、cli/src/lib/install-extension.ts、cli/src/utils/config.ts、cli/src/utils/input.ts、cli/src/utils/managed-server.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts、cli/tests/close.test.ts、cli/tests/editor-cache.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -52,7 +52,7 @@
 
 > 證據：`.claude/skills/build-cli/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/github-pr-review-fix/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、Unity-MCP-Plugin/.claude/skills/assets-copy/SKILL.md（Agent Skill 指令（SKILL.md））、Unity-MCP-Plugin/.claude/skills/assets-create-folder/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 71 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-16`
+> 證據：`最後推送 2026-08-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3913｜fork 357｜語言 C#｜建立 2025-04-02｜最後推送 2026-08-16
+⭐ 3934｜fork 357｜語言 C#｜建立 2025-04-02｜最後推送 2026-08-17
 
 ---
 
