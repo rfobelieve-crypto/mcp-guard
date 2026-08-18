@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3674 / 260 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 3678 / 261 |
+| 最後更新 | 2026-08-18 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-17 21:27 |
+| 檢查時間 | 2026-08-18 21:25 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/providers/bm_cloud.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（77 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（80 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -72,11 +72,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3674｜fork 260｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-17
+⭐ 3678｜fork 261｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-18
 
 ---
 

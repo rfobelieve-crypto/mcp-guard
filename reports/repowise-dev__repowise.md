@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 5965 / 623 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 5998 / 626 |
+| 最後更新 | 2026-08-18 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-08-17 21:26 |
+| 檢查時間 | 2026-08-18 21:25 |
 
 ## 風險摘要
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5965｜fork 623｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-17
+⭐ 5998｜fork 626｜語言 Python｜建立 2026-03-23｜最後推送 2026-08-18
 
 ---
 

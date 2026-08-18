@@ -7,11 +7,11 @@
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Apple Health MCP server: query 190 HealthKit metrics from Claude, ChatGPT, Curso |
 | 星數 / Fork | ⭐ 3 / 0 |
-| 最後更新 | 2026-08-17 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
 | 已掃描檔案 | 23 個 |
-| 檢查時間 | 2026-08-17 21:29 |
+| 檢查時間 | 2026-08-18 21:27 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-08-17
+⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-08-18
 
 ---
 

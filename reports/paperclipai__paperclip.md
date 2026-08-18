@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 78692 / 14413 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 78795 / 14442 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 488 個 |
-| 檢查時間 | 2026-08-17 21:25 |
+| 檢查時間 | 2026-08-18 21:23 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@playwright/test@^1.61.1、cross-env@^10.1.0、esbuild@^0.28.1、typescript@^5.7.3、vitest@^4.1.10`
+> 證據：`@playwright/test@^1.62.1、cross-env@^10.1.0、esbuild@^0.28.1、typescript@^5.7.3、vitest@^4.1.10`
 
 ### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-dedup-search.mjs、.github/scripts/check-pr-dependencies.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5116 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5147 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 78692｜fork 14413｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-17
+⭐ 78795｜fork 14442｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-18
 
 ---
 

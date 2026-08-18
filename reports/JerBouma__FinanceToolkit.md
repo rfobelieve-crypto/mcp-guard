@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5236 / 609 |
-| 最後更新 | 2026-08-13 |
+| 星數 / Fork | ⭐ 5239 / 610 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
-| 已掃描檔案 | 272 個 |
-| 檢查時間 | 2026-08-17 21:26 |
+| 已掃描檔案 | 400 個 |
+| 檢查時間 | 2026-08-18 21:24 |
 
 ## 風險摘要
 
@@ -40,17 +40,17 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.stlouisfed.org、data-api.ecb.europa.eu、data.ecb.europa.eu、data.oecd.org、en.wikipedia.org、financetoolkit.jeroenbouma.com、financialmodelingprep.com、fonts.googleapis.com、fonts.gstatic.com、fred.stlouisfed.org…`
+> 證據：`api.stlouisfed.org、data-api.ecb.europa.eu、data-explorer.oecd.org、data.ecb.europa.eu、data.oecd.org、en.wikipedia.org、example.invalid、financetoolkit.jeroenbouma.com、financialmodelingprep.com、fonts.googleapis.com…`
 
-### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`pandas>=2.2、scikit-learn>=1.6、requests>=2.32、yfinance、openpyxl>=3.1`
+> 證據：`pandas>=3.0、scikit-learn>=1.6、requests>=2.32、yfinance、openpyxl>=3.1、pyyaml>=6.0`
 
 ### 🔵 低｜[供應鏈] PyPI 套件未標示原始碼位置
 
@@ -62,13 +62,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`financetoolkit/discovery/discovery_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh`
+> 證據：`financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/mcp_server/auth_model.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 7 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,11 +82,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5236｜fork 609｜語言 Python｜建立 2019-04-08｜最後推送 2026-08-13
+⭐ 5239｜fork 610｜語言 Python｜建立 2019-04-08｜最後推送 2026-08-18
 
 ---
 
