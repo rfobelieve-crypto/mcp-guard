@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
-| 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 4 / 0 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
-| 已掃描檔案 | 130 個 |
-| 檢查時間 | 2026-08-17 21:31 |
+| 已掃描檔案 | 133 個 |
+| 檢查時間 | 2026-08-18 21:29 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 15 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、formulae.brew.sh、glama.ai、hub.docker.com…`
+> 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、example.invalid、formulae.brew.sh、glama.ai…`
 
 ### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
 
@@ -94,11 +94,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -108,7 +108,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-17
+⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-18
 
 ---
 

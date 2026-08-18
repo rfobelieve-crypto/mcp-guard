@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27253 / 2249 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 27268 / 2251 |
+| 最後更新 | 2026-08-18 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-08-17 21:25 |
+| 檢查時間 | 2026-08-18 21:23 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 56 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.descope.com、api.example.com、api.surgemsg.com、api2.amplitude.com、auth0.config.url、block.github.io、bsky.social…`
+> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.example.com、api.surgemsg.com、api2.amplitude.com、auth0.config.url、block.github.io、bsky.social、calendar-api.example.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/deploy/state.py、fastmcp_slim/fastmcp/cli/install/claude_code.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（266 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（267 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27253｜fork 2249｜語言 Python｜建立 2024-11-30｜最後推送 2026-08-17
+⭐ 27268｜fork 2251｜語言 Python｜建立 2024-11-30｜最後推送 2026-08-18
 
 ---
 

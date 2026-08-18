@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4112 / 256 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 4125 / 259 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-08-17 21:27 |
+| 已掃描檔案 | 418 個 |
+| 檢查時間 | 2026-08-18 21:25 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/client-session.ts、packages/ad-replay/src/internal/inspect.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -37,7 +37,7 @@
 
 > 證據：`agent-device.dev、api.example.com、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev、glama.ai、metro.example.dev…`
 
-### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4112｜fork 256｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-17
+⭐ 4125｜fork 259｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-18
 
 ---
 

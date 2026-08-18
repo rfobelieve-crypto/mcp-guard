@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
-| 星數 / Fork | ⭐ 4 / 0 |
-| 最後更新 | 2026-08-09 |
+| 星數 / Fork | ⭐ 5 / 0 |
+| 最後更新 | 2026-08-18 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-08-17 21:29 |
+| 已掃描檔案 | 129 個 |
+| 檢查時間 | 2026-08-18 21:27 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.11.1、pino-pretty@^13.1.3、zod@^4.4.3、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^4.1.9…`
+> 證據：`@cyanheads/mcp-ts-core@^0.11.5、pino-pretty@^13.1.3、zod@^4.4.3、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^4.1.10…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -63,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-09`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-08-09
+⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-08-18
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `exa-labs/exa-mcp-server` |
 | 專案說明 | Exa MCP for web search and web crawling! |
-| 星數 / Fork | ⭐ 4880 / 375 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 4884 / 377 |
+| 最後更新 | 2026-08-18 |
 | 授權 | MIT License |
 | npm 套件 | `exa-mcp-server` |
-| 已掃描檔案 | 76 個 |
-| 檢查時間 | 2026-08-17 21:26 |
+| 已掃描檔案 | 78 個 |
+| 檢查時間 | 2026-08-18 21:24 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`api/mcp.ts、api/well-known-oauth-protected-resource.ts、api/well-known-openai-apps-challenge.ts、src/stdio.ts、src/tools/config.ts`
+> 證據：`api/mcp.ts、api/well-known-oauth-protected-resource.ts、api/well-known-openai-apps-challenge.ts、src/runtime-server.ts、src/stdio.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -61,13 +61,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4880｜fork 375｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-08-17
+⭐ 4884｜fork 377｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-08-18
 
 ---
 
