@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 3944 / 358 |
-| 最後更新 | 2026-08-17 |
+| 星數 / Fork | ⭐ 3952 / 358 |
+| 最後更新 | 2026-08-19 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 311 個 |
-| 檢查時間 | 2026-08-18 21:25 |
+| 已掃描檔案 | 312 個 |
+| 檢查時間 | 2026-08-19 21:26 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`cli/src/commands/install-plugin.ts、cli/src/lib/install-extension.ts、cli/src/utils/config.ts、cli/src/utils/input.ts、cli/src/utils/managed-server.ts`
+> 證據：`.github/scripts/check_nuget_gate.py、cli/src/commands/install-plugin.ts、cli/src/lib/install-extension.ts、cli/src/utils/config.ts、cli/src/utils/input.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts、cli/tests/close.test.ts、cli/tests/editor-cache.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（52 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,11 +66,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-17`
+> 證據：`最後推送 2026-08-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3944｜fork 358｜語言 C#｜建立 2025-04-02｜最後推送 2026-08-17
+⭐ 3952｜fork 358｜語言 C#｜建立 2025-04-02｜最後推送 2026-08-19
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 4120 / 230 |
-| 最後更新 | 2026-08-18 |
+| 星數 / Fork | ⭐ 4254 / 231 |
+| 最後更新 | 2026-08-19 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-08-18 21:26 |
+| 檢查時間 | 2026-08-19 21:27 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`evals/workflows/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（138 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（136 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -59,7 +59,7 @@
 
 > 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/mcp/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 214 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 220 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-18`
+> 證據：`最後推送 2026-08-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4120｜fork 230｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-18
+⭐ 4254｜fork 231｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-19
 
 ---
 

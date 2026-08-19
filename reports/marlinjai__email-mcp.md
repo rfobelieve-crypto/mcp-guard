@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `marlinjai/email-mcp` |
 | 專案說明 | Unified MCP server for email access across Gmail, Outlook, iCloud, and IMAP |
-| 星數 / Fork | ⭐ 18 / 14 |
+| 星數 / Fork | ⭐ 17 / 14 |
 | 最後更新 | 2026-06-14 |
 | 授權 | MIT License |
 | npm 套件 | `@marlinjai/email-mcp` |
 | 已掃描檔案 | 51 個 |
-| 檢查時間 | 2026-08-18 21:29 |
+| 檢查時間 | 2026-08-19 21:31 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 65 天內有更新
+### ⚪ 資訊｜[維護] 最近 66 天內有更新
 
 專案仍在活躍維護中。
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 18｜fork 14｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-06-14
+⭐ 17｜fork 14｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-06-14
 
 ---
 

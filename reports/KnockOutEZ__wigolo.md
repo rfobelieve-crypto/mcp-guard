@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KnockOutEZ/wigolo` |
 | 專案說明 | The go-to web for your AI coding agent — local-first search, fetch, crawl & rese |
-| 星數 / Fork | ⭐ 4588 / 337 |
-| 最後更新 | 2026-08-18 |
+| 星數 / Fork | ⭐ 4602 / 341 |
+| 最後更新 | 2026-08-19 |
 | 授權 | Other |
 | npm 套件 | `wigolo` |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-08-18 21:25 |
+| 檢查時間 | 2026-08-19 21:26 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 66 個外部主機
+### 🟡 中｜[權限] 會連往 68 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -49,7 +49,7 @@
 
 > 證據：`mcpb/server/index.cjs、packages/wigolo-langchain/wigolo_langchain/client.py、packages/wigolo-llamaindex/wigolo_llamaindex/client.py、packages/wigolo-vercel-ai-sdk/src/client.ts、packages/wigolo-vercel-ai-sdk/src/index.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -59,7 +59,7 @@
 
 > 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、site/AGENTS.md（Agent 指令（AGENTS.md 慣例））、site/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/wigolo-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/wigolo-cache/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 77 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 78 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-18`
+> 證據：`最後推送 2026-08-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4588｜fork 337｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-18
+⭐ 4602｜fork 341｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-19
 
 ---
 

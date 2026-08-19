@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `github/github-mcp-server` |
 | 專案說明 | GitHub's official MCP Server |
-| 星數 / Fork | ⭐ 32343 / 4819 |
-| 最後更新 | 2026-08-18 |
+| 星數 / Fork | ⭐ 32362 / 4821 |
+| 最後更新 | 2026-08-19 |
 | 授權 | MIT License |
-| 已掃描檔案 | 307 個 |
-| 檢查時間 | 2026-08-18 21:22 |
+| 已掃描檔案 | 312 個 |
+| 檢查時間 | 2026-08-19 21:23 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 47 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.com、api.ghe.com、api.github.enterprise.com、api.githubcopilot.com、api.mycompany.ghe.com、avatars.githubusercontent.com、codecov.io、custom.auth.example.com、custom.example.com、docs.github.com…`
+> 證據：`GITHUB.EXAMPLE.COM、anywhere.example.com、api.example.com、api.ghe.com、api.github.com.attacker.example、api.github.enterprise.com、api.github.test、api.githubcopilot.com、api.mycompany.ghe.com、attacker.example…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -36,7 +36,7 @@
 
 > 證據：`ui/scripts/build.mjs、ui/vite.config.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（374 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（342 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -46,7 +46,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 494 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 495 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-18`
+> 證據：`最後推送 2026-08-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 32343｜fork 4819｜語言 Go｜建立 2025-03-04｜最後推送 2026-08-18
+⭐ 32362｜fork 4821｜語言 Go｜建立 2025-03-04｜最後推送 2026-08-19
 
 ---
 

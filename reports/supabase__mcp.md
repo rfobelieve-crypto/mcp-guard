@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2868 / 396 |
-| 最後更新 | 2026-08-18 |
+| 星數 / Fork | ⭐ 2868 / 394 |
+| 最後更新 | 2026-08-19 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 110 個 |
-| 檢查時間 | 2026-08-18 21:26 |
+| 檢查時間 | 2026-08-19 21:27 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`packages/mcp-server-supabase/src/transports/stdio.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（106 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（107 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-18`
+> 證據：`最後推送 2026-08-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2868｜fork 396｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-18
+⭐ 2868｜fork 394｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-19
 
 ---
 
