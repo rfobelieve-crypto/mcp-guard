@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 43109 / 4006 |
-| 最後更新 | 2026-08-19 |
+| 星數 / Fork | ⭐ 43122 / 4011 |
+| 最後更新 | 2026-08-20 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-08-19 21:24 |
+| 檢查時間 | 2026-08-20 21:27 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 107 個外部主機
+### 🟡 中｜[權限] 會連往 110 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.minimax.io、api.moonshot.ai、api.neuralwatt.com、api.prelude.dev…`
+> 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.meta.ai、api.minimax.io、api.moonshot.ai、api.neuralwatt.com…`
 
 ### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
@@ -67,7 +67,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 18 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-19`
+> 證據：`最後推送 2026-08-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43109｜fork 4006｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-19
+⭐ 43122｜fork 4011｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-20
 
 ---
 

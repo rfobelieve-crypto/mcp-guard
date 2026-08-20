@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BrowserMCP/mcp` |
 | 專案說明 | Browser MCP is a Model Context Provider (MCP) server that allows AI applications |
-| 星數 / Fork | ⭐ 6991 / 554 |
+| 星數 / Fork | ⭐ 6999 / 555 |
 | 最後更新 | 2025-04-24 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@browsermcp/mcp` |
 | 已掃描檔案 | 15 個 |
-| 檢查時間 | 2026-08-19 21:24 |
+| 檢查時間 | 2026-08-20 21:26 |
 
 ## 風險摘要
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6991｜fork 554｜語言 TypeScript｜建立 2025-03-28｜最後推送 2025-04-24
+⭐ 6999｜fork 555｜語言 TypeScript｜建立 2025-03-28｜最後推送 2025-04-24
 
 ---
 
