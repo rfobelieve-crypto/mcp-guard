@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10700 / 1487 |
-| 最後更新 | 2026-08-19 |
+| 星數 / Fork | ⭐ 10713 / 1488 |
+| 最後更新 | 2026-08-20 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-19 21:23 |
+| 檢查時間 | 2026-08-20 21:26 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 7　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -55,10 +55,6 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 沒有授權條款（License）
 
 沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。
@@ -91,11 +87,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-19`
+> 證據：`最後推送 2026-08-20`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10700｜fork 1487｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-19
+⭐ 10713｜fork 1488｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-08-20
 
 ---
 

@@ -6,23 +6,23 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2868 / 394 |
-| 最後更新 | 2026-08-19 |
+| 星數 / Fork | ⭐ 2867 / 393 |
+| 最後更新 | 2026-08-20 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 110 個 |
-| 檢查時間 | 2026-08-19 21:27 |
+| 已掃描檔案 | 117 個 |
+| 檢查時間 | 2026-08-20 21:29 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-sdk.dev、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、firewall.depthfirst.com、linear.app、login.acme.com、mcp.supabase.com、postgrest.org…`
+> 證據：`ai-sdk.dev、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、blog.modelcontextprotocol.io、firewall.depthfirst.com、linear.app、login.acme.com、mcp.supabase.com…`
 
 ### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
 
@@ -36,7 +36,13 @@
 
 > 證據：`packages/mcp-server-supabase/src/transports/stdio.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（107 則）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/test-packed-platform-consumer.mjs`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（104 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -46,7 +52,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-19`
+> 證據：`最後推送 2026-08-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2868｜fork 394｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-19
+⭐ 2867｜fork 393｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-08-20
 
 ---
 

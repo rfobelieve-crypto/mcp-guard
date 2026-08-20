@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 1981 / 422 |
-| 最後更新 | 2026-08-19 |
+| 星數 / Fork | ⭐ 1984 / 422 |
+| 最後更新 | 2026-08-20 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-08-19 21:27 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-08-20 21:29 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`charts.example.com、docs.github.com、docs.npmjs.com、evil.example.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、jwt.io、kcp.example.com、keycloak.127-0-0-1.sslip.io…`
+> 證據：`charts.example.com、docs.github.com、docs.npmjs.com、evil.example.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、jwt.io、kcp.example.com、keycloak.keycloak.svc…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -30,7 +30,7 @@
 
 > 證據：`npm/kubernetes-mcp-server/bin/index.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（97 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（92 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -40,7 +40,7 @@
 
 > 證據：`.agents/skills/toolset-design/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 13 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -58,7 +58,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-19`
+> 證據：`最後推送 2026-08-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1981｜fork 422｜語言 Go｜建立 2025-02-11｜最後推送 2026-08-19
+⭐ 1984｜fork 422｜語言 Go｜建立 2025-02-11｜最後推送 2026-08-20
 
 ---
 
