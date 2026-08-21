@@ -11,7 +11,7 @@
 | 授權 | 無 |
 | npm 套件 | `@waystation/mcp` |
 | 已掃描檔案 | 7 個 |
-| 檢查時間 | 2026-08-20 21:31 |
+| 檢查時間 | 2026-08-21 21:28 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@
 
 > 證據：`feross.org、go.microsoft.com、opencollective.com、static.modelcontextprotocol.io、waystation.ai、www.patreon.com`
 
-### 🟡 中｜[維護] 約 11 個月沒有更新
+### 🟡 中｜[維護] 約 12 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

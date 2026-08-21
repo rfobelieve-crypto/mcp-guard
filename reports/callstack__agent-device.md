@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4147 / 259 |
-| 最後更新 | 2026-08-20 |
+| 星數 / Fork | ⭐ 4174 / 259 |
+| 最後更新 | 2026-08-21 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 418 個 |
-| 檢查時間 | 2026-08-20 21:28 |
+| 已掃描檔案 | 419 個 |
+| 檢查時間 | 2026-08-21 21:25 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`.oxlintrc.json、linux/atspi-dump.py`
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、api.example.com、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev、glama.ai、metro.example.dev…`
+> 證據：`agent-device.dev、api.example.com、discourse.gnome.org、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev、glama.ai…`
 
 ### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-20`
+> 證據：`最後推送 2026-08-21`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4147｜fork 259｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-20
+⭐ 4174｜fork 259｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-21
 
 ---
 
