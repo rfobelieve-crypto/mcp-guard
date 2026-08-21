@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A Model Context Protocol server for searching and analyzing arXiv papers |
-| 星數 / Fork | ⭐ 3065 / 249 |
-| 最後更新 | 2026-08-19 |
+| 星數 / Fork | ⭐ 3067 / 249 |
+| 最後更新 | 2026-08-21 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 75 個 |
-| 檢查時間 | 2026-08-20 21:29 |
+| 已掃描檔案 | 83 個 |
+| 檢查時間 | 2026-08-21 21:25 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`scripts/build-mcpb.sh、src/arxiv_mcp_server/arxiv_api.py、src/arxiv_mcp_server/resources/papers.py、src/arxiv_mcp_server/tools/latex.py、tests/tools/test_latex.py`
 
-### 🟡 中｜[權限] 會連往 7 個外部主機
+### 🟡 中｜[權限] 會連往 9 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.semanticscholar.org、arxiv.example.com、arxiv.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.schemastore.org`
+> 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -66,13 +66,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-19`
+> 證據：`最後推送 2026-08-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3065｜fork 249｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-19
+⭐ 3067｜fork 249｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-21
 
 ---
 

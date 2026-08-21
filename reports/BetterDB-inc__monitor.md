@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1312 / 88 |
-| 最後更新 | 2026-08-20 |
+| 星數 / Fork | ⭐ 1301 / 83 |
+| 最後更新 | 2026-08-21 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
-| 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-08-20 21:30 |
+| 已掃描檔案 | 444 個 |
+| 檢查時間 | 2026-08-21 21:27 |
 
 ## 風險摘要
 
@@ -33,19 +33,19 @@
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/agent-cache-py-release.yml、.github/workflows/agent-cache-release.yml、.github/workflows/agent-memory-py-release.yml、.github/workflows/agent-memory-release.yml、.github/workflows/mcp-release.yml`
+> 證據：`.github/workflows/agent-cache-py-release.yml、.github/workflows/agent-cache-release.yml、.github/workflows/agent-memory-py-release.yml、.github/workflows/agent-memory-release.yml、.github/workflows/ai-facade-release.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/agent-cache-py-release.yml、.github/workflows/agent-cache-release.yml、.github/workflows/agent-memory-py-release.yml、.github/workflows/agent-memory-release.yml、.github/workflows/agent-release.yml`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/execution/execution-job.ts、apps/api/src/migration/migration-execution.service.ts、apps/api/test/global-setup.ts`
 
@@ -61,7 +61,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -69,13 +69,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-20`
+> 證據：`最後推送 2026-08-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1312｜fork 88｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-20
+⭐ 1301｜fork 83｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-21
 
 ---
 

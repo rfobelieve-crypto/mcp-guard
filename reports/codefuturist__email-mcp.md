@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `codefuturist/email-mcp` |
 | 專案說明 | Email MCP server with full IMAP + SMTP support — read, search, send, manage, and |
-| 星數 / Fork | ⭐ 98 / 48 |
-| 最後更新 | 2026-05-20 |
+| 星數 / Fork | ⭐ 99 / 49 |
+| 最後更新 | 2026-08-21 |
 | 授權 | GNU Lesser General Public License v3.0 |
 | npm 套件 | `@codefuturist/email-mcp` |
 | 已掃描檔案 | 138 個 |
-| 檢查時間 | 2026-08-20 21:31 |
+| 檢查時間 | 2026-08-21 21:28 |
 
 ## 風險摘要
 
@@ -75,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 92 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-05-20`
+> 證據：`最後推送 2026-08-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 98｜fork 48｜語言 TypeScript｜建立 2026-02-18｜最後推送 2026-05-20
+⭐ 99｜fork 49｜語言 TypeScript｜建立 2026-02-18｜最後推送 2026-08-21
 
 ---
 
