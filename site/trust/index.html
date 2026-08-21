@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>為什麼可信｜MCP 安檢</title>
-<meta name="description" content="這個工具誤報過 8 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
+<meta name="description" content="這個工具誤報過 9 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
 <meta property="og:title" content="為什麼可信｜MCP 安檢">
-<meta property="og:description" content="這個工具誤報過 8 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
+<meta property="og:description" content="這個工具誤報過 9 次，全部在發布前攔下。誤報樣本原文收進回歸測試；被列出的專案可要求更正。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mcp-guard-iota.vercel.app/trust/">
 <meta property="og:image" content="https://mcp-guard-iota.vercel.app/og/trust.jpg">
@@ -64,7 +64,7 @@
 <section class="blk alt">
   <div class="wrap">
     <p class="eyebrow rv">我們自己也會錯</p>
-    <h2 class="rv">這個工具誤報過 8 次，<br>全部在發布前攔下。</h2>
+    <h2 class="rv">這個工具誤報過 9 次，<br>全部在發布前攔下。</h2>
     <p class="lede rv">第一次批次掃描時，它把 5 個知名專案判成「不要安裝」——
       包含一個 15k star 的專案。證據是 <code>"Path to custom .env file"</code>，
       那其實只是一個 CLI 參數說明。</p>
@@ -75,7 +75,9 @@
     <p class="lede rv">最近一次更能說明問題：某個專案的 skill 寫著
       「別把下載的腳本直接餵進 shell」。那是<b>一份在教模型別踩雷的安全指引，
       卻被判成要求下載執行遠端腳本</b>：防禦方被指控成攻擊方。</p>
-    <p class="lede rv">那 8 個誤報樣本已原文收進回歸測試。
+    <p class="lede rv">那 9 個誤報樣本已原文收進回歸測試。<b>這裡的「次」
+      指的就是收進測試的樣本數</b>——可以自己數：
+      <code>python -m tests.test_poisoning</code>。
       <b>對真實專案的不實指控，傷害不比漏報小。</b></p>
   </div>
 </section>

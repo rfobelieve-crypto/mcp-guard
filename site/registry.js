@@ -72,6 +72,15 @@
   // 「該裝哪個」那一頁靠這個把讀者送過來。領域不做成第三排 chips——
   // 三排按鈕會把這頁變成控制面板，改用一條可以關掉的提示列。
   var qs=new URLSearchParams(location.search);
+  // ?q=owner/repo：首頁查詢命中已收錄專案時用這個把人送到那一列。
+  // 也是首頁表單在 JS 失效時的降級目的地，所以這段必須自己成立。
+  var wantQ=qs.get('q');
+  if(wantQ){
+    q.value=wantQ;
+    apply();
+    var qhit=rows.filter(function(r){ return !r.hidden; })[0];
+    if(qhit){ qhit.open=true; qhit.scrollIntoView({block:'center'}); }
+  }
   var wantC=qs.get('c'), wantD=qs.get('d');
   if(wantC){
     var hit=cats.filter(function(c){return c.dataset.c===wantC;})[0];
