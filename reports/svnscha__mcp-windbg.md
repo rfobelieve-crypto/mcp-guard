@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1530 / 151 |
-| 最後更新 | 2026-07-20 |
+| 星數 / Fork | ⭐ 1531 / 152 |
+| 最後更新 | 2026-08-22 |
 | 授權 | MIT License |
-| 已掃描檔案 | 91 個 |
-| 檢查時間 | 2026-08-21 21:26 |
+| 已掃描檔案 | 98 個 |
+| 檢查時間 | 2026-08-22 21:24 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`mcp>=1.28.1、pydantic>=2.13.4、starlette>=1.3.1、uvicorn>=0.51.0`
+> 證據：`mcp>=2.0.0,<3.0.0、pydantic>=2.13.4,<3.0.0、starlette>=1.3.1,<2.0.0、uvicorn>=0.51.0,<1.0.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -54,7 +54,7 @@
 
 > 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、src/mcp_windbg/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、src/mcp_windbg/prompts/kernel-triage.prompt.md（GitHub Copilot 提示檔）…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 26 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,11 +68,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 33 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-20`
+> 證據：`最後推送 2026-08-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1530｜fork 151｜語言 Python｜建立 2025-05-02｜最後推送 2026-07-20
+⭐ 1531｜fork 152｜語言 Python｜建立 2025-05-02｜最後推送 2026-08-22
 
 ---
 
