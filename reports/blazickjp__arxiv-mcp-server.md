@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A Model Context Protocol server for searching and analyzing arXiv papers |
-| 星數 / Fork | ⭐ 3069 / 251 |
-| 最後更新 | 2026-08-22 |
+| 星數 / Fork | ⭐ 3068 / 251 |
+| 最後更新 | 2026-08-23 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 86 個 |
-| 檢查時間 | 2026-08-22 21:23 |
+| 已掃描檔案 | 93 個 |
+| 檢查時間 | 2026-08-23 21:23 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`scripts/build-mcpb.sh、src/arxiv_mcp_server/arxiv_api.py、src/arxiv_mcp_server/resources/papers.py、src/arxiv_mcp_server/tools/latex_archive.py、tests/tools/test_latex.py`
 
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org`
+> 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、doi.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-22`
+> 證據：`最後推送 2026-08-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3069｜fork 251｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-22
+⭐ 3068｜fork 251｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-23
 
 ---
 

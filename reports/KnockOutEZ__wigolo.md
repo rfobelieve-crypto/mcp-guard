@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KnockOutEZ/wigolo` |
 | 專案說明 | The go-to web for your AI coding agent — local-first search, fetch, crawl & rese |
-| 星數 / Fork | ⭐ 4625 / 344 |
-| 最後更新 | 2026-08-22 |
+| 星數 / Fork | ⭐ 4637 / 344 |
+| 最後更新 | 2026-08-23 |
 | 授權 | Other |
 | npm 套件 | `wigolo` |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-08-22 21:22 |
+| 檢查時間 | 2026-08-23 21:22 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`mcpb/server/index.cjs、packages/wigolo-langchain/wigolo_langchain/client.py、packages/wigolo-llamaindex/wigolo_llamaindex/client.py、packages/wigolo-vercel-ai-sdk/src/client.ts、packages/wigolo-vercel-ai-sdk/src/index.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-22`
+> 證據：`最後推送 2026-08-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4625｜fork 344｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-22
+⭐ 4637｜fork 344｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-23
 
 ---
 
