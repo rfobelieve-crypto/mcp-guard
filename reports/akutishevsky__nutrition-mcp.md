@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 41 / 23 |
-| 最後更新 | 2026-08-20 |
+| 星數 / Fork | ⭐ 42 / 23 |
+| 最後更新 | 2026-08-22 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 68 個 |
-| 檢查時間 | 2026-08-21 21:27 |
+| 已掃描檔案 | 70 個 |
+| 檢查時間 | 2026-08-22 21:25 |
 
 ## 風險摘要
 
@@ -41,23 +41,23 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、blog.modelcontextprotocol.io、cdn.jsdelivr.net、fonts.googleapis.com、fonts.gstatic.com、glama.ai、nutrition-mcp.com、oauth2.googleapis.com、schema.org、static.modelcontextprotocol.io…`
+> 證據：`accounts.google.com、blog.modelcontextprotocol.io、cdn.jsdelivr.net、evil.example、fonts.googleapis.com、fonts.gstatic.com、glama.ai、nutrition-mcp.com、oauth2.googleapis.com、schema.org…`
 
-### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.30.0、@supabase/supabase-js@^2.112.3、hono@^4.13.3、prettier@^3.9.6`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@supabase/supabase-js@^2.112.3、hono@^4.13.3、prettier@^3.9.6、zod@^4.2.0、@modelcontextprotocol/client@^2.0.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/widget-harness.ts、src/foods.test.ts、src/foods.ts、src/index.ts、src/oauth.test.ts`
+> 證據：`scripts/widget-harness.ts、src/foods.test.ts、src/foods.ts、src/index.test.ts、src/index.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-20`
+> 證據：`最後推送 2026-08-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 41｜fork 23｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-08-20
+⭐ 42｜fork 23｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-08-22
 
 ---
 

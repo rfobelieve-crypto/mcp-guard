@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 148 / 5 |
-| 最後更新 | 2026-08-21 |
+| 星數 / Fork | ⭐ 150 / 5 |
+| 最後更新 | 2026-08-22 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-08-21 21:27 |
+| 檢查時間 | 2026-08-22 21:25 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apps/docs/src/components/brand/shared.tsx`
 
-### 🟡 中｜[權限] 會連往 12 個外部主機
+### 🟡 中｜[權限] 會連往 13 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.indexnow.org、developer.chrome.com、fumadocs.dev、json.schemastore.org、mcr.microsoft.com、meetguns.com、microcharts.dev、schema.org、stackblitz.com、unpkg.com…`
+> 證據：`api.indexnow.org、developer.chrome.com、fumadocs.dev、json.schemastore.org、mcr.microsoft.com、meetguns.com、microcharts.dev、preview.example.dev、schema.org、stackblitz.com…`
 
 ### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 406 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 362 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -69,11 +69,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-21`
+> 證據：`最後推送 2026-08-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 148｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-08-21
+⭐ 150｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-08-22
 
 ---
 

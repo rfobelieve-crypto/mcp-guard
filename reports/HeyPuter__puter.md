@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 43141 / 4016 |
-| 最後更新 | 2026-08-21 |
+| 星數 / Fork | ⭐ 43173 / 4022 |
+| 最後更新 | 2026-08-22 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-08-21 21:23 |
+| 檢查時間 | 2026-08-22 21:21 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`a.test、ai.google.dev、an-app.puter.site、api.cloudflare.com、api.deepseek.com、api.elevenlabs.io、api.meta.ai、api.minimax.io、api.moonshot.ai、api.neuralwatt.com…`
 
-### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 34 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@ai-sdk/openai@^3.0.25、@aws-sdk/client-s3@^3.1020.0、@aws-sdk/s3-request-presigner@^3.1028.0、@heyputer/putility@^1.0.2、ai@^6.0.73、dedent@^1.5.3…`
+> 證據：`@aws-sdk/client-s3@^3.1020.0、@aws-sdk/s3-request-presigner@^3.1028.0、dedent@^1.5.3、javascript-time-ago@^2.5.11、miniflare@^4.20260617.1、open@^10.1.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-21`
+> 證據：`最後推送 2026-08-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43141｜fork 4016｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-21
+⭐ 43173｜fork 4022｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-08-22
 
 ---
 
