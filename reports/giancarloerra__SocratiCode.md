@@ -7,11 +7,11 @@
 | 稽核對象 | `giancarloerra/SocratiCode` |
 | 專案說明 | Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private P |
 | 星數 / Fork | ⭐ 3274 / 409 |
-| 最後更新 | 2026-08-14 |
+| 最後更新 | 2026-08-24 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
 | 已掃描檔案 | 175 個 |
-| 檢查時間 | 2026-08-23 21:23 |
+| 檢查時間 | 2026-08-24 21:30 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`altaire.com、bevry.me、biomejs.dev、bugs.chromium.org、bugs.webkit.org、cdn.example.com、cloud-qdrant.example、docker.com、docs.litellm.ai、dotenvx.com…`
 
-### 🔵 低｜[供應鏈] 有 36 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 37 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -73,15 +73,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-14`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3274｜fork 409｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-08-14
+⭐ 3274｜fork 409｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-08-24
 
 ---
 

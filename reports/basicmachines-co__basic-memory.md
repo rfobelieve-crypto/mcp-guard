@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3731 / 261 |
-| 最後更新 | 2026-08-23 |
+| 星數 / Fork | ⭐ 3744 / 261 |
+| 最後更新 | 2026-08-24 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-23 21:23 |
+| 檢查時間 | 2026-08-24 21:30 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`alembic.sqlalchemy.org、astral.sh、basicmemory.com、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.basicmemory.com、docs.claude.com、docs.github.com、glama.ai…`
+> 證據：`alembic.sqlalchemy.org、api.openai.com、astral.sh、basicmemory.com、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.basicmemory.com、docs.claude.com、docs.github.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/concurrent_write.py、benchmarks/src/basic_memory_benchmarks/providers/bm_cloud.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/concurrent_write.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
 ### 🔵 低｜[維護] 未處理 issue 偏多（70 則）
 
@@ -76,7 +76,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-23`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3731｜fork 261｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-23
+⭐ 3744｜fork 261｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-24
 
 ---
 

@@ -7,14 +7,14 @@
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
 | 星數 / Fork | ⭐ 4 / 0 |
-| 最後更新 | 2026-08-21 |
+| 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
-| 已掃描檔案 | 133 個 |
-| 檢查時間 | 2026-08-23 21:27 |
+| 已掃描檔案 | 141 個 |
+| 檢查時間 | 2026-08-24 21:33 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 7　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -23,38 +23,6 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、example.invalid、formulae.brew.sh、glama.ai…`
-
-### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
-
-> 證據：`.github/copilot-instructions.md｜「…, with no system `ssh` binary involved (except a `ProxyCommand` in `~/.ssh/config` for bastion/jump-host setups, which paramiko runs as an extern…」`
-
-### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
-
-> 證據：`.github/copilot-instructions.md｜「…before being handed to docker-py: `_ensure_ssh_port` splices in a `~/.ssh/config` `Port` that `docker.utils.parse_host()` would otherwise hardco…」`
-
-### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
-
-> 證據：`CLAUDE.md｜「…`ssh` binary involved (the one exception being a `ProxyCommand` in `~/.ssh/config` for bastion/jump-host setups, which paramiko runs as an extern…」`
-
-### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
-
-> 證據：`CLAUDE.md｜「…PAdapter._create_paramiko_client` ever runs, so that adapter's own `~/.ssh/config` `Port` fallback (which only fires while the port is still unse…」`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -94,11 +62,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-21`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -108,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-21
+⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-24
 
 ---
 

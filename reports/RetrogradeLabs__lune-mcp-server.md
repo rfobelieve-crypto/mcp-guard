@@ -7,11 +7,11 @@
 | 稽核對象 | `RetrogradeLabs/lune-mcp-server` |
 | 專案說明 | Official MCP server for Lune Research: search top-tier papers and methodology gu |
 | 星數 / Fork | ⭐ 3 / 1 |
-| 最後更新 | 2026-08-08 |
+| 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
 | npm 套件 | `@retrograde-labs/lune-mcp-server` |
-| 已掃描檔案 | 62 個 |
-| 檢查時間 | 2026-08-23 21:27 |
+| 已掃描檔案 | 71 個 |
+| 檢查時間 | 2026-08-24 21:33 |
 
 ## 風險摘要
 
@@ -25,23 +25,23 @@
 
 > 證據：`tests/integration/full-stdio.test.ts`
 
-### 🟡 中｜[權限] 會連往 12 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.luneresearch.com、chatgpt.com、claude.ai、claude.com、developers.openai.com、evil.example.com、json.schemastore.org、luneresearch.com、mcp.luneresearch.com、platform.openai.com…`
+> 證據：`api.luneresearch.com、chatgpt.com、claude.ai、claude.com、demo.trycloudflare.com、developers.openai.com、evil.example.com、json.schemastore.org、luneresearch.com、mcp.luneresearch.com…`
 
-### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.30.0、express@^5.2.1、jose@^6.2.3、ky@^2.0.2、redis@^6.2.0、zod@^4.4.3…`
+> 證據：`ajv@^8.20.0、express@^5.2.1、jose@^6.2.10、ky@^2.0.2、redis@^6.2.1、zod@^4.4.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「文件／知識檢索」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/api/client.ts、src/auth/token.ts、src/auth/verify.ts、src/cache.ts、src/cli.ts`
+> 證據：`src/analytics.ts、src/api/client.ts、src/auth/token.ts、src/auth/verify.ts、src/cache.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -53,7 +53,7 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 30 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -65,13 +65,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 15 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-08`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-08-08
+⭐ 3｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-08-24
 
 ---
 
