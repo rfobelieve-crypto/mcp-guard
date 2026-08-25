@@ -1,35 +1,29 @@
 # MCP 安檢報告：amruthpillai/reactive-resume
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 41579 / 4654 |
-| 最後更新 | 2026-08-20 |
+| 星數 / Fork | ⭐ 41655 / 4659 |
+| 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-08-23 21:21 |
+| 檢查時間 | 2026-08-24 21:28 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`.design-sync/build-css.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.design-sync/previews/AlertDialog.tsx、.design-sync/previews/ComboboxRoot.tsx、.design-sync/previews/ContextMenu.tsx、.design-sync/previews/Dialog.tsx、.design-sync/previews/DropdownMenu.tsx`
+> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
 ### 🟡 中｜[權限] 會連往 22 個外部主機
 
@@ -41,7 +35,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.8、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@biomejs/biome@^2.5.10、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,17 +43,17 @@
 
 > 證據：`.github/workflows/label-issues.yml、apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（113 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（118 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +67,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-20`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 41579｜fork 4654｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-20
+⭐ 41655｜fork 4659｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-24
 
 ---
 

@@ -10,7 +10,7 @@
 | 最後更新 | 2025-12-15 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-08-23 21:20 |
+| 檢查時間 | 2026-08-24 21:28 |
 
 ## 風險摘要
 
@@ -60,7 +60,7 @@
 
 > 證據：`clink/agents/base.py、run-server.sh、simulator_tests/test_analyze_validation.py、simulator_tests/test_codereview_validation.py、simulator_tests/test_debug_validation.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（142 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（143 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-08-13 |
+| 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 108 個 |
-| 檢查時間 | 2026-08-23 21:26 |
+| 已掃描檔案 | 110 個 |
+| 檢查時間 | 2026-08-24 21:32 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`scripts/release.sh`
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.Example.com、a.test、api.example.com、api.example.test、api.test、api.website-auditor.io、b.test、evil.example、example.org、not-a-real-domain-zzz.example…`
+> 證據：`WWW.Example.com、a.test、api.example.com、api.example.test、api.test、api.website-auditor.io、b.test、evil.example、example.org、globex.example…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 10 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-13`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-13
+⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-08-24
 
 ---
 

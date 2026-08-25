@@ -7,10 +7,10 @@
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | Analytics that reads your event log back to you: what changed, the segment carry |
 | 星數 / Fork | ⭐ 2 / 1 |
-| 最後更新 | 2026-08-23 |
+| 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-23 21:25 |
+| 檢查時間 | 2026-08-24 21:32 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`cli/lib/connect.mjs`
+> 證據：`cli/lib/connect.mjs、cli/lib/test.mjs、cli/test/flake.test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -40,23 +40,23 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 79 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.example.com、chatgpt.com、claude.ai、cohere.com、commoncrawl.org、data.mixpanel.com、developer.amazon.com…`
+> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.anthropic.com、api.example.com、app.myapp.io、app.netlify.app、chatgpt.com、checkout.stripe.com、claude.ai…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/test/connect.test.mjs、internal/api/auth.go、internal/api/sdk_flag_parity_test.go`
+> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/test/browser.test.mjs、cli/test/connect.test.mjs、internal/api/auth.go`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`cli/bin/smolanalytics.mjs、cli/lib/connect.mjs`
+> 證據：`cli/bin/smolanalytics.mjs、cli/lib/connect.mjs、cli/lib/safety.mjs、cli/lib/suite.mjs、cli/lib/test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、docs/agents.md（Agent 指令（AGENTS.md 慣例））、internal/api/llms.txt（給模型讀的站點說明（llms.txt））、llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -78,11 +78,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-23`
+> 證據：`最後推送 2026-08-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-23
+⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-24
 
 ---
 
