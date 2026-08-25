@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `@retrograde-labs/lune-mcp-server` |
 | 已掃描檔案 | 71 個 |
-| 檢查時間 | 2026-08-24 21:33 |
+| 檢查時間 | 2026-08-25 21:32 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

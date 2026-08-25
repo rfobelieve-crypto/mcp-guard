@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2016 / 427 |
-| 最後更新 | 2026-08-24 |
+| 星數 / Fork | ⭐ 2020 / 427 |
+| 最後更新 | 2026-08-25 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-24 21:30 |
+| 檢查時間 | 2026-08-25 21:30 |
 
 ## 風險摘要
 
@@ -30,7 +30,7 @@
 
 > 證據：`npm/kubernetes-mcp-server/bin/index.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（94 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（91 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -40,7 +40,7 @@
 
 > 證據：`.agents/skills/toolset-design/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 13 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -58,7 +58,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2016｜fork 427｜語言 Go｜建立 2025-02-11｜最後推送 2026-08-24
+⭐ 2020｜fork 427｜語言 Go｜建立 2025-02-11｜最後推送 2026-08-25
 
 ---
 

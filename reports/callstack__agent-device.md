@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4208 / 261 |
-| 最後更新 | 2026-08-24 |
+| 星數 / Fork | ⭐ 4221 / 263 |
+| 最後更新 | 2026-08-25 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-08-24 21:30 |
+| 檢查時間 | 2026-08-25 21:29 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、packages/contracts/src/application-lifecycle-interaction.ts、packages/contracts/src/interactor-types.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、packages/contracts/src/app-event-runtime.ts、packages/contracts/src/application-lifecycle-interaction.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -48,10 +48,6 @@
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -81,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-25`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4208｜fork 261｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-24
+⭐ 4221｜fork 263｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-25
 
 ---
 
