@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
 | 專案說明 | Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS  |
-| 星數 / Fork | ⭐ 1841 / 125 |
-| 最後更新 | 2026-08-23 |
+| 星數 / Fork | ⭐ 1883 / 126 |
+| 最後更新 | 2026-08-25 |
 | 授權 | Other |
-| 已掃描檔案 | 115 個 |
-| 檢查時間 | 2026-08-24 21:31 |
+| 已掃描檔案 | 135 個 |
+| 檢查時間 | 2026-08-25 21:30 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 49 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com、context7.com、glama.ai、letsfg.co、letsfg.test…`
+> 證據：`agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com、checkout.stripe.com.evil.com、checkout.stripe.com.evil.example、context7.com…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -30,23 +30,23 @@
 
 > 證據：`sdk/mcp/src/index.ts｜「Convert a city/airport name to IATA codes. Always call before search_flights if you only have a city name.」`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`preview/build_stubs.py、preview/run.py、sdk/python/google_checkout_live_sweep.py、sdk/python/letsfg/cli.py、sdk/python/letsfg/client.py`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`sdk/js/src/auth.test.ts、sdk/js/src/auth.ts、sdk/js/src/cli.ts、sdk/js/src/index.ts、sdk/mcp/src/index.ts`
+> 證據：`preview/run.py、sdk/js/src/auth.test.ts、sdk/js/src/auth.ts、sdk/js/src/cli.ts、sdk/js/src/index.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`sdk/js/src/auth.ts、sdk/mcp/src/index.test.ts`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`sdk/python/google_checkout_live_sweep.py、sdk/python/letsfg/cli.py、sdk/python/letsfg/client.py、sdk/python/letsfg/connectors/auth.py、sdk/python/letsfg/local.py`
+> 證據：`sdk/js/src/auth.ts、sdk/mcp/src/index.test.ts、tools/build-ranking.py`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -68,15 +68,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-23`
+> 證據：`最後推送 2026-08-25`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1841｜fork 125｜語言 Python｜建立 2026-03-01｜最後推送 2026-08-23
+⭐ 1883｜fork 126｜語言 Python｜建立 2026-03-01｜最後推送 2026-08-25
 
 ---
 

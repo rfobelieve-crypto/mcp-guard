@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1301 / 83 |
-| 最後更新 | 2026-08-24 |
+| 星數 / Fork | ⭐ 1296 / 82 |
+| 最後更新 | 2026-08-25 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
-| 已掃描檔案 | 444 個 |
-| 檢查時間 | 2026-08-24 21:31 |
+| 已掃描檔案 | 445 個 |
+| 檢查時間 | 2026-08-25 21:30 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/execution/execution-job.ts、apps/api/src/migration/migration-execution.service.ts、apps/api/test/global-setup.ts`
+> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/execution/execution-job.ts、apps/api/src/migration/migration-execution.service.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -57,7 +57,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 581 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 582 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1301｜fork 83｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-24
+⭐ 1296｜fork 82｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-25
 
 ---
 

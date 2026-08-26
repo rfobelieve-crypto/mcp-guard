@@ -10,8 +10,8 @@
 | 最後更新 | 2026-08-24 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-crypto-price` |
-| 已掃描檔案 | 53 個 |
-| 檢查時間 | 2026-08-24 21:31 |
+| 已掃描檔案 | 54 個 |
+| 檢查時間 | 2026-08-25 21:30 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
 
-> 證據：`"prepare": "pnpm build"`
+> 證據：`"prepare": "husky"`
 
 ### 🟡 中｜[權限] 會連往 7 個外部主機
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`docs.github.com、glama.ai、mcp-crypto-price.codemonkeyinnovations.com、pro.coincap.io、rest.coincap.io、smithery.ai、www.coincap.io`
 
-### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、zod@^4.4.3、@eslint/js@^10.0.1、@semantic-release/changelog@^6.0.3、@semantic-release/exec@^7.1.0…`
+> 證據：`@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、zod@^4.4.3、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@eslint/js@^10.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
 | 專案說明 | Open-source SEO, GEO, and marketing skills for AI agents. |
-| 星數 / Fork | ⭐ 3398 / 422 |
-| 最後更新 | 2026-08-22 |
+| 星數 / Fork | ⭐ 3405 / 423 |
+| 最後更新 | 2026-08-25 |
 | 授權 | MIT License |
 | 已掃描檔案 | 479 個 |
-| 檢查時間 | 2026-08-24 21:30 |
+| 檢查時間 | 2026-08-25 21:29 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`notfair/bin/cli.mjs、notfair/bin/native-bindings.mjs、notfair/scripts/copy-standalone-assets.mjs、notfair/src/app/api/chat/route.ts、notfair/src/app/api/restart/route.test.ts`
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -66,15 +66,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-22`
+> 證據：`最後推送 2026-08-25`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3398｜fork 422｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-22
+⭐ 3405｜fork 423｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-08-25
 
 ---
 
