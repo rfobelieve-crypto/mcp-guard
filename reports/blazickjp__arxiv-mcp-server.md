@@ -1,40 +1,28 @@
 # MCP 安檢報告：blazickjp/arxiv-mcp-server
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A Model Context Protocol server for searching and analyzing arXiv papers |
-| 星數 / Fork | ⭐ 3072 / 251 |
-| 最後更新 | 2026-08-24 |
+| 星數 / Fork | ⭐ 3076 / 251 |
+| 最後更新 | 2026-08-26 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 96 個 |
-| 檢查時間 | 2026-08-25 21:29 |
+| 檢查時間 | 2026-08-27 00:30 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`.github/workflows/build-mcpb.yml、scripts/smoke_installed_wheel.py、tests/test_import_boundaries.py、tests/test_release_metadata.py`
-
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/build-mcpb.sh、src/arxiv_mcp_server/arxiv_api.py、src/arxiv_mcp_server/resources/papers.py、src/arxiv_mcp_server/tools/latex_archive.py、tests/tools/test_latex.py`
-
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、doi.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org`
+> 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、doi.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -42,11 +30,23 @@
 
 > 證據：`arxiv>=2.1.0、httpx>=0.24.0、python-dateutil>=2.8.2、pydantic>=2.8.0、mcp>=1.27.0,<2.0.0、aiohttp>=3.9.1…`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/build-mcpb.yml、scripts/smoke_installed_wheel.py、tests/test_import_boundaries.py、tests/test_release_metadata.py`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/build-mcpb.sh、src/arxiv_mcp_server/arxiv_api.py、src/arxiv_mcp_server/resources/papers.py、src/arxiv_mcp_server/tools/citation_graph.py、src/arxiv_mcp_server/tools/latex_archive.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -58,9 +58,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3072｜fork 251｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-24
+⭐ 3076｜fork 251｜語言 Python｜建立 2024-11-29｜最後推送 2026-08-26
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4221 / 263 |
-| 最後更新 | 2026-08-25 |
+| 星數 / Fork | ⭐ 4234 / 264 |
+| 最後更新 | 2026-08-26 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-08-25 21:29 |
+| 檢查時間 | 2026-08-27 00:30 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、packages/contracts/src/app-event-runtime.ts、packages/contracts/src/application-lifecycle-interaction.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、packages/capture-kit/src/audio-probe-runtime.test.ts、packages/capture-kit/src/audio-probe-runtime.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -59,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/android-emulator/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ios-simulator/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 7 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-25`
+> 證據：`最後推送 2026-08-26`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4221｜fork 263｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-25
+⭐ 4234｜fork 264｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-26
 
 ---
 

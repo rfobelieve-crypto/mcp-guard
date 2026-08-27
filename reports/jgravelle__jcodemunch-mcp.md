@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2617 / 356 |
-| 最後更新 | 2026-08-25 |
+| 星數 / Fork | ⭐ 2624 / 357 |
+| 最後更新 | 2026-08-26 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-25 21:29 |
+| 檢查時間 | 2026-08-27 00:30 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`munch-bench/results/anthropic_claude-haiku-4-5_flask.json、src/jcodemunch_mcp/server.py`
+> 證據：`munch-bench/results/anthropic_claude-haiku-4-5_flask.json`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 55 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-25`
+> 證據：`最後推送 2026-08-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2617｜fork 356｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-25
+⭐ 2624｜fork 357｜語言 Python｜建立 2026-02-09｜最後推送 2026-08-26
 
 ---
 
