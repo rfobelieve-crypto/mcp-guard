@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1538 / 153 |
-| 最後更新 | 2026-08-22 |
+| 星數 / Fork | ⭐ 1543 / 153 |
+| 最後更新 | 2026-08-27 |
 | 授權 | MIT License |
-| 已掃描檔案 | 98 個 |
-| 檢查時間 | 2026-08-27 00:31 |
+| 已掃描檔案 | 108 個 |
+| 檢查時間 | 2026-08-28 05:11 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`mcp>=2.0.0,<3.0.0、pydantic>=2.13.4,<3.0.0、starlette>=1.3.1,<2.0.0、uvicorn>=0.51.0,<1.0.0`
+> 證據：`mcp>=2.1.1,<3.0.0、pydantic>=2.13.4,<3.0.0、starlette>=1.6.0,<2.0.0、uvicorn>=0.52.4,<1.0.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -48,11 +48,11 @@
 
 > 證據：`src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、src/mcp_windbg/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、src/mcp_windbg/prompts/kernel-triage.prompt.md（GitHub Copilot 提示檔）…`
+> 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/mcp-windbg/skills/analyze-dump/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/mcp-windbg/skills/debug-remote/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
 
@@ -68,11 +68,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-22`
+> 證據：`最後推送 2026-08-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1538｜fork 153｜語言 Python｜建立 2025-05-02｜最後推送 2026-08-22
+⭐ 1543｜fork 153｜語言 Python｜建立 2025-05-02｜最後推送 2026-08-27
 
 ---
 

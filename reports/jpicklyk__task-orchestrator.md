@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
-| 星數 / Fork | ⭐ 205 / 21 |
+| 星數 / Fork | ⭐ 206 / 21 |
 | 最後更新 | 2026-08-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-08-27 00:33 |
+| 檢查時間 | 2026-08-28 05:12 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 22 天內有更新
+### ⚪ 資訊｜[維護] 最近 23 天內有更新
 
 專案仍在活躍維護中。
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 205｜fork 21｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-08-04
+⭐ 206｜fork 21｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-08-04
 
 ---
 

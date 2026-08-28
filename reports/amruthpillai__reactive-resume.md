@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 41785 / 4670 |
-| 最後更新 | 2026-08-26 |
+| 星數 / Fork | ⭐ 41852 / 4670 |
+| 最後更新 | 2026-08-27 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-08-27 00:28 |
+| 檢查時間 | 2026-08-28 05:08 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、crowdin.com、discord.gg、docs.rxresu.me、evil.example.com、fundingjson.org、gateway.example.com…`
+> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、crowdin.com、discord.gg、docs.pullfrog.com、docs.rxresu.me、evil.example.com、fundingjson.org…`
 
 ### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
 
@@ -43,7 +43,7 @@
 
 > 證據：`.github/workflows/label-issues.yml、apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（119 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（114 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -53,7 +53,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 10 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -65,13 +65,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-26`
+> 證據：`最後推送 2026-08-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 41785｜fork 4670｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-26
+⭐ 41852｜fork 4670｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-27
 
 ---
 
