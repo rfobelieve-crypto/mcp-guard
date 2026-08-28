@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `awkoy/notion-mcp-server` |
 | 專案說明 | Notion MCP server for Claude, Cursor, ChatGPT & Claude Desktop. Connect AI agent |
-| 星數 / Fork | ⭐ 167 / 38 |
+| 星數 / Fork | ⭐ 168 / 38 |
 | 最後更新 | 2026-08-26 |
 | 授權 | MIT License |
 | npm 套件 | `notion-mcp-server` |
 | 已掃描檔案 | 104 個 |
-| 檢查時間 | 2026-08-27 00:33 |
+| 檢查時間 | 2026-08-28 05:12 |
 
 ## 風險摘要
 
@@ -73,7 +73,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 167｜fork 38｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-08-26
+⭐ 168｜fork 38｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-08-26
 
 ---
 

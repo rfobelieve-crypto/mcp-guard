@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 8965 / 1424 |
-| 最後更新 | 2026-08-26 |
+| 星數 / Fork | ⭐ 8969 / 1424 |
+| 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-08-27 00:29 |
+| 已掃描檔案 | 435 個 |
+| 檢查時間 | 2026-08-28 05:08 |
 
 ## 風險摘要
 
@@ -64,15 +64,15 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.cursor/skills/praisonai-js-hub-intake/SKILL.md（Agent Skill 指令（SKILL.md））、.cursor/skills/praisonai-js-hub-intake/reference.md（AI 客戶端設定目錄下的指令檔）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/skills/pdf-processing/SKILL.md（Agent Skill 指令（SKILL.md））、src/praisonai-agents/.cursorrules（Cursor 規則）、src/praisonai-agents/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/skills/pdf-processing/SKILL.md（Agent Skill 指令（SKILL.md））、src/praisonai-agents/.cursorrules（Cursor 規則）、src/praisonai-agents/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/praisonai-agents/tests/.windsurfrules（Windsurf 規則）、src/praisonai-rust/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-26`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -102,7 +102,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8965｜fork 1424｜語言 Python｜建立 2024-03-19｜最後推送 2026-08-26
+⭐ 8969｜fork 1424｜語言 Python｜建立 2024-03-19｜最後推送 2026-08-28
 
 ---
 

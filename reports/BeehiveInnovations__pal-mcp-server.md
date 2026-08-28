@@ -10,7 +10,7 @@
 | 最後更新 | 2025-12-15 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-08-27 00:28 |
+| 檢查時間 | 2026-08-28 05:07 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`api.example.com、api.openai.com、api.x.ai、bootstrap.pypa.io、claude.ai、core.dialx.ai、custom.dialx.ai、custom.openai.com、custom.x.ai、dialx.ai…`
 
-### 🟡 中｜[維護] 約 8 個月沒有更新
+### 🟡 中｜[維護] 約 9 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 
@@ -60,7 +60,7 @@
 
 > 證據：`clink/agents/base.py、run-server.sh、simulator_tests/test_analyze_validation.py、simulator_tests/test_codereview_validation.py、simulator_tests/test_debug_validation.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（139 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（138 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
