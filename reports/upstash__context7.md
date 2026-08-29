@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 61320 / 2957 |
-| 最後更新 | 2026-08-27 |
+| 星數 / Fork | ⭐ 61357 / 2957 |
+| 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 223 個 |
-| 檢查時間 | 2026-08-28 05:08 |
+| 已掃描檔案 | 224 個 |
+| 檢查時間 | 2026-08-29 03:06 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts、packages/cli/src/utils/github.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（62 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-27`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61320｜fork 2957｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-08-27
+⭐ 61357｜fork 2957｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-08-28
 
 ---
 

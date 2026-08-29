@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 8969 / 1424 |
-| 最後更新 | 2026-08-28 |
+| 星數 / Fork | ⭐ 8977 / 1426 |
+| 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
-| 已掃描檔案 | 435 個 |
-| 檢查時間 | 2026-08-28 05:08 |
+| 已掃描檔案 | 436 個 |
+| 檢查時間 | 2026-08-29 03:06 |
 
 ## 風險摘要
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,7 +74,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/skills/pdf-processing/SKILL.md（Agent Skill 指令（SKILL.md））、src/praisonai-agents/.cursorrules（Cursor 規則）、src/praisonai-agents/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/praisonai-agents/tests/.windsurfrules（Windsurf 規則）、src/praisonai-rust/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 26 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-28`
+> 證據：`最後推送 2026-08-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -102,7 +102,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8969｜fork 1424｜語言 Python｜建立 2024-03-19｜最後推送 2026-08-28
+⭐ 8977｜fork 1426｜語言 Python｜建立 2024-03-19｜最後推送 2026-08-29
 
 ---
 

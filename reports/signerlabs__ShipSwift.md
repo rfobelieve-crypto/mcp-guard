@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `signerlabs/ShipSwift` |
 | 專案說明 | AI-native SwiftUI component library with full-stack recipes — connect via MCP fo |
-| 星數 / Fork | ⭐ 2973 / 176 |
+| 星數 / Fork | ⭐ 2977 / 176 |
 | 最後更新 | 2026-08-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 47 個 |
-| 檢查時間 | 2026-08-28 05:10 |
+| 檢查時間 | 2026-08-29 03:08 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2973｜fork 176｜語言 Swift｜建立 2025-12-15｜最後推送 2026-08-09
+⭐ 2977｜fork 176｜語言 Swift｜建立 2025-12-15｜最後推送 2026-08-09
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 79523 / 14579 |
-| 最後更新 | 2026-08-28 |
+| 星數 / Fork | ⭐ 79577 / 14589 |
+| 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 492 個 |
-| 檢查時間 | 2026-08-28 05:07 |
+| 檢查時間 | 2026-08-29 03:06 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、cli/src/__tests__/company-import-export-e2e.test.ts、cli/src/__tests__/open-url.test.ts`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-migration-order.mjs、cli/src/__tests__/company-import-export-e2e.test.ts`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-coauthors.mjs、.github/scripts/check-pr-dedup-search.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5413 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5425 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-28`
+> 證據：`最後推送 2026-08-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 79523｜fork 14579｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-28
+⭐ 79577｜fork 14589｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-29
 
 ---
 

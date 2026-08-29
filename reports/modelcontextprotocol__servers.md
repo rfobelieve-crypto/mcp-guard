@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 89917 / 11518 |
+| 星數 / Fork | ⭐ 89940 / 11523 |
 | 最後更新 | 2026-08-28 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 124 個 |
-| 檢查時間 | 2026-08-28 05:06 |
+| 已掃描檔案 | 130 個 |
+| 檢查時間 | 2026-08-29 03:04 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/release.py、src/filesystem/__tests__/directory-tree.mcp-sdk.test.ts、src/filesystem/__tests__/directory-tree.test.ts、src/filesystem/__tests__/path-validation.test.ts、src/filesystem/__tests__/startup-validation.test.ts`
+> 證據：`scripts/release.py、src/filesystem/__tests__/directory-tree.mcp-sdk.test.ts、src/filesystem/__tests__/directory-tree.test.ts、src/filesystem/__tests__/nested-parents.test.ts、src/filesystem/__tests__/path-validation.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`src/everything/__tests__/tools.test.ts、src/everything/tools/get-env.ts、src/everything/tools/gzip-file-as-resource.ts、src/everything/transports/sse.ts、src/everything/transports/streamableHttp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（547 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（506 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 89917｜fork 11518｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-08-28
+⭐ 89940｜fork 11523｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-08-28
 
 ---
 

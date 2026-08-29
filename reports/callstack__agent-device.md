@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4253 / 265 |
-| 最後更新 | 2026-08-27 |
+| 星數 / Fork | ⭐ 4265 / 265 |
+| 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-08-28 05:09 |
+| 已掃描檔案 | 421 個 |
+| 檢查時間 | 2026-08-29 03:07 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.oxlintrc.json、linux/atspi-dump.py`
+> 證據：`linux/atspi-dump.py、oxlint.config.ts`
 
 ### 🟡 中｜[權限] 會連往 17 個外部主機
 
@@ -37,7 +37,7 @@
 
 > 證據：`agent-device.dev、api.example.com、discourse.gnome.org、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev、glama.ai…`
 
-### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（69 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-27`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4253｜fork 265｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-27
+⭐ 4265｜fork 265｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-28
 
 ---
 

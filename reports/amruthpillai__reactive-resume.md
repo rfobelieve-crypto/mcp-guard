@@ -1,35 +1,29 @@
 # MCP 安檢報告：amruthpillai/reactive-resume
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 41852 / 4670 |
-| 最後更新 | 2026-08-27 |
+| 星數 / Fork | ⭐ 41895 / 4670 |
+| 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-08-28 05:08 |
+| 檢查時間 | 2026-08-29 03:06 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
-
-### 🟡 中｜[權限] 會連往 24 個外部主機
+### 🟡 中｜[權限] 會連往 22 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、crowdin.com、discord.gg、docs.pullfrog.com、docs.rxresu.me、evil.example.com、fundingjson.org…`
+> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、crowdin.com、discord.gg、docs.rxresu.me、evil.example.com、fundingjson.org、gateway.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
 
@@ -39,11 +33,17 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/label-issues.yml、apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（114 則）
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（115 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -57,21 +57,21 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-27`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 41852｜fork 4670｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-27
+⭐ 41895｜fork 4670｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-28
 
 ---
 

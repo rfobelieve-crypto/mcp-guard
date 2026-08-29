@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | Analytics that reads your event log back to you: what changed, the segment carry |
-| 星數 / Fork | ⭐ 2 / 1 |
-| 最後更新 | 2026-08-25 |
+| 星數 / Fork | ⭐ 3 / 1 |
+| 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-08-28 05:12 |
+| 檢查時間 | 2026-08-29 03:10 |
 
 ## 風險摘要
 
@@ -40,11 +40,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 83 個外部主機
+### 🟡 中｜[權限] 會連往 86 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.anthropic.com、api.example.com、app.myapp.io、app.netlify.app、broken.vercel.app、chatgpt.com、checkout.stripe.com…`
+> 證據：`accounts.google.com、ahrefs.com、anthropic.com、api.anthropic.com、api.example.com、app.myapp.io、app.netlify.app、app.test、broken.vercel.app、chatgpt.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -78,11 +78,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-25`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-25
+⭐ 3｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-28
 
 ---
 
