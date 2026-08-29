@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KnockOutEZ/wigolo` |
 | 專案說明 | The go-to web for your AI coding agent — local-first search, fetch, crawl & rese |
-| 星數 / Fork | ⭐ 4742 / 349 |
+| 星數 / Fork | ⭐ 4753 / 349 |
 | 最後更新 | 2026-08-29 |
 | 授權 | Other |
 | npm 套件 | `wigolo` |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-08-29 03:07 |
+| 檢查時間 | 2026-08-29 23:02 |
 
 ## 風險摘要
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4742｜fork 349｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-29
+⭐ 4753｜fork 349｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-08-29
 
 ---
 

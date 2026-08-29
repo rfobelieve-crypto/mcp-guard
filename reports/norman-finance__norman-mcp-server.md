@@ -9,8 +9,8 @@
 | 星數 / Fork | ⭐ 54 / 14 |
 | 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
-| 已掃描檔案 | 90 個 |
-| 檢查時間 | 2026-08-29 03:09 |
+| 已掃描檔案 | 94 個 |
+| 檢查時間 | 2026-08-29 23:03 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））、skills/expense-report/SKILL.md（Agent Skill 指令（SKILL.md））、skills/financial-overview/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 300 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 370 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -56,7 +56,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

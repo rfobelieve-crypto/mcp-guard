@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1764 / 103 |
+| 星數 / Fork | ⭐ 1767 / 103 |
 | 最後更新 | 2026-08-29 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-08-29 03:08 |
+| 檢查時間 | 2026-08-29 23:03 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml、.github/workflows/update-aur-beta.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（83 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（82 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1764｜fork 103｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-29
+⭐ 1767｜fork 103｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-29
 
 ---
 

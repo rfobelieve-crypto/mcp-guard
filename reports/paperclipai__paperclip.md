@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 79577 / 14589 |
+| 星數 / Fork | ⭐ 79638 / 14603 |
 | 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 492 個 |
-| 檢查時間 | 2026-08-29 03:06 |
+| 已掃描檔案 | 493 個 |
+| 檢查時間 | 2026-08-29 23:00 |
 
 ## 風險摘要
 
@@ -53,11 +53,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`api.anthropic.com、api.openai.com、attacker-registry.invalid、codeload.github.com、discord.gg、evil.example、example.test、ghe.example.com、microsoft.github.io、my-host.ts.net…`
 
-### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@playwright/test@^1.62.1、cross-env@^10.1.0、esbuild@^0.28.2、typescript@^7.0.2、vitest@^4.1.10`
+> 證據：`@playwright/test@^1.62.1、agentmail@^0.5.14、cross-env@^10.1.0、esbuild@^0.28.2、typescript@^7.0.2、vitest@^4.1.10`
 
 ### 🔵 低｜[供應鏈] npm 套件未標示原始碼位置
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-coauthors.mjs、.github/scripts/check-pr-dedup-search.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5425 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5435 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/check-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/company-creator/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-agent-adapter/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-issue-interaction-ui/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-paperclip-bundled-skill/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/deal-with-security-advisory/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 79577｜fork 14589｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-29
+⭐ 79638｜fork 14603｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-08-29
 
 ---
 
