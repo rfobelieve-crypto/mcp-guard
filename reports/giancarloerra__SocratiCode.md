@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `giancarloerra/SocratiCode` |
 | 專案說明 | Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private P |
-| 星數 / Fork | ⭐ 3275 / 412 |
-| 最後更新 | 2026-08-24 |
+| 星數 / Fork | ⭐ 3275 / 414 |
+| 最後更新 | 2026-08-28 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
-| 已掃描檔案 | 175 個 |
-| 檢查時間 | 2026-08-28 05:10 |
+| 已掃描檔案 | 179 個 |
+| 檢查時間 | 2026-08-29 03:08 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`altaire.com、bevry.me、biomejs.dev、bugs.chromium.org、bugs.webkit.org、cdn.example.com、cloud-qdrant.example、docker.com、docs.litellm.ai、dotenvx.com…`
 
-### 🔵 低｜[供應鏈] 有 37 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 42 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@ast-grep/lang-bash@^0.0.7、@ast-grep/lang-c@^0.0.5、@ast-grep/lang-cpp@^0.0.5、@ast-grep/lang-csharp@^0.0.5、@ast-grep/lang-dart@^0.0.7、@ast-grep/lang-go@^0.0.5…`
+> 證據：`@ast-grep/lang-bash@^0.0.7、@ast-grep/lang-c@^0.0.5、@ast-grep/lang-cpp@^0.0.5、@ast-grep/lang-csharp@^0.0.5、@ast-grep/lang-dart@^0.0.7、@ast-grep/lang-elixir@^0.0.7…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -73,15 +73,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3275｜fork 412｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-08-24
+⭐ 3275｜fork 414｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-08-28
 
 ---
 

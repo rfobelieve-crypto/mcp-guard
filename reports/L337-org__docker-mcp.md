@@ -7,10 +7,10 @@
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
 | 星數 / Fork | ⭐ 4 / 0 |
-| 最後更新 | 2026-08-27 |
+| 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
-| 已掃描檔案 | 141 個 |
-| 檢查時間 | 2026-08-28 05:13 |
+| 已掃描檔案 | 145 個 |
+| 檢查時間 | 2026-08-29 03:11 |
 
 ## 風險摘要
 
@@ -42,11 +42,11 @@
 
 > 證據：`docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/measure-comparison-figures.py、tests/integration/test_buildx.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/commands/docker-sdk.md（AI 客戶端設定目錄下的指令檔）、.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills/l337-docker/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`.claude/commands/docker-sdk.md（AI 客戶端設定目錄下的指令檔）、.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills/l337-docker/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 34 段 description）
 
@@ -62,11 +62,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-27`
+> 證據：`最後推送 2026-08-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-27
+⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-08-29
 
 ---
 

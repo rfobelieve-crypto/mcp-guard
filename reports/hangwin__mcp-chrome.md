@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `hangwin/mcp-chrome` |
 | 專案說明 | Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) serve |
-| 星數 / Fork | ⭐ 12357 / 1127 |
+| 星數 / Fork | ⭐ 12358 / 1127 |
 | 最後更新 | 2026-01-06 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-chrome-bridge-monorepo`（registry 查無） |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-08-28 05:07 |
+| 檢查時間 | 2026-08-29 03:05 |
 
 ## 風險摘要
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12357｜fork 1127｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-01-06
+⭐ 12358｜fork 1127｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-01-06
 
 ---
 

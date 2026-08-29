@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `pulsemcp/mcp-servers` |
 | 專案說明 | MCP (Model Context Protocol) Servers authored and maintained by the PulseMCP tea |
-| 星數 / Fork | ⭐ 78 / 10 |
+| 星數 / Fork | ⭐ 80 / 10 |
 | 最後更新 | 2026-07-26 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-servers-monorepo`（registry 查無） |
 | 已掃描檔案 | 476 個 |
-| 檢查時間 | 2026-08-28 05:12 |
+| 檢查時間 | 2026-08-29 03:10 |
 
 ## 風險摘要
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 33 天內有更新
+### ⚪ 資訊｜[維護] 最近 34 天內有更新
 
 專案仍在活躍維護中。
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 78｜fork 10｜語言 TypeScript｜建立 2025-05-12｜最後推送 2026-07-26
+⭐ 80｜fork 10｜語言 TypeScript｜建立 2025-05-12｜最後推送 2026-07-26
 
 ---
 

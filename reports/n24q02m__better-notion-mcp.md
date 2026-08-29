@@ -11,7 +11,7 @@
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/better-notion-mcp` |
 | 已掃描檔案 | 125 個 |
-| 檢查時間 | 2026-08-28 05:12 |
+| 檢查時間 | 2026-08-29 03:10 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cloudflare/containers@^0.3.7、@modelcontextprotocol/sdk@^1.30.0、@notionhq/client@^5.25.2、zod@^4.4.3、@biomejs/biome@^2.5.9、@cloudflare/workers-types@^5.20260819.1…`
+> 證據：`@cloudflare/containers@^0.3.7、@modelcontextprotocol/sdk@^1.30.0、@notionhq/client@^5.26.0、zod@^4.4.3、@biomejs/biome@^2.5.10、@cloudflare/workers-types@^5.20260821.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
