@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
-| 星數 / Fork | ⭐ 2691 / 136 |
+| 星數 / Fork | ⭐ 2691 / 137 |
 | 最後更新 | 2026-08-27 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-08-29 03:08 |
+| 檢查時間 | 2026-08-29 23:02 |
 
 ## 風險摘要
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2691｜fork 136｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-08-27
+⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-08-27
 
 ---
 

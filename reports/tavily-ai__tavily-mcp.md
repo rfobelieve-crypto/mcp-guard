@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tavily-ai/tavily-mcp` |
 | 專案說明 | Production ready MCP server with real-time search, extract, map & crawl. |
-| 星數 / Fork | ⭐ 2359 / 291 |
+| 星數 / Fork | ⭐ 2362 / 291 |
 | 最後更新 | 2026-08-20 |
 | 授權 | MIT License |
 | npm 套件 | `tavily-mcp` |
 | 已掃描檔案 | 6 個 |
-| 檢查時間 | 2026-08-29 03:08 |
+| 檢查時間 | 2026-08-29 23:02 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2359｜fork 291｜語言 JavaScript｜建立 2025-01-27｜最後推送 2026-08-20
+⭐ 2362｜fork 291｜語言 JavaScript｜建立 2025-01-27｜最後推送 2026-08-20
 
 ---
 

@@ -10,11 +10,11 @@
 | 最後更新 | 2026-06-05 |
 | 授權 | MIT License |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-08-29 03:06 |
+| 檢查時間 | 2026-08-29 23:01 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -23,6 +23,10 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`a.com、accounts.google.com、airtable.com、airweave.ai、api.airweave.ai、api.example.com、api.mistral.ai、api.pipedream.com、app.airweave.ai、app.example.com…`
+
+### 🟡 中｜[身分] 倉庫已封存（archived）
+
+作者已停止維護，不會再修安全問題。
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -60,7 +64,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 85 天內有更新
+### ⚪ 資訊｜[維護] 最近 86 天內有更新
 
 專案仍在活躍維護中。
 

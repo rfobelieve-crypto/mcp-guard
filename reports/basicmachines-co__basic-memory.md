@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3793 / 266 |
+| 星數 / Fork | ⭐ 3801 / 268 |
 | 最後更新 | 2026-08-29 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-29 03:07 |
+| 檢查時間 | 2026-08-29 23:02 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/concurrent_write.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3793｜fork 266｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-29
+⭐ 3801｜fork 268｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-29
 
 ---
 
