@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 5351 / 241 |
+| 星數 / Fork | ⭐ 5438 / 242 |
 | 最後更新 | 2026-08-27 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
 | 已掃描檔案 | 350 個 |
-| 檢查時間 | 2026-08-29 23:02 |
+| 檢查時間 | 2026-08-30 23:15 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`evals/workflows/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（144 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（145 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,7 +73,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5351｜fork 241｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-27
+⭐ 5438｜fork 242｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-27
 
 ---
 
