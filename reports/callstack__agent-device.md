@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4278 / 266 |
+| 星數 / Fork | ⭐ 4290 / 267 |
 | 最後更新 | 2026-08-29 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-08-29 23:02 |
+| 檢查時間 | 2026-08-30 23:14 |
 
 ## 風險摘要
 
@@ -77,7 +77,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4278｜fork 266｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-29
+⭐ 4290｜fork 267｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-29
 
 ---
 

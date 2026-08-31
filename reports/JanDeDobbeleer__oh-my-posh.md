@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23369 / 2775 |
-| 最後更新 | 2026-08-28 |
+| 星數 / Fork | ⭐ 23372 / 2774 |
+| 最後更新 | 2026-08-30 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-08-29 23:00 |
+| 檢查時間 | 2026-08-30 23:13 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org、example.awsapps.com、go.microsoft.com…`
+> 證據：`aka.ms、cdn.ohmyposh.dev、containers.dev、discord.com、docs.microsoft.com、en.wikipedia.org、example.awsapps.com、go.microsoft.com、golang.org、google.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -44,7 +44,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/homebrew.yml`
+> 證據：`.github/workflows/homebrew.yml、src/runtime/activation.go`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 18 個代理指令檔
 
@@ -66,11 +66,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-28`
+> 證據：`最後推送 2026-08-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23369｜fork 2775｜語言 Go｜建立 2019-03-13｜最後推送 2026-08-28
+⭐ 23372｜fork 2774｜語言 Go｜建立 2019-03-13｜最後推送 2026-08-30
 
 ---
 

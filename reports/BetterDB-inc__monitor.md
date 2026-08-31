@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1297 / 82 |
-| 最後更新 | 2026-08-29 |
+| 星數 / Fork | ⭐ 1296 / 82 |
+| 最後更新 | 2026-08-30 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
-| 已掃描檔案 | 445 個 |
-| 檢查時間 | 2026-08-29 23:03 |
+| 已掃描檔案 | 446 個 |
+| 檢查時間 | 2026-08-30 23:16 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.internal.example.com、api.example.com、betterdb.com、docs.betterdb.com、eu.i.posthog.com、events.pagerduty.example.com、hooks.slack.example.com、json.schemastore.org、ph.example.com、redis.io…`
+> 證據：`analytics.internal.example.com、api.example.com、betterdb.com、db.turso.io、docs.betterdb.com、eu.i.posthog.com、events.pagerduty.example.com、hooks.slack.example.com、json.schemastore.org、ph.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -71,11 +71,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-29`
+> 證據：`最後推送 2026-08-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1297｜fork 82｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-29
+⭐ 1296｜fork 82｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-08-30
 
 ---
 

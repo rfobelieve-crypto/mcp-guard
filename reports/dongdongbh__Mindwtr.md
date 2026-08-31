@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1767 / 103 |
-| 最後更新 | 2026-08-29 |
+| 星數 / Fork | ⭐ 1826 / 105 |
+| 最後更新 | 2026-08-30 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-08-29 23:03 |
+| 檢查時間 | 2026-08-30 23:15 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-29`
+> 證據：`最後推送 2026-08-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1767｜fork 103｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-29
+⭐ 1826｜fork 105｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-30
 
 ---
 
