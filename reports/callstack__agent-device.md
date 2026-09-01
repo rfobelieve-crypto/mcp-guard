@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4290 / 267 |
-| 最後更新 | 2026-08-29 |
+| 星數 / Fork | ⭐ 4300 / 268 |
+| 最後更新 | 2026-08-31 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-08-30 23:14 |
+| 檢查時間 | 2026-09-01 00:26 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`linux/atspi-dump.py、oxlint.config.ts`
+> 證據：`examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts`
 
 ### 🟡 中｜[權限] 會連往 17 個外部主機
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、packages/ad-script/src/internal/vars.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,15 +77,15 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-29`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4290｜fork 267｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-29
+⭐ 4300｜fork 268｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-31
 
 ---
 

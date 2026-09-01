@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 5438 / 242 |
-| 最後更新 | 2026-08-27 |
+| 星數 / Fork | ⭐ 5527 / 242 |
+| 最後更新 | 2026-08-31 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
-| 已掃描檔案 | 350 個 |
-| 檢查時間 | 2026-08-30 23:15 |
+| 已掃描檔案 | 352 個 |
+| 檢查時間 | 2026-09-01 00:26 |
 
 ## 風險摘要
 
@@ -49,15 +49,15 @@
 
 > 證據：`evals/workflows/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（145 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（144 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 12 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/mcp/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
+> 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-workflow-evals/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-workflow-evals/reference.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 219 段 description）
 
@@ -73,11 +73,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-27`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5438｜fork 242｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-27
+⭐ 5527｜fork 242｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-31
 
 ---
 

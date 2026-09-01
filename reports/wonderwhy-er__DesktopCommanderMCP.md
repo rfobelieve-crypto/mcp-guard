@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 9444 / 1159 |
+| 星數 / Fork | ⭐ 9452 / 1166 |
 | 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 271 個 |
-| 檢查時間 | 2026-08-30 23:12 |
+| 檢查時間 | 2026-09-01 00:23 |
 
 ## 風險摘要
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 4 天內有更新
 
 專案仍在活躍維護中。
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9444｜fork 1159｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-08-28
+⭐ 9452｜fork 1166｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-08-28
 
 ---
 

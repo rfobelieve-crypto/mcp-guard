@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1826 / 105 |
-| 最後更新 | 2026-08-30 |
+| 星數 / Fork | ⭐ 1867 / 110 |
+| 最後更新 | 2026-08-31 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-08-30 23:15 |
+| 檢查時間 | 2026-09-01 00:27 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apps/cloud/src/server.test.ts`
 
-### 🟡 中｜[權限] 會連往 30 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、azure.archive.ubuntu.com、calendar.example、cloud.example、docs.mindwtr.app…`
+> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、calendar.example、docs.mindwtr.app…`
 
 ### 🔵 低｜[供應鏈] 有 63 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml、.github/workflows/update-aur-beta.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（82 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（95 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1826｜fork 105｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-30
+⭐ 1867｜fork 110｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-08-31
 
 ---
 

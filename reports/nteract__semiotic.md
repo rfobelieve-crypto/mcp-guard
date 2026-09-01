@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2691 / 137 |
-| 最後更新 | 2026-08-30 |
+| 最後更新 | 2026-09-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-08-30 23:15 |
+| 檢查時間 | 2026-09-01 00:26 |
 
 ## 風險摘要
 
@@ -19,33 +19,33 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 72 個外部主機
+### 🟡 中｜[權限] 會連往 80 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`americanaejournal.hu、americanarchive.org、api.mapbox.com、api.maptiler.com、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、bost.ocks.org、chartability.github.io…`
+> 證據：`americanaejournal.hu、americanarchive.org、api.mapbox.com、api.maptiler.com、api.usaspending.gov、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、bost.ocks.org…`
 
 ### 🔵 低｜[供應鏈] 有 72 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`d3-array@^3.2.4、d3-brush@^3.0.0、d3-chord@^3.0.1、d3-force@^3.0.0、d3-geo@^3.1.1、d3-hierarchy@^3.1.2…`
+> 證據：`d3-array@^3.2.4、d3-brush@^3.0.0、d3-chord@^3.0.1、d3-force@^3.0.0、d3-geo@^3.1.0、d3-hierarchy@^3.1.2…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/publish-mcp-registry.yml、.github/workflows/release.yml、ai/cli.js、ai/mcp-build-info.ts、ai/mcp-http-logging.integration.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/release.yml、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs、docs/src/examples/recipes/data/debateWordTrails.build.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts`
 
@@ -59,7 +59,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
+### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-08-30
+⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-01
 
 ---
 

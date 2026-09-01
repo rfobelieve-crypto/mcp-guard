@@ -7,23 +7,17 @@
 | 稽核對象 | `truss44/mcp-crypto-price` |
 | 專案說明 | A Model Context Protocol (MCP) server that provides real-time cryptocurrency ana |
 | 星數 / Fork | ⭐ 40 / 9 |
-| 最後更新 | 2026-08-24 |
+| 最後更新 | 2026-08-31 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-crypto-price` |
-| 已掃描檔案 | 54 個 |
-| 檢查時間 | 2026-08-30 23:16 |
+| 已掃描檔案 | 58 個 |
+| 檢查時間 | 2026-09-01 00:27 |
 
 ## 風險摘要
 
-🟡 中 3　🔵 低 2　⚪ 資訊 7
+🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-> 證據：`CLAUDE.md｜「…config --global gpg.format ssh git config --global user.signingkey ~/.ssh/id_ed25519.pub git config --global commit.gpgsign true ```」`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -53,7 +47,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
 
@@ -69,11 +63,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-24`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -83,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 40｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-24
+⭐ 40｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-31
 
 ---
 

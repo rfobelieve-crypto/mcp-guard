@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1660 / 252 |
-| 最後更新 | 2026-08-30 |
+| 星數 / Fork | ⭐ 1664 / 253 |
+| 最後更新 | 2026-09-01 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 852 個 |
-| 檢查時間 | 2026-08-30 23:15 |
+| 已掃描檔案 | 853 個 |
+| 檢查時間 | 2026-09-01 00:27 |
 
 ## 風險摘要
 
@@ -50,11 +50,11 @@
 
 > 證據：`plugin/skills/tooluniverse-claude-code-plugin/SKILL.md｜「…(most common cause of "no tools at all") command -v uvx || echo "FIX: curl -LsSf https://astral.sh/uv/install.sh | sh"」（另 3 個檔案有相同內容）`
 
-### 🟡 中｜[權限] 會連往 38 個外部主機
+### 🟡 中｜[權限] 會連往 40 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aiscientist.tools、aistudio.google.com、api.example.com、astral.sh、build.nvidia.com、data.4dnucleome.org、data.humancellatlas.org、depmap.org、docs.astral.sh、fonts.googleapis.com…`
+> 證據：`aiscientist.tools、aistudio.google.com、api.example.com、astral.sh、build.nvidia.com、data.4dnucleome.org、data.humancellatlas.org、depmap.org、docs.astral.sh、doi.org…`
 
 ### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
@@ -100,11 +100,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +114,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1660｜fork 252｜語言 Python｜建立 2025-03-03｜最後推送 2026-08-30
+⭐ 1664｜fork 253｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-01
 
 ---
 

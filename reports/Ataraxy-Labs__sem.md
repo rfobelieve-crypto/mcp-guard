@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
-| 星數 / Fork | ⭐ 3325 / 101 |
-| 最後更新 | 2026-08-29 |
+| 星數 / Fork | ⭐ 3326 / 101 |
+| 最後更新 | 2026-08-31 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
-| 已掃描檔案 | 94 個 |
-| 檢查時間 | 2026-08-30 23:14 |
+| 已掃描檔案 | 286 個 |
+| 檢查時間 | 2026-09-01 00:26 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -25,11 +25,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node ./scripts/postinstall.mjs"`
 
-### 🟡 中｜[權限] 會連往 4 個外部主機
+### 🟡 中｜[工具描述投毒] 描述中出現系統提示詞標記或字樣
+
+描述裡出現 <system> 之類的標記，可能是想偽裝成系統訊息。請確認上下文。
+
+> 證據：`pi/src/codemode/tool.ts｜「A short async JavaScript program run against the `sem` API (see the types injected into the system prompt).」`
+
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`app.com、ataraxy-labs.com、code.claude.com、static.modelcontextprotocol.io`
+> 證據：`app.com、ataraxy-labs.com、code.claude.com、feross.org、opencollective.com、paypal.me、static.modelcontextprotocol.io、www.patreon.com`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -47,17 +53,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、scripts/package-meta.mjs`
+> 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、pi/extensions/pi-sem.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、agent-skill/SKILL.md（Agent Skill 指令（SKILL.md））、docs/llms.txt（給模型讀的站點說明（llms.txt））、skills/sem/SKILL.md（Agent Skill 指令（SKILL.md））`
-
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
-
-沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
 ### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
@@ -69,11 +71,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-29`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3325｜fork 101｜語言 Rust｜建立 2026-02-05｜最後推送 2026-08-29
+⭐ 3326｜fork 101｜語言 Rust｜建立 2026-02-05｜最後推送 2026-08-31
 
 ---
 
