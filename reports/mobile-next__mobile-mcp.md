@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 6242 / 539 |
-| 最後更新 | 2026-08-30 |
+| 星數 / Fork | ⭐ 6268 / 539 |
+| 最後更新 | 2026-08-31 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 42 個 |
-| 檢查時間 | 2026-08-30 23:13 |
+| 已掃描檔案 | 47 個 |
+| 檢查時間 | 2026-09-01 00:25 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`eslint.org、feross.org、glama.ai、opencollective.com、static.modelcontextprotocol.io、us.i.posthog.com、www.example.com、www.patreon.com`
+> 證據：`agent-plugins.org、eslint.org、feross.org、glama.ai、mobilenext.ai、opencollective.com、static.modelcontextprotocol.io、us.i.posthog.com、www.example.com、www.patreon.com`
 
 ### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
 
@@ -37,31 +37,33 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`ajv@^8.18.0、qs@^6.15.0、zod@^4.1.13、@eslint/eslintrc@^3.2.0、@eslint/js@^9.19.0、@playwright/test@^1.49.0…`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/build.yml、src/image-utils.ts、src/server.ts、test/validate-response.js`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/build.yml、src/android.ts、src/index.ts、src/ios.ts、src/logger.ts`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`src/android.ts、src/image-utils.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`src/android.ts、src/index.ts、src/ios.ts、src/logger.ts、src/mobilecli.ts`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`src/image-utils.ts、src/server.ts、test/validate-response.js`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
-這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`skills/mobile-automation/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
@@ -75,13 +77,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6242｜fork 539｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-08-30
+⭐ 6268｜fork 539｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-08-31
 
 ---
 

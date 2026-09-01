@@ -1,28 +1,38 @@
 # MCP 安檢報告：basicmachines-co/basic-memory
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3807 / 268 |
-| 最後更新 | 2026-08-30 |
+| 星數 / Fork | ⭐ 3819 / 272 |
+| 最後更新 | 2026-09-01 |
 | 授權 | GNU Affero General Public License v3.0 |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-08-30 23:14 |
+| 已掃描檔案 | 424 個 |
+| 檢查時間 | 2026-09-01 00:26 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「桌面／終端控制」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`benchmarks/src/basic_memory_benchmarks/agent_tasks/models.py、benchmarks/src/basic_memory_benchmarks/llm/tool_agent.py`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 13 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`alembic.sqlalchemy.org、api.openai.com、astral.sh、basicmemory.com、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.basicmemory.com、docs.claude.com、docs.github.com…`
+> 證據：`api.openai.com、astral.sh、basicmemory.com、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.basicmemory.com、docs.claude.com、docs.github.com、glama.ai…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -34,21 +44,21 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py、benchmarks/src/basic_memory_benchmarks/utils.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/src/basic_memory_benchmarks/agent_tasks/driver.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py、benchmarks/src/basic_memory_benchmarks/providers/bm_local.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/cli.py、benchmarks/src/basic_memory_benchmarks/concurrent_write.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/agent_tasks/corpus.py、benchmarks/src/basic_memory_benchmarks/agent_tasks/driver.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/concurrent_write.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
+> 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/bm_runtime.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（72 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -76,7 +86,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +96,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3807｜fork 268｜語言 Python｜建立 2024-12-02｜最後推送 2026-08-30
+⭐ 3819｜fork 272｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-01
 
 ---
 

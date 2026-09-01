@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `awslabs/mcp` |
 | 專案說明 | Open source MCP Servers for AWS |
-| 星數 / Fork | ⭐ 9646 / 1736 |
-| 最後更新 | 2026-08-28 |
+| 星數 / Fork | ⭐ 9648 / 1736 |
+| 最後更新 | 2026-09-01 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 467 個 |
-| 檢查時間 | 2026-08-30 23:12 |
+| 已掃描檔案 | 466 個 |
+| 檢查時間 | 2026-09-01 00:23 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/pull-request-lint.yml、samples/mcp-integration-with-kb/clients/client_server.py、samples/mcp-integration-with-nova-canvas/clients/client_server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/tools/browser/browser_client.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（257 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（247 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -44,7 +44,7 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 8 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -64,15 +64,15 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-28`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9646｜fork 1736｜語言 Python｜建立 2025-03-21｜最後推送 2026-08-28
+⭐ 9648｜fork 1736｜語言 Python｜建立 2025-03-21｜最後推送 2026-09-01
 
 ---
 

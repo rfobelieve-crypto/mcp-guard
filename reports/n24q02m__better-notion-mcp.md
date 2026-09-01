@@ -7,11 +7,11 @@
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 36 / 12 |
-| 最後更新 | 2026-08-30 |
+| 最後更新 | 2026-08-31 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/better-notion-mcp` |
-| 已掃描檔案 | 125 個 |
-| 檢查時間 | 2026-08-30 23:17 |
+| 已掃描檔案 | 127 個 |
+| 檢查時間 | 2026-09-01 00:29 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`scripts/cf-deploy.mjs、scripts/clean-venv.mjs、scripts/deploy_cf.py、tests/live/stdio-direct.live.test.ts、tests/test-oauth-mcp.mjs`
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 會連往 23 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -41,7 +41,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/cf-deploy.mjs、scripts/cf_full_flow.py、scripts/deploy_cf.py、src/auth/notion-token-store-kv.test.ts、src/auth/notion-token-store-kv.ts`
+> 證據：`scripts/cf-deploy.mjs、scripts/cf_full_flow.py、scripts/deploy_cf.py、scripts/provider-readonly-acceptance.ts、src/auth/notion-token-store-kv.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-08-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 12｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-08-30
+⭐ 36｜fork 12｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-08-31
 
 ---
 

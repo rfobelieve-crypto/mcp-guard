@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `mcp-chrome-bridge-monorepo`（registry 查無） |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-08-30 23:11 |
+| 檢查時間 | 2026-09-01 00:23 |
 
 ## 風險摘要
 
