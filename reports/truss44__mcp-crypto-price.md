@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `truss44/mcp-crypto-price` |
 | 專案說明 | A Model Context Protocol (MCP) server that provides real-time cryptocurrency ana |
-| 星數 / Fork | ⭐ 40 / 9 |
+| 星數 / Fork | ⭐ 40 / 8 |
 | 最後更新 | 2026-08-31 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-crypto-price` |
 | 已掃描檔案 | 58 個 |
-| 檢查時間 | 2026-09-01 00:27 |
+| 檢查時間 | 2026-09-01 23:06 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 40｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-31
+⭐ 40｜fork 8｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-08-31
 
 ---
 

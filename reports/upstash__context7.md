@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 61454 / 2960 |
-| 最後更新 | 2026-08-31 |
+| 星數 / Fork | ⭐ 61492 / 2963 |
+| 最後更新 | 2026-09-01 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
 | 已掃描檔案 | 228 個 |
-| 檢查時間 | 2026-09-01 00:24 |
+| 檢查時間 | 2026-09-01 23:02 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts、packages/cli/src/utils/github.ts`
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、alpha.com、api.example.com、bitbucket.org、clerk.context7.com、codeberg.org、context7.com、docs.example.com、gitlab.com、keys.example.com…`
+> 證據：`agent-plugins.org、alpha.com、api.example.com、bitbucket.org、clerk.context7.com、codeberg.org、context7.com、docs.example.com、eslint.org、gitlab.com…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts、packages/cli/src/utils/github.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（68 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61454｜fork 2960｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-08-31
+⭐ 61492｜fork 2963｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-01
 
 ---
 

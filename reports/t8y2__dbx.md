@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 20 MB lightweight cross-platform database client for 90+ databases, including My |
-| 星數 / Fork | ⭐ 17575 / 1723 |
-| 最後更新 | 2026-08-31 |
+| 星數 / Fork | ⭐ 17681 / 1733 |
+| 最後更新 | 2026-09-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-09-01 00:24 |
+| 檢查時間 | 2026-09-01 23:03 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.adoptium.net、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、bugs.openjdk.java.net、cnb.cool、dbxio.com、dl.dbxio.com、docs.rs…`
+> 證據：`api.adoptium.net、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、bugs.openjdk.java.net、dbxio.com、dl.dbxio.com、docs.rs、example.invalid…`
 
 ### 🔵 低｜[供應鏈] 有 79 個依賴未鎖定版本
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/database-issue-catalog.mjs、.github/scripts/label-issue-database.mjs、.github/scripts/label-issue-database.test.mjs、.github/scripts/label-pull-request.mjs、.github/scripts/suggest-similar-issues.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1094 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1122 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 17575｜fork 1723｜語言 Rust｜建立 2026-04-29｜最後推送 2026-08-31
+⭐ 17681｜fork 1733｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-01
 
 ---
 
