@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 6268 / 539 |
-| 最後更新 | 2026-08-31 |
+| 星數 / Fork | ⭐ 6294 / 543 |
+| 最後更新 | 2026-09-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 47 個 |
-| 檢查時間 | 2026-09-01 00:25 |
+| 檢查時間 | 2026-09-01 23:03 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、eslint.org、feross.org、glama.ai、mobilenext.ai、opencollective.com、static.modelcontextprotocol.io、us.i.posthog.com、www.example.com、www.patreon.com`
+> 證據：`agent-plugins.org、eslint.org、glama.ai、mobilenext.ai、opencollective.com、static.modelcontextprotocol.io、us.i.posthog.com、www.example.com`
 
 ### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`src/android.ts、src/image-utils.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6268｜fork 539｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-08-31
+⭐ 6294｜fork 543｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-01
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, M |
 | 星數 / Fork | ⭐ 12 / 3 |
-| 最後更新 | 2026-08-31 |
+| 最後更新 | 2026-09-01 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
-| 已掃描檔案 | 174 個 |
-| 檢查時間 | 2026-09-01 00:28 |
+| 已掃描檔案 | 178 個 |
+| 檢查時間 | 2026-09-01 23:07 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/smoke-mcp.mjs`
+> 證據：`scripts/dump-surface.mjs、scripts/smoke-mcp.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12｜fork 3｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-08-31
+⭐ 12｜fork 3｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-01
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `awkoy/notion-mcp-server` |
 | 專案說明 | Notion MCP server for Claude, Cursor, ChatGPT & Claude Desktop. Connect AI agent |
-| 星數 / Fork | ⭐ 168 / 38 |
-| 最後更新 | 2026-08-26 |
+| 星數 / Fork | ⭐ 168 / 36 |
+| 最後更新 | 2026-09-01 |
 | 授權 | MIT License |
 | npm 套件 | `notion-mcp-server` |
-| 已掃描檔案 | 104 個 |
-| 檢查時間 | 2026-09-01 00:29 |
+| 已掃描檔案 | 122 個 |
+| 檢查時間 | 2026-09-01 23:08 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`benchmarks/describe-all.mjs、benchmarks/list-tools.mjs、scripts/build-mcpb.mjs`
+> 證據：`benchmarks/describe-all.mjs、benchmarks/list-tools.mjs、scripts/build-mcpb.mjs、tests/cli.test.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -31,17 +31,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`app.notion.com、avatars.githubusercontent.com、developers.notion.com、e.com、feross.org、glama.ai、notion.so、opencollective.com、paypal.me、smithery.ai…`
+> 證據：`acme.notion.site、app.notion.com、avatars.githubusercontent.com、developers.notion.com、e.com、feross.org、glama.ai、notion.so、opencollective.com、paypal.me…`
 
-### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、@notionhq/client@^5.22.0、remark-gfm@^4.0.1、remark-parse@^11.0.0、unified@^11.0.5、zod@^4.4.3…`
+> 證據：`@notionhq/client@^5.22.0、remark-gfm@^4.0.1、remark-parse@^11.0.0、unified@^11.0.5、zod@^4.4.3、@types/mdast@^4.0.4…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -53,13 +53,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/describe-all.mjs、benchmarks/list-tools.mjs、src/dispatch/rate-limit.ts、src/index.ts、src/operations/access.ts`
+> 證據：`benchmarks/describe-all.mjs、benchmarks/list-tools.mjs、scripts/e2e.mjs、src/dispatch/rate-limit.ts、src/index.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 54 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 59 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +73,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-26`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 168｜fork 38｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-08-26
+⭐ 168｜fork 36｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-09-01
 
 ---
 

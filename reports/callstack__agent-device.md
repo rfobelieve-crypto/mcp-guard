@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4300 / 268 |
-| 最後更新 | 2026-08-31 |
+| 星數 / Fork | ⭐ 4314 / 268 |
+| 最後更新 | 2026-09-01 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-09-01 00:26 |
+| 檢查時間 | 2026-09-01 23:04 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts`
+> 證據：`examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts、packages/capture-kit/src/ios-snapshot-engine/conformance-harness.ts`
 
 ### 🟡 中｜[權限] 會連往 17 個外部主機
 
@@ -49,10 +49,6 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -63,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/android-emulator/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ios-simulator/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 7 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4300｜fork 268｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-08-31
+⭐ 4314｜fork 268｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-01
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-08-31 |
+| 最後更新 | 2026-09-01 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
-| 已掃描檔案 | 115 個 |
-| 檢查時間 | 2026-09-01 00:28 |
+| 已掃描檔案 | 120 個 |
+| 檢查時間 | 2026-09-01 23:07 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.arcadia.finance、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、glama.ai、mainnet.base.org、mainnet.optimism.io、mainnet.unichain.org…`
+> 證據：`api.arcadia.finance、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、glama.ai、mainnet.base.org、mainnet.optimism.io…`
 
 ### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
@@ -61,7 +61,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-31`
+> 證據：`最後推送 2026-09-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +71,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-08-31
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-09-01
 
 ---
 
