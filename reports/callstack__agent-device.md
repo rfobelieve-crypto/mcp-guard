@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4314 / 268 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 4327 / 269 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-09-01 23:04 |
+| 檢查時間 | 2026-09-02 23:02 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -49,6 +49,10 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -77,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4314｜fork 268｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-01
+⭐ 4327｜fork 269｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-02
 
 ---
 

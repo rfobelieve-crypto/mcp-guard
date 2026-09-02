@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 79829 / 14654 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 79887 / 14664 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 495 個 |
-| 檢查時間 | 2026-09-01 23:02 |
+| 檢查時間 | 2026-09-02 23:00 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-coauthors.mjs、.github/scripts/check-pr-dedup-search.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5390 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5351 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/check-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/company-creator/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-agent-adapter/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-issue-interaction-ui/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-paperclip-bundled-skill/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/deal-with-security-advisory/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 79829｜fork 14654｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-01
+⭐ 79887｜fork 14664｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-02
 
 ---
 

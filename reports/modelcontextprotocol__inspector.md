@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10805 / 1501 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 10815 / 1500 |
+| 最後更新 | 2026-09-02 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-01 23:01 |
+| 檢查時間 | 2026-09-02 22:59 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、content.example.com、ctx.example…`
 
-### 🔵 低｜[供應鏈] 有 25 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/src/cli-oauth-navigation.ts、clients/cli/src/open-url.ts、clients/tui/src/utils/openUrl.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/src/cli-oauth-navigation.ts、clients/cli/src/open-url.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -63,13 +63,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 12 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 49 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -87,11 +87,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10805｜fork 1501｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-09-01
+⭐ 10815｜fork 1500｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-09-02
 
 ---
 

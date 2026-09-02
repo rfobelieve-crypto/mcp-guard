@@ -7,10 +7,10 @@
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | Analytics that reads your event log back to you: what changed, the segment carry |
 | 星數 / Fork | ⭐ 3 / 1 |
-| 最後更新 | 2026-08-30 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-01 23:07 |
+| 檢查時間 | 2026-09-02 23:05 |
 
 ## 風險摘要
 
@@ -34,29 +34,29 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`internal/api/sdk_flag_parity_test.go、internal/api/sdktest/env.test.mjs`
+> 證據：`cli/test/source-bytes.test.mjs、internal/api/sdk_flag_parity_test.go、internal/api/sdktest/env.test.mjs`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 98 個外部主機
+### 🟡 中｜[權限] 會連往 100 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example.com、accounts.google.com、acme.atlassian.net、ahrefs.com、anthropic.com、api.anthropic.com、api.example.com、api.linear.app、app.myapp.io、app.netlify.app…`
+> 證據：`a.example、a.example.com、acme.atlassian.net、ahrefs.com、anthropic.com、api.anthropic.com、api.example.com、api.linear.app、app.myapp.io、app.netlify.app…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/lib/suggest.mjs、cli/test/browser.test.mjs、cli/test/connect.test.mjs`
+> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/lib/audit.mjs、cli/lib/guard.mjs、cli/lib/suggest.mjs`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`cli/bin/smolanalytics.mjs、cli/lib/auth.mjs、cli/lib/connect.mjs、cli/lib/cost.mjs、cli/lib/issue.mjs`
+> 證據：`cli/bin/smolanalytics.mjs、cli/lib/auth.mjs、cli/lib/connect.mjs、cli/lib/cost.mjs、cli/lib/guard.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
@@ -78,11 +78,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-30`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-08-30
+⭐ 3｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-09-02
 
 ---
 

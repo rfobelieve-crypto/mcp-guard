@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | First gitlab mcp for you, building together |
-| 星數 / Fork | ⭐ 1939 / 349 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 1942 / 350 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
-| 已掃描檔案 | 316 個 |
-| 檢查時間 | 2026-09-01 23:05 |
+| 已掃描檔案 | 317 個 |
+| 檢查時間 | 2026-09-02 23:03 |
 
 ## 風險摘要
 
@@ -37,17 +37,17 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`GITLAB.INTERNAL.COM、a.com、api.internal.com、api.prod.example.com、api.stage.example.com、attacker.example、attacker.example.test、b.com、ci.example.com、claude.ai…`
 
-### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 25 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、@types/node-fetch@^2.6.12、diff@^9.0.0、express@^5.1.0、express-rate-limit@^8.5.2、fetch-cookie@^3.1.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.29.0、diff@^9.0.0、express@^5.1.0、express-rate-limit@^8.5.2、fetch-cookie@^3.1.0、open@^10.2.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、.github/prompts/quick-fix.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-plan.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-review.prompt.md（GitHub Copilot 提示檔）、.github/skills/ai-slop-cleaner/SKILL.md（Agent Skill 指令（SKILL.md））、.github/skills/cancel/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 256 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 259 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1939｜fork 349｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-01
+⭐ 1942｜fork 350｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-02
 
 ---
 
