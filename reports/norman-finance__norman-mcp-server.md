@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 54 / 13 |
-| 最後更新 | 2026-09-02 |
+| 最後更新 | 2026-09-03 |
 | 授權 | MIT License |
-| 已掃描檔案 | 101 個 |
-| 檢查時間 | 2026-09-02 23:04 |
+| 已掃描檔案 | 104 個 |
+| 檢查時間 | 2026-09-03 23:04 |
 
 ## 風險摘要
 
@@ -36,11 +36,11 @@
 
 > 證據：`norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py、test_client/get_token.py、tests/test_smithery_config.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 20 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））、skills/expense-report/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`GEMINI.md（Gemini CLI 指令）、skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 403 段 description）
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-02
+⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-03
 
 ---
 
