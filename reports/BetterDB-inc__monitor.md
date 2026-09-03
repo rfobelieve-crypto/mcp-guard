@@ -7,11 +7,11 @@
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
 | 星數 / Fork | ⭐ 1299 / 83 |
-| 最後更新 | 2026-09-01 |
+| 最後更新 | 2026-09-02 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 446 個 |
-| 檢查時間 | 2026-09-01 23:06 |
+| 檢查時間 | 2026-09-02 23:04 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 38 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.internal.example.com、api.example.com、betterdb.com、db.turso.io、docs.betterdb.com、eu.i.posthog.com、events.pagerduty.example.com、hooks.slack.example.com、json.schemastore.org、ph.example.com…`
+> 證據：`access.redhat.com、analytics.internal.example.com、api.example.com、api.first.org、betterdb.com、bugzilla.redhat.com、cveawg.example、cveawg.mitre.org、db.turso.io、docs.betterdb.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -57,7 +57,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 594 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 575 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1299｜fork 83｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-09-01
+⭐ 1299｜fork 83｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-09-02
 
 ---
 

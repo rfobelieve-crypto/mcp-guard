@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 20119 / 2009 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 20134 / 2011 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-09-01 23:03 |
+| 檢查時間 | 2026-09-02 23:00 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py、examples/voice_input/funasr_input.py`
+> 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py、examples/voice_input/funasr_input.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -74,7 +74,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -84,7 +84,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20119｜fork 2009｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-01
+⭐ 20134｜fork 2011｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-02
 
 ---
 

@@ -7,10 +7,10 @@
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
 | 星數 / Fork | ⭐ 4 / 0 |
-| 最後更新 | 2026-09-01 |
+| 最後更新 | 2026-09-02 |
 | 授權 | MIT License |
-| 已掃描檔案 | 145 個 |
-| 檢查時間 | 2026-09-01 23:09 |
+| 已掃描檔案 | 146 個 |
+| 檢查時間 | 2026-09-02 23:06 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、example.invalid、formulae.brew.sh、glama.ai…`
+> 證據：`agentskills.io、auth.docker.io、auth.evil.com、auth.evil.example、auth.example.com、distribution.github.io、docker-py.readthedocs.io、docs.docker.com、example.invalid、formulae.brew.sh…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -40,7 +40,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/measure-comparison-figures.py、tests/integration/test_buildx.py`
+> 證據：`docker_mcp/server.py、docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/measure-comparison-figures.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-09-01
+⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-09-02
 
 ---
 

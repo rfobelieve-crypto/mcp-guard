@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27477 / 2288 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 27494 / 2292 |
+| 最後更新 | 2026-09-02 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-01 23:02 |
+| 檢查時間 | 2026-09-02 23:00 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/deploy/state.py、fastmcp_slim/fastmcp/cli/install/claude_code.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（302 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（303 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-02`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27477｜fork 2288｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-01
+⭐ 27494｜fork 2292｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-02
 
 ---
 
