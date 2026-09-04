@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9003 / 1431 |
-| 最後更新 | 2026-09-02 |
+| 星數 / Fork | ⭐ 9010 / 1430 |
+| 最後更新 | 2026-09-03 |
 | 授權 | MIT License |
-| 已掃描檔案 | 436 個 |
-| 檢查時間 | 2026-09-02 23:01 |
+| 已掃描檔案 | 443 個 |
+| 檢查時間 | 2026-09-03 23:01 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/praisonai-issue-triage.yaml、.github/scripts/release-gate.js、.github/workflows/pypi-release.yml、examples/agent_tools/agent_centric_example.py、examples/benchmark/benchmark_example.py`
+> 證據：`.github/praisonai-issue-triage.yaml、.github/scripts/release-gate.js、.github/workflows/claude-merge-gate.yml、.github/workflows/pypi-release.yml、examples/agent_tools/agent_centric_example.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（84 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（70 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,7 +74,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/skills/pdf-processing/SKILL.md（Agent Skill 指令（SKILL.md））、src/praisonai-agents/.cursorrules（Cursor 規則）、src/praisonai-agents/AGENTS.md（Agent 指令（AGENTS.md 慣例））、src/praisonai-agents/tests/.windsurfrules（Windsurf 規則）、src/praisonai-rust/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 26 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -102,7 +102,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9003｜fork 1431｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-02
+⭐ 9010｜fork 1430｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-03
 
 ---
 

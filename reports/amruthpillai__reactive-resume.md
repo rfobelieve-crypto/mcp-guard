@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42108 / 4675 |
+| 星數 / Fork | ⭐ 42154 / 4682 |
 | 最後更新 | 2026-08-28 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-02 23:00 |
+| 檢查時間 | 2026-09-03 23:00 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 6 天內有更新
 
 專案仍在活躍維護中。
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42108｜fork 4675｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-28
+⭐ 42154｜fork 4682｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-28
 
 ---
 

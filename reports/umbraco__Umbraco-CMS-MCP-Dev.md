@@ -7,11 +7,11 @@
 | 稽核對象 | `umbraco/Umbraco-CMS-MCP-Dev` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 39 / 4 |
-| 最後更新 | 2026-09-02 |
+| 最後更新 | 2026-09-03 |
 | 授權 | MIT License |
 | npm 套件 | `@umbraco-cms/mcp-dev` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-02 23:05 |
+| 檢查時間 | 2026-09-03 23:05 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.28.0、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.38、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.38、dotenv@^16.5.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.28.0、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.39、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.39、dotenv@^16.5.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39｜fork 4｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-09-02
+⭐ 39｜fork 4｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-09-03
 
 ---
 

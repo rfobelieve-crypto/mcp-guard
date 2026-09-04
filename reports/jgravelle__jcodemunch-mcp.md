@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2646 / 363 |
-| 最後更新 | 2026-09-02 |
+| 星數 / Fork | ⭐ 2650 / 364 |
+| 最後更新 | 2026-09-03 |
 | 授權 | Other |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-02 23:03 |
+| 檢查時間 | 2026-09-03 23:03 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 24 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、api.minimax.io、api.openai.com、api.z.ai、bford.info、cdn.jsdelivr.net、claude.com、console.groq.com、domain.com、expressjs.com…`
+> 證據：`api.groq.com、bford.info、cdn.jsdelivr.net、console.groq.com、domain.com、expressjs.com、fastapi.tiangolo.com、ffmpeg.org、groq.com、huggingface.co…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -44,7 +44,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/benchmark.yml、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/description_smells/score_descriptions.py、benchmarks/goldset/measure.py`
+> 證據：`.github/workflows/benchmark.yml、benchmarks/attic/profile_language_filter.py、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/description_smells/score_descriptions.py`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`benchmarks/attic/profile_language_filter.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/results.json、benchmarks/self_latency/measure.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -52,19 +58,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`benchmarks/codex_surface/run_codex_arms.py、benchmarks/harness/run_benchmark.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/run_fidelity.py、benchmarks/racket_fidelity/run_reader_fidelity.py`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/profile_language_filter.py、benchmarks/racket_fidelity/results.json、examples/groq_validate.py`
-
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 18 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2646｜fork 363｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-02
+⭐ 2650｜fork 364｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-03
 
 ---
 
