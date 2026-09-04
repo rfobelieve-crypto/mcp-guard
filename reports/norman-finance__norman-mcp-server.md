@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 54 / 13 |
-| 最後更新 | 2026-09-03 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 104 個 |
-| 檢查時間 | 2026-09-03 23:04 |
+| 檢查時間 | 2026-09-04 22:52 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、dev.norman.finance、mcp.norman.finance、norman.finance、norman.finance.attacker.com…`
+> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance、mcp.norman.finance…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-03
+⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-04
 
 ---
 

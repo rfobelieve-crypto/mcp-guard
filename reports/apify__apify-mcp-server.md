@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 5865 / 247 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 5982 / 250 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
-| 已掃描檔案 | 354 個 |
-| 檢查時間 | 2026-09-03 23:03 |
+| 已掃描檔案 | 356 個 |
+| 檢查時間 | 2026-09-04 22:51 |
 
 ## 風險摘要
 
@@ -35,19 +35,19 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/before-beta-release.js、evals/workflows/run_workflow_evals.ts、scripts/dev_standby.js、tests/e2e/protocol_v1.test.ts`
+> 證據：`.github/scripts/before-beta-release.js、evals/mcp_agent/run_mcp_agent_evals.ts、scripts/dev_standby.js、tests/e2e/protocol_v1.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/_conformance_tests.yaml、evals/config.ts、evals/create_dataset.ts、evals/evaluation_utils.ts、evals/run_evaluation.ts`
+> 證據：`.github/workflows/_conformance_tests.yaml、evals/config.ts、evals/create_dataset.ts、evals/evaluation_utils.ts、evals/mcp_agent/claude_agent.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`evals/workflows/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
+> 證據：`evals/mcp_agent/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
 ### 🔵 低｜[維護] 未處理 issue 偏多（140 則）
 
@@ -57,9 +57,9 @@
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-workflow-evals/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-workflow-evals/reference.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
+> 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-mcp-agent-evals/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-mcp-agent-evals/reference.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 222 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 223 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5865｜fork 247｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-09-03
+⭐ 5982｜fork 250｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-09-04
 
 ---
 

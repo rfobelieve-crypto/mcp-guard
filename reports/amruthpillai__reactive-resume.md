@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42154 / 4682 |
-| 最後更新 | 2026-08-28 |
+| 星數 / Fork | ⭐ 42186 / 4690 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-03 23:00 |
+| 檢查時間 | 2026-09-04 22:48 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.10、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@biomejs/biome@^2.5.12、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -43,7 +43,7 @@
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（123 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（125 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -67,11 +67,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-28`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42154｜fork 4682｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-08-28
+⭐ 42186｜fork 4690｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-04
 
 ---
 

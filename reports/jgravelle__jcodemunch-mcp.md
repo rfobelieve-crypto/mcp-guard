@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2650 / 364 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 2654 / 365 |
+| 最後更新 | 2026-09-04 |
 | 授權 | Other |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-03 23:03 |
+| 已掃描檔案 | 402 個 |
+| 檢查時間 | 2026-09-04 22:51 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -40,29 +40,29 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`mcp>=1.10.0,<2.0.0、httpx>=0.27.0、tree-sitter-language-pack>=0.7.0,<1.0.0、pathspec>=0.12.0、pyyaml>=6.0`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.claude/hooks/run_full.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/harness/run_benchmark.py`
+
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/benchmark.yml、benchmarks/attic/profile_language_filter.py、benchmarks/cache_stability/measure.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/description_smells/score_descriptions.py`
+> 證據：`.claude/hooks/_common.py、.github/workflows/benchmark.yml、.github/workflows/main.yml、.github/workflows/nightly.yml、.github/workflows/pr-gate.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`benchmarks/attic/profile_language_filter.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/results.json、benchmarks/self_latency/measure.py`
+> 證據：`.claude/hooks/_common.py、benchmarks/attic/profile_language_filter.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/results.json`
 
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`benchmarks/codex_surface/run_codex_arms.py、benchmarks/harness/run_benchmark.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/run_fidelity.py、benchmarks/racket_fidelity/run_reader_fidelity.py`
-
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 20 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.claude/agents/reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/spokesperson.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/benchmark-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/feature.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/fix-issue.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/release.md（AI 客戶端設定目錄下的指令檔）…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 18 段 description）
 
@@ -76,13 +76,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2650｜fork 364｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-03
+⭐ 2654｜fork 365｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-04
 
 ---
 

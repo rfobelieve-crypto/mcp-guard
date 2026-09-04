@@ -1,35 +1,23 @@
 # MCP 安檢報告：timescale/pg-aiguide
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `timescale/pg-aiguide` |
 | 專案說明 | MCP server and Claude plugin for Postgres skills and documentation. Helps AI cod |
-| 星數 / Fork | ⭐ 1833 / 107 |
-| 最後更新 | 2026-09-02 |
+| 星數 / Fork | ⭐ 1835 / 107 |
+| 最後更新 | 2026-09-04 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@tigerdata/pg-aiguide` |
-| 已掃描檔案 | 81 個 |
-| 檢查時間 | 2026-09-03 23:03 |
+| 已掃描檔案 | 80 個 |
+| 檢查時間 | 2026-09-04 22:51 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
-
-叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
-
-> 證據：`skills/ghost-database/SKILL.md｜「```bash curl -fsSL https://install.ghost.build | sh ```」`
-
-### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
-
-叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
-
-> 證據：`skills/ghost-database/SKILL.md｜「```powershell irm https://install.ghost.build/install.ps1 | iex ```」`
 
 ### 🟡 中｜[權限] 會連往 12 個外部主機
 
@@ -61,11 +49,11 @@
 
 > 證據：`ingest/postgres_docs.py、ingest/tiger_docs.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 12 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、rules/postgres-best-practices.mdc（Cursor 規則檔（.mdc））、skills/design-postgis-tables/SKILL.md（Agent Skill 指令（SKILL.md））、skills/design-postgres-tables/SKILL.md（Agent Skill 指令（SKILL.md））、skills/find-hypertable-candidates/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ghost-database/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、rules/postgres-best-practices.mdc（Cursor 規則檔（.mdc））、skills/design-postgis-tables/SKILL.md（Agent Skill 指令（SKILL.md））、skills/design-postgres-tables/SKILL.md（Agent Skill 指令（SKILL.md））、skills/find-hypertable-candidates/SKILL.md（Agent Skill 指令（SKILL.md））、skills/migrate-postgres-tables-to-hypertables/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 21 段 description）
 
@@ -81,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1833｜fork 107｜語言 Python｜建立 2025-07-23｜最後推送 2026-09-02
+⭐ 1835｜fork 107｜語言 Python｜建立 2025-07-23｜最後推送 2026-09-04
 
 ---
 
