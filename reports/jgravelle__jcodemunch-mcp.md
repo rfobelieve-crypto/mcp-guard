@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2654 / 365 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 2658 / 366 |
+| 最後更新 | 2026-09-05 |
 | 授權 | Other |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-09-04 22:51 |
+| 檢查時間 | 2026-09-05 22:42 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、bford.info、cdn.jsdelivr.net、console.groq.com、domain.com、expressjs.com、fastapi.tiangolo.com、ffmpeg.org、groq.com、huggingface.co…`
+> 證據：`api.groq.com、bford.info、cdn.jsdelivr.net、console.groq.com、domain.com、expressjs.com、fastapi.tiangolo.com、groq.com、huggingface.co、jcm.internal…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -44,19 +44,19 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.claude/hooks/run_full.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/harness/run_benchmark.py`
+> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.claude/hooks/run_full.py、.github/inbound/apply_depeval.py、.github/inbound/apply_triage.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、.github/workflows/benchmark.yml、.github/workflows/main.yml、.github/workflows/nightly.yml、.github/workflows/pr-gate.yml`
+> 證據：`.claude/hooks/_common.py、.github/inbound/ledger.py、.github/workflows/benchmark.yml、.github/workflows/inbound-bench-full.yml、.github/workflows/inbound-depeval.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、benchmarks/attic/profile_language_filter.py、benchmarks/codex_surface/run_codex_arms.py、benchmarks/offload/run_offload_criterion.py、benchmarks/racket_fidelity/results.json`
+> 證據：`.claude/hooks/_common.py、.github/inbound/budget.py、.github/inbound/ledger.py、.github/workflows/inbound-bench-full.yml、.github/workflows/inbound-depeval.yml`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 20 個代理指令檔
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/agents/reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/spokesperson.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/benchmark-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/feature.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/fix-issue.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/release.md（AI 客戶端設定目錄下的指令檔）…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 18 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -76,13 +76,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2654｜fork 365｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-04
+⭐ 2658｜fork 366｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-05
 
 ---
 

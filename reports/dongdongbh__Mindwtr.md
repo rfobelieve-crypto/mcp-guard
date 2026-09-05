@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1944 / 117 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 1951 / 118 |
+| 最後更新 | 2026-09-05 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-09-04 22:51 |
+| 檢查時間 | 2026-09-05 22:42 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、.github/workflows/publish-mcp.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml`
+> 證據：`.github/workflows/ci.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -31,11 +31,11 @@
 
 > 證據：`apps/cloud/src/server.test.ts`
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、calendar.example、docs.mindwtr.app…`
+> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、calendar.example、cloud.test…`
 
 ### 🔵 低｜[供應鏈] 有 62 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release-android.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（76 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（80 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -61,7 +61,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 3 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 2 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1944｜fork 117｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-04
+⭐ 1951｜fork 118｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-05
 
 ---
 

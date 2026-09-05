@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4348 / 272 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 4393 / 274 |
+| 最後更新 | 2026-09-05 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 421 個 |
-| 檢查時間 | 2026-09-04 22:50 |
+| 檢查時間 | 2026-09-05 22:41 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -41,13 +41,17 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@limrun/api@^0.24.5、ipaddr.js@^2.5.0、tar-stream@^3.2.0、yaml@^2.9.0、yauzl@^3.4.0、@arethetypeswrong/cli@^0.18.5…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.4、@limrun/api@^0.24.5、@nkzw/eslint-plugin@^2.0.0、@nkzw/oxlint-config@^1.3.0、@types/json-schema@^7.0.15…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -77,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4348｜fork 272｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-04
+⭐ 4393｜fork 274｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-05
 
 ---
 

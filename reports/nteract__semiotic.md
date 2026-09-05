@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
-| 星數 / Fork | ⭐ 2691 / 137 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 2690 / 137 |
+| 最後更新 | 2026-09-05 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-04 22:51 |
+| 檢查時間 | 2026-09-05 22:41 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 80 個外部主機
+### 🟡 中｜[權限] 會連往 54 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`americanaejournal.hu、americanarchive.org、api.mapbox.com、api.maptiler.com、api.usaspending.gov、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、bost.ocks.org…`
+> 證據：`api.bls.gov、api.mapbox.com、api.maptiler.com、arxiv.org、basemaps.cartocdn.com、bchi.bigcitieshealth.org、blocks.roadtolarissa.com、bost.ocks.org、chartability.github.io、creativecommons.org…`
 
 ### 🔵 低｜[供應鏈] 有 72 個依賴未鎖定版本
 
@@ -35,13 +35,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-mcp-registry.yml、.github/workflows/release.yml、ai/cli.js、ai/mcp-build-info.ts、ai/mcp-http-logging.integration.test.ts`
+> 證據：`.github/workflows/publish-mcp-registry.yml、.github/workflows/release.yml、ai/cli.js、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-build-info.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs、docs/src/examples/recipes/data/debateWordTrails.build.mjs`
+> 證據：`.github/workflows/release.yml、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs、docs/src/examples/recipes/data/debateWordTrails.build.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -55,7 +55,7 @@
 
 > 證據：`.agents/skills/blog-post/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、.github/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、agent-skill/semiotic-charts/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1541 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1550 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2691｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-04
+⭐ 2690｜fork 137｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-05
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42186 / 4690 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 42219 / 4691 |
+| 最後更新 | 2026-09-05 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-04 22:48 |
+| 檢查時間 | 2026-09-05 22:39 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 會連往 28 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、crowdin.com、discord.gg、docs.rxresu.me、evil.example.com、fundingjson.org、gateway.example.com…`
+> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、callback.invalid、crowdin.com、discord.gg、docs.aws.amazon.com、docs.rxresu.me、evil.example…`
 
 ### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
 
@@ -35,7 +35,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/health.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
+> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -43,7 +43,7 @@
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（125 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（72 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -53,7 +53,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 10 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -67,11 +67,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42186｜fork 4690｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-04
+⭐ 42219｜fork 4691｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-05
 
 ---
 
