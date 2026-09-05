@@ -1,28 +1,22 @@
 # MCP 安檢報告：MervinPraison/PraisonAI
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9010 / 1430 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 9017 / 1431 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-09-03 23:01 |
+| 檢查時間 | 2026-09-04 22:49 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[供應鏈] setup.py 覆寫了安裝期指令
-
-它以自訂類別接管 install／develop 步驟，等同 npm 的 postinstall：你還沒開始用，程式碼已經跑過一次了。
-
-> 證據：`src/praisonai/praisonai/setup.py:6｜class PostInstallCommand(install)`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -34,13 +28,13 @@
 
 常見的正當用途是呼叫 git 取版本號或編譯原生模組；但這確實是安裝當下就會執行的程式碼，值得逐行讀懂。
 
-> 證據：`src/praisonai-code/praisonai_code/cli/commands/setup.py:125｜subprocess（另 1 個 setup.py 相同）`
+> 證據：`src/praisonai-code/praisonai_code/cli/commands/setup.py:125｜subprocess`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 27 個外部主機
+### 🟡 中｜[權限] 會連往 28 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -64,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（70 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -92,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -102,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9010｜fork 1430｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-03
+⭐ 9017｜fork 1431｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-04
 
 ---
 

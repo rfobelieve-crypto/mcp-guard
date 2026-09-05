@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 61590 / 2967 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 61625 / 2971 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 229 個 |
-| 檢查時間 | 2026-09-03 23:00 |
+| 已掃描檔案 | 235 個 |
+| 檢查時間 | 2026-09-04 22:48 |
 
 ## 風險摘要
 
@@ -29,9 +29,9 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts、packages/cli/src/utils/github.ts`
+> 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/plugin-manifests.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts`
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 33 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -47,7 +47,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts、packages/cli/src/utils/github.ts`
+> 證據：`packages/cli/src/__tests__/plugin-manifests.test.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts`
 
 ### 🔵 低｜[維護] 未處理 issue 偏多（69 則）
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61590｜fork 2967｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-03
+⭐ 61625｜fork 2971｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-04
 
 ---
 

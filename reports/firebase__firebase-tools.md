@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firebase/firebase-tools` |
 | 專案說明 | The Firebase Command Line Tools |
-| 星數 / Fork | ⭐ 4464 / 1244 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 4463 / 1245 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-03 23:01 |
+| 檢查時間 | 2026-09-04 22:49 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/emulator-tests/functionsEmulatorRuntime.spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（993 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（996 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4464｜fork 1244｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-09-03
+⭐ 4463｜fork 1245｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-09-04
 
 ---
 

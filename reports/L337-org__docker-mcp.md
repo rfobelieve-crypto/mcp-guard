@@ -7,10 +7,10 @@
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
 | 星數 / Fork | ⭐ 4 / 0 |
-| 最後更新 | 2026-09-03 |
+| 最後更新 | 2026-09-04 |
 | 授權 | MIT License |
-| 已掃描檔案 | 146 個 |
-| 檢查時間 | 2026-09-03 23:07 |
+| 已掃描檔案 | 147 個 |
+| 檢查時間 | 2026-09-04 22:55 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docker_mcp/server.py、docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/measure-comparison-figures.py`
+> 證據：`docker_mcp/server.py、docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/check-repo-hygiene.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
@@ -62,11 +62,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-09-03
+⭐ 4｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-09-04
 
 ---
 

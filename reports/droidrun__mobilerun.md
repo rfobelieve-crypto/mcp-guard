@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `droidrun/mobilerun` |
 | 專案說明 | Automate your mobile devices with natural language commands - an LLM agnostic mo |
-| 星數 / Fork | ⭐ 9175 / 987 |
+| 星數 / Fork | ⭐ 9187 / 989 |
 | 最後更新 | 2026-09-03 |
 | 授權 | MIT License |
 | 已掃描檔案 | 197 個 |
-| 檢查時間 | 2026-09-03 23:01 |
+| 檢查時間 | 2026-09-04 22:48 |
 
 ## 風險摘要
 
@@ -62,7 +62,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9175｜fork 987｜語言 Python｜建立 2025-04-12｜最後推送 2026-09-03
+⭐ 9187｜fork 989｜語言 Python｜建立 2025-04-12｜最後推送 2026-09-03
 
 ---
 

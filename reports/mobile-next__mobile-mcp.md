@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 6328 / 547 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 6332 / 548 |
+| 最後更新 | 2026-09-04 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 47 個 |
-| 檢查時間 | 2026-09-03 23:01 |
+| 已掃描檔案 | 46 個 |
+| 檢查時間 | 2026-09-04 22:49 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build.yml、src/image-utils.ts、src/server.ts、test/validate-response.js`
+> 證據：`.github/workflows/build.yml、src/server.ts、test/validate-response.js`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -53,9 +53,9 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/android.ts、src/image-utils.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
+> 證據：`src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts、src/server.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6328｜fork 547｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-03
+⭐ 6332｜fork 548｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-04
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MicrosoftDocs/mcp` |
 | 專案說明 | Official Microsoft Learn MCP Server and CLI tool – powering LLMs and AI agents w |
-| 星數 / Fork | ⭐ 1871 / 239 |
-| 最後更新 | 2026-09-03 |
+| 星數 / Fork | ⭐ 1873 / 239 |
+| 最後更新 | 2026-09-04 |
 | 授權 | Creative Commons Attribution 4.0 International |
-| 已掃描檔案 | 40 個 |
-| 檢查時間 | 2026-09-03 23:03 |
+| 已掃描檔案 | 45 個 |
+| 檢查時間 | 2026-09-04 22:51 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`cli/src/context.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/microsoft-code-reference/SKILL.md（Agent Skill 指令（SKILL.md））、skills/microsoft-docs/SKILL.md（Agent Skill 指令（SKILL.md））、skills/microsoft-skill-creator/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、cli/assets/microsoft-learn-cli/SKILL.md（Agent Skill 指令（SKILL.md））、skills/microsoft-code-reference/SKILL.md（Agent Skill 指令（SKILL.md））、skills/microsoft-docs/SKILL.md（Agent Skill 指令（SKILL.md））、skills/microsoft-skill-creator/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
@@ -54,7 +54,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -64,7 +64,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1871｜fork 239｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-09-03
+⭐ 1873｜fork 239｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-09-04
 
 ---
 
