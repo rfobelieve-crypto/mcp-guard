@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `mcp-chrome-bridge-monorepo`（registry 查無） |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-09-04 22:47 |
+| 檢查時間 | 2026-09-05 22:38 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`app/chrome-extension/entrypoints/background/record-replay-v3/storage/db.ts、app/chrome-extension/entrypoints/background/utils/sidepanel.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（229 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（230 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

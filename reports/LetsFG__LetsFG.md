@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
 | 專案說明 | Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS  |
-| 星數 / Fork | ⭐ 1972 / 132 |
-| 最後更新 | 2026-09-02 |
+| 星數 / Fork | ⭐ 1973 / 132 |
+| 最後更新 | 2026-09-05 |
 | 授權 | Other |
 | 已掃描檔案 | 138 個 |
-| 檢查時間 | 2026-09-04 22:51 |
+| 檢查時間 | 2026-09-05 22:42 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 47 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com、checkout.stripe.com.evil.com、checkout.stripe.com.evil.example、context7.com…`
+> 證據：`agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com.evil.com、context7.com、evil.com、evil.example…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -34,7 +34,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`preview/build_stubs.py、preview/run.py、sdk/python/google_checkout_live_sweep.py、sdk/python/letsfg/cli.py、sdk/python/letsfg/client.py`
+> 證據：`Model.js、preview/build_stubs.py、preview/run.py、sdk/python/google_checkout_live_sweep.py、sdk/python/letsfg/cli.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -68,15 +68,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1972｜fork 132｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-02
+⭐ 1973｜fork 132｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-05
 
 ---
 

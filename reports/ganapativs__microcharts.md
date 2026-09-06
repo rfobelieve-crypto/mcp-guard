@@ -7,11 +7,11 @@
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
 | 星數 / Fork | ⭐ 167 / 5 |
-| 最後更新 | 2026-09-04 |
+| 最後更新 | 2026-09-05 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-09-04 22:53 |
+| 檢查時間 | 2026-09-05 22:43 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.4.6、@axe-core/playwright@^4.13.0、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.5.0、@axe-core/playwright@^4.13.0、@changesets/changelog-github@^0.7.0、@changesets/cli@^2.31.1、@fast-check/vitest@^0.4.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -55,7 +55,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 362 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 355 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 167｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-04
+⭐ 167｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-05
 
 ---
 

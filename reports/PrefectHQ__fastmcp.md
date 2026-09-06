@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27527 / 2301 |
-| 最後更新 | 2026-09-04 |
+| 星數 / Fork | ⭐ 27537 / 2304 |
+| 最後更新 | 2026-09-05 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-04 22:48 |
+| 檢查時間 | 2026-09-05 22:39 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 48 個外部主機
+### 🟡 中｜[權限] 會連往 44 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -28,7 +28,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/release/scripts/changelog_entry.py、examples/diagnostics/server.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py、fastmcp_slim/fastmcp/cli/deploy/state.py`
+> 證據：`.claude/skills/release/scripts/changelog_entry.py、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -70,15 +70,15 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-04`
+> 證據：`最後推送 2026-09-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27527｜fork 2301｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-04
+⭐ 27537｜fork 2304｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-05
 
 ---
 
