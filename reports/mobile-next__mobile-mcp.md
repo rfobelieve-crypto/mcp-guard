@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 6338 / 549 |
+| 星數 / Fork | ⭐ 6343 / 550 |
 | 最後更新 | 2026-09-05 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 46 個 |
-| 檢查時間 | 2026-09-05 22:40 |
+| 檢查時間 | 2026-09-06 22:44 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6338｜fork 549｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-05
+⭐ 6343｜fork 550｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-05
 
 ---
 
