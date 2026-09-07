@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 50 / 26 |
-| 最後更新 | 2026-09-01 |
+| 星數 / Fork | ⭐ 51 / 26 |
+| 最後更新 | 2026-09-07 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
 | 已掃描檔案 | 157 個 |
-| 檢查時間 | 2026-09-06 22:47 |
+| 檢查時間 | 2026-09-07 23:22 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@supabase/supabase-js@^2.112.4、hono@^4.13.5、prettier@^3.9.6、zod@^4.4.3、@modelcontextprotocol/client@^2.0.0`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@supabase/supabase-js@^2.116.0、hono@^4.13.7、prettier@^3.9.6、zod@^4.5.4、@modelcontextprotocol/client@^2.0.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 50｜fork 26｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-01
+⭐ 51｜fork 26｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-07
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1957 / 119 |
-| 最後更新 | 2026-09-06 |
+| 星數 / Fork | ⭐ 1967 / 120 |
+| 最後更新 | 2026-09-07 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 414 個 |
-| 檢查時間 | 2026-09-06 22:46 |
+| 檢查時間 | 2026-09-07 23:21 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml`
+> 證據：`.github/workflows/ci.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-06`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1957｜fork 119｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-06
+⭐ 1967｜fork 120｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-07
 
 ---
 

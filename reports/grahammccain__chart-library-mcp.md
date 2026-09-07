@@ -7,28 +7,22 @@
 | 稽核對象 | `grahammccain/chart-library-mcp` |
 | 專案說明 | MCP server for Chart Library — visual chart pattern search engine. Find similar  |
 | 星數 / Fork | ⭐ 20 / 1 |
-| 最後更新 | 2026-06-10 |
+| 最後更新 | 2026-09-07 |
 | 授權 | MIT License |
-| 已掃描檔案 | 19 個 |
-| 檢查時間 | 2026-09-06 22:47 |
+| 已掃描檔案 | 21 個 |
+| 檢查時間 | 2026-09-07 23:23 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 4 個外部主機
-
-確認這些連線是功能必需的，而不是把你的資料送到第三方。
-
-> 證據：`chartlibrary.io、registry.modelcontextprotocol.io、smithery.ai、static.modelcontextprotocol.io`
-
-### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 3 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`mcp>=1.0.0、requests>=2.28.0`
+> 證據：`mcp>=1.28.1,<2.0.0、requests>=2.28.0、python-dotenv>=1.0.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -36,11 +30,17 @@
 
 > 證據：`examples/basic_api.py、examples/cohort_aware_trader.py、examples/crewai_agent.py、examples/langchain_agent.py、examples/openai_agents.py`
 
+### 🔵 低｜[權限] 會連往 3 個外部主機
+
+確認這些連線是功能必需的，而不是把你的資料送到第三方。
+
+> 證據：`chartlibrary.io、registry.modelcontextprotocol.io、static.modelcontextprotocol.io`
+
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 22 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -54,11 +54,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 89 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-06-10`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20｜fork 1｜語言 Python｜建立 2026-03-25｜最後推送 2026-06-10
+⭐ 20｜fork 1｜語言 Python｜建立 2026-03-25｜最後推送 2026-09-07
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2892 / 401 |
-| 最後更新 | 2026-09-05 |
+| 星數 / Fork | ⭐ 2897 / 402 |
+| 最後更新 | 2026-09-07 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-09-06 22:45 |
+| 已掃描檔案 | 123 個 |
+| 檢查時間 | 2026-09-07 23:20 |
 
 ## 風險摘要
 
@@ -34,15 +34,15 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/mcp-server-supabase/src/transports/stdio.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
+> 證據：`packages/mcp-server-supabase/src/cli.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/test-packed-platform-consumer.mjs`
+> 證據：`scripts/dev-http.mjs、scripts/test-packed-platform-consumer.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（123 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,11 +66,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2892｜fork 401｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-09-05
+⭐ 2897｜fork 402｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-09-07
 
 ---
 

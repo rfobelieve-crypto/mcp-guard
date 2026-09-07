@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 6361 / 681 |
-| 最後更新 | 2026-09-05 |
+| 星數 / Fork | ⭐ 6371 / 682 |
+| 最後更新 | 2026-09-07 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-09-06 22:44 |
+| 檢查時間 | 2026-09-07 23:19 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py、packages/cli/src/repowise/cli/commands/distill_cmd.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（167 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（150 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,11 +77,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6361｜fork 681｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-05
+⭐ 6371｜fork 682｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-07
 
 ---
 

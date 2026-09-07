@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 9503 / 1165 |
-| 最後更新 | 2026-09-05 |
+| 星數 / Fork | ⭐ 9508 / 1168 |
+| 最後更新 | 2026-09-07 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 274 個 |
-| 檢查時間 | 2026-09-06 22:42 |
+| 已掃描檔案 | 283 個 |
+| 檢查時間 | 2026-09-07 23:17 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、discord.com、docs.docker.com、example.supabase.co、legal.desktopcommander.app、list.agenium.net…`
 
-### 🔵 低｜[供應鏈] 有 46 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/config-manager.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（235 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（232 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -85,11 +85,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9503｜fork 1165｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-05
+⭐ 9508｜fork 1168｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-07
 
 ---
 
