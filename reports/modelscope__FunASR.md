@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 20185 / 2015 |
-| 最後更新 | 2026-09-05 |
+| 星數 / Fork | ⭐ 20199 / 2014 |
+| 最後更新 | 2026-09-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-09-05 22:40 |
+| 檢查時間 | 2026-09-06 22:43 |
 
 ## 風險摘要
 
@@ -38,7 +38,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-mcp-server.yml、examples/industrial_data_pretraining/fun_asr_nano/model.py、examples/mcp_server/funasr_mcp.py、examples/mcp_server/test_funasr_mcp.py、examples/openai_api/gradio_app.py`
+> 證據：`.github/workflows/publish-mcp-server.yml、docs/benchmark/vllm_official_native_20260907.json、examples/industrial_data_pretraining/fun_asr_nano/model.py、examples/mcp_server/funasr_mcp.py、examples/mcp_server/test_funasr_mcp.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py、examples/voice_input/funasr_input.py`
+> 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -68,13 +68,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -84,7 +84,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20185｜fork 2015｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-05
+⭐ 20199｜fork 2014｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-06
 
 ---
 

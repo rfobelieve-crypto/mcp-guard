@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42219 / 4691 |
-| 最後更新 | 2026-09-05 |
+| 星數 / Fork | ⭐ 42256 / 4692 |
+| 最後更新 | 2026-09-06 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-05 22:39 |
+| 檢查時間 | 2026-09-06 22:43 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 28 個外部主機
+### 🟡 中｜[權限] 會連往 29 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、callback.invalid、crowdin.com、discord.gg、docs.aws.amazon.com、docs.rxresu.me、evil.example…`
+> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、attacker.example、callback.invalid、configured.example、crowdin.com、discord.gg、docs.aws.amazon.com…`
 
 ### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.12、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.62.1、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@biomejs/biome@^2.5.12、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.63.0、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -43,7 +43,7 @@
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（72 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +71,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42219｜fork 4691｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-05
+⭐ 42256｜fork 4692｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-06
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
 | 星數 / Fork | ⭐ 1974 / 456 |
-| 最後更新 | 2026-09-05 |
+| 最後更新 | 2026-09-06 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-05 22:42 |
+| 檢查時間 | 2026-09-06 22:46 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts、src/modules/collector/DOMInspector.ts、src/modules/detector/ObfuscationDetector.ts`
+> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts、src/modules/detector/ObfuscationDetector.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -41,7 +41,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`afdian.com、api.dart.dev、api.flutter.dev、developer.android.com、docs.flutter.dev、docs.renovatebot.com、eldstal.se、example.invalid、fonts.googleapis.com、fonts.gstatic.com…`
 
-### 🔵 低｜[供應鏈] 有 39 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 40 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-05`
+> 證據：`最後推送 2026-09-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1974｜fork 456｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-05
+⭐ 1974｜fork 456｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-06
 
 ---
 
