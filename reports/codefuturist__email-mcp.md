@@ -11,7 +11,7 @@
 | 授權 | GNU Lesser General Public License v3.0 |
 | npm 套件 | `@codefuturist/email-mcp` |
 | 已掃描檔案 | 138 個 |
-| 檢查時間 | 2026-09-06 22:48 |
+| 檢查時間 | 2026-09-07 23:23 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`src/cli/install-commands.ts、src/config/loader.test.ts、src/config/loader.ts、src/config/xdg.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 16 天內有更新
+### ⚪ 資訊｜[維護] 最近 17 天內有更新
 
 專案仍在活躍維護中。
 

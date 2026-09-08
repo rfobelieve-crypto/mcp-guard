@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3872 / 275 |
-| 最後更新 | 2026-09-06 |
+| 星數 / Fork | ⭐ 3884 / 275 |
+| 最後更新 | 2026-09-07 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 433 個 |
-| 檢查時間 | 2026-09-06 22:45 |
+| 檢查時間 | 2026-09-07 23:20 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.example.test、api.openai.com、astral.sh、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.claude.com、docs.github.com、glama.ai…`
+> 證據：`api.anthropic.com、api.example.test、api.openai.com、astral.sh、biomejs.dev、cloud.basicmemory.com、docs.astral.sh、docs.claude.com、docs.github.com、example.invalid…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -58,11 +58,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/bm_runtime.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（70 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 57 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 58 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-06`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3872｜fork 275｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-06
+⭐ 3884｜fork 275｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-07
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `giancarloerra/SocratiCode` |
 | 專案說明 | Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private P |
-| 星數 / Fork | ⭐ 3288 / 419 |
-| 最後更新 | 2026-09-06 |
+| 星數 / Fork | ⭐ 3292 / 419 |
+| 最後更新 | 2026-09-07 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
-| 已掃描檔案 | 209 個 |
-| 檢查時間 | 2026-09-06 22:45 |
+| 已掃描檔案 | 212 個 |
+| 檢查時間 | 2026-09-07 23:20 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 44 個外部主機
+### 🟡 中｜[權限] 會連往 45 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -35,7 +35,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`extension/src/graphPanel.ts、src/config.ts、src/services/code-graph.ts、src/services/extensionless.ts、src/services/graph-aliases.ts`
+> 證據：`extension/src/graphPanel.ts、scripts/verify-packaged-qdrant.mjs、src/config.ts、src/services/code-graph.ts、src/services/extensionless.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -77,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-06`
+> 證據：`最後推送 2026-09-07`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3288｜fork 419｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-06
+⭐ 3292｜fork 419｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-07
 
 ---
 
