@@ -7,10 +7,10 @@
 | 稽核對象 | `Arjun0606/smolanalytics` |
 | 專案說明 | End-to-end tests without test code. Write one sentence, an agent drives a real b |
 | 星數 / Fork | ⭐ 3 / 1 |
-| 最後更新 | 2026-09-03 |
+| 最後更新 | 2026-09-08 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-07 23:23 |
+| 檢查時間 | 2026-09-08 23:18 |
 
 ## 風險摘要
 
@@ -44,7 +44,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/lib/audit.mjs、cli/lib/guard.mjs、cli/lib/suggest.mjs`
+> 證據：`.github/workflows/ci.yml、.github/workflows/mcp-publish.yml、cli/bin/smolanalytics.mjs、cli/lib/audit.mjs、cli/lib/guard.mjs`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -78,11 +78,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-09-03
+⭐ 3｜fork 1｜語言 Go｜建立 2026-06-26｜最後推送 2026-09-08
 
 ---
 

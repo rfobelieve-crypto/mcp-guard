@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 20219 / 2014 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 20230 / 2021 |
+| 最後更新 | 2026-09-08 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-09-07 23:18 |
+| 檢查時間 | 2026-09-08 23:13 |
 
 ## 風險摘要
 
@@ -38,7 +38,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-mcp-server.yml、docs/benchmark/vllm_official_native_20260907.json、examples/industrial_data_pretraining/fun_asr_nano/model.py、examples/mcp_server/funasr_mcp.py、examples/mcp_server/test_funasr_mcp.py`
+> 證據：`.github/workflows/publish-mcp-server.yml、docs/benchmark/vllm_official_native_20260907.json、examples/industrial_data_pretraining/fun_asr_nano/model.py、examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/funasr_mcp.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -68,13 +68,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -84,7 +84,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20219｜fork 2014｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-07
+⭐ 20230｜fork 2021｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-08
 
 ---
 
