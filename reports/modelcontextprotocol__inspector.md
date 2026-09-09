@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10841 / 1506 |
-| 最後更新 | 2026-09-08 |
+| 星數 / Fork | ⭐ 10845 / 1509 |
+| 最後更新 | 2026-09-09 |
 | 授權 | 無 |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-08 23:12 |
+| 檢查時間 | 2026-09-09 22:56 |
 
 ## 風險摘要
 
@@ -25,13 +25,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 29 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、auth.example、auth.example.com、b.example、content.example.com、ctx.example…`
+> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、attacker.example、auth.example、auth.example.com、b.example、content.example.com…`
 
-### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -69,7 +69,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -87,11 +87,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-08`
+> 證據：`最後推送 2026-09-09`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10841｜fork 1506｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-09-08
+⭐ 10845｜fork 1509｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-09-09
 
 ---
 

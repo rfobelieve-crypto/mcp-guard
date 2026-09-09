@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 414 個 |
-| 檢查時間 | 2026-09-08 23:18 |
+| 檢查時間 | 2026-09-09 23:01 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（142 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（143 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

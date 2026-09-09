@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27566 / 2314 |
-| 最後更新 | 2026-09-08 |
+| 星數 / Fork | ⭐ 27586 / 2313 |
+| 最後更新 | 2026-09-09 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-08 23:13 |
+| 檢查時間 | 2026-09-09 22:57 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/release/scripts/changelog_entry.py、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py、fastmcp_slim/fastmcp/cli/apps_dev.py、fastmcp_slim/fastmcp/cli/cli.py`
+> 證據：`.claude/skills/release/scripts/changelog_entry.py、.github/scripts/test-ci-workflows.mjs、.github/scripts/test-issue-link.mjs、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -40,9 +40,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py`
+> 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（314 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-security-report/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 92 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 90 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,15 +70,15 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-08`
+> 證據：`最後推送 2026-09-09`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27566｜fork 2314｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-08
+⭐ 27586｜fork 2313｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-09
 
 ---
 
