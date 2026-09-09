@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4431 / 277 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 4458 / 279 |
+| 最後更新 | 2026-09-08 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 423 個 |
-| 檢查時間 | 2026-09-07 23:20 |
+| 已掃描檔案 | 426 個 |
+| 檢查時間 | 2026-09-08 23:15 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +63,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/agent-device/SKILL.md（Agent Skill 指令（SKILL.md））、skills/android-emulator/SKILL.md（Agent Skill 指令（SKILL.md））、skills/dogfood/SKILL.md（Agent Skill 指令（SKILL.md））、skills/ios-simulator/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 3 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4431｜fork 277｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-07
+⭐ 4458｜fork 279｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-08
 
 ---
 

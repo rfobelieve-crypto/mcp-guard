@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4653 / 203 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 4660 / 204 |
+| 最後更新 | 2026-09-08 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-09-07 23:20 |
+| 檢查時間 | 2026-09-08 23:15 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/actions/codex-run/action.yml、.github/workflows/pr.yml、.github/workflows/sync-integration-mirror.yml、.github/workflows/test-installer-scripts.yml、.github/workflows/webhook-proxy-dev-bump.yml`
+> 證據：`.github/workflows/codex-review-issues.yml、.github/workflows/codex-review-prs.yml、.github/workflows/pr.yml、.github/workflows/sync-integration-mirror.yml、.github/workflows/test-installer-scripts.yml`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/codex-fetch-pr-context/action.yml、.github/actions/codex-run/action.yml、.github/actions/codex-update-auth/action.yml、custom_components/ha_mcp_tools/embedded_server.py、homeassistant-addon-webhook-proxy-dev/start.py`
+> 證據：`custom_components/ha_mcp_tools/embedded_server.py、homeassistant-addon-webhook-proxy-dev/start.py、homeassistant-addon-webhook-proxy/start.py、homeassistant-addon/start.py、scripts/codeql_quality_gate.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4653｜fork 203｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-07
+⭐ 4660｜fork 204｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-08
 
 ---
 

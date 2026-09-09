@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27555 / 2309 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 27566 / 2314 |
+| 最後更新 | 2026-09-08 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-07 23:18 |
+| 檢查時間 | 2026-09-08 23:13 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc、examples/auth/auth0_mcp/server.py、examples/auth/authkit/server.py、examples/auth/aws_oauth/server.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（309 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（311 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27555｜fork 2309｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-07
+⭐ 27566｜fork 2314｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-08
 
 ---
 

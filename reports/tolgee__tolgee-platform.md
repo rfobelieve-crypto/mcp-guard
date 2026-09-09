@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4092 / 368 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 4092 / 369 |
+| 最後更新 | 2026-09-08 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-09-07 23:20 |
+| 檢查時間 | 2026-09-08 23:15 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`e2e/cypress/common/flakyReport.ts、e2e/scripts/baseQuery/perf-test.sh`
 
-### 🟡 中｜[權限] 會連往 29 個外部主機
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -43,7 +43,7 @@
 
 > 證據：`backend/app/build.gradle、backend/data/build.gradle、backend/testing/build.gradle、build.gradle、e2e/cypress/common/flakyReport.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（191 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（192 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4092｜fork 368｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-09-07
+⭐ 4092｜fork 369｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-09-08
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 2897 / 402 |
-| 最後更新 | 2026-09-07 |
+| 星數 / Fork | ⭐ 2898 / 402 |
+| 最後更新 | 2026-09-08 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 123 個 |
-| 檢查時間 | 2026-09-07 23:20 |
+| 已掃描檔案 | 126 個 |
+| 檢查時間 | 2026-09-08 23:16 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-sdk.dev、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、blog.modelcontextprotocol.io、firewall.depthfirst.com、linear.app、login.acme.com、mcp.supabase.com…`
+> 證據：`ai-sdk.dev、api.example.com、api.supabase.com、app.acme.com、app.example.com、biomejs.dev、blog.modelcontextprotocol.io、firewall.depthfirst.com、linear.app、login.acme.com…`
 
 ### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
 
@@ -42,7 +42,7 @@
 
 > 證據：`scripts/dev-http.mjs、scripts/test-packed-platform-consumer.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（123 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-09-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2897｜fork 402｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-09-07
+⭐ 2898｜fork 402｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-09-08
 
 ---
 
