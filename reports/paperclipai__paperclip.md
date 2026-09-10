@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 80265 / 14729 |
-| 最後更新 | 2026-09-08 |
+| 星數 / Fork | ⭐ 80339 / 14745 |
+| 最後更新 | 2026-09-09 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 495 個 |
-| 檢查時間 | 2026-09-08 23:13 |
+| 已掃描檔案 | 496 個 |
+| 檢查時間 | 2026-09-09 22:57 |
 
 ## 風險摘要
 
@@ -71,11 +71,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-coauthors.mjs、.github/scripts/check-pr-dedup-search.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5408 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5424 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 72 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 73 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-08`
+> 證據：`最後推送 2026-09-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 80265｜fork 14729｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-08
+⭐ 80339｜fork 14745｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-09
 
 ---
 
