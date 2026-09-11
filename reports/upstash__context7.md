@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 61852 / 2979 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 61894 / 2982 |
+| 最後更新 | 2026-09-11 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 239 個 |
-| 檢查時間 | 2026-09-10 22:57 |
+| 已掃描檔案 | 255 個 |
+| 檢查時間 | 2026-09-11 23:00 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/__tests__/plugin-manifests.test.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61852｜fork 2979｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-10
+⭐ 61894｜fork 2982｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-11
 
 ---
 

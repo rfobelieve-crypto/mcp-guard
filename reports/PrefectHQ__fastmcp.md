@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27601 / 2315 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 27624 / 2325 |
+| 最後更新 | 2026-09-11 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-10 22:57 |
+| 檢查時間 | 2026-09-11 22:59 |
 
 ## 風險摘要
 
@@ -28,13 +28,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/release/scripts/changelog_entry.py、.github/scripts/test-ci-workflows.mjs、.github/scripts/test-issue-link.mjs、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py`
+> 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/scripts/test-ci-workflows.mjs、.github/scripts/test-issue-link.mjs、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/release/scripts/changelog_entry.py、.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py`
+> 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（319 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（314 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -50,13 +50,13 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 12 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/review-security-report/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.agents/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 90 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27601｜fork 2315｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-10
+⭐ 27624｜fork 2325｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-11
 
 ---
 

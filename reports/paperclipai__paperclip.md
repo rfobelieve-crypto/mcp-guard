@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 80417 / 14759 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 80499 / 14782 |
+| 最後更新 | 2026-09-11 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 496 個 |
-| 檢查時間 | 2026-09-10 22:57 |
+| 已掃描檔案 | 497 個 |
+| 檢查時間 | 2026-09-11 22:59 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-migration-order.mjs、cli/src/__tests__/company-import-export-e2e.test.ts`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-migration-order.mjs、.github/scripts/publish-storybook.cjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`cli/src/__tests__/agent-jwt-env.test.ts、cli/src/__tests__/allowed-hostname.test.ts、cli/src/__tests__/common.test.ts、cli/src/__tests__/config-store.test.ts、cli/src/__tests__/configure-repair.test.ts`
+> 證據：`.github/scripts/publish-storybook.cjs、cli/src/__tests__/agent-jwt-env.test.ts、cli/src/__tests__/allowed-hostname.test.ts、cli/src/__tests__/common.test.ts、cli/src/__tests__/config-store.test.ts`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -69,19 +69,19 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/check-pr-coauthors.mjs、.github/scripts/check-pr-dedup-search.mjs`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/authorize-storybook-deploy.cjs、.github/scripts/check-pr-coauthors.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5457 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5507 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 73 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 74 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.agents/skills/check-pr/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/company-creator/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-agent-adapter/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-issue-interaction-ui/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/create-paperclip-bundled-skill/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/deal-with-security-advisory/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 80417｜fork 14759｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-10
+⭐ 80499｜fork 14782｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-11
 
 ---
 

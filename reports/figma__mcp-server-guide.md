@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `figma/mcp-server-guide` |
 | 專案說明 | A guide on how to use the Figma MCP server |
-| 星數 / Fork | ⭐ 1973 / 182 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 1977 / 182 |
+| 最後更新 | 2026-09-11 |
 | 授權 | 無 |
 | 已掃描檔案 | 217 個 |
-| 檢查時間 | 2026-09-10 23:00 |
+| 檢查時間 | 2026-09-11 23:03 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.figma.com、developer.mozilla.org、developers.figma.com、en.wikipedia.org、figma.com、help.figma.com、learn.microsoft.com、mcp.figma.com、mynewssite.com、oreillymedia.github.io…`
+> 證據：`api.figma.com、developer.mozilla.org、developers.figma.com、en.wikipedia.org、figma.com、fonts.google.com、help.figma.com、learn.microsoft.com、mcp.figma.com、mynewssite.com…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -60,11 +60,11 @@
 
 > 證據：`TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1973｜fork 182｜語言 Python｜建立 2025-08-05｜最後推送 2026-09-10
+⭐ 1977｜fork 182｜語言 Python｜建立 2025-08-05｜最後推送 2026-09-11
 
 ---
 

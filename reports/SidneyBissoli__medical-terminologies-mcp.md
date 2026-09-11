@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, M |
 | 星數 / Fork | ⭐ 12 / 4 |
-| 最後更新 | 2026-09-10 |
+| 最後更新 | 2026-09-11 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
 | 已掃描檔案 | 185 個 |
-| 檢查時間 | 2026-09-10 23:01 |
+| 檢查時間 | 2026-09-11 23:04 |
 
 ## 風險摘要
 
@@ -39,13 +39,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.1.0、@sbissoli/mcp-search@^0.3.0、pino@^10.2.1、zod@^4.5.4、@modelcontextprotocol/client@^2.0.0…`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.1.0、@sbissoli/mcp-search@^0.4.0、pino@^10.2.1、zod@^4.5.4、@modelcontextprotocol/client@^2.0.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`package.json、src/clients/snomed-client.contract.test.ts、src/clients/snomed-client.ts、src/clients/who-client.contract.test.ts、src/clients/who-client.ts`
+> 證據：`package.json、scripts/smoke-mcp.mjs、src/clients/snomed-client.contract.test.ts、src/clients/snomed-client.ts、src/clients/who-client.contract.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12｜fork 4｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-10
+⭐ 12｜fork 4｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-11
 
 ---
 

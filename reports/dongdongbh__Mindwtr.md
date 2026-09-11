@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
-| 專案說明 | Get every task and idea out of your head, then see the next thing to do. Getting |
-| 星數 / Fork | ⭐ 1997 / 121 |
-| 最後更新 | 2026-09-10 |
+| 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
+| 星數 / Fork | ⭐ 2005 / 122 |
+| 最後更新 | 2026-09-11 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 416 個 |
-| 檢查時間 | 2026-09-10 23:00 |
+| 檢查時間 | 2026-09-11 23:03 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml、.github/workflows/release-macos-appstore.yml`
+> 證據：`.github/workflows/ci.yml、.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-android.yml、.github/workflows/release-linux.yml`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -31,7 +31,7 @@
 
 > 證據：`apps/cloud/src/server.test.ts`
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release-android.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml`
+> 證據：`.github/workflows/msstore-flight-id.yml、.github/workflows/release-android.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1997｜fork 121｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-10
+⭐ 2005｜fork 122｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-11
 
 ---
 
