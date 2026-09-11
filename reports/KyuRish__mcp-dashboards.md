@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KyuRish/mcp-dashboards` |
 | 專案說明 | Turn your data into interactive dashboards inside any AI client - MCP Apps power |
-| 星數 / Fork | ⭐ 44 / 7 |
-| 最後更新 | 2026-08-23 |
+| 星數 / Fork | ⭐ 45 / 7 |
+| 最後更新 | 2026-09-10 |
 | 授權 | Other |
 | npm 套件 | `mcp-dashboards` |
-| 已掃描檔案 | 49 個 |
-| 檢查時間 | 2026-09-09 23:02 |
+| 已掃描檔案 | 50 個 |
+| 檢查時間 | 2026-09-10 23:02 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/ext-apps@^1.7.2、@modelcontextprotocol/sdk@^1.29.0、cors@^2.8.6、express@^5.2.1、ipaddr.js@^2.4.0、zod@^4.4.3…`
+> 證據：`@modelcontextprotocol/ext-apps@^1.7.5、@modelcontextprotocol/sdk@^1.30.0、cors@^2.8.6、express@^5.2.1、ipaddr.js@^2.4.0、zod@^4.4.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -61,11 +61,11 @@
 
 > 證據：`PASSWORD、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 18 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-23`
+> 證據：`最後推送 2026-09-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -75,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44｜fork 7｜語言 TypeScript｜建立 2026-02-23｜最後推送 2026-08-23
+⭐ 45｜fork 7｜語言 TypeScript｜建立 2026-02-23｜最後推送 2026-09-10
 
 ---
 
