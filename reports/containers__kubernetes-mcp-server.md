@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2075 / 432 |
+| 星數 / Fork | ⭐ 2079 / 434 |
 | 最後更新 | 2026-09-10 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-10 23:00 |
+| 檢查時間 | 2026-09-11 23:03 |
 
 ## 風險摘要
 
@@ -30,7 +30,7 @@
 
 > 證據：`npm/kubernetes-mcp-server/bin/index.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（100 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（106 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -54,7 +54,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2075｜fork 432｜語言 Go｜建立 2025-02-11｜最後推送 2026-09-10
+⭐ 2079｜fork 434｜語言 Go｜建立 2025-02-11｜最後推送 2026-09-10
 
 ---
 

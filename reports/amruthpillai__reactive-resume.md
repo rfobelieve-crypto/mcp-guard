@@ -6,20 +6,20 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42438 / 4705 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 42489 / 4705 |
+| 最後更新 | 2026-09-11 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-10 22:57 |
+| 檢查時間 | 2026-09-11 23:00 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 29 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -43,6 +43,10 @@
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -63,11 +67,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42438｜fork 4705｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-10
+⭐ 42489｜fork 4705｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-11
 
 ---
 

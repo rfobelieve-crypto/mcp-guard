@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 6399 / 684 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 6408 / 689 |
+| 最後更新 | 2026-09-11 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-09-10 22:58 |
+| 檢查時間 | 2026-09-11 23:01 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`httpx>=0.27,<1、tree-sitter>=0.23,<1、tree-sitter-python>=0.23,<1、tree-sitter-typescript>=0.23,<1、tree-sitter-javascript>=0.23,<1、tree-sitter-go>=0.23,<1…`
+> 證據：`httpx>=0.27,<1、tree-sitter>=0.25,<1、tree-sitter-python>=0.23,<1、tree-sitter-typescript>=0.23,<1、tree-sitter-javascript>=0.23,<1、tree-sitter-go>=0.23,<1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py、packages/cli/src/repowise/cli/commands/distill_cmd.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（173 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（163 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,11 +77,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6399｜fork 684｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-10
+⭐ 6408｜fork 689｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-11
 
 ---
 
