@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 90253 / 11622 |
+| 星數 / Fork | ⭐ 90281 / 11627 |
 | 最後更新 | 2026-09-03 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 134 個 |
-| 檢查時間 | 2026-09-11 22:58 |
+| 檢查時間 | 2026-09-12 22:50 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`src/everything/__tests__/tools.test.ts、src/everything/tools/get-env.ts、src/everything/tools/gzip-file-as-resource.ts、src/everything/transports/sse.ts、src/everything/transports/streamableHttp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（513 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（518 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 10 天內有更新
 
 專案仍在活躍維護中。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 90253｜fork 11622｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-09-03
+⭐ 90281｜fork 11627｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-09-03
 
 ---
 

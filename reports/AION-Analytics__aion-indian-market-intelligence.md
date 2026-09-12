@@ -1,28 +1,22 @@
 # MCP 安檢報告：AION-Analytics/aion-indian-market-intelligence
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `AION-Analytics/aion-indian-market-intelligence` |
 | 專案說明 | Structured market intelligence for Indian financial events, macro context, and s |
 | 星數 / Fork | ⭐ 22 / 1 |
-| 最後更新 | 2026-09-01 |
+| 最後更新 | 2026-09-12 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 55 個 |
-| 檢查時間 | 2026-09-11 23:04 |
+| 檢查時間 | 2026-09-12 22:56 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟡 中 1　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`packages/aion-newsimpact/setup.py、packages/aion-sectormap/scripts/update_map.py、packages/aion-sectormap/src/aion_sectormap/mapper.py、packages/aion-sectormap/tests/test_mapper.py、packages/aion-volweight/setup.py`
 
 ### 🟡 中｜[權限] 會連往 5 個外部主機
 
@@ -32,9 +26,15 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`hf_space_aion_indian_market_intelligence/app.py、pypi_aion_indian_market_intelligence/src/aion_indian_market_intelligence/client.py`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`packages/aion-newsimpact/setup.py、packages/aion-sectormap/scripts/update_map.py、packages/aion-sectormap/src/aion_sectormap/mapper.py、packages/aion-sectormap/tests/test_mapper.py、packages/aion-volweight/setup.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
@@ -46,9 +46,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -56,11 +56,11 @@
 
 > 證據：`API_KEY`
 
-### ⚪ 資訊｜[維護] 最近 11 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-01`
+> 證據：`最後推送 2026-09-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-09-01
+⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-09-12
 
 ---
 

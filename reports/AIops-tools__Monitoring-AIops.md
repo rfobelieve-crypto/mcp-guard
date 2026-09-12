@@ -7,14 +7,15 @@
 | 稽核對象 | `AIops-tools/Monitoring-AIops` |
 | 專案說明 | Governed SolarWinds Orion + PRTG ops: canned SWQL, alert rollup, 31 MCP tools (p |
 | 星數 / Fork | ⭐ 0 / 1 |
-| 最後更新 | 2026-09-02 |
+| 最後更新 | 2026-09-12 |
 | 授權 | MIT License |
-| 已掃描檔案 | 94 個 |
-| 檢查時間 | 2026-09-11 23:06 |
+| npm 套件 | `@zw008/monitoring-aiops`（registry 查無） |
+| 已掃描檔案 | 96 個 |
+| 檢查時間 | 2026-09-12 22:58 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 7
+🟡 中 1　🔵 低 5　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -60,6 +61,10 @@
 
 > 證據：`skills/monitoring-aiops/SKILL.md（Agent Skill 指令（SKILL.md））`
 
+### ⚪ 資訊｜[供應鏈] npm 上查無此套件（@zw008/monitoring-aiops）
+
+原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
+
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
@@ -74,11 +79,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-02`
+> 證據：`最後推送 2026-09-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -88,7 +93,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-09-02
+⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-09-12
 
 ---
 
