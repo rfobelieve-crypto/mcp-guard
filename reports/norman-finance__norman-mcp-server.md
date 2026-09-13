@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 54 / 13 |
-| 最後更新 | 2026-09-09 |
+| 最後更新 | 2026-09-13 |
 | 授權 | MIT License |
-| 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-09-12 22:55 |
+| 已掃描檔案 | 115 個 |
+| 檢查時間 | 2026-09-13 22:58 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 21 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance、mcp.norman.finance…`
+> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance、files.example…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -34,7 +34,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py、test_client/get_token.py、tests/test_smithery_config.py`
+> 證據：`norman_mcp/files/download.py、norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py、test_client/get_token.py、tests/test_smithery_config.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 21 個代理指令檔
 
@@ -56,11 +56,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-09`
+> 證據：`最後推送 2026-09-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-09
+⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-13
 
 ---
 

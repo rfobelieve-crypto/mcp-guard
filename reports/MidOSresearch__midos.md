@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `MidOSresearch/midos` |
-| 專案說明 | Curated Knowledge API for AI Agents — 68 MCP tools, 200+ skill packs, 46K chunks |
+| 專案說明 | Agentic OS that runs on any Linux — curated knowledge API for AI agents: MCP too |
 | 星數 / Fork | ⭐ 8 / 5 |
 | 最後更新 | 2026-05-03 |
 | 授權 | MIT License |
 | 已掃描檔案 | 313 個 |
-| 檢查時間 | 2026-09-12 22:58 |
+| 檢查時間 | 2026-09-13 22:59 |
 
 ## 風險摘要
 
@@ -62,7 +62,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 133 天內有更新
+### ⚪ 資訊｜[維護] 最近 134 天內有更新
 
 專案仍在活躍維護中。
 
