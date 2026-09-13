@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 6653 / 576 |
-| 最後更新 | 2026-09-11 |
+| 星數 / Fork | ⭐ 6660 / 576 |
+| 最後更新 | 2026-09-12 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 51 個 |
-| 檢查時間 | 2026-09-11 23:01 |
+| 已掃描檔案 | 52 個 |
+| 檢查時間 | 2026-09-12 22:53 |
 
 ## 風險摘要
 
@@ -47,13 +47,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build.yml、src/android.ts、src/index.ts、src/ios.ts、src/logger.ts`
+> 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts、src/server.ts`
+> 證據：`scripts/verify-streamable-http.mjs、src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-11`
+> 證據：`最後推送 2026-09-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6653｜fork 576｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-11
+⭐ 6660｜fork 576｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-12
 
 ---
 

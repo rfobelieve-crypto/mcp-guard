@@ -7,10 +7,10 @@
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
 | 星數 / Fork | ⭐ 1417 / 167 |
-| 最後更新 | 2026-09-08 |
+| 最後更新 | 2026-09-12 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-11 23:03 |
+| 檢查時間 | 2026-09-12 22:55 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`fastmcp>=2.0.0、fastapi>=0.109.0、uvicorn>=0.27.0、pydantic>=2.5.3、python-dotenv>=1.0.0、requests>=2.31.0…`
+> 證據：`fastmcp>=3.2.0,<4、fastapi>=0.109.1、uvicorn>=0.27.0、pydantic>=2.5.3、python-dotenv>=1.2.2、requests>=2.33.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-08`
+> 證據：`最後推送 2026-09-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1417｜fork 167｜語言 Python｜建立 2026-02-23｜最後推送 2026-09-08
+⭐ 1417｜fork 167｜語言 Python｜建立 2026-02-23｜最後推送 2026-09-12
 
 ---
 
