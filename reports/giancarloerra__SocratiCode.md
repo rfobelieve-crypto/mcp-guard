@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `giancarloerra/SocratiCode` |
 | 專案說明 | Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private P |
-| 星數 / Fork | ⭐ 3295 / 420 |
-| 最後更新 | 2026-09-12 |
+| 星數 / Fork | ⭐ 3295 / 419 |
+| 最後更新 | 2026-09-13 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
-| 已掃描檔案 | 227 個 |
-| 檢查時間 | 2026-09-12 22:54 |
+| 已掃描檔案 | 237 個 |
+| 檢查時間 | 2026-09-13 22:56 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、GEMINI.md（Gemini CLI 指令）、skills/codebase-exploration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/codebase-management/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 26 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,11 +77,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-12`
+> 證據：`最後推送 2026-09-13`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3295｜fork 420｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-12
+⭐ 3295｜fork 419｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-13
 
 ---
 

@@ -1,29 +1,23 @@
 # MCP 安檢報告：n24q02m/better-notion-mcp
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 36 / 11 |
-| 最後更新 | 2026-09-12 |
+| 最後更新 | 2026-09-13 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/better-notion-mcp` |
 | 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-09-12 22:57 |
+| 檢查時間 | 2026-09-13 22:59 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/cf-deploy.mjs、scripts/clean-venv.mjs、scripts/deploy_cf.py、tests/live/stdio-direct.live.test.ts、tests/test-oauth-mcp.mjs`
 
 ### 🟡 中｜[權限] 會連往 23 個外部主機
 
@@ -31,21 +25,31 @@
 
 > 證據：`api.notion.com、attacker.example、better-notion-mcp.example.com、biomejs.dev、docs.renovatebot.com、glama.ai、host.docker.internal、kv.internal、mcp.example.com、mcp.n24q02m.com…`
 
+### 🟡 中｜[身分] 倉庫已封存（archived）
+
+作者已停止維護，不會再修安全問題。
+
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
 > 證據：`@cloudflare/containers@^0.3.7、@modelcontextprotocol/sdk@^1.30.0、@notionhq/client@^5.26.0、zod@^4.6.1、@biomejs/biome@^2.5.12、@cloudflare/workers-types@^5.20260905.1…`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/cf-deploy.mjs、scripts/clean-venv.mjs、scripts/deploy_cf.py、tests/live/stdio-direct.live.test.ts、tests/test-oauth-mcp.mjs`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/cf-deploy.mjs、scripts/cf_full_flow.py、scripts/deploy_cf.py、scripts/provider-readonly-acceptance.ts、src/auth/notion-token-store-kv.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/deploy_cf.py、src/main.test.ts`
 
@@ -59,9 +63,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：資料庫存取
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -69,11 +73,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-12`
+> 證據：`最後推送 2026-09-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-09-12
+⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-09-13
 
 ---
 
