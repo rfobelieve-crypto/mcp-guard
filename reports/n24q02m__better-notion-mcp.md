@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
-| 星數 / Fork | ⭐ 36 / 11 |
+| 星數 / Fork | ⭐ 36 / 12 |
 | 最後更新 | 2026-09-13 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/better-notion-mcp` |
 | 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-09-13 22:59 |
+| 檢查時間 | 2026-09-14 23:47 |
 
 ## 風險摘要
 
@@ -73,7 +73,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-09-13
+⭐ 36｜fork 12｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-09-13
 
 ---
 

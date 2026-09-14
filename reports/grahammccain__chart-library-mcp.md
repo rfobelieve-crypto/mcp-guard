@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `grahammccain/chart-library-mcp` |
 | 專案說明 | MCP server for Chart Library — visual chart pattern search engine. Find similar  |
-| 星數 / Fork | ⭐ 20 / 1 |
+| 星數 / Fork | ⭐ 20 / 2 |
 | 最後更新 | 2026-09-10 |
 | 授權 | MIT License |
 | 已掃描檔案 | 22 個 |
-| 檢查時間 | 2026-09-13 22:58 |
+| 檢查時間 | 2026-09-14 23:47 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 4 天內有更新
 
 專案仍在活躍維護中。
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20｜fork 1｜語言 Python｜建立 2026-03-25｜最後推送 2026-09-10
+⭐ 20｜fork 2｜語言 Python｜建立 2026-03-25｜最後推送 2026-09-10
 
 ---
 

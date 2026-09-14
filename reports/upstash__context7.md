@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 61964 / 2985 |
-| 最後更新 | 2026-09-11 |
+| 星數 / Fork | ⭐ 62021 / 2993 |
+| 最後更新 | 2026-09-14 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
 | 已掃描檔案 | 255 個 |
-| 檢查時間 | 2026-09-13 22:54 |
+| 檢查時間 | 2026-09-14 23:42 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/__tests__/plugin-manifests.test.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（62 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,11 +77,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-11`
+> 證據：`最後推送 2026-09-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61964｜fork 2985｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-11
+⭐ 62021｜fork 2993｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-14
 
 ---
 
