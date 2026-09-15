@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2028 / 122 |
-| 最後更新 | 2026-09-14 |
+| 星數 / Fork | ⭐ 2044 / 126 |
+| 最後更新 | 2026-09-15 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-09-14 23:45 |
+| 檢查時間 | 2026-09-15 23:28 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2028｜fork 122｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-14
+⭐ 2044｜fork 126｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-15
 
 ---
 

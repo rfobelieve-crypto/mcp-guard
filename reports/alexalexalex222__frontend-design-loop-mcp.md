@@ -10,11 +10,11 @@
 | 最後更新 | 2026-03-19 |
 | 授權 | MIT License |
 | 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-09-14 23:47 |
+| 檢查時間 | 2026-09-15 23:30 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 4　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -39,6 +39,12 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`aiplatform.googleapis.com、example-one.invalid、example-two.invalid、feross.org、generativelanguage.googleapis.com、nextjs.org、opencollective.com、openrouter.ai、paulmillr.com、static.modelcontextprotocol.io…`
+
+### 🟡 中｜[維護] 約 6 個月沒有更新
+
+更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
+
+> 證據：`最後推送 2026-03-19`
 
 ### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
@@ -83,12 +89,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
-
-### ⚪ 資訊｜[維護] 最近 179 天內有更新
-
-專案仍在活躍維護中。
-
-> 證據：`最後推送 2026-03-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 

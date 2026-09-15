@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
-| 星數 / Fork | ⭐ 1417 / 167 |
+| 星數 / Fork | ⭐ 1418 / 167 |
 | 最後更新 | 2026-09-14 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-14 23:46 |
+| 檢查時間 | 2026-09-15 23:28 |
 
 ## 風險摘要
 
@@ -68,7 +68,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1417｜fork 167｜語言 Python｜建立 2026-02-23｜最後推送 2026-09-14
+⭐ 1418｜fork 167｜語言 Python｜建立 2026-02-23｜最後推送 2026-09-14
 
 ---
 
