@@ -7,10 +7,10 @@
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 205 / 21 |
-| 最後更新 | 2026-09-15 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
-| 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-09-15 23:30 |
+| 已掃描檔案 | 128 個 |
+| 檢查時間 | 2026-09-16 23:39 |
 
 ## 風險摘要
 
@@ -36,11 +36,11 @@
 
 > 證據：`static.modelcontextprotocol.io`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 33 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 34 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/WORKTREE.md（AI 客戶端設定目錄下的指令檔）…`
+> 證據：`.claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-15`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 205｜fork 21｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-15
+⭐ 205｜fork 21｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-16
 
 ---
 

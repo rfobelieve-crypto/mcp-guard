@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 42972 / 4748 |
-| 最後更新 | 2026-09-12 |
+| 星數 / Fork | ⭐ 43049 / 4757 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-15 23:25 |
+| 檢查時間 | 2026-09-16 23:34 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.12、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.63.0、@testing-library/dom@^10.4.1、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@biomejs/biome@^2.5.14、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.63.0、@testing-library/dom@^10.4.2、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,10 +42,6 @@
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
@@ -67,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-12`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 42972｜fork 4748｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-12
+⭐ 43049｜fork 4757｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-16
 
 ---
 
