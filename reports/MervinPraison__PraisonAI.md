@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9054 / 1440 |
-| 最後更新 | 2026-09-14 |
+| 星數 / Fork | ⭐ 9057 / 1442 |
+| 最後更新 | 2026-09-15 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-09-14 23:43 |
+| 檢查時間 | 2026-09-15 23:25 |
 
 ## 風險摘要
 
@@ -34,11 +34,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 28 個外部主機
+### 🟡 中｜[權限] 會連往 29 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、api.cloudflare.com、api.example.com、api.groq.com、api.openai.com、astral.sh、auth.example.com、blog.google、cockroachlabs.cloud、docs.docker.com…`
+> 證據：`accounts.google.com、api.anthropic.com、api.cloudflare.com、api.example.com、api.groq.com、api.openai.com、astral.sh、auth.example.com、blog.google、cockroachlabs.cloud…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（106 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9054｜fork 1440｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-14
+⭐ 9057｜fork 1442｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-15
 
 ---
 

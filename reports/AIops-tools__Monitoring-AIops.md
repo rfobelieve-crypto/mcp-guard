@@ -7,11 +7,11 @@
 | 稽核對象 | `AIops-tools/Monitoring-AIops` |
 | 專案說明 | Governed SolarWinds Orion + PRTG ops: canned SWQL, alert rollup, 31 MCP tools (p |
 | 星數 / Fork | ⭐ 0 / 1 |
-| 最後更新 | 2026-09-12 |
+| 最後更新 | 2026-09-15 |
 | 授權 | MIT License |
 | npm 套件 | `@zw008/monitoring-aiops`（registry 查無） |
-| 已掃描檔案 | 96 個 |
-| 檢查時間 | 2026-09-14 23:48 |
+| 已掃描檔案 | 97 個 |
+| 檢查時間 | 2026-09-15 23:31 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/mcp-publish.yml、monitoring_aiops/config.py、monitoring_aiops/governance/patterns.py、tests/test_cli_governed_exit.py、tests/test_gov_decorators.py`
+> 證據：`.github/workflows/mcp-publish.yml、monitoring_aiops/config.py、monitoring_aiops/governance/patterns.py、tests/test_cli_audited.py、tests/test_cli_governed_exit.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -79,11 +79,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-12`
+> 證據：`最後推送 2026-09-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-09-12
+⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-09-15
 
 ---
 

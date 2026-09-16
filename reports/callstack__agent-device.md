@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4576 / 298 |
-| 最後更新 | 2026-09-14 |
+| 星數 / Fork | ⭐ 4596 / 299 |
+| 最後更新 | 2026-09-15 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 426 個 |
-| 檢查時間 | 2026-09-14 23:44 |
+| 檢查時間 | 2026-09-15 23:27 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.4、@limrun/api@^0.24.5、@nkzw/eslint-plugin@^2.0.0、@nkzw/oxlint-config@^1.3.0、@types/json-schema@^7.0.15…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.4、@limrun/api@^0.49.3、@nkzw/eslint-plugin@^2.0.0、@nkzw/oxlint-config@^1.3.0、@types/json-schema@^7.0.15…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（83 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-15`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4576｜fork 298｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-14
+⭐ 4596｜fork 299｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-15
 
 ---
 

@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 54 / 13 |
-| 最後更新 | 2026-09-14 |
+| 最後更新 | 2026-09-15 |
 | 授權 | MIT License |
-| 已掃描檔案 | 115 個 |
-| 檢查時間 | 2026-09-14 23:46 |
+| 已掃描檔案 | 118 個 |
+| 檢查時間 | 2026-09-15 23:28 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 22 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance、files.example…`
+> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance、example.test…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 405 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 403 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-14
+⭐ 54｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-15
 
 ---
 
