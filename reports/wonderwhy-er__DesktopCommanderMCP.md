@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 9612 / 1185 |
-| 最後更新 | 2026-09-16 |
+| 星數 / Fork | ⭐ 9624 / 1189 |
+| 最後更新 | 2026-09-17 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 286 個 |
-| 檢查時間 | 2026-09-16 23:33 |
+| 已掃描檔案 | 288 個 |
+| 檢查時間 | 2026-09-17 23:22 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、discord.com、docs.docker.com、example.supabase.co、legal.desktopcommander.app、list.agenium.net…`
+> 證據：`avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、discord.com、docs.docker.com、example.invalid、example.supabase.co、legal.desktopcommander.app…`
 
 ### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
@@ -85,11 +85,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9612｜fork 1185｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-16
+⭐ 9624｜fork 1189｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-17
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 43049 / 4757 |
-| 最後更新 | 2026-09-16 |
+| 星數 / Fork | ⭐ 43108 / 4763 |
+| 最後更新 | 2026-09-17 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-16 23:34 |
+| 檢查時間 | 2026-09-17 23:23 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、attacker.example、callback.invalid、claude.ai、configured.example、crowdin.com、discord.gg…`
 
-### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.14、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.63.0、@testing-library/dom@^10.4.2、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@biomejs/biome@^2.5.14、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@playwright/test@^1.63.0、@testing-library/jest-dom@^7.0.1、@testing-library/react@^16.3.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 15 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -67,7 +67,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43049｜fork 4757｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-16
+⭐ 43108｜fork 4763｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-17
 
 ---
 

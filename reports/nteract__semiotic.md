@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2707 / 139 |
-| 最後更新 | 2026-09-16 |
+| 最後更新 | 2026-09-17 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-16 23:36 |
+| 檢查時間 | 2026-09-17 23:25 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 41 個外部主機
+### 🟡 中｜[權限] 會連往 39 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -41,7 +41,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs、docs/src/examples/recipes/data/debateWordTrails.build.mjs`
+> 證據：`.github/workflows/release.yml、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2707｜fork 139｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-16
+⭐ 2707｜fork 139｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-17
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Vrun-design/openflowkit` |
 | 專案說明 | 100% Free, Open-source local-first AI diagramming for architecture diagrams and  |
-| 星數 / Fork | ⭐ 769 / 166 |
+| 星數 / Fork | ⭐ 770 / 168 |
 | 最後更新 | 2026-08-19 |
 | 授權 | MIT License |
 | npm 套件 | `openflowkit`（registry 查無） |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-09-16 23:39 |
+| 檢查時間 | 2026-09-17 23:28 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 29 天內有更新
+### ⚪ 資訊｜[維護] 最近 30 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 769｜fork 166｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-08-19
+⭐ 770｜fork 168｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-08-19
 
 ---
 
