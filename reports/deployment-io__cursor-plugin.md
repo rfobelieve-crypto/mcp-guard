@@ -10,7 +10,7 @@
 | 最後更新 | 2026-03-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 4 個 |
-| 檢查時間 | 2026-09-16 23:40 |
+| 檢查時間 | 2026-09-17 23:29 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`api.deployment.io、app.deployment.io、deployment.io、static.modelcontextprotocol.io`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

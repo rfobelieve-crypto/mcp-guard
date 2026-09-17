@@ -7,14 +7,14 @@
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
 | 星數 / Fork | ⭐ 4972 / 1116 |
-| 最後更新 | 2026-09-16 |
+| 最後更新 | 2026-09-17 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 537 個 |
-| 檢查時間 | 2026-09-16 23:35 |
+| 檢查時間 | 2026-09-17 23:24 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 2　⚪ 資訊 7
+🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -24,7 +24,7 @@
 
 > 證據：`.opencode/skills/renew-test-certs/SKILL.md｜「- `authentication/mtls/leaf-key.pem` is **PKCS#1** (`-----BEGIN RSA PRIVATE KEY-----`) and is consumed by `PEMToFileTest` for traditional-RSA encod…」`
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -35,6 +35,12 @@
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/node-client-browser-test.sh、.buildkite/scripts/steps/ui-e2e.sh、.opencode/plugins/buildkite-status.ts`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.buildkite/scripts/steps/lib/perf-percore.sh`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -66,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4972｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-16
+⭐ 4972｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-17
 
 ---
 

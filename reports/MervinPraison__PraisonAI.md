@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9062 / 1444 |
-| 最後更新 | 2026-09-16 |
+| 星數 / Fork | ⭐ 9069 / 1447 |
+| 最後更新 | 2026-09-17 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-09-16 23:34 |
+| 檢查時間 | 2026-09-17 23:23 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/auto-pr-comment.yml、.github/workflows/bot-pr-recovery.yml、.github/workflows/ci-failure-claude.yml`
+> 證據：`.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/agents-suite.yml、.github/workflows/auto-pr-comment.yml、.github/workflows/bot-pr-recovery.yml`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（101 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9062｜fork 1444｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-16
+⭐ 9069｜fork 1447｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-17
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 3981 / 282 |
+| 星數 / Fork | ⭐ 3986 / 283 |
 | 最後更新 | 2026-09-16 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 435 個 |
-| 檢查時間 | 2026-09-16 23:36 |
+| 檢查時間 | 2026-09-17 23:25 |
 
 ## 風險摘要
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3981｜fork 282｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-16
+⭐ 3986｜fork 283｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-16
 
 ---
 
