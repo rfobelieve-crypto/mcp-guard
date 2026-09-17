@@ -127,6 +127,79 @@
 
 ---
 
+## 追記（2026-09-17）：不只 eval——同一個問題橫跨三條規則
+
+本文原本只盤點 `eval` 類。09-17 的重掃（`743ee3b`）逼出一個更大的範圍。
+
+觸發的是一筆翻轉：`RetrogradeLabs/lune-mcp-server` 🟡→🟢，
+`profile` 由 `docs` 變成 `browser`，少掉的 HIGH 是
+「⚠ 會執行外部指令 / 開子行程（超出宣稱用途）」，
+而**那一項的證據是 `tests/integration/full-stdio.test.ts`**——
+一個測試檔，不是 `eval`。
+
+這筆同時踩到兩份筆記：
+
+* **第四篇**（分類漂移）：它的自述（`desc` + `topics` + slug）逐字未改，
+  只命中 `docs`（「search top-tier papers and methodology guidance」、
+  topics 全是 `academic-*`）。但上游當天推了新版（`files` 71→85），
+  README 前 2000 字裡出現了 `browser` 類樣式，`profile` 就跳到 `browser`。
+  `browser` 的預期能力集合是 `{ENV, EXEC, FS, NET}`、`docs` 是 `{ENV, NET, FS}`，
+  差在 `EXEC`——於是那項 HIGH 靜默消失，判定跟著翻。
+* **本篇**（證據落在非出貨路徑）：就算分類沒漂移，那項 HIGH 的份量
+  本來也繫在一個測試檔上。
+
+**兩個已知的判定問題疊在同一筆資料上：一個讓告警消失，另一個讓它本來就不該那麼重。**
+這是目前第一次看到兩者複合。
+
+### 把範圍擴大重算
+
+原本的盤點只問 `eval` 類。改問**所有**「超出宣稱用途」的 HIGH：
+
+| | 筆數 |
+|---|---|
+| 有證據路徑的「超出宣稱用途」HIGH 總數 | 90 |
+| 證據**全部**落在 `tests/`、`__tests__/`、`spec/`、`benchmarks/`、`examples/`、`demos/`、`fixtures/`、`e2e/` | **11** |
+
+那 11 筆分屬三條規則，不是一條：
+
+| 規則 | 筆數 |
+|---|---|
+| ⚠ 使用 eval / 動態執行程式碼 | 6 |
+| ⚠ 會執行外部指令 / 開子行程 | 3 |
+| ⚠ 會讀寫本機檔案 | 2 |
+
+**唯一的 HIGH 全部屬於這一類、拿掉就會從 🟡 變 🟢 的專案有 7 個**
+（本文原先只數到 5 個，因為只看了 `eval`）：
+
+| 專案 | 唯一 HIGH 的規則 | 證據 |
+|---|---|---|
+| `ChromeDevTools/chrome-devtools-mcp` | eval | `tests/devtools/DevtoolsUtils.test.ts` 等 |
+| `MervinPraison/PraisonAI` | eval | `examples/` 三個檔 |
+| `basicmachines-co/basic-memory` | eval | `benchmarks/` 兩個檔 |
+| `modelscope/FunASR` | eval | `examples/industrial_data_pretraining/` |
+| `alexalexalex222/frontend-design-loop-mcp` | eval | `tests/test_mcp_code_server_selection.py` |
+| **`antvis/mcp-server-chart`** | **執行外部指令** | `__tests__/server.spec.ts` |
+| **`tolgee/tolgee-platform`** | **讀寫本機檔案** | `e2e/cypress/common/flakyReport.ts`、`e2e/scripts/baseQuery/perf-test.sh` |
+
+粗體兩個是這次才看到的，都不是 `eval`。
+
+### 這對前面的選項有什麼影響
+
+**沒有推翻任何一個選項，但把它們的適用範圍從一條規則變成三條。**
+
+A（維持現狀）的理由在這裡更弱一點：「範例碼會被使用者複製」對 `eval` 說得通，
+對 `e2e/scripts/baseQuery/perf-test.sh` 這種檔案就說不太通——
+沒有人會把 e2e 的效能測試腳本複製去用。
+
+D（只改文案）原本要在 finding 上加一個「證據性質」欄位；
+既然三條規則都適用，這個欄位就不是為 `eval` 特例加的，而是所有
+「超出宣稱用途」類共用的屬性。**這仍然是 API 回傳結構的變更，
+依 UX-TASK-BRIEF §0 必須先提出並等待確認，我沒有動它。**
+
+一樣沒有修改 `checks.py`、`fetch.py` 或任何規則。
+
+---
+
 ## 重現方式
 
 ```bash
@@ -151,8 +224,30 @@ for slug,v,sev,ev in sorted(allnon):
 PY
 ```
 
+```bash
+# 擴大到所有「超出宣稱用途」規則（09-17 追記用的那份）
+python3 - <<'PY2'
+import json,re
+from collections import Counter
+d=json.load(open('reports/data.json'))
+STRICT=re.compile(r'(^|/)(tests?|__tests__|spec|specs|benchmarks?|examples?|samples?|demos?|fixtures?|e2e)(/|$)',re.I)
+def ev(f): return [e.strip() for e in (f.get('evidence') or '').replace('、','\n').split('\n') if e.strip()]
+def nonship(f): return bool(ev(f)) and all(STRICT.search(e) for e in ev(f))
+rows=[f for p in d['projects'] for f in p.get('findings',[])
+      if f['severity']=='HIGH' and '超出宣稱用途' in f['title'] and ev(f)]
+non=[f for f in rows if nonship(f)]
+print(f'超出宣稱用途 HIGH {len(rows)} 筆，證據全在非出貨路徑 {len(non)} 筆')
+print(Counter(f['title'] for f in non))
+only=[p['slug'] for p in d['projects']
+      if (h:=[f for f in p.get('findings',[]) if f['severity']=='HIGH'])
+      and all('超出宣稱用途' in f['title'] and nonship(f) for f in h)]
+print(f'唯一 HIGH 全屬此類的專案 {len(only)} 個：', sorted(only))
+PY2
+```
+
 ---
 
 *發現時間：2026-09-05 03:15 UTC，於例行的六小時巡檢中合併每日重掃 `2da581a` 時。*
 *發現的方式是同一個樣態在 08-31、09-03、09-05 三輪各出現一次；*
 *前兩次都只在巡檢筆記記了一行，第三次才做全庫盤點。*
+*2026-09-17 追記：範圍由 `eval` 一條規則擴大為三條，出自同一個巡檢流程。*
