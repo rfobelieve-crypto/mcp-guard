@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 9596 / 1180 |
-| 最後更新 | 2026-09-15 |
+| 星數 / Fork | ⭐ 9612 / 1185 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 284 個 |
-| 檢查時間 | 2026-09-15 23:24 |
+| 已掃描檔案 | 286 個 |
+| 檢查時間 | 2026-09-16 23:33 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/config-manager.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（243 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（249 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -85,11 +85,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-15`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9596｜fork 1180｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-15
+⭐ 9612｜fork 1185｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-16
 
 ---
 

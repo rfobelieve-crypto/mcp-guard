@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | First gitlab mcp for you, building together |
-| 星數 / Fork | ⭐ 1977 / 357 |
-| 最後更新 | 2026-09-15 |
+| 星數 / Fork | ⭐ 1979 / 357 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
-| 已掃描檔案 | 321 個 |
-| 檢查時間 | 2026-09-15 23:28 |
+| 已掃描檔案 | 330 個 |
+| 檢查時間 | 2026-09-16 23:36 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`gitlab-client-pool.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs、oauth.ts`
+> 證據：`gitlab-client-pool.ts、masking/engine.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 48 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`GITLAB.INTERNAL.COM、a.com、api.internal.com、api.prod.example.com、api.stage.example.com、attacker.example、attacker.example.test、b.com、ci.example.com、claude.ai…`
+> 證據：`GITLAB.INTERNAL.COM、a.com、admin.internal.example、another.example.test、api.internal.com、api.prod.example.com、api.stage.example.com、attacker.example、attacker.example.test、b.com…`
 
 ### 🔵 低｜[供應鏈] 有 25 個依賴未鎖定版本
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、.github/prompts/quick-fix.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-plan.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-review.prompt.md（GitHub Copilot 提示檔）、.github/skills/ai-slop-cleaner/SKILL.md（Agent Skill 指令（SKILL.md））、.github/skills/cancel/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 281 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 282 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-15`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1977｜fork 357｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-15
+⭐ 1979｜fork 357｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-16
 
 ---
 

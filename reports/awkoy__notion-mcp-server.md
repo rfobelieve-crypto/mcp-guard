@@ -7,11 +7,11 @@
 | 稽核對象 | `awkoy/notion-mcp-server` |
 | 專案說明 | Notion MCP server for Claude, Cursor, ChatGPT & Claude Desktop. Connect AI agent |
 | 星數 / Fork | ⭐ 171 / 37 |
-| 最後更新 | 2026-09-15 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
 | npm 套件 | `notion-mcp-server` |
-| 已掃描檔案 | 125 個 |
-| 檢查時間 | 2026-09-15 23:30 |
+| 已掃描檔案 | 129 個 |
+| 檢查時間 | 2026-09-16 23:39 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`acme.notion.site、app.notion.com、avatars.githubusercontent.com、developers.notion.com、e.com、feross.org、glama.ai、notion.so、opencollective.com、paypal.me…`
+> 證據：`acme.notion.site、app.notion.com、avatars.githubusercontent.com、developers.notion.com、e.com、evil.example、feross.org、glama.ai、notion.so、opencollective.com…`
 
 ### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 59 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 58 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-15`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 171｜fork 37｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-09-15
+⭐ 171｜fork 37｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-09-16
 
 ---
 

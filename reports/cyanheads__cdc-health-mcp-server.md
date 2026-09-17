@@ -7,11 +7,11 @@
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
 | 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-08-22 |
+| 最後更新 | 2026-09-16 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 129 個 |
-| 檢查時間 | 2026-09-15 23:29 |
+| 已掃描檔案 | 163 個 |
+| 檢查時間 | 2026-09-16 23:38 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 11 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.us.socrata.com、caseyjhand.com、cdc.caseyjhand.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov、data.cdc.gov、no-color.org、static.modelcontextprotocol.io、wonder.cdc.gov…`
+> 證據：`api.us.socrata.com、caseyjhand.com、cdc.caseyjhand.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov、data.cdc.gov、json.schemastore.org、no-color.org、static.modelcontextprotocol.io…`
 
 ### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.12.3、pino-pretty@^13.1.3、zod@^4.4.3、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^4.1.11…`
+> 證據：`@cyanheads/mcp-ts-core@^0.13.2、pino-pretty@^13.1.3、zod@^4.6.4、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.2、@vitest/coverage-istanbul@^5.0.0…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -43,11 +43,11 @@
 
 > 證據：`scripts/devcheck.ts、tests/config/server-config-edge.test.ts、tests/config/server-config.test.ts、tests/services/wonder/database-ids.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 33 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 35 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills/add-app-tool/SKILL.md（Agent Skill 指令（SKILL.md））、skills/add-prompt/SKILL.md（Agent Skill 指令（SKILL.md））、skills/add-resource/SKILL.md（Agent Skill 指令（SKILL.md））、skills/add-service/SKILL.md（Agent Skill 指令（SKILL.md））、skills/add-test/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、framework-skills/add-app-tool/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-prompt/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-resource/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-service/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
 
@@ -61,13 +61,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 24 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-08-22`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-08-22
+⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-09-16
 
 ---
 

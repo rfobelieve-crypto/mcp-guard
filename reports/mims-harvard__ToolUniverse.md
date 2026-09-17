@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1687 / 255 |
-| 最後更新 | 2026-09-15 |
+| 星數 / Fork | ⭐ 1687 / 256 |
+| 最後更新 | 2026-09-16 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 853 個 |
-| 檢查時間 | 2026-09-15 23:28 |
+| 已掃描檔案 | 856 個 |
+| 檢查時間 | 2026-09-16 23:37 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`plugin/skills/tooluniverse-antigravity-plugin/SKILL.md｜「```bash uv --version # provides `uvx`; if missing: curl -LsSf https://astral.sh/uv/install.sh | sh agy --version # Antigravity CLI; if missing: https://antigravity.goo…」（另 1 個檔案有相同內容）`
+> 證據：`plugin/skills/tooluniverse-antigravity-plugin/SKILL.md｜「```bash uv --version # provides `uvx`; if missing: curl -LsSf https://astral.sh/uv/install.sh | sh agy --version # Antigravity CLI; if missing: https://antigravity.goo…」（另 2 個檔案有相同內容）`
 
 ### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
 
@@ -80,7 +80,7 @@
 
 > 證據：`examples/compact_mode/stdio_wrapper.py、examples/compact_mode/test_stdio_simple.py、examples/hooks_direct_example.py、examples/mcp/debug_transport_closed.py、examples/mcp/mcp_server_example.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 465 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 468 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -104,7 +104,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-15`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +114,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1687｜fork 255｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-15
+⭐ 1687｜fork 256｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-16
 
 ---
 

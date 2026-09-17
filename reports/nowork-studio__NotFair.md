@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
 | 專案說明 | Open-source SEO, GEO, and marketing skills for AI agents. |
-| 星數 / Fork | ⭐ 3801 / 484 |
-| 最後更新 | 2026-09-11 |
+| 星數 / Fork | ⭐ 3811 / 487 |
+| 最後更新 | 2026-09-16 |
 | 授權 | MIT License |
-| 已掃描檔案 | 479 個 |
-| 檢查時間 | 2026-09-15 23:27 |
+| 已掃描檔案 | 484 個 |
+| 檢查時間 | 2026-09-16 23:36 |
 
 ## 風險摘要
 
@@ -46,11 +46,11 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 93 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 99 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、analytics/google-analytics/SKILL.md（Agent Skill 指令（SKILL.md））、analytics/search-console/SKILL.md（Agent Skill 指令（SKILL.md））、gemini/SKILL.md（Agent Skill 指令（SKILL.md））、google-ads/assets/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、analytics/google-analytics/SKILL.md（Agent Skill 指令（SKILL.md））、analytics/search-console/SKILL.md（Agent Skill 指令（SKILL.md））、gemini/SKILL.md（Agent Skill 指令（SKILL.md））、gohighlevel/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
 
@@ -66,15 +66,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-11`
+> 證據：`最後推送 2026-09-16`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3801｜fork 484｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-09-11
+⭐ 3811｜fork 487｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-09-16
 
 ---
 
