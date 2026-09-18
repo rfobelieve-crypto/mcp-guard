@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2104 / 439 |
-| 最後更新 | 2026-09-17 |
+| 星數 / Fork | ⭐ 2109 / 438 |
+| 最後更新 | 2026-09-18 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-17 23:26 |
+| 檢查時間 | 2026-09-18 23:05 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@
 
 > 證據：`.agents/skills/toolset-design/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 13 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -58,7 +58,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-17`
+> 證據：`最後推送 2026-09-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2104｜fork 439｜語言 Go｜建立 2025-02-11｜最後推送 2026-09-17
+⭐ 2109｜fork 438｜語言 Go｜建立 2025-02-11｜最後推送 2026-09-18
 
 ---
 

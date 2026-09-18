@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `bytedance/UI-TARS-desktop` |
 | 專案說明 | The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and |
-| 星數 / Fork | ⭐ 39029 / 3950 |
+| 星數 / Fork | ⭐ 39042 / 3952 |
 | 最後更新 | 2026-09-11 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `monorepo` |
 | 已掃描檔案 | 472 個 |
-| 檢查時間 | 2026-09-17 23:23 |
+| 檢查時間 | 2026-09-18 23:02 |
 
 ## 風險摘要
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 8 天內有更新
 
 專案仍在活躍維護中。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39029｜fork 3950｜語言 TypeScript｜建立 2025-01-19｜最後推送 2026-09-11
+⭐ 39042｜fork 3952｜語言 TypeScript｜建立 2025-01-19｜最後推送 2026-09-11
 
 ---
 
