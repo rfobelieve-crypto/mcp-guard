@@ -41,9 +41,26 @@ GitHub → Settings → Developer settings → **OAuth Apps** → New OAuth App:
 | `GITHUB_CLIENT_ID` | OAuth App 的 Client ID |
 | `GITHUB_CLIENT_SECRET` | OAuth App 的 Client Secret |
 | `SESSION_SECRET` | 隨機字串:`openssl rand -hex 32` |
+| **`GITHUB_TOKEN`** | **隨選掃描用,見下。沒設的話 `/api/scan` 幾乎必定失敗** |
 | `GITHUB_ISSUE_TOKEN` | (選)見下 |
 | `ISSUE_REPO` | (選)接收掃描請求的 repo,預設 `rfobelieve-crypto/mcp-guard` |
 | `SITE_ORIGIN` | (選)正式網域,預設 `https://mcp-guard-iota.vercel.app` |
+
+### `GITHUB_TOKEN`——首頁查詢框的即時掃描
+
+首頁貼進未收錄的 MCP(或整份設定檔)時,`/api/scan` 會即時抓原始碼稽核。
+它走的是 GitHub REST API,而 **未認證額度只有每小時 60 次**——
+以整份設定檔一次就打好幾個來算,幾乎立刻用完,使用者會看到
+「無法向 GitHub 確認…」。設定 token 後額度是每小時 5,000 次。
+
+用 **fine-grained PAT** 即可,而且**不需要任何權限**:
+掃描讀的全是公開資料,token 的唯一用途是把額度從 60 拉到 5,000。
+
+- Repository access:**Public repositories (read-only)**
+- Permissions:全部不給
+
+> 這也是為什麼 `/api/scan` 抓取失敗時回 502 而不是給一份看起來乾淨的
+> 報告:額度用完是「查不動」,不是「沒問題」。見 `tests/test_lookup.py`。
 
 `GITHUB_ISSUE_TOKEN` 供「提交掃描請求 / 回報誤判」開 issue 用。
 建議用 **fine-grained PAT**,權限開到最小:
