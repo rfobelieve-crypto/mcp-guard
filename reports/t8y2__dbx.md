@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 20 MB lightweight cross-platform database client for 90+ databases, including My |
-| 星數 / Fork | ⭐ 19962 / 1938 |
-| 最後更新 | 2026-09-17 |
+| 星數 / Fork | ⭐ 20058 / 1950 |
+| 最後更新 | 2026-09-18 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
-| 已掃描檔案 | 452 個 |
-| 檢查時間 | 2026-09-17 23:23 |
+| 已掃描檔案 | 460 個 |
+| 檢查時間 | 2026-09-18 23:02 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-agent-versions.test.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs、.github/scripts/i18n-autofill.mjs`
+> 證據：`.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-agent-versions.test.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs、.github/scripts/ci-execution.test.mjs`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -59,9 +59,9 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/cleanup-cnb-releases.mjs、.github/scripts/i18n-autofill.mjs`
+> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1516 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1520 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-17`
+> 證據：`最後推送 2026-09-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 19962｜fork 1938｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-17
+⭐ 20058｜fork 1950｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-18
 
 ---
 

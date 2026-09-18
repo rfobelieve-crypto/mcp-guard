@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27713 / 2348 |
-| 最後更新 | 2026-09-17 |
+| 星數 / Fork | ⭐ 27729 / 2356 |
+| 最後更新 | 2026-09-18 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-17 23:23 |
+| 檢查時間 | 2026-09-18 23:02 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（334 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（347 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-17`
+> 證據：`最後推送 2026-09-18`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27713｜fork 2348｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-17
+⭐ 27729｜fork 2356｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-18
 
 ---
 

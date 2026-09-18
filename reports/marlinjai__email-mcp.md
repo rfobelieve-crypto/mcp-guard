@@ -7,11 +7,11 @@
 | 稽核對象 | `marlinjai/email-mcp` |
 | 專案說明 | Unified MCP server for email access across Gmail, Outlook, iCloud, and IMAP |
 | 星數 / Fork | ⭐ 22 / 16 |
-| 最後更新 | 2026-09-14 |
+| 最後更新 | 2026-09-18 |
 | 授權 | MIT License |
 | npm 套件 | `@marlinjai/email-mcp` |
-| 已掃描檔案 | 62 個 |
-| 檢查時間 | 2026-09-17 23:28 |
+| 已掃描檔案 | 64 個 |
+| 檢查時間 | 2026-09-18 23:08 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、appleid.apple.com、feross.org、gmail.googleapis.com、graph.microsoft.com、ko-fi.com、login.microsoftonline.com、mail.google.com、opencollective.com、paypal.me…`
+> 證據：`account.live.com、accounts.google.com、appleid.apple.com、feross.org、gmail.googleapis.com、graph.microsoft.com、ko-fi.com、login.microsoftonline.com、mail.google.com、myaccount.google.com…`
 
 ### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
@@ -69,11 +69,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22｜fork 16｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-09-14
+⭐ 22｜fork 16｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-09-18
 
 ---
 
