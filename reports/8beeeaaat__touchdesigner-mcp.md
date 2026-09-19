@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `8beeeaaat/touchdesigner-mcp` |
 | 專案說明 | MCP server for TouchDesigner |
-| 星數 / Fork | ⭐ 539 / 58 |
-| 最後更新 | 2026-09-09 |
+| 星數 / Fork | ⭐ 541 / 58 |
+| 最後更新 | 2026-09-19 |
 | 授權 | MIT License |
 | npm 套件 | `touchdesigner-mcp-server` |
-| 已掃描檔案 | 152 個 |
-| 檢查時間 | 2026-09-18 23:07 |
+| 已掃描檔案 | 153 個 |
+| 檢查時間 | 2026-09-19 22:47 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/integration-test-guard.mjs、scripts/formatPreview.ts、scripts/measureFormatterImpact.ts、scripts/showDetailedNodes.ts、src/api/index.yml`
+> 證據：`.claude/hooks/integration-test-guard.mjs、scripts/formatPreview.ts、scripts/measureFormatterImpact.ts、scripts/showDetailedNodes.ts、src/api/customInstance.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 10 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-09`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 539｜fork 58｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-09-09
+⭐ 541｜fork 58｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-09-19
 
 ---
 

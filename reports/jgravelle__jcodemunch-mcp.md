@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2696 / 369 |
-| 最後更新 | 2026-09-18 |
+| 星數 / Fork | ⭐ 2699 / 370 |
+| 最後更新 | 2026-09-19 |
 | 授權 | Other |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-18 23:05 |
+| 檢查時間 | 2026-09-19 22:44 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、.github/inbound/ledger.py、.github/workflows/benchmark.yml、.github/workflows/competitive-feed.yml、.github/workflows/competitive-run.yml`
+> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.github/inbound/ledger.py、.github/workflows/benchmark.yml、.github/workflows/competitive-feed.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2696｜fork 369｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-18
+⭐ 2699｜fork 370｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-19
 
 ---
 

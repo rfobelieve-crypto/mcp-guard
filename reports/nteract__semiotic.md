@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2706 / 139 |
-| 最後更新 | 2026-09-18 |
+| 最後更新 | 2026-09-19 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-18 23:05 |
+| 檢查時間 | 2026-09-19 22:44 |
 
 ## 風險摘要
 
@@ -19,13 +19,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 39 個外部主機
+### 🟡 中｜[權限] 會連往 38 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`alfred.stlouisfed.org、api.bls.gov、api.mapbox.com、bchi.bigcitieshealth.org、bost.ocks.org、cdec.water.ca.gov、chartability.github.io、creativecommons.org、cww.water.ca.gov、data.iana.org…`
 
-### 🔵 低｜[供應鏈] 有 72 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 69 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2706｜fork 139｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-18
+⭐ 2706｜fork 139｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-19
 
 ---
 

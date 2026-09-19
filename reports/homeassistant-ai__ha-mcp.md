@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4779 / 213 |
-| 最後更新 | 2026-09-18 |
+| 星數 / Fork | ⭐ 4789 / 217 |
+| 最後更新 | 2026-09-19 |
 | 授權 | MIT License |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-09-18 23:03 |
+| 檢查時間 | 2026-09-19 22:43 |
 
 ## 風險摘要
 
@@ -40,11 +40,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 72 個外部主機
+### 🟡 中｜[權限] 會連往 65 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、abc123.supabase.co、accounts.google.com、ai.google.dev、api.descope.com、api.example.com、app.scalekit.com、astral.sh、astro.build、auth.example.com…`
+> 證據：`YOUR-DOMAIN.com、accounts.google.com、ai.google.dev、api.descope.com、api.example.com、astral.sh、astro.build、auth.example.com、auth0.config.url、block.github.io…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4779｜fork 213｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-18
+⭐ 4789｜fork 217｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-19
 
 ---
 

@@ -7,14 +7,14 @@
 | 稽核對象 | `AION-Analytics/aion-indian-market-intelligence` |
 | 專案說明 | Structured market intelligence for Indian financial events, macro context, and s |
 | 星數 / Fork | ⭐ 22 / 1 |
-| 最後更新 | 2026-09-12 |
-| 授權 | GNU Affero General Public License v3.0 |
+| 最後更新 | 2026-09-19 |
+| 授權 | 無 |
 | 已掃描檔案 | 55 個 |
-| 檢查時間 | 2026-09-18 23:07 |
+| 檢查時間 | 2026-09-19 22:46 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -36,6 +36,10 @@
 
 > 證據：`packages/aion-newsimpact/setup.py、packages/aion-sectormap/scripts/update_map.py、packages/aion-sectormap/src/aion_sectormap/mapper.py、packages/aion-sectormap/tests/test_mapper.py、packages/aion-volweight/setup.py`
 
+### 🔵 低｜[身分] 沒有授權條款（License）
+
+沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -56,11 +60,11 @@
 
 > 證據：`API_KEY`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-12`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-09-12
+⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-09-19
 
 ---
 
