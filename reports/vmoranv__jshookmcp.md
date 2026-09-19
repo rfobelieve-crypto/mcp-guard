@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2006 / 458 |
-| 最後更新 | 2026-09-10 |
+| 星數 / Fork | ⭐ 2007 / 459 |
+| 最後更新 | 2026-09-19 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-18 23:05 |
+| 檢查時間 | 2026-09-19 22:44 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts、src/modules/detector/ObfuscationDetector.ts`
+> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/build.mjs、scripts/generate-domains-index.mjs、scripts/generate-metadata.mjs、scripts/generate-vitepress-reference.mjs`
+> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/build.mjs、scripts/generate-domains-index.mjs、scripts/generate-metadata.mjs、scripts/generate-openapi.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -69,7 +69,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 66 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +83,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-10`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2006｜fork 458｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-10
+⭐ 2007｜fork 459｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-19
 
 ---
 

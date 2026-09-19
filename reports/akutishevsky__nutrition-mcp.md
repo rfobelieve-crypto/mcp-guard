@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 57 / 27 |
-| 最後更新 | 2026-09-14 |
+| 星數 / Fork | ⭐ 58 / 28 |
+| 最後更新 | 2026-09-19 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
 | 已掃描檔案 | 157 個 |
-| 檢查時間 | 2026-09-18 23:06 |
+| 檢查時間 | 2026-09-19 22:45 |
 
 ## 風險摘要
 
@@ -41,11 +41,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟡 中｜[權限] 會連往 25 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、analytics.google.com、blog.modelcontextprotocol.io、cdn.jsdelivr.net、client.example、evil.example、fonts.googleapis.com、fonts.gstatic.com、glama.ai、medium.com…`
+> 證據：`accounts.google.com、analytics.google.com、blog.modelcontextprotocol.io、c.bing.com、cdn.jsdelivr.net、client.example、evil.example、fonts.googleapis.com、fonts.gstatic.com、glama.ai…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-14`
+> 證據：`最後推送 2026-09-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 57｜fork 27｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-14
+⭐ 58｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-19
 
 ---
 

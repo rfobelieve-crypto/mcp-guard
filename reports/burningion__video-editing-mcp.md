@@ -10,7 +10,7 @@
 | 最後更新 | 2025-10-09 |
 | 授權 | 無 |
 | 已掃描檔案 | 15 個 |
-| 檢查時間 | 2026-09-18 23:07 |
+| 檢查時間 | 2026-09-19 22:47 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`api.video-jungle.com、app.video-jungle.com、download.pytorch.org、static.modelcontextprotocol.io、www.video-jungle.com`
 
-### 🟡 中｜[維護] 約 11 個月沒有更新
+### 🟡 中｜[維護] 約 12 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 
