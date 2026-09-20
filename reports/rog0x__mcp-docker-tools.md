@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `rog0x/mcp-docker-tools` |
 | 專案說明 | MCP server for Docker: list containers/images, analyze Dockerfiles and docker-co |
-| 星數 / Fork | ⭐ 1 / 0 |
+| 星數 / Fork | ⭐ 1 / 1 |
 | 最後更新 | 2026-03-21 |
 | 授權 | MIT License |
 | npm 套件 | `@rog0x/mcp-docker-tools` |
 | 已掃描檔案 | 10 個 |
-| 檢查時間 | 2026-09-19 22:48 |
+| 檢查時間 | 2026-09-20 23:05 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-03-19｜最後推送 2026-03-21
+⭐ 1｜fork 1｜語言 TypeScript｜建立 2026-03-19｜最後推送 2026-03-21
 
 ---
 

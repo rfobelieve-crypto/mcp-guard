@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4973 / 1116 |
-| 最後更新 | 2026-09-19 |
+| 星數 / Fork | ⭐ 4974 / 1116 |
+| 最後更新 | 2026-09-20 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 537 個 |
-| 檢查時間 | 2026-09-19 22:43 |
+| 檢查時間 | 2026-09-20 23:01 |
 
 ## 風險摘要
 
@@ -34,7 +34,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/node-client-browser-test.sh、.buildkite/scripts/steps/ui-e2e.sh、.opencode/plugins/buildkite-status.ts`
+> 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/node-client-browser-test.sh、.buildkite/scripts/steps/ui-e2e.sh`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-19`
+> 證據：`最後推送 2026-09-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4973｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-19
+⭐ 4974｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-20
 
 ---
 

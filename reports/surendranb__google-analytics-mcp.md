@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 242 / 48 |
-| 最後更新 | 2026-09-18 |
+| 最後更新 | 2026-09-20 |
 | 授權 | MIT License |
-| 已掃描檔案 | 87 個 |
-| 檢查時間 | 2026-09-19 22:46 |
+| 已掃描檔案 | 88 個 |
+| 檢查時間 | 2026-09-20 23:04 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`ga4_mcp/coordinator.py、ga4_mcp/server.py、ga4_mcp/setup_flow.py、ga4_mcp/telemetry.py、ga4_mcp/tools/reporting.py`
+> 證據：`ga4_mcp/coordinator.py、ga4_mcp/server.py、ga4_mcp/setup_flow.py、ga4_mcp/telemetry.py、ga4_mcp/tools/metadata.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -66,7 +66,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））、skills/bot-traffic-detection/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 16 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -78,13 +78,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-09-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -94,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-09-18
+⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-09-20
 
 ---
 
