@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
-| 專案說明 | 20 MB lightweight cross-platform database client for 90+ databases, including My |
-| 星數 / Fork | ⭐ 20103 / 1954 |
-| 最後更新 | 2026-09-19 |
+| 專案說明 | 25 MB lightweight cross-platform database client for 90+ databases, including My |
+| 星數 / Fork | ⭐ 20204 / 1960 |
+| 最後更新 | 2026-09-20 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 462 個 |
-| 檢查時間 | 2026-09-19 22:42 |
+| 檢查時間 | 2026-09-20 23:01 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1508 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1543 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-19`
+> 證據：`最後推送 2026-09-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20103｜fork 1954｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-19
+⭐ 20204｜fork 1960｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-20
 
 ---
 

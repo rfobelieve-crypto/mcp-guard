@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 6680 / 711 |
-| 最後更新 | 2026-09-19 |
+| 星數 / Fork | ⭐ 6692 / 715 |
+| 最後更新 | 2026-09-20 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-09-19 22:43 |
+| 檢查時間 | 2026-09-20 23:01 |
 
 ## 風險摘要
 
@@ -47,9 +47,9 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py、packages/cli/src/repowise/cli/commands/distill_cmd.py`
+> 證據：`packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_capture.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_inject.py、packages/cli/src/repowise/cli/commands/augment_cmd/session_start.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（220 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（198 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-19`
+> 證據：`最後推送 2026-09-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6680｜fork 711｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-19
+⭐ 6692｜fork 715｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-20
 
 ---
 
