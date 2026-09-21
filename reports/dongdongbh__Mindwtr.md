@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2079 / 127 |
-| 最後更新 | 2026-09-20 |
+| 星數 / Fork | ⭐ 2091 / 128 |
+| 最後更新 | 2026-09-21 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-09-20 23:03 |
+| 檢查時間 | 2026-09-21 23:54 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -49,6 +49,10 @@
 
 > 證據：`.github/workflows/msstore-flight-id.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
@@ -75,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-20`
+> 證據：`最後推送 2026-09-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2079｜fork 127｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-20
+⭐ 2091｜fork 128｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-21
 
 ---
 

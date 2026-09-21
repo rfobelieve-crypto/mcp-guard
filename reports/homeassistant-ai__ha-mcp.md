@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4801 / 218 |
-| 最後更新 | 2026-09-20 |
+| 星數 / Fork | ⭐ 4809 / 220 |
+| 最後更新 | 2026-09-21 |
 | 授權 | MIT License |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-09-20 23:01 |
+| 檢查時間 | 2026-09-21 23:52 |
 
 ## 風險摘要
 
@@ -18,17 +18,17 @@
 
 ## 詳細發現
 
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/issue-intake/intake.mjs、custom_components/ha_mcp_tools/embedded_server.py、scripts/bake_local_calendar.py、scripts/bake_pagination_seed.py、scripts/build_mirror_release_notes.py`
+
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`.github/workflows/codex-review-issues.yml、.github/workflows/codex-review-prs.yml、.github/workflows/pr.yml、.github/workflows/sync-integration-mirror.yml、.github/workflows/test-installer-scripts.yml`
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`custom_components/ha_mcp_tools/embedded_server.py、scripts/bake_local_calendar.py、scripts/bake_pagination_seed.py、scripts/build_mirror_release_notes.py、scripts/webhook_proxy_sync.py`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -40,11 +40,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 66 個外部主機
+### 🟡 中｜[權限] 會連往 62 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、accounts.google.com、ai.google.dev、api.descope.com、api.example.com、astral.sh、astro.build、auth.example.com、auth0.config.url、block.github.io…`
+> 證據：`YOUR-DOMAIN.com、accounts.google.com、ai.google.dev、api.descope.com、api.example.com、astral.sh、astro.build、auth0.config.url、block.github.io、calendar-api.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -56,7 +56,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`custom_components/ha_mcp_tools/embedded_server.py、homeassistant-addon-webhook-proxy-dev/start.py、homeassistant-addon-webhook-proxy/start.py、homeassistant-addon/start.py、scripts/codeql_quality_gate.py`
+> 證據：`.github/issue-intake/intake.mjs、custom_components/ha_mcp_tools/embedded_server.py、homeassistant-addon-webhook-proxy-dev/start.py、homeassistant-addon-webhook-proxy/start.py、homeassistant-addon/start.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/skills/bat-adhoc/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/references/evaluation-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bat-story-eval/references/regression-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/contrib-pr-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/contributors-update/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 90 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 88 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -78,11 +78,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-20`
+> 證據：`最後推送 2026-09-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4801｜fork 218｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-20
+⭐ 4809｜fork 220｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-21
 
 ---
 

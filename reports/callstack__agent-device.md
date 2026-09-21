@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4694 / 306 |
-| 最後更新 | 2026-09-20 |
+| 星數 / Fork | ⭐ 4710 / 311 |
+| 最後更新 | 2026-09-21 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 426 個 |
-| 檢查時間 | 2026-09-20 23:02 |
+| 檢查時間 | 2026-09-21 23:53 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 > 證據：`examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts、packages/capture-kit/src/ios-snapshot-engine/conformance-harness.ts`
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/pnpm-lock.yaml、examples/test-app/security/image-size-security.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（89 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（88 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-20`
+> 證據：`最後推送 2026-09-21`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4694｜fork 306｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-20
+⭐ 4710｜fork 311｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-21
 
 ---
 
