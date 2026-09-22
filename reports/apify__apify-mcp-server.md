@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 7855 / 280 |
-| 最後更新 | 2026-09-18 |
+| 星數 / Fork | ⭐ 7970 / 282 |
+| 最後更新 | 2026-09-21 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
-| 已掃描檔案 | 363 個 |
-| 檢查時間 | 2026-09-20 23:02 |
+| 已掃描檔案 | 364 個 |
+| 檢查時間 | 2026-09-21 23:54 |
 
 ## 風險摘要
 
@@ -35,21 +35,21 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/before-beta-release.js、evals/mcp_agent/run_mcp_agent_evals.ts、scripts/dev_standby.js、tests/e2e/protocol_v1.test.ts`
+> 證據：`.github/scripts/before-beta-release.js、evals/runner/run.ts、scripts/dev_standby.js、tests/e2e/protocol_v1.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/_conformance_tests.yaml、evals/mcp_agent/claude_agent.ts、evals/mcp_agent/export_dataset.ts、evals/mcp_agent/run_mcp_agent_evals.ts、evals/mcp_agent/schedules_fixtures.ts`
+> 證據：`.github/workflows/_conformance_tests.yaml、evals/agent/claude_agent.ts、evals/environment.ts、evals/judge/openrouter_client.ts、evals/runner/run.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`evals/mcp_agent/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
+> 證據：`evals/scripts/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（172 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（178 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,11 +73,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-09-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7855｜fork 280｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-09-18
+⭐ 7970｜fork 282｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-09-21
 
 ---
 

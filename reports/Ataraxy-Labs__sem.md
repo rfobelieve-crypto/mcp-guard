@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
-| 星數 / Fork | ⭐ 3357 / 103 |
-| 最後更新 | 2026-09-13 |
+| 星數 / Fork | ⭐ 3358 / 102 |
+| 最後更新 | 2026-09-21 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
-| 已掃描檔案 | 297 個 |
-| 檢查時間 | 2026-09-20 23:02 |
+| 已掃描檔案 | 305 個 |
+| 檢查時間 | 2026-09-21 23:53 |
 
 ## 風險摘要
 
@@ -53,7 +53,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、pi/extensions/pi-sem.ts`
+> 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、benchmarks/shared-mcp/run.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
@@ -71,11 +71,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-13`
+> 證據：`最後推送 2026-09-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3357｜fork 103｜語言 Rust｜建立 2026-02-05｜最後推送 2026-09-13
+⭐ 3358｜fork 102｜語言 Rust｜建立 2026-02-05｜最後推送 2026-09-21
 
 ---
 
