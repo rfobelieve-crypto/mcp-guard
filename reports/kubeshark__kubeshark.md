@@ -10,7 +10,7 @@
 | 最後更新 | 2026-09-21 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 150 個 |
-| 檢查時間 | 2026-09-21 23:51 |
+| 檢查時間 | 2026-09-22 23:31 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`acme-v02.api.letsencrypt.org、api.kubeshark.com、charts.jetstack.io、dex.example.com、docs.github.com、gh.io、golang.org、helm.kubeshark.com、idp.example.com、issuer.example.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（148 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（145 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -48,7 +48,7 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
