@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 4023 / 291 |
-| 最後更新 | 2026-09-22 |
+| 星數 / Fork | ⭐ 4031 / 293 |
+| 最後更新 | 2026-09-23 |
 | 授權 | GNU Affero General Public License v3.0 |
 | 已掃描檔案 | 435 個 |
-| 檢查時間 | 2026-09-22 23:33 |
+| 檢查時間 | 2026-09-23 23:29 |
 
 ## 風險摘要
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/bm_runtime.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（74 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-22`
+> 證據：`最後推送 2026-09-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4023｜fork 291｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-22
+⭐ 4031｜fork 293｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-23
 
 ---
 

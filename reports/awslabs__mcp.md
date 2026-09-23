@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `awslabs/mcp` |
 | 專案說明 | Open source MCP Servers for AWS |
-| 星數 / Fork | ⭐ 9722 / 1770 |
-| 最後更新 | 2026-09-22 |
+| 星數 / Fork | ⭐ 9727 / 1771 |
+| 最後更新 | 2026-09-23 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 466 個 |
-| 檢查時間 | 2026-09-22 23:30 |
+| 檢查時間 | 2026-09-23 23:26 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/pull-request-lint.yml、samples/mcp-integration-with-kb/clients/client_server.py、samples/mcp-integration-with-nova-canvas/clients/client_server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/server.py、src/amazon-bedrock-agentcore-mcp-server/awslabs/amazon_bedrock_agentcore_mcp_server/tools/browser/browser_client.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（243 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（242 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -68,11 +68,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-22`
+> 證據：`最後推送 2026-09-23`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9722｜fork 1770｜語言 Python｜建立 2025-03-21｜最後推送 2026-09-22
+⭐ 9727｜fork 1771｜語言 Python｜建立 2025-03-21｜最後推送 2026-09-23
 
 ---
 
