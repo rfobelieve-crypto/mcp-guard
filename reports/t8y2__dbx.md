@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 90+ databases, including My |
-| 星數 / Fork | ⭐ 20348 / 1968 |
-| 最後更新 | 2026-09-21 |
+| 星數 / Fork | ⭐ 20468 / 1982 |
+| 最後更新 | 2026-09-22 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
-| 已掃描檔案 | 462 個 |
-| 檢查時間 | 2026-09-21 23:51 |
+| 已掃描檔案 | 461 個 |
+| 檢查時間 | 2026-09-22 23:31 |
 
 ## 風險摘要
 
@@ -61,15 +61,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1571 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1574 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 45 段 description）
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-21`
+> 證據：`最後推送 2026-09-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20348｜fork 1968｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-21
+⭐ 20468｜fork 1982｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-22
 
 ---
 

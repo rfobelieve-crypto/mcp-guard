@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | First gitlab mcp for you, building together |
-| 星數 / Fork | ⭐ 1991 / 356 |
-| 最後更新 | 2026-09-21 |
+| 星數 / Fork | ⭐ 1997 / 356 |
+| 最後更新 | 2026-09-22 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
-| 已掃描檔案 | 337 個 |
-| 檢查時間 | 2026-09-21 23:54 |
+| 已掃描檔案 | 342 個 |
+| 檢查時間 | 2026-09-22 23:34 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`oauth.ts、test/config-allowed-groups.test.ts、test/sse-auth-guard.test.ts、test/stateless/config-ttl.test.ts、test/streamable-http-dns-rebinding.test.ts`
+> 證據：`oauth.ts、test/config-allowed-groups.test.ts、test/sse-auth-guard.test.ts、test/sse-session-limits.test.ts、test/stateless/config-ttl.test.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-21`
+> 證據：`最後推送 2026-09-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1991｜fork 356｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-21
+⭐ 1997｜fork 356｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-22
 
 ---
 

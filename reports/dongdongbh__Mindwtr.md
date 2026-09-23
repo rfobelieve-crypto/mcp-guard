@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2091 / 128 |
-| 最後更新 | 2026-09-21 |
+| 星數 / Fork | ⭐ 2099 / 128 |
+| 最後更新 | 2026-09-22 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-09-21 23:54 |
+| 檢查時間 | 2026-09-22 23:34 |
 
 ## 風險摘要
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/msstore-flight-id.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml、.github/workflows/release.yml`
+> 證據：`.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-21`
+> 證據：`最後推送 2026-09-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2091｜fork 128｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-21
+⭐ 2099｜fork 128｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-22
 
 ---
 

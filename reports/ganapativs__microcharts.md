@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 188 / 5 |
-| 最後更新 | 2026-09-21 |
+| 星數 / Fork | ⭐ 192 / 5 |
+| 最後更新 | 2026-09-22 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-09-21 23:56 |
+| 檢查時間 | 2026-09-22 23:35 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.5.0、@axe-core/playwright@^4.13.0、@changesets/changelog-github@^1.0.1、@changesets/cli@^3.0.2、@fast-check/vitest@^0.4.1…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@argos-ci/playwright@^7.6.0、@axe-core/playwright@^4.13.0、@changesets/changelog-github@^1.0.1、@changesets/cli@^3.0.3、@fast-check/vitest@^0.5.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-21`
+> 證據：`最後推送 2026-09-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 188｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-21
+⭐ 192｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-22
 
 ---
 
