@@ -7,11 +7,11 @@
 | 稽核對象 | `pipeworx-io/mcp-cms` |
 | 專案說明 | CMS Open Data MCP — US Centers for Medicare & Medicaid Services. |
 | 星數 / Fork | ⭐ 1 / 0 |
-| 最後更新 | 2026-09-17 |
+| 最後更新 | 2026-09-24 |
 | 授權 | MIT License |
 | npm 套件 | `@pipeworx/mcp-cms` |
-| 已掃描檔案 | 6 個 |
-| 檢查時間 | 2026-09-23 23:32 |
+| 已掃描檔案 | 8 個 |
+| 檢查時間 | 2026-09-24 23:52 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`data.cms.gov、gateway.pipeworx.io、pipeworx.io、static.modelcontextprotocol.io`
 
-### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`typescript@^5.7.0`
+> 證據：`@modelcontextprotocol/sdk@^1.30.0、tsx@^4.19.0、typescript@^5.9.3、@cloudflare/workers-types@^4.20260405.1`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -49,11 +49,11 @@
 
 > 證據：`TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-17`
+> 證據：`最後推送 2026-09-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -63,7 +63,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-06-02｜最後推送 2026-09-17
+⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-06-02｜最後推送 2026-09-24
 
 ---
 

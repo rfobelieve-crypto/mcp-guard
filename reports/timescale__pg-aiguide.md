@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `timescale/pg-aiguide` |
 | 專案說明 | MCP server and Claude plugin for Postgres skills and documentation. Helps AI cod |
-| 星數 / Fork | ⭐ 1849 / 109 |
-| 最後更新 | 2026-09-23 |
+| 星數 / Fork | ⭐ 1847 / 110 |
+| 最後更新 | 2026-09-24 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@tigerdata/pg-aiguide` |
-| 已掃描檔案 | 80 個 |
-| 檢查時間 | 2026-09-23 23:29 |
+| 已掃描檔案 | 85 個 |
+| 檢查時間 | 2026-09-24 23:50 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`agentskills.io、biomejs.dev、docs.npmjs.com、ghcr.io、hub.docker.com、mcp.tigerdata.com、postgis.net、registry.modelcontextprotocol.io、static.modelcontextprotocol.io、tigerdata.com…`
 
-### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -41,7 +41,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`ingest/postgres_docs.py`
+> 證據：`ingest/postgres_docs.py、scripts/smoke-npm-migrations.ts、scripts/smoke-npm-package.ts、src/prompts/index.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-23`
+> 證據：`最後推送 2026-09-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1849｜fork 109｜語言 Python｜建立 2025-07-23｜最後推送 2026-09-23
+⭐ 1847｜fork 110｜語言 Python｜建立 2025-07-23｜最後推送 2026-09-24
 
 ---
 

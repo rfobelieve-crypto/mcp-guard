@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 81361 / 14961 |
-| 最後更新 | 2026-09-23 |
+| 星數 / Fork | ⭐ 82633 / 15067 |
+| 最後更新 | 2026-09-24 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 500 個 |
-| 檢查時間 | 2026-09-23 23:26 |
+| 檢查時間 | 2026-09-24 23:46 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/authorize-storybook-deploy.cjs、.github/scripts/check-pr-coauthors.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5596 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5642 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-23`
+> 證據：`最後推送 2026-09-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 81361｜fork 14961｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-23
+⭐ 82633｜fork 15067｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-09-24
 
 ---
 

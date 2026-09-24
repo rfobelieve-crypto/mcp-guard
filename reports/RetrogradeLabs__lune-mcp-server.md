@@ -7,11 +7,11 @@
 | 稽核對象 | `RetrogradeLabs/lune-mcp-server` |
 | 專案說明 | Official MCP server for Lune Research: search top-tier papers and methodology gu |
 | 星數 / Fork | ⭐ 4 / 1 |
-| 最後更新 | 2026-09-17 |
+| 最後更新 | 2026-09-24 |
 | 授權 | MIT License |
 | npm 套件 | `@retrograde-labs/lune-mcp-server` |
-| 已掃描檔案 | 85 個 |
-| 檢查時間 | 2026-09-23 23:33 |
+| 已掃描檔案 | 87 個 |
+| 檢查時間 | 2026-09-24 23:53 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.example.test、api.example.test、api.luneresearch.com、chatgpt.com、claude.ai、demo.trycloudflare.com、developers.openai.com、evil.example.com、json.schemastore.org、luneresearch.com…`
+> 證據：`analytics.example.test、api.example.test、api.luneresearch.com、chatgpt.com、claude.ai、demo.trycloudflare.com、developers.openai.com、evil.example.com、example.test、json.schemastore.org…`
 
 ### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`ajv@^8.20.0、express@^5.2.1、jose@^6.2.12、ky@^2.0.2、redis@^6.2.1、zod@^4.6.5…`
+> 證據：`ajv@^8.20.0、express@^5.2.1、jose@^6.2.12、ky@^2.1.0、redis@^6.2.1、zod@^4.6.5…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-17`
+> 證據：`最後推送 2026-09-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-09-17
+⭐ 4｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-09-24
 
 ---
 
