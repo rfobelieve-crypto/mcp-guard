@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ganapativs/microcharts` |
 | 專案說明 | Word-sized charts for React, made for LLMs and humans — 106 chart types, zero ru |
-| 星數 / Fork | ⭐ 192 / 5 |
+| 星數 / Fork | ⭐ 193 / 5 |
 | 最後更新 | 2026-09-22 |
 | 授權 | MIT License |
 | npm 套件 | `@microcharts/react` |
 | 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-09-22 23:35 |
+| 檢查時間 | 2026-09-23 23:31 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 192｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-22
+⭐ 193｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-22
 
 ---
 

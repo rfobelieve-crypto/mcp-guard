@@ -1,23 +1,29 @@
 # MCP 安檢報告：getsentry/XcodeBuildMCP
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `getsentry/XcodeBuildMCP` |
 | 專案說明 | A Model Context Protocol (MCP) server and CLI that provides tools for agent use  |
-| 星數 / Fork | ⭐ 6413 / 320 |
-| 最後更新 | 2026-09-11 |
+| 星數 / Fork | ⭐ 6416 / 321 |
+| 最後更新 | 2026-09-23 |
 | 授權 | MIT License |
-| npm 套件 | `xcodebuildmcp` |
+| npm 套件 | `mobilebuildmcp` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-22 23:32 |
+| 檢查時間 | 2026-09-23 23:27 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[供應鏈] npm 套件標示的倉庫與實際來源不一致
+
+套件明確指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。
+
+> 證據：`npm repository=git+https://github.com/getsentry/MobileBuildMCP.git｜稽核對象=getsentry/XcodeBuildMCP`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -25,7 +31,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "node scripts/install-git-hooks.js"`
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -59,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.agents/skills/warden-sweep/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/warden/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/xcodebuildmcp-docs-command-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/xcodebuildmcp-docs-release-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/xcodebuildmcp-packaging-resource-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/xcodebuildmcp-rendering-streaming-review/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.agents/skills/mobilebuildmcp-docs-command-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/mobilebuildmcp-docs-release-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/mobilebuildmcp-packaging-resource-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/mobilebuildmcp-rendering-streaming-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/mobilebuildmcp-runtime-boundary-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/mobilebuildmcp-snapshot-fixture-review/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 
@@ -73,13 +79,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 12 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-11`
+> 證據：`最後推送 2026-09-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -89,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6413｜fork 320｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-11
+⭐ 6416｜fork 321｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-23
 
 ---
 

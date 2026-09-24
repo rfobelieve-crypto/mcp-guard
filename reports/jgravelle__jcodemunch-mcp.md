@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2710 / 368 |
-| 最後更新 | 2026-09-22 |
+| 星數 / Fork | ⭐ 2712 / 368 |
+| 最後更新 | 2026-09-23 |
 | 授權 | Other |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-22 23:33 |
+| 檢查時間 | 2026-09-23 23:29 |
 
 ## 風險摘要
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/agents/reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/spokesperson.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/benchmark-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/competitive-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/feature.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/fix-issue.md（AI 客戶端設定目錄下的指令檔）…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-22`
+> 證據：`最後推送 2026-09-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2710｜fork 368｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-22
+⭐ 2712｜fork 368｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-23
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
-| 星數 / Fork | ⭐ 205 / 23 |
-| 最後更新 | 2026-09-16 |
+| 星數 / Fork | ⭐ 206 / 23 |
+| 最後更新 | 2026-09-23 |
 | 授權 | MIT License |
-| 已掃描檔案 | 128 個 |
-| 檢查時間 | 2026-09-22 23:36 |
+| 已掃描檔案 | 138 個 |
+| 檢查時間 | 2026-09-23 23:32 |
 
 ## 風險摘要
 
@@ -22,13 +22,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/plan-capture.mjs、claude-plugins/task-orchestrator/hooks/retro-lib.mjs、claude-plugins/task-orchestrator/hooks/session-start.mjs`
+> 證據：`claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/plan-capture.mjs、claude-plugins/task-orchestrator/hooks/retro-lib.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-ack.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-backstop.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-trigger.test.mjs`
+> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-ack.test.mjs`
 
 ### 🔵 低｜[權限] 會連往 1 個外部主機
 
@@ -56,11 +56,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-09-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 205｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-16
+⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-23
 
 ---
 
