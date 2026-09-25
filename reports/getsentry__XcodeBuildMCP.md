@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `getsentry/XcodeBuildMCP` |
 | 專案說明 | A Model Context Protocol (MCP) server and CLI that provides tools for agent use  |
-| 星數 / Fork | ⭐ 6422 / 320 |
+| 星數 / Fork | ⭐ 6427 / 321 |
 | 最後更新 | 2026-09-23 |
 | 授權 | MIT License |
 | npm 套件 | `mobilebuildmcp` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-24 23:47 |
+| 檢查時間 | 2026-09-25 23:52 |
 
 ## 風險摘要
 
@@ -81,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6422｜fork 320｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-23
+⭐ 6427｜fork 321｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-23
 
 ---
 
