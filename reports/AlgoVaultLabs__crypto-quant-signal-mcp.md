@@ -7,11 +7,11 @@
 | 稽核對象 | `AlgoVaultLabs/crypto-quant-signal-mcp` |
 | 專案說明 | AI trading brain for crypto perps — composite signals, funding rate arb scanning |
 | 星數 / Fork | ⭐ 8 / 5 |
-| 最後更新 | 2026-09-23 |
+| 最後更新 | 2026-09-24 |
 | 授權 | MIT License |
 | npm 套件 | `crypto-quant-signal-mcp` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-23 23:31 |
+| 檢查時間 | 2026-09-24 23:51 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-23`
+> 證據：`最後推送 2026-09-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8｜fork 5｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-09-23
+⭐ 8｜fork 5｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-09-24
 
 ---
 
