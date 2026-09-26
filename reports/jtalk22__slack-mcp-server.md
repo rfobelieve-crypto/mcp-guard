@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `jtalk22/slack-mcp-server` |
 | 專案說明 | Catch up on Slack without reading it. Unreads, threads, search. Browser-session  |
-| 星數 / Fork | ⭐ 30 / 24 |
+| 星數 / Fork | ⭐ 30 / 25 |
 | 最後更新 | 2026-09-25 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
 | 已掃描檔案 | 126 個 |
-| 檢查時間 | 2026-09-25 23:56 |
+| 檢查時間 | 2026-09-26 23:28 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 30｜fork 24｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-09-25
+⭐ 30｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-09-25
 
 ---
 

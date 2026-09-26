@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2713 / 368 |
-| 最後更新 | 2026-09-25 |
+| 星數 / Fork | ⭐ 2715 / 368 |
+| 最後更新 | 2026-09-26 |
 | 授權 | Other |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-25 23:53 |
+| 檢查時間 | 2026-09-26 23:26 |
 
 ## 風險摘要
 
@@ -34,11 +34,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`api.groq.com、cdn.jsdelivr.net、domain.com、dotenvx.com、expressjs.com、fastapi.tiangolo.com、groq.com、jcm.internal、json.schemastore.org、mcp.example.com…`
 
-### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`httpx>=0.27.0、tree-sitter-language-pack>=0.7.0,<1.0.0、pathspec>=0.12.0、pyyaml>=6.0`
+> 證據：`httpx>=0.27.0、tree-sitter-language-pack>=0.7.0,<1.0.0、tree-sitter>=0.25、pathspec>=0.12.0、pyyaml>=6.0`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2713｜fork 368｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-25
+⭐ 2715｜fork 368｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-26
 
 ---
 

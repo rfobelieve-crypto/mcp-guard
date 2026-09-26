@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MidOSresearch/midos` |
 | 專案說明 | Agentic OS that runs on any Linux — curated knowledge API for AI agents: MCP too |
-| 星數 / Fork | ⭐ 8 / 5 |
+| 星數 / Fork | ⭐ 8 / 6 |
 | 最後更新 | 2026-05-03 |
 | 授權 | MIT License |
 | 已掃描檔案 | 313 個 |
-| 檢查時間 | 2026-09-25 23:56 |
+| 檢查時間 | 2026-09-26 23:28 |
 
 ## 風險摘要
 
@@ -62,7 +62,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 146 天內有更新
+### ⚪ 資訊｜[維護] 最近 147 天內有更新
 
 專案仍在活躍維護中。
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8｜fork 5｜語言 Python｜建立 2026-02-14｜最後推送 2026-05-03
+⭐ 8｜fork 6｜語言 Python｜建立 2026-02-14｜最後推送 2026-05-03
 
 ---
 

@@ -7,14 +7,14 @@
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 206 / 23 |
-| 最後更新 | 2026-09-25 |
+| 最後更新 | 2026-09-26 |
 | 授權 | MIT License |
-| 已掃描檔案 | 148 個 |
-| 檢查時間 | 2026-09-25 23:55 |
+| 已掃描檔案 | 149 個 |
+| 檢查時間 | 2026-09-26 23:28 |
 
 ## 風險摘要
 
-🔵 低 3　⚪ 資訊 7
+🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -24,11 +24,17 @@
 
 > 證據：`claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/execution-mode.mjs、claude-plugins/task-orchestrator/hooks/plan-capture.mjs`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`claude-plugins/task-orchestrator/hooks/subagent-start.mjs`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard.test.mjs、claude-plugins/task-orchestrator/hooks/tests/retro-ack.test.mjs`
+> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-chained.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard.test.mjs`
 
 ### 🔵 低｜[權限] 會連往 1 個外部主機
 
@@ -60,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-25
+⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-26
 
 ---
 
