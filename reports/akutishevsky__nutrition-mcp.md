@@ -7,11 +7,11 @@
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
 | 星數 / Fork | ⭐ 63 / 28 |
-| 最後更新 | 2026-09-26 |
+| 最後更新 | 2026-09-27 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 160 個 |
-| 檢查時間 | 2026-09-26 23:27 |
+| 已掃描檔案 | 178 個 |
+| 檢查時間 | 2026-09-27 23:45 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`public/widgets/import-run.test.ts、public/widgets/import-time.test.ts、public/widgets/macros.test.ts、public/widgets/summary-caption.test.ts、src/landing-script.test.ts`
+> 證據：`public/widgets/import-run.test.ts、public/widgets/import-time.test.ts、public/widgets/macros.test.ts、public/widgets/summary-caption.test.ts、src/consent.test.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 38 個外部主機
+### 🟡 中｜[權限] 會連往 42 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/site-partials.ts、scripts/widget-harness.ts、src/foods.test.ts、src/foods.ts、src/index.test.ts`
+> 證據：`scripts/site-partials.ts、scripts/widget-harness.ts、src/auth-session.test.ts、src/export.test.ts、src/foods.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-26`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-26
+⭐ 63｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-27
 
 ---
 

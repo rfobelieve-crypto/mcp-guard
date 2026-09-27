@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2715 / 368 |
-| 最後更新 | 2026-09-26 |
+| 星數 / Fork | ⭐ 2716 / 367 |
+| 最後更新 | 2026-09-27 |
 | 授權 | Other |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-26 23:26 |
+| 檢查時間 | 2026-09-27 23:43 |
 
 ## 風險摘要
 
@@ -50,13 +50,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.github/inbound/ledger.py、.github/workflows/benchmark.yml、.github/workflows/competitive-feed.yml`
+> 證據：`.claude/hooks/_common.py、.claude/hooks/dod_checklist.py、.claude/hooks/run_full.py、.github/inbound/ledger.py、.github/workflows/benchmark.yml`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/hooks/_common.py、.github/inbound/budget.py、.github/inbound/ledger.py、.github/inbound/scan.py、.github/workflows/inbound-bench-full.yml`
+> 證據：`.claude/hooks/_common.py、.claude/hooks/run_full.py、.github/inbound/budget.py、.github/inbound/ledger.py、.github/inbound/scan.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 21 個代理指令檔
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-26`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2715｜fork 368｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-26
+⭐ 2716｜fork 367｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-27
 
 ---
 

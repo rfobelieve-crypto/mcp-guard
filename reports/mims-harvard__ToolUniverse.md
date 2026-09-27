@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1704 / 258 |
-| 最後更新 | 2026-09-26 |
+| 星數 / Fork | ⭐ 1705 / 258 |
+| 最後更新 | 2026-09-27 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 857 個 |
-| 檢查時間 | 2026-09-26 23:26 |
+| 檢查時間 | 2026-09-27 23:44 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@
 
 > 證據：`aiscientist.tools、aistudio.google.com、api.example.com、astral.sh、build.nvidia.com、data.4dnucleome.org、data.humancellatlas.org、depmap.org、docs.astral.sh、doi.org…`
 
-### 🔵 低｜[供應鏈] 有 9 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 7 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -100,11 +100,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-26`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +114,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1704｜fork 258｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-26
+⭐ 1705｜fork 258｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-27
 
 ---
 
