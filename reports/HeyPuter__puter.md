@@ -7,11 +7,11 @@
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
 | 星數 / Fork | ⭐ 43601 / 4067 |
-| 最後更新 | 2026-09-25 |
+| 最後更新 | 2026-09-26 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-09-25 23:51 |
+| 檢查時間 | 2026-09-26 23:23 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`extensions/devWatcher.test.ts、extensions/devWatcher.ts、src/backend/clients/database/PostgresDatabaseClient.integration.test.ts、src/backend/controllers/system/SystemController.js、src/backend/drivers/ai-chat/utils/Streaming.js`
+> 證據：`extensions/devWatcher.test.ts、extensions/devWatcher.ts、src/backend/clients/database/PostgresDatabaseClient.integration.test.ts、src/backend/config.ts、src/backend/controllers/system/SystemController.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43601｜fork 4067｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-09-25
+⭐ 43601｜fork 4067｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-09-26
 
 ---
 

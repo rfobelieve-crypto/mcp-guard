@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2020 / 461 |
-| 最後更新 | 2026-09-24 |
+| 星數 / Fork | ⭐ 2021 / 461 |
+| 最後更新 | 2026-09-26 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-25 23:53 |
+| 檢查時間 | 2026-09-26 23:26 |
 
 ## 風險摘要
 
@@ -51,13 +51,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/.vitepress/shared.ts、scripts/audit-runtime-probes.mjs、scripts/audit-tools.mjs、scripts/generate-domains-index.mjs、scripts/generate-metadata.mjs`
+> 證據：`docs/.vitepress/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-runtime-probes.mjs、scripts/audit-tools.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/build.mjs、scripts/generate-domains-index.mjs、scripts/generate-metadata.mjs、scripts/generate-openapi.mjs`
+> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-event-contracts.selftest.mjs、scripts/build.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -83,11 +83,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-24`
+> 證據：`最後推送 2026-09-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2020｜fork 461｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-24
+⭐ 2021｜fork 461｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-26
 
 ---
 

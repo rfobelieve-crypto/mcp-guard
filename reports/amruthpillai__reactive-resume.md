@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 43420 / 4791 |
-| 最後更新 | 2026-09-25 |
+| 星數 / Fork | ⭐ 43449 / 4790 |
+| 最後更新 | 2026-09-26 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-09-25 23:51 |
+| 檢查時間 | 2026-09-26 23:23 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 30 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、attacker.example、callback.invalid、claude.ai、configured.example、crowdin.com、discord.gg…`
+> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、attacker.example、blob.test、callback.invalid、claude.ai、configured.example、crowdin.com…`
 
 ### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
@@ -35,7 +35,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
+> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts、apps/server/src/prepare-deployment.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -61,13 +61,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43420｜fork 4791｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-25
+⭐ 43449｜fork 4790｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-26
 
 ---
 
