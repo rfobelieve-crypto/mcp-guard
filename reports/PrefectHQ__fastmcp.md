@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27907 / 2402 |
-| 最後更新 | 2026-09-26 |
+| 星數 / Fork | ⭐ 27913 / 2405 |
+| 最後更新 | 2026-09-27 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-09-26 23:23 |
+| 檢查時間 | 2026-09-27 23:40 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（370 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（380 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -50,13 +50,13 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 15 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.agents/skills/code-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 57 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 62 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-26`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27907｜fork 2402｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-26
+⭐ 27913｜fork 2405｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-27
 
 ---
 

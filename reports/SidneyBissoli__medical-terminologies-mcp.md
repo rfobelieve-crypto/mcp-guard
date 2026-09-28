@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, M |
-| 星數 / Fork | ⭐ 14 / 5 |
-| 最後更新 | 2026-09-25 |
+| 星數 / Fork | ⭐ 15 / 5 |
+| 最後更新 | 2026-09-27 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
-| 已掃描檔案 | 199 個 |
-| 檢查時間 | 2026-09-26 23:27 |
+| 已掃描檔案 | 201 個 |
+| 檢查時間 | 2026-09-27 23:45 |
 
 ## 風險摘要
 
@@ -33,13 +33,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.com、api.example.test、atcddd.fhi.no、browser.ihtsdotools.org、clinicaltables.nlm.nih.gov、confluence.ihtsdotools.org、creativecommons.org、exemplo.invalid、glama.ai、icd.who.int…`
+> 證據：`api.example.test、atcddd.fhi.no、browser.ihtsdotools.org、clinicaltables.nlm.nih.gov、confluence.ihtsdotools.org、creativecommons.org、exemplo.invalid、glama.ai、icd.who.int、icdaccessmanagement.who.int…`
 
-### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 16 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.1.0、@sbissoli/mcp-search@^0.6.0、pino@^10.2.1、zod@^4.5.4、@modelcontextprotocol/client@^2.0.0…`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.2.0、@sbissoli/mcp-search@^0.6.0、@sbissoli/mcp-upstream@^0.3.0、pino@^10.2.1、zod@^4.5.4…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,11 +73,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 14｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-25
+⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-27
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `marlinjai/email-mcp` |
 | 專案說明 | Unified MCP server for email access across Gmail, Outlook, iCloud, and IMAP |
 | 星數 / Fork | ⭐ 22 / 17 |
-| 最後更新 | 2026-09-25 |
+| 最後更新 | 2026-09-27 |
 | 授權 | MIT License |
 | npm 套件 | `@marlinjai/email-mcp` |
-| 已掃描檔案 | 64 個 |
-| 檢查時間 | 2026-09-26 23:28 |
+| 已掃描檔案 | 66 個 |
+| 檢查時間 | 2026-09-27 23:46 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`account.live.com、accounts.google.com、appleid.apple.com、feross.org、gmail.googleapis.com、graph.microsoft.com、ko-fi.com、login.microsoftonline.com、mail.google.com、myaccount.google.com…`
 
-### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 16 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@azure/msal-node@^5.0.4、@microsoft/microsoft-graph-client@^3.0.7、@modelcontextprotocol/sdk@^1.26.0、google-auth-library@^10.5.0、googleapis@^171.4.0、imapflow@^1.2.9…`
+> 證據：`@azure/msal-node@^5.0.4、@microsoft/microsoft-graph-client@^3.0.7、@modelcontextprotocol/sdk@^1.26.0、google-auth-library@^10.5.0、googleapis@^171.4.0、html-to-text@^9.0.5…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -69,11 +69,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22｜fork 17｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-09-25
+⭐ 22｜fork 17｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-09-27
 
 ---
 

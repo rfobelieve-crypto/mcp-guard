@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KnockOutEZ/wigolo` |
 | 專案說明 | The go-to web for your AI coding agent — local-first search, fetch, crawl & rese |
-| 星數 / Fork | ⭐ 5410 / 439 |
-| 最後更新 | 2026-09-26 |
+| 星數 / Fork | ⭐ 5414 / 440 |
+| 最後更新 | 2026-09-27 |
 | 授權 | Other |
 | npm 套件 | `wigolo` |
 | 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-09-26 23:25 |
+| 檢查時間 | 2026-09-27 23:42 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 68 個外部主機
+### 🟡 中｜[權限] 會連往 83 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、a.example、also-good.com、api.example.com、api.web3forms.com、auth0.com、b.com、bad.com、bad.example.com、blog.logrocket.com…`
+> 證據：`a.com、a.example、acme.example、also-good.com、api.example.com、api.indexnow.org、api.npmjs.org、api.web3forms.com、auth0.com、b.com…`
 
 ### 🔵 低｜[供應鏈] 有 35 個依賴未鎖定版本
 
@@ -49,17 +49,17 @@
 
 > 證據：`mcpb/server/index.cjs、packages/wigolo-langchain/wigolo_langchain/client.py、packages/wigolo-llamaindex/wigolo_llamaindex/client.py、packages/wigolo-vercel-ai-sdk/src/client.ts、packages/wigolo-vercel-ai-sdk/src/index.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（67 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 15 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、site/AGENTS.md（Agent 指令（AGENTS.md 慣例））、site/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/wigolo-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/wigolo-cache/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、site/AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/wigolo-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/wigolo-cache/SKILL.md（Agent Skill 指令（SKILL.md））、skills/wigolo-crawl/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 78 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 77 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-26`
+> 證據：`最後推送 2026-09-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5410｜fork 439｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-09-26
+⭐ 5414｜fork 440｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-09-27
 
 ---
 
