@@ -168,7 +168,7 @@
 | ⚠ 會執行外部指令 / 開子行程 | 3 |
 | ⚠ 會讀寫本機檔案 | 2 |
 
-（**追記 2026-09-28**：重掃 `25ff708` 時上表兩個數字各加一，變成 91 筆中的 12 筆——
+（**追記 2026-09-28**：重掃 `25ff708` 時上表的非出貨筆數加一，變成 90 筆中的 12 筆——
 `SpikeyCoder/website-auditor-mcp` 上游當天推新版（`files` 122→124）後新增一筆
 「⚠ 會執行外部指令 / 開子行程（超出宣稱用途）」，證據只有
 `tests/releaseFinishesWhatItStarts.test.ts` 一個測試檔，屬「執行外部指令」那一列，
@@ -176,8 +176,26 @@
 `src/tools/outputSchemas.ts` 的 HIGH，本來就是 🟡，不屬於「唯一的 HIGH 全在非出貨路徑」。
 本文的論點與名單都不變。）
 
-**唯一的 HIGH 全部屬於這一類、拿掉就會從 🟡 變 🟢 的專案有 7 個**
-（本文原先只數到 5 個，因為只看了 `eval`）：
+（**追記 2026-09-29**：重掃 `d3c4c48` 又各加一，變成 **91 筆中的 13 筆**，
+而且這次**下表要加第 8 個專案**——`jpicklyk/task-orchestrator` 由 🟢 翻成 🟡，
+唯一的那項 HIGH 是「⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）」，
+證據只有 `claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs` 一個檔。
+
+`profile` 與自述都沒動（`devtool`，逐字相同），所以**不是第四篇的分類漂移**，
+而是上游真的推了新程式碼（`files` 149→182）帶進一個新的 `eval` 命中。
+這是本文主張最乾淨的一次實例：**一個專案的判定從「未發現明顯風險」變成「需人工複核」，
+唯一的理由是一支測試輔助腳本裡有 `eval(`。**
+
+路徑要講精確：它落在 `scripts/tests/` 底下，`tests/` 那一段才是判定為非出貨路徑的依據。
+本文前面談過 `scripts/` 的性質可爭議、不主張歸為同一類——這一筆不靠 `scripts/` 成立，
+靠的是 `tests/`。eval 類的分母同時由 30 變成 31、其中非出貨路徑的由 6 變成 7。
+
+順帶更正：09-28 那則原本把分母寫成 91，實測當時是 **90**（上表的 90 沒變，只有非出貨筆數
+由 11 變成 12）；分母會上下來回是因為上游推送會讓「超出宣稱用途」HIGH 本身增減，
+09-27 曾一度掉到 89。兩則追記的分母現已與實測一致。)
+
+**唯一的 HIGH 全部屬於這一類、拿掉就會從 🟡 變 🟢 的專案有 8 個**
+（本文原先只數到 5 個，因為只看了 `eval`；09-29 起為 8 個）：
 
 | 專案 | 唯一 HIGH 的規則 | 證據 |
 |---|---|---|
@@ -188,6 +206,7 @@
 | `alexalexalex222/frontend-design-loop-mcp` | eval | `tests/test_mcp_code_server_selection.py` |
 | **`antvis/mcp-server-chart`** | **執行外部指令** | `__tests__/server.spec.ts` |
 | **`tolgee/tolgee-platform`** | **讀寫本機檔案** | `e2e/cypress/common/flakyReport.ts`、`e2e/scripts/baseQuery/perf-test.sh` |
+| **`jpicklyk/task-orchestrator`** | eval | `claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs`（09-29 新增，🟢→🟡）|
 
 粗體兩個是這次才看到的，都不是 `eval`。
 
