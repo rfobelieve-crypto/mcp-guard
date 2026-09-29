@@ -1,40 +1,50 @@
 # MCP 安檢報告：jpicklyk/task-orchestrator
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 206 / 23 |
-| 最後更新 | 2026-09-27 |
+| 最後更新 | 2026-09-29 |
 | 授權 | MIT License |
-| 已掃描檔案 | 149 個 |
-| 檢查時間 | 2026-09-27 23:46 |
+| 已掃描檔案 | 182 個 |
+| 檢查時間 | 2026-09-29 00:56 |
 
 ## 風險摘要
 
-🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/execution-mode.mjs、claude-plugins/task-orchestrator/hooks/plan-capture.mjs`
+> 證據：`claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/subagent-start.mjs`
+> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/subagent-start.mjs、claude-plugins/task-orchestrator/scripts/tests/implement-wave-prompts.test.mjs`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/execution-mode.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-chained.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard.test.mjs`
+> 證據：`claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-chained.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-independence.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs`
 
 ### 🔵 低｜[權限] 會連往 1 個外部主機
 
@@ -48,7 +58,7 @@
 
 > 證據：`.claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,7 +76,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-09-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -76,7 +86,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-27
+⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-29
 
 ---
 

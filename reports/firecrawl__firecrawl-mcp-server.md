@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7523 / 897 |
-| 最後更新 | 2026-09-27 |
+| 星數 / Fork | ⭐ 7529 / 896 |
+| 最後更新 | 2026-09-28 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 52 個 |
-| 檢查時間 | 2026-09-27 23:40 |
+| 已掃描檔案 | 76 個 |
+| 檢查時間 | 2026-09-29 00:49 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -55,13 +55,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（151 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（148 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
-這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
+
+> 證據：`plugins/claude/firecrawl-search/skills/firecrawl-developer-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl-research-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
 
@@ -81,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-09-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7523｜fork 897｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-09-27
+⭐ 7529｜fork 896｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-09-28
 
 ---
 
