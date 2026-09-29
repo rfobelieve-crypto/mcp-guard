@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2130 / 134 |
-| 最後更新 | 2026-09-27 |
+| 星數 / Fork | ⭐ 2147 / 135 |
+| 最後更新 | 2026-09-28 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-09-27 23:44 |
+| 檢查時間 | 2026-09-29 00:54 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-calendar-board-device.mjs、apps/android-native/scripts/check-capture-device.mjs、apps/android-native/scripts/check-editor-device.mjs`
+> 證據：`apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-app-lock-device.mjs、apps/android-native/scripts/check-boot-gates.mjs、apps/android-native/scripts/check-calendar-board-device.mjs`
 
-### 🟡 中｜[權限] 會連往 33 個外部主機
+### 🟡 中｜[權限] 會連往 36 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、bea.example、calendar.example…`
+> 證據：`a.test、ai.example.com、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、b.test…`
 
 ### 🔵 低｜[供應鏈] 有 61 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml、.github/workflows/release-rc.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（67 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-09-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2130｜fork 134｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-27
+⭐ 2147｜fork 135｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-09-28
 
 ---
 

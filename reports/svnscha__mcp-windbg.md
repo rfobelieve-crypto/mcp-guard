@@ -7,10 +7,10 @@
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
 | 星數 / Fork | ⭐ 1594 / 158 |
-| 最後更新 | 2026-09-21 |
+| 最後更新 | 2026-09-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 109 個 |
-| 檢查時間 | 2026-09-27 23:44 |
+| 已掃描檔案 | 111 個 |
+| 檢查時間 | 2026-09-29 00:54 |
 
 ## 風險摘要
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py`
+> 證據：`src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_tool_concurrency_live.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
@@ -68,11 +68,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-21`
+> 證據：`最後推送 2026-09-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1594｜fork 158｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-21
+⭐ 1594｜fork 158｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-28
 
 ---
 
