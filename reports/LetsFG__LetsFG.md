@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
 | 專案說明 | Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS  |
-| 星數 / Fork | ⭐ 2072 / 139 |
-| 最後更新 | 2026-09-27 |
+| 星數 / Fork | ⭐ 2073 / 139 |
+| 最後更新 | 2026-09-29 |
 | 授權 | Other |
-| 已掃描檔案 | 145 個 |
-| 檢查時間 | 2026-09-29 00:53 |
+| 已掃描檔案 | 149 個 |
+| 檢查時間 | 2026-09-30 00:09 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 47 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com.evil.com、context7.com、evil.com、evil.example…`
+> 證據：`agent-plugins.org、agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com.evil.com、context7.com、evil.com…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -52,11 +52,11 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 6 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、SKILL.md（Agent Skill 指令（SKILL.md））、agent-skills-contribution/packages/skills-catalog/skills/(tooling)/letsfg/SKILL.md（Agent Skill 指令（SKILL.md））、skills/flight-search/SKILL.md（Agent Skill 指令（SKILL.md））、skills/hotel-search/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、SKILL.md（Agent Skill 指令（SKILL.md））、agent-skills-contribution/packages/skills-catalog/skills/(tooling)/letsfg/SKILL.md（Agent Skill 指令（SKILL.md））、integrations/hermes/skills/letsfg/SKILL.md（Agent Skill 指令（SKILL.md））、skills/flight-search/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
@@ -68,15 +68,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-09-29`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2072｜fork 139｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-27
+⭐ 2073｜fork 139｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-29
 
 ---
 

@@ -11,7 +11,7 @@
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-09-29 00:53 |
+| 檢查時間 | 2026-09-30 00:08 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts、docs/public/stories/reservoir-guide/offline/worker.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（248 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（243 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
