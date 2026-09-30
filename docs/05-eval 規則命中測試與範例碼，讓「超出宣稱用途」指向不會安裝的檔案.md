@@ -194,8 +194,29 @@
 由 11 變成 12）；分母會上下來回是因為上游推送會讓「超出宣稱用途」HIGH 本身增減，
 09-27 曾一度掉到 89。兩則追記的分母現已與實測一致。)
 
-**唯一的 HIGH 全部屬於這一類、拿掉就會從 🟡 變 🟢 的專案有 8 個**
-（本文原先只數到 5 個，因為只看了 `eval`；09-29 起為 8 個）：
+（**追記 2026-09-30，撤回上面那一則的名單變動**：重掃 `e8787b3` 時
+`jpicklyk/task-orchestrator` **已不屬於本文這一類**，下表也已把它移除，
+數字回到 **91 筆中的 12 筆**、eval 類 31 筆中非出貨 6 筆、名單 **7 個專案**。
+
+原因是上游同一天又推了一次（`files` 182→219），該項 eval 命中的證據由一個變成三個：
+
+```
+claude-plugins/task-orchestrator/scripts/lib/wave-core.mjs      ← 不是測試路徑
+claude-plugins/task-orchestrator/scripts/tests/workflow-harness-ext.mjs
+claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs
+```
+
+多出來的 `scripts/lib/wave-core.mjs` 不落在 `tests/`、`examples/` 這類路徑上，
+所以這筆不再符合「證據**全部**落在非出貨路徑」的條件。**它的判定仍是 🟡，而且現在有一個
+非測試檔的證據撐著**——不再是「唯一的理由是測試腳本裡有 `eval(`」那種案例。
+
+我把 09-29 那則留著不刪，因為它記錄了當時看到的東西；但要老實說：**那則是在單日證據上
+就把專案列進名單，隔一次重掃就被推翻了。** 教訓是這份名單的成員資格會隨上游逐次推送變動，
+引用時應該連日期一起引。另外這次的變動**標題完全沒變**，只有 evidence 路徑變了，
+所以只比對「HIGH 標題集合」的巡檢分流看不到它；是每輪重算本文這幾個數字才抓到的。)
+
+**唯一的 HIGH 全部屬於這一類、拿掉就會從 🟡 變 🟢 的專案有 7 個**
+（本文原先只數到 5 個，因為只看了 `eval`；09-29 曾一度為 8 個，09-30 撤回，見上方追記）：
 
 | 專案 | 唯一 HIGH 的規則 | 證據 |
 |---|---|---|
@@ -206,7 +227,6 @@
 | `alexalexalex222/frontend-design-loop-mcp` | eval | `tests/test_mcp_code_server_selection.py` |
 | **`antvis/mcp-server-chart`** | **執行外部指令** | `__tests__/server.spec.ts` |
 | **`tolgee/tolgee-platform`** | **讀寫本機檔案** | `e2e/cypress/common/flakyReport.ts`、`e2e/scripts/baseQuery/perf-test.sh` |
-| **`jpicklyk/task-orchestrator`** | eval | `claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs`（09-29 新增，🟢→🟡）|
 
 粗體兩個是這次才看到的，都不是 `eval`。
 
