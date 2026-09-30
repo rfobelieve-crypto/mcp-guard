@@ -7,15 +7,15 @@
 | 稽核對象 | `Dave-London/Pare` |
 | 專案說明 | Dev tools, optimized for agents. Structured, token-efficient MCP servers for git |
 | 星數 / Fork | ⭐ 138 / 13 |
-| 最後更新 | 2026-09-22 |
+| 最後更新 | 2026-09-29 |
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-09-29 00:56 |
+| 檢查時間 | 2026-09-30 00:12 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 2　🟡 中 3　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -71,6 +71,10 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/init/__tests__/realfs.test.ts、packages/init/src/lib/config-writers/json-mcpservers.ts、packages/init/src/lib/config-writers/json-vscode.ts、packages/init/src/lib/config-writers/json-zed.ts、packages/init/src/lib/config-writers/toml-codex.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 6 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -91,11 +95,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-22`
+> 證據：`最後推送 2026-09-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 138｜fork 13｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-22
+⭐ 138｜fork 13｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-29
 
 ---
 

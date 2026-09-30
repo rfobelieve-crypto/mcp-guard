@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `codeaashu/claude-code` |
 | 專案說明 | Claude Code is an agentic coding tool that lives in your terminal, understands y |
-| 星數 / Fork | ⭐ 3360 / 3675 |
+| 星數 / Fork | ⭐ 3359 / 3676 |
 | 最後更新 | 2026-08-29 |
 | 授權 | Other |
 | npm 套件 | `@anthropic-ai/claude-code` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-29 00:52 |
+| 檢查時間 | 2026-09-30 00:08 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 30 天內有更新
+### ⚪ 資訊｜[維護] 最近 31 天內有更新
 
 專案仍在活躍維護中。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3360｜fork 3675｜語言 TypeScript｜建立 2026-03-31｜最後推送 2026-08-29
+⭐ 3359｜fork 3676｜語言 TypeScript｜建立 2026-03-31｜最後推送 2026-08-29
 
 ---
 

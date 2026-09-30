@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
-| 星數 / Fork | ⭐ 206 / 23 |
+| 星數 / Fork | ⭐ 207 / 23 |
 | 最後更新 | 2026-09-29 |
 | 授權 | MIT License |
-| 已掃描檔案 | 182 個 |
-| 檢查時間 | 2026-09-29 00:56 |
+| 已掃描檔案 | 219 個 |
+| 檢查時間 | 2026-09-30 00:12 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs`
+> 證據：`claude-plugins/task-orchestrator/scripts/lib/wave-core.mjs、claude-plugins/task-orchestrator/scripts/tests/workflow-harness-ext.mjs、claude-plugins/task-orchestrator/scripts/tests/workflow-harness.mjs`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -52,13 +52,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`static.modelcontextprotocol.io`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 34 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 35 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 6 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 206｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-29
+⭐ 207｜fork 23｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-29
 
 ---
 
