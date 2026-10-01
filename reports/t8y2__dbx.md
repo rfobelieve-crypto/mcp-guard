@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 21968 / 2086 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 23174 / 2152 |
+| 最後更新 | 2026-09-30 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 476 個 |
-| 檢查時間 | 2026-09-30 00:06 |
+| 檢查時間 | 2026-10-01 00:23 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.adoptium.net、api.atlascloud.ai、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、dbxio.com、dl.dbxio.com、docs.rs、example.invalid…`
+> 證據：`api.adoptium.net、api.atlascloud.ai、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、dbxio.com、dl.dbxio.com、docs.rs、download.oracle.com…`
 
 ### 🔵 低｜[供應鏈] 有 81 個依賴未鎖定版本
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1248 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1287 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-09-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 21968｜fork 2086｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-29
+⭐ 23174｜fork 2152｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-30
 
 ---
 

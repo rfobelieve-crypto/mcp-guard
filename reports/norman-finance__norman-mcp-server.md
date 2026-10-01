@@ -7,22 +7,28 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 59 / 13 |
-| 最後更新 | 2026-09-29 |
+| 最後更新 | 2026-09-30 |
 | 授權 | MIT License |
-| 已掃描檔案 | 141 個 |
-| 檢查時間 | 2026-09-30 00:10 |
+| 已掃描檔案 | 169 個 |
+| 檢查時間 | 2026-10-01 00:26 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 29 個外部主機
+### 🟡 中｜[權限] 會連往 36 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai、connect.smithery.ai、connect.smithery.ai.attacker.com、dev.norman.finance…`
+> 證據：`api.example、api.example.invalid、api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai、client.example.test…`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`norman_mcp/apps/inbox_live.py、norman_mcp/events/store.py、norman_mcp/files/download.py、norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -30,11 +36,11 @@
 
 > 證據：`norman_mcp/auth/provider.py、norman_mcp/cli.py、norman_mcp/config/settings.py、norman_mcp/files/upload.py、norman_mcp/observability.py`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`norman_mcp/files/download.py、norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py、test_client/get_token.py、tests/test_smithery_config.py`
+> 證據：`tests/test_legacy_client_compatibility.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 22 個代理指令檔
 
@@ -42,7 +48,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 454 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 489 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -60,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-09-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -70,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 59｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-29
+⭐ 59｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-30
 
 ---
 

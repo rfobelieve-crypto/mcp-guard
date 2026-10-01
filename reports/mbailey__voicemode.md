@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mbailey/voicemode` |
 | 專案說明 | Natural voice conversations with Claude Code |
-| 星數 / Fork | ⭐ 1383 / 195 |
+| 星數 / Fork | ⭐ 1385 / 196 |
 | 最後更新 | 2026-09-21 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-09-30 00:09 |
+| 檢查時間 | 2026-10-01 00:26 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 > 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（52 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -78,7 +78,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 9 天內有更新
 
 專案仍在活躍維護中。
 
@@ -92,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1383｜fork 195｜語言 Python｜建立 2025-06-08｜最後推送 2026-09-21
+⭐ 1385｜fork 196｜語言 Python｜建立 2025-06-08｜最後推送 2026-09-21
 
 ---
 
