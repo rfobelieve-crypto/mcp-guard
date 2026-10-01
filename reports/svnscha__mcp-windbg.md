@@ -7,10 +7,10 @@
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
 | 星數 / Fork | ⭐ 1597 / 158 |
-| 最後更新 | 2026-09-29 |
+| 最後更新 | 2026-09-30 |
 | 授權 | MIT License |
-| 已掃描檔案 | 111 個 |
-| 檢查時間 | 2026-09-30 00:09 |
+| 已掃描檔案 | 114 個 |
+| 檢查時間 | 2026-10-01 00:26 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/validate-server-schema.py、src/mcp_windbg/cdb_session.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py`
+> 證據：`scripts/validate-server-schema.py、src/mcp_windbg/cdb_session.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/kd_session.py、src/mcp_windbg/server.py`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_tool_concurrency_live.py`
+> 證據：`src/mcp_windbg/__init__.py、src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_tool_concurrency_live.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
@@ -54,7 +54,7 @@
 
 > 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/mcp-windbg-skills/skills/analyze-dump/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/mcp-windbg-skills/skills/debug-remote/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-09-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1597｜fork 158｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-29
+⭐ 1597｜fork 158｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-30
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 7503 / 889 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 7560 / 893 |
+| 最後更新 | 2026-09-30 |
 | 授權 | MIT License |
-| 已掃描檔案 | 130 個 |
-| 檢查時間 | 2026-09-30 00:04 |
+| 已掃描檔案 | 131 個 |
+| 檢查時間 | 2026-10-01 00:21 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`composio.dev、cursortouch.com、docs.github.com、docs.microsoft.com、learn.microsoft.com、my-client.example.com、static.modelcontextprotocol.io、us.i.posthog.com、youtu.be`
+> 證據：`composio.dev、cursortouch.com、docs.github.com、docs.microsoft.com、learn.microsoft.com、my-client.example.com、proxied.example、public.example、rebind.example、static.modelcontextprotocol.io…`
 
 ### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
@@ -76,11 +76,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-09-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7503｜fork 889｜語言 Python｜建立 2025-05-13｜最後推送 2026-09-29
+⭐ 7560｜fork 893｜語言 Python｜建立 2025-05-13｜最後推送 2026-09-30
 
 ---
 

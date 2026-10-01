@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4978 / 1116 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 4979 / 1116 |
+| 最後更新 | 2026-09-30 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 537 個 |
-| 檢查時間 | 2026-09-30 00:07 |
+| 已掃描檔案 | 538 個 |
+| 檢查時間 | 2026-10-01 00:24 |
 
 ## 風險摘要
 
@@ -36,17 +36,17 @@
 
 > 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/node-client-browser-test.sh、.buildkite/scripts/steps/ui-e2e.sh`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.buildkite/scripts/steps/docker-build-verify.sh、.opencode/plugins/buildkite-status.ts、docker/aot/mockserver-healthcheck.go、docker/clustered/mockserver-healthcheck.go、docker/graaljs/mockserver-healthcheck.go`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.buildkite/scripts/steps/lib/perf-percore.sh`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.opencode/plugins/buildkite-status.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 59 個代理指令檔
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-09-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4978｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-29
+⭐ 4979｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-30
 
 ---
 

@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 10985 / 1530 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 10994 / 1534 |
+| 最後更新 | 2026-10-01 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-09-30 00:04 |
+| 檢查時間 | 2026-10-01 00:21 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 5　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 37 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -53,7 +53,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
+> 證據：`clients/cli/__tests__/e2e.test.ts、clients/cli/src/open-url.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -65,7 +69,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +87,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10985｜fork 1530｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-09-29
+⭐ 10994｜fork 1534｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-01
 
 ---
 

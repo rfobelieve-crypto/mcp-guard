@@ -10,7 +10,7 @@
 | 最後更新 | 2026-03-19 |
 | 授權 | MIT License |
 | 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-09-30 00:11 |
+| 檢查時間 | 2026-10-01 00:27 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`aiplatform.googleapis.com、example-one.invalid、example-two.invalid、feross.org、generativelanguage.googleapis.com、nextjs.org、opencollective.com、openrouter.ai、paulmillr.com、static.modelcontextprotocol.io…`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

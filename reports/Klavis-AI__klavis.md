@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `Klavis-AI/klavis` |
 | 專案說明 | Klavis AI:  MCP integration platforms that let AI agents use tools reliably at a |
-| 星數 / Fork | ⭐ 5809 / 563 |
+| 星數 / Fork | ⭐ 5808 / 563 |
 | 最後更新 | 2026-06-01 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 514 個 |
-| 檢查時間 | 2026-09-30 00:06 |
+| 檢查時間 | 2026-10-01 00:23 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`examples/agno-klavis/main.py、examples/claude-klavis/python/main.py、examples/crewai-klavis/python/main.py、examples/google_adk-klavis/python/my_agent/agent.py、examples/google_genai-klavis/python/main.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（307 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（308 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 120 天內有更新
+### ⚪ 資訊｜[維護] 最近 121 天內有更新
 
 專案仍在活躍維護中。
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5809｜fork 563｜語言 Python｜建立 2025-04-14｜最後推送 2026-06-01
+⭐ 5808｜fork 563｜語言 Python｜建立 2025-04-14｜最後推送 2026-06-01
 
 ---
 
