@@ -154,6 +154,8 @@ python batch.py 清單.txt      # 指定名單，一行一個 owner/repo
 
 登入與提交功能的部署設定(OAuth App、環境變數):[docs/DEPLOY.md](docs/DEPLOY.md)。
 
+本機開發環境、日常流程與部署鏈:[docs/DEV-SETUP.md](docs/DEV-SETUP.md)。
+
 ## 紅隊測試
 
 偵測器最危險的失敗是**靜默漏報**，因此樣本測試常駐：

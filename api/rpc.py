@@ -35,6 +35,7 @@ import json
 import os
 import re
 import secrets
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -47,6 +48,7 @@ SESSION_TTL = 60 * 60 * 24 * 30          # 30 天
 DEFAULT_ORIGIN = "https://mcp-guard-iota.vercel.app"
 DEFAULT_ISSUE_REPO = "rfobelieve-crypto/mcp-guard"
 REPO_RE = re.compile(r"^[A-Za-z0-9_.-]{1,80}/[A-Za-z0-9_.-]{1,120}$")
+MAX_TARGET_LEN = 8000     # 夠貼一整份設定檔,又不至於變成任意大的輸入
 
 
 def env(k: str, default: str = "") -> str:
@@ -199,6 +201,8 @@ class handler(BaseHTTPRequestHandler):
                 return self._json(200, {"login": user["login"],
                                         "name": user.get("name", ""),
                                         "avatar": user.get("avatar", "")})
+            if route == "/api/scan":
+                return self.scan()
             return self._json(404, {"error": "not found"})
         except urllib.error.URLError:
             return self._json(502, {"error": "github unreachable"})
@@ -319,6 +323,61 @@ class handler(BaseHTTPRequestHandler):
         if not url:
             return self._json(502, {"error": "issue create failed"})
         return self._json(200, {"ok": True, "url": url})
+
+    # ── 隨選掃描 ────────────────────────────────────────────────
+    # registry 上有約 13,800 個 GitHub 專案,網站預先掃過的只有 178 個。
+    # 使用者查不到的機率是 98.7%,而那一刻正是他最想知道答案的時候——
+    # 他手上拿著安裝指令,正要按下去。CLI 本來就能查任意專案,這個路由
+    # 只是把同一條路徑接到網頁上,引擎一個字都沒有改。
+    def scan(self):
+        s = urllib.parse.urlsplit(self.path)
+        raw = (urllib.parse.parse_qs(s.query).get("target") or [""])[0].strip()
+        if not raw:
+            return self._json(400, {"error": "缺少 target 參數。"})
+        if len(raw) > MAX_TARGET_LEN:
+            return self._json(413, {
+                "error": f"輸入過長（上限 {MAX_TARGET_LEN} 字元）。"})
+
+        # 引擎在 repo 根目錄,不保證在 function 的 sys.path 上
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        if root not in sys.path:
+            sys.path.insert(0, root)
+
+        from mcp_guard.checks import run_all
+        from mcp_guard.fetch import FetchError, collect
+        from mcp_guard.report import verdict
+        from mcp_guard.userinput import normalize
+
+        target = normalize(raw)
+        started = time.time()
+        try:
+            bundle = collect(target)
+        except FetchError as e:
+            # 抓取失敗不是「沒問題」,也不是「有問題」——不給結論才是誠實的。
+            # 把限流當成「這個 repo 不存在」會變成對真實專案的不實指控,
+            # 見 tests/test_lookup.py。
+            return self._json(502, {"error": str(e), "input": raw})
+
+        findings = run_all(bundle)
+        v, why = verdict(findings)
+        meta = bundle.meta or {}
+        return self._json(200, {
+            "ok": True,
+            "input": raw,
+            "target": target,
+            "slug": bundle.slug,
+            "verdict": v,
+            "why": why,
+            "desc": meta.get("description") or "",
+            "stars": meta.get("stargazers_count", 0),
+            "pushed": (meta.get("pushed_at") or "")[:10],
+            "files_scanned": len(bundle.files),
+            "notes": bundle.notes,
+            "elapsed_ms": int((time.time() - started) * 1000),
+            "findings": [{"check": f.check, "severity": f.severity,
+                          "title": f.title, "detail": f.detail,
+                          "evidence": f.evidence} for f in findings],
+        })
 
     def do_HEAD(self):  # noqa: N802 — 健康檢查與爬蟲會發 HEAD
         self.send_response(200)
