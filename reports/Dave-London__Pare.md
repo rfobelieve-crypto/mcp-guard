@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-10-01 00:28 |
+| 檢查時間 | 2026-10-02 00:38 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/init/__tests__/realfs.test.ts、packages/init/src/lib/config-writers/json-mcpservers.ts、packages/init/src/lib/config-writers/json-vscode.ts、packages/init/src/lib/config-writers/json-zed.ts、packages/init/src/lib/config-writers/toml-codex.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（52 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 

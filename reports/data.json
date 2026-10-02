@@ -1,6 +1,6 @@
 {
- "scanned_at": "2026-10-01 00:28",
- "elapsed_sec": 433,
+ "scanned_at": "2026-10-02 00:38",
+ "elapsed_sec": 438,
  "projects": [
   {
    "slug": "DIALLOUBE-RESEARCH/hypernatt-terminal",
@@ -59,8 +59,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 4 項高風險項目，請逐項讀懂後再決定。",
    "desc": "The open-source app everyone uses to manage agents at work",
-   "stars": 95324,
-   "pushed": "2026-10-01",
+   "stars": 95843,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -142,7 +142,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（6189 則）",
+     "title": "未處理 issue 偏多（6228 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -157,7 +157,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 95324｜fork 16179｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-01",
+     "detail": "⭐ 95843｜fork 16248｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -193,7 +193,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -203,7 +203,7 @@
    "why": "發現 4 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Democratizing AI scientists with ToolUniverse",
    "stars": 1715,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -307,7 +307,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1715｜fork 260｜語言 Python｜建立 2025-03-03｜最後推送 2026-09-30",
+     "detail": "⭐ 1715｜fork 260｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -343,7 +343,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -470,7 +470,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 121 天內有更新",
+     "title": "最近 122 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-06-01"
     }
@@ -481,8 +481,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 3 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Transparent and Efficient Financial Analysis",
-   "stars": 5391,
-   "pushed": "2026-09-29",
+   "stars": 5392,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -510,7 +510,7 @@
      "severity": "HIGH",
      "title": "⚠ 會讀寫本機檔案（超出宣稱用途）",
      "detail": "確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
-     "evidence": "docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh、financetoolkit/mcp_server/setup_model.py"
+     "evidence": ".github/workflows/unit_tests.yml、docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh"
     },
     {
      "check": "權限",
@@ -559,7 +559,7 @@
      "severity": "LOW",
      "title": "會讀取環境變數（符合宣稱用途）",
      "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": "financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/mcp_server/auth_model.py"
+     "evidence": "financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/helpers.py"
     },
     {
      "check": "身分",
@@ -572,7 +572,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 5391｜fork 626｜語言 Python｜建立 2019-04-08｜最後推送 2026-09-29",
+     "detail": "⭐ 5392｜fork 626｜語言 Python｜建立 2019-04-08｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -606,9 +606,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-29"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -617,8 +617,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 3 項高風險項目，請逐項讀懂後再決定。",
    "desc": "The Unofficial and Awesome Home Assistant MCP Server",
-   "stars": 4899,
-   "pushed": "2026-09-30",
+   "stars": 4916,
+   "pushed": "2026-10-02",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -634,10 +634,10 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 407,
+   "files": 408,
    "crit": 0,
    "high": 3,
-   "med": 2,
+   "med": 3,
    "poison": 0,
    "top": "⚠ 會執行外部指令 / 開子行程（超出宣稱用途）",
    "findings": [
@@ -661,6 +661,13 @@
      "title": "⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）",
      "detail": "動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
      "evidence": "site/scripts/a11y-audit.mjs"
+    },
+    {
+     "check": "供應鏈",
+     "severity": "MEDIUM",
+     "title": "使用非標準的建置後端",
+     "detail": "建置後端會在安裝時被下載並執行。這可能是合理的專案選擇，但那個後端本身也需要被信任——請確認它是什麼。",
+     "evidence": "build-backend=uv_build"
     },
     {
      "check": "權限",
@@ -701,7 +708,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4899｜fork 224｜語言 Python｜建立 2025-09-14｜最後推送 2026-09-30",
+     "detail": "⭐ 4916｜fork 225｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -737,7 +744,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -869,7 +876,7 @@
    "why": "發現 3 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, immutable audit, step-up auth, tenant isolation. MCP server + OpenAI/Gemini adapters. A healthclaw.io project.",
    "stars": 30,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -897,7 +904,7 @@
      "severity": "HIGH",
      "title": "⚠ 會讀寫本機檔案（超出宣稱用途）",
      "detail": "確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
-     "evidence": ".github/workflows/ci.yml、.github/workflows/prod-watch.yml、adapters/healthclaw_bridge.py、careagents/config.py、careagents/healthcheck.py"
+     "evidence": ".github/workflows/ci.yml、.github/workflows/prod-watch.yml、adapters/healthclaw_bridge.py、careagents/app.py、careagents/config.py"
     },
     {
      "check": "權限",
@@ -923,9 +930,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 56 個外部主機",
+     "title": "會連往 48 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.healthex.io、api.medplum.com、api.openai.com、api.resend.com、api.telegram.org、api.twilio.com、app.healthclaw.io…"
+     "evidence": "api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.medplum.com、api.openai.com、api.resend.com、api.telegram.org、api.twilio.com、app.healthclaw.io、careagents.cloud…"
     },
     {
      "check": "供應鏈",
@@ -952,7 +959,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 30｜fork 13｜語言 Python｜建立 2025-03-31｜最後推送 2026-09-30",
+     "detail": "⭐ 30｜fork 13｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -986,7 +993,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 10 段 description）",
+     "title": "未發現可疑工具描述（已掃描 6 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -1002,7 +1009,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -1129,7 +1136,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -1140,8 +1147,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
-   "stars": 62567,
-   "pushed": "2026-09-30",
+   "stars": 62587,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -1155,7 +1162,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 253,
+   "files": 254,
    "crit": 0,
    "high": 2,
    "med": 1,
@@ -1200,7 +1207,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（73 則）",
+     "title": "未處理 issue 偏多（91 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1215,7 +1222,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 62567｜fork 3041｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-09-30",
+     "detail": "⭐ 62587｜fork 3043｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -1258,7 +1265,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -1267,8 +1274,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.",
-   "stars": 43632,
-   "pushed": "2026-09-30",
+   "stars": 43641,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -1365,7 +1372,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 43632｜fork 4071｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-09-30",
+     "detail": "⭐ 43641｜fork 4071｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -1401,7 +1408,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -1410,7 +1417,7 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-   "stars": 39174,
+   "stars": 39180,
    "pushed": "2026-09-24",
    "lang": "TypeScript",
    "profile": "desktop",
@@ -1500,7 +1507,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（501 則）",
+     "title": "未處理 issue 偏多（502 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1515,7 +1522,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 39174｜fork 3963｜語言 TypeScript｜建立 2025-01-19｜最後推送 2026-09-24",
+     "detail": "⭐ 39180｜fork 3967｜語言 TypeScript｜建立 2025-01-19｜最後推送 2026-09-24",
      "evidence": ""
     },
     {
@@ -1549,7 +1556,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 7 天內有更新",
+     "title": "最近 8 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-24"
     }
@@ -1560,8 +1567,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
-   "stars": 23174,
-   "pushed": "2026-09-30",
+   "stars": 23719,
+   "pushed": "2026-10-01",
    "lang": "Rust",
    "profile": "database",
    "profile_zh": "資料庫存取",
@@ -1636,7 +1643,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（1287 則）",
+     "title": "未處理 issue 偏多（1267 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1651,7 +1658,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 23174｜fork 2152｜語言 Rust｜建立 2026-04-29｜最後推送 2026-09-30",
+     "detail": "⭐ 23719｜fork 2178｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -1687,7 +1694,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -1696,8 +1703,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Mobile app automation and verification for AI coding agents. CLI, MCP server, and typed Node.js API for iOS, Android, HarmonyOS, TV, web, macOS, and Linux.",
-   "stars": 4832,
-   "pushed": "2026-09-30",
+   "stars": 4848,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -1765,7 +1772,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（110 則）",
+     "title": "未處理 issue 偏多（102 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1773,7 +1780,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4832｜fork 315｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-09-30",
+     "detail": "⭐ 4848｜fork 316｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -1809,7 +1816,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -1818,8 +1825,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobile. Works offline, no account needed",
-   "stars": 2165,
-   "pushed": "2026-10-01",
+   "stars": 2173,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -1854,7 +1861,7 @@
      "severity": "HIGH",
      "title": "⚠ 會執行外部指令 / 開子行程（超出宣稱用途）",
      "detail": "這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
-     "evidence": "apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-app-lock-device.mjs、apps/android-native/scripts/check-boot-gates.mjs、apps/android-native/scripts/check-calendar-board-device.mjs"
+     "evidence": "apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-ai-device.mjs、apps/android-native/scripts/check-app-lock-device.mjs、apps/android-native/scripts/check-boot-gates.mjs"
     },
     {
      "check": "權限",
@@ -1880,7 +1887,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（65 則）",
+     "title": "未處理 issue 偏多（70 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -1895,7 +1902,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2165｜fork 135｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-01",
+     "detail": "⭐ 2173｜fork 136｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -1938,7 +1945,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -1948,7 +1955,7 @@
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "js hook toolkit that all you need",
    "stars": 2021,
-   "pushed": "2026-09-28",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -2038,7 +2045,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2021｜fork 459｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-09-28",
+     "detail": "⭐ 2021｜fork 459｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -2072,9 +2079,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-28"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -2083,8 +2090,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "First gitlab mcp for you, building together",
-   "stars": 2011,
-   "pushed": "2026-09-28",
+   "stars": 2017,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -2093,7 +2100,7 @@
    "topics": [],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 345,
+   "files": 348,
    "crit": 0,
    "high": 2,
    "med": 2,
@@ -2153,7 +2160,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2011｜fork 357｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-09-28",
+     "detail": "⭐ 2017｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -2173,7 +2180,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 283 段 description）",
+     "title": "未發現可疑工具描述（已掃描 288 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -2187,9 +2194,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-28"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -2268,7 +2275,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1750｜fork 139｜語言 Swift｜建立 2026-03-10｜最後推送 2026-07-14",
+     "detail": "⭐ 1750｜fork 138｜語言 Swift｜建立 2026-03-10｜最後推送 2026-07-14",
      "evidence": ""
     },
     {
@@ -2309,7 +2316,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 79 天內有更新",
+     "title": "最近 80 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-14"
     }
@@ -2320,7 +2327,7 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Model Context Protocol for WinDbg.",
-   "stars": 1597,
+   "stars": 1599,
    "pushed": "2026-09-30",
    "lang": "Python",
    "profile": "api",
@@ -2390,7 +2397,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1597｜fork 158｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-30",
+     "detail": "⭐ 1599｜fork 160｜語言 Python｜建立 2025-05-02｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -2424,7 +2431,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -2532,7 +2539,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 35 天內有更新",
+     "title": "最近 36 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-26"
     }
@@ -2543,7 +2550,7 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "MCP server for TouchDesigner",
-   "stars": 558,
+   "stars": 560,
    "pushed": "2026-09-29",
    "lang": "TypeScript",
    "profile": "code",
@@ -2638,7 +2645,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 558｜fork 61｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-09-29",
+     "detail": "⭐ 560｜fork 62｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-09-29",
      "evidence": ""
     },
     {
@@ -2672,7 +2679,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -2799,7 +2806,7 @@
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give agents analysis-ready access to website traffic, user behavior, and performance data with schema discovery, server-side aggregation, and safe defaults that reduce data wrangling.",
    "stars": 242,
-   "pushed": "2026-09-21",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -2882,7 +2889,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-09-21",
+     "detail": "⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -2916,9 +2923,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 9 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-21"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -2927,8 +2934,8 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "Word-sized charts for React, made for LLMs and humans — 106 chart types, zero runtime dependencies, accessible by default, RSC-safe.",
-   "stars": 198,
-   "pushed": "2026-09-29",
+   "stars": 197,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -2997,7 +3004,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 198｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-09-29",
+     "detail": "⭐ 197｜fork 5｜語言 TypeScript｜建立 2026-07-06｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -3033,7 +3040,7 @@
      "severity": "INFO",
      "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-29"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -3132,7 +3139,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（52 則）",
+     "title": "未處理 issue 偏多（53 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -3181,7 +3188,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -3310,7 +3317,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 4 天內有更新",
+     "title": "最近 5 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-27"
     }
@@ -3425,7 +3432,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 33 天內有更新",
+     "title": "最近 34 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-29"
     }
@@ -3436,11 +3443,11 @@
    "verdict": "🟡 需人工複核",
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "A remote MCP server for personal nutrition tracking — log meals, track macros, and review nutrition history through conversation.",
-   "stars": 63,
-   "pushed": "2026-09-30",
+   "stars": 64,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
-   "profile": "api",
-   "profile_zh": "第三方 API 串接",
+   "profile": "filesystem",
+   "profile_zh": "檔案系統存取",
    "domain": "health",
    "domain_zh": "健康與醫療",
    "topics": [
@@ -3471,7 +3478,7 @@
      "check": "權限",
      "severity": "HIGH",
      "title": "⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）",
-     "detail": "動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
+     "detail": "動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。",
      "evidence": "public/widgets/import-run.test.ts、public/widgets/import-time.test.ts、public/widgets/macros.test.ts、public/widgets/summary-caption.test.ts、src/consent.test.ts"
     },
     {
@@ -3499,7 +3506,7 @@
      "check": "權限",
      "severity": "LOW",
      "title": "會讀取環境變數（符合宣稱用途）",
-     "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
+     "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
      "evidence": "scripts/site-partials.ts、scripts/widget-harness.ts、src/auth-session.test.ts、src/export.test.ts、src/foods.test.ts"
     },
     {
@@ -3513,14 +3520,14 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 63｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-09-30",
+     "detail": "⭐ 64｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
      "check": "權限",
      "severity": "INFO",
-     "title": "判定用途：第三方 API 串接",
-     "detail": "以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。",
+     "title": "判定用途：檔案系統存取",
+     "detail": "以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。",
      "evidence": ""
     },
     {
@@ -3547,9 +3554,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -3559,7 +3566,7 @@
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two, or all three, through CLI, MCP, REST, and dashboard.",
    "stars": 59,
-   "pushed": "2026-09-27",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -3599,7 +3606,7 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 44 個外部主機",
+     "title": "會連往 45 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
      "evidence": "a9.com、accounts.google.com、api.adsabs.harvard.edu、api.biorxiv.org、api.crossref.org、api.figshare.com、api.ies.ed.gov、api.openalex.org、api.search.brave.com、api.semanticscholar.org…"
     },
@@ -3615,7 +3622,7 @@
      "severity": "LOW",
      "title": "會讀取環境變數（符合宣稱用途）",
      "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": "scripts/verify_setup.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py、src/research_hub/cli_pipeline.py、src/research_hub/cli_search.py"
+     "evidence": "scripts/verify_native_research_handoff.py、scripts/verify_setup.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py、src/research_hub/cli_pipeline.py"
     },
     {
      "check": "身分",
@@ -3628,7 +3635,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 59｜fork 10｜語言 Python｜建立 2026-04-06｜最後推送 2026-09-27",
+     "detail": "⭐ 59｜fork 10｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -3662,9 +3669,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 4 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-27"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -3674,7 +3681,7 @@
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "",
    "stars": 39,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -3736,7 +3743,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 39｜fork 5｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-09-30",
+     "detail": "⭐ 39｜fork 5｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -3770,9 +3777,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -3885,7 +3892,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 58 天內有更新",
+     "title": "最近 59 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-04"
     }
@@ -4000,7 +4007,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 27 天內有更新",
+     "title": "最近 28 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-03"
     }
@@ -4115,7 +4122,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 79 天內有更新",
+     "title": "最近 80 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-14"
     }
@@ -4127,7 +4134,7 @@
    "why": "發現 2 項高風險項目，請逐項讀懂後再決定。",
    "desc": "AI trading brain for crypto perps — composite signals, funding rate arb scanning, and market regime detection via MCP",
    "stars": 10,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -4203,7 +4210,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 10｜fork 5｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-09-30",
+     "detail": "⭐ 10｜fork 5｜語言 TypeScript｜建立 2026-04-04｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -4237,9 +4244,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -4345,7 +4352,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 163 天內有更新",
+     "title": "最近 164 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-04-20"
     }
@@ -4453,7 +4460,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 27 天內有更新",
+     "title": "最近 28 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-03"
     }
@@ -4582,7 +4589,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 6 天內有更新",
+     "title": "最近 7 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-24"
     }
@@ -4690,7 +4697,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 4 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-28"
     }
@@ -4701,8 +4708,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Chrome DevTools for coding agents",
-   "stars": 52816,
-   "pushed": "2026-09-30",
+   "stars": 52861,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -4718,7 +4725,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 304,
+   "files": 306,
    "crit": 0,
    "high": 1,
    "med": 3,
@@ -4772,7 +4779,7 @@
      "severity": "LOW",
      "title": "會執行外部指令 / 開子行程（符合宣稱用途）",
      "detail": "這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": "rollup.config.js、scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts、scripts/verify-npm-package.js"
+     "evidence": "rollup.config.js、scripts/clean-submodules.ts、scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts"
     },
     {
      "check": "權限",
@@ -4784,7 +4791,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（108 則）",
+     "title": "未處理 issue 偏多（101 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -4799,7 +4806,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 52816｜fork 5274｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-09-30",
+     "detail": "⭐ 52861｜fork 5280｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -4819,7 +4826,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 275 段 description）",
+     "title": "未發現可疑工具描述（已掃描 277 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -4835,7 +4842,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -4844,8 +4851,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
-   "stars": 45564,
-   "pushed": "2026-09-30",
+   "stars": 45628,
+   "pushed": "2026-10-02",
    "lang": "C",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -4861,7 +4868,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 401,
+   "files": 403,
    "crit": 0,
    "high": 1,
    "med": 2,
@@ -4913,7 +4920,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（622 則）",
+     "title": "未處理 issue 偏多（618 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -4928,7 +4935,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 45564｜fork 3727｜語言 C｜建立 2026-02-24｜最後推送 2026-09-30",
+     "detail": "⭐ 45628｜fork 3742｜語言 C｜建立 2026-02-24｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -4964,7 +4971,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -4973,8 +4980,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "The most customisable and low-latency cross platform/shell prompt renderer",
-   "stars": 23528,
-   "pushed": "2026-09-28",
+   "stars": 23530,
+   "pushed": "2026-10-02",
    "lang": "Go",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -5043,7 +5050,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 23528｜fork 2790｜語言 Go｜建立 2019-03-13｜最後推送 2026-09-28",
+     "detail": "⭐ 23530｜fork 2790｜語言 Go｜建立 2019-03-13｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -5077,9 +5084,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-28"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -5088,8 +5095,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
-   "stars": 20560,
-   "pushed": "2026-09-30",
+   "stars": 20568,
+   "pushed": "2026-10-02",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -5165,7 +5172,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 20560｜fork 2054｜語言 Python｜建立 2022-11-24｜最後推送 2026-09-30",
+     "detail": "⭐ 20568｜fork 2055｜語言 Python｜建立 2022-11-24｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -5201,7 +5208,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -5210,7 +5217,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
-   "stars": 12456,
+   "stars": 12458,
    "pushed": "2026-01-06",
    "lang": "TypeScript",
    "profile": "browser",
@@ -5294,7 +5301,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 12456｜fork 1146｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-01-06",
+     "detail": "⭐ 12458｜fork 1146｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-01-06",
      "evidence": ""
     },
     {
@@ -5339,8 +5346,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Visual testing tool for MCP servers",
-   "stars": 10994,
-   "pushed": "2026-10-01",
+   "stars": 11001,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -5415,7 +5422,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（58 則）",
+     "title": "未處理 issue 偏多（62 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -5423,7 +5430,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 10994｜fork 1534｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-01",
+     "detail": "⭐ 11001｜fork 1536｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -5459,7 +5466,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -5468,7 +5475,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "MCP Server for Ghidra",
-   "stars": 10230,
+   "stars": 10240,
    "pushed": "2025-06-23",
    "lang": "Java",
    "profile": "devtool",
@@ -5483,12 +5490,12 @@
    "high": 1,
    "med": 0,
    "poison": 0,
-   "top": "超過 15 個月沒有更新",
+   "top": "超過 16 個月沒有更新",
    "findings": [
     {
      "check": "維護",
      "severity": "HIGH",
-     "title": "超過 15 個月沒有更新",
+     "title": "超過 16 個月沒有更新",
      "detail": "長期停更的專案不會跟進 MCP 規格變動，也不會修安全問題。",
      "evidence": "最後推送 2025-06-23"
     },
@@ -5517,7 +5524,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 10230｜fork 1053｜語言 Java｜建立 2025-03-23｜最後推送 2025-06-23",
+     "detail": "⭐ 10240｜fork 1053｜語言 Java｜建立 2025-03-23｜最後推送 2025-06-23",
      "evidence": ""
     },
     {
@@ -5548,8 +5555,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-   "stars": 9854,
-   "pushed": "2026-09-30",
+   "stars": 9871,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -5624,7 +5631,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（296 則）",
+     "title": "未處理 issue 偏多（300 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -5639,7 +5646,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 9854｜fork 1235｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-09-30",
+     "detail": "⭐ 9871｜fork 1238｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -5675,7 +5682,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -5684,8 +5691,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.",
-   "stars": 9114,
-   "pushed": "2026-09-30",
+   "stars": 9120,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -5760,7 +5767,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（114 則）",
+     "title": "未處理 issue 偏多（251 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -5775,7 +5782,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 9114｜fork 1459｜語言 Python｜建立 2024-03-19｜最後推送 2026-09-30",
+     "detail": "⭐ 9120｜fork 1461｜語言 Python｜建立 2024-03-19｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -5811,7 +5818,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -5820,7 +5827,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Browser MCP is a Model Context Provider (MCP) server that allows AI applications to control your browser",
-   "stars": 7148,
+   "stars": 7151,
    "pushed": "2025-04-24",
    "lang": "TypeScript",
    "profile": "browser",
@@ -5842,12 +5849,12 @@
    "high": 1,
    "med": 1,
    "poison": 0,
-   "top": "超過 17 個月沒有更新",
+   "top": "超過 18 個月沒有更新",
    "findings": [
     {
      "check": "維護",
      "severity": "HIGH",
-     "title": "超過 17 個月沒有更新",
+     "title": "超過 18 個月沒有更新",
      "detail": "長期停更的專案不會跟進 MCP 規格變動，也不會修安全問題。",
      "evidence": "最後推送 2025-04-24"
     },
@@ -5904,7 +5911,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7148｜fork 585｜語言 TypeScript｜建立 2025-03-28｜最後推送 2025-04-24",
+     "detail": "⭐ 7151｜fork 585｜語言 TypeScript｜建立 2025-03-28｜最後推送 2025-04-24",
      "evidence": ""
     },
     {
@@ -5942,8 +5949,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
-   "stars": 6449,
-   "pushed": "2026-09-28",
+   "stars": 6448,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -6026,7 +6033,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 6449｜fork 322｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-28",
+     "detail": "⭐ 6448｜fork 321｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -6060,9 +6067,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-28"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -6071,7 +6078,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.",
-   "stars": 4387,
+   "stars": 4389,
    "pushed": "2026-08-27",
    "lang": "TypeScript",
    "profile": "api",
@@ -6141,7 +6148,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4387｜fork 420｜語言 TypeScript｜建立 2025-04-25｜最後推送 2026-08-27",
+     "detail": "⭐ 4389｜fork 420｜語言 TypeScript｜建立 2025-04-25｜最後推送 2026-08-27",
      "evidence": ""
     },
     {
@@ -6175,7 +6182,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 35 天內有更新",
+     "title": "最近 36 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-27"
     }
@@ -6186,8 +6193,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Developer & translator friendly web-based localization platform",
-   "stars": 4116,
-   "pushed": "2026-09-30",
+   "stars": 4118,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -6241,7 +6248,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（204 則）",
+     "title": "未處理 issue 偏多（205 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -6256,7 +6263,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4116｜fork 371｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-09-30",
+     "detail": "⭐ 4118｜fork 372｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -6297,9 +6304,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -6308,8 +6315,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "AI conversations that actually remember. Never re-explain your project to your AI again. Join our Discord: https://discord.gg/tyvKNccgqN",
-   "stars": 4069,
-   "pushed": "2026-09-30",
+   "stars": 4075,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -6399,7 +6406,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4069｜fork 297｜語言 Python｜建立 2024-12-02｜最後推送 2026-09-30",
+     "detail": "⭐ 4075｜fork 298｜語言 Python｜建立 2024-12-02｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -6435,7 +6442,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -6444,8 +6451,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Open-source SEO, GEO, and marketing skills for AI agents.",
-   "stars": 3884,
-   "pushed": "2026-09-25",
+   "stars": 3886,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "docs",
    "profile_zh": "文件／知識檢索",
@@ -6507,7 +6514,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3884｜fork 496｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-09-25",
+     "detail": "⭐ 3886｜fork 496｜語言 TypeScript｜建立 2026-03-27｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -6541,9 +6548,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 6 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-25"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -6553,7 +6560,7 @@
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Semantic version control => entity-level diffs, blame, and impact analysis on top of git. 28 languages via tree-sitter. Built for coding agents.",
    "stars": 3368,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "Rust",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -6569,7 +6576,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 354,
+   "files": 401,
    "crit": 0,
    "high": 1,
    "med": 2,
@@ -6586,9 +6593,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 8 個外部主機",
+     "title": "會連往 7 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "app.com、ataraxy-labs.com、code.claude.com、feross.org、opencollective.com、paypal.me、static.modelcontextprotocol.io、www.patreon.com"
+     "evidence": "api.typesafe.ai、app.com、code.claude.com、feross.org、opencollective.com、paypal.me、www.patreon.com"
     },
     {
      "check": "工具描述投毒",
@@ -6629,7 +6636,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3368｜fork 102｜語言 Rust｜建立 2026-02-05｜最後推送 2026-09-30",
+     "detail": "⭐ 3368｜fork 102｜語言 Rust｜建立 2026-02-05｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -6658,7 +6665,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -6667,8 +6674,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, symbol-level GitHub code retrieval via tree-sitter AST. Works with Claude Code, Cursor & any MCP client. 313B+ tokens saved.",
-   "stars": 2721,
-   "pushed": "2026-09-30",
+   "stars": 2727,
+   "pushed": "2026-10-02",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -6751,7 +6758,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2721｜fork 365｜語言 Python｜建立 2026-02-09｜最後推送 2026-09-30",
+     "detail": "⭐ 2727｜fork 366｜語言 Python｜建立 2026-02-09｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -6787,7 +6794,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -6796,7 +6803,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Build better UI with AI",
-   "stars": 2004,
+   "stars": 2007,
    "pushed": "2026-07-04",
    "lang": "TypeScript",
    "profile": "desktop",
@@ -6873,7 +6880,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2004｜fork 141｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-07-04",
+     "detail": "⭐ 2007｜fork 142｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-07-04",
      "evidence": ""
     },
     {
@@ -6907,7 +6914,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 89 天內有更新",
+     "title": "最近 90 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-04"
     }
@@ -7029,7 +7036,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 36 天內有更新",
+     "title": "最近 37 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-25"
     }
@@ -7041,7 +7048,7 @@
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Natural voice conversations with Claude Code",
    "stars": 1385,
-   "pushed": "2026-09-21",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -7109,7 +7116,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（52 則）",
+     "title": "未處理 issue 偏多（59 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -7124,7 +7131,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1385｜fork 196｜語言 Python｜建立 2025-06-08｜最後推送 2026-09-21",
+     "detail": "⭐ 1385｜fork 196｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -7158,9 +7165,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 9 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-21"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -7169,8 +7176,8 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis",
-   "stars": 1303,
-   "pushed": "2026-09-30",
+   "stars": 1301,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -7253,7 +7260,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1303｜fork 81｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-09-30",
+     "detail": "⭐ 1301｜fork 81｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -7294,9 +7301,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -7305,7 +7312,7 @@
    "verdict": "🟡 需人工複核",
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "100% Free, Open-source local-first AI diagramming for architecture diagrams and flowcharts with animated exports.",
-   "stars": 818,
+   "stars": 822,
    "pushed": "2026-09-25",
    "lang": "TypeScript",
    "profile": "api",
@@ -7382,7 +7389,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 818｜fork 170｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-25",
+     "detail": "⭐ 822｜fork 170｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-25",
      "evidence": ""
     },
     {
@@ -7423,7 +7430,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 6 天內有更新",
+     "title": "最近 7 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-25"
     }
@@ -7435,7 +7442,7 @@
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Server-enforced workflow discipline for AI agents. An MCP server providing persistent work items, dependency graphs, quality gates, and actor attribution. Schemas define what agents must produce — the server blocks the call if they don't. Works with any MCP-compatible client.",
    "stars": 207,
-   "pushed": "2026-09-29",
+   "pushed": "2026-10-02",
    "lang": "Kotlin",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -7451,10 +7458,10 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 219,
+   "files": 229,
    "crit": 0,
    "high": 1,
-   "med": 1,
+   "med": 2,
    "poison": 0,
    "top": "⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）",
    "findings": [
@@ -7474,6 +7481,13 @@
     },
     {
      "check": "權限",
+     "severity": "MEDIUM",
+     "title": "會連往 12 個外部主機",
+     "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
+     "evidence": "127.0.0.1.evil.example、127.evil.example、env.example、evil.example、evil.localhost、explicit.example、localhost.evil.com、localhost.evil.example、proc.example、procuser.example…"
+    },
+    {
+     "check": "權限",
      "severity": "LOW",
      "title": "會讀寫本機檔案（符合宣稱用途）",
      "detail": "確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
@@ -7484,21 +7498,14 @@
      "severity": "LOW",
      "title": "會讀取環境變數（符合宣稱用途）",
      "detail": "環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": ".claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-sync.mjs、claude-plugins/task-orchestrator/hooks/enforce-actor-attribution.mjs、claude-plugins/task-orchestrator/hooks/execution-mode.mjs"
+     "evidence": ".claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-locator.mjs、claude-plugins/task-orchestrator/hooks/execution-mode.mjs、claude-plugins/task-orchestrator/hooks/retro-lib.mjs"
     },
     {
      "check": "權限",
      "severity": "LOW",
      "title": "會執行外部指令 / 開子行程（符合宣稱用途）",
      "detail": "這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": "claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-chained.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-independence.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-record.test.mjs"
-    },
-    {
-     "check": "權限",
-     "severity": "LOW",
-     "title": "會連往 1 個外部主機",
-     "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "static.modelcontextprotocol.io"
+     "evidence": "claude-plugins/task-orchestrator/hooks/tests/api-client.test.mjs、claude-plugins/task-orchestrator/hooks/tests/bundled-rules-parity.test.mjs、claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/enforce-actor-attribution.test.mjs、claude-plugins/task-orchestrator/hooks/tests/phase-guard-chained.test.mjs"
     },
     {
      "check": "身分",
@@ -7511,7 +7518,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-09-29",
+     "detail": "⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -7538,16 +7545,16 @@
     {
      "check": "代理指令檔",
      "severity": "INFO",
-     "title": "已掃描 35 個代理指令檔",
+     "title": "已掃描 36 個代理指令檔",
      "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
      "evidence": ".claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））…"
     },
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-29"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -7557,7 +7564,7 @@
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "Notion MCP server for Claude, Cursor, ChatGPT & Claude Desktop. Connect AI agents to Notion via Model Context Protocol — pages, databases, blocks, comments, files.",
    "stars": 172,
-   "pushed": "2026-09-23",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "database",
    "profile_zh": "資料庫存取",
@@ -7597,7 +7604,7 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 20 個外部主機",
+     "title": "會連往 21 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
      "evidence": "acme.notion.site、app.notion.com、avatars.githubusercontent.com、developers.notion.com、e.com、evil.example、example.invalid、feross.org、glama.ai、notion.so…"
     },
@@ -7633,7 +7640,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 172｜fork 38｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-09-23",
+     "detail": "⭐ 172｜fork 38｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -7667,9 +7674,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 8 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-23"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -7803,7 +7810,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 31 天內有更新",
+     "title": "最近 32 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-30"
     }
@@ -7929,7 +7936,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 12 天內有更新",
+     "title": "最近 13 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-19"
     }
@@ -8058,7 +8065,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 78 天內有更新",
+     "title": "最近 79 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-15"
     }
@@ -8173,7 +8180,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 19 天內有更新",
+     "title": "最近 20 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-11"
     }
@@ -8300,7 +8307,7 @@
    "why": "有 1 項高風險項目，確認它是功能必需後才安裝。",
    "desc": "MCP Server for global medical terminologies: ICD-11, SNOMED CT, LOINC, RxNorm, MeSH",
    "stars": 15,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -8316,7 +8323,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 206,
+   "files": 207,
    "crit": 0,
    "high": 1,
    "med": 2,
@@ -8349,7 +8356,7 @@
      "severity": "LOW",
      "title": "有 16 個依賴未鎖定版本",
      "detail": "依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。",
-     "evidence": "@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.2.0、@sbissoli/mcp-search@^0.6.0、@sbissoli/mcp-upstream@^0.3.0、pino@^10.2.1、zod@^4.5.4…"
+     "evidence": "@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.2.0、@sbissoli/mcp-search@^0.8.0、@sbissoli/mcp-upstream@^0.3.0、pino@^10.2.1、zod@^4.5.4…"
     },
     {
      "check": "權限",
@@ -8376,7 +8383,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-09-30",
+     "detail": "⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -8410,9 +8417,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -8550,8 +8557,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Model Context Protocol Servers",
-   "stars": 90805,
-   "pushed": "2026-09-30",
+   "stars": 90939,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -8612,7 +8619,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（563 則）",
+     "title": "未處理 issue 偏多（574 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -8620,7 +8627,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 90805｜fork 11724｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-09-30",
+     "detail": "⭐ 90939｜fork 11745｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -8661,9 +8668,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -8672,7 +8679,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-   "stars": 84732,
+   "stars": 85016,
    "pushed": "2026-09-30",
    "lang": "Python",
    "profile": "browser",
@@ -8728,7 +8735,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 84732｜fork 8664｜語言 Python｜建立 2024-10-13｜最後推送 2026-09-30",
+     "detail": "⭐ 85016｜fork 8704｜語言 Python｜建立 2024-10-13｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -8762,7 +8769,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -8773,8 +8780,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-   "stars": 73586,
-   "pushed": "2026-10-01",
+   "stars": 73668,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -8807,7 +8814,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（1025 則）",
+     "title": "未處理 issue 偏多（1045 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -8815,7 +8822,87 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 73586｜fork 8738｜語言 TypeScript｜建立 2025-06-02｜最後推送 2026-10-01",
+     "detail": "⭐ 73668｜fork 8752｜語言 TypeScript｜建立 2025-06-02｜最後推送 2026-10-02",
+     "evidence": ""
+    },
+    {
+     "check": "權限",
+     "severity": "INFO",
+     "title": "判定用途：開發框架／工具鏈",
+     "detail": "以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。",
+     "evidence": ""
+    },
+    {
+     "check": "工具描述投毒",
+     "severity": "INFO",
+     "title": "未發現可疑工具描述（已掃描 0 段 description）",
+     "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
+     "evidence": ""
+    },
+    {
+     "check": "代理指令檔",
+     "severity": "INFO",
+     "title": "沒有代理指令檔",
+     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
+     "evidence": ""
+    },
+    {
+     "check": "維護",
+     "severity": "INFO",
+     "title": "最近 0 天內有更新",
+     "detail": "專案仍在活躍維護中。",
+     "evidence": "最後推送 2026-10-02"
+    }
+   ]
+  },
+  {
+   "slug": "tldraw/tldraw",
+   "verdict": "🟢 未發現明顯風險",
+   "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
+   "desc": "Build infinite canvas apps in React with the tldraw SDK. World's best, top-most agent recommended #1 five star SDK.",
+   "stars": 50700,
+   "pushed": "2026-10-01",
+   "lang": "TypeScript",
+   "profile": "devtool",
+   "profile_zh": "開發框架／工具鏈",
+   "domain": "media",
+   "domain_zh": "影音與設計",
+   "topics": [
+    "canvas",
+    "collaboration",
+    "design",
+    "diagram",
+    "drawing",
+    "infinite"
+   ],
+   "pub": "GitHub 帳號驗證",
+   "pub_kind": "github",
+   "files": 0,
+   "crit": 0,
+   "high": 0,
+   "med": 0,
+   "poison": 0,
+   "top": "—",
+   "findings": [
+    {
+     "check": "維護",
+     "severity": "LOW",
+     "title": "未處理 issue 偏多（616 則）",
+     "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
+     "evidence": ""
+    },
+    {
+     "check": "身分",
+     "severity": "INFO",
+     "title": "官方 registry：GitHub 帳號驗證",
+     "detail": "發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。",
+     "evidence": "registry 名稱 io.github.tldraw/tldraw"
+    },
+    {
+     "check": "身分",
+     "severity": "INFO",
+     "title": "倉庫基本資料",
+     "detail": "⭐ 50700｜fork 3537｜語言 TypeScript｜建立 2021-05-09｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -8849,92 +8936,12 @@
    ]
   },
   {
-   "slug": "tldraw/tldraw",
-   "verdict": "🟢 未發現明顯風險",
-   "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
-   "desc": "Build infinite canvas apps in React with the tldraw SDK. World's best, top-most agent recommended #1 five star SDK.",
-   "stars": 50679,
-   "pushed": "2026-09-30",
-   "lang": "TypeScript",
-   "profile": "devtool",
-   "profile_zh": "開發框架／工具鏈",
-   "domain": "media",
-   "domain_zh": "影音與設計",
-   "topics": [
-    "canvas",
-    "collaboration",
-    "design",
-    "diagram",
-    "drawing",
-    "infinite"
-   ],
-   "pub": "GitHub 帳號驗證",
-   "pub_kind": "github",
-   "files": 0,
-   "crit": 0,
-   "high": 0,
-   "med": 0,
-   "poison": 0,
-   "top": "—",
-   "findings": [
-    {
-     "check": "維護",
-     "severity": "LOW",
-     "title": "未處理 issue 偏多（617 則）",
-     "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
-     "evidence": ""
-    },
-    {
-     "check": "身分",
-     "severity": "INFO",
-     "title": "官方 registry：GitHub 帳號驗證",
-     "detail": "發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。",
-     "evidence": "registry 名稱 io.github.tldraw/tldraw"
-    },
-    {
-     "check": "身分",
-     "severity": "INFO",
-     "title": "倉庫基本資料",
-     "detail": "⭐ 50679｜fork 3537｜語言 TypeScript｜建立 2021-05-09｜最後推送 2026-09-30",
-     "evidence": ""
-    },
-    {
-     "check": "權限",
-     "severity": "INFO",
-     "title": "判定用途：開發框架／工具鏈",
-     "detail": "以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。",
-     "evidence": ""
-    },
-    {
-     "check": "工具描述投毒",
-     "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 0 段 description）",
-     "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
-     "evidence": ""
-    },
-    {
-     "check": "代理指令檔",
-     "severity": "INFO",
-     "title": "沒有代理指令檔",
-     "detail": "這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。",
-     "evidence": ""
-    },
-    {
-     "check": "維護",
-     "severity": "INFO",
-     "title": "最近 0 天內有更新",
-     "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
-    }
-   ]
-  },
-  {
    "slug": "amruthpillai/reactive-resume",
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
-   "stars": 43625,
-   "pushed": "2026-09-30",
+   "stars": 43665,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -9003,7 +9010,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 43625｜fork 4805｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-09-30",
+     "detail": "⭐ 43665｜fork 4807｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -9039,7 +9046,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -9048,8 +9055,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
-   "stars": 40045,
-   "pushed": "2026-10-01",
+   "stars": 40081,
+   "pushed": "2026-10-02",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -9075,7 +9082,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（5848 則）",
+     "title": "未處理 issue 偏多（5751 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9090,7 +9097,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 40045｜fork 3453｜語言 Python｜建立 2020-01-23｜最後推送 2026-10-01",
+     "detail": "⭐ 40081｜fork 3465｜語言 Python｜建立 2020-01-23｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -9119,7 +9126,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -9128,7 +9135,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Playwright MCP server",
-   "stars": 37721,
+   "stars": 37744,
    "pushed": "2026-09-28",
    "lang": "TypeScript",
    "profile": "browser",
@@ -9194,7 +9201,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 37721｜fork 3206｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-09-28",
+     "detail": "⭐ 37744｜fork 3211｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-09-28",
      "evidence": ""
     },
     {
@@ -9228,7 +9235,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-28"
     }
@@ -9239,8 +9246,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "GitHub's official MCP Server",
-   "stars": 33308,
-   "pushed": "2026-09-30",
+   "stars": 33315,
+   "pushed": "2026-10-01",
    "lang": "Go",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -9253,7 +9260,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 337,
+   "files": 339,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -9299,7 +9306,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 33308｜fork 5065｜語言 Go｜建立 2025-03-04｜最後推送 2026-09-30",
+     "detail": "⭐ 33315｜fork 5069｜語言 Go｜建立 2025-03-04｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -9319,7 +9326,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 553 段 description）",
+     "title": "未發現可疑工具描述（已掃描 567 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -9335,7 +9342,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -9344,8 +9351,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "🚀 The fast, Pythonic way to build MCP servers and clients.",
-   "stars": 27945,
-   "pushed": "2026-09-30",
+   "stars": 27951,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -9406,7 +9413,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（426 則）",
+     "title": "未處理 issue 偏多（439 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9414,7 +9421,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 27945｜fork 2411｜語言 Python｜建立 2024-11-30｜最後推送 2026-09-30",
+     "detail": "⭐ 27951｜fork 2419｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -9450,7 +9457,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -9459,7 +9466,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Specification and documentation for Agent Skills",
-   "stars": 25821,
+   "stars": 25844,
    "pushed": "2026-08-09",
    "lang": "Python",
    "profile": "docs",
@@ -9488,7 +9495,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（94 則）",
+     "title": "未處理 issue 偏多（95 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9503,7 +9510,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 25821｜fork 1950｜語言 Python｜建立 2025-12-16｜最後推送 2026-08-09",
+     "detail": "⭐ 25844｜fork 1951｜語言 Python｜建立 2025-12-16｜最後推送 2026-08-09",
      "evidence": ""
     },
     {
@@ -9537,7 +9544,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 52 天內有更新",
+     "title": "最近 53 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-09"
     }
@@ -9548,7 +9555,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Automate browser based workflows with AI",
-   "stars": 23110,
+   "stars": 23117,
    "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "desktop",
@@ -9575,7 +9582,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（265 則）",
+     "title": "未處理 issue 偏多（269 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9590,7 +9597,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 23110｜fork 2183｜語言 Python｜建立 2024-02-28｜最後推送 2026-10-01",
+     "detail": "⭐ 23117｜fork 2187｜語言 Python｜建立 2024-02-28｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -9628,8 +9635,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "YC (S26) | Open Computer History | Record your screen continuously locally and provide context to your agents (Claude, Codex, Openclaw, Hermes, Runner...)",
-   "stars": 21784,
-   "pushed": "2026-10-01",
+   "stars": 21795,
+   "pushed": "2026-10-02",
    "lang": "Rust",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -9663,7 +9670,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 21784｜fork 2225｜語言 Rust｜建立 2024-06-19｜最後推送 2026-10-01",
+     "detail": "⭐ 21795｜fork 2226｜語言 Rust｜建立 2024-06-19｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -9692,7 +9699,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -9701,8 +9708,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Secure environments for developers and their agents",
-   "stars": 16782,
-   "pushed": "2026-10-01",
+   "stars": 16803,
+   "pushed": "2026-10-02",
    "lang": "Go",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -9728,7 +9735,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（1174 則）",
+     "title": "未處理 issue 偏多（1186 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9743,7 +9750,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 16782｜fork 1601｜語言 Go｜建立 2021-12-22｜最後推送 2026-10-01",
+     "detail": "⭐ 16803｜fork 1604｜語言 Go｜建立 2021-12-22｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -9772,7 +9779,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -9781,8 +9788,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP Toolbox for Databases is an open source MCP server for databases.",
-   "stars": 16544,
-   "pushed": "2026-09-30",
+   "stars": 16546,
+   "pushed": "2026-10-01",
    "lang": "Go",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -9808,7 +9815,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（366 則）",
+     "title": "未處理 issue 偏多（368 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -9823,7 +9830,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 16544｜fork 1745｜語言 Go｜建立 2024-06-07｜最後推送 2026-09-30",
+     "detail": "⭐ 16546｜fork 1745｜語言 Go｜建立 2024-06-07｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -9852,7 +9859,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -9861,7 +9868,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP server to provide Figma layout information to AI coding agents like Cursor",
-   "stars": 15941,
+   "stars": 15944,
    "pushed": "2026-09-18",
    "lang": "TypeScript",
    "profile": "devtool",
@@ -9930,7 +9937,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 15941｜fork 1263｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-09-18",
+     "detail": "⭐ 15944｜fork 1263｜語言 TypeScript｜建立 2025-02-13｜最後推送 2026-09-18",
      "evidence": ""
     },
     {
@@ -9964,7 +9971,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 13 天內有更新",
+     "title": "最近 14 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-18"
     }
@@ -9975,7 +9982,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "eBPF-powered network observability for Kubernetes. Indexes L4/L7 traffic with full K8s context, decrypts TLS without keys. Queryable by AI agents via MCP and humans via dashboard.",
-   "stars": 12093,
+   "stars": 12094,
    "pushed": "2026-09-30",
    "lang": "Go",
    "profile": "code",
@@ -10024,7 +10031,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 12093｜fork 551｜語言 Go｜建立 2021-04-19｜最後推送 2026-09-30",
+     "detail": "⭐ 12094｜fork 550｜語言 Go｜建立 2021-04-19｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -10058,7 +10065,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -10069,7 +10076,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
-   "stars": 11760,
+   "stars": 11763,
    "pushed": "2025-12-15",
    "lang": "Python",
    "profile": "cloud",
@@ -10153,7 +10160,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 11760｜fork 1043｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15",
+     "detail": "⭐ 11763｜fork 1043｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15",
      "evidence": ""
     },
     {
@@ -10191,8 +10198,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Open source MCP Servers for AWS",
-   "stars": 9745,
-   "pushed": "2026-09-30",
+   "stars": 9746,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "cloud",
    "profile_zh": "雲端服務串接",
@@ -10254,7 +10261,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 9745｜fork 1781｜語言 Python｜建立 2025-03-21｜最後推送 2026-09-30",
+     "detail": "⭐ 9746｜fork 1784｜語言 Python｜建立 2025-03-21｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -10288,9 +10295,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -10299,8 +10306,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Automate your mobile devices with natural language commands - an LLM agnostic mobile Agent 🤖",
-   "stars": 9545,
-   "pushed": "2026-09-30",
+   "stars": 9556,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -10368,7 +10375,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 9545｜fork 1020｜語言 Python｜建立 2025-04-12｜最後推送 2026-09-30",
+     "detail": "⭐ 9556｜fork 1020｜語言 Python｜建立 2025-04-12｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -10404,7 +10411,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -10413,8 +10420,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
-   "stars": 9152,
-   "pushed": "2026-09-30",
+   "stars": 9281,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -10428,7 +10435,7 @@
    ],
    "pub": "網域驗證",
    "pub_kind": "domain",
-   "files": 377,
+   "files": 380,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -10438,9 +10445,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 44 個外部主機",
+     "title": "會連往 48 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "a.com、actor.example、actorpub.apify.actor、api.apify.com、apify-image-uploads-prod.s3.amazonaws.com、apify-image-uploads-prod.s3.us-east-1.amazonaws.com、apify.com、b.com、baldasseva--storybook-mcp.apify.actor、claude.ai…"
+     "evidence": "a.com、actor.example、actorpub.apify.actor、api.apify.com、api.example.test、apify-image-uploads-prod.s3.amazonaws.com、apify-image-uploads-prod.s3.us-east-1.amazonaws.com、apify.com、b.com、baldasseva--storybook-mcp.apify.actor…"
     },
     {
      "check": "供應鏈",
@@ -10473,7 +10480,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（197 則）",
+     "title": "未處理 issue 偏多（194 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -10488,7 +10495,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 9152｜fork 291｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-09-30",
+     "detail": "⭐ 9281｜fork 293｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -10508,7 +10515,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 262 段 description）",
+     "title": "未發現可疑工具描述（已掃描 279 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -10524,7 +10531,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -10533,8 +10540,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
-   "stars": 8468,
-   "pushed": "2026-09-30",
+   "stars": 8525,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -10550,7 +10557,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 56,
+   "files": 57,
    "crit": 0,
    "high": 0,
    "med": 2,
@@ -10600,13 +10607,6 @@
      "evidence": "scripts/verify-streamable-http.mjs、src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts"
     },
     {
-     "check": "維護",
-     "severity": "LOW",
-     "title": "未處理 issue 偏多（52 則）",
-     "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
-     "evidence": ""
-    },
-    {
      "check": "身分",
      "severity": "INFO",
      "title": "官方 registry：GitHub 帳號驗證",
@@ -10617,7 +10617,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 8468｜fork 743｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-09-30",
+     "detail": "⭐ 8525｜fork 747｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -10651,9 +10651,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -10662,7 +10662,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
-   "stars": 8442,
+   "stars": 8446,
    "pushed": "2026-05-08",
    "lang": "TypeScript",
    "profile": "code",
@@ -10753,7 +10753,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 8442｜fork 751｜語言 TypeScript｜建立 2025-03-29｜最後推送 2026-05-08",
+     "detail": "⭐ 8446｜fork 750｜語言 TypeScript｜建立 2025-03-29｜最後推送 2026-05-08",
      "evidence": ""
     },
     {
@@ -10780,7 +10780,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 145 天內有更新",
+     "title": "最近 146 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-05-08"
     }
@@ -10792,7 +10792,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": " Sui, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by the Move programming language",
    "stars": 7760,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-02",
    "lang": "Rust",
    "profile": "general",
    "profile_zh": "一般用途（未能明確判定）",
@@ -10831,7 +10831,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7760｜fork 11651｜語言 Rust｜建立 2021-11-09｜最後推送 2026-09-30",
+     "detail": "⭐ 7760｜fork 11650｜語言 Rust｜建立 2021-11-09｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -10860,7 +10860,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -10869,8 +10869,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP Server for Computer Use in Windows",
-   "stars": 7560,
-   "pushed": "2026-09-30",
+   "stars": 7598,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -10886,7 +10886,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 131,
+   "files": 135,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -10953,7 +10953,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7560｜fork 893｜語言 Python｜建立 2025-05-13｜最後推送 2026-09-30",
+     "detail": "⭐ 7598｜fork 894｜語言 Python｜建立 2025-05-13｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -10980,9 +10980,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -10991,8 +10991,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
-   "stars": 7535,
-   "pushed": "2026-09-30",
+   "stars": 7538,
+   "pushed": "2026-10-02",
    "lang": "JavaScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -11008,7 +11008,7 @@
    ],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 78,
+   "files": 80,
    "crit": 0,
    "high": 0,
    "med": 2,
@@ -11032,9 +11032,9 @@
     {
      "check": "供應鏈",
      "severity": "LOW",
-     "title": "有 5 個依賴未鎖定版本",
+     "title": "有 12 個依賴未鎖定版本",
      "detail": "依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。",
-     "evidence": "dotenv@^17.2.2、zod@^4.2.1、@types/node@^24.3.1、tsup@^8.5.0、typescript@^5.9.2"
+     "evidence": "@modelcontextprotocol/sdk@^1.29.0、dotenv@^17.2.2、fuse.js@^7.1.0、hono@^4.12.27、mcp-proxy@^6.5.1、undici@^7.28.0…"
     },
     {
      "check": "權限",
@@ -11060,7 +11060,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（149 則）",
+     "title": "未處理 issue 偏多（148 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -11075,7 +11075,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7535｜fork 897｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-09-30",
+     "detail": "⭐ 7538｜fork 898｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -11111,7 +11111,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -11150,7 +11150,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（175 則）",
+     "title": "未處理 issue 偏多（176 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -11165,7 +11165,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7305｜fork 1016｜語言 Go｜建立 2025-02-05｜最後推送 2026-09-30",
+     "detail": "⭐ 7305｜fork 1018｜語言 Go｜建立 2025-02-05｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -11199,7 +11199,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -11210,8 +11210,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Codebase intelligence for AI and humans: code health scores, auto-generated docs, git analytics, dead code detection, and architectural decisions via MCP.",
-   "stars": 7114,
-   "pushed": "2026-09-30",
+   "stars": 7120,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -11272,7 +11272,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（235 則）",
+     "title": "未處理 issue 偏多（231 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -11287,7 +11287,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 7114｜fork 758｜語言 Python｜建立 2026-03-23｜最後推送 2026-09-30",
+     "detail": "⭐ 7120｜fork 764｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -11330,7 +11330,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -11339,7 +11339,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Open-source context retrieval layer for AI agents",
-   "stars": 6561,
+   "stars": 6560,
    "pushed": "2026-06-05",
    "lang": "Python",
    "profile": "devtool",
@@ -11409,7 +11409,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 6561｜fork 824｜語言 Python｜建立 2024-12-24｜最後推送 2026-06-05",
+     "detail": "⭐ 6560｜fork 823｜語言 Python｜建立 2024-12-24｜最後推送 2026-06-05",
      "evidence": ""
     },
     {
@@ -11443,7 +11443,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 118 天內有更新",
+     "title": "最近 119 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-06-05"
     }
@@ -11455,7 +11455,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
    "stars": 5435,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -11531,7 +11531,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 5435｜fork 446｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-09-30",
+     "detail": "⭐ 5435｜fork 446｜語言 TypeScript｜建立 2026-04-12｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -11567,7 +11567,7 @@
      "severity": "INFO",
      "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -11576,7 +11576,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Exa MCP for web search and web crawling!",
-   "stars": 5066,
+   "stars": 5069,
    "pushed": "2026-09-30",
    "lang": "TypeScript",
    "profile": "browser",
@@ -11629,6 +11629,13 @@
      "evidence": "api/mcp.ts、api/well-known-oauth-protected-resource.ts、api/well-known-openai-apps-challenge.ts、src/runtime-server.ts、src/stdio.ts"
     },
     {
+     "check": "維護",
+     "severity": "LOW",
+     "title": "未處理 issue 偏多（51 則）",
+     "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
+     "evidence": ""
+    },
+    {
      "check": "身分",
      "severity": "INFO",
      "title": "官方 registry：網域驗證",
@@ -11639,7 +11646,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 5066｜fork 401｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-09-30",
+     "detail": "⭐ 5069｜fork 401｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -11673,7 +11680,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -11684,8 +11691,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MockServer is an HTTP(S) mock server and proxy for testing that lets you mock APIs, inspect and modify live traffic, and inject failures. It supports HTTP/1.1, HTTP/2, gRPC, WebSockets, TCP and more on a single port, with additional support for HTTP/3, message brokers, and AI/LLM APIs.",
-   "stars": 4979,
-   "pushed": "2026-09-30",
+   "stars": 4980,
+   "pushed": "2026-10-01",
    "lang": "Java",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -11711,9 +11718,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 17 個外部主機",
+     "title": "會連往 20 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "api.buildkite.com、api.nuget.org、blog.jamesdbloom.com、central.sonatype.com、dl.k8s.io、docs.rs、downloads.mock-server.com、get.helm.sh、maven.apache.org、mock-server.com…"
+     "evidence": "api.buildkite.com、api.buildkite.com.evil、api.nuget.org、blog.jamesdbloom.com、buildkite.com、central.sonatype.com、dl.k8s.io、docs.rs、downloads.mock-server.com、evil.example…"
     },
     {
      "check": "代理指令檔",
@@ -11754,7 +11761,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4979｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-30",
+     "detail": "⭐ 4980｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -11790,7 +11797,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -11799,8 +11806,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "The Firebase Command Line Tools",
-   "stars": 4473,
-   "pushed": "2026-09-30",
+   "stars": 4474,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -11861,7 +11868,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（1060 則）",
+     "title": "未處理 issue 偏多（1054 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -11876,7 +11883,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4473｜fork 1263｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-09-30",
+     "detail": "⭐ 4474｜fork 1263｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -11912,7 +11919,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -11921,7 +11928,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. Use cli for quick setup. Efficient token usage, advanced tools. Any C# method may be turned into a tool by a single line. Works with Claude Code, Gemini, Copilot, Cursor and any other absolutely for free.",
-   "stars": 4369,
+   "stars": 4373,
    "pushed": "2026-09-28",
    "lang": "C#",
    "profile": "devtool",
@@ -11991,7 +11998,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4369｜fork 386｜語言 C#｜建立 2025-04-02｜最後推送 2026-09-28",
+     "detail": "⭐ 4373｜fork 386｜語言 C#｜建立 2025-04-02｜最後推送 2026-09-28",
      "evidence": ""
     },
     {
@@ -12025,7 +12032,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-28"
     }
@@ -12036,8 +12043,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "",
-   "stars": 4340,
-   "pushed": "2026-09-25",
+   "stars": 4344,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -12046,7 +12053,7 @@
    "topics": [],
    "pub": "網域驗證",
    "pub_kind": "domain",
-   "files": 379,
+   "files": 382,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -12091,7 +12098,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（82 則）",
+     "title": "未處理 issue 偏多（83 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -12106,7 +12113,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4340｜fork 540｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-09-25",
+     "detail": "⭐ 4344｜fork 542｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -12140,9 +12147,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 5 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-25"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -12151,7 +12158,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Bulk port forwarding Kubernetes services for local development.",
-   "stars": 4172,
+   "stars": 4173,
    "pushed": "2026-09-15",
    "lang": "Go",
    "profile": "code",
@@ -12200,7 +12207,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 4172｜fork 237｜語言 Go｜建立 2018-08-05｜最後推送 2026-09-15",
+     "detail": "⭐ 4173｜fork 238｜語言 Go｜建立 2018-08-05｜最後推送 2026-09-15",
      "evidence": ""
     },
     {
@@ -12234,7 +12241,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 15 天內有更新",
+     "title": "最近 16 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-15"
     }
@@ -12245,8 +12252,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Token conscious database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite.",
-   "stars": 3587,
-   "pushed": "2026-09-28",
+   "stars": 3593,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -12329,7 +12336,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3587｜fork 310｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-09-28",
+     "detail": "⭐ 3593｜fork 311｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -12363,9 +12370,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-28"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -12471,7 +12478,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 4 天內有更新",
+     "title": "最近 5 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-27"
     }
@@ -12482,7 +12489,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
-   "stars": 3362,
+   "stars": 3363,
    "pushed": "2026-08-29",
    "lang": "TypeScript",
    "profile": "desktop",
@@ -12559,7 +12566,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3362｜fork 3674｜語言 TypeScript｜建立 2026-03-31｜最後推送 2026-08-29",
+     "detail": "⭐ 3363｜fork 3676｜語言 TypeScript｜建立 2026-03-31｜最後推送 2026-08-29",
      "evidence": ""
     },
     {
@@ -12593,7 +12600,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 32 天內有更新",
+     "title": "最近 33 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-29"
     }
@@ -12604,7 +12611,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private Plugin/Skill/Extension or MCP: hybrid semantic search, polyglot dependency graphs, symbol-level impact analysis & call-flow, interactive HTML viewer, cross-project & branch-aware search, DB/API/infra knowledge. 61% less tokens, 84% fewer calls, 37x faster. Cloud in beta.",
-   "stars": 3328,
+   "stars": 3331,
    "pushed": "2026-09-30",
    "lang": "TypeScript",
    "profile": "code",
@@ -12674,7 +12681,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3328｜fork 427｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-30",
+     "detail": "⭐ 3331｜fork 427｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -12708,7 +12715,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -12719,7 +12726,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "AI-native SwiftUI component library with full-stack recipes — connect via MCP for instant access.",
-   "stars": 3226,
+   "stars": 3227,
    "pushed": "2026-08-09",
    "lang": "Swift",
    "profile": "devtool",
@@ -12761,7 +12768,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3226｜fork 186｜語言 Swift｜建立 2025-12-15｜最後推送 2026-08-09",
+     "detail": "⭐ 3227｜fork 186｜語言 Swift｜建立 2025-12-15｜最後推送 2026-08-09",
      "evidence": ""
     },
     {
@@ -12788,7 +12795,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 52 天內有更新",
+     "title": "最近 53 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-09"
     }
@@ -12799,7 +12806,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "A local MCP server for agent literature work. Original-LaTeX section reads, BibTeX from arXiv metadata, and topic watches. Papers stay on disk. Search is optional.",
-   "stars": 3183,
+   "stars": 3185,
    "pushed": "2026-09-30",
    "lang": "Python",
    "profile": "devtool",
@@ -12869,7 +12876,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 3183｜fork 258｜語言 Python｜建立 2024-11-29｜最後推送 2026-09-30",
+     "detail": "⭐ 3185｜fork 257｜語言 Python｜建立 2024-11-29｜最後推送 2026-09-30",
      "evidence": ""
     },
     {
@@ -12903,7 +12910,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 2 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -12914,8 +12921,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Connect Supabase to your AI assistants",
-   "stars": 2925,
-   "pushed": "2026-09-30",
+   "stars": 2928,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -12962,7 +12969,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（131 則）",
+     "title": "未處理 issue 偏多（132 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -12977,7 +12984,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2925｜fork 413｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-09-30",
+     "detail": "⭐ 2928｜fork 414｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -13013,7 +13020,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -13022,8 +13029,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV — clean API, well-typed, MIT-licensed.",
-   "stars": 2756,
-   "pushed": "2026-09-30",
+   "stars": 2758,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "api",
    "profile_zh": "第三方 API 串接",
@@ -13057,7 +13064,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2756｜fork 498｜語言 Python｜建立 2022-12-24｜最後推送 2026-09-30",
+     "detail": "⭐ 2758｜fork 498｜語言 Python｜建立 2022-12-24｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -13086,7 +13093,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -13095,8 +13102,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Medplum is a healthcare platform that helps you quickly develop high-quality compliant applications.",
-   "stars": 2713,
-   "pushed": "2026-09-30",
+   "stars": 2718,
+   "pushed": "2026-10-02",
    "lang": "TypeScript",
    "profile": "general",
    "profile_zh": "一般用途（未能明確判定）",
@@ -13122,7 +13129,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（693 則）",
+     "title": "未處理 issue 偏多（688 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -13137,7 +13144,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2713｜fork 967｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-09-30",
+     "detail": "⭐ 2718｜fork 969｜語言 TypeScript｜建立 2021-04-21｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -13166,7 +13173,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -13175,8 +13182,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "React data visualization library for streaming, networks, and AI-assisted development",
-   "stars": 2708,
-   "pushed": "2026-09-30",
+   "stars": 2710,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -13252,7 +13259,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2708｜fork 139｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-09-30",
+     "detail": "⭐ 2710｜fork 140｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -13286,9 +13293,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -13394,7 +13401,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -13405,7 +13412,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Open source implementation and extension of Google Research’s PaperBanana for automated academic figures, diagrams, and research visuals, expanded to new domains like slide generation.",
-   "stars": 2386,
+   "stars": 2387,
    "pushed": "2026-09-17",
    "lang": "Python",
    "profile": "code",
@@ -13475,7 +13482,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2386｜fork 338｜語言 Python｜建立 2026-02-04｜最後推送 2026-09-17",
+     "detail": "⭐ 2387｜fork 338｜語言 Python｜建立 2026-02-04｜最後推送 2026-09-17",
      "evidence": ""
     },
     {
@@ -13509,7 +13516,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 13 天內有更新",
+     "title": "最近 14 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-17"
     }
@@ -13520,8 +13527,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
-   "stars": 2139,
-   "pushed": "2026-09-30",
+   "stars": 2140,
+   "pushed": "2026-10-01",
    "lang": "Go",
    "profile": "cloud",
    "profile_zh": "雲端服務串接",
@@ -13576,7 +13583,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2139｜fork 445｜語言 Go｜建立 2025-02-11｜最後推送 2026-09-30",
+     "detail": "⭐ 2140｜fork 446｜語言 Go｜建立 2025-02-11｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -13612,7 +13619,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -13621,7 +13628,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS SDKs. Hundreds of airlines plus the major booking sites, with per-flight reliability history. Free-cancellation hotel rates: hold the room with a small upfront charge, then pay the balance later by link, up to the hotel's own deadline.",
-   "stars": 2075,
+   "stars": 2077,
    "pushed": "2026-09-29",
    "lang": "Python",
    "profile": "devtool",
@@ -13691,7 +13698,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2075｜fork 139｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-29",
+     "detail": "⭐ 2077｜fork 139｜語言 Python｜建立 2026-03-01｜最後推送 2026-09-29",
      "evidence": ""
     },
     {
@@ -13718,7 +13725,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -13729,8 +13736,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "A guide on how to use the Figma MCP server",
-   "stars": 2032,
-   "pushed": "2026-09-30",
+   "stars": 2041,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -13785,7 +13792,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 2032｜fork 194｜語言 Python｜建立 2025-08-05｜最後推送 2026-09-30",
+     "detail": "⭐ 2041｜fork 196｜語言 Python｜建立 2025-08-05｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -13821,7 +13828,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -13830,7 +13837,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Official Microsoft Learn MCP Server and CLI tool – powering LLMs and AI agents with real-time, trusted Microsoft docs & code samples.",
-   "stars": 1922,
+   "stars": 1923,
    "pushed": "2026-09-29",
    "lang": "TypeScript",
    "profile": "browser",
@@ -13879,7 +13886,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1922｜fork 260｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-09-29",
+     "detail": "⭐ 1923｜fork 260｜語言 TypeScript｜建立 2025-06-09｜最後推送 2026-09-29",
      "evidence": ""
     },
     {
@@ -13913,7 +13920,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -13924,8 +13931,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "MCP server and Claude plugin for Postgres skills and documentation. Helps AI coding tools generate better PostgreSQL code.",
-   "stars": 1851,
-   "pushed": "2026-09-30",
+   "stars": 1853,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -13994,7 +14001,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1851｜fork 111｜語言 Python｜建立 2025-07-23｜最後推送 2026-09-30",
+     "detail": "⭐ 1853｜fork 111｜語言 Python｜建立 2025-07-23｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14030,7 +14037,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14039,8 +14046,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "One-stop shop for building AI-powered products and businesses with Stripe.",
-   "stars": 1850,
-   "pushed": "2026-09-30",
+   "stars": 1852,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -14102,7 +14109,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1850｜fork 349｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-09-30",
+     "detail": "⭐ 1852｜fork 349｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14136,9 +14143,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14148,7 +14155,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "☸️ The Open Testing Platform for AI-Driven Engineering Teams",
    "stars": 1662,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "Go",
    "profile": "cloud",
    "profile_zh": "雲端服務串接",
@@ -14174,7 +14181,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（58 則）",
+     "title": "未處理 issue 偏多（55 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -14189,7 +14196,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1662｜fork 179｜語言 Go｜建立 2021-07-01｜最後推送 2026-09-30",
+     "detail": "⭐ 1662｜fork 179｜語言 Go｜建立 2021-07-01｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14218,7 +14225,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14254,7 +14261,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（1409 則）",
+     "title": "未處理 issue 偏多（1406 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -14303,7 +14310,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 13 天內有更新",
+     "title": "最近 14 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-17"
     }
@@ -14314,8 +14321,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development.",
-   "stars": 1538,
-   "pushed": "2026-09-30",
+   "stars": 1540,
+   "pushed": "2026-10-01",
    "lang": "Go",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -14324,7 +14331,7 @@
    "topics": [],
    "pub": "GitHub 帳號驗證",
    "pub_kind": "github",
-   "files": 266,
+   "files": 280,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -14348,7 +14355,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（58 則）",
+     "title": "未處理 issue 偏多（55 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -14363,7 +14370,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1538｜fork 200｜語言 Go｜建立 2025-04-19｜最後推送 2026-09-30",
+     "detail": "⭐ 1540｜fork 200｜語言 Go｜建立 2025-04-19｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14383,7 +14390,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 69 段 description）",
+     "title": "未發現可疑工具描述（已掃描 88 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -14399,7 +14406,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14408,8 +14415,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Connect AI models like Claude & GPT with robots using MCP and ROS.",
-   "stars": 1480,
-   "pushed": "2026-09-30",
+   "stars": 1479,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -14492,7 +14499,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1480｜fork 214｜語言 Python｜建立 2025-04-11｜最後推送 2026-09-30",
+     "detail": "⭐ 1479｜fork 214｜語言 Python｜建立 2025-04-11｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14528,7 +14535,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14538,7 +14545,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Decision audit trail + persistent memory for AI trading agents. Outcome-weighted recall, tamper-evident SHA-256 chain with RFC 3161 anchoring, 20 MCP tools.",
    "stars": 1425,
-   "pushed": "2026-09-14",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -14607,7 +14614,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1425｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-09-14",
+     "detail": "⭐ 1425｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14627,7 +14634,7 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 102 段 description）",
+     "title": "未發現可疑工具描述（已掃描 104 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
@@ -14641,9 +14648,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 17 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-14"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14652,8 +14659,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Nx Console is the user interface for Nx & Lerna.",
-   "stars": 1413,
-   "pushed": "2026-09-30",
+   "stars": 1412,
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "general",
    "profile_zh": "一般用途（未能明確判定）",
@@ -14687,7 +14694,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1413｜fork 246｜語言 TypeScript｜建立 2018-06-18｜最後推送 2026-09-30",
+     "detail": "⭐ 1412｜fork 246｜語言 TypeScript｜建立 2018-06-18｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -14716,7 +14723,7 @@
      "severity": "INFO",
      "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -14725,8 +14732,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "3D & AR SDK for Android (Jetpack Compose + Filament), Apple (SwiftUI + RealityKit), Web, Flutter and React Native. Opens glTF/GLB, 3MF, STL, OBJ and PLY on Android and USDZ on Apple, at real size in AR. Assistant-ready: in-repo MCP server, AGENTS.md and llms.txt — no assistant-specific setup.",
-   "stars": 1329,
-   "pushed": "2026-10-01",
+   "stars": 1330,
+   "pushed": "2026-10-02",
    "lang": "Kotlin",
    "profile": "devtool",
    "profile_zh": "開發框架／工具鏈",
@@ -14752,7 +14759,7 @@
     {
      "check": "維護",
      "severity": "LOW",
-     "title": "未處理 issue 偏多（116 則）",
+     "title": "未處理 issue 偏多（114 則）",
      "detail": "可能代表維護者回應不及，遇到問題時求助無門。",
      "evidence": ""
     },
@@ -14767,7 +14774,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1329｜fork 248｜語言 Kotlin｜建立 2021-11-09｜最後推送 2026-10-01",
+     "detail": "⭐ 1330｜fork 248｜語言 Kotlin｜建立 2021-11-09｜最後推送 2026-10-02",
      "evidence": ""
     },
     {
@@ -14796,7 +14803,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-10-01"
+     "evidence": "最後推送 2026-10-02"
     }
    ]
   },
@@ -14805,7 +14812,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Build your HUMAN.md.",
-   "stars": 1324,
+   "stars": 1326,
    "pushed": "2026-09-25",
    "lang": "Python",
    "profile": "devtool",
@@ -14882,7 +14889,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 1324｜fork 92｜語言 Python｜建立 2026-07-10｜最後推送 2026-09-25",
+     "detail": "⭐ 1326｜fork 92｜語言 Python｜建立 2026-07-10｜最後推送 2026-09-25",
      "evidence": ""
     },
     {
@@ -14916,7 +14923,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 5 天內有更新",
+     "title": "最近 6 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-25"
     }
@@ -15024,7 +15031,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 4 天內有更新",
+     "title": "最近 5 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-27"
     }
@@ -15036,7 +15043,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Open-source platform for 3D AI agents. Turn text or a photo into a rigged, animated GLB avatar, give it an LLM brain, memory and a wallet, and embed it anywhere with one web component. Remote MCP server, x402 payments, Three.js, browser-native.",
    "stars": 218,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "JavaScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -15070,7 +15077,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 218｜fork 54｜語言 JavaScript｜建立 2026-01-08｜最後推送 2026-09-30",
+     "detail": "⭐ 218｜fork 55｜語言 JavaScript｜建立 2026-01-08｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -15097,9 +15104,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -15108,7 +15115,7 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "NSE BSE Indian Stock Market Data MCP server — search, screen & analyze all 8,200+ NSE/BSE stocks with 52 tools: live quotes, financials, technicals, 326-ratio screener, FII/DII flows, options IV, IPOs & portfolio tracking. Works with Claude, ChatGPT, Cursor & any MCP client",
-   "stars": 132,
+   "stars": 134,
    "pushed": "2026-09-27",
    "lang": "TypeScript",
    "profile": "code",
@@ -15164,7 +15171,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 132｜fork 28｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-09-27",
+     "detail": "⭐ 134｜fork 28｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-09-27",
      "evidence": ""
     },
     {
@@ -15198,7 +15205,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 4 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-27"
     }
@@ -15282,8 +15289,8 @@
    "verdict": "🟢 未發現明顯風險",
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart of the European economy",
-   "stars": 59,
-   "pushed": "2026-09-30",
+   "stars": 60,
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "code",
    "profile_zh": "程式碼／版控工具",
@@ -15299,7 +15306,7 @@
    ],
    "pub": "網域驗證",
    "pub_kind": "domain",
-   "files": 169,
+   "files": 180,
    "crit": 0,
    "high": 0,
    "med": 1,
@@ -15309,9 +15316,9 @@
     {
      "check": "權限",
      "severity": "MEDIUM",
-     "title": "會連往 36 個外部主機",
+     "title": "會連往 37 個外部主機",
      "detail": "確認這些連線是功能必需的，而不是把你的資料送到第三方。",
-     "evidence": "api.example、api.example.invalid、api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai、client.example.test…"
+     "evidence": "agent-plugins.org、api.example、api.example.invalid、api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai…"
     },
     {
      "check": "權限",
@@ -15345,7 +15352,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 59｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-30",
+     "detail": "⭐ 60｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -15365,23 +15372,23 @@
     {
      "check": "工具描述投毒",
      "severity": "INFO",
-     "title": "未發現可疑工具描述（已掃描 489 段 description）",
+     "title": "未發現可疑工具描述（已掃描 511 段 description）",
      "detail": "沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。",
      "evidence": ""
     },
     {
      "check": "代理指令檔",
      "severity": "INFO",
-     "title": "已掃描 22 個代理指令檔",
+     "title": "已掃描 28 個代理指令檔",
      "detail": "這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。",
-     "evidence": "GEMINI.md（Gemini CLI 指令）、skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））…"
+     "evidence": "GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/reconciliation-cockpit/SKILL.md（Agent Skill 指令（SKILL.md））…"
     },
     {
      "check": "維護",
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -15459,7 +15466,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 89 天內有更新",
+     "title": "最近 90 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-03"
     }
@@ -15567,7 +15574,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 20 天內有更新",
+     "title": "最近 21 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-10"
     }
@@ -15678,7 +15685,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 82 天內有更新",
+     "title": "最近 83 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-10"
     }
@@ -15786,7 +15793,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -15908,7 +15915,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 18 天內有更新",
+     "title": "最近 19 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-13"
     }
@@ -16002,7 +16009,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 2 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -16110,7 +16117,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 141 天內有更新",
+     "title": "最近 142 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-05-12"
     }
@@ -16210,7 +16217,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 85 天內有更新",
+     "title": "最近 86 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-07"
     }
@@ -16325,7 +16332,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 0 天內有更新",
+     "title": "最近 1 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-30"
     }
@@ -16433,7 +16440,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 10 天內有更新",
+     "title": "最近 11 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-21"
     }
@@ -16534,7 +16541,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 20 天內有更新",
+     "title": "最近 21 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-10"
     }
@@ -16546,7 +16553,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Unified MCP server for email access across Gmail, Outlook, iCloud, and IMAP",
    "stars": 22,
-   "pushed": "2026-09-27",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -16608,7 +16615,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 22｜fork 17｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-09-27",
+     "detail": "⭐ 22｜fork 17｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -16642,9 +16649,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-27"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -16750,7 +16757,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-28"
     }
@@ -16851,7 +16858,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 27 天內有更新",
+     "title": "最近 28 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-04"
     }
@@ -16863,7 +16870,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Production-ready MCP connectors for popular SaaS tools. Works with Claude Desktop, Cursor, Rebel, and any MCP host.",
    "stars": 12,
-   "pushed": "2026-09-29",
+   "pushed": "2026-10-01",
    "lang": "TypeScript",
    "profile": "browser",
    "profile_zh": "瀏覽器／網頁自動化",
@@ -16939,7 +16946,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 12｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-09-29",
+     "detail": "⭐ 12｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -16966,9 +16973,9 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-29"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -17149,7 +17156,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 17 天內有更新",
+     "title": "最近 18 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-13"
     }
@@ -17236,7 +17243,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 40 天內有更新",
+     "title": "最近 41 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-21"
     }
@@ -17316,7 +17323,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 1 天內有更新",
+     "title": "最近 2 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -17424,7 +17431,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 151 天內有更新",
+     "title": "最近 152 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-05-03"
     }
@@ -17436,7 +17443,7 @@
    "why": "常見風險樣式均未命中；仍建議只給最小權限憑證。",
    "desc": "Docker-MCP-Server - An MCP server covering the full management surface of Docker.  Manage, maintain and audit multiple docker environments with ease.",
    "stars": 8,
-   "pushed": "2026-09-30",
+   "pushed": "2026-10-01",
    "lang": "Python",
    "profile": "desktop",
    "profile_zh": "桌面／終端控制",
@@ -17485,7 +17492,7 @@
      "severity": "LOW",
      "title": "會執行外部指令 / 開子行程（符合宣稱用途）",
      "detail": "這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。",
-     "evidence": "docker_mcp/server.py、docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/check-repo-hygiene.py"
+     "evidence": "docker_mcp/server.py、docker_mcp/tools/_cli.py、docker_mcp/tools/_ssh_proxy.py、docker_mcp/tools/compose.py、scripts/measure-comparison-figures.py"
     },
     {
      "check": "身分",
@@ -17498,7 +17505,7 @@
      "check": "身分",
      "severity": "INFO",
      "title": "倉庫基本資料",
-     "detail": "⭐ 8｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-09-30",
+     "detail": "⭐ 8｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-10-01",
      "evidence": ""
     },
     {
@@ -17534,7 +17541,7 @@
      "severity": "INFO",
      "title": "最近 0 天內有更新",
      "detail": "專案仍在活躍維護中。",
-     "evidence": "最後推送 2026-09-30"
+     "evidence": "最後推送 2026-10-01"
     }
    ]
   },
@@ -17640,7 +17647,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 24 天內有更新",
+     "title": "最近 25 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-07"
     }
@@ -17741,7 +17748,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 29 天內有更新",
+     "title": "最近 30 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-01"
     }
@@ -17814,7 +17821,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 42 天內有更新",
+     "title": "最近 43 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-19"
     }
@@ -18002,7 +18009,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 8 天內有更新",
+     "title": "最近 9 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-22"
     }
@@ -18089,7 +18096,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 6 天內有更新",
+     "title": "最近 7 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-25"
     }
@@ -18190,7 +18197,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 73 天內有更新",
+     "title": "最近 74 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-19"
     }
@@ -18305,7 +18312,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 2 天內有更新",
+     "title": "最近 3 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-29"
     }
@@ -18420,7 +18427,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 99 天內有更新",
+     "title": "最近 100 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-06-24"
     }
@@ -18535,7 +18542,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 3 天內有更新",
+     "title": "最近 4 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-28"
     }
@@ -18737,7 +18744,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 52 天內有更新",
+     "title": "最近 53 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-08-10"
     }
@@ -18960,7 +18967,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 93 天內有更新",
+     "title": "最近 94 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-06-30"
     }
@@ -19054,7 +19061,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 77 天內有更新",
+     "title": "最近 78 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-07-15"
     }
@@ -19147,7 +19154,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 5 天內有更新",
+     "title": "最近 6 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-25"
     }
@@ -19502,7 +19509,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 12 天內有更新",
+     "title": "最近 13 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-18"
     }
@@ -19589,7 +19596,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 125 天內有更新",
+     "title": "最近 126 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-05-28"
     }
@@ -19718,7 +19725,7 @@
     {
      "check": "維護",
      "severity": "INFO",
-     "title": "最近 14 天內有更新",
+     "title": "最近 15 天內有更新",
      "detail": "專案仍在活躍維護中。",
      "evidence": "最後推送 2026-09-16"
     }

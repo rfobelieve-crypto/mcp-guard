@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5391 / 626 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 5392 / 626 |
+| 最後更新 | 2026-10-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-01 00:24 |
+| 檢查時間 | 2026-10-02 00:33 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh、financetoolkit/mcp_server/setup_model.py`
+> 證據：`.github/workflows/unit_tests.yml、docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -62,7 +62,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/mcp_server/auth_model.py`
+> 證據：`financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/helpers.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -82,11 +82,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5391｜fork 626｜語言 Python｜建立 2019-04-08｜最後推送 2026-09-29
+⭐ 5392｜fork 626｜語言 Python｜建立 2019-04-08｜最後推送 2026-10-01
 
 ---
 

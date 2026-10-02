@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
-| 星數 / Fork | ⭐ 59 / 13 |
-| 最後更新 | 2026-09-30 |
+| 星數 / Fork | ⭐ 60 / 13 |
+| 最後更新 | 2026-10-01 |
 | 授權 | MIT License |
-| 已掃描檔案 | 169 個 |
-| 檢查時間 | 2026-10-01 00:26 |
+| 已掃描檔案 | 180 個 |
+| 檢查時間 | 2026-10-02 00:36 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 37 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example、api.example.invalid、api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai、client.example.test…`
+> 證據：`agent-plugins.org、api.example、api.example.invalid、api.norman.finance、api.partner.example、app.norman.finance、attacker.com、attacker.example、chatgpt.com、claude.ai…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -42,13 +42,13 @@
 
 > 證據：`tests/test_legacy_client_compatibility.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 22 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 28 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`GEMINI.md（Gemini CLI 指令）、skills/accounting-cutover/SKILL.md（Agent Skill 指令（SKILL.md））、skills/categorize-transactions/SKILL.md（Agent Skill 指令（SKILL.md））、skills/company-incorporation/SKILL.md（Agent Skill 指令（SKILL.md））、skills/corporate-tax-registration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/create-invoice/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/reconciliation-cockpit/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 489 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 511 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-30`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 59｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-09-30
+⭐ 60｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-01
 
 ---
 

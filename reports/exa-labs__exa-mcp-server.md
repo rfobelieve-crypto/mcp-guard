@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `exa-labs/exa-mcp-server` |
 | 專案說明 | Exa MCP for web search and web crawling! |
-| 星數 / Fork | ⭐ 5066 / 401 |
+| 星數 / Fork | ⭐ 5069 / 401 |
 | 最後更新 | 2026-09-30 |
 | 授權 | MIT License |
 | npm 套件 | `exa-mcp-server` |
 | 已掃描檔案 | 79 個 |
-| 檢查時間 | 2026-10-01 00:24 |
+| 檢查時間 | 2026-10-02 00:34 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 2　⚪ 資訊 7
+🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -43,6 +43,10 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`api/mcp.ts、api/well-known-oauth-protected-resource.ts、api/well-known-openai-apps-challenge.ts、src/runtime-server.ts、src/stdio.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -63,7 +67,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -77,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5066｜fork 401｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-09-30
+⭐ 5069｜fork 401｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-09-30
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 52816 / 5274 |
-| 最後更新 | 2026-09-30 |
+| 星數 / Fork | ⭐ 52861 / 5280 |
+| 最後更新 | 2026-10-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 304 個 |
-| 檢查時間 | 2026-10-01 00:22 |
+| 已掃描檔案 | 306 個 |
+| 檢查時間 | 2026-10-02 00:32 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`rollup.config.js、scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts、scripts/verify-npm-package.js`
+> 證據：`rollup.config.js、scripts/clean-submodules.ts、scripts/prepare.ts、scripts/test.js、scripts/update-lighthouse.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`rollup.config.js、scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/profile/profile_mcp.ts、scripts/test.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（108 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（101 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,7 +75,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/a11y-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools-cli/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools/SKILL.md（Agent Skill 指令（SKILL.md））、skills/cookie-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/debug-optimize-lcp/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 275 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 277 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-30`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 52816｜fork 5274｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-09-30
+⭐ 52861｜fork 5280｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-10-01
 
 ---
 

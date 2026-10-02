@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4979 / 1116 |
-| 最後更新 | 2026-09-30 |
+| 星數 / Fork | ⭐ 4980 / 1116 |
+| 最後更新 | 2026-10-01 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 538 個 |
-| 檢查時間 | 2026-10-01 00:24 |
+| 檢查時間 | 2026-10-02 00:34 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`.opencode/skills/renew-test-certs/SKILL.md｜「- `authentication/mtls/leaf-key.pem` is **PKCS#1** (`-----BEGIN RSA PRIVATE KEY-----`) and is consumed by `PEMToFileTest` for traditional-RSA encod…」`
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.buildkite.com、api.nuget.org、blog.jamesdbloom.com、central.sonatype.com、dl.k8s.io、docs.rs、downloads.mock-server.com、get.helm.sh、maven.apache.org、mock-server.com…`
+> 證據：`api.buildkite.com、api.buildkite.com.evil、api.nuget.org、blog.jamesdbloom.com、buildkite.com、central.sonatype.com、dl.k8s.io、docs.rs、downloads.mock-server.com、evil.example…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-30`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4979｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-09-30
+⭐ 4980｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-01
 
 ---
 

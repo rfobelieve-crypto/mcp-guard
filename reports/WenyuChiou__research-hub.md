@@ -7,10 +7,10 @@
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
 | 星數 / Fork | ⭐ 59 / 10 |
-| 最後更新 | 2026-09-27 |
+| 最後更新 | 2026-10-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-01 00:28 |
+| 檢查時間 | 2026-10-02 00:38 |
 
 ## 風險摘要
 
@@ -30,7 +30,7 @@
 
 > 證據：`scripts/verify_setup.py、src/research_hub/cli_paper.py、src/research_hub/cli_search.py、src/research_hub/dashboard/executor.py、src/research_hub/defuddle_extract.py`
 
-### 🟡 中｜[權限] 會連往 44 個外部主機
+### 🟡 中｜[權限] 會連往 45 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/verify_setup.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py、src/research_hub/cli_pipeline.py、src/research_hub/cli_search.py`
+> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py、src/research_hub/cli_pipeline.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 28 個代理指令檔
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-10-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 59｜fork 10｜語言 Python｜建立 2026-04-06｜最後推送 2026-09-27
+⭐ 59｜fork 10｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-01
 
 ---
 
