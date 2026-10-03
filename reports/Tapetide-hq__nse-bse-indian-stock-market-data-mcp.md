@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Tapetide-hq/nse-bse-indian-stock-market-data-mcp` |
 | 專案說明 | NSE BSE Indian Stock Market Data MCP server — search, screen & analyze all 8,200 |
-| 星數 / Fork | ⭐ 134 / 29 |
+| 星數 / Fork | ⭐ 134 / 30 |
 | 最後更新 | 2026-10-02 |
 | 授權 | MIT License |
 | npm 套件 | `tapetide-mcp` |
 | 已掃描檔案 | 11 個 |
-| 檢查時間 | 2026-10-03 00:17 |
+| 檢查時間 | 2026-10-03 23:39 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 134｜fork 29｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-02
+⭐ 134｜fork 30｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-02
 
 ---
 

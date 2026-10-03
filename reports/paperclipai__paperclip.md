@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 96290 / 16309 |
+| 星數 / Fork | ⭐ 96742 / 16384 |
 | 最後更新 | 2026-10-03 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 502 個 |
-| 檢查時間 | 2026-10-03 00:11 |
+| 檢查時間 | 2026-10-03 23:32 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/authorize-storybook-deploy.cjs、.github/scripts/check-pr-coauthors.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（6282 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（6336 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 96290｜fork 16309｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-03
+⭐ 96742｜fork 16384｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-03
 
 ---
 

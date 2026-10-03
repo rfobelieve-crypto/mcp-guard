@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Vrun-design/openflowkit` |
 | 專案說明 | 100% Free, Open-source local-first AI diagramming for architecture diagrams and  |
-| 星數 / Fork | ⭐ 826 / 171 |
-| 最後更新 | 2026-09-25 |
+| 星數 / Fork | ⭐ 830 / 171 |
+| 最後更新 | 2026-10-03 |
 | 授權 | MIT License |
 | npm 套件 | `openflowkit`（registry 查無） |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-10-03 00:16 |
+| 檢查時間 | 2026-10-03 23:38 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`api.example.com、app.openflowkit.com、cdn.simpleicons.org、docs.openflowkit.com、openflowkit.com、simpleicons.org、static.modelcontextprotocol.io、us.i.posthog.com、www.figma.com、www.sitemaps.org…`
 
-### 🔵 低｜[供應鏈] 有 61 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 62 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-25`
+> 證據：`最後推送 2026-10-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 826｜fork 171｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-25
+⭐ 830｜fork 171｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-03
 
 ---
 

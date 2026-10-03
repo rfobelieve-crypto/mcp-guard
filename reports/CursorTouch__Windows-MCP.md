@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 7620 / 895 |
-| 最後更新 | 2026-10-02 |
+| 星數 / Fork | ⭐ 7653 / 896 |
+| 最後更新 | 2026-10-03 |
 | 授權 | MIT License |
-| 已掃描檔案 | 135 個 |
-| 檢查時間 | 2026-10-03 00:10 |
+| 已掃描檔案 | 153 個 |
+| 檢查時間 | 2026-10-03 23:31 |
 
 ## 風險摘要
 
@@ -48,17 +48,17 @@
 
 > 證據：`src/windows_mcp/__main__.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py、tests/test_app_tool.py`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/config.py、src/windows_mcp/desktop/flash_overlay.py、src/windows_mcp/desktop/screenshot.py、src/windows_mcp/desktop/service.py`
-
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/windows_mcp/filesystem/service.py、src/windows_mcp/infrastructure/eventloop.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py`
+> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control.py、src/windows_mcp/desktop/control_hooks.py、src/windows_mcp/desktop/control_win32.py、src/windows_mcp/filesystem/service.py`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/config.py、src/windows_mcp/desktop/control_overlay_art.py、src/windows_mcp/desktop/flash_overlay.py、src/windows_mcp/desktop/screenshot.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -76,11 +76,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-02`
+> 證據：`最後推送 2026-10-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7620｜fork 895｜語言 Python｜建立 2025-05-13｜最後推送 2026-10-02
+⭐ 7653｜fork 896｜語言 Python｜建立 2025-05-13｜最後推送 2026-10-03
 
 ---
 

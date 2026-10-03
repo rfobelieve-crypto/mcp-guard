@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `friendlygeorge/docker-mcp-server` |
 | 專案說明 | Docker MCP server designed for agents that need their containers to stay running |
-| 星數 / Fork | ⭐ 5 / 1 |
+| 星數 / Fork | ⭐ 4 / 1 |
 | 最後更新 | 2026-06-24 |
 | 授權 | MIT License |
 | npm 套件 | `@supernova123/docker-mcp-server` |
 | 已掃描檔案 | 55 個 |
-| 檢查時間 | 2026-10-03 00:17 |
+| 檢查時間 | 2026-10-03 23:39 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 101 天內有更新
+### ⚪ 資訊｜[維護] 最近 102 天內有更新
 
 專案仍在活躍維護中。
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-06-10｜最後推送 2026-06-24
+⭐ 4｜fork 1｜語言 TypeScript｜建立 2026-06-10｜最後推送 2026-06-24
 
 ---
 

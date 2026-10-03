@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A local MCP server for agent literature work. Original-LaTeX section reads, BibT |
-| 星數 / Fork | ⭐ 3186 / 256 |
-| 最後更新 | 2026-10-02 |
+| 星數 / Fork | ⭐ 3187 / 256 |
+| 最後更新 | 2026-10-03 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 96 個 |
-| 檢查時間 | 2026-10-03 00:13 |
+| 已掃描檔案 | 99 個 |
+| 檢查時間 | 2026-10-03 23:35 |
 
 ## 風險摘要
 
@@ -40,7 +40,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py`
+> 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py、src/arxiv_mcp_server/config.py、tests/test_blocker_fixes.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-02`
+> 證據：`最後推送 2026-10-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3186｜fork 256｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-02
+⭐ 3187｜fork 256｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-03
 
 ---
 

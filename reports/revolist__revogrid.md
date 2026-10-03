@@ -7,11 +7,11 @@
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
 | 星數 / Fork | ⭐ 3447 / 212 |
-| 最後更新 | 2026-09-27 |
+| 最後更新 | 2026-10-03 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
 | 已掃描檔案 | 246 個 |
-| 檢查時間 | 2026-10-03 00:13 |
+| 檢查時間 | 2026-10-03 23:34 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@
 
 > 證據：`scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/package-version.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-27`
+> 證據：`最後推送 2026-10-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3447｜fork 212｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-09-27
+⭐ 3447｜fork 212｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-10-03
 
 ---
 
