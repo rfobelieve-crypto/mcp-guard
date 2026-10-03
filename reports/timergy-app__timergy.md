@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `@timergy/mcp` |
 | 已掃描檔案 | 9 個 |
-| 檢查時間 | 2026-10-02 00:38 |
+| 檢查時間 | 2026-10-03 00:17 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`api.timergy.com、glama.ai、static.modelcontextprotocol.io、timergy.com`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

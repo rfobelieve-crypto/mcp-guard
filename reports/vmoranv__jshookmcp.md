@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2021 / 459 |
-| 最後更新 | 2026-10-01 |
+| 星數 / Fork | ⭐ 2019 / 458 |
+| 最後更新 | 2026-10-02 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-02 00:35 |
+| 檢查時間 | 2026-10-03 00:14 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -65,11 +65,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tools.js、scripts/count-tools.mjs、scripts/generate-domains-index.mjs、scripts/runtime-probes/phases/browser/page-interaction.mjs、scripts/runtime-probes/phases/runtime-observability/console-intercept-jsdom.mjs`
 
-### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
-這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
+這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 65 段 description）
+> 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））`
+
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 66 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +85,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-01`
+> 證據：`最後推送 2026-10-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2021｜fork 459｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-01
+⭐ 2019｜fork 458｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-02
 
 ---
 

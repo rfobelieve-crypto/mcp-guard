@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
-| 星數 / Fork | ⭐ 1425 / 168 |
-| 最後更新 | 2026-10-01 |
+| 星數 / Fork | ⭐ 1422 / 168 |
+| 最後更新 | 2026-10-02 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-02 00:36 |
+| 檢查時間 | 2026-10-03 00:15 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 23 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`alembic.sqlalchemy.org、api.binance.com、api.deepseek.com、api.etherscan.io、cdn.jsdelivr.net、data-api.binance.vision、eslint.org、freetsa.org、glama.ai、locize.com…`
+> 證據：`alembic.sqlalchemy.org、api.alpaca.markets、api.binance.com、api.deepseek.com、api.etherscan.io、api.hyperliquid.xyz、cdn.jsdelivr.net、data-api.binance.vision、eslint.org、freetsa.org…`
 
 ### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-01`
+> 證據：`最後推送 2026-10-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1425｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-10-01
+⭐ 1422｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-10-02
 
 ---
 

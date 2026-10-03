@@ -7,11 +7,11 @@
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Open-source Apple Health MCP server for the MetricBridge iOS app: query 190 Heal |
 | 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-09-03 |
+| 最後更新 | 2026-10-02 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 37 個 |
-| 檢查時間 | 2026-10-02 00:36 |
+| 已掃描檔案 | 46 個 |
+| 檢查時間 | 2026-10-03 00:16 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、cli.test.mjs、correlate.test.mjs、events.test.mjs`
+> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、cli.test.mjs、correlate.test.mjs、envelope.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apply-mcp-config.test.mjs、cli.test.mjs、demo.test.mjs、entrypoint.test.mjs、healthstore.test.mjs`
+> 證據：`apply-mcp-config.test.mjs、cli.test.mjs、demo.test.mjs、entrypoint.test.mjs、envelope.test.mjs`
 
 ### 🟡 中｜[權限] 會連往 7 個外部主機
 
@@ -63,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 28 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-03`
+> 證據：`最後推送 2026-10-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-09-03
+⭐ 5｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-10-02
 
 ---
 

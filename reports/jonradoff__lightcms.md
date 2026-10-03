@@ -7,14 +7,14 @@
 | 稽核對象 | `jonradoff/lightcms` |
 | 專案說明 | Self-hosted CMS that works human or headless: full admin UI plus REST and MCP AP |
 | 星數 / Fork | ⭐ 31 / 6 |
-| 最後更新 | 2026-07-07 |
+| 最後更新 | 2026-10-02 |
 | 授權 | MIT License |
-| 已掃描檔案 | 241 個 |
-| 檢查時間 | 2026-10-02 00:37 |
+| 已掃描檔案 | 244 個 |
+| 檢查時間 | 2026-10-03 00:16 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 1　🔵 低 1　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -22,17 +22,11 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.cloudflare.com、api.resend.com、api.voyageai.com、cdn.jsdelivr.net、claude.ai、creativecommons.org、dash.voyageai.com、evil.com、ex.com…`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`internal/handlers/admin_templates.go`
+> 證據：`api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、claude.ai、creativecommons.org、evil.com、ex.com、example.net…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`internal/services/search.go`
 
@@ -42,11 +36,11 @@
 
 > 證據：`.claude/projects/-Users-jonradoff-lightcms/memory/MEMORY.md（AI 客戶端設定目錄下的指令檔）、.claude/projects/-Users-jonradoff-lightcms/memory/feedback_test_database.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 143 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 146 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -56,11 +50,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 86 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-07`
+> 證據：`最後推送 2026-10-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +64,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-07-07
+⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-10-02
 
 ---
 
