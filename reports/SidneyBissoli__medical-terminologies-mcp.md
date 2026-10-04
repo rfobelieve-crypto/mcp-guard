@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
-| 專案說明 | Unified MCP server for seven medical terminologies (ICD-11, SNOMED CT, LOINC, Rx |
+| 專案說明 | Unified MCP server for six medical terminologies (ICD-11, LOINC, RxNorm, MeSH, A |
 | 星數 / Fork | ⭐ 15 / 5 |
-| 最後更新 | 2026-10-03 |
+| 最後更新 | 2026-10-04 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
-| 已掃描檔案 | 221 個 |
-| 檢查時間 | 2026-10-03 23:37 |
+| 已掃描檔案 | 216 個 |
+| 檢查時間 | 2026-10-04 23:55 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 39 個外部主機
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.test、atcddd.fhi.no、browser.ihtsdotools.org、clinicaltables.nlm.nih.gov、confluence.ihtsdotools.org、creativecommons.org、exemplo.invalid、glama.ai、icd.who.int、icdaccessmanagement.who.int…`
+> 證據：`api.example.test、atcddd.fhi.no、clinicaltables.nlm.nih.gov、creativecommons.org、dev.to、exemplo.invalid、glama.ai、icd.who.int、icdaccessmanagement.who.int、icdcdn.who.int…`
 
 ### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`package.json、scripts/smoke-mcp.mjs、src/clients/snomed-client.contract.test.ts、src/clients/snomed-client.ts、src/clients/who-client.contract.test.ts`
+> 證據：`package.json、scripts/smoke-mcp.mjs、src/clients/who-client.contract.test.ts、src/clients/who-client.ts、src/integration/live-apis.integration.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 57 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 44 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-03
+⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-04
 
 ---
 

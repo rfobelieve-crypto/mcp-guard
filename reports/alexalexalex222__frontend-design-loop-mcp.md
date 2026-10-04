@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `alexalexalex222/frontend-design-loop-mcp` |
 | 專案說明 | Design-first MCP for frontend improvement, screenshot-grounded refinement, and p |
-| 星數 / Fork | ⭐ 1 / 0 |
+| 星數 / Fork | ⭐ 1 / 1 |
 | 最後更新 | 2026-03-19 |
 | 授權 | MIT License |
 | 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-10-03 23:38 |
+| 檢查時間 | 2026-10-04 23:56 |
 
 ## 風險摘要
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 0｜語言 Python｜建立 2026-03-08｜最後推送 2026-03-19
+⭐ 1｜fork 1｜語言 Python｜建立 2026-03-08｜最後推送 2026-03-19
 
 ---
 

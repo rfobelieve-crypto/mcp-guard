@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 45747 / 3759 |
-| 最後更新 | 2026-10-03 |
+| 星數 / Fork | ⭐ 45792 / 3764 |
+| 最後更新 | 2026-10-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-03 23:32 |
+| 檢查時間 | 2026-10-04 23:50 |
 
 ## 風險摘要
 
@@ -38,21 +38,21 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/issue-labeler.yml、pkg/npm/install.js、pkg/npm/test/install-failure.test.js、pkg/npm/test/package-publication.test.js、pkg/npm/test/windows-launcher.test.js`
+> 證據：`.github/workflows/issue-labeler.yml、pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/npm/test/archive-limits.test.js、pkg/npm/test/install-failure.test.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`pkg/npm/bin.js、pkg/npm/install.js、pkg/npm/test/windows-launcher.test.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、pkg/pypi/tests/test_cli.py`
+> 證據：`pkg/npm/bin.js、pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/npm/test/windows-launcher.test.js、pkg/pypi/src/codebase_memory_mcp/_cli.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`pkg/npm/install.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、pkg/pypi/tests/test_cli.py、scripts/audit-grammar-security.sh、scripts/ci/check-virustotal.sh`
+> 證據：`pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、pkg/pypi/tests/test_cli.py、scripts/audit-grammar-security.sh`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（668 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（635 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 45747｜fork 3759｜語言 C｜建立 2026-02-24｜最後推送 2026-10-03
+⭐ 45792｜fork 3764｜語言 C｜建立 2026-02-24｜最後推送 2026-10-04
 
 ---
 

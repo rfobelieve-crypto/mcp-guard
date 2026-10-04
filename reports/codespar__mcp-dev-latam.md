@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `codespar/mcp-dev-latam` |
 | 專案說明 | Open-source MCP servers for Latin American commerce — Pix, NF-e, banking, fiscal |
-| 星數 / Fork | ⭐ 271 / 50 |
+| 星數 / Fork | ⭐ 272 / 50 |
 | 最後更新 | 2026-09-27 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-dev-latam`（registry 查無） |
 | 已掃描檔案 | 460 個 |
-| 檢查時間 | 2026-10-03 23:36 |
+| 檢查時間 | 2026-10-04 23:55 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 8 天內有更新
 
 專案仍在活躍維護中。
 
@@ -73,7 +73,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 271｜fork 50｜語言 TypeScript｜建立 2026-03-30｜最後推送 2026-09-27
+⭐ 272｜fork 50｜語言 TypeScript｜建立 2026-03-30｜最後推送 2026-09-27
 
 ---
 

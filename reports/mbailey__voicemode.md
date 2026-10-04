@@ -10,7 +10,7 @@
 | 最後更新 | 2026-10-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-03 23:36 |
+| 檢查時間 | 2026-10-04 23:54 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 > 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -78,7 +78,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 

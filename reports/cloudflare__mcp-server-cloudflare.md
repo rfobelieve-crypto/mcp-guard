@@ -11,7 +11,7 @@
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cloudflare/mcp-server-cloudflare` |
 | 已掃描檔案 | 382 個 |
-| 檢查時間 | 2026-10-03 23:34 |
+| 檢查時間 | 2026-10-04 23:53 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/tools/src/changesets.ts、packages/tools/src/test/setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（84 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（85 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +71,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 4 天內有更新
 
 專案仍在活躍維護中。
 

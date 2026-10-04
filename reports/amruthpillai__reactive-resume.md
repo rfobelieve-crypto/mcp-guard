@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 43728 / 4810 |
-| 最後更新 | 2026-10-03 |
+| 星數 / Fork | ⭐ 43768 / 4810 |
+| 最後更新 | 2026-10-04 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-10-03 23:32 |
+| 檢查時間 | 2026-10-04 23:51 |
 
 ## 風險摘要
 
@@ -19,31 +19,31 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 35 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、api.openai.com、app.example.com、attacker.example、blob.test、callback.invalid、claude.ai、configured.example、crowdin.com…`
+> 證據：`amruthpillai.com、api.cloudflare.com、attacker.example、blob.test、callback.invalid、careers.example、company.example、crowdin.com、discord.gg、docs.aws.amazon.com…`
 
-### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@biomejs/biome@^2.5.14、@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^1.75.1、@playwright/test@^1.63.0、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^2.32.4、@playwright/test@^1.63.0、@shadcn/lint@^0.2.0、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/label-issues.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts、apps/server/src/prepare-deployment.ts`
+> 證據：`.github/workflows/label-issues.yml、.github/workflows/vercel.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/resume/export/use-resume-export.ts`
+> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/applications/components/application-notes.test.tsx、apps/web/src/features/assistant/assistant-panel.tsx`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -53,7 +53,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/resume-builder/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -71,7 +71,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43728｜fork 4810｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-03
+⭐ 43768｜fork 4810｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-04
 
 ---
 

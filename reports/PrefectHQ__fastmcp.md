@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 27965 / 2429 |
-| 最後更新 | 2026-10-03 |
+| 星數 / Fork | ⭐ 27976 / 2433 |
+| 最後更新 | 2026-10-04 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-03 23:32 |
+| 檢查時間 | 2026-10-04 23:51 |
 
 ## 風險摘要
 
@@ -30,19 +30,19 @@
 
 > 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/scripts/test-ci-workflows.mjs、.github/scripts/test-issue-link.mjs、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（447 則）
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py、examples/diagnostics/server.py`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（445 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 51 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 50 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-04`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 27965｜fork 2429｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-03
+⭐ 27976｜fork 2433｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-04
 
 ---
 

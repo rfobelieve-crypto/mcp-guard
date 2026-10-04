@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 66 / 28 |
-| 最後更新 | 2026-10-03 |
+| 星數 / Fork | ⭐ 68 / 28 |
+| 最後更新 | 2026-10-04 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 185 個 |
-| 檢查時間 | 2026-10-03 23:37 |
+| 已掃描檔案 | 222 個 |
+| 檢查時間 | 2026-10-04 23:55 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟡 中｜[權限] 會連往 46 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@supabase/supabase-js@^2.116.0、hono@^4.13.7、prettier@^3.9.6、zod@^4.5.4、@modelcontextprotocol/client@^2.0.0`
+> 證據：`@modelcontextprotocol/server@^2.3.0、@supabase/supabase-js@^2.117.2、hono@^4.13.13、prettier@^3.9.9、zod@^4.6.5、@modelcontextprotocol/client@^2.3.0`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、public/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 649 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 724 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 66｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-03
+⭐ 68｜fork 28｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-04
 
 ---
 
