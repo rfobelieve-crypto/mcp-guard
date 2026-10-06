@@ -10,7 +10,7 @@
 | 最後更新 | 2026-10-04 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 325 個 |
-| 檢查時間 | 2026-10-04 23:53 |
+| 檢查時間 | 2026-10-06 01:42 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,7 +66,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A local MCP server for agent literature work. Original-LaTeX section reads, BibT |
-| 星數 / Fork | ⭐ 3190 / 256 |
-| 最後更新 | 2026-10-04 |
+| 星數 / Fork | ⭐ 3193 / 256 |
+| 最後更新 | 2026-10-05 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 99 個 |
-| 檢查時間 | 2026-10-04 23:53 |
+| 已掃描檔案 | 109 個 |
+| 檢查時間 | 2026-10-06 01:43 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`a9.com、api.semanticscholar.org、arxiv.example.com、arxiv.org、doi.org、export.arxiv.org、localhost.attacker.example、static.modelcontextprotocol.io、www.arxiv.org、www.schemastore.org…`
 
-### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -40,7 +40,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py、src/arxiv_mcp_server/config.py、tests/test_blocker_fixes.py`
+> 證據：`.github/workflows/build-mcpb.yml、.github/workflows/publish.yml、scripts/smoke_installed_wheel.py、src/arxiv_mcp_server/config.py、tests/repro/repro_406.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-04`
+> 證據：`最後推送 2026-10-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3190｜fork 256｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-04
+⭐ 3193｜fork 256｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-05
 
 ---
 

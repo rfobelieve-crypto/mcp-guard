@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
-| 星數 / Fork | ⭐ 0 / 0 |
-| 最後更新 | 2026-10-04 |
+| 星數 / Fork | ⭐ 1 / 0 |
+| 最後更新 | 2026-10-05 |
 | 授權 | MIT License |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 127 個 |
-| 檢查時間 | 2026-10-04 23:56 |
+| 已掃描檔案 | 129 個 |
+| 檢查時間 | 2026-10-06 01:45 |
 
 ## 風險摘要
 
@@ -35,19 +35,19 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/release.sh、src/tools/outputSchemas.ts`
+> 證據：`scripts/pack-codex-plugin.sh、scripts/release.sh、src/tools/outputSchemas.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/config.ts、src/http.ts、src/index.ts、src/telemetry/installId.ts、src/tools/context.ts`
+> 證據：`scripts/pack-codex-plugin.sh、src/config.ts、src/http.ts、src/index.ts、src/telemetry/installId.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`tests/codexPluginVersion.test.ts、tests/releaseFinishesWhatItStarts.test.ts`
+> 證據：`tests/codexPluginPack.test.ts、tests/codexPluginVersion.test.ts、tests/releaseFinishesWhatItStarts.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-04`
+> 證據：`最後推送 2026-10-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-10-04
+⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-10-05
 
 ---
 

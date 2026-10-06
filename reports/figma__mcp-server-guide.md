@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `figma/mcp-server-guide` |
 | 專案說明 | A guide on how to use the Figma MCP server |
-| 星數 / Fork | ⭐ 2046 / 199 |
-| 最後更新 | 2026-10-01 |
+| 星數 / Fork | ⭐ 2049 / 200 |
+| 最後更新 | 2026-10-05 |
 | 授權 | 無 |
 | 已掃描檔案 | 217 個 |
-| 檢查時間 | 2026-10-04 23:54 |
+| 檢查時間 | 2026-10-06 01:43 |
 
 ## 風險摘要
 
@@ -26,13 +26,13 @@
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`workflow-skills/video-interaction-mapper/scripts/extract_key_frames.py、workflow-skills/video-interaction-mapper/scripts/resolve_moment_frames.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`workflow-skills/video-interaction-mapper/scripts/extract_key_frames.py、workflow-skills/video-interaction-mapper/scripts/generate_figma_calls.py、workflow-skills/video-interaction-mapper/scripts/prepare_upload_frames.py、workflow-skills/video-interaction-mapper/scripts/resolve_moment_frames.py`
 
@@ -50,7 +50,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -60,11 +60,11 @@
 
 > 證據：`TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-01`
+> 證據：`最後推送 2026-10-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2046｜fork 199｜語言 Python｜建立 2025-08-05｜最後推送 2026-10-01
+⭐ 2049｜fork 200｜語言 Python｜建立 2025-08-05｜最後推送 2026-10-05
 
 ---
 

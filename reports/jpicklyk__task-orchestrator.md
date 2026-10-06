@@ -7,10 +7,10 @@
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 207 / 24 |
-| 最後更新 | 2026-10-03 |
+| 最後更新 | 2026-10-05 |
 | 授權 | MIT License |
-| 已掃描檔案 | 241 個 |
-| 檢查時間 | 2026-10-04 23:56 |
+| 已掃描檔案 | 290 個 |
+| 檢查時間 | 2026-10-06 01:45 |
 
 ## 風險摘要
 
@@ -28,17 +28,17 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`127.0.0.1.evil.example、127.evil.example、claude.ai、env.example、evil.example、evil.localhost、explicit.example、fonts.googleapis.com、localhost.evil.com、localhost.evil.example…`
+> 證據：`127.0.0.1.evil.example、127.evil.example、claude.ai、env.example、evil.example、evil.localhost、example.test、explicit.example、fonts.googleapis.com、localhost.evil.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/subagent-start.mjs、claude-plugins/task-orchestrator/scripts/tests/implement-wave-prompts.test.mjs、claude-plugins/task-orchestrator/scripts/tests/ralph-lib.test.mjs`
+> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator-mod/src/band/index.ts、claude-plugins/task-orchestrator-mod/src/graph-pane/index.ts、claude-plugins/task-orchestrator-mod/tests/graph-pane.test.ts、claude-plugins/task-orchestrator/hooks/subagent-start.mjs`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -52,13 +52,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`claude-plugins/task-orchestrator/hooks/tests/api-client.test.mjs、claude-plugins/task-orchestrator/hooks/tests/bundled-rules-parity.test.mjs、claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/dispatch-hint.test.mjs、claude-plugins/task-orchestrator/hooks/tests/dispatch-model-guard.test.mjs`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 37 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 38 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.claude/commands/check_schema_version.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/deploy_to_docker.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/api-compat-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/feature-implementation/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/implement/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 6 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,13 +70,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-10-03
+⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-10-05
 
 ---
 
