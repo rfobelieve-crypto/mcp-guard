@@ -10,8 +10,8 @@
 | 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 52 個 |
-| 檢查時間 | 2026-10-06 01:44 |
+| 已掃描檔案 | 53 個 |
+| 檢查時間 | 2026-10-07 00:27 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apply-mcp-config.test.mjs、cli.test.mjs、demo.test.mjs、entrypoint.test.mjs、envelope.test.mjs`
 
-### 🟡 中｜[權限] 會連往 7 個外部主機
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`apps.apple.com、evil.example.com、glama.ai、insiders.vscode.dev、opencode.ai、static.modelcontextprotocol.io、www.healthexport.dev`
+> 證據：`apps.apple.com、evil.example.com、glama.ai、insiders.vscode.dev、opencode.ai、registry.modelcontextprotocol.io、static.modelcontextprotocol.io、www.healthexport.dev`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -63,7 +63,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

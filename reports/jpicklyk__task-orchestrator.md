@@ -7,10 +7,10 @@
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 207 / 24 |
-| 最後更新 | 2026-10-05 |
+| 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
-| 已掃描檔案 | 290 個 |
-| 檢查時間 | 2026-10-06 01:45 |
+| 已掃描檔案 | 293 個 |
+| 檢查時間 | 2026-10-07 00:28 |
 
 ## 風險摘要
 
@@ -38,19 +38,19 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator-mod/src/band/index.ts、claude-plugins/task-orchestrator-mod/src/graph-pane/index.ts、claude-plugins/task-orchestrator-mod/tests/graph-pane.test.ts、claude-plugins/task-orchestrator/hooks/subagent-start.mjs`
+> 證據：`.claude/skills/implement/references/patch-anchored.py、.claude/skills/implement/references/test_patch_anchored.py、claude-plugins/task-orchestrator-mod/src/band/index.ts、claude-plugins/task-orchestrator-mod/src/graph-pane/index.ts、claude-plugins/task-orchestrator-mod/tests/graph-pane.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.claude/skills/implement/references/patch-anchored.py、claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-locator.mjs、claude-plugins/task-orchestrator/hooks/dispatch-hint.mjs、claude-plugins/task-orchestrator/hooks/dispatch-model-guard.mjs`
+> 證據：`.claude/skills/implement/references/patch-anchored.py、.claude/skills/implement/references/test_patch_anchored.py、claude-plugins/task-orchestrator/hooks/api-client.mjs、claude-plugins/task-orchestrator/hooks/config-locator.mjs、claude-plugins/task-orchestrator/hooks/dispatch-hint.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`claude-plugins/task-orchestrator/hooks/tests/api-client.test.mjs、claude-plugins/task-orchestrator/hooks/tests/bundled-rules-parity.test.mjs、claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/dispatch-hint.test.mjs、claude-plugins/task-orchestrator/hooks/tests/dispatch-model-guard.test.mjs`
+> 證據：`.claude/skills/implement/references/test_patch_anchored.py、claude-plugins/task-orchestrator/hooks/tests/api-client.test.mjs、claude-plugins/task-orchestrator/hooks/tests/bundled-rules-parity.test.mjs、claude-plugins/task-orchestrator/hooks/tests/config-sync.test.mjs、claude-plugins/task-orchestrator/hooks/tests/dispatch-hint.test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 38 個代理指令檔
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-10-05
+⭐ 207｜fork 24｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-10-06
 
 ---
 

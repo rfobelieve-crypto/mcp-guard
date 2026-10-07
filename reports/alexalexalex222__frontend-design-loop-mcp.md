@@ -7,14 +7,14 @@
 | 稽核對象 | `alexalexalex222/frontend-design-loop-mcp` |
 | 專案說明 | Design-first MCP for frontend improvement, screenshot-grounded refinement, and p |
 | 星數 / Fork | ⭐ 1 / 1 |
-| 最後更新 | 2026-03-19 |
+| 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 112 個 |
-| 檢查時間 | 2026-10-06 01:45 |
+| 檢查時間 | 2026-10-07 00:28 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 4　🔵 低 4　⚪ 資訊 6
+🟠 高 1　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -39,12 +39,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`aiplatform.googleapis.com、example-one.invalid、example-two.invalid、feross.org、generativelanguage.googleapis.com、nextjs.org、opencollective.com、openrouter.ai、paulmillr.com、static.modelcontextprotocol.io…`
-
-### 🟡 中｜[維護] 約 7 個月沒有更新
-
-更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
-
-> 證據：`最後推送 2026-03-19`
 
 ### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
@@ -90,6 +84,12 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
+
+專案仍在活躍維護中。
+
+> 證據：`最後推送 2026-10-06`
+
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
 發布者只證明了自己擁有那個 GitHub 帳號——任何人都能註冊帳號並登錄。這不是負面訊號，但它提供的保證僅止於「有個帳號」。
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 1｜語言 Python｜建立 2026-03-08｜最後推送 2026-03-19
+⭐ 1｜fork 1｜語言 Python｜建立 2026-03-08｜最後推送 2026-10-06
 
 ---
 

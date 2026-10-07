@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 62719 / 3051 |
-| 最後更新 | 2026-10-05 |
+| 星數 / Fork | ⭐ 62747 / 3051 |
+| 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 252 個 |
-| 檢查時間 | 2026-10-06 01:40 |
+| 已掃描檔案 | 255 個 |
+| 檢查時間 | 2026-10-07 00:23 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -31,23 +31,27 @@
 
 > 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts、packages/cli/src/utils/github.ts`
 
-### 🟡 中｜[權限] 會連往 32 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、alpha.com、clerk.context7.com、context7.com、context7.internal、context7.internal.example、docs.example.com、eslint.org、integrations.vercel.com、integrations.vercel.com.attacker.test…`
+> 證據：`agent-plugins.org、alpha.com、clerk.context7.com、context7.com、context7.internal、context7.internal.example、docs.example.com、integrations.vercel.com、integrations.vercel.com.attacker.test、keys.example.com…`
 
-### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@inquirer/core@^11.1.1、@inquirer/type@^4.0.3、@changesets/cli@^2.29.8、@types/node@^25.0.3、@typescript-eslint/eslint-plugin@^8.28.0、@typescript-eslint/parser@^8.28.0…`
+> 證據：`@inquirer/core@^12.0.3、@inquirer/type@^4.0.7、@changesets/cli@^3.0.3、eslint-config-prettier@^10.1.1`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
 
@@ -59,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 31 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62719｜fork 3051｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-05
+⭐ 62747｜fork 3051｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-06
 
 ---
 

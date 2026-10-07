@@ -7,10 +7,10 @@
 | 稽核對象 | `mbailey/voicemode` |
 | 專案說明 | Natural voice conversations with Claude Code |
 | 星數 / Fork | ⭐ 1387 / 195 |
-| 最後更新 | 2026-10-05 |
+| 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-06 01:44 |
+| 檢查時間 | 2026-10-07 00:27 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`.claude/commands/install.md｜「…install process assumes: - **UV** - Python package manager (install: `curl -LsSf https://astral.sh/uv/install.sh | sh`) - **Homebrew** - macOS package manager (install: `brew.sh`)」`
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 36 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.anthropic.com、api.cartesia.ai、api.example.com、api.openai.com、astral.sh、b.example、brew.sh、cartesia.ai、custom.cloud.service…`
+> 證據：`a.example、api.anthropic.com、api.cartesia.ai、api.example.com、api.openai.com、astral.sh、b.example、brew.sh、cartesia.ai、clone.test…`
 
 ### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
@@ -54,15 +54,15 @@
 
 > 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（62 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 15 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/commands/converse.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/install.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/status.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/converse/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/impressions/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/impressions/docs/finding-samples.md（AI 客戶端設定目錄下的指令檔）…`
+> 證據：`.claude/commands/converse.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/install.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/status.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/voicemode/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/voicemode/references/conch.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/voicemode/references/controls.md（AI 客戶端設定目錄下的指令檔）…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
 
@@ -82,7 +82,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1387｜fork 195｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-05
+⭐ 1387｜fork 195｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-06
 
 ---
 

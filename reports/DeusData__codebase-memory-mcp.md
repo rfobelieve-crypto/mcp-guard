@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 45839 / 3771 |
-| 最後更新 | 2026-10-05 |
+| 星數 / Fork | ⭐ 45907 / 3771 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
-| 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-06 01:40 |
+| 已掃描檔案 | 406 個 |
+| 檢查時間 | 2026-10-07 00:22 |
 
 ## 風險摘要
 
@@ -22,13 +22,13 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/extract_nomic_vectors.py、scripts/security-install.sh`
+> 證據：`scripts/extract_nomic_vectors.py、scripts/security-install.sh、tests/test_coverage_terminal.py`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 33 個外部主機
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、pkg/pypi/tests/test_cli.py、scripts/audit-grammar-security.sh`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（639 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（638 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -62,7 +62,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 22 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 45839｜fork 3771｜語言 C｜建立 2026-02-24｜最後推送 2026-10-05
+⭐ 45907｜fork 3771｜語言 C｜建立 2026-02-24｜最後推送 2026-10-07
 
 ---
 

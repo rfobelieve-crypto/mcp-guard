@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4952 / 232 |
-| 最後更新 | 2026-10-05 |
+| 星數 / Fork | ⭐ 4963 / 232 |
+| 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-10-06 01:42 |
+| 檢查時間 | 2026-10-07 00:24 |
 
 ## 風險摘要
 
@@ -46,7 +46,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 38 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -70,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/skills/bat-adhoc/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/references/evaluation-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bat-story-eval/references/regression-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/contrib-pr-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/contributors-update/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 58 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 53 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4952｜fork 232｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-05
+⭐ 4963｜fork 232｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-06
 
 ---
 

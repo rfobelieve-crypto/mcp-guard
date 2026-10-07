@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7556 / 900 |
+| 星數 / Fork | ⭐ 7564 / 900 |
 | 最後更新 | 2026-10-06 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 80 個 |
-| 檢查時間 | 2026-10-06 01:40 |
+| 已掃描檔案 | 81 個 |
+| 檢查時間 | 2026-10-07 00:22 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（163 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（164 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -65,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`plugins/claude/firecrawl-search/skills/firecrawl-developer-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl-research-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7556｜fork 900｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-06
+⭐ 7564｜fork 900｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-06
 
 ---
 

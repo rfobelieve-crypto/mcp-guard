@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-10-06 01:44 |
+| 檢查時間 | 2026-10-07 00:27 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`deploy/careagents/imessage_relay.py、openclaw/bot.py、scripts/audit_with_retry.py、scripts/benchmark_claude_cli.py、scripts/bot_commands.py`
+> 證據：`deploy/careagents/imessage_relay.py、openclaw/bot.py`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.medplum.com、api.openai.com、api.resend.com、api.telegram.org、api.twilio.com、app.healthclaw.io、careagents.cloud…`
+> 證據：`api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.medplum.com、api.openai.com、api.resend.com、api.sendblue.co、api.telegram.org、api.twilio.com、app.healthclaw.io…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 

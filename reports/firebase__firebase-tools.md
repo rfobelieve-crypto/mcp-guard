@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firebase/firebase-tools` |
 | 專案說明 | The Firebase Command Line Tools |
-| 星數 / Fork | ⭐ 4472 / 1267 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 4472 / 1266 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-06 01:42 |
+| 檢查時間 | 2026-10-07 00:24 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run clean && npm run build:publish"`
 
-### 🟡 中｜[權限] 會連往 91 個外部主機
+### 🟡 中｜[權限] 會連往 92 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/emulator-tests/functionsEmulatorRuntime.spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1064 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1060 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4472｜fork 1267｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-10-06
+⭐ 4472｜fork 1266｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-10-07
 
 ---
 

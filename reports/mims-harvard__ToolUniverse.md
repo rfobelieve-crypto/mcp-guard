@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1718 / 261 |
-| 最後更新 | 2026-10-05 |
+| 星數 / Fork | ⭐ 1719 / 261 |
+| 最後更新 | 2026-10-06 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 857 個 |
-| 檢查時間 | 2026-10-06 01:43 |
+| 已掃描檔案 | 898 個 |
+| 檢查時間 | 2026-10-07 00:26 |
 
 ## 風險摘要
 
@@ -80,7 +80,7 @@
 
 > 證據：`examples/compact_mode/stdio_wrapper.py、examples/compact_mode/test_stdio_simple.py、examples/hooks_direct_example.py、examples/mcp/debug_transport_closed.py、examples/mcp/mcp_server_example.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 468 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 510 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -104,7 +104,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +114,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1718｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-05
+⭐ 1719｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-06
 
 ---
 

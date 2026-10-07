@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
 | 已掃描檔案 | 216 個 |
-| 檢查時間 | 2026-10-06 01:44 |
+| 檢查時間 | 2026-10-07 00:27 |
 
 ## 風險摘要
 
@@ -39,7 +39,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.2.0、@sbissoli/mcp-search@^0.9.0、@sbissoli/mcp-upstream@^0.3.0、pino@^10.2.1、zod@^4.5.4…`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.3.0、@sbissoli/mcp-search@^0.9.0、@sbissoli/mcp-upstream@^0.4.0、pino@^10.2.1、zod@^4.5.4…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
