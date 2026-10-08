@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1719 / 261 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 1720 / 261 |
+| 最後更新 | 2026-10-07 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 898 個 |
-| 檢查時間 | 2026-10-07 00:26 |
+| 已掃描檔案 | 908 個 |
+| 檢查時間 | 2026-10-08 00:47 |
 
 ## 風險摘要
 
@@ -62,25 +62,25 @@
 
 > 證據：`requests>=2.32.0、boltz-api>=0.46.0,<0.47.0、numpy>=2.2.0、graphql-core>=3.2.0、fastapi>=0.116.0、uvicorn>=0.36.0…`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`examples/agentic_streaming_example.py、examples/azure_openai_models_example.py、examples/benchmark_batch_vs_single.py、examples/cache_stress_test.py、examples/cache_usage_example.py`
-
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/alphafold_tool_example.py、examples/code_executor/direct_demo.py、examples/code_executor/python_executor_example.py、examples/code_executor/simple_dependency_demo.py、examples/compact_mode/stdio_wrapper.py`
+> 證據：`benchmarks/bixbench/scripts/build_questions.py、benchmarks/bixbench/scripts/download_capsules.py、benchmarks/bixbench/scripts/preflight.sh、benchmarks/bixbench/scripts/regrade_nearest_option.py、examples/alphafold_tool_example.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`examples/compact_mode/stdio_wrapper.py、examples/compact_mode/test_stdio_simple.py、examples/hooks_direct_example.py、examples/mcp/debug_transport_closed.py、examples/mcp/mcp_server_example.py`
+> 證據：`benchmarks/bixbench/scripts/probe_tool_call.py、benchmarks/bixbench/scripts/verify_reference_values.py、examples/benchmarks/labbench/cli_runtime.py、examples/benchmarks/tool_finder/build_corpus.py、examples/compact_mode/stdio_wrapper.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 510 個代理指令檔
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`benchmarks/bixbench/scripts/probe_tool_call.py、examples/agentic_streaming_example.py、examples/azure_openai_models_example.py、examples/benchmark_batch_vs_single.py、examples/benchmarks/labbench/cli_runtime.py`
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 513 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -104,7 +104,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +114,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1719｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-06
+⭐ 1720｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-07
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 24921 / 2261 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 25029 / 2267 |
+| 最後更新 | 2026-10-07 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 477 個 |
-| 檢查時間 | 2026-10-07 00:23 |
+| 檢查時間 | 2026-10-08 00:44 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（950 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（968 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 24921｜fork 2261｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-06
+⭐ 25029｜fork 2267｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-07
 
 ---
 

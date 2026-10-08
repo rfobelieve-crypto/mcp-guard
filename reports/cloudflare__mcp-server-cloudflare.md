@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cloudflare/mcp-server-cloudflare` |
 | 專案說明 | （無） |
-| 星數 / Fork | ⭐ 4360 / 546 |
+| 星數 / Fork | ⭐ 4360 / 548 |
 | 最後更新 | 2026-10-06 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cloudflare/mcp-server-cloudflare` |
 | 已掃描檔案 | 390 個 |
-| 檢查時間 | 2026-10-07 00:25 |
+| 檢查時間 | 2026-10-08 00:46 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/tools/src/changesets.ts、packages/tools/src/test/setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（81 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（83 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,7 +71,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4360｜fork 546｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-06
+⭐ 4360｜fork 548｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-06
 
 ---
 

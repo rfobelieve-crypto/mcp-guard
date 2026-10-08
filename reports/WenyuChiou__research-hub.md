@@ -1,36 +1,24 @@
 # MCP 安檢報告：WenyuChiou/research-hub
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
-| 星數 / Fork | ⭐ 62 / 13 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 63 / 13 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-07 00:29 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-10-08 00:50 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`docs/demo/build_demo_gif.py、docs/demo/crop_dashboard_tabs.py、scripts/backfill_zotero.py、scripts/check_claims_schema.py、skills/gap-to-topic/scripts/dossier_to_docx.js`
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/verify_setup.py、src/research_hub/cli_paper.py、src/research_hub/cli_search.py、src/research_hub/dashboard/executor.py、src/research_hub/defuddle_extract.py`
-
-### 🟡 中｜[權限] 會連往 46 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -42,11 +30,23 @@
 
 > 證據：`networkx>=3.0,<4.0、notebooklm-py>=0.4.1,<0.5.0、httpx>=0.27,<1.0、jsonschema>=4.21,<5、platformdirs>=4.0,<6.0、pyzotero>=1.5.18,<2.0…`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`docs/demo/build_demo_gif.py、docs/demo/crop_dashboard_tabs.py、scripts/backfill_zotero.py、scripts/check_claims_schema.py、scripts/workspace_browser_smoke.py`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py、src/research_hub/cli_pipeline.py`
+> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_install_smoke.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/verify_setup.py、scripts/workspace_dogfood.py、scripts/workspace_install_smoke.py、src/research_hub/cli_paper.py、src/research_hub/cli_search.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 28 個代理指令檔
 
@@ -54,13 +54,13 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、SKILL.md（Agent Skill 指令（SKILL.md））、skills/gap-to-topic/SKILL.md（Agent Skill 指令（SKILL.md））、skills/literature-triage-matrix/SKILL.md（Agent Skill 指令（SKILL.md））、skills/notebooklm-brief-verifier/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 59 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 63 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-06
+⭐ 63｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-07
 
 ---
 

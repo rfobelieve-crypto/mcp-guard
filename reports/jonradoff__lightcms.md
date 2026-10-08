@@ -1,28 +1,38 @@
 # MCP 安檢報告：jonradoff/lightcms
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `jonradoff/lightcms` |
 | 專案說明 | Self-hosted CMS that works human or headless: full admin UI plus REST and MCP AP |
 | 星數 / Fork | ⭐ 31 / 6 |
-| 最後更新 | 2026-10-05 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
-| 已掃描檔案 | 254 個 |
-| 檢查時間 | 2026-10-07 00:28 |
+| 已掃描檔案 | 275 個 |
+| 檢查時間 | 2026-10-08 00:49 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 1　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`static/admin/quill/quill.js`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、acme.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、b.example、chatgpt.com、claude.ai…`
+> 證據：`a.example、acme.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、b.example、cdn.jsdelivr.net、chatgpt.com…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -36,7 +46,7 @@
 
 > 證據：`.claude/projects/-Users-jonradoff-lightcms/memory/MEMORY.md（AI 客戶端設定目錄下的指令檔）、.claude/projects/-Users-jonradoff-lightcms/memory/feedback_test_database.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 150 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 152 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -50,11 +60,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -64,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-10-05
+⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-10-07
 
 ---
 

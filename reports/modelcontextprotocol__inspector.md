@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 11031 / 1541 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 11037 / 1541 |
+| 最後更新 | 2026-10-07 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-07 00:22 |
+| 已掃描檔案 | 402 個 |
+| 檢查時間 | 2026-10-08 00:43 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 5　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -25,47 +25,51 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 53 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.example、api.example.com、as.example、as.example.com、attacker.example、auth.example、auth.example.com、b.example、content.example.com…`
+> 證據：`a.example、api.example、api.example.com、as-a.example、as-b.example、as.example、as.example.com、attacker.example、auth.example、auth.example.com…`
 
-### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@hono/node-server@^2.0.12、@modelcontextprotocol/ext-apps@^2.0.0、@napi-rs/keyring@^1.3.0、@vitejs/plugin-react@^6.0.0、ajv@^8.17.1、atomically@^2.1.1…`
+> 證據：`@hono/node-server@^2.0.12、@modelcontextprotocol/ext-apps@^2.0.0、@modelcontextprotocol/ext-tasks@^0.2.2、@napi-rs/keyring@^1.3.0、@vitejs/plugin-react@^6.0.0、ajv@^8.17.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/src/cli-oauth-navigation.ts、clients/cli/src/open-url.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/__tests__/servers-write.test.ts、clients/mcpdo/__tests__/auth-helper.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/cli-oauth-navigation.test.ts、clients/cli/__tests__/cli.test.ts、clients/cli/__tests__/cliOAuth.test.ts、clients/cli/__tests__/helpers/cli-runner.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/cli-oauth-navigation.test.ts、clients/cli/__tests__/cli.test.ts、clients/cli/__tests__/cliOAuth.test.ts、clients/cli/__tests__/e2e.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/e2e.test.ts、clients/cli/src/open-url.ts、clients/launcher/scripts/make-executable.js、clients/web/server/ensure-web-build.ts`
+> 證據：`clients/cli/__tests__/completion.test.ts、clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/mcpdo/__tests__/daemon-coverage.test.ts、clients/mcpdo/scripts/stop-dev-daemon.mjs`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +87,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11031｜fork 1541｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-06
+⭐ 11037｜fork 1541｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-07
 
 ---
 

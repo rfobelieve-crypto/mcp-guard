@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7564 / 900 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 7565 / 901 |
+| 最後更新 | 2026-10-08 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 81 個 |
-| 檢查時間 | 2026-10-07 00:22 |
+| 已掃描檔案 | 84 個 |
+| 檢查時間 | 2026-10-08 00:43 |
 
 ## 風險摘要
 
@@ -55,15 +55,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（164 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（161 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`plugins/claude/firecrawl-search/skills/firecrawl-developer-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl-research-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`plugins/claude/firecrawl-search/skills/firecrawl-developer-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl-research-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7564｜fork 900｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-06
+⭐ 7565｜fork 901｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-08
 
 ---
 

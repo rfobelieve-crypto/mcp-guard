@@ -7,11 +7,11 @@
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
 | 星數 / Fork | ⭐ 3448 / 211 |
-| 最後更新 | 2026-10-05 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
-| 已掃描檔案 | 250 個 |
-| 檢查時間 | 2026-10-07 00:25 |
+| 已掃描檔案 | 254 個 |
+| 檢查時間 | 2026-10-08 00:46 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/package-version.mjs`
+> 證據：`scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/hydrate-types.plugin.ts、scripts/package-version.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3448｜fork 211｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-10-05
+⭐ 3448｜fork 211｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-10-07
 
 ---
 

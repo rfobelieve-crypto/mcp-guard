@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 62747 / 3051 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 62782 / 3054 |
+| 最後更新 | 2026-10-07 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 255 個 |
-| 檢查時間 | 2026-10-07 00:23 |
+| 已掃描檔案 | 259 個 |
+| 檢查時間 | 2026-10-08 00:44 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts、packages/cli/src/utils/github.ts`
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、alpha.com、clerk.context7.com、context7.com、context7.internal、context7.internal.example、docs.example.com、integrations.vercel.com、integrations.vercel.com.attacker.test、keys.example.com…`
+> 證據：`agent-plugins.org、alpha.com、clerk.context7.com、context7.com、context7.internal、context7.internal.example、docs.example.com、example.test、integrations.vercel.com、integrations.vercel.com.attacker.test…`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 31 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62747｜fork 3051｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-06
+⭐ 62782｜fork 3054｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-07
 
 ---
 
