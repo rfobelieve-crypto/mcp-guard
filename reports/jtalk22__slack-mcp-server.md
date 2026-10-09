@@ -7,11 +7,11 @@
 | 稽核對象 | `jtalk22/slack-mcp-server` |
 | 專案說明 | Put your agent inside your Slack. Zero bots, zero admin queues, no Business+ upg |
 | 星數 / Fork | ⭐ 31 / 25 |
-| 最後更新 | 2026-10-07 |
+| 最後更新 | 2026-10-08 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
-| 已掃描檔案 | 158 個 |
-| 檢查時間 | 2026-10-08 00:50 |
+| 已掃描檔案 | 157 個 |
+| 檢查時間 | 2026-10-09 01:06 |
 
 ## 風險摘要
 
@@ -49,11 +49,11 @@
 
 > 證據：`scripts/token-cli.js、test/review-5.1.test.js`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.claude/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、.claude/REPO.md（AI 客戶端設定目錄下的指令檔）`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 147 段 description）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-10-07
+⭐ 31｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-10-08
 
 ---
 

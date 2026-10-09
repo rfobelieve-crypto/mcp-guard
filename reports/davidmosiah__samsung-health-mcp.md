@@ -7,11 +7,11 @@
 | 稽核對象 | `davidmosiah/samsung-health-mcp` |
 | 專案說明 | Unofficial local-first MCP server for Samsung Health personal-data CSV/ZIP expor |
 | 星數 / Fork | ⭐ 15 / 3 |
-| 最後更新 | 2026-10-07 |
+| 最後更新 | 2026-10-08 |
 | 授權 | MIT License |
 | npm 套件 | `samsung-health-mcp-unofficial` |
-| 已掃描檔案 | 63 個 |
-| 檢查時間 | 2026-10-08 00:49 |
+| 已掃描檔案 | 64 個 |
+| 檢查時間 | 2026-10-09 01:05 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.21.0、cors@^2.8.6、express@^5.2.1、yauzl@^3.2.0、zod@^4.4.3、@types/cors@^2.8.19…`
+> 證據：`@modelcontextprotocol/sdk@^1.31.0、cors@^2.8.6、express@^5.2.1、yauzl@^3.2.0、zod@^4.4.3、@types/cors@^2.8.19…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15｜fork 3｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-10-07
+⭐ 15｜fork 3｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-10-08
 
 ---
 

@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `cloudflare/mcp-server-cloudflare` |
 | 專案說明 | （無） |
-| 星數 / Fork | ⭐ 4360 / 548 |
-| 最後更新 | 2026-10-06 |
+| 星數 / Fork | ⭐ 4362 / 550 |
+| 最後更新 | 2026-10-09 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cloudflare/mcp-server-cloudflare` |
-| 已掃描檔案 | 390 個 |
-| 檢查時間 | 2026-10-08 00:46 |
+| 已掃描檔案 | 386 個 |
+| 檢查時間 | 2026-10-09 01:02 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 5　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -35,13 +35,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/demo-day/frontend/script.js、apps/sandbox-container/container/sandbox.container.app.ts`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`apps/sandbox-container/container/sandbox.container.app.ts`
+> 證據：`apps/demo-day/frontend/script.js`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +43,7 @@
 
 > 證據：`packages/tools/src/changesets.ts、packages/tools/src/test/setup.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（83 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（85 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,11 +65,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-06`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -85,7 +79,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4360｜fork 548｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-06
+⭐ 4362｜fork 550｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-09
 
 ---
 

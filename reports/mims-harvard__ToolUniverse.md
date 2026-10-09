@@ -1,20 +1,20 @@
 # MCP 安檢報告：mims-harvard/ToolUniverse
 
-> **結論：🟡 需人工複核**　發現 4 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 5 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1720 / 261 |
-| 最後更新 | 2026-10-07 |
+| 星數 / Fork | ⭐ 1722 / 261 |
+| 最後更新 | 2026-10-08 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 908 個 |
-| 檢查時間 | 2026-10-08 00:47 |
+| 已掃描檔案 | 926 個 |
+| 檢查時間 | 2026-10-09 01:03 |
 
 ## 風險摘要
 
-🟠 高 4　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 5　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -40,6 +40,12 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
+> 證據：`plugin/skills/tooluniverse-share-computer/SKILL.md｜「~~~bash curl -LsSf https://connect.aiscientist.tools/install.sh | sh ~~~」（另 2 個檔案有相同內容）`
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
 > 證據：`plugins/tooluniverse/skills/tooluniverse-codex-plugin/SKILL.md｜「```bash uv --version # provides `uvx`; if missing: curl -LsSf https://astral.sh/uv/install.sh | sh codex --version # OpenAI Codex CLI; if missing: https://developers.o…」（另 1 個檔案有相同內容）`
 
 ### 🟡 中｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本（疑為引述或警告）
@@ -49,6 +55,14 @@
 這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
 
 > 證據：`plugin/skills/tooluniverse-claude-code-plugin/SKILL.md｜「…(most common cause of "no tools at all") command -v uvx || echo "FIX: curl -LsSf https://astral.sh/uv/install.sh | sh"」（另 3 個檔案有相同內容）`
+
+### 🟡 中｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本（疑為引述或警告）
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
+
+> 證據：`plugin/skills/tooluniverse-share-computer/SKILL.md｜「~~~powershell powershell -ExecutionPolicy ByPass -c "irm https://connect.aiscientist.tools/install.ps1 | iex" ~~~」（另 2 個檔案有相同內容）`
 
 ### 🟡 中｜[權限] 會連往 39 個外部主機
 
@@ -80,7 +94,7 @@
 
 > 證據：`benchmarks/bixbench/scripts/probe_tool_call.py、examples/agentic_streaming_example.py、examples/azure_openai_models_example.py、examples/benchmark_batch_vs_single.py、examples/benchmarks/labbench/cli_runtime.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 513 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 528 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -104,7 +118,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -114,7 +128,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1720｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-07
+⭐ 1722｜fork 261｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-08
 
 ---
 

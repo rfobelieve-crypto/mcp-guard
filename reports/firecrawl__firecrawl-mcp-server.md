@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7565 / 901 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 7572 / 903 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 84 個 |
-| 檢查時間 | 2026-10-08 00:43 |
+| 已掃描檔案 | 92 個 |
+| 檢查時間 | 2026-10-09 00:59 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 22 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -47,23 +47,21 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/index.ts、src/monitor.ts、src/session-credential.ts、tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs`
+> 證據：`src/index.ts、src/service/auth.ts、src/service/http.ts、src/service/keyless.ts、src/service/profiles.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs`
+> 證據：`tests/embed-package.test.mjs、tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs、tests/server-hooks.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（161 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（156 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
-這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
-
-> 證據：`plugins/claude/firecrawl-search/skills/firecrawl-developer-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl-research-index/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/claude/firecrawl-search/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/firecrawl/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/openai/app-6a314a73f8ac819195b0d55e36b9c609/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））`
+這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
 
@@ -83,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7565｜fork 901｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-08
+⭐ 7572｜fork 903｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-09
 
 ---
 

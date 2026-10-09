@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4985 / 1116 |
-| 最後更新 | 2026-10-07 |
+| 星數 / Fork | ⭐ 4986 / 1116 |
+| 最後更新 | 2026-10-09 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 538 個 |
-| 檢查時間 | 2026-10-08 00:45 |
+| 檢查時間 | 2026-10-09 01:01 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/docker-build-verify.sh、.opencode/plugins/buildkite-status.ts、docker/aot/mockserver-healthcheck.go、docker/clustered/mockserver-healthcheck.go、docker/graaljs/mockserver-healthcheck.go`
+> 證據：`.buildkite/scripts/steps/docker-build-verify.sh、.opencode/plugins/buildkite-status.ts、docker/aot/mockserver-healthcheck.go、docker/clustered/mockserver-healthcheck.go`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4985｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-07
+⭐ 4986｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-09
 
 ---
 

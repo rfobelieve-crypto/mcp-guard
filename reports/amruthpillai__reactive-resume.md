@@ -6,30 +6,30 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 43959 / 4834 |
+| 星數 / Fork | ⭐ 44014 / 4836 |
 | 最後更新 | 2026-10-08 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 420 個 |
-| 檢查時間 | 2026-10-08 00:44 |
+| 檢查時間 | 2026-10-09 01:00 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 35 個外部主機
+### 🟡 中｜[權限] 會連往 33 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`amruthpillai.com、api.cloudflare.com、attacker.example、blob.test、callback.invalid、careers.example、company.example、crowdin.com、discord.gg、docs.aws.amazon.com…`
+> 證據：`amruthpillai.com、api.cloudflare.com、attacker.example、callback.invalid、careers.example、company.example、crowdin.com、discord.gg、docs.aws.amazon.com、docs.rxresu.me…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^2.32.4、@playwright/test@^1.63.0、@shadcn/lint@^0.2.0、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^2.33.0、@playwright/test@^1.64.0、@shadcn/lint@^0.2.0、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -41,11 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/components/ui/donation-toast.tsx、apps/web/src/features/applications/components/application-notes.test.tsx、apps/web/src/features/assistant/assistant-panel.tsx`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
+> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/features/applications/components/application-notes.test.tsx、apps/web/src/features/assistant/assistant-panel.tsx、apps/web/src/features/ats-checker/pending-import.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
@@ -81,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43959｜fork 4834｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-08
+⭐ 44014｜fork 4836｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-08
 
 ---
 

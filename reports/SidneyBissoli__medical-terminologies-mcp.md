@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | Unified MCP server for six medical terminologies (ICD-11, LOINC, RxNorm, MeSH, A |
 | 星數 / Fork | ⭐ 15 / 5 |
-| 最後更新 | 2026-10-07 |
+| 最後更新 | 2026-10-08 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
 | 已掃描檔案 | 216 個 |
-| 檢查時間 | 2026-10-08 00:49 |
+| 檢查時間 | 2026-10-09 01:05 |
 
 ## 風險摘要
 
@@ -39,7 +39,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.3.0、@sbissoli/mcp-search@^0.9.0、@sbissoli/mcp-upstream@^0.4.0、pino@^10.2.1、zod@^4.5.4…`
+> 證據：`@modelcontextprotocol/server@^2.0.0、@sbissoli/mcp-provenance@^0.4.0、@sbissoli/mcp-search@^0.9.0、@sbissoli/mcp-upstream@^0.4.2、pino@^10.2.1、zod@^4.5.4…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-07
+⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-08
 
 ---
 

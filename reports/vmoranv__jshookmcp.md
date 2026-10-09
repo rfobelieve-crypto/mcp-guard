@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2026 / 457 |
-| 最後更新 | 2026-10-07 |
+| 星數 / Fork | ⭐ 2030 / 457 |
+| 最後更新 | 2026-10-08 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-08 00:47 |
+| 檢查時間 | 2026-10-09 01:03 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-event-contracts.selftest.mjs、scripts/build.mjs`
+> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-event-contracts.selftest.mjs、scripts/audit-promise-assertions.selftest.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -89,7 +89,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2026｜fork 457｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-07
+⭐ 2030｜fork 457｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-08
 
 ---
 
