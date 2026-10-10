@@ -7,11 +7,11 @@
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
 | 星數 / Fork | ⭐ 4124 / 373 |
-| 最後更新 | 2026-10-08 |
+| 最後更新 | 2026-10-09 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-10-09 01:02 |
+| 檢查時間 | 2026-10-10 00:32 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`e2e/cypress/common/flakyReport.ts、e2e/scripts/baseQuery/perf-test.sh`
 
-### 🟡 中｜[權限] 會連往 28 個外部主機
+### 🟡 中｜[權限] 會連往 29 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、app.tolgee.io、cdn.jsdelivr.net、cdndev.tolg.ee、docs.tolgee.io、dummy-url.com、extension.test、feross.org、grafana.com、hibernate.atlassian.net…`
+> 證據：`accounts.google.com、app.tolgee.io、cdn.jsdelivr.net、cdndev.tolg.ee、docs.tolgee.io、dummy-url.com、e2e-site.test、extension.test、feross.org、grafana.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4124｜fork 373｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-10-08
+⭐ 4124｜fork 373｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-10-09
 
 ---
 

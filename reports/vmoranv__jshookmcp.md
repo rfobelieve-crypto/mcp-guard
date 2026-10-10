@@ -1,29 +1,23 @@
 # MCP 安檢報告：vmoranv/jshookmcp
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2030 / 457 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 2032 / 458 |
+| 最後更新 | 2026-10-09 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-09 01:03 |
+| 檢查時間 | 2026-10-10 00:33 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[供應鏈] 安裝時會自動執行腳本：postinstall
-
-npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
-
-> 證據：`"postinstall": "node scripts/postinstall.cjs"`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -35,11 +29,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 15 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`afdian.com、api.dart.dev、api.flutter.dev、developer.android.com、docs.flutter.dev、docs.renovatebot.com、eldstal.se、example.invalid、fonts.googleapis.com、fonts.gstatic.com…`
+> 證據：`afdian.com、api.dart.dev、api.flutter.dev、developer.android.com、docs.flutter.dev、docs.npmjs.com、docs.renovatebot.com、eldstal.se、example.invalid、fonts.googleapis.com…`
 
 ### 🔵 低｜[供應鏈] 有 41 個依賴未鎖定版本
 
@@ -89,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2030｜fork 457｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-08
+⭐ 2032｜fork 458｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-09
 
 ---
 

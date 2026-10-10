@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9205 / 1477 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 9214 / 1474 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-10-09 01:01 |
+| 檢查時間 | 2026-10-10 00:31 |
 
 ## 風險摘要
 
@@ -40,17 +40,17 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`accounts.google.com、api.anthropic.com、api.cloudflare.com、api.example.com、api.groq.com、api.openai.com、astral.sh、auth.example.com、blog.google、cockroachlabs.cloud…`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/actions/claude-code-action/action.yml、.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/agents-suite.yml、.github/workflows/auto-pr-comment.yml`
+
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/praisonai-issue-triage.yaml、.github/scripts/release-gate.js、.github/workflows/claude-merge-gate.yml、.github/workflows/pypi-release.yml、examples/agent_tools/agent_centric_example.py`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/agents-suite.yml、.github/workflows/auto-pr-comment.yml、.github/workflows/bot-pr-recovery.yml`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（84 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（87 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9205｜fork 1477｜語言 Python｜建立 2024-03-19｜最後推送 2026-10-08
+⭐ 9214｜fork 1474｜語言 Python｜建立 2024-03-19｜最後推送 2026-10-09
 
 ---
 

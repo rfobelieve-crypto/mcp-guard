@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `Tapetide-hq/nse-bse-indian-stock-market-data-mcp` |
-| 專案說明 | NSE BSE Indian Stock Market Data MCP server — search, screen & analyze all 8,200 |
+| 專案說明 | Indian stock market MCP server for NSE & BSE — 55 tools across all 8,200+ stocks |
 | 星數 / Fork | ⭐ 134 / 30 |
-| 最後更新 | 2026-10-02 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | npm 套件 | `tapetide-mcp` |
-| 已掃描檔案 | 11 個 |
-| 檢查時間 | 2026-10-09 01:06 |
+| 已掃描檔案 | 15 個 |
+| 檢查時間 | 2026-10-10 00:35 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -55,11 +55,11 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-02`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 134｜fork 30｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-02
+⭐ 134｜fork 30｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-09
 
 ---
 

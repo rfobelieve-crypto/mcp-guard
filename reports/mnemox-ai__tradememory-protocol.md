@@ -1,24 +1,34 @@
 # MCP 安檢報告：mnemox-ai/tradememory-protocol
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `mnemox-ai/tradememory-protocol` |
 | 專案說明 | Decision audit trail + persistent memory for AI trading agents. Outcome-weighted |
-| 星數 / Fork | ⭐ 1425 / 168 |
-| 最後更新 | 2026-10-05 |
+| 星數 / Fork | ⭐ 1426 / 168 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-09 01:04 |
+| 檢查時間 | 2026-10-10 00:33 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 23 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`research/finrl_probe/check_rotation.py`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -34,7 +44,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.skills/tradememory/scripts/setup_mt5.sh、hosted/server.py、scripts/daily_reflection.py、scripts/live_executor.py、scripts/mt5_sync.py`
+> 證據：`.skills/tradememory/scripts/setup_mt5.sh、hosted/server.py、research/finrl_probe/probe.py、scripts/daily_reflection.py、scripts/live_executor.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -46,7 +56,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/research/build_arxiv_pdf.py、scripts/generate_index.py、src/tradememory/onboarding/setup_wizard.py`
+> 證據：`docs/research/build_arxiv_pdf.py、research/finrl_probe/probe.py、research/memory_decision_probe/run_probe.py、scripts/generate_index.py、src/tradememory/onboarding/setup_wizard.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
@@ -68,11 +78,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-05`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1425｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-10-05
+⭐ 1426｜fork 168｜語言 Python｜建立 2026-02-23｜最後推送 2026-10-09
 
 ---
 

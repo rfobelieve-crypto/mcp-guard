@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7572 / 903 |
+| 星數 / Fork | ⭐ 7574 / 903 |
 | 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 92 個 |
-| 檢查時間 | 2026-10-09 00:59 |
+| 已掃描檔案 | 87 個 |
+| 檢查時間 | 2026-10-10 00:29 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 會連往 21 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.firecrawl.dev、benzinga.example、claude.ai、docs.firecrawl.dev、eslint.org、evil.example、example.invalid、example.org、example.test、firecrawl.dev…`
+> 證據：`api.firecrawl.dev、benzinga.example、claude.ai、docs.firecrawl.dev、eslint.org、evil.example、example.org、example.test、firecrawl.dev、firecrawl.dev.evil.example…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
@@ -47,7 +47,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/index.ts、src/service/auth.ts、src/service/http.ts、src/service/keyless.ts、src/service/profiles.ts`
+> 證據：`src/index.ts、src/service/auth.ts、src/service/profiles.ts、src/service/session-credential.ts、tests/contract-snapshot.test.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/embed-package.test.mjs、tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs、tests/server-hooks.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（156 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（159 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7572｜fork 903｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-09
+⭐ 7574｜fork 903｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-09
 
 ---
 

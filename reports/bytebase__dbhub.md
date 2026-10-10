@@ -6,30 +6,32 @@
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
 | 專案說明 | Token conscious database MCP server for Postgres, MySQL, SQL Server, Oracle, Mar |
-| 星數 / Fork | ⭐ 3619 / 316 |
-| 最後更新 | 2026-10-02 |
+| 星數 / Fork | ⭐ 3626 / 317 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
-| 已掃描檔案 | 248 個 |
-| 檢查時間 | 2026-10-09 01:02 |
+| 已掃描檔案 | 257 個 |
+| 檢查時間 | 2026-10-10 00:32 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 5　⚪ 資訊 7
+🟡 中 1　🔵 低 6　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟡 中｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-> 證據：`CLAUDE.md｜「…SH_PASSPHRASE` - SSH config file support: Automatically reads from `~/.ssh/config` when using host aliases - Implementation in `src/utils/ssh-tun…」`
 
 ### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`app.internal、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、glama.ai、mintlify.com、registry.modelcontextprotocol.io、static.modelcontextprotocol.io…`
+
+### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
+
+若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
+
+這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
+
+> 證據：`CLAUDE.md｜「…SSH_AUTH_SOCK` - SSH config file support: Automatically reads from `~/.ssh/config` when using host aliases - Implementation in `src/utils/ssh-tun…」`
 
 ### 🔵 低｜[供應鏈] 有 31 個依賴未鎖定版本
 
@@ -81,11 +83,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-02`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +97,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3619｜fork 316｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-10-02
+⭐ 3626｜fork 317｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-10-09
 
 ---
 

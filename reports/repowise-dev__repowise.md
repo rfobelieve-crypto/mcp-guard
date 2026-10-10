@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 7292 / 796 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 7393 / 810 |
+| 最後更新 | 2026-10-10 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 431 個 |
-| 檢查時間 | 2026-10-09 01:01 |
+| 檢查時間 | 2026-10-10 00:32 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.repowise.dev、code.visualstudio.com、cursor.com、developers.openai.com、docs.claude.com、evil.example、glama.ai、hermes-agent.nousresearch.com、npm.pkg.github.com、opencode.ai…`
+> 證據：`api.repowise.dev、code.visualstudio.com、cursor.com、developers.openai.com、docs.claude.com、docs.github.com、evil.example、glama.ai、hermes-agent.nousresearch.com、kiro.dev…`
 
 ### 🔵 低｜[供應鏈] 有 33 個依賴未鎖定版本
 
@@ -35,7 +35,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/design/contrast_check.py、packages/claude-mod/src/mod-api.ts、packages/claude-mod/src/register.ts、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/codex.py`
+> 證據：`docs/design/contrast_check.py、packages/claude-mod/src/mod-api.ts、packages/claude-mod/src/register.ts、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/hermes.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/hermes.py、packages/cli/src/repowise/cli/agent_targets/targets/opencode.py、packages/cli/src/repowise/cli/ci.py`
+> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/copilot.py、packages/cli/src/repowise/cli/agent_targets/targets/hermes.py、packages/cli/src/repowise/cli/agent_targets/targets/kiro.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（238 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（279 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7292｜fork 796｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-08
+⭐ 7393｜fork 810｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-10
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 4988 / 231 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 5001 / 232 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-10-09 01:02 |
+| 檢查時間 | 2026-10-10 00:32 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/dev-ha-env/hold.py、.github/workflows/codex-review-issues.yml、.github/workflows/codex-review-prs.yml、.github/workflows/dev-ha-env.yml、.github/workflows/pr.yml`
+> 證據：`.github/dev-ha-env/hold.py、.github/dev-ha-env/mcpshim.py、.github/workflows/codex-review-issues.yml、.github/workflows/codex-review-prs.yml、.github/workflows/dev-ha-env.yml`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -46,7 +46,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 38 個外部主機
+### 🟡 中｜[權限] 會連往 37 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4988｜fork 231｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-08
+⭐ 5001｜fork 232｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-09
 
 ---
 

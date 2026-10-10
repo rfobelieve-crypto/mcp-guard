@@ -7,11 +7,11 @@
 | 稽核對象 | `counterpoint-studio/audio-file-mcp-app` |
 | 專案說明 | An MCP App for playing and inspecting local audio files in an MCP host. |
 | 星數 / Fork | ⭐ 43 / 3 |
-| 最後更新 | 2026-07-10 |
+| 最後更新 | 2026-10-09 |
 | 授權 | ISC License |
 | npm 套件 | `@counterpoint-studio/audio-file-mcp-app` |
-| 已掃描檔案 | 161 個 |
-| 檢查時間 | 2026-10-09 01:06 |
+| 已掃描檔案 | 173 個 |
+| 檢查時間 | 2026-10-10 00:35 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/sync-versions.mjs、src/client/dsp/js-dsp.gen.ts、src/client/dsp/wasm-dsp.gen.ts、src/server/app.ts`
+> 證據：`scripts/sync-versions.mjs、src/client/dsp/js-dsp.gen.ts、src/client/dsp/wasm-dsp.gen.ts、src/server/app.ts、src/server/audio-sniff.test.ts`
 
 ### 🔵 低｜[權限] 會連往 1 個外部主機
 
@@ -67,13 +67,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、TOKEN`
+> 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 90 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-10`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43｜fork 3｜語言 TypeScript｜建立 2026-05-13｜最後推送 2026-07-10
+⭐ 43｜fork 3｜語言 TypeScript｜建立 2026-05-13｜最後推送 2026-10-09
 
 ---
 

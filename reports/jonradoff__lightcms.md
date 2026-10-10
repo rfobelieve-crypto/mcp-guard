@@ -7,10 +7,10 @@
 | 稽核對象 | `jonradoff/lightcms` |
 | 專案說明 | Self-hosted CMS that works human or headless: full admin UI plus REST and MCP AP |
 | 星數 / Fork | ⭐ 31 / 6 |
-| 最後更新 | 2026-10-08 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
-| 已掃描檔案 | 275 個 |
-| 檢查時間 | 2026-10-09 01:05 |
+| 已掃描檔案 | 284 個 |
+| 檢查時間 | 2026-10-10 00:35 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 54 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、acme.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、b.example、cdn.jsdelivr.net、chatgpt.com…`
+> 證據：`127.0.0.1.nip.invalid、CMS.example、a.example、acme.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、b.example…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-10-08
+⭐ 31｜fork 6｜語言 Go｜建立 2026-01-23｜最後推送 2026-10-09
 
 ---
 

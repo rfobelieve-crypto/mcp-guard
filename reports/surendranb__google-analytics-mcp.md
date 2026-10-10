@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 242 / 48 |
-| 最後更新 | 2026-10-03 |
+| 最後更新 | 2026-10-09 |
 | 授權 | MIT License |
-| 已掃描檔案 | 90 個 |
-| 檢查時間 | 2026-10-09 01:05 |
+| 已掃描檔案 | 141 個 |
+| 檢查時間 | 2026-10-10 00:34 |
 
 ## 風險摘要
 
@@ -28,13 +28,13 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」`
+> 證據：`docs/llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」（另 1 個檔案有相同內容）`
 
-### 🟡 中｜[權限] 會連往 6 個外部主機
+### 🟡 中｜[權限] 會連往 7 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.google.com、astral.sh、files.pythonhosted.org、ga4.builditwithai.xyz、ga4mcp.com、static.modelcontextprotocol.io`
+> 證據：`analytics.google.com、astral.sh、files.pythonhosted.org、ga4-gateway.reachsuren.workers.dev、ga4.builditwithai.xyz、ga4mcp.com、static.modelcontextprotocol.io`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -58,13 +58,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`ga4_mcp/telemetry.py、npm/bin/index.js`
+> 證據：`ga4_mcp/telemetry.py、npm/bin/index.js、scripts/record_oauth_demo.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 18 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））、skills/bot-traffic-detection/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、docs/llms.txt（給模型讀的站點說明（llms.txt））、gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
 
@@ -80,11 +80,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-03`
+> 證據：`最後推送 2026-10-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -94,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-03
+⭐ 242｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-09
 
 ---
 
