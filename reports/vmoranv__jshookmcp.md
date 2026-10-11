@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
-| 專案說明 | js hook toolkit that all you need |
-| 星數 / Fork | ⭐ 2032 / 458 |
-| 最後更新 | 2026-10-09 |
+| 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
+| 星數 / Fork | ⭐ 2034 / 457 |
+| 最後更新 | 2026-10-10 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-10 00:33 |
+| 檢查時間 | 2026-10-11 00:10 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts`
+> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、scripts/verify-ghidra-bridge-tcp.ts、src/modules/analyzer/SecurityCodeAnalyzer.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-09`
+> 證據：`最後推送 2026-10-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2032｜fork 458｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-09
+⭐ 2034｜fork 457｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-10
 
 ---
 

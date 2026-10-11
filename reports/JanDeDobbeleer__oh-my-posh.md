@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23566 / 2796 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 23567 / 2797 |
+| 最後更新 | 2026-10-10 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-10-10 00:30 |
+| 檢查時間 | 2026-10-11 00:07 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 26 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、cdn.ohmyposh.dev、containers.dev、discord.com、docs.microsoft.com、en.wikipedia.org、example.awsapps.com、go.microsoft.com、golang.org、golangci-lint.run…`
+> 證據：`aka.ms、api.brewfather.app、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org、example.awsapps.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -46,11 +46,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/homebrew.yml、src/runtime/activation.go`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 12 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.agents/skills/architecture/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/ast-grep/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/code-changes/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/conventional-commit/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/golang/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/markdown/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.agents/skills/code-changes/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/conventional-commit/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/golang/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/project-knowledge/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/segment-create/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/segment-docs/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
@@ -64,13 +64,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23566｜fork 2796｜語言 Go｜建立 2019-03-13｜最後推送 2026-10-08
+⭐ 23567｜fork 2797｜語言 Go｜建立 2019-03-13｜最後推送 2026-10-10
 
 ---
 

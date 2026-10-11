@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5411 / 630 |
-| 最後更新 | 2026-10-09 |
+| 星數 / Fork | ⭐ 5410 / 631 |
+| 最後更新 | 2026-10-10 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-10 00:31 |
+| 檢查時間 | 2026-10-11 00:08 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/unit_tests.yml、docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py、financetoolkit/mcp_server/mcpb/build-mcpb.sh`
+> 證據：`.github/workflows/live_sources.yml、.github/workflows/unit_tests.yml、docker-compose.yml、financetoolkit/mcp_server/auth_model.py、financetoolkit/mcp_server/mcp_controller.py`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -40,17 +40,17 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 73 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.stlouisfed.org、data-api.ecb.europa.eu、data-explorer.oecd.org、data.ecb.europa.eu、data.oecd.org、en.wikipedia.org、example.invalid、financetoolkit.jeroenbouma.com、financialmodelingprep.com、fonts.googleapis.com…`
+> 證據：`api.bls.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、cdn.cboe.com、data-api.ecb.europa.eu、data-explorer.oecd.org…`
 
-### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`pandas>=3.0、scikit-learn>=1.6、requests>=2.32、yfinance、openpyxl>=3.1、pyyaml>=6.0`
+> 證據：`pandas>=3.0、requests>=2.32、yfinance、openpyxl>=3.1、xlrd>=2.0、pyyaml>=6.0…`
 
 ### 🔵 低｜[供應鏈] PyPI 套件未標示原始碼位置
 
@@ -68,7 +68,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 35 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,11 +82,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-09`
+> 證據：`最後推送 2026-10-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5411｜fork 630｜語言 Python｜建立 2019-04-08｜最後推送 2026-10-09
+⭐ 5410｜fork 631｜語言 Python｜建立 2019-04-08｜最後推送 2026-10-10
 
 ---
 

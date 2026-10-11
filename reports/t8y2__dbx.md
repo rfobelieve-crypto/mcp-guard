@@ -1,21 +1,21 @@
 # MCP 安檢報告：t8y2/dbx
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 25396 / 2299 |
+| 星數 / Fork | ⭐ 25633 / 2325 |
 | 最後更新 | 2026-10-10 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 479 個 |
-| 檢查時間 | 2026-10-10 00:31 |
+| 檢查時間 | 2026-10-11 00:07 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 3　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -29,7 +29,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-agent-versions.test.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs、.github/scripts/ci-execution.test.mjs`
+> 證據：`.github/scripts/actions-efficiency.test.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/bump-agent-versions.test.mjs、.github/scripts/bump-jdbc-plugin-version.mjs、.github/scripts/check-jdbc-plugin-version.mjs`
+
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/scripts/actions-efficiency.test.mjs、.github/scripts/ci-workflow.test.mjs`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -37,7 +43,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 27 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -49,19 +59,19 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`@babel/runtime@^7.29.7、@codemirror/autocomplete@^6.20.2、@codemirror/commands@^6.10.3、@codemirror/lang-html@^6.4.11、@codemirror/lang-json@^6.0.2、@codemirror/lang-sql@^6.10.0…`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/database-issue-catalog.mjs、.github/scripts/install-mcp.test.mjs、.github/scripts/label-issue-database.mjs、.github/scripts/label-issue-database.test.mjs`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-execution.test.mjs、.github/scripts/ci-gate.mjs`
+> 證據：`.github/scripts/actions-efficiency.test.mjs、.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-change-base.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1099 則）
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/configure-docker-mirror.py、.github/scripts/database-issue-catalog.mjs、.github/scripts/install-mcp.test.mjs、.github/scripts/label-issue-database.mjs`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（1111 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +109,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 25396｜fork 2299｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-10
+⭐ 25633｜fork 2325｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-10
 
 ---
 

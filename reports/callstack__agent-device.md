@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4952 / 329 |
-| 最後更新 | 2026-10-09 |
+| 星數 / Fork | ⭐ 4964 / 331 |
+| 最後更新 | 2026-10-10 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
-| 已掃描檔案 | 429 個 |
-| 檢查時間 | 2026-10-10 00:32 |
+| 已掃描檔案 | 428 個 |
+| 檢查時間 | 2026-10-11 00:08 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts、packages/capture-kit/src/ios-snapshot-engine/conformance-harness.ts`
+> 證據：`examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts、packages/capture-kit/src/ios-snapshot-engine/conformance-harness.fixtures.ts`
 
 ### 🟡 中｜[權限] 會連往 20 個外部主機
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.4、@limrun/api@^0.59.0、@nkzw/eslint-plugin@^2.0.0、@nkzw/oxlint-config@^1.3.0、@types/json-schema@^7.0.15…`
+> 證據：`@arethetypeswrong/cli@^0.18.5、@chenglou/freerange@^0.0.4、@limrun/api@^0.60.0、@nkzw/eslint-plugin@^2.0.0、@nkzw/oxlint-config@^1.3.0、@types/json-schema@^7.0.15…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/pnpm-lock.yaml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（105 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（124 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-09`
+> 證據：`最後推送 2026-10-10`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4952｜fork 329｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-09
+⭐ 4964｜fork 331｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-10
 
 ---
 
