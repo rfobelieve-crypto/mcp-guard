@@ -7,11 +7,11 @@
 | 稽核對象 | `coyaSONG/youtube-mcp-server` |
 | 專案說明 | Citation-ready YouTube research for AI agents — transcript search, exact timesta |
 | 星數 / Fork | ⭐ 25 / 11 |
-| 最後更新 | 2026-09-28 |
+| 最後更新 | 2026-10-11 |
 | 授權 | MIT License |
 | npm 套件 | `@coyasong/youtube-mcp-server` |
-| 已掃描檔案 | 40 個 |
-| 檢查時間 | 2026-10-11 00:13 |
+| 已掃描檔案 | 44 個 |
+| 檢查時間 | 2026-10-12 00:20 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`client.example、dotenvx.com、feross.org、i.ytimg.com、opencollective.com、paypal.me、policies.google.com、registry.modelcontextprotocol.io、static.modelcontextprotocol.io、untrusted.example…`
 
-### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 16 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、cors@^2.8.5、dotenv@^17.4.2、express@^5.2.1、googleapis@^173.0.0、node-cache@^5.1.2…`
+> 證據：`@modelcontextprotocol/sdk@^1.31.0、cors@^2.8.5、dotenv@^18.0.0、express@^5.2.1、googleapis@^181.0.0、node-cache@^5.1.2…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -41,7 +41,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/mcpb-smoke.mjs、scripts/prepare-mcpb.mjs、tests/http-server.test.mjs`
+> 證據：`scripts/prepare-mcpb.mjs、tests/http-server.test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 12 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-28`
+> 證據：`最後推送 2026-10-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 25｜fork 11｜語言 JavaScript｜建立 2025-03-31｜最後推送 2026-09-28
+⭐ 25｜fork 11｜語言 TypeScript｜建立 2025-03-31｜最後推送 2026-10-11
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Tapetide-hq/nse-bse-indian-stock-market-data-mcp` |
 | 專案說明 | Indian stock market MCP server for NSE & BSE — 55 tools across all 8,200+ stocks |
-| 星數 / Fork | ⭐ 136 / 30 |
-| 最後更新 | 2026-10-10 |
+| 星數 / Fork | ⭐ 138 / 30 |
+| 最後更新 | 2026-10-11 |
 | 授權 | MIT License |
 | npm 套件 | `tapetide-mcp` |
-| 已掃描檔案 | 15 個 |
-| 檢查時間 | 2026-10-11 00:13 |
+| 已掃描檔案 | 19 個 |
+| 檢查時間 | 2026-10-12 00:20 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 5 個外部主機
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`glama.ai、mcp.tapetide.com、smithery.ai、static.modelcontextprotocol.io、tapetide.com`
+> 證據：`agent-plugins.org、glama.ai、json.schemastore.org、mcp.tapetide.com、smithery.ai、static.modelcontextprotocol.io、tapetide.com、youtu.be`
 
 ### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
 
@@ -33,7 +33,7 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/check-catalog-parity.mjs、src/index.ts`
 
@@ -45,7 +45,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -59,7 +59,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 136｜fork 30｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-10
+⭐ 138｜fork 30｜語言 TypeScript｜建立 2026-03-29｜最後推送 2026-10-11
 
 ---
 

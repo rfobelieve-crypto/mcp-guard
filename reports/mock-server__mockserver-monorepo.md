@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4987 / 1117 |
-| 最後更新 | 2026-10-10 |
+| 星數 / Fork | ⭐ 4987 / 1119 |
+| 最後更新 | 2026-10-11 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 538 個 |
-| 檢查時間 | 2026-10-11 00:08 |
+| 檢查時間 | 2026-10-12 00:16 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/docker-build-verify.sh、.opencode/plugins/buildkite-status.ts、docker/aot/mockserver-healthcheck.go、docker/clustered/mockserver-healthcheck.go`
+> 證據：`.buildkite/scripts/steps/docker-build-verify.sh、.opencode/plugins/buildkite-status.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -58,11 +58,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.buildkite/scripts/steps/lib/perf-percore.sh`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 59 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 60 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/agents/code-reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/council-seat.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/debugger.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/docs-writer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/implementer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/pipeline-investigator.md（AI 客戶端設定目錄下的指令檔）…`
+> 證據：`.buildkite/scripts/test/fixtures/website-perf-headline/llms.txt（給模型讀的站點說明（llms.txt））、.claude/agents/code-reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/council-seat.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/debugger.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/docs-writer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/implementer.md（AI 客戶端設定目錄下的指令檔）…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4987｜fork 1117｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-10
+⭐ 4987｜fork 1119｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-11
 
 ---
 

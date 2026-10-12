@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Dave-London/Pare` |
 | 專案說明 | Dev tools, optimized for agents. Structured, token-efficient MCP servers for git |
-| 星數 / Fork | ⭐ 138 / 13 |
+| 星數 / Fork | ⭐ 138 / 14 |
 | 最後更新 | 2026-09-29 |
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-10-11 00:13 |
+| 檢查時間 | 2026-10-12 00:20 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/init/__tests__/realfs.test.ts、packages/init/src/lib/config-writers/json-mcpservers.ts、packages/init/src/lib/config-writers/json-vscode.ts、packages/init/src/lib/config-writers/json-zed.ts、packages/init/src/lib/config-writers/toml-codex.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（67 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 12 天內有更新
+### ⚪ 資訊｜[維護] 最近 13 天內有更新
 
 專案仍在活躍維護中。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 138｜fork 13｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-29
+⭐ 138｜fork 14｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-29
 
 ---
 

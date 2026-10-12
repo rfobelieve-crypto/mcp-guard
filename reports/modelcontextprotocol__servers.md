@@ -1,55 +1,65 @@
 # MCP 安檢報告：modelcontextprotocol/servers
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 91128 / 11774 |
-| 最後更新 | 2026-10-10 |
+| 星數 / Fork | ⭐ 91150 / 11778 |
+| 最後更新 | 2026-10-11 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 137 個 |
-| 檢查時間 | 2026-10-11 00:05 |
+| 已掃描檔案 | 296 個 |
+| 檢查時間 | 2026-10-12 00:14 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 6　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 6　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 7 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`scripts/skill-eval.test.mjs`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.com、feross.org、opencollective.com、proxy.example.com、registry.modelcontextprotocol.io、tidelift.com、www.patreon.com`
+> 證據：`anycast.example.com、docs.astral.sh、elsewhere.example、eslint.org、feross.org、intranet.example.com、l.example、notexample.com、only-the-proxy-knows.example、opencollective.com…`
 
-### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server-everything@*、@modelcontextprotocol/server-memory@*、@modelcontextprotocol/server-filesystem@*、@modelcontextprotocol/server-sequential-thinking@*`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`scripts/release.py、src/filesystem/__tests__/startup-validation.test.ts、src/filesystem/__tests__/structured-content.test.ts`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`scripts/release.py、src/filesystem/__tests__/directory-tree.mcp-sdk.test.ts、src/filesystem/__tests__/directory-tree.test.ts、src/filesystem/__tests__/nested-parents.test.ts、src/filesystem/__tests__/path-validation.test.ts`
+> 證據：`@modelcontextprotocol/server-everything@*、@modelcontextprotocol/server-filesystem@*、@modelcontextprotocol/server-memory@*、@modelcontextprotocol/server-sequential-thinking@*、@changesets/changelog-github@^1.0.1、@changesets/cli@^3.0.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/everything/__tests__/tools.test.ts、src/everything/tools/get-env.ts、src/everything/tools/gzip-file-as-resource.ts、src/everything/transports/sse.ts、src/everything/transports/streamableHttp.ts`
+> 證據：`.github/workflows/release.yml、scripts/dependabot-alerts.mjs、scripts/dependency-refresh.mjs、scripts/gate-lease.mjs、scripts/gate-lease.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（494 則）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/dependabot-alerts.mjs、scripts/dependency-refresh.mjs、scripts/gate-lease.mjs、scripts/gate-lease.test.mjs、scripts/lib/claude-cli.mjs`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/path-validation.test.ts、src/filesystem/__tests__/server-paths.test.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（492 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -57,17 +67,17 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、src/everything/AGENTS.md（Agent 指令（AGENTS.md 慣例））`
+> 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/client-smoke/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[供應鏈] npm 上查無此套件（@modelcontextprotocol/servers）
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 102 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 113 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,15 +91,15 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-11`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91128｜fork 11774｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-10
+⭐ 91150｜fork 11778｜語言 JavaScript｜建立 2024-11-19｜最後推送 2026-10-11
 
 ---
 
