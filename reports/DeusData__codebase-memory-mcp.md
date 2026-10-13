@@ -1,58 +1,48 @@
 # MCP 安檢報告：DeusData/codebase-memory-mcp
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 46373 / 3813 |
-| 最後更新 | 2026-10-11 |
+| 星數 / Fork | ⭐ 46450 / 3818 |
+| 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
-| 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-10-12 00:15 |
+| 已掃描檔案 | 411 個 |
+| 檢查時間 | 2026-10-13 02:26 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
-
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/extract_nomic_vectors.py、scripts/security-install.sh、tests/test_coverage_terminal.py`
-
-### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
-
-eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
-
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、apt.llvm.org、bugs.launchpad.net、cdn.jsdelivr.net、deusdata.github.io、docs.pmnd.rs、evil.example.com、example.invalid、feross.org、fonts.googleapis.com…`
+> 證據：`127.0.0.1.evil.test、apt.llvm.org、editorconfig.org、example.invalid、feross.org、glama.ai、huggingface.co、huggingface.co.attacker.test、opencollective.com、tidelift.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/issue-labeler.yml、pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/npm/test/archive-limits.test.js、pkg/npm/test/install-failure.test.js`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`pkg/npm/bin.js、pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/npm/test/windows-launcher.test.js、pkg/pypi/src/codebase_memory_mcp/_cli.py`
+> 證據：`.github/workflows/issue-labeler.yml、graph-ui/agents/hooks/atlas-trace.py、graph-ui/agents/hooks/test_atlas_trace.py、graph-ui/src/agents/AgentSetup.test.tsx、graph-ui/src/app/project-windows.test.tsx`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`pkg/npm/install.js、pkg/npm/test/archive-fixtures.js、pkg/pypi/src/codebase_memory_mcp/_cli.py、pkg/pypi/tests/test_cli.py、scripts/audit-grammar-security.sh`
+> 證據：`graph-ui/agents/hooks/atlas-trace-watch.mjs、graph-ui/agents/hooks/atlas-trace.py、graph-ui/agents/hooks/test_atlas_trace.py、graph-ui/fixtures/atlas-sample/src/config.ts、graph-ui/fixtures/atlas-sample/src/services/userService.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（636 則）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`graph-ui/src/browser-ai/BrowserChatDock.test.tsx、graph-ui/src/browser-ai/embedded-model-assets.test.ts、graph-ui/src/browser-ai/explanation-response.test.ts、graph-ui/src/browser-ai/security-download-origins.test.ts、graph-ui/src/browser-ai/security-ui-model-policy.test.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（627 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -62,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 7 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 46373｜fork 3813｜語言 C｜建立 2026-02-24｜最後推送 2026-10-11
+⭐ 46450｜fork 3818｜語言 C｜建立 2026-02-24｜最後推送 2026-10-13
 
 ---
 

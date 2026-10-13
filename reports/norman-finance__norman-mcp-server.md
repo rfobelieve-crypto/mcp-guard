@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | AI-powered bookkeeping and tax filing automation for entrepreneurs at the heart  |
 | 星數 / Fork | ⭐ 61 / 13 |
-| 最後更新 | 2026-10-11 |
+| 最後更新 | 2026-10-12 |
 | 授權 | MIT License |
-| 已掃描檔案 | 190 個 |
-| 檢查時間 | 2026-10-12 00:18 |
+| 已掃描檔案 | 197 個 |
+| 檢查時間 | 2026-10-13 02:30 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 37 個外部主機
+### 🟡 中｜[權限] 會連往 38 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -40,7 +40,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`tests/test_legacy_client_compatibility.py`
+> 證據：`tests/test_embedding.py、tests/test_legacy_client_compatibility.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
 
@@ -48,7 +48,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/reconciliation-cockpit/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 627 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 661 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 61｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-11
+⭐ 61｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-12
 
 ---
 

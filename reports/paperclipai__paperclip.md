@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 100363 / 16906 |
-| 最後更新 | 2026-10-11 |
+| 星數 / Fork | ⭐ 101001 / 16978 |
+| 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 515 個 |
-| 檢查時間 | 2026-10-12 00:15 |
+| 已掃描檔案 | 518 個 |
+| 檢查時間 | 2026-10-13 02:26 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.github/scripts/check-pr-migration-order.mjs、.github/scripts/publish-storybook.cjs`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/lib.mjs、.agents/skills/verify-paperclip/scripts/doctor.py、.agents/skills/verify-paperclip/scripts/launch.py`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/scripts/publish-storybook.cjs、cli/src/__tests__/agent-jwt-env.test.ts、cli/src/__tests__/allowed-hostname.test.ts、cli/src/__tests__/common.test.ts、cli/src/__tests__/config-store.test.ts`
+> 證據：`.agents/skills/verify-paperclip/scripts/doctor.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs、.agents/skills/verify-paperclip/tests/test_ownership.py、.github/scripts/publish-storybook.cjs、cli/src/__tests__/agent-jwt-env.test.ts`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -69,13 +69,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.github/scripts/authorize-storybook-deploy.cjs、.github/scripts/check-pr-coauthors.mjs`
+> 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.agents/skills/verify-paperclip/scripts/launch.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5931 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（6004 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 93 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 101 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 100363｜fork 16906｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-11
+⭐ 101001｜fork 16978｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-13
 
 ---
 

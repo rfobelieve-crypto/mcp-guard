@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
-| 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-10-07 |
+| 星數 / Fork | ⭐ 5 / 1 |
+| 最後更新 | 2026-10-12 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 183 個 |
-| 檢查時間 | 2026-10-12 00:19 |
+| 已掃描檔案 | 187 個 |
+| 檢查時間 | 2026-10-13 02:31 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.us.socrata.com、caseyjhand.com、cdc.caseyjhand.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov、data.cdc.gov、json.schemastore.org、no-color.org、static.modelcontextprotocol.io…`
+> 證據：`api.us.socrata.com、caseyjhand.com、cdc.caseyjhand.com、cdn.ymaws.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov、data.cdc.gov、e.com、json.schemastore.org…`
 
-### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.13.13、pino-pretty@^13.1.3、zod@^4.6.5、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.3、@vitest/coverage-istanbul@^5.0.3…`
+> 證據：`@cyanheads/mcp-ts-core@^0.13.15、pino-pretty@^13.2.0、zod@^4.6.5、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.3、@vitest/coverage-istanbul@^5.0.3…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-10-07
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-10-12
 
 ---
 

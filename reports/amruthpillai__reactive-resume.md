@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 44145 / 4838 |
-| 最後更新 | 2026-10-09 |
+| 星數 / Fork | ⭐ 44187 / 4843 |
+| 最後更新 | 2026-10-12 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 427 個 |
-| 檢查時間 | 2026-10-12 00:15 |
+| 檢查時間 | 2026-10-13 02:26 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^2.33.0、@playwright/test@^1.64.0、@shadcn/lint@^0.2.0、@testing-library/jest-dom@^7.0.1…`
+> 證據：`@commitlint/cli@^21.2.3、@commitlint/config-conventional@^21.2.3、@dotenvx/dotenvx@^2.34.2、@playwright/test@^1.64.0、@shadcn/lint@^0.2.1、@testing-library/jest-dom@^7.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -71,11 +71,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-09`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44145｜fork 4838｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-09
+⭐ 44187｜fork 4843｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-12
 
 ---
 

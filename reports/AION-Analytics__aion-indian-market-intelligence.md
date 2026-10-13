@@ -7,10 +7,10 @@
 | 稽核對象 | `AION-Analytics/aion-indian-market-intelligence` |
 | 專案說明 | Structured market intelligence for Indian financial events, macro context, and s |
 | 星數 / Fork | ⭐ 22 / 1 |
-| 最後更新 | 2026-10-11 |
+| 最後更新 | 2026-10-12 |
 | 授權 | 無 |
 | 已掃描檔案 | 55 個 |
-| 檢查時間 | 2026-10-12 00:19 |
+| 檢查時間 | 2026-10-13 02:31 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 5 個外部主機
+### 🟡 中｜[權限] 會連往 6 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aion-analytics.org、api.aiondashboard.site、dashboard.aiondashboard.site、www.apache.org、www.nseindia.com`
+> 證據：`aion-analytics.org、aionanalytics.in、api.aiondashboard.site、dashboard.aiondashboard.site、www.apache.org、www.nseindia.com`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-10-11
+⭐ 22｜fork 1｜語言 Python｜建立 2026-03-14｜最後推送 2026-10-12
 
 ---
 

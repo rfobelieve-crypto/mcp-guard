@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10001 / 1263 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 10015 / 1266 |
+| 最後更新 | 2026-10-12 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 303 個 |
-| 檢查時間 | 2026-10-12 00:14 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-10-13 02:25 |
 
 ## 風險摘要
 
@@ -31,13 +31,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 35 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、diagnostics.example.invalid、discord.com、docs.docker.com、example.invalid…`
 
-### 🔵 低｜[供應鏈] 有 47 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -59,9 +59,9 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/config-manager.ts`
+> 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（300 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（304 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -85,11 +85,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10001｜fork 1263｜語言 TypeScript｜建立 2024-12-04｜最後推送 2026-10-08
+⭐ 10015｜fork 1266｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-10-12
 
 ---
 

@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 11056 / 1544 |
-| 最後更新 | 2026-10-08 |
+| 星數 / Fork | ⭐ 11059 / 1541 |
+| 最後更新 | 2026-10-12 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-10-12 00:14 |
+| 檢查時間 | 2026-10-13 02:25 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 5　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -55,10 +55,6 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`clients/cli/__tests__/completion.test.ts、clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/mcpdo/__tests__/daemon-coverage.test.ts、clients/mcpdo/scripts/stop-dev-daemon.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -83,15 +79,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11056｜fork 1544｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-08
+⭐ 11059｜fork 1541｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-12
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 62912 / 3067 |
-| 最後更新 | 2026-10-10 |
+| 星數 / Fork | ⭐ 62952 / 3073 |
+| 最後更新 | 2026-10-12 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 267 個 |
-| 檢查時間 | 2026-10-12 00:15 |
+| 已掃描檔案 | 270 個 |
+| 檢查時間 | 2026-10-13 02:26 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`packages/cli/src/__tests__/github.test.ts、packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/generate.ts、packages/cli/src/commands/upgrade.ts、packages/cli/src/utils/github.ts`
 
-### 🟡 中｜[權限] 會連往 38 個外部主機
+### 🟡 中｜[權限] 會連往 39 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`MCP.context7.com、a.example、agent-plugins.org、alpha.com、b.example、clerk.context7.com、context7.com、context7.internal、context7.internal.example、docs.example.com…`
+> 證據：`MCP.context7.com、a.example、agent-plugins.org、alpha.com、b.example、clerk.context7.com、context7.com、context7.internal、context7.internal.example、cursor.com…`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -73,11 +73,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62912｜fork 3067｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-10
+⭐ 62952｜fork 3073｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-12
 
 ---
 

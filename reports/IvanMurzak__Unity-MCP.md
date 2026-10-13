@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4418 / 392 |
-| 最後更新 | 2026-10-11 |
+| 星數 / Fork | ⭐ 4423 / 391 |
+| 最後更新 | 2026-10-13 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 326 個 |
-| 檢查時間 | 2026-10-12 00:17 |
+| 檢查時間 | 2026-10-13 02:28 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（60 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4418｜fork 392｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-11
+⭐ 4423｜fork 391｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-13
 
 ---
 
