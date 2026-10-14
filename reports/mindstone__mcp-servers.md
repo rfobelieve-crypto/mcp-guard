@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
-| 星數 / Fork | ⭐ 12 / 4 |
+| 星數 / Fork | ⭐ 13 / 4 |
 | 最後更新 | 2026-10-13 |
 | 授權 | Other |
 | 已掃描檔案 | 436 個 |
-| 檢查時間 | 2026-10-14 00:15 |
+| 檢查時間 | 2026-10-14 23:48 |
 
 ## 風險摘要
 
@@ -78,7 +78,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -92,7 +92,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 12｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-10-13
+⭐ 13｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-10-13
 
 ---
 

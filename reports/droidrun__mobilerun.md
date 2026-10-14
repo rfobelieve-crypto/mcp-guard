@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `droidrun/mobilerun` |
 | 專案說明 | Automate your mobile devices with natural language commands - an LLM agnostic mo |
-| 星數 / Fork | ⭐ 9636 / 1027 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 9648 / 1029 |
+| 最後更新 | 2026-10-14 |
 | 授權 | MIT License |
-| 已掃描檔案 | 215 個 |
-| 檢查時間 | 2026-10-14 00:11 |
+| 已掃描檔案 | 223 個 |
+| 檢查時間 | 2026-10-14 23:43 |
 
 ## 風險摘要
 
@@ -34,7 +34,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`mobilerun/agent/droid/droid_agent.py、mobilerun/agent/fast_agent/fast_agent.py、mobilerun/agent/manager/manager_agent.py、mobilerun/agent/utils/llm_picker.py、mobilerun/agent/utils/oauth/anthropic_oauth_llm.py`
+> 證據：`mobilerun/agent/droid/droid_agent.py、mobilerun/agent/fast_agent/fast_agent.py、mobilerun/agent/manager/manager_agent.py、mobilerun/agent/utils/android_device.py、mobilerun/agent/utils/llm_picker.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9636｜fork 1027｜語言 Python｜建立 2025-04-12｜最後推送 2026-10-13
+⭐ 9648｜fork 1029｜語言 Python｜建立 2025-04-12｜最後推送 2026-10-14
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 5059 / 234 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 5074 / 238 |
+| 最後更新 | 2026-10-14 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-10-14 00:12 |
+| 檢查時間 | 2026-10-14 23:44 |
 
 ## 風險摘要
 
@@ -56,7 +56,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`authlib>=1.6.11、cyclopts>=4.0.0、exceptiongroup>=1.2.2、griffelib>=2.0.0、httpx2>=2.5.0、joserfc>=1.5.0…`
+> 證據：`authlib>=1.6.11、cyclopts>=4.0.0、exceptiongroup>=1.2.2、griffelib>=2.0.0、httpx2>=2.10.0、joserfc>=1.5.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -70,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/skills/bat-adhoc/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/references/evaluation-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bat-story-eval/references/regression-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/contrib-pr-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/contributors-update/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 27 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5059｜fork 234｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-13
+⭐ 5074｜fork 238｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-14
 
 ---
 

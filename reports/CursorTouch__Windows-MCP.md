@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 8889 / 964 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 8971 / 972 |
+| 最後更新 | 2026-10-14 |
 | 授權 | MIT License |
-| 已掃描檔案 | 161 個 |
-| 檢查時間 | 2026-10-14 00:09 |
+| 已掃描檔案 | 166 個 |
+| 檢查時間 | 2026-10-14 23:42 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control.py、src/windows_mcp/desktop/control_hooks.py、src/windows_mcp/desktop/control_win32.py、src/windows_mcp/filesystem/service.py`
+> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control.py、src/windows_mcp/desktop/control_hooks.py、src/windows_mcp/desktop/control_win32.py、src/windows_mcp/desktop/control_worker.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -80,7 +80,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8889｜fork 964｜語言 Python｜建立 2025-05-13｜最後推送 2026-10-13
+⭐ 8971｜fork 972｜語言 Python｜建立 2025-05-13｜最後推送 2026-10-14
 
 ---
 

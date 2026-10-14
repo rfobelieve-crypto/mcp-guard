@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4989 / 1117 |
+| 星數 / Fork | ⭐ 4989 / 1116 |
 | 最後更新 | 2026-10-14 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 538 個 |
-| 檢查時間 | 2026-10-14 00:11 |
+| 檢查時間 | 2026-10-14 23:44 |
 
 ## 風險摘要
 
@@ -44,7 +44,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/node-client-browser-test.sh、.buildkite/scripts/steps/ui-e2e.sh`
+> 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/lib/perf-sut-recvq.py、.buildkite/scripts/steps/node-client-browser-test.sh`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -56,7 +56,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/lib/perf-percore.sh`
+> 證據：`.buildkite/scripts/steps/lib/perf-percore.sh、.buildkite/scripts/steps/lib/perf-sut-recvq.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 60 個代理指令檔
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4989｜fork 1117｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-14
+⭐ 4989｜fork 1116｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-14
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 9099 / 818 |
-| 最後更新 | 2026-10-12 |
+| 星數 / Fork | ⭐ 9285 / 835 |
+| 最後更新 | 2026-10-14 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 73 個 |
-| 檢查時間 | 2026-10-14 00:11 |
+| 檢查時間 | 2026-10-14 23:44 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、test/validate-response.js`
+> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/utils.ts、test/utils.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/verify-streamable-http.mjs、src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-12`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9099｜fork 818｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-10-12
+⭐ 9285｜fork 835｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-10-14
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | Unified MCP server for six medical terminologies (ICD-11, LOINC, RxNorm, MeSH, A |
 | 星數 / Fork | ⭐ 15 / 5 |
-| 最後更新 | 2026-10-13 |
+| 最後更新 | 2026-10-14 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
 | 已掃描檔案 | 216 個 |
-| 檢查時間 | 2026-10-14 00:15 |
+| 檢查時間 | 2026-10-14 23:47 |
 
 ## 風險摘要
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-13
+⭐ 15｜fork 5｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-10-14
 
 ---
 

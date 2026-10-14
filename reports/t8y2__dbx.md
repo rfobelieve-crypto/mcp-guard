@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 26413 / 2388 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 26678 / 2410 |
+| 最後更新 | 2026-10-14 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 479 個 |
-| 檢查時間 | 2026-10-14 00:11 |
+| 檢查時間 | 2026-10-14 23:43 |
 
 ## 風險摘要
 
@@ -53,7 +53,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`afdian.com、api.adoptium.net、api.atlascloud.ai、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、cache.example.test、dbxio.com、dl.dbxio.com…`
 
-### 🔵 低｜[供應鏈] 有 75 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 74 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/configure-docker-mirror.py、.github/scripts/database-issue-catalog.mjs、.github/scripts/install-mcp.test.mjs、.github/scripts/label-issue-database.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1154 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1203 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 46 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 47 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26413｜fork 2388｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-13
+⭐ 26678｜fork 2410｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-14
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 11068 / 1543 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 11078 / 1552 |
+| 最後更新 | 2026-10-14 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-10-14 00:09 |
+| 檢查時間 | 2026-10-14 23:41 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@hono/node-server@^2.0.12、@modelcontextprotocol/ext-apps@^2.0.0、@modelcontextprotocol/ext-tasks@^0.2.2、@napi-rs/keyring@^1.3.0、@vitejs/plugin-react@^6.0.0、ajv@^8.17.1…`
+> 證據：`@hono/node-server@^2.0.12、@modelcontextprotocol/ext-apps@^2.0.0、@modelcontextprotocol/ext-tasks@^0.2.2、@napi-rs/keyring@^2.1.1、@vitejs/plugin-react@^6.0.0、ajv@^8.17.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -83,11 +83,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11068｜fork 1543｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-13
+⭐ 11078｜fork 1552｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-14
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
-| 星數 / Fork | ⭐ 5 / 1 |
+| 星數 / Fork | ⭐ 5 / 0 |
 | 最後更新 | 2026-10-12 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
 | 已掃描檔案 | 187 個 |
-| 檢查時間 | 2026-10-14 00:15 |
+| 檢查時間 | 2026-10-14 23:47 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-10-12
+⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-10-12
 
 ---
 

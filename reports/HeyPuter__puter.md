@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 43675 / 4078 |
-| 最後更新 | 2026-10-13 |
+| 星數 / Fork | ⭐ 43701 / 4084 |
+| 最後更新 | 2026-10-14 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-10-14 00:10 |
+| 檢查時間 | 2026-10-14 23:43 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/backend/clients/s3/S3Client.ts、src/backend/core/http/middleware/rateLimit.test.js`
+> 證據：`src/backend/clients/s3/S3Client.ts、src/backend/controllers/apps/AppController.test.ts、src/backend/core/http/middleware/rateLimit.test.js`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-13`
+> 證據：`最後推送 2026-10-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43675｜fork 4078｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-10-13
+⭐ 43701｜fork 4084｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-10-14
 
 ---
 

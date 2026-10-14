@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2249 / 143 |
+| 星數 / Fork | ⭐ 2254 / 143 |
 | 最後更新 | 2026-10-14 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-10-14 00:14 |
+| 檢查時間 | 2026-10-14 23:46 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/appstore-status.yml、.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（84 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（82 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2249｜fork 143｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-14
+⭐ 2254｜fork 143｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-14
 
 ---
 
