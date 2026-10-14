@@ -7,11 +7,11 @@
 | 稽核對象 | `AIops-tools/Monitoring-AIops` |
 | 專案說明 | Governed SolarWinds Orion + PRTG ops: canned SWQL, alert rollup, 31 MCP tools (p |
 | 星數 / Fork | ⭐ 0 / 1 |
-| 最後更新 | 2026-09-16 |
+| 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
 | npm 套件 | `@zw008/monitoring-aiops`（registry 查無） |
 | 已掃描檔案 | 97 個 |
-| 檢查時間 | 2026-10-13 02:33 |
+| 檢查時間 | 2026-10-14 00:17 |
 
 ## 風險摘要
 
@@ -79,11 +79,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 26 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-16`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-09-16
+⭐ 0｜fork 1｜語言 Python｜建立 2026-07-12｜最後推送 2026-10-13
 
 ---
 

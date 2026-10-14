@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 4989 / 333 |
+| 星數 / Fork | ⭐ 4999 / 334 |
 | 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 430 個 |
-| 檢查時間 | 2026-10-13 02:28 |
+| 檢查時間 | 2026-10-14 00:12 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@
 
 > 證據：`agent-device.dev、api.example.com、api.example.test、discourse.gnome.org、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev…`
 
-### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、examples/sdk/ai-sdk-tools.ts、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/pnpm-lock.yaml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（140 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（129 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4989｜fork 333｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-13
+⭐ 4999｜fork 334｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-13
 
 ---
 

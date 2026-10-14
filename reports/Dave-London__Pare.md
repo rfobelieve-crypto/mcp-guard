@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `Dave-London/Pare` |
 | 專案說明 | Dev tools, optimized for agents. Structured, token-efficient MCP servers for git |
-| 星數 / Fork | ⭐ 138 / 14 |
-| 最後更新 | 2026-09-29 |
+| 星數 / Fork | ⭐ 139 / 14 |
+| 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-10-13 02:33 |
+| 檢查時間 | 2026-10-14 00:17 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 3　🔵 低 5　⚪ 資訊 7
+🟠 高 2　🟡 中 3　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@changesets/changelog-github@^1.0.0、@changesets/cli@^3.0.0、@modelcontextprotocol/sdk@^1.30.0、@typescript-eslint/eslint-plugin@^8.67.0、@typescript-eslint/parser@^8.67.0、@vitest/coverage-v8@^4.1.10…`
+> 證據：`@changesets/changelog-github@^1.0.0、@changesets/cli@^3.0.0、@modelcontextprotocol/sdk@^1.31.0、@typescript-eslint/eslint-plugin@^8.67.0、@typescript-eslint/parser@^8.67.0、@vitest/coverage-v8@^4.1.10…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -71,17 +71,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/init/__tests__/realfs.test.ts、packages/init/src/lib/config-writers/json-mcpservers.ts、packages/init/src/lib/config-writers/json-vscode.ts、packages/init/src/lib/config-writers/json-zed.ts、packages/init/src/lib/config-writers/toml-codex.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（68 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### ⚪ 資訊｜[代理指令檔] 已掃描 6 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`rules/.clinerules/pare.md（AI 客戶端設定目錄下的指令檔）、rules/.cursor/rules/pare.mdc（AI 客戶端設定目錄下的指令檔）、rules/.github/copilot-instructions.md（GitHub Copilot 指令）、rules/.windsurfrules（Windsurf 規則）、rules/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、rules/GEMINI.md（Gemini CLI 指令）`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 215 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 204 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -95,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 14 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-29`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 138｜fork 14｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-09-29
+⭐ 139｜fork 14｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-13
 
 ---
 

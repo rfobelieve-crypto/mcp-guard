@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Vrun-design/openflowkit` |
 | 專案說明 | Free, open-source diagram canvas. Draw it, write it as code (Mermaid, D2, Struct |
-| 星數 / Fork | ⭐ 853 / 172 |
+| 星數 / Fork | ⭐ 857 / 173 |
 | 最後更新 | 2026-10-13 |
 | 授權 | MIT License |
 | npm 套件 | `openflowkit-app`（registry 查無） |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-13 02:32 |
+| 檢查時間 | 2026-10-14 00:16 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "node -e "if (process.env.CI) process.exit(0)" && husky || true"`
 
-### 🟡 中｜[權限] 會連往 31 個外部主機
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.example.org、api.npmjs.org、api.openai.com、api.sendgrid.com、api.stripe.com、api.twilio.com、app.com、app.openflowkit.com、app.test…`
+> 證據：`anything.example、api.anthropic.com、api.example.org、api.npmjs.org、api.openai.com、api.sendgrid.com、api.stripe.com、api.twilio.com、app.com、app.openflowkit.com…`
 
 ### 🔵 低｜[供應鏈] 有 30 個依賴未鎖定版本
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 853｜fork 172｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-13
+⭐ 857｜fork 173｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-13
 
 ---
 

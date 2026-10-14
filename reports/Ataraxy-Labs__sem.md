@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
-| 星數 / Fork | ⭐ 3410 / 107 |
-| 最後更新 | 2026-10-11 |
+| 星數 / Fork | ⭐ 3411 / 107 |
+| 最後更新 | 2026-10-13 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-13 02:28 |
+| 檢查時間 | 2026-10-14 00:12 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`pi/src/codemode/tool.ts｜「A short async JavaScript program run against the `sem` API (see the types injected into the system prompt).」`
 
-### 🟡 中｜[權限] 會連往 7 個外部主機
+### 🟡 中｜[權限] 會連往 9 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.typesafe.ai、app.com、code.claude.com、feross.org、opencollective.com、paypal.me、www.patreon.com`
+> 證據：`agent-plugins.org、api.typesafe.ai、app.com、ataraxy-labs.com、code.claude.com、feross.org、opencollective.com、paypal.me、www.patreon.com`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -55,11 +55,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`agent-skill/badge/sem-live.py、agent-skill/guard/sem-guard.py、bench/agent-accuracy.py、benchmarks/large-js-fixture/run.mjs、benchmarks/shared-mcp/run.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 6 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、agent-skill/SKILL.md（Agent Skill 指令（SKILL.md））、docs/llms.txt（給模型讀的站點說明（llms.txt））、skills/sem/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`SKILL.md（Agent Skill 指令（SKILL.md））、agent-skill/SKILL.md（Agent Skill 指令（SKILL.md））、docs/llms.txt（給模型讀的站點說明（llms.txt））、integrations/agent-plugin/skills/sem-code-review/SKILL.md（Agent Skill 指令（SKILL.md））、integrations/agent-plugin/skills/weave-merge-preview/SKILL.md（Agent Skill 指令（SKILL.md））、skills/sem/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
@@ -75,7 +75,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3410｜fork 107｜語言 Rust｜建立 2026-02-05｜最後推送 2026-10-11
+⭐ 3411｜fork 107｜語言 Rust｜建立 2026-02-05｜最後推送 2026-10-13
 
 ---
 
