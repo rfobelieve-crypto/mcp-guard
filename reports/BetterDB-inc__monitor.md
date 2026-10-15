@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1308 / 82 |
-| 最後更新 | 2026-10-14 |
+| 星數 / Fork | ⭐ 1309 / 82 |
+| 最後更新 | 2026-10-15 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 447 個 |
-| 檢查時間 | 2026-10-14 23:47 |
+| 檢查時間 | 2026-10-15 23:37 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/__tests__/migration-safety-gate.spec.ts、apps/api/src/migration/execution/execution-job.ts`
+> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/__tests__/migration-safety-gate.spec.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -85,7 +85,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-14`
+> 證據：`最後推送 2026-10-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1308｜fork 82｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-10-14
+⭐ 1309｜fork 82｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-10-15
 
 ---
 

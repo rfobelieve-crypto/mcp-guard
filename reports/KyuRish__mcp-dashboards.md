@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `KyuRish/mcp-dashboards` |
 | 專案說明 | Turn your data into interactive dashboards inside any AI client - MCP Apps power |
-| 星數 / Fork | ⭐ 48 / 10 |
+| 星數 / Fork | ⭐ 49 / 10 |
 | 最後更新 | 2026-09-10 |
 | 授權 | Other |
 | npm 套件 | `mcp-dashboards` |
 | 已掃描檔案 | 50 個 |
-| 檢查時間 | 2026-10-14 23:47 |
+| 檢查時間 | 2026-10-15 23:38 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@
 
 > 證據：`PASSWORD、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 34 天內有更新
+### ⚪ 資訊｜[維護] 最近 35 天內有更新
 
 專案仍在活躍維護中。
 
@@ -75,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 48｜fork 10｜語言 TypeScript｜建立 2026-02-23｜最後推送 2026-09-10
+⭐ 49｜fork 10｜語言 TypeScript｜建立 2026-02-23｜最後推送 2026-09-10
 
 ---
 

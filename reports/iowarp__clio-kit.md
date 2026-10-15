@@ -9,12 +9,12 @@
 | 星數 / Fork | ⭐ 29 / 25 |
 | 最後更新 | 2026-10-08 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
-| 已掃描檔案 | 475 個 |
-| 檢查時間 | 2026-10-14 23:49 |
+| 已掃描檔案 | 414 個 |
+| 檢查時間 | 2026-10-15 23:40 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 3　🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -22,57 +22,49 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/quality_control.yml、evals/claude_planner_eval.py、evals/codex_eval.py、evals/codex_fixtures.py、evals/report.py`
+> 證據：`.github/workflows/quality_control.yml、clio-agentic-search/src/clio_agentic_search/indexing/lexical.py、clio-agentic-search/src/clio_agentic_search/storage/duckdb_store.py、clio-kit-mcp-servers/arxiv/src/arxiv_mcp/capabilities/download_paper.py、clio-kit-mcp-servers/arxiv/tests/test_download_paper.py`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`evals/claude_planner_eval.py、evals/codex_eval.py、evals/codex_fixtures.py、mcp-servers/adios/tests/test_lazy_import.py、mcp-servers/arxiv/tests/test_fastmcp_tools.py`
+> 證據：`clio-agentic-search/src/clio_agentic_search/tasks.py、clio-kit-mcp-servers/adios/tests/test_lazy_import.py、clio-kit-mcp-servers/arxiv/tests/test_fastmcp_tools.py、clio-kit-mcp-servers/chronolog/src/chronomcp/utils/helpers.py、clio-kit-mcp-servers/chronolog/tests/test_utils.py`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`mcp-servers/hdf5/src/hdf5_mcp/server.py`
+> 證據：`clio-kit-mcp-servers/hdf5/src/hdf5_mcp/server.py`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 11 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`arxiv.org、astral.sh、docs.hdfgroup.org、example.test、export.arxiv.org、ndp.example.org、nominatim.openstreetmap.org、static.modelcontextprotocol.io、test.example.com、toolkit.iowarp.ai…`
+> 證據：`arxiv.org、astral.sh、docs.hdfgroup.org、docs.iowarp.ai、example.test、export.arxiv.org、nominatim.openstreetmap.org、static.modelcontextprotocol.io、test.example.com、uploads.github.com`
 
-### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
-
-若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
-
-這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
-
-> 證據：`skills/clio-coder-skills/skills/clio-kit-credentials/SKILL.md｜「…ks typed reads and writes of secret-shaped paths (`.env` variants, `~/.ssh/`, `~/.aws/`, key and pem files, netrc, kubeconfigs) by default. That…」`
-
-### 🔵 低｜[供應鏈] 有 3 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`click>=8.3.3、tomli-w>=1.2、PyYAML>=6.0.2`
+> 證據：`click>=8.3.3`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`evals/claude_planner_eval.py、evals/codex_eval.py、evals/skill_eval.py、mcp-servers/adios/src/adios_mcp/server.py、mcp-servers/adios/tests/test_server.py`
+> 證據：`clio-agentic-search/src/clio_agentic_search/api/app.py、clio-agentic-search/src/clio_agentic_search/connectors/filesystem/connector.py、clio-agentic-search/src/clio_agentic_search/connectors/object_store/connector.py、clio-agentic-search/src/clio_agentic_search/core/namespace_config.py、clio-agentic-search/src/clio_agentic_search/core/namespace_registry.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 62 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/clio-dataset-report/skills/dataset-report/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/chart-select/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/data-clean/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/results-summary/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 345 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 267 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -86,7 +78,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 7 天內有更新
 
 專案仍在活躍維護中。
 

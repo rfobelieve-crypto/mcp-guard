@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 102151 / 17109 |
-| 最後更新 | 2026-10-14 |
+| 星數 / Fork | ⭐ 102712 / 17202 |
+| 最後更新 | 2026-10-15 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
-| 已掃描檔案 | 525 個 |
-| 檢查時間 | 2026-10-14 23:43 |
+| 已掃描檔案 | 526 個 |
+| 檢查時間 | 2026-10-15 23:33 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.agents/skills/verify-paperclip/scripts/doctor.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs、.agents/skills/verify-paperclip/tests/test_ownership.py、.github/scripts/publish-storybook.cjs、cli/src/__tests__/agent-jwt-env.test.ts`
+> 證據：`.agents/skills/verify-paperclip/scripts/doctor.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs、.agents/skills/verify-paperclip/tests/test_ownership.py、.github/scripts/publish-storybook.cjs、.github/scripts/tests/ci-profile.test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.openai.com、attacker-registry.invalid、codeload.github.com、discord.gg、docs.paperclip.ing、evil.example、example.test、foreign.example、ghe.example.com…`
+> 證據：`api.anthropic.com、api.honeycomb.io、api.openai.com、attacker-registry.invalid、codeload.github.com、discord.gg、docs.paperclip.ing、evil.example、example.test、foreign.example…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -71,11 +71,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.agents/skills/verify-paperclip/scripts/launch.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（5979 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（5998 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 111 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 113 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-14`
+> 證據：`最後推送 2026-10-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 102151｜fork 17109｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-14
+⭐ 102712｜fork 17202｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-15
 
 ---
 

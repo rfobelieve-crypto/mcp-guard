@@ -7,11 +7,11 @@
 | 稽核對象 | `embeddedlayers/mcp-analytics` |
 | 專案說明 | The statistical analyst in your AI chat — bring data and a question, own a citab |
 | 星數 / Fork | ⭐ 7 / 1 |
-| 最後更新 | 2026-09-07 |
+| 最後更新 | 2026-10-15 |
 | 授權 | MIT License |
 | npm 套件 | `@mcp-analytics/mcp-analytics` |
 | 已掃描檔案 | 37 個 |
-| 檢查時間 | 2026-10-14 23:48 |
+| 檢查時間 | 2026-10-15 23:39 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 38 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -61,11 +61,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 38 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-07`
+> 證據：`最後推送 2026-10-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -75,7 +75,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7｜fork 1｜語言 JavaScript｜建立 2025-09-17｜最後推送 2026-09-07
+⭐ 7｜fork 1｜語言 Python｜建立 2025-09-17｜最後推送 2026-10-15
 
 ---
 

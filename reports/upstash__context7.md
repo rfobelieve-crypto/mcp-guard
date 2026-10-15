@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `upstash/context7` |
-| 專案說明 | Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors |
-| 星數 / Fork | ⭐ 63050 / 3085 |
-| 最後更新 | 2026-10-14 |
+| 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
+| 星數 / Fork | ⭐ 63103 / 3093 |
+| 最後更新 | 2026-10-15 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
 | 已掃描檔案 | 270 個 |
-| 檢查時間 | 2026-10-14 23:43 |
+| 檢查時間 | 2026-10-15 23:33 |
 
 ## 風險摘要
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-14`
+> 證據：`最後推送 2026-10-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63050｜fork 3085｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-14
+⭐ 63103｜fork 3093｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-15
 
 ---
 

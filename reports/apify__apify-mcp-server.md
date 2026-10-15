@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 11243 / 344 |
-| 最後更新 | 2026-10-14 |
+| 星數 / Fork | ⭐ 11423 / 360 |
+| 最後更新 | 2026-10-15 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
-| 已掃描檔案 | 399 個 |
-| 檢查時間 | 2026-10-14 23:46 |
+| 已掃描檔案 | 400 個 |
+| 檢查時間 | 2026-10-15 23:36 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、actor.example、actorpub.apify.actor、api.apify.com、api.example.test、api.invalid、apify-image-uploads-prod.s3.amazonaws.com、apify-image-uploads-prod.s3.us-east-1.amazonaws.com、apify.com、b.com…`
+> 證據：`a.com、actor.example、actorpub.apify.actor、api-securitybyobscurity.apify.com、api.apify.com、api.example.test、api.internal.example、api.invalid、apify-image-uploads-prod.s3.amazonaws.com、apify-image-uploads-prod.s3.us-east-1.amazonaws.com…`
 
 ### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`evals/scripts/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（212 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（204 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-14`
+> 證據：`最後推送 2026-10-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11243｜fork 344｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-14
+⭐ 11423｜fork 360｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-15
 
 ---
 
