@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
-| 專案說明 | First gitlab mcp for you, building together |
-| 星數 / Fork | ⭐ 2044 / 358 |
-| 最後更新 | 2026-10-15 |
+| 專案說明 | MCP server for GitLab: 100+ tools for projects, MRs, issues, pipelines, wikis an |
+| 星數 / Fork | ⭐ 2047 / 358 |
+| 最後更新 | 2026-10-16 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-15 23:37 |
+| 檢查時間 | 2026-10-16 23:19 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 65 個外部主機
+### 🟡 中｜[權限] 會連往 67 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`GITLAB.INTERNAL.COM、a.com、a.example、admin.internal.example、another.example.test、anything.example、api.internal.com、api.prod.example.com、api.stage.example.com、attacker.example…`
+> 證據：`GITLAB.INTERNAL.COM、a.com、a.example、about.gitlab.com、admin.internal.example、another.example.test、anything.example、api.internal.com、api.prod.example.com、api.stage.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-15`
+> 證據：`最後推送 2026-10-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2044｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-15
+⭐ 2047｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-16
 
 ---
 

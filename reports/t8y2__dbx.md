@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 26836 / 2428 |
-| 最後更新 | 2026-10-15 |
+| 星數 / Fork | ⭐ 27000 / 2446 |
+| 最後更新 | 2026-10-16 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 479 個 |
-| 檢查時間 | 2026-10-15 23:34 |
+| 檢查時間 | 2026-10-16 23:17 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/configure-docker-mirror.py、.github/scripts/database-issue-catalog.mjs、.github/scripts/install-mcp.test.mjs、.github/scripts/label-issue-database.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1230 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1269 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-15`
+> 證據：`最後推送 2026-10-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26836｜fork 2428｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-15
+⭐ 27000｜fork 2446｜語言 Rust｜建立 2026-04-29｜最後推送 2026-10-16
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 80 / 29 |
+| 星數 / Fork | ⭐ 79 / 30 |
 | 最後更新 | 2026-10-10 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
 | 已掃描檔案 | 251 個 |
-| 檢查時間 | 2026-10-15 23:38 |
+| 檢查時間 | 2026-10-16 23:20 |
 
 ## 風險摘要
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 6 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 80｜fork 29｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-10
+⭐ 79｜fork 30｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-10
 
 ---
 

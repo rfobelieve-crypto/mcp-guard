@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4473 / 396 |
-| 最後更新 | 2026-10-15 |
+| 星數 / Fork | ⭐ 4482 / 397 |
+| 最後更新 | 2026-10-16 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 272 個 |
-| 檢查時間 | 2026-10-15 23:36 |
+| 已掃描檔案 | 415 個 |
+| 檢查時間 | 2026-10-16 23:18 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-game.dev、api.nuget.org、cdn.packages.unity.com、discord.com、license.unity3d.com、old.example.com、opencollective.com、openupm.com、other.example.com、package.openupm.com…`
+> 證據：`ai-game.dev、api.nuget.org、cdn.packages.unity.com、discord.com、example.invalid、license.unity3d.com、old.example.com、opencollective.com、openupm.com、other.example.com…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,11 +42,11 @@
 
 > 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 43 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-15`
+> 證據：`最後推送 2026-10-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4473｜fork 396｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-15
+⭐ 4482｜fork 397｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-16
 
 ---
 

@@ -1,23 +1,29 @@
 # MCP 安檢報告：amruthpillai/reactive-resume
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `amruthpillai/reactive-resume` |
 | 專案說明 | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur |
-| 星數 / Fork | ⭐ 44346 / 4861 |
-| 最後更新 | 2026-10-15 |
+| 星數 / Fork | ⭐ 44401 / 4859 |
+| 最後更新 | 2026-10-16 |
 | 授權 | MIT License |
 | npm 套件 | `reactive-resume` |
 | 已掃描檔案 | 428 個 |
-| 檢查時間 | 2026-10-15 23:34 |
+| 檢查時間 | 2026-10-16 23:16 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/features/applications/components/application-notes.test.tsx、apps/web/src/features/assistant/assistant-panel.tsx、apps/web/src/features/ats-checker/pending-import.ts`
 
 ### 🟡 中｜[代理指令檔] 指令檔要求模型忽略先前指令（疑為引述或警告）
 
@@ -41,15 +47,9 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/label-issues.yml、.github/workflows/vercel.yml、apps/server/src/http/oauth-flow.integration.test.ts、apps/server/src/index.ts、apps/server/src/openapi/generate-spec.ts`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`apps/server/src/static/web.test.ts、apps/server/src/static/web.ts、apps/web/src/features/applications/components/application-notes.test.tsx、apps/web/src/features/assistant/assistant-panel.tsx、apps/web/src/features/ats-checker/pending-import.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
 
@@ -61,9 +61,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-15`
+> 證據：`最後推送 2026-10-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44346｜fork 4861｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-15
+⭐ 44401｜fork 4859｜語言 TypeScript｜建立 2020-03-25｜最後推送 2026-10-16
 
 ---
 

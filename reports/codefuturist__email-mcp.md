@@ -1,35 +1,23 @@
 # MCP 安檢報告：codefuturist/email-mcp
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `codefuturist/email-mcp` |
 | 專案說明 | Email MCP server with full IMAP + SMTP support — read, search, send, manage, and |
 | 星數 / Fork | ⭐ 128 / 59 |
-| 最後更新 | 2026-10-10 |
+| 最後更新 | 2026-10-16 |
 | 授權 | GNU Lesser General Public License v3.0 |
 | npm 套件 | `@codefuturist/email-mcp` |
-| 已掃描檔案 | 138 個 |
-| 檢查時間 | 2026-10-15 23:39 |
+| 已掃描檔案 | 250 個 |
+| 檢查時間 | 2026-10-16 23:21 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`src/cli/config-commands.ts、src/cli/install-commands.ts、src/cli/scheduler.ts、src/config/loader.test.ts、src/config/loader.ts`
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`src/cli/scheduler.ts、src/services/local-calendar.service.ts、src/services/notifier.service.ts、src/services/reminders.service.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -37,27 +25,35 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "lefthook install || true"`
 
-### 🟡 中｜[權限] 會連往 25 個外部主機
+### 🟡 中｜[權限] 會連往 35 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、biomejs.dev、docs.cocogitto.io、eslint.org、example.webex.com、feross.org、glama.ai、goreleaser.com、hooks.example.com、ko-fi.com…`
+> 證據：`accounts.example.com、accounts.google.com、app.myapp.io、auth.example.com、biomejs.dev、c.dn、cdn.example.com、docs.cocogitto.io、e.test、example.webex.com…`
 
 ### 🔵 低｜[供應鏈] 有 20 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@clack/prompts@^1.0.1、@modelcontextprotocol/sdk@^1.26.0、imapflow@^1.2.9、node-ical@^0.25.2、nodemailer@^8.0.1、smol-toml@^1.6.0…`
+> 證據：`@clack/prompts@^1.8.1、@modelcontextprotocol/node@^2.1.1、@modelcontextprotocol/sdk@^1.32.1、@modelcontextprotocol/server@^2.3.1、imapflow@^2.3.0、libmime@^5.4.7…`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`src/__integration__/email-advanced.integration.test.ts、src/cache/blob-store.ts、src/cache/store.ts、src/cli/cache-commands.ts、src/cli/install-commands.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/cli/install-commands.ts、src/config/loader.test.ts、src/config/loader.ts、src/config/xdg.ts`
+> 證據：`src/cli/completion.ts、src/cli/email-commands.ts、src/cli/http.ts、src/cli/install-commands.ts、src/cli/logs.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-可能代表維護者回應不及，遇到問題時求助無門。
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`src/cli/keychain-store.ts、src/cli/open-command.ts、src/cli/scheduler.ts、src/cli/server-commands.ts、src/cli/update.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -65,13 +61,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 65 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 172 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -79,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 128｜fork 59｜語言 TypeScript｜建立 2026-02-18｜最後推送 2026-10-10
+⭐ 128｜fork 59｜語言 TypeScript｜建立 2026-02-18｜最後推送 2026-10-16
 
 ---
 
