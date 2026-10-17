@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipp |
-| 星數 / Fork | ⭐ 9243 / 1481 |
-| 最後更新 | 2026-10-16 |
+| 星數 / Fork | ⭐ 9242 / 1480 |
+| 最後更新 | 2026-10-17 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-10-16 23:17 |
+| 檢查時間 | 2026-10-17 22:55 |
 
 ## 風險摘要
 
@@ -34,7 +34,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 29 個外部主機
+### 🟡 中｜[權限] 會連往 30 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -44,21 +44,21 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/claude-code-action/action.yml、.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/agents-suite.yml、.github/workflows/auto-pr-comment.yml`
+> 證據：`.github/actions/claude-code-action/action.yml、.github/scripts/outsider-review.js、.github/scripts/pr-review-chain-selftest.js、.github/scripts/pr-review-chain.js、.github/workflows/agents-suite.yml`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/praisonai-issue-triage.yaml、.github/scripts/release-gate.js、.github/workflows/claude-merge-gate.yml、.github/workflows/pypi-release.yml、examples/agent_tools/agent_centric_example.py`
+> 證據：`.github/praisonai-issue-triage.yaml、.github/scripts/release-gate.js、.github/workflows/claude-merge-gate.yml、.github/workflows/claude.yml、.github/workflows/pypi-release.yml`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py、examples/js/run-feature-tests.ts`
+> 證據：`.github/scripts/outsider-review.js、.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（105 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（108 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -82,11 +82,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9243｜fork 1481｜語言 Python｜建立 2024-03-19｜最後推送 2026-10-16
+⭐ 9242｜fork 1480｜語言 Python｜建立 2024-03-19｜最後推送 2026-10-17
 
 ---
 

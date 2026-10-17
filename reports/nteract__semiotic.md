@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2716 / 141 |
-| 最後更新 | 2026-10-16 |
+| 最後更新 | 2026-10-17 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-16 23:19 |
+| 檢查時間 | 2026-10-17 22:57 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 35 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`alfred.stlouisfed.org、api.bls.gov、api.mapbox.com、bost.ocks.org、cdec.water.ca.gov、chartability.github.io、creativecommons.org、cww.water.ca.gov、data.iana.org、data.unicef.org…`
+> 證據：`alfred.stlouisfed.org、api.bls.gov、api.mapbox.com、cdec.water.ca.gov、chartability.github.io、creativecommons.org、cww.water.ca.gov、data.iana.org、data.unicef.org、developers.openai.com…`
 
 ### 🔵 低｜[供應鏈] 有 69 個依賴未鎖定版本
 
@@ -35,13 +35,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-mcp-registry.yml、.github/workflows/release.yml、ai/cli.js、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-build-info.ts`
+> 證據：`.github/workflows/publish-mcp-registry.yml、.github/workflows/release.yml、ai/cli-output.test.ts、ai/cli.js、ai/mcp-artifact-contract.integration.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs`
+> 證據：`.github/workflows/release.yml、ai/cli-output.test.ts、ai/mcp-artifact-contract.integration.test.ts、ai/mcp-http-logging.integration.test.ts、deploy/cloud-run-nightly/verify-runtime.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts、docs/public/stories/reservoir-guide/offline/worker.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（239 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（233 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2716｜fork 141｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-10-16
+⭐ 2716｜fork 141｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-10-17
 
 ---
 

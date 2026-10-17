@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 7819 / 897 |
-| 最後更新 | 2026-10-16 |
+| 星數 / Fork | ⭐ 7829 / 904 |
+| 最後更新 | 2026-10-17 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 431 個 |
-| 檢查時間 | 2026-10-16 23:17 |
+| 檢查時間 | 2026-10-17 22:56 |
 
 ## 風險摘要
 
@@ -35,21 +35,21 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/design/contrast_check.py、packages/claude-mod/src/mod-api.ts、packages/claude-mod/src/register.ts、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/hermes.py`
+> 證據：`docs/design/contrast_check.py、packages/claude-mod/src/mod-api.ts、packages/claude-mod/src/register.ts、packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_adapters/claude_code.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/ci.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py`
+> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/ci.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/copilot.py、packages/cli/src/repowise/cli/agent_targets/targets/hermes.py、packages/cli/src/repowise/cli/agent_targets/targets/kiro.py`
+> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/cli/src/repowise/cli/_helpers/config.py、packages/cli/src/repowise/cli/_helpers/providers.py、packages/cli/src/repowise/cli/agent_adapters/claude_code.py、packages/cli/src/repowise/cli/agent_targets/targets/copilot.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（335 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（391 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,11 +77,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7819｜fork 897｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-16
+⭐ 7829｜fork 904｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-17
 
 ---
 

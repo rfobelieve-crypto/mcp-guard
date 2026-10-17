@@ -7,11 +7,11 @@
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
 | 星數 / Fork | ⭐ 70 / 11 |
-| 最後更新 | 2026-10-08 |
+| 最後更新 | 2026-10-17 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 124 個 |
-| 檢查時間 | 2026-10-16 23:20 |
+| 已掃描檔案 | 125 個 |
+| 檢查時間 | 2026-10-17 22:59 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/test-skill-surface.mjs`
+> 證據：`scripts/cli-ux-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/summary-fixture-test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-08`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 70｜fork 11｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-10-08
+⭐ 70｜fork 11｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-10-17
 
 ---
 

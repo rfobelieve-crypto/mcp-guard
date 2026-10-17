@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `LetsFG/LetsFG` |
 | 專案說明 | Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS  |
-| 星數 / Fork | ⭐ 2154 / 145 |
-| 最後更新 | 2026-10-16 |
+| 星數 / Fork | ⭐ 2160 / 145 |
+| 最後更新 | 2026-10-17 |
 | 授權 | Other |
-| 已掃描檔案 | 155 個 |
-| 檢查時間 | 2026-10-16 23:19 |
+| 已掃描檔案 | 156 個 |
+| 檢查時間 | 2026-10-17 22:58 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.stripe.com.evil.com、context7.com、evil.com…`
+> 證據：`agent-plugins.org、agent.example.com、basemaps.cartocdn.com、booking.flyscoot.com、bookingportal.china-airlines.com、carrier.example.com、checknfly.co.uk、checkout.revolut.com、checkout.stripe.com.evil.com、context7.com…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -72,11 +72,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2154｜fork 145｜語言 Python｜建立 2026-03-01｜最後推送 2026-10-16
+⭐ 2160｜fork 145｜語言 Python｜建立 2026-03-01｜最後推送 2026-10-17
 
 ---
 

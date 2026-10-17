@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `D4Vinci/Scrapling` |
-| 專案說明 | 🕷️ An adaptive Web Scraping framework that handles everything from a single requ |
-| 星數 / Fork | ⭐ 88113 / 9072 |
-| 最後更新 | 2026-10-16 |
+| 專案說明 | 🕷️ A Web Scraping framework that handles everything from a single request to a f |
+| 星數 / Fork | ⭐ 88294 / 9089 |
+| 最後更新 | 2026-10-17 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
-| 已掃描檔案 | 224 個 |
-| 檢查時間 | 2026-10-16 23:16 |
+| 已掃描檔案 | 404 個 |
+| 檢查時間 | 2026-10-17 22:54 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 59 個外部主機
+### 🟡 中｜[權限] 會連往 5 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`WWW.EXAMPLE.COM、a.com、ads.com、ads.example.com、alpha.com、anything.com、api.example.com、api.v2.example.com、b.com、b.org…`
+> 證據：`books.toscrape.com、discord.gg、docs.readthedocs.com、quotes.toscrape.com、scrapling.readthedocs.io`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -34,7 +34,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release-and-publish.yml、cleanup.py、scrapling/core/shell.py、scrapling/spiders/result.py、tests/spiders/test_checkpoint.py`
+> 證據：`.github/workflows/release-and-publish.yml、cleanup.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -42,7 +42,7 @@
 
 > 證據：`agent-skill/Scrapling-Skill/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -60,7 +60,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 88113｜fork 9072｜語言 Python｜建立 2024-10-13｜最後推送 2026-10-16
+⭐ 88294｜fork 9089｜語言 Python｜建立 2024-10-13｜最後推送 2026-10-17
 
 ---
 
