@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JosueM1109/personal-finance-mcp` |
 | 專案說明 | Self-hosted, read-only MCP server for personal finance. Connect your banks via P |
-| 星數 / Fork | ⭐ 8 / 1 |
+| 星數 / Fork | ⭐ 9 / 1 |
 | 最後更新 | 2026-04-20 |
 | 授權 | MIT License |
 | 已掃描檔案 | 16 個 |
-| 檢查時間 | 2026-10-17 22:59 |
+| 檢查時間 | 2026-10-18 22:53 |
 
 ## 風險摘要
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8｜fork 1｜語言 Python｜建立 2026-04-20｜最後推送 2026-04-20
+⭐ 9｜fork 1｜語言 Python｜建立 2026-04-20｜最後推送 2026-04-20
 
 ---
 

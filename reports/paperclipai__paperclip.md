@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `paperclipai/paperclip` |
 | 專案說明 | The open-source app everyone uses to manage agents at work |
-| 星數 / Fork | ⭐ 103619 / 17322 |
-| 最後更新 | 2026-10-17 |
+| 星數 / Fork | ⭐ 104103 / 17397 |
+| 最後更新 | 2026-10-18 |
 | 授權 | MIT License |
 | npm 套件 | `paperclip` |
 | 已掃描檔案 | 526 個 |
-| 檢查時間 | 2026-10-17 22:54 |
+| 檢查時間 | 2026-10-18 22:48 |
 
 ## 風險摘要
 
@@ -47,11 +47,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 27 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.anthropic.com、api.honeycomb.io、api.openai.com、attacker-registry.invalid、codeload.github.com、discord.gg、docs.paperclip.ing、evil.example、example.test、foreign.example…`
+> 證據：`api.anthropic.com、api.honeycomb.io、api.openai.com、attacker-registry.invalid、cli.example.invalid、codeload.github.com、discord.gg、docs.paperclip.ing、evil.example、example.test…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/garden-inbox/scripts/garden-inbox.mjs、.agents/skills/paperclip-page/scripts/publish.test.mjs、.agents/skills/pr-gardening/scripts/find-candidates.mjs、.agents/skills/verify-paperclip/scripts/launch.py、.agents/skills/verify-paperclip/scripts/onboarding-smoke.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（6095 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（6171 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-10-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 103619｜fork 17322｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-17
+⭐ 104103｜fork 17397｜語言 TypeScript｜建立 2026-03-02｜最後推送 2026-10-18
 
 ---
 

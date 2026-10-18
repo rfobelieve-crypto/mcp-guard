@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Curso |
-| 星數 / Fork | ⭐ 7624 / 922 |
-| 最後更新 | 2026-10-17 |
+| 星數 / Fork | ⭐ 7630 / 924 |
+| 最後更新 | 2026-10-18 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
 | 已掃描檔案 | 85 個 |
-| 檢查時間 | 2026-10-17 22:54 |
+| 檢查時間 | 2026-10-18 22:47 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 23 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.firecrawl.dev、benzinga.example、claude.ai、docs.firecrawl.dev、eslint.org、evil.example、example.org、example.test、firecrawl.dev、firecrawl.dev.evil.example…`
+> 證據：`api.firecrawl.dev、app.example.com、app.localhost、benzinga.example、claude.ai、docs.firecrawl.dev、eslint.org、evil.example、example.org、example.test…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/embed-package.test.mjs、tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs、tests/server-hooks.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（171 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（176 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-10-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7624｜fork 922｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-17
+⭐ 7630｜fork 924｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-18
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 46777 / 3859 |
-| 最後更新 | 2026-10-17 |
+| 星數 / Fork | ⭐ 46857 / 3871 |
+| 最後更新 | 2026-10-18 |
 | 授權 | MIT License |
 | 已掃描檔案 | 412 個 |
-| 檢查時間 | 2026-10-17 22:54 |
+| 檢查時間 | 2026-10-18 22:48 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`graph-ui/src/browser-ai/BrowserChatDock.test.tsx、graph-ui/src/browser-ai/embedded-model-assets.test.ts、graph-ui/src/browser-ai/explanation-response.test.ts、graph-ui/src/browser-ai/security-download-origins.test.ts、graph-ui/src/browser-ai/security-ui-model-policy.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（644 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（654 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-10-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 46777｜fork 3859｜語言 C｜建立 2026-02-24｜最後推送 2026-10-17
+⭐ 46857｜fork 3871｜語言 C｜建立 2026-02-24｜最後推送 2026-10-18
 
 ---
 
