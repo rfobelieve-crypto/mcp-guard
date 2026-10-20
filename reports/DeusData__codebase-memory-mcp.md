@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
-| 專案說明 | High-performance code intelligence MCP server. Indexes codebases into a persiste |
-| 星數 / Fork | ⭐ 46949 / 3885 |
-| 最後更新 | 2026-10-19 |
+| 專案說明 | Local code intelligence for developers and AI agents. Connect code, docs and inf |
+| 星數 / Fork | ⭐ 47029 / 3860 |
+| 最後更新 | 2026-10-20 |
 | 授權 | MIT License |
 | 已掃描檔案 | 412 個 |
-| 檢查時間 | 2026-10-20 00:07 |
+| 檢查時間 | 2026-10-20 23:38 |
 
 ## 風險摘要
 
@@ -26,23 +26,23 @@
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/issue-labeler.yml、graph-ui/agents/hooks/atlas-trace.py、graph-ui/agents/hooks/test_atlas_trace.py、graph-ui/src/agents/AgentSetup.test.tsx、graph-ui/src/app/project-windows.test.tsx`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`graph-ui/agents/hooks/atlas-trace-watch.mjs、graph-ui/agents/hooks/atlas-trace.py、graph-ui/agents/hooks/test_atlas_trace.py、graph-ui/fixtures/atlas-sample/src/config.ts、graph-ui/fixtures/atlas-sample/src/services/userService.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`graph-ui/src/browser-ai/BrowserChatDock.test.tsx、graph-ui/src/browser-ai/embedded-model-assets.test.ts、graph-ui/src/browser-ai/explanation-response.test.ts、graph-ui/src/browser-ai/security-download-origins.test.ts、graph-ui/src/browser-ai/security-ui-model-policy.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（651 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（625 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：程式碼／版控工具
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 46949｜fork 3885｜語言 C｜建立 2026-02-24｜最後推送 2026-10-19
+⭐ 47029｜fork 3860｜語言 C｜建立 2026-02-24｜最後推送 2026-10-20
 
 ---
 

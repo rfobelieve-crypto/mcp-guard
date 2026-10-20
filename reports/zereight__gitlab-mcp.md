@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | MCP server for GitLab: 100+ tools for projects, MRs, issues, pipelines, wikis an |
-| 星數 / Fork | ⭐ 2053 / 358 |
-| 最後更新 | 2026-10-19 |
+| 星數 / Fork | ⭐ 2055 / 358 |
+| 最後更新 | 2026-10-20 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-20 00:11 |
+| 檢查時間 | 2026-10-20 23:42 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`oauth.ts、test/callback-proxy-redirect-policy.test.ts、test/cli/boolean-flags.test.ts、test/cli/credentials.test.ts、test/config-allowed-groups.test.ts`
+> 證據：`oauth.ts、scripts/release.test.ts、test/api-url-credentials.test.ts、test/callback-proxy-redirect-policy.test.ts、test/cli/boolean-flags.test.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -37,7 +37,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 68 個外部主機
+### 🟡 中｜[權限] 會連往 69 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -75,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2053｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-19
+⭐ 2055｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-20
 
 ---
 

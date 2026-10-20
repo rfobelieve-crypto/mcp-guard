@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1626 / 184 |
-| 最後更新 | 2026-10-19 |
+| 星數 / Fork | ⭐ 1628 / 168 |
+| 最後更新 | 2026-10-20 |
 | 授權 | MIT License |
-| 已掃描檔案 | 118 個 |
-| 檢查時間 | 2026-10-20 00:12 |
+| 已掃描檔案 | 119 個 |
+| 檢查時間 | 2026-10-20 23:43 |
 
 ## 風險摘要
 
@@ -18,17 +18,17 @@
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`scripts/validate-server-schema.py、src/mcp_windbg/cdb_session.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/kd_session.py、src/mcp_windbg/server.py`
-
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`src/mcp_windbg/debug_session.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_debug_session.py`
+> 證據：`scripts/test_signing_http.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_debug_session.py`
+
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`scripts/test_signing_http.py、scripts/validate-server-schema.py、src/mcp_windbg/cdb_session.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/kd_session.py`
 
 ### 🟡 中｜[權限] 會連往 4 個外部主機
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/mcp_windbg/__init__.py、src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_tool_concurrency_live.py`
+> 證據：`scripts/test_signing_http.py、src/mcp_windbg/__init__.py、src/mcp_windbg/server.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
@@ -66,13 +66,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`SECRET、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1626｜fork 184｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-19
+⭐ 1628｜fork 168｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-20
 
 ---
 

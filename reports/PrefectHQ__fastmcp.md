@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28138 / 2491 |
-| 最後更新 | 2026-10-19 |
+| 星數 / Fork | ⭐ 28150 / 2493 |
+| 最後更新 | 2026-10-20 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-20 00:07 |
+| 檢查時間 | 2026-10-20 23:38 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.example.com、api.mintlify.com、api.surgemsg.com、api2.amplitude.com、archive.org、block.github.io、bsky.app…`
+> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.example.com、api.mintlify.com、api.surgemsg.com、api2.amplitude.com、archive.org、auth.example.com、block.github.io…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py、examples/diagnostics/server.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（587 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（537 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-20`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28138｜fork 2491｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-19
+⭐ 28150｜fork 2493｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-20
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JanDeDobbeleer/oh-my-posh` |
 | 專案說明 | The most customisable and low-latency cross platform/shell prompt renderer |
-| 星數 / Fork | ⭐ 23606 / 2801 |
-| 最後更新 | 2026-10-16 |
+| 星數 / Fork | ⭐ 23613 / 2802 |
+| 最後更新 | 2026-10-20 |
 | 授權 | MIT License |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-10-20 00:08 |
+| 檢查時間 | 2026-10-20 23:39 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、api.brewfather.app、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org、example.awsapps.com…`
+> 證據：`aka.ms、bazel.build、cdn.ohmyposh.dev、containers.dev、discord.com、docs.bazel.build、docs.microsoft.com、en.wikipedia.org、example.awsapps.com、go.microsoft.com…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -64,13 +64,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-16`
+> 證據：`最後推送 2026-10-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 23606｜fork 2801｜語言 Go｜建立 2019-03-13｜最後推送 2026-10-16
+⭐ 23613｜fork 2802｜語言 Go｜建立 2019-03-13｜最後推送 2026-10-20
 
 ---
 
