@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1745 / 266 |
-| 最後更新 | 2026-10-18 |
+| 星數 / Fork | ⭐ 1747 / 267 |
+| 最後更新 | 2026-10-19 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 928 個 |
-| 檢查時間 | 2026-10-18 22:52 |
+| 已掃描檔案 | 953 個 |
+| 檢查時間 | 2026-10-20 00:11 |
 
 ## 風險摘要
 
-🟠 高 6　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 6　🟡 中 4　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -70,6 +70,12 @@
 
 > 證據：`plugin/skills/tooluniverse-share-computer/SKILL.md｜「~~~powershell powershell -ExecutionPolicy ByPass -c "irm https://connect.aiscientist.tools/install.ps1 | iex" ~~~」（另 2 個檔案有相同內容）`
 
+### 🟡 中｜[供應鏈] setup.py 會在安裝時執行外部指令
+
+常見的正當用途是呼叫 git 取版本號或編譯原生模組；但這確實是安裝當下就會執行的程式碼，值得逐行讀懂。
+
+> 證據：`src/tooluniverse/remote_resident/setup.py:11｜subprocess`
+
 ### 🟡 中｜[權限] 會連往 39 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
@@ -100,7 +106,7 @@
 
 > 證據：`benchmarks/bixbench/scripts/probe_tool_call.py、examples/agentic_streaming_example.py、examples/azure_openai_models_example.py、examples/benchmark_batch_vs_single.py、examples/benchmarks/labbench/cli_runtime.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 531 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 555 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -124,7 +130,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -134,7 +140,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1745｜fork 266｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-18
+⭐ 1747｜fork 267｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-19
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4132 / 375 |
-| 最後更新 | 2026-10-18 |
+| 星數 / Fork | ⭐ 4134 / 376 |
+| 最後更新 | 2026-10-19 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-10-18 22:50 |
+| 檢查時間 | 2026-10-20 00:09 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@
 
 > 證據：`backend/app/build.gradle、backend/data/build.gradle、backend/testing/build.gradle、build.gradle、e2e/cypress/common/flakyReport.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（212 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（210 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,11 +71,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4132｜fork 375｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-10-18
+⭐ 4134｜fork 376｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-10-19
 
 ---
 

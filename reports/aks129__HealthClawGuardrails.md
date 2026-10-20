@@ -7,11 +7,11 @@
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 31 / 12 |
-| 最後更新 | 2026-10-18 |
+| 最後更新 | 2026-10-19 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
-| 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-18 22:53 |
+| 已掃描檔案 | 415 個 |
+| 檢查時間 | 2026-10-20 00:12 |
 
 ## 風險摘要
 
@@ -23,29 +23,29 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、adapters/healthclaw_bridge.py、careagents/static/home.js、deploy/careagents/deploy.sh、deploy/careagents/imessage_relay.py`
+> 證據：`.github/workflows/ci.yml、.github/workflows/prod-watch.yml、adapters/healthclaw_bridge.py、careagents/app.py、careagents/config.py`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`deploy/careagents/imessage_relay.py、openclaw/bot.py、scripts/benchmark_claude_cli.py、scripts/bot_commands.py、scripts/demo_telemetry.py`
+> 證據：`deploy/careagents/imessage_relay.py、openclaw/bot.py`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`r6/rate_limit.py、tests/test_oauth_redis.py、tests/test_rate_limit_store.py、tests/test_runtime_security_config.py`
+> 證據：`r6/rate_limit.py`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 85 個外部主機
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent.example.org、api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.fastenhealth.com、api.healthex.io、api.linkedin.com、api.medplum.com、api.openai.com、api.resend.com…`
+> 證據：`api.anthropic.com、api.bland.ai、api.connect.fastenhealth.com、api.elevenlabs.io、api.medplum.com、api.openai.com、api.resend.com、api.sendblue.co、api.telegram.org、api.twilio.com…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -57,9 +57,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`api/index.py、app.py、careagents/config.py、deploy/careagents/imessage_relay.py、e2e/playwright.config.ts`
+> 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（78 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（68 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 97 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-18
+⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-19
 
 ---
 

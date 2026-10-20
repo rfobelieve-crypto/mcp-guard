@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mock-server/mockserver-monorepo` |
 | 專案說明 | MockServer is an HTTP(S) mock server and proxy for testing that lets you mock AP |
-| 星數 / Fork | ⭐ 4993 / 1117 |
-| 最後更新 | 2026-10-18 |
+| 星數 / Fork | ⭐ 4994 / 1117 |
+| 最後更新 | 2026-10-19 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 541 個 |
-| 檢查時間 | 2026-10-18 22:50 |
+| 檢查時間 | 2026-10-20 00:09 |
 
 ## 風險摘要
 
@@ -44,7 +44,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/lib/perf-sut-recvq.py、.buildkite/scripts/steps/node-client-browser-test.sh`
+> 證據：`.buildkite/scripts/steps/check-pipeline-step-timeouts.sh、.buildkite/scripts/steps/diff-coverage.sh、.buildkite/scripts/steps/java-collect-failures.sh、.buildkite/scripts/steps/lib/perf-info-promotion.py、.buildkite/scripts/steps/lib/perf-sut-recvq.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4993｜fork 1117｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-18
+⭐ 4994｜fork 1117｜語言 Java｜建立 2013-02-26｜最後推送 2026-10-19
 
 ---
 

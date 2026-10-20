@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `exa-labs/exa-mcp-server` |
 | 專案說明 | Exa MCP for web search and web crawling! |
-| 星數 / Fork | ⭐ 5138 / 415 |
-| 最後更新 | 2026-10-07 |
+| 星數 / Fork | ⭐ 5143 / 419 |
+| 最後更新 | 2026-10-19 |
 | 授權 | MIT License |
 | npm 套件 | `exa-mcp-server` |
-| 已掃描檔案 | 79 個 |
-| 檢查時間 | 2026-10-18 22:50 |
+| 已掃描檔案 | 81 個 |
+| 檢查時間 | 2026-10-20 00:09 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build:stdio"`
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、agent-plugins.org、api.agnost.ai、auth.exa.ai、b.com、client.example、dashboard.exa.ai、developers.openai.com、docs.exa.ai、dotenvx.com…`
+> 證據：`a.com、agent-plugins.org、api.agnost.ai、api.exa.ai、auth.exa.ai、b.com、client.example、dashboard.exa.ai、developers.openai.com、docs.exa.ai…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`skills/exa-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/search/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 29 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 30 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -63,11 +63,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 11 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-07`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5138｜fork 415｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-07
+⭐ 5143｜fork 419｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-19
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | MCP server for GitLab: 100+ tools for projects, MRs, issues, pipelines, wikis an |
-| 星數 / Fork | ⭐ 2049 / 359 |
-| 最後更新 | 2026-10-18 |
+| 星數 / Fork | ⭐ 2053 / 358 |
+| 最後更新 | 2026-10-19 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-18 22:52 |
+| 檢查時間 | 2026-10-20 00:11 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 67 個外部主機
+### 🟡 中｜[權限] 會連往 68 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、.github/prompts/quick-fix.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-plan.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-review.prompt.md（GitHub Copilot 提示檔）、.github/skills/ai-slop-cleaner/SKILL.md（Agent Skill 指令（SKILL.md））、.github/skills/cancel/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2049｜fork 359｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-18
+⭐ 2053｜fork 358｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-19
 
 ---
 

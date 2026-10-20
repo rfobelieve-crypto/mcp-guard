@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 63255 / 3111 |
-| 最後更新 | 2026-10-17 |
+| 星數 / Fork | ⭐ 63326 / 3118 |
+| 最後更新 | 2026-10-19 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 261 個 |
-| 檢查時間 | 2026-10-18 22:48 |
+| 已掃描檔案 | 263 個 |
+| 檢查時間 | 2026-10-20 00:08 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -49,6 +49,10 @@
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts、packages/cli/src/utils/auth.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -73,11 +77,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63255｜fork 3111｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-17
+⭐ 63326｜fork 3118｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-19
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 5068 / 337 |
-| 最後更新 | 2026-10-18 |
+| 星數 / Fork | ⭐ 5078 / 338 |
+| 最後更新 | 2026-10-19 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-10-18 22:50 |
+| 檢查時間 | 2026-10-20 00:10 |
 
 ## 風險摘要
 
@@ -23,19 +23,19 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、examples/test-app/security/image-size-security.test.mjs、packages/capture-kit/src/audio-probe-runtime.test.ts`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts、examples/sdk/client-session.ts、examples/test-app/security/image-size-security.test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts、packages/capture-kit/src/ios-snapshot-engine/conformance-harness.fixtures.ts`
+> 證據：`docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 13 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、api.example.com、api.example.test、discourse.gnome.org、docs.example.test、docs.renovatebot.com、en.wikipedia.org、example.test、fresh.example.test、get.maestro.mobile.dev…`
+> 證據：`agent-device.dev、discourse.gnome.org、docs.renovatebot.com、en.wikipedia.org、get.maestro.mobile.dev、glama.ai、metro.example.dev、news.ycombinator.com、oss.callstack.com、reactnative.dev…`
 
 ### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
@@ -47,9 +47,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/workflows/ios.yml、examples/sdk/ai-sdk-tools.ts、examples/test-app/foldable/duo-pose-semantic.mjs`
+> 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/actions/smoke-ios-run/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（91 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（93 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-19`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5068｜fork 337｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-18
+⭐ 5078｜fork 338｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-19
 
 ---
 
