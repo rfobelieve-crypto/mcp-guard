@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 11110 / 1570 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 11115 / 1545 |
+| 最後更新 | 2026-10-21 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-10-20 23:37 |
+| 檢查時間 | 2026-10-21 23:54 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/__tests__/servers-write.test.ts、clients/mcpdo/__tests__/auth-helper.test.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/helpers/oauth-state-isolation.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/__tests__/servers-write.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -83,11 +83,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11110｜fork 1570｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-20
+⭐ 11115｜fork 1545｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-21
 
 ---
 

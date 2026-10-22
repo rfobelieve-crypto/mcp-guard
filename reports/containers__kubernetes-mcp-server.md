@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2174 / 465 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 2175 / 466 |
+| 最後更新 | 2026-10-21 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-20 23:42 |
+| 檢查時間 | 2026-10-21 23:59 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 13 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`docs.github.com、docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、kubernetes.default.svc、kubernetes.io、kubevirt.io…`
+> 證據：`docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、kubernetes.default.svc、kubernetes.io、kubevirt.io、login.microsoftonline.com…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -30,7 +30,7 @@
 
 > 證據：`npm/kubernetes-mcp-server/bin/index.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（129 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（130 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -40,7 +40,7 @@
 
 > 證據：`.agents/skills/toolset-design/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -52,13 +52,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -68,7 +68,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2174｜fork 465｜語言 Go｜建立 2025-02-11｜最後推送 2026-10-20
+⭐ 2175｜fork 466｜語言 Go｜建立 2025-02-11｜最後推送 2026-10-21
 
 ---
 

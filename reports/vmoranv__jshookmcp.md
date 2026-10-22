@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2059 / 459 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 2059 / 458 |
+| 最後更新 | 2026-10-21 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-20 23:42 |
+| 檢查時間 | 2026-10-21 23:59 |
 
 ## 風險摘要
 
@@ -39,7 +39,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@alexaltea/capstone-js@^5.0.9、@babel/generator@^8.0.6、@babel/parser@^8.0.6、@babel/traverse@^8.0.6、@babel/types@^8.0.6、@huggingface/tokenizers@^0.1.3…`
+> 證據：`@alexaltea/capstone-js@^5.0.9、@babel/generator@^8.0.6、@babel/parser@^8.0.6、@babel/traverse@^8.0.6、@babel/types@^8.0.6、@huggingface/tokenizers@^0.2.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2059｜fork 459｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-20
+⭐ 2059｜fork 458｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-10-21
 
 ---
 

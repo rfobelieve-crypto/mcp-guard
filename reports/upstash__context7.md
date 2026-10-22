@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 63379 / 3120 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 63450 / 3121 |
+| 最後更新 | 2026-10-21 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 264 個 |
-| 檢查時間 | 2026-10-20 23:39 |
+| 已掃描檔案 | 267 個 |
+| 檢查時間 | 2026-10-21 23:55 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`packages/cli/src/__tests__/auth-utils.test.ts、packages/cli/src/commands/auth.ts、packages/cli/src/utils/auth.ts`
+> 證據：`packages/cli/src/__tests__/auth-utils.test.ts、packages/cli/src/__tests__/file-lock.test.ts、packages/cli/src/commands/auth.ts、packages/cli/src/utils/auth.ts、packages/cli/src/utils/file-lock.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -48,10 +48,6 @@
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts、packages/cli/src/utils/api.ts、packages/cli/src/utils/auth.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
@@ -81,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63379｜fork 3120｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-20
+⭐ 63450｜fork 3121｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-21
 
 ---
 

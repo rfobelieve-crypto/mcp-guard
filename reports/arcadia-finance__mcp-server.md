@@ -1,35 +1,41 @@
 # MCP 安檢報告：arcadia-finance/mcp-server
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-10-20 |
+| 最後更新 | 2026-10-21 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
-| 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-10-20 23:43 |
+| 已掃描檔案 | 126 個 |
+| 檢查時間 | 2026-10-22 00:00 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 2　⚪ 資訊 7
+🟠 高 1　🟡 中 1　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`src/tools/write/wallet/upgrade-velo.ts`
+
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.arcadia.finance、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、glama.ai、mainnet.base.org、mainnet.optimism.io…`
+> 證據：`api.arcadia.finance、api.test、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、eu.i.posthog.com、glama.ai…`
 
-### 🔵 低｜[供應鏈] 有 17 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.12.0、express@^5.2.1、express-rate-limit@^8.3.1、viem@^2.0.0、zod@^3.23.0、@eslint/js@^9.0.0…`
+> 證據：`@modelcontextprotocol/node@^2.1.1、@modelcontextprotocol/server@^2.3.1、express@^5.2.1、express-rate-limit@^8.3.1、viem@^2.0.0、zod@^4.2.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -43,7 +49,7 @@
 
 > 證據：`.claude/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/clamm-liquidity/SKILL.md（Agent Skill 指令（SKILL.md））、skills/openclaw/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 60 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 67 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -57,11 +63,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-10-20
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-10-21
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10084 / 1252 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 10084 / 1254 |
+| 最後更新 | 2026-10-21 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-20 23:38 |
+| 檢查時間 | 2026-10-21 23:54 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`assets.claude.ai、avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、discord.com、docs.docker.com、example.invalid…`
 
-### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 47 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.32.1、@opendocsg/pdf2md@^0.3.4、@supabase/supabase-js@^2.89.0、@tiptap/core@^3.31.4、@tiptap/extension-image@^3.31.4、@tiptap/extension-table@^3.31.4…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.1、@supabase/supabase-js@^2.89.0、@tiptap/core@^3.31.4、@tiptap/extension-image@^3.31.4、@tiptap/extension-table@^3.31.4、@tiptap/extension-table-cell@^3.31.4…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（313 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（308 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10084｜fork 1252｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-10-20
+⭐ 10084｜fork 1254｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-10-21
 
 ---
 

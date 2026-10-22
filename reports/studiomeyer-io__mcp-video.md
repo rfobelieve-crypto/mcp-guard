@@ -7,11 +7,11 @@
 | 稽核對象 | `studiomeyer-io/mcp-video` |
 | 專案說明 | Cinema-grade video production MCP server — 8 tools for recording, editing, effec |
 | 星數 / Fork | ⭐ 4 / 2 |
-| 最後更新 | 2026-10-19 |
+| 最後更新 | 2026-10-21 |
 | 授權 | MIT License |
 | npm 套件 | `@studiomeyer/mcp-video` |
 | 已掃描檔案 | 78 個 |
-| 檢查時間 | 2026-10-20 23:45 |
+| 檢查時間 | 2026-10-22 00:02 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、playwright@^1.59.1、zod@^3.22.0、@types/node@^20.19.40、tsx@^4.7.0、typescript@^5.3.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.1、playwright@^1.59.1、zod@^3.22.0、@types/node@^20.19.40、tsx@^4.7.0、typescript@^5.3.0…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 2｜語言 TypeScript｜建立 2026-03-14｜最後推送 2026-10-19
+⭐ 4｜fork 2｜語言 TypeScript｜建立 2026-03-14｜最後推送 2026-10-21
 
 ---
 

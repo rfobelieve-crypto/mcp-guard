@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mbailey/voicemode` |
 | 專案說明 | Natural voice conversations with Claude Code |
-| 星數 / Fork | ⭐ 1410 / 198 |
-| 最後更新 | 2026-10-17 |
+| 星數 / Fork | ⭐ 1411 / 198 |
+| 最後更新 | 2026-10-21 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-20 23:43 |
+| 檢查時間 | 2026-10-22 00:00 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`.claude/commands/install.md｜「…install process assumes: - **UV** - Python package manager (install: `curl -LsSf https://astral.sh/uv/install.sh | sh`) - **Homebrew** - macOS package manager (install: `brew.sh`)」`
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 43 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.anthropic.com、api.cartesia.ai、api.example.com、api.openai.com、astral.sh、b.example、brew.sh、cartesia.ai、clone.test…`
+> 證據：`API.OpenAI.com、a.b.openai.com、a.example、api.anthropic.com、api.cartesia.ai、api.example.com、api.openai.com、api.openai.com.evil.com、astral.sh、b.example…`
 
 ### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
@@ -54,7 +54,7 @@
 
 > 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（63 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -78,11 +78,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-10-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1410｜fork 198｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-17
+⭐ 1411｜fork 198｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-21
 
 ---
 
