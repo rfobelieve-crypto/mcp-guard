@@ -1,23 +1,29 @@
 # MCP 安檢報告：Ataraxy-Labs/sem
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
-| 星數 / Fork | ⭐ 3419 / 107 |
-| 最後更新 | 2026-10-19 |
+| 星數 / Fork | ⭐ 3420 / 107 |
+| 最後更新 | 2026-10-22 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-21 23:58 |
+| 檢查時間 | 2026-10-22 23:56 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 3　⚪ 資訊 6
+🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`docs/llms.txt｜「``` curl -fsSL https://raw.githubusercontent.com/Ataraxy-Labs/sem/main/install.sh | sh brew install sem-cli npm install --save-dev @ataraxy-labs/sem cargo i…」`
 
 ### 🟠 高｜[供應鏈] 安裝時會自動執行腳本：postinstall
 
@@ -71,11 +77,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3419｜fork 107｜語言 Rust｜建立 2026-02-05｜最後推送 2026-10-19
+⭐ 3420｜fork 107｜語言 Rust｜建立 2026-02-05｜最後推送 2026-10-22
 
 ---
 

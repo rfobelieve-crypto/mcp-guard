@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28165 / 2500 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 28174 / 2501 |
+| 最後更新 | 2026-10-22 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-10-21 23:55 |
+| 檢查時間 | 2026-10-22 23:53 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py、examples/diagnostics/server.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（536 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（532 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28165｜fork 2500｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-21
+⭐ 28174｜fork 2501｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-22
 
 ---
 

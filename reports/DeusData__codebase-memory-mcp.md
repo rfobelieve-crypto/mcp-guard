@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | Local code intelligence for developers and AI agents. Connect code, docs and inf |
-| 星數 / Fork | ⭐ 47119 / 3867 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 47244 / 3879 |
+| 最後更新 | 2026-10-22 |
 | 授權 | MIT License |
 | 已掃描檔案 | 412 個 |
-| 檢查時間 | 2026-10-21 23:55 |
+| 檢查時間 | 2026-10-22 23:53 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`graph-ui/src/browser-ai/BrowserChatDock.test.tsx、graph-ui/src/browser-ai/embedded-model-assets.test.ts、graph-ui/src/browser-ai/explanation-response.test.ts、graph-ui/src/browser-ai/security-download-origins.test.ts、graph-ui/src/browser-ai/security-ui-model-policy.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（631 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（636 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,11 +66,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 47119｜fork 3867｜語言 C｜建立 2026-02-24｜最後推送 2026-10-21
+⭐ 47244｜fork 3879｜語言 C｜建立 2026-02-24｜最後推送 2026-10-22
 
 ---
 

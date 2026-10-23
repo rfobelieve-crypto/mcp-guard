@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
-| 專案說明 | Cut AI token costs 95%+ on code exploration. The leading MCP server for precise, |
-| 星數 / Fork | ⭐ 2795 / 373 |
-| 最後更新 | 2026-10-21 |
+| 專案說明 | Symbol-level code retrieval for AI agents: fetch the function you need, not the  |
+| 星數 / Fork | ⭐ 2796 / 375 |
+| 最後更新 | 2026-10-22 |
 | 授權 | Other |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-10-21 23:59 |
+| 檢查時間 | 2026-10-22 23:56 |
 
 ## 風險摘要
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2795｜fork 373｜語言 Python｜建立 2026-02-09｜最後推送 2026-10-21
+⭐ 2796｜fork 375｜語言 Python｜建立 2026-02-09｜最後推送 2026-10-22
 
 ---
 

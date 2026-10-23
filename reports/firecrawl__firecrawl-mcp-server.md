@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | Official Firecrawl MCP server, the context API for AI agents: search, scrape, an |
-| 星數 / Fork | ⭐ 7666 / 915 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 7671 / 917 |
+| 最後更新 | 2026-10-22 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
 | 已掃描檔案 | 93 個 |
-| 檢查時間 | 2026-10-21 23:54 |
+| 檢查時間 | 2026-10-22 23:53 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、dotenv@^17.2.2、fuse.js@^7.1.0、hono@^4.12.27、mcp-proxy@^6.5.1、undici@^7.28.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.1、dotenv@^17.2.2、fuse.js@^7.1.0、hono@^4.12.27、mcp-proxy@^6.6.0、undici@^7.28.0…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`tests/embed-package.test.mjs、tests/helpers/exchange-mcp.mjs、tests/mcp-search-profile.test.mjs、tests/mcp-smoke.test.mjs、tests/server-hooks.test.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（179 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（182 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7666｜fork 915｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-21
+⭐ 7671｜fork 917｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-10-22
 
 ---
 

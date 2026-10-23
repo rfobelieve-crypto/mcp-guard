@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1309 / 83 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 1309 / 84 |
+| 最後更新 | 2026-10-22 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
-| 已掃描檔案 | 447 個 |
-| 檢查時間 | 2026-10-22 00:00 |
+| 已掃描檔案 | 448 個 |
+| 檢查時間 | 2026-10-22 23:57 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 46 個外部主機
+### 🟡 中｜[權限] 會連往 58 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`access.redhat.com、analytics.internal.example.com、api.example.com、api.first.org、betterdb.com、broker.example、bugzilla.redhat.com、cveawg.example、cveawg.mitre.org、db.turso.io…`
+> 證據：`10.metrics.example.com、127.metrics.example.com、192.168.example.com、a.b.localhost、access.redhat.com、analytics.internal.example.com、api.example.com、api.first.org、app.localhost、betterdb.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts、apps/api/src/migration/__tests__/migration-execution.service.spec.ts、apps/api/src/migration/__tests__/migration-safety-gate.spec.ts`
+> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -81,11 +81,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1309｜fork 83｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-10-21
+⭐ 1309｜fork 84｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-10-22
 
 ---
 
