@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1632 / 165 |
-| 最後更新 | 2026-10-20 |
+| 星數 / Fork | ⭐ 1633 / 165 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
-| 已掃描檔案 | 119 個 |
-| 檢查時間 | 2026-10-22 23:57 |
+| 已掃描檔案 | 122 個 |
+| 檢查時間 | 2026-10-23 23:49 |
 
 ## 風險摘要
 
@@ -22,7 +22,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/test_signing_http.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py、src/mcp_windbg/tests/test_debug_session.py`
+> 證據：`scripts/test_signing_http.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/server_api.py、src/mcp_windbg/tests/e2e/harness.py、src/mcp_windbg/tests/e2e/runner.py`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -54,7 +54,7 @@
 
 > 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/mcp-windbg-skills/skills/analyze-dump/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/mcp-windbg-skills/skills/debug-remote/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-20`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1632｜fork 165｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-20
+⭐ 1633｜fork 165｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-23
 
 ---
 

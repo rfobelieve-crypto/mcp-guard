@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4515 / 402 |
-| 最後更新 | 2026-10-22 |
+| 星數 / Fork | ⭐ 4521 / 402 |
+| 最後更新 | 2026-10-23 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 416 個 |
-| 檢查時間 | 2026-10-22 23:56 |
+| 檢查時間 | 2026-10-23 23:48 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4515｜fork 402｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-22
+⭐ 4521｜fork 402｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-23
 
 ---
 

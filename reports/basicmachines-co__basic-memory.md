@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `basicmachines-co/basic-memory` |
 | 專案說明 | AI conversations that actually remember. Never re-explain your project to your A |
-| 星數 / Fork | ⭐ 4323 / 333 |
-| 最後更新 | 2026-10-22 |
+| 星數 / Fork | ⭐ 4334 / 335 |
+| 最後更新 | 2026-10-23 |
 | 授權 | GNU Affero General Public License v3.0 |
-| 已掃描檔案 | 439 個 |
-| 檢查時間 | 2026-10-22 23:56 |
+| 已掃描檔案 | 440 個 |
+| 檢查時間 | 2026-10-23 23:48 |
 
 ## 風險摘要
 
@@ -58,11 +58,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.agents/skills/pythonic-code/scripts/run_evals.py、benchmarks/scripts/read_load_bench.py、benchmarks/scripts/write_load_bench.py、benchmarks/src/basic_memory_benchmarks/bm_runtime.py、benchmarks/src/basic_memory_benchmarks/llm/runners.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 64 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 65 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4323｜fork 333｜語言 Python｜建立 2024-12-02｜最後推送 2026-10-22
+⭐ 4334｜fork 335｜語言 Python｜建立 2024-12-02｜最後推送 2026-10-23
 
 ---
 

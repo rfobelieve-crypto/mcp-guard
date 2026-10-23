@@ -1,21 +1,21 @@
 # MCP 安檢報告：wonderwhy-er/DesktopCommanderMCP
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10092 / 1254 |
-| 最後更新 | 2026-10-22 |
+| 星數 / Fork | ⭐ 10103 / 1255 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-22 23:53 |
+| 檢查時間 | 2026-10-23 23:45 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 7
+🟠 高 2　🟡 中 3　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -25,13 +25,23 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node dist/track-installation.js && node dist/npm-scripts/verify-ripgrep.js || node -e "process.exit(0)""`
 
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「桌面／終端控制」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`test/remote-launchers.test.js`
+
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
 npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式碼已經跑過一次了。這是供應鏈投毒最常見的落點，務必逐字讀懂它在做什麼。
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 33 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -61,7 +71,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（280 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（287 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +99,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -99,7 +109,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10092｜fork 1254｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-10-22
+⭐ 10103｜fork 1255｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-10-23
 
 ---
 

@@ -6,25 +6,37 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7395 / 1033 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 7400 / 1033 |
+| 最後更新 | 2026-10-23 |
 | 授權 | Other |
-| 已掃描檔案 | 217 個 |
-| 檢查時間 | 2026-10-22 23:53 |
+| 已掃描檔案 | 224 個 |
+| 檢查時間 | 2026-10-23 23:44 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 63 個外部主機
+### 🟡 中｜[權限] 會連往 65 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`Registry.Example.COM、accounts.google.com、acme-v02.api.letsencrypt.org、airtable.com、api-a.example.com、api-b.example.com、api-c.example.com、api.allversions.com、api.deleted.com、api.example.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（194 則）
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`tools/admin/configure-backup-alerts.py`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`tools/admin/configure-backup-alerts.py`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -34,7 +46,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 187 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 195 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -48,11 +60,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -62,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7395｜fork 1033｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-21
+⭐ 7400｜fork 1033｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-23
 
 ---
 

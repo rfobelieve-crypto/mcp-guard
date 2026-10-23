@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `droidrun/mobilerun` |
 | 專案說明 | Automate your mobile devices with natural language commands - an LLM agnostic mo |
-| 星數 / Fork | ⭐ 9737 / 1037 |
-| 最後更新 | 2026-10-22 |
+| 星數 / Fork | ⭐ 9746 / 1038 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
-| 已掃描檔案 | 223 個 |
-| 檢查時間 | 2026-10-22 23:54 |
+| 已掃描檔案 | 224 個 |
+| 檢查時間 | 2026-10-23 23:46 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`accounts.google.com、accounts.x.ai、another-attacker.invalid、api.anthropic.com、api.deepseek.com、api.example.com、api.minimax.io、api.minimaxi.chat、api.minimaxi.com、api.mobilerun.ai…`
 
-### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 9 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`async_adbutils、posthog>=6.7.6、pydantic>=2.11.10、rich>=14.1.0、InquirerPy>=0.3.4、arize-phoenix>=14.4.0…`
+> 證據：`async_adbutils、posthog>=6.7.6、pydantic>=2.11.10、rich>=14.1.0、InquirerPy>=0.3.4、opentelemetry-exporter-otlp-proto-http>=1.40.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9737｜fork 1037｜語言 Python｜建立 2025-04-12｜最後推送 2026-10-22
+⭐ 9746｜fork 1038｜語言 Python｜建立 2025-04-12｜最後推送 2026-10-23
 
 ---
 

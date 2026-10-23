@@ -1,35 +1,23 @@
 # MCP 安檢報告：zereight/gitlab-mcp
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
-| 專案說明 | MCP server for GitLab: 100+ tools for projects, MRs, issues, pipelines, wikis an |
-| 星數 / Fork | ⭐ 2061 / 359 |
-| 最後更新 | 2026-10-22 |
+| 專案說明 | MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines, wikis and |
+| 星數 / Fork | ⭐ 2063 / 360 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-22 23:57 |
+| 檢查時間 | 2026-10-23 23:48 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 2　⚪ 資訊 7
+🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
-
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`gitlab-client-pool.ts、masking/engine.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs`
-
-### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`oauth.ts、scripts/release.test.ts、test/api-url-credentials.test.ts、test/callback-proxy-redirect-policy.test.ts、test/cli/boolean-flags.test.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -37,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 69 個外部主機
+### 🟡 中｜[權限] 會連往 60 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -51,23 +39,35 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`auth-cli.ts、config.ts、customSchemas.ts、mcp-server/src/utils.ts、oauth.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 28 個代理指令檔
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`gitlab-client-pool.ts、masking/engine.ts、mcp-server/src/state-tools.ts、mcp-server/src/utils.ts、mcp-server/test/run-tests.mjs`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`oauth.ts、scripts/release.test.ts、test/api-url-credentials.test.ts、test/callback-proxy-redirect-policy.test.ts、test/cli/boolean-flags.test.ts`
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 30 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、.github/prompts/quick-fix.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-plan.prompt.md（GitHub Copilot 提示檔）、.github/prompts/quick-review.prompt.md（GitHub Copilot 提示檔）、.github/skills/ai-slop-cleaner/SKILL.md（Agent Skill 指令（SKILL.md））、.github/skills/cancel/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 31 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 32 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：開發框架／工具鏈
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -75,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2061｜fork 359｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-22
+⭐ 2063｜fork 360｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-23
 
 ---
 

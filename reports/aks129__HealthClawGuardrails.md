@@ -1,29 +1,35 @@
 # MCP 安檢報告：aks129/HealthClawGuardrails
 
-> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
+> **結論：🔴 不要安裝**　發現 1 項嚴重問題，安裝風險無法接受。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 31 / 12 |
-| 最後更新 | 2026-10-22 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-10-22 23:58 |
+| 檢查時間 | 2026-10-23 23:49 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 2　🔵 低 3　⚪ 資訊 9
+🔴 嚴重 1　🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
+
+### 🔴 嚴重｜[工具描述投毒] 原始碼含雙向覆寫字元
+
+bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實際讀到的」順序不同，是 Trojan Source（CVE-2021-42574）的手法。除了處理雙向文字的函式庫，正常原始碼沒有理由出現它們。
+
+> 證據：`careagents/static/checkin_answer.js｜位置 7360｜U+202A`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/ci.yml、.github/workflows/prod-watch.yml、adapters/healthclaw_bridge.py、careagents/app.py、careagents/config.py`
+> 證據：`.github/workflows/careagents-deploy.yml、.github/workflows/careagents-drift.yml、.github/workflows/ci.yml、.github/workflows/pr-risk.yml、.github/workflows/prod-watch.yml`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -31,17 +37,7 @@
 
 > 證據：`deploy/careagents/imessage_relay.py、openclaw/bot.py`
 
-### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
-
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`r6/rate_limit.py`
-
-### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
-
-eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
-
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 49 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -57,9 +53,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/prod-watch.yml、api/index.py、app.py、careagents/_build.py、careagents/config.py`
+> 證據：`.github/workflows/careagents-deploy.yml、.github/workflows/careagents-drift.yml、.github/workflows/pr-risk.yml、.github/workflows/prod-watch.yml、api/index.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（82 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（70 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,10 +73,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 PyPI 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
-
-沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
-
 ### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
@@ -95,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +97,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-22
+⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-23
 
 ---
 

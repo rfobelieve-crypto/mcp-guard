@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 5180 / 243 |
-| 最後更新 | 2026-10-21 |
+| 星數 / Fork | ⭐ 5186 / 243 |
+| 最後更新 | 2026-10-23 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-10-22 23:55 |
+| 檢查時間 | 2026-10-23 23:47 |
 
 ## 風險摘要
 
@@ -46,11 +46,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 33 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、ai.google.dev、astral.sh、astro.build、block.github.io、chatgpt.com、claude.ai、claude.com、code.claude.com、coderabbit.ai…`
+> 證據：`YOUR-DOMAIN.com、astral.sh、astro.build、block.github.io、chatgpt.com、claude.ai、claude.com、code.claude.com、coderabbit.ai、docs.renovatebot.com…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -84,11 +84,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5180｜fork 243｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-21
+⭐ 5186｜fork 243｜語言 Python｜建立 2025-09-14｜最後推送 2026-10-23
 
 ---
 
