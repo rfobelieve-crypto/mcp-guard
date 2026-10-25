@@ -7,11 +7,11 @@
 | 稽核對象 | `freema/mcp-design-system-extractor` |
 | 專案說明 | MCP (Model Context Protocol) server that enables AI assistants to interact with  |
 | 星數 / Fork | ⭐ 72 / 14 |
-| 最後更新 | 2026-09-19 |
+| 最後更新 | 2026-10-25 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-design-system-extractor` |
 | 已掃描檔案 | 70 個 |
-| 檢查時間 | 2026-10-24 23:01 |
+| 檢查時間 | 2026-10-25 23:08 |
 
 ## 風險摘要
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 35 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-19`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 72｜fork 14｜語言 TypeScript｜建立 2025-06-04｜最後推送 2026-09-19
+⭐ 72｜fork 14｜語言 TypeScript｜建立 2025-06-04｜最後推送 2026-10-25
 
 ---
 

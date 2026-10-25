@@ -1,20 +1,20 @@
 # MCP 安檢報告：surendranb/google-analytics-mcp
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 243 / 49 |
-| 最後更新 | 2026-10-19 |
+| 最後更新 | 2026-10-25 |
 | 授權 | MIT License |
-| 已掃描檔案 | 146 個 |
-| 檢查時間 | 2026-10-24 23:00 |
+| 已掃描檔案 | 130 個 |
+| 檢查時間 | 2026-10-25 23:07 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 3　🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -28,13 +28,19 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`docs/llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」（另 1 個檔案有相同內容）`
+> 證據：`docs/llms.txt｜「## Install - `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - `uvx google-analytics-mcp` - `npx -y @surendranb/google-analytics-…」`
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」`
+
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.google.com、astral.sh、files.pythonhosted.org、ga4-gateway.reachsuren.workers.dev、ga4.builditwithai.xyz、ga4mcp.com、static.modelcontextprotocol.io、test-gateway.example.com`
+> 證據：`analytics.google.com、astral.sh、builditwithai.xyz、files.pythonhosted.org、ga4-gateway.reachsuren.workers.dev、ga4.builditwithai.xyz、ga4mcp.com、opensource.org、schema.org、static.modelcontextprotocol.io…`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -66,7 +72,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、docs/llms.txt（給模型讀的站點說明（llms.txt））、gemini-extension/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skills/ai-referral-analysis/SKILL.md（Agent Skill 指令（SKILL.md））、skills/attribution-scope/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 19 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 20 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,11 +86,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -94,7 +100,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 243｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-19
+⭐ 243｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-25
 
 ---
 

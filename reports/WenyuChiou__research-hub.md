@@ -1,54 +1,64 @@
 # MCP 安檢報告：WenyuChiou/research-hub
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
 | 星數 / Fork | ⭐ 66 / 13 |
-| 最後更新 | 2026-10-24 |
+| 最後更新 | 2026-10-25 |
 | 授權 | MIT License |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-10-24 23:02 |
+| 已掃描檔案 | 407 個 |
+| 檢查時間 | 2026-10-25 23:09 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 48 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`scripts/check_summary_consumer_recovery.py`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 47 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a9.com、accounts.google.com、api.adsabs.harvard.edu、api.biorxiv.org、api.crossref.org、api.figshare.com、api.ies.ed.gov、api.openalex.org、api.search.brave.com、api.semanticscholar.org…`
+> 證據：`a9.com、api.adsabs.harvard.edu、api.biorxiv.org、api.crossref.org、api.figshare.com、api.ies.ed.gov、api.openalex.org、api.search.brave.com、api.semanticscholar.org、api.ssrn.com…`
 
-### 🔵 低｜[供應鏈] 有 9 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`networkx>=3.0,<4.0、notebooklm-py>=0.4.1,<0.5.0、httpx>=0.27,<1.0、jsonschema>=4.21,<5、platformdirs>=4.0,<6.0、pyzotero>=1.5.18,<2.0…`
+> 證據：`networkx>=3.0,<4.0、httpx>=0.27,<1.0、jsonschema>=4.21,<5、platformdirs>=4.0,<6.0、pyzotero>=1.5.18,<2.0、pyyaml>=6,<7…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/demo/build_demo_gif.py、docs/demo/crop_dashboard_tabs.py、scripts/backfill_zotero.py、scripts/check_claims_schema.py、scripts/workspace_browser_smoke.py`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_install_smoke.py、src/research_hub/auto.py、src/research_hub/cli_maintenance.py`
+> 證據：`docs/demo/build_demo_gif.py、docs/demo/crop_dashboard_tabs.py、scripts/backfill_zotero.py、scripts/check_claims_schema.py、scripts/check_profile_bundle_compatibility.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/verify_setup.py、scripts/workspace_dogfood.py、scripts/workspace_install_smoke.py、src/research_hub/cli_paper.py、src/research_hub/cli_search.py`
+> 證據：`scripts/check_profile_bundle_compatibility.py、scripts/check_summary_consumer_recovery.py、scripts/check_summary_fault_boundaries.py、scripts/generate_sqlite_ui_fixture.py、scripts/verify_setup.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 28 個代理指令檔
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_smoke.py、scripts/workspace_install_smoke.py`
+
+### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -68,11 +78,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-24`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 66｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-24
+⭐ 66｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-25
 
 ---
 

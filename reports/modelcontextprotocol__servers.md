@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 91543 / 11859 |
-| 最後更新 | 2026-10-24 |
+| 星數 / Fork | ⭐ 91558 / 11868 |
+| 最後更新 | 2026-10-25 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 315 個 |
-| 檢查時間 | 2026-10-24 22:54 |
+| 已掃描檔案 | 320 個 |
+| 檢查時間 | 2026-10-25 23:01 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`anycast.example.com、docs.astral.sh、elsewhere.example、eslint.org、feross.org、intranet.example.com、l.example、notexample.com、only-the-proxy-knows.example、opencollective.com…`
+> 證據：`anycast.example.com、docs.astral.sh、elsewhere.example、eslint.org、feross.org、intranet.example.com、l.example、nat64.example.com、notexample.com、only-the-proxy-knows.example…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/eras.test.ts、src/filesystem/__tests__/path-validation.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（141 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（151 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,15 +91,15 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-24`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91543｜fork 11859｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-24
+⭐ 91558｜fork 11868｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-25
 
 ---
 

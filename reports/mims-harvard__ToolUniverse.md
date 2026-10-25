@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `mims-harvard/ToolUniverse` |
 | 專案說明 | Democratizing AI scientists with ToolUniverse |
-| 星數 / Fork | ⭐ 1757 / 268 |
-| 最後更新 | 2026-10-24 |
+| 星數 / Fork | ⭐ 1757 / 269 |
+| 最後更新 | 2026-10-25 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 952 個 |
-| 檢查時間 | 2026-10-24 22:59 |
+| 已掃描檔案 | 954 個 |
+| 檢查時間 | 2026-10-25 23:06 |
 
 ## 風險摘要
 
@@ -106,7 +106,7 @@
 
 > 證據：`benchmarks/bixbench/scripts/probe_tool_call.py、examples/agentic_streaming_example.py、examples/azure_openai_models_example.py、examples/benchmark_batch_vs_single.py、examples/benchmarks/labbench/cli_runtime.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 554 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 556 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -126,11 +126,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-24`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -140,7 +140,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1757｜fork 268｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-24
+⭐ 1757｜fork 269｜語言 Python｜建立 2025-03-03｜最後推送 2026-10-25
 
 ---
 

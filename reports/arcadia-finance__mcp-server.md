@@ -7,11 +7,11 @@
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-10-21 |
+| 最後更新 | 2026-10-25 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
-| 已掃描檔案 | 126 個 |
-| 檢查時間 | 2026-10-24 23:00 |
+| 已掃描檔案 | 128 個 |
+| 檢查時間 | 2026-10-25 23:07 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`src/tools/write/wallet/upgrade-velo.ts`
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.arcadia.finance、api.test、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、eu.i.posthog.com、glama.ai…`
+> 證據：`api.arcadia.finance、api.example.test、api.test、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、eu.i.posthog.com…`
 
 ### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-10-21
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-10-25
 
 ---
 

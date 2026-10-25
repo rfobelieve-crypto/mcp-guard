@@ -7,10 +7,10 @@
 | 稽核對象 | `mbailey/voicemode` |
 | 專案說明 | Natural voice conversations with Claude Code |
 | 星數 / Fork | ⭐ 1417 / 198 |
-| 最後更新 | 2026-10-21 |
+| 最後更新 | 2026-10-25 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-24 22:59 |
+| 檢查時間 | 2026-10-25 23:06 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`API.OpenAI.com、a.b.openai.com、a.example、api.anthropic.com、api.cartesia.ai、api.example.com、api.openai.com、api.openai.com.evil.com、astral.sh、b.example…`
 
-### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`uv>=0.4.0、numpy、sounddevice、scipy、pydub、simpleaudio…`
+> 證據：`numpy、sounddevice、scipy、pydub、simpleaudio、httpx…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -54,7 +54,7 @@
 
 > 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -78,11 +78,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-21`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +92,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1417｜fork 198｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-21
+⭐ 1417｜fork 198｜語言 Python｜建立 2025-06-08｜最後推送 2026-10-25
 
 ---
 

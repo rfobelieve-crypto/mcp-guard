@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
-| 星數 / Fork | ⭐ 81 / 30 |
-| 最後更新 | 2026-10-10 |
+| 星數 / Fork | ⭐ 81 / 31 |
+| 最後更新 | 2026-10-25 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 251 個 |
-| 檢查時間 | 2026-10-24 23:00 |
+| 已掃描檔案 | 278 個 |
+| 檢查時間 | 2026-10-25 23:07 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 2　⚪ 資訊 7
+🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -29,7 +29,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`public/widgets/import-provenance.test.ts、public/widgets/import-run.test.ts、public/widgets/import-saturated.test.ts、public/widgets/import-time.test.ts、public/widgets/macros.test.ts`
+> 證據：`public/widgets/i18n-plural.test.ts、public/widgets/import-provenance.test.ts、public/widgets/import-redesign.test.ts、public/widgets/import-run.test.ts、public/widgets/import-saturated.test.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -45,7 +45,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/server@^2.3.0、@supabase/supabase-js@^2.117.2、hono@^4.13.13、prettier@^3.9.9、zod@^4.6.5、@modelcontextprotocol/client@^2.3.0`
+> 證據：`@modelcontextprotocol/server@^2.4.0、@supabase/supabase-js@^2.118.0、hono@^4.13.14、prettier@^3.9.10、zod@^4.6.7、@modelcontextprotocol/client@^2.4.0`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/landing-cards.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -59,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、public/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 930 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 963 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 14 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-10`
+> 證據：`最後推送 2026-10-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 81｜fork 30｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-10
+⭐ 81｜fork 31｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-25
 
 ---
 
