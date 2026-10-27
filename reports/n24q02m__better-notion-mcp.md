@@ -7,11 +7,11 @@
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 35 / 11 |
-| 最後更新 | 2026-10-11 |
+| 最後更新 | 2026-10-26 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/notion`（registry 查無） |
-| 已掃描檔案 | 119 個 |
-| 檢查時間 | 2026-10-25 23:09 |
+| 已掃描檔案 | 116 個 |
+| 檢查時間 | 2026-10-27 00:21 |
 
 ## 風險摘要
 
@@ -23,19 +23,19 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「資料庫存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/clean-venv.mjs、scripts/repo-bootstrap/_lib.py、tests/live/stdio-direct.live.test.ts、tests/test-oauth-mcp.mjs`
+> 證據：`scripts/clean-venv.mjs、scripts/repo-bootstrap/_lib.py、tests/live/stdio-direct.live.test.ts`
 
-### 🟡 中｜[權限] 會連往 22 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.notion.com、attacker.example、better-notion-mcp.example.com、biomejs.dev、docs.n24q02m.com、docs.renovatebot.com、glama.ai、mcp.example.com、mcp.n24q02m.com、mise.jdx.dev…`
+> 證據：`attacker.example、biomejs.dev、docs.n24q02m.com、docs.renovatebot.com、glama.ai、mcp.n24q02m.com、mise.jdx.dev、notion.example、notion.so、pre-commit.com…`
 
-### 🔵 低｜[供應鏈] 有 10 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.30.0、@notionhq/client@^5.26.0、zod@^4.6.1、@biomejs/biome@^2.5.12、@types/node@^26.4.1、@vitest/coverage-v8@^5.0.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.30.1、@n24q02m/hull@^0.4.0、@notionhq/client@^5.26.0、zod@^4.6.1、@biomejs/biome@^2.5.12、@types/node@^26.4.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -47,7 +47,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「資料庫存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/provider-readonly-acceptance.ts、src/credential-state.test.ts、src/credential-state.ts、src/init-server.integration.test.ts、src/init-server.test.ts`
+> 證據：`scripts/provider-readonly-acceptance.ts、src/credential-state.storage.test.ts、src/credential-state.test.ts、src/credential-state.ts、src/init-server.integration.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
@@ -59,7 +59,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 75 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 74 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +73,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 14 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-11`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 35｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-10-11
+⭐ 35｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-10-26
 
 ---
 

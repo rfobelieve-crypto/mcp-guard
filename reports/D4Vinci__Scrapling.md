@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `D4Vinci/Scrapling` |
-| 專案說明 | 🕷️ A Web Scraping framework that handles everything from a single request to a f |
-| 星數 / Fork | ⭐ 89699 / 9266 |
-| 最後更新 | 2026-10-22 |
+| 專案說明 | 🕷️ The BEST Web Scraping framework that handles everything from a single request |
+| 星數 / Fork | ⭐ 89882 / 9292 |
+| 最後更新 | 2026-10-26 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-25 23:02 |
+| 檢查時間 | 2026-10-27 00:15 |
 
 ## 風險摘要
 
@@ -56,11 +56,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-22`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -70,7 +70,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 89699｜fork 9266｜語言 Python｜建立 2024-10-13｜最後推送 2026-10-22
+⭐ 89882｜fork 9292｜語言 Python｜建立 2024-10-13｜最後推送 2026-10-26
 
 ---
 

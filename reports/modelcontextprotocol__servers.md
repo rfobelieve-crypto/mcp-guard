@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 91558 / 11868 |
+| 星數 / Fork | ⭐ 91593 / 11871 |
 | 最後更新 | 2026-10-25 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 320 個 |
-| 檢查時間 | 2026-10-25 23:01 |
+| 檢查時間 | 2026-10-27 00:14 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/eras.test.ts、src/filesystem/__tests__/path-validation.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（151 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（152 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91558｜fork 11868｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-25
+⭐ 91593｜fork 11871｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-25
 
 ---
 

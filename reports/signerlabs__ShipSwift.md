@@ -7,10 +7,10 @@
 | 稽核對象 | `signerlabs/ShipSwift` |
 | 專案說明 | AI-native SwiftUI component library with full-stack recipes — connect via MCP fo |
 | 星數 / Fork | ⭐ 3244 / 185 |
-| 最後更新 | 2026-10-18 |
+| 最後更新 | 2026-10-26 |
 | 授權 | MIT License |
 | 已掃描檔案 | 47 個 |
-| 檢查時間 | 2026-10-25 23:05 |
+| 檢查時間 | 2026-10-27 00:18 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、skills/build-feature/SKILL.md（Agent Skill 指令（SKILL.md））、skills/explore-recipes/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/add-component/SKILL.md（Agent Skill 指令（SKILL.md））、skills/build-feature/SKILL.md（Agent Skill 指令（SKILL.md））、skills/explore-skills/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
@@ -38,11 +38,11 @@
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-18`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -52,7 +52,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3244｜fork 185｜語言 Swift｜建立 2025-12-15｜最後推送 2026-10-18
+⭐ 3244｜fork 185｜語言 Swift｜建立 2025-12-15｜最後推送 2026-10-26
 
 ---
 

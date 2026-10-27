@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | Invoicing, full accounting, year-end preparation and taxes for freelancers and s |
 | 星數 / Fork | ⭐ 62 / 13 |
-| 最後更新 | 2026-10-25 |
+| 最後更新 | 2026-10-26 |
 | 授權 | MIT License |
 | 已掃描檔案 | 221 個 |
-| 檢查時間 | 2026-10-25 23:07 |
+| 檢查時間 | 2026-10-27 00:20 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/reconciliation-cockpit/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 786 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 787 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-25`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-25
+⭐ 62｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-26
 
 ---
 

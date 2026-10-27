@@ -1,33 +1,27 @@
 # MCP 安檢報告：upstash/context7
 
-> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 63669 / 3139 |
-| 最後更新 | 2026-10-23 |
+| 星數 / Fork | ⭐ 63736 / 3143 |
+| 最後更新 | 2026-10-26 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 282 個 |
-| 檢查時間 | 2026-10-25 23:02 |
+| 已掃描檔案 | 283 個 |
+| 檢查時間 | 2026-10-27 00:15 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 2　⚪ 資訊 8
+🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`packages/cli/src/__tests__/auth-utils.test.ts、packages/cli/src/__tests__/file-lock.test.ts、packages/cli/src/commands/auth.ts、packages/cli/src/utils/auth.ts、packages/cli/src/utils/file-lock.ts`
-
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
-這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/upgrade.ts、packages/mcp/test/integration.test.ts`
 
@@ -45,9 +39,15 @@
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/admin-mcp/src/http.ts、packages/admin-mcp/src/server.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`packages/cli/src/__tests__/auth-utils.test.ts、packages/cli/src/__tests__/file-lock.test.ts、packages/cli/src/commands/auth.ts、packages/cli/src/utils/auth.ts、packages/cli/src/utils/file-lock.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
@@ -63,9 +63,9 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
+### ⚪ 資訊｜[權限] 判定用途：檔案系統存取
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、讀寫本機檔案、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -73,11 +73,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-23`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63669｜fork 3139｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-23
+⭐ 63736｜fork 3143｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-26
 
 ---
 

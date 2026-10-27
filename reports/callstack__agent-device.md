@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 5146 / 351 |
-| 最後更新 | 2026-10-25 |
+| 星數 / Fork | ⭐ 5156 / 354 |
+| 最後更新 | 2026-10-26 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-10-25 23:04 |
+| 檢查時間 | 2026-10-27 00:17 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py、oxlint.config.ts`
+> 證據：`.github/workflows/xctest-nightly.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py`
 
 ### 🟡 中｜[權限] 會連往 13 個外部主機
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/actions/smoke-ios-run/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（88 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（94 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-25`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5146｜fork 351｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-25
+⭐ 5156｜fork 354｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-26
 
 ---
 

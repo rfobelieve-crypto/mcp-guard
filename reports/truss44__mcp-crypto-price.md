@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `truss44/mcp-crypto-price` |
 | 專案說明 | A Model Context Protocol (MCP) server that provides real-time cryptocurrency ana |
-| 星數 / Fork | ⭐ 39 / 9 |
-| 最後更新 | 2026-10-24 |
+| 星數 / Fork | ⭐ 39 / 8 |
+| 最後更新 | 2026-10-26 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-crypto-price` |
-| 已掃描檔案 | 58 個 |
-| 檢查時間 | 2026-10-25 23:07 |
+| 已掃描檔案 | 57 個 |
+| 檢查時間 | 2026-10-27 00:20 |
 
 ## 風險摘要
 
@@ -29,13 +29,13 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`docs.github.com、glama.ai、mcp-crypto-price.codemonkeyinnovations.com、pro.coincap.io、rest.coincap.io、smithery.ai、www.coincap.io`
+> 證據：`docs.github.com、glama.ai、mcp-crypto-price.codemonkeyinnovations.com、pro.coincap.io、rest.coincap.io、www.coincap.io、www.npmjs.com`
 
 ### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、zod@^4.6.5、@commitlint/cli@^21.2.2、@commitlint/config-conventional@^21.2.2、@eslint/js@^10.0.1…`
+> 證據：`@modelcontextprotocol/node@^2.1.2、@modelcontextprotocol/server@^2.4.0、zod@^4.6.7、@commitlint/cli@^21.2.4、@commitlint/config-conventional@^21.2.4、@eslint/js@^10.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -63,11 +63,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-24`
+> 證據：`最後推送 2026-10-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39｜fork 9｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-24
+⭐ 39｜fork 8｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-26
 
 ---
 

@@ -7,10 +7,10 @@
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
 | 星數 / Fork | ⭐ 66 / 13 |
-| 最後更新 | 2026-10-25 |
+| 最後更新 | 2026-10-27 |
 | 授權 | MIT License |
-| 已掃描檔案 | 407 個 |
-| 檢查時間 | 2026-10-25 23:09 |
+| 已掃描檔案 | 409 個 |
+| 檢查時間 | 2026-10-27 00:22 |
 
 ## 風險摘要
 
@@ -50,13 +50,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/check_profile_bundle_compatibility.py、scripts/check_summary_consumer_recovery.py、scripts/check_summary_fault_boundaries.py、scripts/generate_sqlite_ui_fixture.py、scripts/verify_setup.py`
+> 證據：`scripts/check_ci_checkout.py、scripts/check_profile_bundle_compatibility.py、scripts/check_summary_consumer_recovery.py、scripts/check_summary_fault_boundaries.py、scripts/generate_sqlite_ui_fixture.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_smoke.py、scripts/workspace_install_smoke.py`
+> 證據：`scripts/check_ci_checkout.py、scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_smoke.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-25`
+> 證據：`最後推送 2026-10-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 66｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-25
+⭐ 66｜fork 13｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-27
 
 ---
 
