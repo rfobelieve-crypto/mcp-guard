@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28212 / 2523 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 28219 / 2531 |
+| 最後更新 | 2026-10-28 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-10-27 00:15 |
+| 檢查時間 | 2026-10-28 00:16 |
 
 ## 風險摘要
 
@@ -18,31 +18,31 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 45 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、ai.google.dev、api.example.com、api.mintlify.com、api.surgemsg.com、api2.amplitude.com、archive.org、auth.example.com、block.github.io…`
+> 證據：`YOUR-DOMAIN.com、agents-md-generator.fastmcp.app、api.example.com、api.mintlify.com、api.prefect.cloud、api.surgemsg.com、api2.amplitude.com、app.prefect.cloud、archive.org、attacker.example…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/scripts/test-ci-workflows.mjs、.github/scripts/test-issue-link.mjs、examples/diagnostics/server.py、examples/smart_home/scripts/pi_harness.py`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/scripts/analyze-ci-failure.mjs、.github/scripts/test-issue-link.mjs、.github/workflows/marvin-test-failure.yml、.github/workflows/require-issue-link.yml、docs/.cursor/rules/mintlify.mdc`
+> 證據：`.agents/skills/release/scripts/changelog_entry.py、.github/agentic/flows/agentic_freshness.py、.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack.py、.github/agentic/flows/agentic_stack_controller.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-fastmcp-remote.yml、.github/workflows/publish-fastmcp-tasks.yml、.github/workflows/publish-fastmcp.yml、examples/code_mode/server.py、examples/diagnostics/server.py`
+> 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_publication.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/flows/agentic_verification_process.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（566 則）
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_controller.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（570 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-pr/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 45 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 37 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28212｜fork 2523｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-27
+⭐ 28219｜fork 2531｜語言 Python｜建立 2024-11-30｜最後推送 2026-10-28
 
 ---
 

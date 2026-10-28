@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4534 / 406 |
-| 最後更新 | 2026-10-26 |
+| 星數 / Fork | ⭐ 4538 / 406 |
+| 最後更新 | 2026-10-27 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-10-27 00:18 |
+| 已掃描檔案 | 415 個 |
+| 檢查時間 | 2026-10-28 00:18 |
 
 ## 風險摘要
 
@@ -56,11 +56,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 45 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 21 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/skills/build-cli/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/github-pr-review-fix/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、Unity-MCP-Plugin/.claude/skills/editor-session-quit/SKILL.md（Agent Skill 指令（SKILL.md））、Unity-MCP-Plugin/.claude/skills/package-add/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`.claude/skills/build-cli/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/github-pr-review-fix/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、Unity-MCP-Plugin/AGENTS.md（Agent 指令（AGENTS.md 慣例））、cli/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 72 段 description）
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-26`
+> 證據：`最後推送 2026-10-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4534｜fork 406｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-26
+⭐ 4538｜fork 406｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-27
 
 ---
 

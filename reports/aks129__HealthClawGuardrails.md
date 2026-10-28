@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-10-27 00:20 |
+| 檢查時間 | 2026-10-28 00:21 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實際讀到的」順序不同，是 Trojan Source（CVE-2021-42574）的手法。除了處理雙向文字的函式庫，正常原始碼沒有理由出現它們。
 
-> 證據：`careagents/static/checkin_answer.js｜位置 7360｜U+202A`
+> 證據：`careagents/static/checkin_answer.js｜位置 9711｜U+202A`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -55,7 +55,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 > 證據：`.github/workflows/careagents-deploy.yml、.github/workflows/careagents-drift.yml、.github/workflows/pr-risk.yml、.github/workflows/prod-watch.yml、api/index.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（76 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（79 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

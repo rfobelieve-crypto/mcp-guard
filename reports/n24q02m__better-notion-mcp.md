@@ -1,23 +1,29 @@
 # MCP 安檢報告：n24q02m/better-notion-mcp
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 35 / 11 |
-| 最後更新 | 2026-10-26 |
+| 最後更新 | 2026-10-27 |
 | 授權 | Apache License 2.0 |
-| npm 套件 | `@n24q02m/notion`（registry 查無） |
+| npm 套件 | `@n24q02m/notion` |
 | 已掃描檔案 | 116 個 |
-| 檢查時間 | 2026-10-27 00:21 |
+| 檢查時間 | 2026-10-28 00:23 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 8
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[供應鏈] npm 套件標示的倉庫與實際來源不一致
+
+套件明確指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。
+
+> 證據：`npm repository=git+https://github.com/n24q02m/notion.git｜稽核對象=n24q02m/better-notion-mcp`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -55,10 +61,6 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、skills/bulk-update/SKILL.md（Agent Skill 指令（SKILL.md））、skills/organize-database/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[供應鏈] npm 上查無此套件（@n24q02m/notion）
-
-原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
-
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 74 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
@@ -77,7 +79,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-26`
+> 證據：`最後推送 2026-10-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 35｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-10-26
+⭐ 35｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-10-27
 
 ---
 

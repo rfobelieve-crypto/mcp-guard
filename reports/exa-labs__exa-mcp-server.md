@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `exa-labs/exa-mcp-server` |
 | 專案說明 | Exa MCP for web search and web crawling! |
-| 星數 / Fork | ⭐ 5173 / 404 |
-| 最後更新 | 2026-10-19 |
+| 星數 / Fork | ⭐ 5189 / 404 |
+| 最後更新 | 2026-10-27 |
 | 授權 | MIT License |
 | npm 套件 | `exa-mcp-server` |
-| 已掃描檔案 | 81 個 |
-| 檢查時間 | 2026-10-27 00:17 |
+| 已掃描檔案 | 97 個 |
+| 檢查時間 | 2026-10-28 00:17 |
 
 ## 風險摘要
 
@@ -43,11 +43,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`api/mcp.ts、api/well-known-oauth-protected-resource.ts、api/well-known-openai-apps-challenge.ts、src/runtime-server.ts、src/stdio.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`skills/exa-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/search/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`plugins/exa/skills/exa-agent/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/exa/skills/search/SKILL.md（Agent Skill 指令（SKILL.md））、skills/exa-agent/SKILL.md（Agent Skill 指令（SKILL.md））、skills/search/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 30 段 description）
 
@@ -63,11 +63,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-19`
+> 證據：`最後推送 2026-10-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -77,7 +77,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5173｜fork 404｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-19
+⭐ 5189｜fork 404｜語言 TypeScript｜建立 2024-11-27｜最後推送 2026-10-27
 
 ---
 

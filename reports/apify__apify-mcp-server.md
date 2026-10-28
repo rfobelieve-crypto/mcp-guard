@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 13332 / 391 |
-| 最後更新 | 2026-10-26 |
+| 星數 / Fork | ⭐ 13516 / 396 |
+| 最後更新 | 2026-10-27 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-27 00:18 |
+| 檢查時間 | 2026-10-28 00:19 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 54 個外部主機
+### 🟡 中｜[權限] 會連往 55 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、actor.example、actorpub.apify.actor、api-securitybyobscurity.apify.com、api.apify.com、api.example.test、api.internal.example、api.invalid、apify-image-uploads-prod.s3.amazonaws.com、apify-image-uploads-prod.s3.us-east-1.amazonaws.com…`
+> 證據：`Acme-MCP-Server.apify.actor、a.com、acme-mcp-public.apify.actor、acme-mcp-server.apify.actor、actor.example、api-securitybyobscurity.apify.com、api.apify.com、api.example.test、api.internal.example、api.invalid…`
 
 ### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`evals/scripts/export_dataset.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（255 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（253 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -59,7 +59,7 @@
 
 > 證據：`.claude/agents/mcpc-tester.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bug-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-mcp-agent-evals/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/creating-mcp-agent-evals/reference.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/dig/SKILL.md（Agent Skill 指令（SKILL.md））、AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 320 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 335 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-26`
+> 證據：`最後推送 2026-10-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 13332｜fork 391｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-26
+⭐ 13516｜fork 396｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-10-27
 
 ---
 
