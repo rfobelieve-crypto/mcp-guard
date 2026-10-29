@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines, wikis and |
-| 星數 / Fork | ⭐ 2072 / 364 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 2074 / 364 |
+| 最後更新 | 2026-10-29 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-28 00:19 |
+| 檢查時間 | 2026-10-29 00:41 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 58 個外部主機
+### 🟡 中｜[權限] 會連往 56 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -53,7 +53,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`oauth.ts、scripts/release.test.ts、test/api-url-credentials.test.ts、test/callback-proxy-redirect-policy.test.ts、test/cli/boolean-flags.test.ts`
+> 證據：`oauth.ts、scripts/merge-changelog-fragments.test.ts、scripts/release.test.ts、test/api-url-credentials.test.ts、test/callback-proxy-redirect-policy.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 30 個代理指令檔
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2072｜fork 364｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-27
+⭐ 2074｜fork 364｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-29
 
 ---
 

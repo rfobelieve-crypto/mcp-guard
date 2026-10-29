@@ -7,11 +7,11 @@
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 31 / 12 |
-| 最後更新 | 2026-10-27 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-10-28 00:21 |
+| 檢查時間 | 2026-10-29 00:42 |
 
 ## 風險摘要
 
@@ -87,7 +87,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-27
+⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-10-28
 
 ---
 

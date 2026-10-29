@@ -7,10 +7,10 @@
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | Invoicing, full accounting, year-end preparation and taxes for freelancers and s |
 | 星數 / Fork | ⭐ 62 / 13 |
-| 最後更新 | 2026-10-27 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 221 個 |
-| 檢查時間 | 2026-10-28 00:21 |
+| 已掃描檔案 | 236 個 |
+| 檢查時間 | 2026-10-29 00:42 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`tests/test_embedding.py、tests/test_legacy_client_compatibility.py`
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟡 中｜[權限] 會連往 44 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -34,21 +34,21 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`norman_mcp/apps/inbox_live.py、norman_mcp/events/store.py、norman_mcp/files/download.py、norman_mcp/tools/accounting.py、norman_mcp/tools/documents.py`
+> 證據：`norman_mcp/apps/inbox_live.py、norman_mcp/events/store.py、norman_mcp/files/download.py、norman_mcp/files/inline_upload.py、norman_mcp/tools/accounting.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`norman_mcp/auth/provider.py、norman_mcp/cli.py、norman_mcp/config/settings.py、norman_mcp/files/upload.py、norman_mcp/observability.py`
+> 證據：`norman_mcp/auth/provider.py、norman_mcp/cli.py、norman_mcp/config/settings.py、norman_mcp/files/inline_upload.py、norman_mcp/files/upload.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 31 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 33 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/reconciliation-cockpit/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/calculators-and-forms/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 787 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 799 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 62｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-27
+⭐ 62｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-28
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 43915 / 4121 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 43971 / 4123 |
+| 最後更新 | 2026-10-29 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-10-28 00:16 |
+| 檢查時間 | 2026-10-29 00:37 |
 
 ## 風險摘要
 
@@ -41,11 +41,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 113 個外部主機
+### 🟡 中｜[權限] 會連往 112 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`SUB.app.puter.localhost、a.test、an-app.puter.site、api-docs.deepseek.com、api.deepseek.com、api.hoonify.ai、api.meta.ai、api.minimax.io、api.mistral.ai、api.prelude.dev…`
+> 證據：`SUB.app.puter.localhost、a.test、an-app.puter.site、api-docs.deepseek.com、api.deepseek.com、api.hoonify.ai、api.meta.ai、api.minimax.io、api.prelude.dev、api.puter.com…`
 
 ### 🔵 低｜[供應鏈] 有 34 個依賴未鎖定版本
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 43915｜fork 4121｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-10-27
+⭐ 43971｜fork 4123｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-10-29
 
 ---
 

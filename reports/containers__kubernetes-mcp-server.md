@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2195 / 467 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 2196 / 469 |
+| 最後更新 | 2026-10-28 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-28 00:19 |
+| 檢查時間 | 2026-10-29 00:41 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、kubernetes.default.svc、kubernetes.io、kubevirt.io、login.microsoftonline.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（116 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（114 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -52,7 +52,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2195｜fork 467｜語言 Go｜建立 2025-02-11｜最後推送 2026-10-27
+⭐ 2196｜fork 469｜語言 Go｜建立 2025-02-11｜最後推送 2026-10-28
 
 ---
 

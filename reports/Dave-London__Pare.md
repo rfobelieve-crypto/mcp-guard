@@ -7,11 +7,11 @@
 | 稽核對象 | `Dave-London/Pare` |
 | 專案說明 | Dev tools, optimized for agents. Structured, token-efficient MCP servers for git |
 | 星數 / Fork | ⭐ 139 / 16 |
-| 最後更新 | 2026-10-27 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
 | npm 套件 | `pare` |
 | 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-10-28 00:23 |
+| 檢查時間 | 2026-10-29 00:44 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@changesets/changelog-github@^1.0.1、@changesets/cli@^3.0.3、@modelcontextprotocol/sdk@^1.31.0、@typescript-eslint/eslint-plugin@^8.71.2、@typescript-eslint/parser@^8.71.2、@vitest/coverage-v8@^4.1.10…`
+> 證據：`@changesets/changelog-github@^1.0.1、@changesets/cli@^3.0.3、@modelcontextprotocol/sdk@^1.32.2、@typescript-eslint/eslint-plugin@^8.72.0、@typescript-eslint/parser@^8.72.0、@vitest/coverage-v8@^4.1.10…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -77,7 +77,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`rules/.clinerules/pare.md（AI 客戶端設定目錄下的指令檔）、rules/.cursor/rules/pare.mdc（AI 客戶端設定目錄下的指令檔）、rules/.github/copilot-instructions.md（GitHub Copilot 指令）、rules/.windsurfrules（Windsurf 規則）、rules/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、rules/GEMINI.md（Gemini CLI 指令）`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 216 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 206 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 139｜fork 16｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-27
+⭐ 139｜fork 16｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-10-28
 
 ---
 

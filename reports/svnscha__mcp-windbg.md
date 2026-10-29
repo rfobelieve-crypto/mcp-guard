@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1633 / 165 |
-| 最後更新 | 2026-10-23 |
+| 星數 / Fork | ⭐ 1634 / 165 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 122 個 |
-| 檢查時間 | 2026-10-28 00:20 |
+| 已掃描檔案 | 124 個 |
+| 檢查時間 | 2026-10-29 00:41 |
 
 ## 風險摘要
 
@@ -54,7 +54,7 @@
 
 > 證據：`.claude/rules/documentation.md（AI 客戶端設定目錄下的指令檔）、.claude/rules/markdown.md（AI 客戶端設定目錄下的指令檔）、.github/prompts/dump-triage.prompt.md（GitHub Copilot 提示檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/mcp-windbg-skills/skills/analyze-dump/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/mcp-windbg-skills/skills/debug-remote/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 34 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -68,11 +68,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-23`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1633｜fork 165｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-23
+⭐ 1634｜fork 165｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-28
 
 ---
 

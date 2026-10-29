@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 63789 / 3152 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 63860 / 3162 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 286 個 |
-| 檢查時間 | 2026-10-28 00:16 |
+| 已掃描檔案 | 305 個 |
+| 檢查時間 | 2026-10-29 00:37 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/upgrade.ts、packages/mcp/test/integration.test.ts`
 
-### 🟡 中｜[權限] 會連往 44 個外部主機
+### 🟡 中｜[權限] 會連往 51 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`MCP.context7.com、a.example、acme-docs.docs7.io、admin.mcp.context7.com、agent-plugins.org、alpha.com、b.example、clerk.context7.com、context7.com、context7.internal…`
+> 證據：`MCP.context7.com、a.example、acme-cli.docs7.io、acme-docs.docs7.io、acme.com、acme.dev、acme.docs7.io、admin.mcp.context7.com、agent-plugins.org、alpha.com…`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -41,15 +41,15 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/admin-mcp/src/http.ts、packages/admin-mcp/src/server.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts、packages/cli/src/setup/agents.ts`
+> 證據：`packages/admin-mcp/scripts/dev.ts、packages/admin-mcp/src/http.ts、packages/admin-mcp/src/server.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/cli/src/__tests__/auth-utils.test.ts、packages/cli/src/__tests__/file-lock.test.ts、packages/cli/src/commands/auth.ts、packages/cli/src/utils/auth.ts、packages/cli/src/utils/file-lock.ts`
+> 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 74 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 80 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63789｜fork 3152｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-27
+⭐ 63860｜fork 3162｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-28
 
 ---
 

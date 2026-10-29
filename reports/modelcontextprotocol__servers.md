@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 91609 / 11872 |
-| 最後更新 | 2026-10-27 |
+| 星數 / Fork | ⭐ 91641 / 11880 |
+| 最後更新 | 2026-10-29 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 320 個 |
-| 檢查時間 | 2026-10-28 00:14 |
+| 已掃描檔案 | 334 個 |
+| 檢查時間 | 2026-10-29 00:36 |
 
 ## 風險摘要
 
@@ -23,17 +23,17 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/skill-eval.test.mjs`
+> 證據：`scripts/claude-workflow.test.mjs、scripts/skill-eval.test.mjs`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 23 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`anycast.example.com、docs.astral.sh、elsewhere.example、eslint.org、feross.org、intranet.example.com、l.example、nat64.example.com、notexample.com、only-the-proxy-knows.example…`
+> 證據：`anycast.example.com、docs.astral.sh、elsewhere.example、eslint.org、example.jp、feross.org、internal.example.com、intranet.example.com、l.example、nat64.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -57,9 +57,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/eras.test.ts、src/filesystem/__tests__/path-validation.test.ts`
+> 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/bounded-walk.test.ts、src/filesystem/__tests__/eras.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（116 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（156 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,17 +89,17 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91609｜fork 11872｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-27
+⭐ 91641｜fork 11880｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-29
 
 ---
 

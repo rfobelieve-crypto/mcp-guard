@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
-| 專案說明 | Mobile app automation and verification for AI coding agents. CLI, MCP server, an |
-| 星數 / Fork | ⭐ 5168 / 358 |
-| 最後更新 | 2026-10-27 |
+| 專案說明 | Open source device layer for AI coding agents: a CLI, MCP server, and typed Node |
+| 星數 / Fork | ⭐ 5179 / 360 |
+| 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-10-28 00:18 |
+| 檢查時間 | 2026-10-29 00:39 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`.github/workflows/xctest-nightly.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/test-app/foldable/duo-pose-semantic.mjs、examples/test-app/security/image-size-security.test.mjs、linux/atspi-dump.py`
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-device.dev、discourse.gnome.org、docs.renovatebot.com、en.wikipedia.org、get.maestro.mobile.dev、glama.ai、metro.example.dev、news.ycombinator.com、oss.callstack.com、reactnative.dev…`
+> 證據：`agent-device.dev、discourse.gnome.org、docs.renovatebot.com、en.wikipedia.org、get.maestro.mobile.dev、glama.ai、metro.example.dev、news.ycombinator.com、reactnative.dev、vercel.com…`
 
 ### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/actions/smoke-ios-run/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（99 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（107 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-27`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5168｜fork 358｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-27
+⭐ 5179｜fork 360｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-28
 
 ---
 

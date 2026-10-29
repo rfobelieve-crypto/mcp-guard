@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
-| 專案說明 | Visual testing tool for MCP servers |
-| 星數 / Fork | ⭐ 11169 / 1551 |
-| 最後更新 | 2026-10-25 |
+| 專案說明 | Deterministic testing tools for MCP servers |
+| 星數 / Fork | ⭐ 11179 / 1551 |
+| 最後更新 | 2026-10-28 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-10-28 00:14 |
+| 檢查時間 | 2026-10-29 00:36 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 53 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/helpers/oauth-state-isolation.ts、clients/cli/__tests__/relogin-revocation.test.ts、clients/cli/__tests__/servers-write.test.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/helpers/home-isolation.ts、clients/cli/__tests__/helpers/oauth-state-isolation.ts、clients/cli/__tests__/relogin-revocation.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -65,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 10 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,15 +79,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-25`
+> 證據：`最後推送 2026-10-28`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11169｜fork 1551｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-25
+⭐ 11179｜fork 1551｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-28
 
 ---
 
