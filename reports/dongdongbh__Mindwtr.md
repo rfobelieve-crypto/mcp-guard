@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2338 / 149 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 2341 / 150 |
+| 最後更新 | 2026-10-29 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-10-29 00:41 |
+| 檢查時間 | 2026-10-30 00:41 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-about-device.mjs、apps/android-native/scripts/check-ai-device.mjs、apps/android-native/scripts/check-app-lock-device.mjs`
 
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 51 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.test、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、apps.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com、b.test…`
+> 證據：`a.test、aka.ms、androidpublisher.googleapis.com、api.appstoreconnect.apple.com、api.openai.com、apps.apple.com、archive.ubuntu.com、asset.localhost、aur.archlinux.org、azure.archive.ubuntu.com…`
 
 ### 🔵 低｜[供應鏈] 有 61 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/appstore-status.yml、.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（132 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（134 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,11 +75,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2338｜fork 149｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-28
+⭐ 2341｜fork 150｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-10-29
 
 ---
 

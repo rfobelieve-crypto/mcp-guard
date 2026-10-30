@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Open source device layer for AI coding agents: a CLI, MCP server, and typed Node |
-| 星數 / Fork | ⭐ 5179 / 360 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 5189 / 360 |
+| 最後更新 | 2026-10-29 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 434 個 |
-| 檢查時間 | 2026-10-29 00:39 |
+| 檢查時間 | 2026-10-30 00:40 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/actions/smoke-ios-run/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（107 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（101 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5179｜fork 360｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-28
+⭐ 5189｜fork 360｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-10-29
 
 ---
 

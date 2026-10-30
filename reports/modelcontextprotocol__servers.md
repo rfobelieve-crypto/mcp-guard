@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Servers |
-| 星數 / Fork | ⭐ 91641 / 11880 |
+| 星數 / Fork | ⭐ 91683 / 11888 |
 | 最後更新 | 2026-10-29 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 334 個 |
-| 檢查時間 | 2026-10-29 00:36 |
+| 檢查時間 | 2026-10-30 00:37 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 6　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -59,10 +59,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`src/everything/__tests__/gzip-file-as-resource.test.ts、src/fetch/tests/test_entrypoints.py、src/filesystem/__tests__/bin-smoke.test.ts、src/filesystem/__tests__/bounded-walk.test.ts、src/filesystem/__tests__/eras.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（156 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -91,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -99,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91641｜fork 11880｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-29
+⭐ 91683｜fork 11888｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-10-29
 
 ---
 

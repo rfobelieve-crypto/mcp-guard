@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines, wikis and |
-| 星數 / Fork | ⭐ 2074 / 364 |
+| 星數 / Fork | ⭐ 2077 / 365 |
 | 最後更新 | 2026-10-29 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-29 00:41 |
+| 檢查時間 | 2026-10-30 00:41 |
 
 ## 風險摘要
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2074｜fork 364｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-29
+⭐ 2077｜fork 365｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-10-29
 
 ---
 

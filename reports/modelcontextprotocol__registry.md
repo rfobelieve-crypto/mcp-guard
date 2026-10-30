@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7417 / 1041 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 7421 / 1041 |
+| 最後更新 | 2026-10-29 |
 | 授權 | Other |
-| 已掃描檔案 | 262 個 |
-| 檢查時間 | 2026-10-29 00:36 |
+| 已掃描檔案 | 400 個 |
+| 檢查時間 | 2026-10-30 00:37 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 71 個外部主機
+### 🟡 中｜[權限] 會連往 72 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -28,21 +28,21 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`tools/admin/configure-backup-alerts.py、tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py、tools/readbench/verify-search.py`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`tools/admin/configure-backup-alerts.py、tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py、tools/readbench/verify-search.py`
+> 證據：`deploy/scripts/adopt_staging_capacity.py、tools/admin/configure-backup-alerts.py、tools/ingressbench/collect_profile_logs.py、tools/readbench/cache.py、tools/readbench/compare.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py、tools/readbench/verify-search.py、tools/readbench/verify.py`
+> 證據：`deploy/scripts/adopt_staging_capacity.py、tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py、tools/readbench/verify-search.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（118 則）
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`tools/admin/configure-backup-alerts.py、tools/ingressbench/collect_profile_logs.py、tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -52,7 +52,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 196 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 200 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7417｜fork 1041｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-28
+⭐ 7421｜fork 1041｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-29
 
 ---
 

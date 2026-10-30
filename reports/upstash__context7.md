@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 63860 / 3162 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 63922 / 3172 |
+| 最後更新 | 2026-10-29 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
 | 已掃描檔案 | 305 個 |
-| 檢查時間 | 2026-10-29 00:37 |
+| 檢查時間 | 2026-10-30 00:38 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-10-29`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63860｜fork 3162｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-28
+⭐ 63922｜fork 3172｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-10-29
 
 ---
 
