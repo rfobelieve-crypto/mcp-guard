@@ -1,38 +1,28 @@
 # MCP 安檢報告：jgravelle/jcodemunch-mcp
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Symbol-level code retrieval for AI agents: fetch the function you need, not the  |
-| 星數 / Fork | ⭐ 2819 / 372 |
-| 最後更新 | 2026-10-29 |
+| 星數 / Fork | ⭐ 2823 / 372 |
+| 最後更新 | 2026-10-30 |
 | 授權 | Other |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-10-30 00:41 |
+| 檢查時間 | 2026-10-31 00:27 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
-
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`munch-bench/results/anthropic_claude-haiku-4-5_flask.json`
-
-### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
-
-eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
-
-### 🟡 中｜[權限] 會連往 15 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、cdn.jsdelivr.net、domain.com、dotenvx.com、expressjs.com、fastapi.tiangolo.com、groq.com、jcm.internal、json.schemastore.org、mcp.example.com…`
+> 證據：`api.groq.com、cdn.jsdelivr.net、dotenvx.com、groq.com、jcm.internal、json.schemastore.org、mcp.example.com、opencollective.com、oraios.github.io、test.pypi.org…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -82,7 +72,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-29`
+> 證據：`最後推送 2026-10-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2819｜fork 372｜語言 Python｜建立 2026-02-09｜最後推送 2026-10-29
+⭐ 2823｜fork 372｜語言 Python｜建立 2026-02-09｜最後推送 2026-10-30
 
 ---
 

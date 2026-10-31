@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
-| 星數 / Fork | ⭐ 243 / 49 |
+| 星數 / Fork | ⭐ 244 / 49 |
 | 最後更新 | 2026-10-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 135 個 |
-| 檢查時間 | 2026-10-30 00:43 |
+| 檢查時間 | 2026-10-31 00:29 |
 
 ## 風險摘要
 
@@ -86,7 +86,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 
@@ -100,7 +100,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 243｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-28
+⭐ 244｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-28
 
 ---
 

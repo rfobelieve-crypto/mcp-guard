@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `norman-finance/norman-mcp-server` |
 | 專案說明 | Invoicing, full accounting, year-end preparation and taxes for freelancers and s |
-| 星數 / Fork | ⭐ 63 / 13 |
-| 最後更新 | 2026-10-30 |
+| 星數 / Fork | ⭐ 65 / 13 |
+| 最後更新 | 2026-10-31 |
 | 授權 | MIT License |
-| 已掃描檔案 | 236 個 |
-| 檢查時間 | 2026-10-30 00:42 |
+| 已掃描檔案 | 237 個 |
+| 檢查時間 | 2026-10-31 00:28 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`norman_mcp/auth/provider.py、norman_mcp/cli.py、norman_mcp/config/settings.py、norman_mcp/files/inline_upload.py、norman_mcp/files/upload.py`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 33 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 34 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -66,7 +66,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-30`
+> 證據：`最後推送 2026-10-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 63｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-30
+⭐ 65｜fork 13｜語言 Python｜建立 2025-04-16｜最後推送 2026-10-31
 
 ---
 

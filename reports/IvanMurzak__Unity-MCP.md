@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4551 / 406 |
+| 星數 / Fork | ⭐ 4556 / 407 |
 | 最後更新 | 2026-10-30 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 416 個 |
-| 檢查時間 | 2026-10-30 00:40 |
+| 檢查時間 | 2026-10-31 00:26 |
 
 ## 風險摘要
 
@@ -38,7 +38,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/chain_feed.py、cli/src/commands/update.ts、cli/src/lib/open.ts、cli/src/utils/browser.ts、cli/src/utils/launch-error-dismiss.ts`
+> 證據：`.github/scripts/chain_feed.py、cli/src/commands/update.ts、cli/src/lib/open.ts、cli/src/lib/types.ts、cli/src/utils/browser.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -50,9 +50,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts、cli/src/utils/update-check.ts`
+> 證據：`.github/scripts/chain_feed.py、.github/workflows/test_cli.yml、cli/src/lib/types.ts、cli/src/utils/unity-editor.ts、cli/src/utils/unity-hub.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（54 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4551｜fork 406｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-30
+⭐ 4556｜fork 407｜語言 C#｜建立 2025-04-02｜最後推送 2026-10-30
 
 ---
 

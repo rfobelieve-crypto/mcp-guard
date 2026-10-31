@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7421 / 1041 |
-| 最後更新 | 2026-10-29 |
+| 星數 / Fork | ⭐ 7423 / 1039 |
+| 最後更新 | 2026-10-30 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-30 00:37 |
+| 檢查時間 | 2026-10-31 00:23 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`tools/admin/configure-backup-alerts.py、tools/ingressbench/collect_profile_logs.py、tools/readbench/cache.py、tools/readbench/compare.py、tools/readbench/cycles.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-29`
+> 證據：`最後推送 2026-10-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7421｜fork 1041｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-29
+⭐ 7423｜fork 1039｜語言 Go｜建立 2025-02-05｜最後推送 2026-10-30
 
 ---
 

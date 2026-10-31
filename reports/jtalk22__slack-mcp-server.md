@@ -7,11 +7,11 @@
 | 稽核對象 | `jtalk22/slack-mcp-server` |
 | 專案說明 | Put your agent inside your Slack. Zero bots, zero admin queues, no Business+ upg |
 | 星數 / Fork | ⭐ 32 / 25 |
-| 最後更新 | 2026-10-23 |
+| 最後更新 | 2026-10-30 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
 | 已掃描檔案 | 157 個 |
-| 檢查時間 | 2026-10-30 00:44 |
+| 檢查時間 | 2026-10-31 00:30 |
 
 ## 風險摘要
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-23`
+> 證據：`最後推送 2026-10-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 32｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-10-23
+⭐ 32｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-10-30
 
 ---
 

@@ -1,23 +1,35 @@
 # MCP 安檢報告：mobile-next/mobile-mcp
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
-| 專案說明 | Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android,  |
-| 星數 / Fork | ⭐ 10118 / 907 |
-| 最後更新 | 2026-10-26 |
+| 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
+| 星數 / Fork | ⭐ 10152 / 912 |
+| 最後更新 | 2026-10-30 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 76 個 |
-| 檢查時間 | 2026-10-30 00:39 |
+| 已掃描檔案 | 78 個 |
+| 檢查時間 | 2026-10-31 00:25 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 5　⚪ 資訊 7
+🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
+
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/utils.ts、test/utils.ts`
+
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`scripts/verify-streamable-http.mjs、src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -31,31 +43,19 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`agent-plugins.org、eslint.org、glama.ai、mobilenext.ai、opencollective.com、static.modelcontextprotocol.io、static.scarf.sh、us.i.posthog.com、www.example.com`
 
-### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 23 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@clack/prompts@^0.9.1、add-mcp@^2.6.0、ajv@^8.18.0、qs@^6.15.0、zod@^4.2.0、@eslint/eslintrc@^3.2.0…`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/utils.ts、test/utils.ts`
+> 證據：`@clack/prompts@^0.9.1、@modelcontextprotocol/node@^2.1.2、add-mcp@^2.6.0、ajv@^8.18.0、qs@^6.15.0、zod@^4.2.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`scripts/verify-streamable-http.mjs、src/android.ts、src/ios.ts、src/iphone-simulator.ts、src/mobilecli.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（68 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -69,9 +69,9 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
-以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
+以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
 
 ### ⚪ 資訊｜[權限] 需要的憑證類設定
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-26`
+> 證據：`最後推送 2026-10-30`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10118｜fork 907｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-10-26
+⭐ 10152｜fork 912｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-10-30
 
 ---
 
