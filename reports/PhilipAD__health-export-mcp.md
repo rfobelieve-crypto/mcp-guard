@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Open-source Apple Health MCP server for the MetricBridge iOS app: query 194 Heal |
-| 星數 / Fork | ⭐ 10 / 0 |
+| 星數 / Fork | ⭐ 11 / 0 |
 | 最後更新 | 2026-10-29 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
 | 已掃描檔案 | 61 個 |
-| 檢查時間 | 2026-10-31 00:29 |
+| 檢查時間 | 2026-11-01 00:02 |
 
 ## 風險摘要
 
@@ -63,7 +63,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-10-29
+⭐ 11｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-10-29
 
 ---
 

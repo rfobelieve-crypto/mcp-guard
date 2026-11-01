@@ -10,7 +10,7 @@
 | 最後更新 | 2026-10-31 |
 | 授權 | MIT License |
 | 已掃描檔案 | 237 個 |
-| 檢查時間 | 2026-10-31 00:28 |
+| 檢查時間 | 2026-11-01 00:02 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`GEMINI.md（Gemini CLI 指令）、openai-plugin/skills/calculators-and-forms/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/document-review/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/get-started/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/ledger-explorer/SKILL.md（Agent Skill 指令（SKILL.md））、openai-plugin/skills/norman-inbox/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 799 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 800 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 

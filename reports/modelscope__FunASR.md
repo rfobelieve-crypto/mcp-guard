@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 20888 / 2099 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 20895 / 2101 |
+| 最後更新 | 2026-10-31 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-10-31 00:25 |
+| 檢查時間 | 2026-10-31 23:58 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -52,10 +52,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
@@ -74,11 +70,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-10-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -88,7 +84,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20888｜fork 2099｜語言 Python｜建立 2022-11-24｜最後推送 2026-10-28
+⭐ 20895｜fork 2101｜語言 Python｜建立 2022-11-24｜最後推送 2026-10-31
 
 ---
 

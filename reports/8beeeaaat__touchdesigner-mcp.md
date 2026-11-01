@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `8beeeaaat/touchdesigner-mcp` |
 | 專案說明 | MCP server for TouchDesigner |
-| 星數 / Fork | ⭐ 606 / 66 |
-| 最後更新 | 2026-10-30 |
+| 星數 / Fork | ⭐ 607 / 66 |
+| 最後更新 | 2026-10-31 |
 | 授權 | MIT License |
 | npm 套件 | `touchdesigner-mcp-server` |
 | 已掃描檔案 | 206 個 |
-| 檢查時間 | 2026-10-31 00:29 |
+| 檢查時間 | 2026-11-01 00:03 |
 
 ## 風險摘要
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/core@^2.0.0、@modelcontextprotocol/express@^2.0.0、@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、@modelcontextprotocol/client@^2.0.0`
+> 證據：`@modelcontextprotocol/core@^2.4.0、@modelcontextprotocol/express@^2.0.2、@modelcontextprotocol/node@^2.1.2、@modelcontextprotocol/server@^2.4.0、@modelcontextprotocol/client@^2.4.0`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-30`
+> 證據：`最後推送 2026-10-31`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 606｜fork 66｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-10-30
+⭐ 607｜fork 66｜語言 TypeScript｜建立 2025-04-13｜最後推送 2026-10-31
 
 ---
 
