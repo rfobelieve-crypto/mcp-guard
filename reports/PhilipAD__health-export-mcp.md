@@ -7,11 +7,11 @@
 | 稽核對象 | `PhilipAD/health-export-mcp` |
 | 專案說明 | Open-source Apple Health MCP server for the MetricBridge iOS app: query 194 Heal |
 | 星數 / Fork | ⭐ 11 / 0 |
-| 最後更新 | 2026-10-29 |
+| 最後更新 | 2026-11-01 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 61 個 |
-| 檢查時間 | 2026-11-01 00:02 |
+| 已掃描檔案 | 69 個 |
+| 檢查時間 | 2026-11-02 00:21 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、cli.test.mjs、correlate.test.mjs、envelope.mjs`
+> 證據：`answers.test.mjs、apply-mcp-config.mjs、apply-mcp-config.test.mjs、checkins.test.mjs、cli.test.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -41,7 +41,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`apply-mcp-config.mjs、apply-mcp-config.test.mjs、cli.test.mjs、correlate.test.mjs、demo.mjs`
+> 證據：`answers.test.mjs、apply-mcp-config.mjs、apply-mcp-config.test.mjs、checkins.test.mjs、cli.test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -49,7 +49,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 81 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 89 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -63,11 +63,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-29`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-10-29
+⭐ 11｜fork 0｜語言 JavaScript｜建立 2026-06-27｜最後推送 2026-11-01
 
 ---
 

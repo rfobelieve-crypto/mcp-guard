@@ -7,10 +7,10 @@
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
 | 星數 / Fork | ⭐ 67 / 14 |
-| 最後更新 | 2026-10-31 |
+| 最後更新 | 2026-11-01 |
 | 授權 | MIT License |
-| 已掃描檔案 | 410 個 |
-| 檢查時間 | 2026-11-01 00:04 |
+| 已掃描檔案 | 412 個 |
+| 檢查時間 | 2026-11-02 00:23 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 47 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -56,7 +56,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/check_ci_checkout.py、scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_smoke.py`
+> 證據：`scripts/check_ci_checkout.py、scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_library.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 67｜fork 14｜語言 Python｜建立 2026-04-06｜最後推送 2026-10-31
+⭐ 67｜fork 14｜語言 Python｜建立 2026-04-06｜最後推送 2026-11-01
 
 ---
 

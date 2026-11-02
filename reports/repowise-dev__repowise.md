@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 8072 / 968 |
-| 最後更新 | 2026-10-31 |
+| 星數 / Fork | ⭐ 8090 / 974 |
+| 最後更新 | 2026-11-01 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 431 個 |
-| 檢查時間 | 2026-10-31 23:59 |
+| 檢查時間 | 2026-11-02 00:18 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`httpx>=0.27,<1、tree-sitter>=0.25,<1、tree-sitter-python>=0.23,<1、tree-sitter-typescript>=0.23,<1、tree-sitter-javascript>=0.23,<1、tree-sitter-go>=0.23,<1…`
+> 證據：`httpx>=0.27,<1、tree-sitter>=0.25,<0.26、tree-sitter-python>=0.23,<1、tree-sitter-typescript>=0.23,<1、tree-sitter-javascript>=0.23,<1、tree-sitter-go>=0.23,<1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/ci.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（430 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（398 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8072｜fork 968｜語言 Python｜建立 2026-03-23｜最後推送 2026-10-31
+⭐ 8090｜fork 974｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-01
 
 ---
 

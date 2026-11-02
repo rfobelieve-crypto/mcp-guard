@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 244 / 49 |
-| 最後更新 | 2026-10-28 |
+| 最後更新 | 2026-11-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 135 個 |
-| 檢查時間 | 2026-11-01 00:02 |
+| 檢查時間 | 2026-11-02 00:21 |
 
 ## 風險摘要
 
@@ -36,11 +36,11 @@
 
 > 證據：`llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」`
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`analytics.google.com、astral.sh、builditwithai.xyz、files.pythonhosted.org、ga4-gateway.reachsuren.workers.dev、ga4.builditwithai.xyz、ga4mcp.com、opensource.org、schema.org、static.modelcontextprotocol.io…`
+> 證據：`analytics.google.com、astral.sh、builditwithai.xyz、files.pythonhosted.org、ga4-gateway.reachsuren.workers.dev、ga4.builditwithai.xyz、ga4mcp.com、opensource.org、plausible.io、schema.org…`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -86,11 +86,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -100,7 +100,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 244｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-10-28
+⭐ 244｜fork 49｜語言 Python｜建立 2025-05-24｜最後推送 2026-11-01
 
 ---
 

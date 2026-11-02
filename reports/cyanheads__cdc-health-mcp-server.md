@@ -7,11 +7,11 @@
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
 | 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-10-17 |
+| 最後更新 | 2026-11-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 187 個 |
-| 檢查時間 | 2026-11-01 00:02 |
+| 已掃描檔案 | 197 個 |
+| 檢查時間 | 2026-11-02 00:21 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 26 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.us.socrata.com、caseyjhand.com、cdc.caseyjhand.com、cdn.ymaws.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov、data.cdc.gov、e.com、json.schemastore.org…`
+> 證據：`a.example、agent-plugins.org、api.us.socrata.com、b.example、caseyjhand.com、cdc.caseyjhand.com、cdn.ymaws.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.13.15、pino-pretty@^13.2.0、zod@^4.6.5、@opentelemetry/api@^1.9.1、@socketsecurity/bun-security-scanner@^1.1.3、@vitest/coverage-istanbul@^5.0.3…`
+> 證據：`@cyanheads/mcp-ts-core@^0.13.18、pino-pretty@^13.2.0、zod@^4.6.7、@opentelemetry/api@^1.10.0、@socketsecurity/bun-security-scanner@^1.1.3、@vitest/coverage-istanbul@^5.0.5…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -43,7 +43,7 @@
 
 > 證據：`scripts/devcheck.ts、tests/config/server-config-edge.test.ts、tests/config/server-config.test.ts、tests/services/wonder/database-ids.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 35 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 37 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 14 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-17`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-10-17
+⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-11-01
 
 ---
 

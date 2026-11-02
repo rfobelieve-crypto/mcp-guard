@@ -7,11 +7,11 @@
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 36 / 11 |
-| 最後更新 | 2026-10-31 |
+| 最後更新 | 2026-11-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/notion` |
 | 已掃描檔案 | 119 個 |
-| 檢查時間 | 2026-11-01 00:03 |
+| 檢查時間 | 2026-11-02 00:22 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`scripts/clean-venv.mjs、scripts/repo-bootstrap/_lib.py、tests/live/stdio-direct.live.test.ts`
 
-### 🟡 中｜[權限] 會連往 18 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`attacker.example、biomejs.dev、docs.n24q02m.com、docs.renovatebot.com、glama.ai、mcp.n24q02m.com、mise.jdx.dev、notion.example、notion.so、pre-commit.com…`
+> 證據：`attacker.example、biomejs.dev、docs.n24q02m.com、docs.renovatebot.com、glama.ai、mise.jdx.dev、notion.example、notion.so、pre-commit.com、relative-check.internal…`
 
 ### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
@@ -75,11 +75,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-10-31
+⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-11-01
 
 ---
 

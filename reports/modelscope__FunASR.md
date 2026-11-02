@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 20895 / 2101 |
-| 最後更新 | 2026-10-31 |
+| 星數 / Fork | ⭐ 20902 / 2103 |
+| 最後更新 | 2026-11-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-10-31 23:58 |
+| 檢查時間 | 2026-11-02 00:17 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -38,7 +38,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-mcp-server.yml、.github/workflows/test-numpy-compatibility.yml、docs/benchmark/vllm_official_native_20260907.json、examples/industrial_data_pretraining/fun_asr_nano/model.py、examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py`
+> 證據：`.github/workflows/publish-mcp-server.yml、.github/workflows/test-funasr-torch-package.yml、.github/workflows/test-numpy-compatibility.yml、docs/benchmark/vllm_official_native_20260907.json、examples/industrial_data_pretraining/fun_asr_nano/model.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -51,6 +51,10 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -74,7 +78,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -84,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 20895｜fork 2101｜語言 Python｜建立 2022-11-24｜最後推送 2026-10-31
+⭐ 20902｜fork 2103｜語言 Python｜建立 2022-11-24｜最後推送 2026-11-01
 
 ---
 

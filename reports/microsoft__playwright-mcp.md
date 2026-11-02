@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `microsoft/playwright-mcp` |
 | 專案說明 | Playwright MCP server |
-| 星數 / Fork | ⭐ 38910 / 3355 |
-| 最後更新 | 2026-10-31 |
+| 星數 / Fork | ⭐ 38951 / 3359 |
+| 最後更新 | 2026-11-01 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@playwright/mcp` |
 | 已掃描檔案 | 37 個 |
-| 檢查時間 | 2026-10-31 23:56 |
+| 檢查時間 | 2026-11-02 00:15 |
 
 ## 風險摘要
 
@@ -35,13 +35,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、.github/workflows/triage.yml、roll.js、tests/fixtures.ts`
+> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、roll.js、tests/fixtures.ts、tests/library.spec.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、.github/workflows/triage.yml、playwright.config.ts、tests/fixtures.ts`
+> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、playwright.config.ts、tests/fixtures.ts、update-readme.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 38910｜fork 3355｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-10-31
+⭐ 38951｜fork 3359｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-01
 
 ---
 

@@ -1,20 +1,20 @@
 # MCP 安檢報告：JerBouma/FinanceToolkit
 
-> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5483 / 640 |
-| 最後更新 | 2026-10-31 |
+| 星數 / Fork | ⭐ 5485 / 641 |
+| 最後更新 | 2026-11-01 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-10-31 23:59 |
+| 檢查時間 | 2026-11-02 00:17 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -30,21 +30,11 @@
 
 > 證據：`financetoolkit/mcp_server/mcp_controller.py`
 
-### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
-
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`financetoolkit/ratios/ratios_controller.py`
-
-### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
-
-eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
-
-### 🟡 中｜[權限] 會連往 84 個外部主機
+### 🟡 中｜[權限] 會連往 88 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.bls.gov、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、arch.readthedocs.io、cdn.cboe.com…`
+> 證據：`a.example、api.bls.gov、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、app.example…`
 
 ### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
@@ -86,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-01`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5483｜fork 640｜語言 Python｜建立 2019-04-08｜最後推送 2026-10-31
+⭐ 5485｜fork 641｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-01
 
 ---
 
