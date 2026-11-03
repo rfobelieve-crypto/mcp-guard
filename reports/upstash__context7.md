@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 64049 / 3197 |
-| 最後更新 | 2026-11-01 |
+| 星數 / Fork | ⭐ 64102 / 3207 |
+| 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 309 個 |
-| 檢查時間 | 2026-11-02 00:16 |
+| 已掃描檔案 | 325 個 |
+| 檢查時間 | 2026-11-03 02:47 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/upgrade.ts、packages/mcp/test/integration.test.ts`
 
-### 🟡 中｜[權限] 會連往 51 個外部主機
+### 🟡 中｜[權限] 會連往 53 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -41,7 +41,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/admin-mcp/scripts/dev.ts、packages/admin-mcp/src/http.ts、packages/admin-mcp/src/server.ts、packages/cli/src/__tests__/setup.test.ts、packages/cli/src/commands/setup.ts`
+> 證據：`examples/eve-docs-agent/agent/lib/context7.ts、packages/admin-mcp/scripts/dev.ts、packages/admin-mcp/src/http.ts、packages/admin-mcp/src/server.ts、packages/cli/src/__tests__/setup.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -49,17 +49,17 @@
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`packages/opencode/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、packages/pi/skills/context7-docs/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/agent-plugins/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/antigravity/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/codex/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/copilot/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`examples/eve-docs-agent/AGENTS.md（Agent 指令（AGENTS.md 慣例））、examples/eve-docs-agent/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、packages/opencode/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、packages/pi/skills/context7-docs/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/agent-plugins/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/antigravity/context7/skills/context7-mcp/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[供應鏈] npm 上查無此套件（@upstash/context7）
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 82 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 83 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +73,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 64049｜fork 3197｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-01
+⭐ 64102｜fork 3207｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-03
 
 ---
 

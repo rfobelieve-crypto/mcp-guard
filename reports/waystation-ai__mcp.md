@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `waystation-ai/mcp` |
 | 專案說明 | The only MCP Server you need. Connect any MCP host with the tools you use daily  |
-| 星數 / Fork | ⭐ 65 / 19 |
+| 星數 / Fork | ⭐ 66 / 20 |
 | 最後更新 | 2025-09-10 |
 | 授權 | 無 |
 | npm 套件 | `@waystation/mcp` |
 | 已掃描檔案 | 7 個 |
-| 檢查時間 | 2026-11-02 00:22 |
+| 檢查時間 | 2026-11-03 02:53 |
 
 ## 風險摘要
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 65｜fork 19｜語言 JavaScript｜建立 2025-02-27｜最後推送 2025-09-10
+⭐ 66｜fork 20｜語言 JavaScript｜建立 2025-02-27｜最後推送 2025-09-10
 
 ---
 

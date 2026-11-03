@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `giancarloerra/SocratiCode` |
 | 專案說明 | Enterprise-grade (40m+ LOC) codebase intelligence, zero-setup, local & private P |
-| 星數 / Fork | ⭐ 3363 / 428 |
-| 最後更新 | 2026-10-23 |
+| 星數 / Fork | ⭐ 3364 / 429 |
+| 最後更新 | 2026-11-02 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
-| 已掃描檔案 | 280 個 |
-| 檢查時間 | 2026-11-02 00:19 |
+| 已掃描檔案 | 282 個 |
+| 檢查時間 | 2026-11-03 02:49 |
 
 ## 風險摘要
 
@@ -19,13 +19,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 48 個外部主機
+### 🟡 中｜[權限] 會連往 49 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`ai.google.dev、altaire.com、bevry.me、biomejs.dev、bugs.chromium.org、bugs.webkit.org、cdn.example.com、cloud-qdrant.example、docker.com、docs.godotengine.org…`
 
-### 🔵 低｜[供應鏈] 有 43 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 44 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -73,15 +73,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-23`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3363｜fork 428｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-10-23
+⭐ 3364｜fork 429｜語言 TypeScript｜建立 2026-02-26｜最後推送 2026-11-02
 
 ---
 

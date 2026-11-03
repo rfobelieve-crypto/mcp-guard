@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10202 / 915 |
-| 最後更新 | 2026-11-01 |
+| 星數 / Fork | ⭐ 10233 / 918 |
+| 最後更新 | 2026-11-02 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 78 個 |
-| 檢查時間 | 2026-11-02 00:17 |
+| 已掃描檔案 | 80 個 |
+| 檢查時間 | 2026-11-03 02:48 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/utils.ts、test/utils.ts`
+> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/telemetry-quota.ts、src/utils.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（67 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10202｜fork 915｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-01
+⭐ 10233｜fork 918｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-02
 
 ---
 

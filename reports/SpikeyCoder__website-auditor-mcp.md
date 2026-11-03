@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 1 / 0 |
-| 最後更新 | 2026-11-01 |
+| 最後更新 | 2026-11-02 |
 | 授權 | MIT License |
 | npm 套件 | `website-auditor-mcp` |
 | 已掃描檔案 | 138 個 |
-| 檢查時間 | 2026-11-02 00:22 |
+| 檢查時間 | 2026-11-03 02:52 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@
 
 > 證據：`codex-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/build-growth-plan/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/check-ai-visibility/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/compare-to-competitor/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/see-sample-report/SKILL.md（Agent Skill 指令（SKILL.md））、cursor-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-11-01
+⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-11-02
 
 ---
 

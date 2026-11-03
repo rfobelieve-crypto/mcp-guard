@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
-| 星數 / Fork | ⭐ 78 / 14 |
-| 最後更新 | 2026-10-23 |
+| 星數 / Fork | ⭐ 79 / 14 |
+| 最後更新 | 2026-11-02 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 125 個 |
-| 檢查時間 | 2026-11-02 00:21 |
+| 已掃描檔案 | 142 個 |
+| 檢查時間 | 2026-11-03 02:51 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/summary-fixture-test.mjs`
+> 證據：`scripts/cli-ux-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/input-limits-test.mjs、scripts/smoke-http.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`src/services/connection-status.ts、src/services/profile-store.ts、src/services/token-store.ts`
+> 證據：`scripts/test-profile-io.mjs、scripts/test-profile-storage.mjs、scripts/test-profile-timezone-symlinks.mjs、src/services/connection-status.ts、src/services/profile-file.ts`
 
 ### 🟡 中｜[權限] 會連往 17 個外部主機
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.32.0、better-sqlite3@^12.9.0、cors@^2.8.6、delx-mcp-kit@^0.1.0、express@^5.2.1、zod@^4.4.1…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.2、better-sqlite3@^12.9.0、cors@^2.8.6、delx-mcp-kit@^0.1.0、express@^5.2.1、zod@^4.6.6…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 9 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-23`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 78｜fork 14｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-10-23
+⭐ 79｜fork 14｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-02
 
 ---
 

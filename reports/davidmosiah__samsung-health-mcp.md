@@ -7,11 +7,11 @@
 | 稽核對象 | `davidmosiah/samsung-health-mcp` |
 | 專案說明 | Unofficial local-first MCP server for Samsung Health personal-data CSV/ZIP expor |
 | 星數 / Fork | ⭐ 16 / 5 |
-| 最後更新 | 2026-11-01 |
+| 最後更新 | 2026-11-02 |
 | 授權 | MIT License |
 | npm 套件 | `samsung-health-mcp-unofficial` |
-| 已掃描檔案 | 64 個 |
-| 檢查時間 | 2026-11-02 00:21 |
+| 已掃描檔案 | 86 個 |
+| 檢查時間 | 2026-11-03 02:51 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/smoke-http.mjs、scripts/test-skill-surface.mjs`
+> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/input-limits-test.mjs、scripts/smoke-http.mjs、scripts/test-http-local-only.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/freshness-test.mjs、src/services/connection-status.ts、src/services/incremental-cache.ts、src/services/profile-store.ts、src/services/samsung-health-export.ts`
+> 證據：`scripts/freshness-test.mjs、scripts/test-profile-storage.mjs、src/services/connection-status.ts、src/services/incremental-cache.ts、src/services/profile-file.ts`
 
 ### 🟡 中｜[權限] 會連往 8 個外部主機
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.31.0、cors@^2.8.6、express@^5.2.1、yauzl@^3.2.0、zod@^4.4.3、@types/cors@^2.8.19…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.2、cors@^2.8.6、express@^5.2.1、yauzl@^3.2.0、zod@^4.6.6、@types/cors@^2.8.19…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 16｜fork 5｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-01
+⭐ 16｜fork 5｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-02
 
 ---
 

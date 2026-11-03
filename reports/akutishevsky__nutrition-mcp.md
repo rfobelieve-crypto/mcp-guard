@@ -7,11 +7,11 @@
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
 | 星數 / Fork | ⭐ 83 / 31 |
-| 最後更新 | 2026-10-26 |
+| 最後更新 | 2026-11-02 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 279 個 |
-| 檢查時間 | 2026-11-02 00:21 |
+| 已掃描檔案 | 284 個 |
+| 檢查時間 | 2026-11-03 02:51 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`public/widgets/i18n-plural.test.ts、public/widgets/import-provenance.test.ts、public/widgets/import-redesign.test.ts、public/widgets/import-run.test.ts、public/widgets/import-saturated.test.ts`
+> 證據：`public/widgets/activity-widgets.test.ts、public/widgets/i18n-plural.test.ts、public/widgets/import-provenance.test.ts、public/widgets/import-redesign.test.ts、public/widgets/import-run.test.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、public/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 963 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1007 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-26`
+> 證據：`最後推送 2026-11-02`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 83｜fork 31｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-10-26
+⭐ 83｜fork 31｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-11-02
 
 ---
 
