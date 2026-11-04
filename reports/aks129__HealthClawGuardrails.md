@@ -7,11 +7,11 @@
 | 稽核對象 | `aks129/HealthClawGuardrails` |
 | 專案說明 | Open-source guardrails between AI agents and FHIR clinical data — PHI redaction, |
 | 星數 / Fork | ⭐ 31 / 12 |
-| 最後更新 | 2026-11-02 |
+| 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-11-03 02:51 |
+| 檢查時間 | 2026-11-04 01:09 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實際讀到的」順序不同，是 Trojan Source（CVE-2021-42574）的手法。除了處理雙向文字的函式庫，正常原始碼沒有理由出現它們。
 
-> 證據：`careagents/static/checkin_answer.js｜位置 9711｜U+202A`
+> 證據：`careagents/static/checkin_answer.js｜位置 9870｜U+202A`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -55,7 +55,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 > 證據：`.github/workflows/careagents-deploy.yml、.github/workflows/careagents-drift.yml、.github/workflows/pr-risk.yml、.github/workflows/prod-watch.yml、api/index.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（86 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（97 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,11 +83,11 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-11-02
+⭐ 31｜fork 12｜語言 Python｜建立 2025-03-31｜最後推送 2026-11-03
 
 ---
 

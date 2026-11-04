@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 44068 / 4139 |
-| 最後更新 | 2026-11-02 |
+| 星數 / Fork | ⭐ 44072 / 4143 |
+| 最後更新 | 2026-11-04 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-03 02:47 |
+| 檢查時間 | 2026-11-04 01:04 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 3　🔵 低 4　⚪ 資訊 7
+🟠 高 2　🟡 中 3　🔵 低 5　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -41,11 +41,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 111 個外部主機
+### 🟡 中｜[權限] 會連往 108 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`SUB.app.puter.localhost、a.test、an-app.puter.site、api-docs.deepseek.com、api.deepseek.com、api.hoonify.ai、api.meta.ai、api.prelude.dev、api.puter.com、api.puter.localhost…`
+> 證據：`SUB.app.puter.localhost、a.test、an-app.puter.site、api-docs.deepseek.com、api.deepseek.com、api.hoonify.ai、api.prelude.dev、api.puter.com、api.puter.localhost、api.puter.test…`
 
 ### 🔵 低｜[供應鏈] 有 35 個依賴未鎖定版本
 
@@ -71,6 +71,10 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`src/backend/clients/s3/S3Client.ts、src/backend/controllers/apps/AppController.test.ts、src/backend/core/http/middleware/rateLimit.test.js`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -95,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44068｜fork 4139｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-02
+⭐ 44072｜fork 4143｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-04
 
 ---
 

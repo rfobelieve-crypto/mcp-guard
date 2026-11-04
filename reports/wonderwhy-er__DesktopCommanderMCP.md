@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10201 / 1275 |
-| 最後更新 | 2026-11-02 |
+| 星數 / Fork | ⭐ 10205 / 1276 |
+| 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-03 02:46 |
+| 檢查時間 | 2026-11-04 01:03 |
 
 ## 風險摘要
 
@@ -41,11 +41,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 33 個外部主機
+### 🟡 中｜[權限] 會連往 43 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`assets.claude.ai、avatars.githubusercontent.com、calendar.app.google、claude.ai、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、discord.com、docs.docker.com、example.invalid…`
+> 證據：`assets.claude.ai、avatars.githubusercontent.com、calendar.app.google、claude.ai、custom-mcp.example.test、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、discord.com、docs.docker.com…`
 
 ### 🔵 低｜[供應鏈] 有 47 個依賴未鎖定版本
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（346 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（347 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,13 +93,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10201｜fork 1275｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-02
+⭐ 10205｜fork 1276｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-03
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `jtalk22/slack-mcp-server` |
 | 專案說明 | Put your agent inside your Slack. Zero bots, zero admin queues, no Business+ upg |
 | 星數 / Fork | ⭐ 32 / 25 |
-| 最後更新 | 2026-10-31 |
+| 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `@jtalk22/slack-mcp` |
-| 已掃描檔案 | 157 個 |
-| 檢查時間 | 2026-11-03 02:53 |
+| 已掃描檔案 | 167 個 |
+| 檢查時間 | 2026-11-04 01:10 |
 
 ## 風險摘要
 
@@ -19,23 +19,23 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 21 個外部主機
+### 🟡 中｜[權限] 會連往 24 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.cloudflare.com、app.slack.com、ci.example.invalid、code.claude.com、evil.example、feross.org、general-provision.slack.com、glama.ai、jtalk22.github.io、mcp.revasserlabs.com…`
+> 證據：`a.example.com、anything.example、api.cloudflare.com、app.example.com、app.slack.com、ci.example.invalid、code.claude.com、evil.example、feross.org、general-provision.slack.com…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/node@^2.0.0、@modelcontextprotocol/server@^2.0.0、express@^5.2.1、@modelcontextprotocol/client@^2.0.0、playwright@^1.62.1`
+> 證據：`@modelcontextprotocol/node@^2.1.2、@modelcontextprotocol/server@^2.4.0、express@^5.3.0、@modelcontextprotocol/client@^2.4.0、playwright@^1.64.1`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`lib/lifeboat.js、lib/message-provenance.js、lib/slack-client.js、lib/token-store.js、lib/tools.js`
+> 證據：`lib/lifeboat.js、lib/message-provenance.js、lib/skills.js、lib/slack-client.js、lib/token-store.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -49,13 +49,13 @@
 
 > 證據：`scripts/token-cli.js、test/review-5.1.test.js`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、.claude/REPO.md（AI 客戶端設定目錄下的指令檔）`
+> 證據：`.claude/CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、.claude/REPO.md（AI 客戶端設定目錄下的指令檔）、skills/slack-catch-up/SKILL.md（Agent Skill 指令（SKILL.md））、skills/slack-send-safely/SKILL.md（Agent Skill 指令（SKILL.md））、skills/slack-workflow-profiles/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 147 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 148 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-31`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 32｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-10-31
+⭐ 32｜fork 25｜語言 JavaScript｜建立 2026-01-03｜最後推送 2026-11-03
 
 ---
 

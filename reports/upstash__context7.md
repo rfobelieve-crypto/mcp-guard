@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 64102 / 3207 |
+| 星數 / Fork | ⭐ 64148 / 3204 |
 | 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 325 個 |
-| 檢查時間 | 2026-11-03 02:47 |
+| 已掃描檔案 | 319 個 |
+| 檢查時間 | 2026-11-04 01:04 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 3　⚪ 資訊 8
+🟠 高 1　🟡 中 1　🔵 低 4　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -25,7 +25,7 @@
 
 > 證據：`packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/upgrade.ts、packages/mcp/test/integration.test.ts`
 
-### 🟡 中｜[權限] 會連往 53 個外部主機
+### 🟡 中｜[權限] 會連往 54 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -48,6 +48,10 @@
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
 
@@ -87,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 64102｜fork 3207｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-03
+⭐ 64148｜fork 3204｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-03
 
 ---
 

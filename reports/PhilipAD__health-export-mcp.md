@@ -5,13 +5,13 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `PhilipAD/health-export-mcp` |
-| 專案說明 | Open-source Apple Health MCP server for the MetricBridge iOS app: query 194 Heal |
+| 專案說明 | Open-source Apple Health MCP server for the MetricBridge iOS app: 194 metrics, 2 |
 | 星數 / Fork | ⭐ 11 / 0 |
 | 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
 | npm 套件 | `health-export-mcp` |
-| 已掃描檔案 | 73 個 |
-| 檢查時間 | 2026-11-03 02:52 |
+| 已掃描檔案 | 74 個 |
+| 檢查時間 | 2026-11-04 01:09 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apply-mcp-config.test.mjs、cli.test.mjs、demo.test.mjs、entrypoint.test.mjs、envelope.test.mjs`
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 9 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`apps.apple.com、evil.example.com、glama.ai、insiders.vscode.dev、opencode.ai、registry.modelcontextprotocol.io、static.modelcontextprotocol.io、www.healthexport.dev`
+> 證據：`apps.apple.com、evil.example.com、glama.ai、insiders.vscode.dev、opencode.ai、registry.modelcontextprotocol.io、slsa.dev、static.modelcontextprotocol.io、www.healthexport.dev`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 

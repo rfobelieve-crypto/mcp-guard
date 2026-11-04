@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10233 / 918 |
+| 星數 / Fork | ⭐ 10272 / 921 |
 | 最後更新 | 2026-11-02 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 80 個 |
-| 檢查時間 | 2026-11-03 02:48 |
+| 檢查時間 | 2026-11-04 01:05 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10233｜fork 918｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-02
+⭐ 10272｜fork 921｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-02
 
 ---
 

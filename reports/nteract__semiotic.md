@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
-| 星數 / Fork | ⭐ 2717 / 144 |
+| 星數 / Fork | ⭐ 2717 / 143 |
 | 最後更新 | 2026-11-03 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-11-03 02:50 |
+| 檢查時間 | 2026-11-04 01:07 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts、docs/public/stories/reservoir-guide/offline/worker.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（211 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（209 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,7 +73,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2717｜fork 144｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-11-03
+⭐ 2717｜fork 143｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-11-03
 
 ---
 

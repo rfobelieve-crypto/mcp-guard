@@ -7,11 +7,11 @@
 | 稽核對象 | `timescale/pg-aiguide` |
 | 專案說明 | MCP server and Claude plugin for Postgres skills and documentation. Helps AI cod |
 | 星數 / Fork | ⭐ 1881 / 120 |
-| 最後更新 | 2026-10-28 |
+| 最後更新 | 2026-11-03 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@tigerdata/pg-aiguide` |
 | 已掃描檔案 | 100 個 |
-| 檢查時間 | 2026-11-03 02:50 |
+| 檢查時間 | 2026-11-04 01:07 |
 
 ## 風險摘要
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1881｜fork 120｜語言 Python｜建立 2025-07-23｜最後推送 2026-10-28
+⭐ 1881｜fork 120｜語言 Python｜建立 2025-07-23｜最後推送 2026-11-03
 
 ---
 

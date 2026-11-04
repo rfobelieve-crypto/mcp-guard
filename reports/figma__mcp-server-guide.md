@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `figma/mcp-server-guide` |
 | 專案說明 | A guide on how to use the Figma MCP server |
-| 星數 / Fork | ⭐ 2145 / 212 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 2147 / 212 |
+| 最後更新 | 2026-11-03 |
 | 授權 | 無 |
-| 已掃描檔案 | 225 個 |
-| 檢查時間 | 2026-11-03 02:50 |
+| 已掃描檔案 | 231 個 |
+| 檢查時間 | 2026-11-04 01:07 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -40,11 +40,11 @@
 
 沒有 LICENSE 檔，法律上你其實沒有被授權使用或散布。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 32 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 34 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`skills-figquery/figma-code-connect/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-create-new-file/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-design-to-code/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-generate-design/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-generate-diagram/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-generate-library/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`skills-figquery/figma-code-connect/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-code-workflows/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-create-new-file/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-design-to-code/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-generate-design/SKILL.md（Agent Skill 指令（SKILL.md））、skills-figquery/figma-generate-diagram/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 5 段 description）
 
@@ -60,11 +60,11 @@
 
 > 證據：`TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2145｜fork 212｜語言 Python｜建立 2025-08-05｜最後推送 2026-10-28
+⭐ 2147｜fork 212｜語言 Python｜建立 2025-08-05｜最後推送 2026-11-03
 
 ---
 

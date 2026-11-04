@@ -1,22 +1,46 @@
 # MCP 安檢報告：stripe/ai
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　發現 4 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 2032 / 383 |
-| 最後更新 | 2026-11-03 |
+| 星數 / Fork | ⭐ 2035 / 384 |
+| 最後更新 | 2026-11-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 475 個 |
-| 檢查時間 | 2026-11-03 02:50 |
+| 檢查時間 | 2026-11-04 01:07 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟠 高 4　🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「…M". allowed-tools: - Bash(stripe *) - Bash(which stripe) - Bash(curl -fsSL https://cli.stripe.com/install.sh | sh) - Bash(npx skills add https://docs.stripe.com *) - Skill - Rea…」（另 5 個檔案有相同內容）`
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「```sh curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 5 個檔案有相同內容）`
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`providers/agent-plugins/plugin/skills/stripe-projects/SKILL.md｜「…ce. allowed-tools: - Bash(stripe *) - Bash(which stripe) - Bash(curl -fsSL https://cli.stripe.com/install.sh | sh) - Skill - Read」（另 5 個檔案有相同內容）`
+
+### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
+
+叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
+
+> 證據：`providers/agent-plugins/plugin/skills/stripe-projects/SKILL.md｜「```bash curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 5 個檔案有相同內容）`
 
 ### 🟡 中｜[權限] 會連往 26 個外部主機
 
@@ -36,7 +60,7 @@
 
 > 證據：`benchmarks/furever/environment/app/(dashboard)/settings/layout.tsx、benchmarks/furever/environment/scripts/setup-accounts.py、benchmarks/furever/grader/payments.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（110 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（112 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -68,11 +92,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-03`
+> 證據：`最後推送 2026-11-04`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2032｜fork 383｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-03
+⭐ 2035｜fork 384｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-04
 
 ---
 

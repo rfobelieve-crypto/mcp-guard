@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `github/github-mcp-server` |
 | 專案說明 | GitHub's official MCP Server |
-| 星數 / Fork | ⭐ 34173 / 5278 |
-| 最後更新 | 2026-11-02 |
+| 星數 / Fork | ⭐ 34203 / 5280 |
+| 最後更新 | 2026-11-03 |
 | 授權 | MIT License |
-| 已掃描檔案 | 396 個 |
-| 檢查時間 | 2026-11-03 02:46 |
+| 已掃描檔案 | 397 個 |
+| 檢查時間 | 2026-11-04 01:03 |
 
 ## 風險摘要
 
@@ -18,11 +18,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 59 個外部主機
+### 🟡 中｜[權限] 會連往 60 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`GITHUB.EXAMPLE.COM、agent-plugins.org、anywhere.example.com、api.example.com、api.example.ghe.com、api.example.test、api.ghe.com、api.github.com.attacker.example、api.github.enterprise.com、api.github.test…`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/issue-triage.lock.yml、.github/workflows/pr-triage.lock.yml、ui/scripts/build.mjs、ui/vite.config.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -30,13 +36,7 @@
 
 > 證據：`pkg/github/issues_test.go、pkg/sanitize/sanitize_test.go、ui/src/hooks/useMcpApp.ts`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`ui/scripts/build.mjs、ui/vite.config.ts`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（398 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（403 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -58,13 +58,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-03`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 34173｜fork 5278｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-02
+⭐ 34203｜fork 5280｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-03
 
 ---
 
