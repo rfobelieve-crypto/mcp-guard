@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `hashicorp/terraform-mcp-server` |
 | 專案說明 | The Terraform MCP Server provides seamless integration with Terraform ecosystem, |
-| 星數 / Fork | ⭐ 1556 / 201 |
-| 最後更新 | 2026-11-03 |
+| 星數 / Fork | ⭐ 1556 / 202 |
+| 最後更新 | 2026-11-05 |
 | 授權 | Mozilla Public License 2.0 |
-| 已掃描檔案 | 382 個 |
-| 檢查時間 | 2026-11-04 01:08 |
+| 已掃描檔案 | 400 個 |
+| 檢查時間 | 2026-11-05 01:23 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 19 個外部主機
+### 🟡 中｜[權限] 會連往 27 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`allowed.com、any-site.com、app.terraform.io、archivist.example.com、attacker.example.com、custom.terraform.io、discuss.hashicorp.com、docs.github.com、env.terraform.io、evil.com…`
+> 證據：`a.com、allowed.com、any-site.com、api.internal.example、app.staging.terraform.io、app.terraform.io、app.terraform.io.evil.example、archivist.example、archivist.example.com、attacker.example.com…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -34,7 +34,7 @@
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 243 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 258 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -52,7 +52,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-03`
+> 證據：`最後推送 2026-11-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1556｜fork 201｜語言 Go｜建立 2025-04-19｜最後推送 2026-11-03
+⭐ 1556｜fork 202｜語言 Go｜建立 2025-04-19｜最後推送 2026-11-05
 
 ---
 

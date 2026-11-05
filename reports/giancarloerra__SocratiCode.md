@@ -10,8 +10,8 @@
 | 最後更新 | 2026-11-04 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `socraticode` |
-| 已掃描檔案 | 282 個 |
-| 檢查時間 | 2026-11-04 01:06 |
+| 已掃描檔案 | 285 個 |
+| 檢查時間 | 2026-11-05 01:22 |
 
 ## 風險摘要
 
@@ -19,29 +19,29 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 55 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai.google.dev、altaire.com、bevry.me、biomejs.dev、bugs.chromium.org、bugs.webkit.org、cdn.example.com、cloud-qdrant.example、docker.com、docs.godotengine.org…`
+> 證據：`127.0.0.1.example、ai.google.dev、altaire.com、alternate.example、bevry.me、biomejs.dev、bugs.chromium.org、bugs.webkit.org、cdn.example.com、cloud-qdrant.example…`
 
-### 🔵 低｜[供應鏈] 有 44 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 43 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@ast-grep/lang-bash@^0.0.7、@ast-grep/lang-c@^0.0.5、@ast-grep/lang-cpp@^0.0.5、@ast-grep/lang-csharp@^0.0.5、@ast-grep/lang-dart@^0.0.7、@ast-grep/lang-elixir@^0.0.7…`
+> 證據：`@ast-grep/lang-bash@^0.0.8、@ast-grep/lang-c@^0.0.6、@ast-grep/lang-cpp@^0.0.6、@ast-grep/lang-csharp@^0.0.6、@ast-grep/lang-dart@^0.0.7、@ast-grep/lang-elixir@^0.0.7…`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/ci.yml、src/config.ts、src/services/code-graph.ts、src/services/docker.ts、src/services/git-state.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`extension/src/graphPanel.ts、scripts/verify-packaged-qdrant.mjs、src/config.ts、src/services/code-graph.ts、src/services/extensionless.ts`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`src/config.ts、src/services/code-graph.ts、src/services/docker.ts、src/services/git-state.ts、src/services/local-index-ownership.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 

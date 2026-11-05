@@ -11,11 +11,11 @@
 | 授權 | Apache License 2.0 |
 | npm 套件 | `git-mcp` |
 | 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-11-04 01:03 |
+| 檢查時間 | 2026-11-05 01:18 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 7　⚪ 資訊 5
+🟡 中 3　🔵 低 7　⚪ 資訊 4
 
 ## 詳細發現
 
@@ -30,6 +30,12 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`augmentcode.com、autorag-cache.gitmcp.internal、biomejs.dev、cdn.prod.website-files.com、cdn.tailwindcss.com、chat-api-worker.idosalomon.workers.dev、claude.ai、cline.bot、cline.tools、code.visualstudio.com…`
+
+### 🟡 中｜[維護] 約 6 個月沒有更新
+
+更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
+
+> 證據：`最後推送 2026-05-08`
 
 ### 🔵 低｜[供應鏈] 有 66 個依賴未鎖定版本
 
@@ -82,12 +88,6 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
-
-### ⚪ 資訊｜[維護] 最近 179 天內有更新
-
-專案仍在活躍維護中。
-
-> 證據：`最後推送 2026-05-08`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 5413 / 263 |
+| 星數 / Fork | ⭐ 5430 / 263 |
 | 最後更新 | 2026-11-04 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-11-04 01:05 |
+| 檢查時間 | 2026-11-05 01:21 |
 
 ## 風險摘要
 
@@ -52,11 +52,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`YOUR-DOMAIN.com、astral.sh、astro.build、block.github.io、certbot.eff.org、chatgpt.com、claude.ai、claude.com、code.claude.com、coderabbit.ai…`
 
-### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 14 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`authlib>=1.6.11、cyclopts>=4.0.0、exceptiongroup>=1.2.2、griffelib>=2.0.0、httpx2>=2.10.0、joserfc>=1.5.0…`
+> 證據：`authlib>=1.6.11、certifi>=2026.10.19、cyclopts>=4.0.0、exceptiongroup>=1.2.2、griffelib>=2.0.0、httpx2>=2.10.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5413｜fork 263｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-04
+⭐ 5430｜fork 263｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-04
 
 ---
 

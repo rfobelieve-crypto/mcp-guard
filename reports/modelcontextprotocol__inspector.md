@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Deterministic testing tools for MCP servers |
-| 星數 / Fork | ⭐ 11221 / 1553 |
-| 最後更新 | 2026-10-29 |
+| 星數 / Fork | ⭐ 11231 / 1555 |
+| 最後更新 | 2026-11-04 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-11-04 01:02 |
+| 檢查時間 | 2026-11-05 01:18 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 52 個外部主機
+### 🟡 中｜[權限] 會連往 53 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -53,7 +53,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/completion.test.ts、clients/cli/__tests__/e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/mcpdo/__tests__/daemon-coverage.test.ts、clients/mcpdo/scripts/stop-dev-daemon.mjs`
+> 證據：`clients/cli/__tests__/completion.test.ts、clients/cli/__tests__/e2e.test.ts、clients/cli/__tests__/load-interrupt-e2e.test.ts、clients/launcher/scripts/make-executable.js、clients/mcpdo/__tests__/daemon-coverage.test.ts`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -79,15 +79,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-29`
+> 證據：`最後推送 2026-11-04`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11221｜fork 1553｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-10-29
+⭐ 11231｜fork 1555｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-11-04
 
 ---
 

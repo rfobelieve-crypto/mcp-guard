@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `microsoft/playwright-mcp` |
 | 專案說明 | Playwright MCP server |
-| 星數 / Fork | ⭐ 39138 / 3379 |
-| 最後更新 | 2026-11-03 |
+| 星數 / Fork | ⭐ 39186 / 3382 |
+| 最後更新 | 2026-11-04 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@playwright/mcp` |
-| 已掃描檔案 | 37 個 |
-| 檢查時間 | 2026-11-04 01:03 |
+| 已掃描檔案 | 36 個 |
+| 檢查時間 | 2026-11-05 01:18 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 7 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`aka.ms、api.esrp.microsoft.com、devdiv.pkgs.visualstudio.com、opencollective.com、playwright.dev、portal.microsofticm.com、static.modelcontextprotocol.io、www.apache.org`
+> 證據：`aka.ms、devdiv.pkgs.visualstudio.com、opencollective.com、playwright.dev、portal.microsofticm.com、static.modelcontextprotocol.io、www.apache.org`
 
 ### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-03`
+> 證據：`最後推送 2026-11-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39138｜fork 3379｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-03
+⭐ 39186｜fork 3382｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-04
 
 ---
 

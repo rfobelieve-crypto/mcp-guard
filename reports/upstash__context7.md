@@ -1,29 +1,39 @@
 # MCP 安檢報告：upstash/context7
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 64148 / 3204 |
-| 最後更新 | 2026-11-03 |
+| 星數 / Fork | ⭐ 64203 / 3208 |
+| 最後更新 | 2026-11-04 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 319 個 |
-| 檢查時間 | 2026-11-04 01:04 |
+| 已掃描檔案 | 320 個 |
+| 檢查時間 | 2026-11-05 01:19 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 1　🔵 低 4　⚪ 資訊 8
+🟠 高 2　🟡 中 2　🔵 低 4　⚪ 資訊 8
 
 ## 詳細發現
+
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`packages/admin-mcp/src/confirm.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「檔案系統存取」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`packages/cli/src/__tests__/upgrade-command.test.ts、packages/cli/src/commands/upgrade.ts、packages/mcp/test/integration.test.ts`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
 ### 🟡 中｜[權限] 會連往 54 個外部主機
 
@@ -49,7 +59,7 @@
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +73,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 83 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 84 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,7 +91,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-03`
+> 證據：`最後推送 2026-11-04`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +101,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 64148｜fork 3204｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-03
+⭐ 64203｜fork 3208｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-04
 
 ---
 

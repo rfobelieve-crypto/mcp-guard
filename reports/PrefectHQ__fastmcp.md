@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28293 / 2560 |
-| 最後更新 | 2026-11-04 |
+| 星數 / Fork | ⭐ 28310 / 2559 |
+| 最後更新 | 2026-11-05 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-11-04 01:04 |
+| 檢查時間 | 2026-11-05 01:19 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 45 個外部主機
+### 🟡 中｜[權限] 會連往 44 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -34,7 +34,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/agentic/flows/agentic_github.py、.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/flows/agentic_verification_process.py`
+> 證據：`.github/agentic/flows/agentic_github.py、.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/flows/agentic_verification_inputs.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/tests/test_agentic_claims.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（454 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（448 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-04`
+> 證據：`最後推送 2026-11-05`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28293｜fork 2560｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-04
+⭐ 28310｜fork 2559｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-05
 
 ---
 
