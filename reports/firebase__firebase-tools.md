@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firebase/firebase-tools` |
 | 專案說明 | The Firebase Command Line Tools |
-| 星數 / Fork | ⭐ 4487 / 1279 |
-| 最後更新 | 2026-11-05 |
+| 星數 / Fork | ⭐ 4487 / 1281 |
+| 最後更新 | 2026-11-06 |
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-05 01:21 |
+| 檢查時間 | 2026-11-06 01:24 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run sanitize:lockfile && npm run clean && npm run build:publish"`
 
-### 🟡 中｜[權限] 會連往 45 個外部主機
+### 🟡 中｜[權限] 會連往 92 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`angular.io、artifactregistry.googleapis.com、cloud.google.com、code-server.dev、code.visualstudio.com、console.cloud.google.com、console.firebase.google.com、custom-mirror.internal、docs.github.com、eslint.org…`
+> 證據：`accounts.google.com、aiplatform.googleapis.com、angular.io、apikeys.googleapis.com、artifactregistry.googleapis.com、auth.firebase.tools、cloud.google.com、cloudbilling.googleapis.com、cloudbuild.googleapis.com、cloudfunctions.googleapis.com…`
 
 ### 🔵 低｜[供應鏈] 有 139 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/emulator-tests/functionsEmulatorRuntime.spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1094 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1084 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-05`
+> 證據：`最後推送 2026-11-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4487｜fork 1279｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-11-05
+⭐ 4487｜fork 1281｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-11-06
 
 ---
 

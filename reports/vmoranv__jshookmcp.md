@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2098 / 464 |
-| 最後更新 | 2026-11-04 |
+| 星數 / Fork | ⭐ 2102 / 464 |
+| 最後更新 | 2026-11-05 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-05 01:23 |
+| 檢查時間 | 2026-11-06 01:26 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 16 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`afdian.com、codeload.github.com、developer.android.com、docs.codacy.com、docs.npmjs.com、docs.renovatebot.com、eldstal.se、example.invalid、fonts.googleapis.com、fonts.gstatic.com…`
+> 證據：`afdian.com、codeload.github.com、developer.android.com、docs.codacy.com、docs.npmjs.com、docs.renovatebot.com、example.invalid、fonts.googleapis.com、fonts.gstatic.com、glama.ai…`
 
 ### 🔵 低｜[供應鏈] 有 41 個依賴未鎖定版本
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-04`
+> 證據：`最後推送 2026-11-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2098｜fork 464｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-04
+⭐ 2102｜fork 464｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-05
 
 ---
 

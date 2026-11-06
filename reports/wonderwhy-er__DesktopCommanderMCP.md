@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10218 / 1277 |
+| 星數 / Fork | ⭐ 10232 / 1277 |
 | 最後更新 | 2026-11-05 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-05 01:18 |
+| 檢查時間 | 2026-11-06 01:22 |
 
 ## 風險摘要
 
@@ -45,9 +45,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`assets.claude.ai、avatars.githubusercontent.com、calendar.app.google、claude.ai、custom-mcp.example.test、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、discord.com、docs.docker.com…`
+> 證據：`api.openai.com、assets.claude.ai、avatars.githubusercontent.com、calendar.app.google、claude.ai、custom-mcp.example.test、dc-telemetry-proxy-83847352264.europe-west1.run.app、desktopcommander.app、diagnostics.ds-c09.workers.dev、discord.com…`
 
-### 🔵 低｜[供應鏈] 有 47 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 48 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（347 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（343 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10218｜fork 1277｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-05
+⭐ 10232｜fork 1277｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-05
 
 ---
 

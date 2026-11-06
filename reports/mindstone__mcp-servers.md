@@ -7,10 +7,10 @@
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
 | 星數 / Fork | ⭐ 14 / 4 |
-| 最後更新 | 2026-11-04 |
+| 最後更新 | 2026-11-06 |
 | 授權 | Other |
-| 已掃描檔案 | 436 個 |
-| 檢查時間 | 2026-11-05 01:25 |
+| 已掃描檔案 | 437 個 |
+| 檢查時間 | 2026-11-06 01:27 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`connectors/_template/src/bridge.ts、connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/path-safety.ts、connectors/browser-automation/test/eval-gate-and-schemes.test.ts`
+> 證據：`connectors/_template/src/bridge.ts、connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/path-safety.ts、connectors/browser-automation/test/central-file-reads.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -78,11 +78,11 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-04`
+> 證據：`最後推送 2026-11-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-04
+⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-06
 
 ---
 

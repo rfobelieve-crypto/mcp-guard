@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/google-health-mcp` |
 | 專案說明 | Local-first MCP server for Google Health API v4 (Fitbit + Pixel Watch) — Claude/ |
-| 星數 / Fork | ⭐ 79 / 14 |
-| 最後更新 | 2026-11-02 |
+| 星數 / Fork | ⭐ 80 / 14 |
+| 最後更新 | 2026-11-05 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-mcp-unofficial` |
-| 已掃描檔案 | 142 個 |
-| 檢查時間 | 2026-11-05 01:24 |
+| 已掃描檔案 | 146 個 |
+| 檢查時間 | 2026-11-06 01:27 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`scripts/test-profile-io.mjs、scripts/test-profile-storage.mjs、scripts/test-profile-timezone-symlinks.mjs、src/services/connection-status.ts、src/services/profile-file.ts`
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、api.example、console.cloud.google.com、developers.fitbit.com、developers.google.com、example.invalid、feross.org、glama.ai、health.googleapis.com、oauth2.googleapis.com…`
+> 證據：`accounts.google.com、agent-plugins.org、api.example、console.cloud.google.com、developers.fitbit.com、developers.google.com、example.invalid、feross.org、glama.ai、health.googleapis.com…`
 
 ### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
 
@@ -49,11 +49,11 @@
 
 > 證據：`scripts/cli-ux-test.mjs、scripts/endpoint-contract-test.mjs、scripts/headless-auth-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/http-cache-test.mjs`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 5 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、docs/llms.txt（給模型讀的站點說明（llms.txt））、llms.txt（給模型讀的站點說明（llms.txt））、skill/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、agent-plugin/skills/google-health-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、docs/llms.txt（給模型讀的站點說明（llms.txt））、llms.txt（給模型讀的站點說明（llms.txt））、skill/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 79｜fork 14｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-02
+⭐ 80｜fork 14｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-05
 
 ---
 

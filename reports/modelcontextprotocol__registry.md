@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7436 / 1042 |
+| 星數 / Fork | ⭐ 7445 / 1042 |
 | 最後更新 | 2026-11-05 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-05 01:18 |
+| 檢查時間 | 2026-11-06 01:22 |
 
 ## 風險摘要
 
@@ -28,21 +28,21 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/check_production_scaling.py、deploy/scripts/production_apply.py、deploy/scripts/staging_idle_apply.py、deploy/scripts/staging_small_apply.py`
+> 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/check_production_scaling.py、deploy/scripts/production_apply.py、deploy/scripts/security_patch_apply.py、deploy/scripts/staging_idle_apply.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/production_apply.py、deploy/scripts/public_read_apply.py、deploy/scripts/staging_idle_apply.py、deploy/scripts/staging_small_apply.py`
+> 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/production_apply.py、deploy/scripts/public_read_apply.py、deploy/scripts/security_patch_apply.py、deploy/scripts/staging_idle_apply.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/scripts/production_apply.py、tools/admin/configure-backup-alerts.py、tools/ingressbench/collect_profile_logs.py、tools/readbench/cache.py、tools/readbench/compare.py`
+> 證據：`deploy/scripts/production_apply.py、deploy/scripts/security_patch_apply.py、tools/admin/configure-backup-alerts.py、tools/ingressbench/collect_profile_logs.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（116 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（117 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7436｜fork 1042｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-05
+⭐ 7445｜fork 1042｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-05
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `davidmosiah/samsung-health-mcp` |
 | 專案說明 | Unofficial local-first MCP server for Samsung Health personal-data CSV/ZIP expor |
-| 星數 / Fork | ⭐ 17 / 5 |
-| 最後更新 | 2026-11-04 |
+| 星數 / Fork | ⭐ 18 / 5 |
+| 最後更新 | 2026-11-05 |
 | 授權 | MIT License |
 | npm 套件 | `samsung-health-mcp-unofficial` |
-| 已掃描檔案 | 86 個 |
-| 檢查時間 | 2026-11-05 01:24 |
+| 已掃描檔案 | 91 個 |
+| 檢查時間 | 2026-11-06 01:27 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/input-limits-test.mjs、scripts/smoke-http.mjs、scripts/test-http-local-only.mjs`
+> 證據：`scripts/cli-ux-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/incremental-cache-test.mjs、scripts/input-limits-test.mjs、scripts/smoke-http.mjs`
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
@@ -31,11 +31,11 @@
 
 > 證據：`scripts/freshness-test.mjs、scripts/test-profile-storage.mjs、src/services/connection-status.ts、src/services/incremental-cache.ts、src/services/profile-file.ts`
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 9 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`developer.samsung.com、glama.ai、opencollective.com、smithery.ai、static.modelcontextprotocol.io、support.google.com、wellness.delx.ai、www.samsung.com`
+> 證據：`agent-plugins.org、developer.samsung.com、glama.ai、opencollective.com、smithery.ai、static.modelcontextprotocol.io、support.google.com、wellness.delx.ai、www.samsung.com`
 
 ### 🔵 低｜[供應鏈] 有 11 個依賴未鎖定版本
 
@@ -49,11 +49,11 @@
 
 > 證據：`scripts/agent-readiness-test.mjs、scripts/cli-ux-test.mjs、scripts/export-parser-test.mjs、scripts/hermes-agent-manifest-test.mjs、scripts/incremental-cache-test.mjs`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 4 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、llms.txt（給模型讀的站點說明（llms.txt））、skill/SKILL.md（Agent Skill 指令（SKILL.md））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、agent-plugin/skills/samsung-health-mcp/SKILL.md（Agent Skill 指令（SKILL.md））、llms.txt（給模型讀的站點說明（llms.txt））、skill/SKILL.md（Agent Skill 指令（SKILL.md））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 25 段 description）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-04`
+> 證據：`最後推送 2026-11-05`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 17｜fork 5｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-04
+⭐ 18｜fork 5｜語言 TypeScript｜建立 2026-05-07｜最後推送 2026-11-05
 
 ---
 
