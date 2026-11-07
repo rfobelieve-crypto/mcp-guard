@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | Official Firecrawl MCP server, the context API for AI agents: search, scrape, an |
-| 星數 / Fork | ⭐ 7765 / 929 |
-| 最後更新 | 2026-11-06 |
+| 星數 / Fork | ⭐ 7769 / 928 |
+| 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
-| 已掃描檔案 | 114 個 |
-| 檢查時間 | 2026-11-06 01:22 |
+| 已掃描檔案 | 118 個 |
+| 檢查時間 | 2026-11-07 00:38 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run build"`
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟡 中｜[權限] 會連往 46 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`acme.github.io、antigravity.example、api.example.build、api.firecrawl.dev、app.example.com、app.localhost、benzinga.example、claude.ai、client.example、docs.example.com…`
+> 證據：`acme.example、acme.github.io、antigravity.example、api.example.build、api.firecrawl.dev、app.example.com、app.localhost、benzinga.example、claude.ai、client.example…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/surface-common.mjs、src/index.ts、src/mcp/runtime.ts、src/service/auth.ts、src/service/profiles.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（187 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（188 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7765｜fork 929｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-11-06
+⭐ 7769｜fork 928｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-11-07
 
 ---
 

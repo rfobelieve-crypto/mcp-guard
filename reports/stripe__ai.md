@@ -7,14 +7,14 @@
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
 | 星數 / Fork | ⭐ 2045 / 384 |
-| 最後更新 | 2026-11-06 |
+| 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
-| 已掃描檔案 | 475 個 |
-| 檢查時間 | 2026-11-06 01:26 |
+| 已掃描檔案 | 463 個 |
+| 檢查時間 | 2026-11-07 00:41 |
 
 ## 風險摘要
 
-🟠 高 4　🟡 中 1　🔵 低 4　⚪ 資訊 6
+🟠 高 4　🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -60,10 +60,6 @@
 
 > 證據：`benchmarks/furever/environment/app/(dashboard)/settings/layout.tsx、benchmarks/furever/environment/scripts/setup-accounts.py、benchmarks/furever/grader/payments.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（111 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -74,7 +70,7 @@
 
 > 證據：`providers/agent-plugins/plugin/skills/connect-recommend/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/connect-required-verification-information/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/metronome/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-apps/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 63 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -92,11 +88,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-07`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2045｜fork 384｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-06
+⭐ 2045｜fork 384｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-07
 
 ---
 

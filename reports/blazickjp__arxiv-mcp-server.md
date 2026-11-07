@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `blazickjp/arxiv-mcp-server` |
 | 專案說明 | A local MCP server for agent literature work. Original-LaTeX section reads, BibT |
-| 星數 / Fork | ⭐ 3258 / 260 |
+| 星數 / Fork | ⭐ 3258 / 262 |
 | 最後更新 | 2026-10-08 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 109 個 |
-| 檢查時間 | 2026-11-06 01:25 |
+| 檢查時間 | 2026-11-07 00:41 |
 
 ## 風險摘要
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3258｜fork 260｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-08
+⭐ 3258｜fork 262｜語言 Python｜建立 2024-11-29｜最後推送 2026-10-08
 
 ---
 

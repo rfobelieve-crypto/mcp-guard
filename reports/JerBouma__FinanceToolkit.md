@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5500 / 645 |
+| 星數 / Fork | ⭐ 5505 / 645 |
 | 最後更新 | 2026-11-06 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-06 01:24 |
+| 檢查時間 | 2026-11-07 00:40 |
 
 ## 風險摘要
 
@@ -18,19 +18,19 @@
 
 ## 詳細發現
 
-### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`.github/workflows/live_sources.yml、.github/workflows/mcp_registry.yml、.github/workflows/unit_tests.yml、docker-compose.yml、financetoolkit/mcp_server/auth_model.py`
-
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`financetoolkit/mcp_server/mcp_controller.py`
+> 證據：`.github/scripts/release.py、financetoolkit/mcp_server/mcp_controller.py`
 
-### 🟡 中｜[權限] 會連往 88 個外部主機
+### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/scripts/release.py、.github/workflows/live_sources.yml、.github/workflows/mcp_registry.yml、.github/workflows/unit_tests.yml、docker-compose.yml`
+
+### 🟡 中｜[權限] 會連往 92 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -46,13 +46,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/helpers.py`
+> 證據：`.github/scripts/release.py、financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 34 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 36 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5500｜fork 645｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-06
+⭐ 5505｜fork 645｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-06
 
 ---
 

@@ -10,7 +10,7 @@
 | 最後更新 | 2026-11-06 |
 | 授權 | Other |
 | 已掃描檔案 | 437 個 |
-| 檢查時間 | 2026-11-06 01:27 |
+| 檢查時間 | 2026-11-07 00:43 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`connectors/browserbase/src/tools/agent-runs.ts｜「Start an agent run: an AI agent drives a cloud browser to accomplish a natural-language task (extract data, fill forms, 」`
 
-### 🟡 中｜[權限] 會連往 33 個外部主機
+### 🟡 中｜[權限] 會連往 31 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.browserbase.com、api.elevenlabs.io、api.example.com、api.fathom.ai、api.machines.dev、cdn.browserbase.com、compute.googleapis.com、console.cloud.google.com、docs.github.com、e2b.dev…`
+> 證據：`api.browserbase.com、api.elevenlabs.io、api.example.com、api.fathom.ai、api.machines.dev、cdn.browserbase.com、compute.googleapis.com、console.cloud.google.com、e2b.dev、elevenlabs.io…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 

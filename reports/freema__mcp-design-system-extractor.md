@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `freema/mcp-design-system-extractor` |
 | 專案說明 | MCP (Model Context Protocol) server that enables AI assistants to interact with  |
-| 星數 / Fork | ⭐ 72 / 14 |
-| 最後更新 | 2026-10-25 |
+| 星數 / Fork | ⭐ 73 / 14 |
+| 最後更新 | 2026-11-06 |
 | 授權 | MIT License |
 | npm 套件 | `mcp-design-system-extractor` |
-| 已掃描檔案 | 70 個 |
-| 檢查時間 | 2026-11-06 01:28 |
+| 已掃描檔案 | 71 個 |
+| 檢查時間 | 2026-11-07 00:43 |
 
 ## 風險摘要
 
@@ -39,7 +39,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.29.0、node-html-parser@^9.0.0、puppeteer@^25.3.0、zod@^4.4.3、@eslint/js@^10.0.1、@types/node@^26.1.1…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.2、node-html-parser@^9.0.6、puppeteer@^25.16.0、zod@^4.6.7、@eslint/js@^10.0.1、@types/node@^26.6.6…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 12 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-25`
+> 證據：`最後推送 2026-11-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 72｜fork 14｜語言 TypeScript｜建立 2025-06-04｜最後推送 2026-10-25
+⭐ 73｜fork 14｜語言 TypeScript｜建立 2025-06-04｜最後推送 2026-11-06
 
 ---
 

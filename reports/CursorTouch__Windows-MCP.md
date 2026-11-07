@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `CursorTouch/Windows-MCP` |
 | 專案說明 | MCP Server for Computer Use in Windows |
-| 星數 / Fork | ⭐ 11144 / 1204 |
-| 最後更新 | 2026-11-05 |
+| 星數 / Fork | ⭐ 11189 / 1210 |
+| 最後更新 | 2026-11-06 |
 | 授權 | MIT License |
-| 已掃描檔案 | 203 個 |
-| 檢查時間 | 2026-11-06 01:22 |
+| 已掃描檔案 | 210 個 |
+| 檢查時間 | 2026-11-07 00:38 |
 
 ## 風險摘要
 
@@ -46,13 +46,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py、tests/test_app_tool.py`
+> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control_consent.py、src/windows_mcp/powershell/service.py、src/windows_mcp/powershell/utils.py、src/windows_mcp/tools/app.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control.py、src/windows_mcp/desktop/control_hooks.py、src/windows_mcp/desktop/control_win32.py、src/windows_mcp/desktop/control_worker.py`
+> 證據：`src/windows_mcp/__main__.py、src/windows_mcp/desktop/control.py、src/windows_mcp/desktop/control_consent.py、src/windows_mcp/desktop/control_hooks.py、src/windows_mcp/desktop/control_win32.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -80,7 +80,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-05`
+> 證據：`最後推送 2026-11-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11144｜fork 1204｜語言 Python｜建立 2025-05-13｜最後推送 2026-11-05
+⭐ 11189｜fork 1210｜語言 Python｜建立 2025-05-13｜最後推送 2026-11-06
 
 ---
 

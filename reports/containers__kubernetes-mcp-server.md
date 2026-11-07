@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2225 / 483 |
+| 星數 / Fork | ⭐ 2229 / 486 |
 | 最後更新 | 2026-11-06 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-06 01:26 |
+| 檢查時間 | 2026-11-07 00:41 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 1　⚪ 資訊 7
+🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -24,7 +24,19 @@
 
 > 證據：`docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、kubernetes.default.svc、kubernetes.io、kubevirt.io、login.microsoftonline.com…`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（124 則）
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「雲端服務串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/mcpchecker-report.yaml`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「雲端服務串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/mcpchecker-report.yaml`
+
+### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -62,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2225｜fork 483｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-06
+⭐ 2229｜fork 486｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-06
 
 ---
 

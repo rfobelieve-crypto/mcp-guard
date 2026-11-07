@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `timescale/pg-aiguide` |
 | 專案說明 | MCP server and Claude plugin for Postgres skills and documentation. Helps AI cod |
-| 星數 / Fork | ⭐ 1882 / 121 |
-| 最後更新 | 2026-11-03 |
+| 星數 / Fork | ⭐ 1884 / 120 |
+| 最後更新 | 2026-11-06 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@tigerdata/pg-aiguide` |
-| 已掃描檔案 | 100 個 |
-| 檢查時間 | 2026-11-06 01:26 |
+| 已掃描檔案 | 101 個 |
+| 檢查時間 | 2026-11-07 00:41 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 13 個外部主機
+### 🟡 中｜[權限] 會連往 14 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agentskills.io、biomejs.dev、docs.npmjs.com、ghcr.io、hub.docker.com、mcp.tigerdata.com、openrouter.ai、postgis.net、registry.modelcontextprotocol.io、static.modelcontextprotocol.io…`
+> 證據：`agentskills.io、biomejs.dev、docs.npmjs.com、docs.renovatebot.com、ghcr.io、hub.docker.com、mcp.tigerdata.com、openrouter.ai、postgis.net、registry.modelcontextprotocol.io…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-03`
+> 證據：`最後推送 2026-11-06`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1882｜fork 121｜語言 Python｜建立 2025-07-23｜最後推送 2026-11-03
+⭐ 1884｜fork 120｜語言 Python｜建立 2025-07-23｜最後推送 2026-11-06
 
 ---
 
