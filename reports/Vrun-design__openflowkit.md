@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Vrun-design/openflowkit` |
 | 專案說明 | Free, open-source diagram canvas. Draw it, write it as code (Mermaid, D2, Struct |
-| 星數 / Fork | ⭐ 939 / 181 |
-| 最後更新 | 2026-11-02 |
+| 星數 / Fork | ⭐ 946 / 181 |
+| 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | npm 套件 | `openflowkit-app`（registry 查無） |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-07 00:43 |
+| 檢查時間 | 2026-11-08 00:18 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`e2e/agent-presence.spec.ts、e2e/failure-states.spec.ts、e2e/fixtures/v1-sw.js、e2e/map-live-edit.spec.ts、e2e/v1-carry-over.spec.ts`
+> 證據：`e2e/agent-presence.spec.ts、e2e/failure-states.spec.ts、e2e/fixtures/v1-sw.js、e2e/map-live-edit.spec.ts、e2e/threads.spec.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -65,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 43 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 47 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-02`
+> 證據：`最後推送 2026-11-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 939｜fork 181｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-11-02
+⭐ 946｜fork 181｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-11-07
 
 ---
 

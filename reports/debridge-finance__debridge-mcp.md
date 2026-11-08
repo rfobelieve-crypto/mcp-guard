@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `debridge-finance/debridge-mcp` |
 | 專案說明 | MCP server that gives AI agents the ability to execute cross-chain cryptocurrenc |
-| 星數 / Fork | ⭐ 31 / 5 |
+| 星數 / Fork | ⭐ 31 / 6 |
 | 最後更新 | 2026-10-14 |
 | 授權 | MIT License |
 | npm 套件 | `@debridge-finance/debridge-mcp` |
 | 已掃描檔案 | 13 個 |
-| 檢查時間 | 2026-11-07 00:42 |
+| 檢查時間 | 2026-11-08 00:17 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@
 
 > 證據：`SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 24 天內有更新
+### ⚪ 資訊｜[維護] 最近 25 天內有更新
 
 專案仍在活躍維護中。
 
@@ -69,7 +69,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 5｜語言 TypeScript｜建立 2026-02-08｜最後推送 2026-10-14
+⭐ 31｜fork 6｜語言 TypeScript｜建立 2026-02-08｜最後推送 2026-10-14
 
 ---
 

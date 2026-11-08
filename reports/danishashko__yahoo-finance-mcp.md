@@ -7,11 +7,11 @@
 | 稽核對象 | `danishashko/yahoo-finance-mcp` |
 | 專案說明 | Free Yahoo Finance MCP server, no API key. 18 tools: stock quotes, historical pr |
 | 星數 / Fork | ⭐ 24 / 7 |
-| 最後更新 | 2026-11-06 |
+| 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | npm 套件 | `yahoo-finance-mcp-server` |
 | 已掃描檔案 | 13 個 |
-| 檢查時間 | 2026-11-07 00:42 |
+| 檢查時間 | 2026-11-08 00:17 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -71,7 +71,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 24｜fork 7｜語言 Python｜建立 2025-10-24｜最後推送 2026-11-06
+⭐ 24｜fork 7｜語言 Python｜建立 2025-10-24｜最後推送 2026-11-07
 
 ---
 

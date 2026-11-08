@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
-| 專案說明 | The Unofficial and Awesome Home Assistant MCP Server |
-| 星數 / Fork | ⭐ 5464 / 265 |
+| 專案說明 | Configure and automate Home Assistant with Claude, ChatGPT, and other AI assista |
+| 星數 / Fork | ⭐ 5484 / 266 |
 | 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | 已掃描檔案 | 408 個 |
-| 檢查時間 | 2026-11-07 00:40 |
+| 檢查時間 | 2026-11-08 00:15 |
 
 ## 風險摘要
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5464｜fork 265｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-07
+⭐ 5484｜fork 266｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-07
 
 ---
 

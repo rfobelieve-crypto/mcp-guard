@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7450 / 1041 |
-| 最後更新 | 2026-11-06 |
+| 星數 / Fork | ⭐ 7452 / 1044 |
+| 最後更新 | 2026-11-07 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-07 00:37 |
+| 檢查時間 | 2026-11-08 00:12 |
 
 ## 風險摘要
 
@@ -28,13 +28,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/collector_restart.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/rollout.py、deploy/scripts/adopt_staging_capacity.py`
+> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/collector_restart.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/limits.py、deploy/gateway-canary/rollout.py、deploy/scripts/production_apply.py、deploy/scripts/security_patch_apply.py`
+> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/limits.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py、deploy/gateway-canary/notification_staging.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/deploy_stack.py、deploy/scripts/production_apply.py、deploy/scripts/public_read_apply.py、deploy/scripts/security_patch_apply.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（117 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（121 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-07`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7450｜fork 1041｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-06
+⭐ 7452｜fork 1044｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-07
 
 ---
 
