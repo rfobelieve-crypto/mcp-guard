@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BerkKilicoglu/google-health-fitbit-mcp` |
 | 專案說明 | Connect your Fitbit / Pixel Watch data to any AI assistant via MCP. Read-only MC |
-| 星數 / Fork | ⭐ 19 / 2 |
+| 星數 / Fork | ⭐ 19 / 3 |
 | 最後更新 | 2026-08-04 |
 | 授權 | MIT License |
 | npm 套件 | `google-health-fitbit-mcp` |
 | 已掃描檔案 | 69 個 |
-| 檢查時間 | 2026-11-08 00:17 |
+| 檢查時間 | 2026-11-09 00:39 |
 
 ## 風險摘要
 
@@ -69,7 +69,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 96 天內有更新
+### ⚪ 資訊｜[維護] 最近 97 天內有更新
 
 專案仍在活躍維護中。
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 19｜fork 2｜語言 TypeScript｜建立 2026-07-07｜最後推送 2026-08-04
+⭐ 19｜fork 3｜語言 TypeScript｜建立 2026-07-07｜最後推送 2026-08-04
 
 ---
 

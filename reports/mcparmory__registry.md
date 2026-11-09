@@ -10,11 +10,11 @@
 | 最後更新 | 2026-05-12 |
 | 授權 | Other |
 | 已掃描檔案 | 466 個 |
-| 檢查時間 | 2026-11-08 00:18 |
+| 檢查時間 | 2026-11-09 00:39 |
 
 ## 風險摘要
 
-🟡 中 3　🔵 低 2　⚪ 資訊 6
+🟡 中 4　🔵 低 2　⚪ 資訊 5
 
 ## 詳細發現
 
@@ -35,6 +35,12 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`a.klaviyo.com、about.gitlab.com、account.box.com、accounts.google.com、ahrefs.com、airtable.com、analyticsdata.googleapis.com、api.agentql.com、api.ahrefs.com、api.airtable.com…`
+
+### 🟡 中｜[維護] 約 6 個月沒有更新
+
+更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
+
+> 證據：`最後推送 2026-05-12`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -61,12 +67,6 @@
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
-
-### ⚪ 資訊｜[維護] 最近 179 天內有更新
-
-專案仍在活躍維護中。
-
-> 證據：`最後推送 2026-05-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 

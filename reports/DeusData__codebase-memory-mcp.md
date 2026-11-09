@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `DeusData/codebase-memory-mcp` |
 | 專案說明 | Local code intelligence for developers and AI agents. Connect code, docs and inf |
-| 星數 / Fork | ⭐ 48297 / 3993 |
+| 星數 / Fork | ⭐ 48357 / 3998 |
 | 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | 已掃描檔案 | 412 個 |
-| 檢查時間 | 2026-11-08 00:13 |
+| 檢查時間 | 2026-11-09 00:34 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`graph-ui/src/browser-ai/BrowserChatDock.test.tsx、graph-ui/src/browser-ai/embedded-model-assets.test.ts、graph-ui/src/browser-ai/explanation-response.test.ts、graph-ui/src/browser-ai/security-download-origins.test.ts、graph-ui/src/browser-ai/security-ui-model-policy.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（561 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（564 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,7 +66,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 48297｜fork 3993｜語言 C｜建立 2026-02-24｜最後推送 2026-11-07
+⭐ 48357｜fork 3998｜語言 C｜建立 2026-02-24｜最後推送 2026-11-07
 
 ---
 

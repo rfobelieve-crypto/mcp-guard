@@ -1,20 +1,20 @@
 # MCP 安檢報告：surendranb/google-analytics-mcp
 
-> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 244 / 48 |
-| 最後更新 | 2026-11-01 |
+| 最後更新 | 2026-11-08 |
 | 授權 | MIT License |
-| 已掃描檔案 | 135 個 |
-| 檢查時間 | 2026-11-08 00:17 |
+| 已掃描檔案 | 235 個 |
+| 檢查時間 | 2026-11-09 00:39 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -28,13 +28,7 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`docs/llms.txt｜「## Install - `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - `uvx google-analytics-mcp` - `npx -y @surendranb/google-analytics-…」`
-
-### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
-
-叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
-
-> 證據：`llms.txt｜「…x google-analytics-mcp` - NPX: `npx -y google-analytics-mcp` - Curl: `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - Documentation: https://ga4.builditwithai.xyz」`
+> 證據：`docs/llms.txt｜「## Install - `curl -fsSL https://ga4.builditwithai.xyz/install | bash` - `uvx google-analytics-mcp` - `npx -y @surendranb/google-analytics-…」（另 1 個檔案有相同內容）`
 
 ### 🟡 中｜[權限] 會連往 17 個外部主機
 
@@ -86,11 +80,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -100,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 244｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-11-01
+⭐ 244｜fork 48｜語言 Python｜建立 2025-05-24｜最後推送 2026-11-08
 
 ---
 

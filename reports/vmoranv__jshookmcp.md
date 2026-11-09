@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2102 / 464 |
+| 星數 / Fork | ⭐ 2105 / 464 |
 | 最後更新 | 2026-11-06 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-08 00:16 |
+| 檢查時間 | 2026-11-09 00:37 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2102｜fork 464｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-06
+⭐ 2105｜fork 464｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-06
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `marlinjai/email-mcp` |
 | 專案說明 | Unified MCP server for email access across Gmail, Outlook, iCloud, and IMAP |
 | 星數 / Fork | ⭐ 26 / 18 |
-| 最後更新 | 2026-11-01 |
+| 最後更新 | 2026-11-08 |
 | 授權 | MIT License |
 | npm 套件 | `@marlinjai/email-mcp` |
-| 已掃描檔案 | 76 個 |
-| 檢查時間 | 2026-11-08 00:18 |
+| 已掃描檔案 | 80 個 |
+| 檢查時間 | 2026-11-09 00:40 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@azure/msal-node@^5.0.4、@microsoft/microsoft-graph-client@^3.0.7、@modelcontextprotocol/sdk@^1.26.0、google-auth-library@^10.5.0、googleapis@^171.4.0、html-to-text@^9.0.5…`
+> 證據：`@azure/msal-node@^7.2.1、@microsoft/microsoft-graph-client@^3.0.7、@modelcontextprotocol/sdk@^1.26.0、google-auth-library@^11.3.3、googleapis@^189.0.0、html-to-text@^10.0.1…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -69,11 +69,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 7 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-01`
+> 證據：`最後推送 2026-11-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 26｜fork 18｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-11-01
+⭐ 26｜fork 18｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-11-08
 
 ---
 

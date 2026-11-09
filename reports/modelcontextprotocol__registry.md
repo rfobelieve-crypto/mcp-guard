@@ -1,48 +1,58 @@
 # MCP 安檢報告：modelcontextprotocol/registry
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7452 / 1044 |
-| 最後更新 | 2026-11-07 |
+| 星數 / Fork | ⭐ 7455 / 1045 |
+| 最後更新 | 2026-11-08 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-08 00:12 |
+| 檢查時間 | 2026-11-09 00:33 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 4　⚪ 資訊 7
+🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 142 個外部主機
+### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
+
+動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`deploy/gateway-canary/validation_helpers_test.py`
+
+### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
+
+eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
+
+### 🟡 中｜[權限] 會連往 144 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`0si.ai、1325.ai、2kw.ai、69ai.ai、Registry.Example.COM、aard.ai、abmeter.ai、accounts.google.com、acme-v02.api.letsencrypt.org、actwise.ai…`
+> 證據：`0si.ai、1325.ai、2kw.ai、69ai.ai、Registry.Example.COM、aard.ai、abmeter.ai、accounts.google.com、acme-staging-v02.api.letsencrypt.org、acme-v02.api.letsencrypt.org…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/collector_restart.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py`
+> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/certificate_rotation.py、deploy/gateway-canary/collector_restart.py、deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/limits.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py、deploy/gateway-canary/notification_staging.py`
+> 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/limits.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/scripts/adopt_staging_capacity.py、deploy/scripts/deploy_stack.py、deploy/scripts/production_apply.py、deploy/scripts/public_read_apply.py、deploy/scripts/security_patch_apply.py`
+> 證據：`deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py、deploy/gateway-canary/validation_helpers_test.py、deploy/scripts/adopt_staging_capacity.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（121 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -70,7 +80,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-07`
+> 證據：`最後推送 2026-11-08`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7452｜fork 1044｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-07
+⭐ 7455｜fork 1045｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-08
 
 ---
 
