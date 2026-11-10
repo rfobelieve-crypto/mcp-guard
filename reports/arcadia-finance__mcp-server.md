@@ -7,11 +7,11 @@
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-11-04 |
+| 最後更新 | 2026-11-09 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
-| 已掃描檔案 | 128 個 |
-| 檢查時間 | 2026-11-09 00:39 |
+| 已掃描檔案 | 131 個 |
+| 檢查時間 | 2026-11-10 03:16 |
 
 ## 風險摘要
 
@@ -21,7 +21,7 @@
 
 ### 🟠 高｜[權限] ⚠ 會讀寫本機檔案（超出宣稱用途）
 
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「一般用途（未能明確判定）」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
 > 證據：`src/tools/write/wallet/upgrade-velo.ts`
 
@@ -31,15 +31,15 @@
 
 > 證據：`api.arcadia.finance、api.example.test、api.test、arcadia.finance、custom-base-rpc.example.com、custom-op-rpc.example.com、custom-rh-rpc.example.com、custom-uni-rpc.example.com、dashboard.tenderly.co、eu.i.posthog.com…`
 
-### 🔵 低｜[供應鏈] 有 19 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 20 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/node@^2.1.1、@modelcontextprotocol/server@^2.3.1、express@^5.2.1、express-rate-limit@^8.3.1、viem@^2.0.0、zod@^4.2.0…`
+> 證據：`@modelcontextprotocol/node@^2.1.2、@modelcontextprotocol/server@^2.4.0、express@^5.3.0、express-rate-limit@^8.7.3、viem@^2.57.17、zod@^4.2.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「一般用途（未能明確判定）」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`src/clients/api.ts、src/config/chains.test.ts、src/config/chains.ts、src/index.ts、src/tools/dev/send.test.ts`
 
@@ -53,7 +53,7 @@
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
-### ⚪ 資訊｜[權限] 判定用途：一般用途（未能明確判定）
+### ⚪ 資訊｜[權限] 判定用途：第三方 API 串接
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、連線外部主機。
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-04`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-11-04
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-11-09
 
 ---
 

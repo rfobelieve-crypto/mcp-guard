@@ -7,11 +7,11 @@
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
 | 星數 / Fork | ⭐ 90 / 34 |
-| 最後更新 | 2026-11-08 |
+| 最後更新 | 2026-11-09 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 309 個 |
-| 檢查時間 | 2026-11-09 00:39 |
+| 已掃描檔案 | 310 個 |
+| 檢查時間 | 2026-11-10 03:16 |
 
 ## 風險摘要
 
@@ -51,7 +51,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「檔案系統存取」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/dashboard-preview.ts、scripts/site-partials.ts、scripts/widget-harness.ts、src/auth-session.test.ts、src/dashboard-api.test.ts`
+> 證據：`scripts/dashboard-preview.ts、scripts/reset-password.ts、scripts/site-partials.ts、scripts/widget-harness.ts、src/auth-session.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 90｜fork 34｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-11-08
+⭐ 90｜fork 34｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-11-09
 
 ---
 

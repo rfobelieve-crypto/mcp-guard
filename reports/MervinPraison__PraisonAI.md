@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | Private AI agents for highly regulated teams, and for anyone who wants AI on the |
-| 星數 / Fork | ⭐ 9327 / 1503 |
-| 最後更新 | 2026-11-08 |
+| 星數 / Fork | ⭐ 9332 / 1504 |
+| 最後更新 | 2026-11-09 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-11-09 00:35 |
+| 檢查時間 | 2026-11-10 03:12 |
 
 ## 風險摘要
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/outsider-review.js、.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（137 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（144 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9327｜fork 1503｜語言 Python｜建立 2024-03-19｜最後推送 2026-11-08
+⭐ 9332｜fork 1504｜語言 Python｜建立 2024-03-19｜最後推送 2026-11-09
 
 ---
 

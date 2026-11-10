@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Symbol-level code retrieval for AI agents: fetch the function you need, not the  |
-| 星數 / Fork | ⭐ 2836 / 373 |
-| 最後更新 | 2026-11-09 |
+| 星數 / Fork | ⭐ 2839 / 371 |
+| 最後更新 | 2026-11-10 |
 | 授權 | Other |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-09 00:37 |
+| 檢查時間 | 2026-11-10 03:15 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 12 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、cdn.jsdelivr.net、dotenvx.com、groq.com、jcm.internal、json.schemastore.org、mcp.example.com、opencollective.com、oraios.github.io、test.pypi.org…`
+> 證據：`api.groq.com、dotenvx.com、jcm.internal、json.schemastore.org、mcp.example.com、opencollective.com、oraios.github.io、test.pypi.org、www.npmjs.com、www.reddit.com`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-09`
+> 證據：`最後推送 2026-11-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2836｜fork 373｜語言 Python｜建立 2026-02-09｜最後推送 2026-11-09
+⭐ 2839｜fork 371｜語言 Python｜建立 2026-02-09｜最後推送 2026-11-10
 
 ---
 

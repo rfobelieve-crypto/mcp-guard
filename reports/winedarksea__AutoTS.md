@@ -7,10 +7,10 @@
 | 稽核對象 | `winedarksea/AutoTS` |
 | 專案說明 | Automated Time Series Forecasting |
 | 星數 / Fork | ⭐ 1434 / 130 |
-| 最後更新 | 2026-11-08 |
+| 最後更新 | 2026-11-09 |
 | 授權 | MIT License |
-| 已掃描檔案 | 248 個 |
-| 檢查時間 | 2026-11-09 00:38 |
+| 已掃描檔案 | 291 個 |
+| 檢查時間 | 2026-11-10 03:16 |
 
 ## 風險摘要
 
@@ -32,7 +32,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.eia.gov、api.erg.ic.ac.uk、api.gsa.gov、api.nasa.gov、arxiv.org、cdn.jsdelivr.net、developer.mozilla.org、docs.github.com、doi.org、earthquake.usgs.gov…`
+> 證據：`api.eia.gov、api.erg.ic.ac.uk、api.gsa.gov、arxiv.org、ccmc.gsfc.nasa.gov、cdn.jsdelivr.net、developer.mozilla.org、docs.github.com、doi.org、earthquake.usgs.gov…`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -72,11 +72,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1434｜fork 130｜語言 Python｜建立 2019-11-26｜最後推送 2026-11-08
+⭐ 1434｜fork 130｜語言 Python｜建立 2019-11-26｜最後推送 2026-11-09
 
 ---
 

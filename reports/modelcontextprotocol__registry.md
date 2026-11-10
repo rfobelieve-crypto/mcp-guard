@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7455 / 1045 |
-| 最後更新 | 2026-11-08 |
+| 星數 / Fork | ⭐ 7455 / 1047 |
+| 最後更新 | 2026-11-10 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-09 00:33 |
+| 檢查時間 | 2026-11-10 03:10 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 144 個外部主機
+### 🟡 中｜[權限] 會連往 146 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -50,9 +50,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py、deploy/gateway-canary/validation_helpers_test.py、deploy/scripts/adopt_staging_capacity.py`
+> 證據：`deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py、deploy/gateway-canary/validation_helpers_test.py、deploy/pkg/k8s/stagingrestore/run.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（123 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -62,7 +62,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 192 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 193 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7455｜fork 1045｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-08
+⭐ 7455｜fork 1047｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-10
 
 ---
 

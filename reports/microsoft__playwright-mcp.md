@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `microsoft/playwright-mcp` |
 | 專案說明 | Playwright MCP server |
-| 星數 / Fork | ⭐ 39344 / 3406 |
-| 最後更新 | 2026-11-06 |
+| 星數 / Fork | ⭐ 39392 / 3412 |
+| 最後更新 | 2026-11-10 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@playwright/mcp` |
-| 已掃描檔案 | 36 個 |
-| 檢查時間 | 2026-11-09 00:33 |
+| 已掃描檔案 | 37 個 |
+| 檢查時間 | 2026-11-10 03:10 |
 
 ## 風險摘要
 
@@ -31,17 +31,11 @@
 
 > 證據：`@modelcontextprotocol/sdk@^1.25.2、@types/node@^24.3.0`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、roll.js、tests/fixtures.ts、tests/library.spec.ts`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/release.yml、.github/workflows/roll.yml、playwright.config.ts、tests/fixtures.ts、update-readme.js`
+> 證據：`playwright.config.ts、tests/fixtures.ts、update-readme.js`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -49,11 +43,17 @@
 
 > 證據：`roll.js、tests/cli.spec.ts、tests/library.spec.ts、update-readme.js`
 
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`roll.js、tests/fixtures.ts、tests/library.spec.ts、update-readme.js`
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 3 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/skills/playwright-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/release.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
+> 證據：`.claude/skills/playwright-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/release.md（AI 客戶端設定目錄下的指令檔）、AGENTS.md（Agent 指令（AGENTS.md 慣例））`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 0 段 description）
 
@@ -69,11 +69,11 @@
 
 > 證據：`PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39344｜fork 3406｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-06
+⭐ 39392｜fork 3412｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-10
 
 ---
 

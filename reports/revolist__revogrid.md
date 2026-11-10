@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
-| 星數 / Fork | ⭐ 3464 / 213 |
-| 最後更新 | 2026-11-08 |
+| 星數 / Fork | ⭐ 3465 / 213 |
+| 最後更新 | 2026-11-09 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
-| 已掃描檔案 | 266 個 |
-| 檢查時間 | 2026-11-09 00:37 |
+| 已掃描檔案 | 269 個 |
+| 檢查時間 | 2026-11-10 03:14 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -35,13 +35,19 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`playwright.config.ts`
+> 證據：`playwright.config.ts、scripts/package-formats.test.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/hydrate-types.plugin.ts、scripts/package-version.mjs`
+
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`scripts/package-formats.test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -63,11 +69,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3464｜fork 213｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-08
+⭐ 3465｜fork 213｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-09
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 54978 / 5241 |
-| 最後更新 | 2026-11-08 |
+| 星數 / Fork | ⭐ 55033 / 4573 |
+| 最後更新 | 2026-11-09 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 347 個 |
-| 檢查時間 | 2026-11-09 00:34 |
+| 已掃描檔案 | 348 個 |
+| 檢查時間 | 2026-11-10 03:11 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`127.0.0.1.example.com、a.com、agent-plugins.org、allowed.example.com、app.dev.localhost、b.com、blocked.example.com、chromeuxreport.googleapis.com、chromium.googlesource.com、cold-load.example…`
 
-### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`rollup.config.js、scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（132 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（128 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,11 +89,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-08`
+> 證據：`最後推送 2026-11-09`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 54978｜fork 5241｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-08
+⭐ 55033｜fork 4573｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-09
 
 ---
 
