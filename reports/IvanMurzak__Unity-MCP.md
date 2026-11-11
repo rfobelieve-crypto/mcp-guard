@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `IvanMurzak/Unity-MCP` |
 | 專案說明 | AI Skills, MCP Tools, and CLI for Unity Engine. Full AI develop and test loop. U |
-| 星數 / Fork | ⭐ 4612 / 406 |
-| 最後更新 | 2026-11-09 |
+| 星數 / Fork | ⭐ 4615 / 406 |
+| 最後更新 | 2026-11-11 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 417 個 |
-| 檢查時間 | 2026-11-10 03:14 |
+| 已掃描檔案 | 419 個 |
+| 檢查時間 | 2026-11-11 01:04 |
 
 ## 風險摘要
 
@@ -22,17 +22,17 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「開發框架／工具鏈」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`commands/tests/test_extensions.py`
+> 證據：`cli/tests/editor-dialogs-macos.test.ts、commands/tests/test_extensions.py`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 17 個外部主機
+### 🟡 中｜[權限] 會連往 19 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`ai-game.dev、api.nuget.org、cdn.packages.unity.com、discord.com、example.invalid、license.unity3d.com、old.example.com、opencollective.com、openupm.com、other.example.com…`
+> 證據：`ai-game.dev、api.nuget.org、cdn.packages.unity.com、discord.com、example.invalid、ivanmurzak.github.io、license.unity3d.com、nodejs.org、old.example.com、opencollective.com…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -52,17 +52,17 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/chain_feed.py、.github/scripts/docs-only.mjs、.github/scripts/docs-only.test.mjs、.github/workflows/test_cli.yml、cli/src/lib/types.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（57 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 22 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 20 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.claude/skills/build-cli/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/github-pr-review-fix/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、Unity-MCP-Plugin/AGENTS.md（Agent 指令（AGENTS.md 慣例））、cli/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
+> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、AGENTS.md（Agent 指令（AGENTS.md 慣例））、Unity-MCP-Plugin/AGENTS.md（Agent 指令（AGENTS.md 慣例））、cli/AGENTS.md（Agent 指令（AGENTS.md 慣例））、extensions/AGENTS.md（Agent 指令（AGENTS.md 慣例））、extensions/Animation/AGENTS.md（Agent 指令（AGENTS.md 慣例））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 72 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 75 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-09`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4612｜fork 406｜語言 C#｜建立 2025-04-02｜最後推送 2026-11-09
+⭐ 4615｜fork 406｜語言 C#｜建立 2025-04-02｜最後推送 2026-11-11
 
 ---
 

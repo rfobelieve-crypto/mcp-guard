@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28365 / 2574 |
-| 最後更新 | 2026-11-10 |
+| 星數 / Fork | ⭐ 28375 / 2577 |
+| 最後更新 | 2026-11-11 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-11-10 03:11 |
+| 檢查時間 | 2026-11-11 01:01 |
 
 ## 風險摘要
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/tests/test_agentic_claims.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（450 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（234 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28365｜fork 2574｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-10
+⭐ 28375｜fork 2577｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-11
 
 ---
 

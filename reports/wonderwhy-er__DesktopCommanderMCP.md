@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10275 / 1283 |
-| 最後更新 | 2026-11-07 |
+| 星數 / Fork | ⭐ 10281 / 1285 |
+| 最後更新 | 2026-11-10 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-10 03:11 |
+| 已掃描檔案 | 400 個 |
+| 檢查時間 | 2026-11-11 01:00 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「桌面／終端控制」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`test/remote-launchers.test.js、test/test-ci-platforms.js`
+> 證據：`src/utils/inline-shells.ts、test/remote-launchers.test.js、test/test-ci-platforms.js`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟡 中｜[權限] 會連往 41 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（344 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（341 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -95,11 +95,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-07`
+> 證據：`最後推送 2026-11-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10275｜fork 1283｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-07
+⭐ 10281｜fork 1285｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-10
 
 ---
 

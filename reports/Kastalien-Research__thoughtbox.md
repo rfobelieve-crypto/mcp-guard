@@ -7,11 +7,11 @@
 | 稽核對象 | `Kastalien-Research/thoughtbox` |
 | 專案說明 | Thoughtbox is an intention ledger for agents. Evaluate AI's decisions against it |
 | 星數 / Fork | ⭐ 65 / 20 |
-| 最後更新 | 2026-07-15 |
+| 最後更新 | 2026-11-11 |
 | 授權 | MIT License |
 | npm 套件 | `@kastalien-research/thoughtbox` |
 | 已掃描檔案 | 514 個 |
-| 檢查時間 | 2026-11-10 03:18 |
+| 檢查時間 | 2026-11-11 01:08 |
 
 ## 風險摘要
 
@@ -81,11 +81,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 118 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-07-15`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -95,7 +95,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 65｜fork 20｜語言 TypeScript｜建立 2025-10-20｜最後推送 2026-07-15
+⭐ 65｜fork 20｜語言 TypeScript｜建立 2025-10-20｜最後推送 2026-11-11
 
 ---
 

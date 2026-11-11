@@ -7,11 +7,11 @@
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
 | 星數 / Fork | ⭐ 2108 / 465 |
-| 最後更新 | 2026-11-06 |
+| 最後更新 | 2026-11-10 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-10 03:15 |
+| 檢查時間 | 2026-11-11 01:05 |
 
 ## 風險摘要
 
@@ -59,13 +59,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tools.js、scripts/count-tools.mjs、scripts/generate-domains-index.mjs、scripts/runtime-probes/phases/browser/page-interaction.mjs、scripts/runtime-probes/phases/runtime-observability/console-intercept-jsdom.mjs`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 6 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））`
+> 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、skills/configuration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/getting-started/SKILL.md（Agent Skill 指令（SKILL.md））、skills/tool-selection/SKILL.md（Agent Skill 指令（SKILL.md））、skills/troubleshooting/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 69 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 59 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,11 +79,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-06`
+> 證據：`最後推送 2026-11-10`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2108｜fork 465｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-06
+⭐ 2108｜fork 465｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-10
 
 ---
 

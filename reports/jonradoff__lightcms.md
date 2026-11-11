@@ -1,6 +1,6 @@
 # MCP 安檢報告：jonradoff/lightcms
 
-> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
+> **結論：🔴 不要安裝**　發現 1 項嚴重問題，安裝風險無法接受。
 
 | 項目 | 內容 |
 |---|---|
@@ -9,14 +9,20 @@
 | 星數 / Fork | ⭐ 34 / 7 |
 | 最後更新 | 2026-11-10 |
 | 授權 | MIT License |
-| 已掃描檔案 | 288 個 |
-| 檢查時間 | 2026-11-10 03:17 |
+| 已掃描檔案 | 300 個 |
+| 檢查時間 | 2026-11-11 01:07 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 1　⚪ 資訊 7
+🔴 嚴重 1　🟠 高 1　🟡 中 2　🔵 低 2　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🔴 嚴重｜[工具描述投毒] 原始碼含雙向覆寫字元
+
+bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實際讀到的」順序不同，是 Trojan Source（CVE-2021-42574）的手法。除了處理雙向文字的函式庫，正常原始碼沒有理由出現它們。
+
+> 證據：`internal/oauth/identity_test.go｜位置 11441｜U+202E`
 
 ### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
 
@@ -28,11 +34,17 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 54 個外部主機
+### 🟡 中｜[權限] 會連往 62 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`127.0.0.1.nip.invalid、CMS.example、a.example、acme.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com、b.example…`
+> 證據：`127.0.0.1.nip.invalid、CMS.example、a.example、acme.example、agent.example、api.anthropic.com、api.cloudflare.com、api.indexnow.org、api.resend.com、api.voyageai.com…`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`internal/handlers/api_sandbox.go`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -46,10 +58,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/claude-security-guidance.md（AI 客戶端設定目錄下的指令檔）、.claude/projects/-Users-jonradoff-lightcms/memory/MEMORY.md（AI 客戶端設定目錄下的指令檔）、.claude/projects/-Users-jonradoff-lightcms/memory/feedback_test_database.md（AI 客戶端設定目錄下的指令檔）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 152 段 description）
-
-沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
-
 ### ⚪ 資訊｜[權限] 判定用途：瀏覽器／網頁自動化
 
 以下權限均以此用途為基準判斷是否合理。這類工具預期會用到：讀取環境變數、執行外部指令、讀寫本機檔案、連線外部主機。
@@ -60,7 +68,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 

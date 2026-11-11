@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7455 / 1047 |
+| 星數 / Fork | ⭐ 7458 / 1049 |
 | 最後更新 | 2026-11-10 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-10 03:10 |
+| 檢查時間 | 2026-11-11 01:00 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py、deploy/gateway-canary/validation_helpers_test.py、deploy/pkg/k8s/stagingrestore/run.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（123 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（121 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7455｜fork 1047｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-10
+⭐ 7458｜fork 1049｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-10
 
 ---
 
