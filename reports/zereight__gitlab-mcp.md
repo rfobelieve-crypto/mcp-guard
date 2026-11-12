@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `zereight/gitlab-mcp` |
 | 專案說明 | MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines, wikis and |
-| 星數 / Fork | ⭐ 2097 / 369 |
-| 最後更新 | 2026-11-11 |
+| 星數 / Fork | ⭐ 2100 / 371 |
+| 最後更新 | 2026-11-12 |
 | 授權 | MIT License |
 | npm 套件 | `@zereight/mcp-gitlab` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-11 01:05 |
+| 檢查時間 | 2026-11-12 02:11 |
 
 ## 風險摘要
 
@@ -43,7 +43,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`GITLAB.INTERNAL.COM、a.com、a.example、about.gitlab.com、admin.internal.example、anything.example、api.internal.com、api.prod.example.com、api.securityscorecards.dev、api.stage.example.com…`
 
-### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 30 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2097｜fork 369｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-11-11
+⭐ 2100｜fork 371｜語言 TypeScript｜建立 2025-02-11｜最後推送 2026-11-12
 
 ---
 

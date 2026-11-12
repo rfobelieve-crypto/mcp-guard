@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 64531 / 3232 |
-| 最後更新 | 2026-11-10 |
+| 星數 / Fork | ⭐ 64631 / 3241 |
+| 最後更新 | 2026-11-12 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 326 個 |
-| 檢查時間 | 2026-11-11 01:01 |
+| 已掃描檔案 | 332 個 |
+| 檢查時間 | 2026-11-12 02:08 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 2　🔵 低 4　⚪ 資訊 8
+🟠 高 2　🟡 中 2　🔵 低 3　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -59,10 +59,6 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
 ### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -91,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -101,7 +97,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 64531｜fork 3232｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-10
+⭐ 64631｜fork 3241｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-12
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `nteract/semiotic` |
 | 專案說明 | React data visualization library for streaming, networks, and AI-assisted develo |
 | 星數 / Fork | ⭐ 2717 / 143 |
-| 最後更新 | 2026-11-10 |
+| 最後更新 | 2026-11-12 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `semiotic` |
 | 已掃描檔案 | 403 個 |
-| 檢查時間 | 2026-11-11 01:04 |
+| 檢查時間 | 2026-11-12 02:11 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 33 個外部主機
+### 🟡 中｜[權限] 會連往 32 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`alfred.stlouisfed.org、api.bls.gov、api.mapbox.com、cdec.water.ca.gov、chartability.github.io、creativecommons.org、cww.water.ca.gov、data.iana.org、developers.openai.com、download.bls.gov…`
 
-### 🔵 低｜[供應鏈] 有 70 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 69 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`d3-array@^3.2.4、d3-brush@^3.0.0、d3-chord@^3.0.1、d3-force@^3.0.0、d3-geo@^3.1.0、d3-hierarchy@^3.1.2…`
+> 證據：`d3-array@^3.2.4、d3-brush@^3.0.0、d3-chord@^3.0.1、d3-force@^3.0.0、d3-geo@^3.1.0、d3-hierarchy@^3.1.3…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/release.yml、ai/behaviorContracts.cjs、ai/cli.js、ai/mcp-server.ts、docs/public/stories/reservoir-guide/offline/worker.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（209 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（207 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -77,7 +77,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2717｜fork 143｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-11-10
+⭐ 2717｜fork 143｜語言 TypeScript｜建立 2017-03-16｜最後推送 2026-11-12
 
 ---
 

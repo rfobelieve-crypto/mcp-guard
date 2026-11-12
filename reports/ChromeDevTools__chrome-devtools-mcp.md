@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 55080 / 4579 |
-| 最後更新 | 2026-11-10 |
+| 星數 / Fork | ⭐ 55118 / 4587 |
+| 最後更新 | 2026-11-11 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
-| 已掃描檔案 | 354 個 |
-| 檢查時間 | 2026-11-11 01:01 |
+| 已掃描檔案 | 361 個 |
+| 檢查時間 | 2026-11-12 02:08 |
 
 ## 風險摘要
 
@@ -35,47 +35,47 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 44 個外部主機
+### 🟡 中｜[權限] 會連往 49 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`127.0.0.1.example.com、a.com、agent-plugins.org、allowed.example.com、app.dev.localhost、b.com、blocked.example.com、chromeuxreport.googleapis.com、chromium.googlesource.com、cold-load.example…`
+> 證據：`127.0.0.1.example.com、a.com、agent-plugins.org、allowed.example、allowed.example.com、app.dev.localhost、b.com、blocked.example、blocked.example.com、cdn.example…`
 
-### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 22 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@blackwell-systems/gcf@^2.2.2、@google/genai@^2.0.1、@rollup/plugin-commonjs@^29.0.0、@rollup/plugin-json@^6.1.0、@rollup/plugin-node-resolve@^16.0.3、@stylistic/eslint-plugin@^5.4.0…`
+> 證據：`@blackwell-systems/gcf@^2.2.2、@google/genai@^2.0.1、@stylistic/eslint-plugin@^5.4.0、@toon-format/toon@^4.1.0、@types/node@^26.0.0、@types/semver@^7.7.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/publish-to-npm-on-tag.yml、rollup.config.js、scripts/eval_gemini.ts、scripts/generate-cli.ts、scripts/generate-docs.ts`
+> 證據：`.github/workflows/publish-to-npm-on-tag.yml、scripts/eval_gemini.ts、scripts/generate-cli.ts、scripts/generate-docs.ts、scripts/generate-third-party-notices.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`rollup.config.js、scripts/clean-submodules.ts、scripts/clean.ts、scripts/gclient-sync.ts、scripts/gn-gen.ts`
+> 證據：`scripts/clean-submodules.ts、scripts/clean.ts、scripts/gclient-sync.ts、scripts/generate-third-party-notices.ts、scripts/gn-gen.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`rollup.config.js、scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/profile_mcp.ts`
+> 證據：`scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/footprint_mcp.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（118 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（120 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 8 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 9 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/a11y-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools-cli/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools/SKILL.md（Agent Skill 指令（SKILL.md））、skills/cookie-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/debug-optimize-lcp/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 299 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 304 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 55080｜fork 4579｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-10
+⭐ 55118｜fork 4587｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-11
 
 ---
 

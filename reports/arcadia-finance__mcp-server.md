@@ -7,11 +7,11 @@
 | 稽核對象 | `arcadia-finance/mcp-server` |
 | 專案說明 | MCP server for Arcadia Finance. Manage concentrated liquidity positions with bui |
 | 星數 / Fork | ⭐ 5 / 1 |
-| 最後更新 | 2026-11-09 |
+| 最後更新 | 2026-11-11 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@arcadia-finance/mcp-server` |
 | 已掃描檔案 | 131 個 |
-| 檢查時間 | 2026-11-11 01:06 |
+| 檢查時間 | 2026-11-12 02:12 |
 
 ## 風險摘要
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-09`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-11-09
+⭐ 5｜fork 1｜語言 TypeScript｜建立 2026-03-03｜最後推送 2026-11-11
 
 ---
 

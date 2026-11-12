@@ -1,28 +1,40 @@
 # MCP 安檢報告：nowork-studio/NotFair
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `nowork-studio/NotFair` |
 | 專案說明 | Open-source SEO, GEO, and marketing skills for AI agents. |
-| 星數 / Fork | ⭐ 4138 / 522 |
-| 最後更新 | 2026-11-10 |
+| 星數 / Fork | ⭐ 4140 / 522 |
+| 最後更新 | 2026-11-11 |
 | 授權 | MIT License |
-| 已掃描檔案 | 219 個 |
-| 檢查時間 | 2026-11-11 01:04 |
+| 已掃描檔案 | 220 個 |
+| 檢查時間 | 2026-11-12 02:10 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 1　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 2　⚪ 資訊 6
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 15 個外部主機
+### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。但它自述是「文件／知識檢索」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
+
+> 證據：`.github/workflows/pr-check.yml`
+
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`acme-saas.com、agent-plugins.org、bakersjournal.com、developers.facebook.com、developers.google.com、flowmetrics.io、notfair.co、schema.org、static.modelcontextprotocol.io、support.google.com…`
+> 證據：`acme-saas.com、agent-plugins.org、bakersjournal.com、developers.facebook.com、developers.google.com、example.test、examplesoft.test、flowmetrics.io、notfair.co、reviews.example.net…`
+
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「文件／知識檢索」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/pr-check.yml`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -52,11 +64,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4138｜fork 522｜語言 未標示｜建立 2026-03-27｜最後推送 2026-11-10
+⭐ 4140｜fork 522｜語言 未標示｜建立 2026-03-27｜最後推送 2026-11-11
 
 ---
 

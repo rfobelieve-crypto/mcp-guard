@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Reference Servers |
-| 星數 / Fork | ⭐ 91915 / 11934 |
-| 最後更新 | 2026-11-10 |
+| 星數 / Fork | ⭐ 91937 / 11943 |
+| 最後更新 | 2026-11-11 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 365 個 |
-| 檢查時間 | 2026-11-11 01:00 |
+| 已掃描檔案 | 386 個 |
+| 檢查時間 | 2026-11-12 02:07 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 24 個外部主機
+### 🟡 中｜[權限] 會連往 26 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/everything/__tests__/collections.test.ts、src/everything/__tests__/gzip-file-as-resource.test.ts、src/everything/__tests__/icons.test.ts、src/everything/__tests__/long-running-cancel.test.ts、src/everything/__tests__/prompts.test.ts`
+> 證據：`src/everything/__tests__/collections.test.ts、src/everything/__tests__/gzip-file-as-resource.test.ts、src/everything/__tests__/icons.test.ts、src/everything/__tests__/input-descriptions.test.ts、src/everything/__tests__/long-running-cancel.test.ts`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 129 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 130 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -91,11 +91,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-10`
+> 證據：`最後推送 2026-11-11`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 91915｜fork 11934｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-10
+⭐ 91937｜fork 11943｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-11
 
 ---
 

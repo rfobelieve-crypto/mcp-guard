@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Deterministic testing tools for MCP servers |
-| 星數 / Fork | ⭐ 11272 / 1568 |
-| 最後更新 | 2026-11-05 |
+| 星數 / Fork | ⭐ 11275 / 1566 |
+| 最後更新 | 2026-11-12 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-11-11 01:00 |
+| 檢查時間 | 2026-11-12 02:07 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"postinstall": "node scripts/install-clients.mjs"`
 
-### 🟡 中｜[權限] 會連往 53 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -41,7 +41,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/helpers/home-isolation.ts、clients/cli/__tests__/helpers/oauth-state-isolation.ts、clients/cli/__tests__/relogin-revocation.test.ts`
+> 證據：`clients/cli/__tests__/clear-stored-auth-for-relogin.test.ts、clients/cli/__tests__/helpers/fixtures.ts、clients/cli/__tests__/helpers/home-isolation.ts、clients/cli/__tests__/helpers/oauth-state-isolation.ts、clients/cli/__tests__/load-churn.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -65,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.claude/skills/board-ops/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-create/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/issue-triage/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/local-dev/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pr-flow/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/pre-push-gate/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 10 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,15 +79,15 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-05`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11272｜fork 1568｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-11-05
+⭐ 11275｜fork 1566｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-11-12
 
 ---
 

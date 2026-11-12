@@ -7,11 +7,11 @@
 | 稽核對象 | `DIALLOUBE-RESEARCH/hypernatt-terminal` |
 | 專案說明 | Liquidation radar, Hyperliquid execution context and Li.Fi swap for AI agents. 6 |
 | 星數 / Fork | ⭐ 3 / 0 |
-| 最後更新 | 2026-09-18 |
+| 最後更新 | 2026-11-12 |
 | 授權 | MIT License |
 | npm 套件 | `natt-node-mcp`（registry 查無） |
-| 已掃描檔案 | 79 個 |
-| 檢查時間 | 2026-11-11 01:08 |
+| 已掃描檔案 | 81 個 |
+| 檢查時間 | 2026-11-12 02:14 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@coinbase/cdp-sdk@^1.51.0、@coinbase/x402@^2.1.0、@modelcontextprotocol/sdk@^1.12.1、@x402/core@^2.11.0、@x402/evm@^2.11.0、axios@^1.19.0…`
+> 證據：`@coinbase/cdp-sdk@^1.51.0、@coinbase/x402@^2.1.0、@modelcontextprotocol/sdk@^1.32.2、@x402/core@^2.30.0、@x402/evm@^2.30.0、axios@^1.19.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -53,7 +53,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -65,13 +65,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 54 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-09-18`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-09-18
+⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-11-12
 
 ---
 

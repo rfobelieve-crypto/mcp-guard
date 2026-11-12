@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `jgravelle/jcodemunch-mcp` |
 | 專案說明 | Symbol-level code retrieval for AI agents: fetch the function you need, not the  |
-| 星數 / Fork | ⭐ 2841 / 371 |
-| 最後更新 | 2026-11-11 |
+| 星數 / Fork | ⭐ 2843 / 372 |
+| 最後更新 | 2026-11-12 |
 | 授權 | Other |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-11 01:04 |
+| 檢查時間 | 2026-11-12 02:11 |
 
 ## 風險摘要
 
@@ -18,17 +18,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.groq.com、dotenvx.com、jcm.internal、json.schemastore.org、mcp.example.com、opencollective.com、oraios.github.io、test.pypi.org、www.npmjs.com、www.reddit.com`
+> 證據：`api.anthropic.com、api.groq.com、dotenvx.com、jcm.internal、json.schemastore.org、mcp.example.com、opencollective.com、oraios.github.io、test.pypi.org、www.npmjs.com…`
 
-### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`httpx>=0.27.0、tree-sitter-language-pack>=0.7.0,<1.0.0、tree-sitter>=0.25,<0.26、pathspec>=0.12.0、pyyaml>=6.0`
+> 證據：`httpx>=0.27.0、tree-sitter-language-pack>=0.7.0,<1.0.0、tree-sitter>=0.25,<0.26、pathspec>=0.12.0、pyyaml>=6.0、tiktoken>=0.7.0,<1.0.0`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -54,7 +54,7 @@
 
 > 證據：`.claude/agents/reviewer.md（AI 客戶端設定目錄下的指令檔）、.claude/agents/spokesperson.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/benchmark-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/competitive-compare.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/feature.md（AI 客戶端設定目錄下的指令檔）、.claude/commands/fix-issue.md（AI 客戶端設定目錄下的指令檔）…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 4 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 3 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -72,7 +72,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2841｜fork 371｜語言 Python｜建立 2026-02-09｜最後推送 2026-11-11
+⭐ 2843｜fork 372｜語言 Python｜建立 2026-02-09｜最後推送 2026-11-12
 
 ---
 
