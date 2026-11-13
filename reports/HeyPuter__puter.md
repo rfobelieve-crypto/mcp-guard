@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 44149 / 4158 |
-| 最後更新 | 2026-11-12 |
+| 星數 / Fork | ⭐ 44158 / 4157 |
+| 最後更新 | 2026-11-13 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-12 02:08 |
+| 檢查時間 | 2026-11-13 01:42 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`src/backend/clients/s3/S3Client.ts、src/backend/controllers/apps/AppController.test.ts、src/backend/core/http/middleware/rateLimit.test.js`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（61 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（52 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44149｜fork 4158｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-12
+⭐ 44158｜fork 4157｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-13
 
 ---
 

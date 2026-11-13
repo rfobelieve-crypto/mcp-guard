@@ -7,10 +7,10 @@
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
 | 星數 / Fork | ⭐ 14 / 4 |
-| 最後更新 | 2026-11-11 |
+| 最後更新 | 2026-11-12 |
 | 授權 | Other |
 | 已掃描檔案 | 437 個 |
-| 檢查時間 | 2026-11-12 02:13 |
+| 檢查時間 | 2026-11-13 01:48 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.browserbase.com、api.elevenlabs.io、api.example.com、api.fathom.ai、api.machines.dev、cdn.browserbase.com、compute.googleapis.com、console.cloud.google.com、e2b.dev、elevenlabs.io…`
+> 證據：`api.browserbase.com、api.elevenlabs.io、api.example.com、api.machines.dev、cdn.browserbase.com、compute.googleapis.com、console.cloud.google.com、docs.example.com、e2b.dev、elevenlabs.io…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -44,17 +44,17 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`connectors/browserbase/src/tools/agent-runs.ts｜長度 1669 字`
 
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`connectors/_template/src/bridge.ts、connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/path-safety.ts、connectors/browser-automation/test/central-file-reads.test.ts`
-
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`connectors/_template/src/bridge.ts、connectors/_template/src/types.ts、connectors/apple-shortcuts/__tests__/timeout.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/apple-shortcuts/src/logger.ts`
+> 證據：`connectors/_template/src/bridge-reader.ts、connectors/_template/src/types.ts、connectors/apple-shortcuts/__tests__/timeout.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/apple-shortcuts/src/logger.ts`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`connectors/apple-shortcuts/__tests__/run-input-path.test.ts、connectors/apple-shortcuts/src/index.ts、connectors/browser-automation/src/path-safety.ts、connectors/browser-automation/test/central-file-reads.test.ts、connectors/browser-automation/test/central-upload-sdk.test.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -78,11 +78,11 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-12`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-11
+⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-12
 
 ---
 

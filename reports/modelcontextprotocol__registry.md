@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/registry` |
 | 專案說明 | A community driven registry service for Model Context Protocol (MCP) servers. |
-| 星數 / Fork | ⭐ 7464 / 1051 |
-| 最後更新 | 2026-11-11 |
+| 星數 / Fork | ⭐ 7467 / 1051 |
+| 最後更新 | 2026-11-13 |
 | 授權 | Other |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-12 02:07 |
+| 檢查時間 | 2026-11-13 01:41 |
 
 ## 風險摘要
 
@@ -34,6 +34,12 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`0si.ai、1325.ai、2kw.ai、69ai.ai、Registry.Example.COM、aard.ai、abmeter.ai、accounts.google.com、acme-staging-v02.api.letsencrypt.org、acme-v02.api.letsencrypt.org…`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`cmd/publisher/commands/login.go、cmd/publisher/commands/login_internal_test.go、deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py`
+
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
@@ -46,13 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`deploy/gateway-canary/autoscale.py、deploy/gateway-canary/limits.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/monitoring_contract.py、deploy/gateway-canary/monitoring_staging.py`
 
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`deploy/gateway-canary/detach_certificates.py、deploy/gateway-canary/measure.py、deploy/gateway-canary/resilience.py、deploy/gateway-canary/validation_helpers_test.py、deploy/pkg/k8s/stagingrestore/run.py`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（126 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（115 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -80,7 +80,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -90,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7464｜fork 1051｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-11
+⭐ 7467｜fork 1051｜語言 Go｜建立 2025-02-05｜最後推送 2026-11-13
 
 ---
 

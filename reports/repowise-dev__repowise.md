@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 8119 / 1011 |
-| 最後更新 | 2026-11-11 |
+| 星數 / Fork | ⭐ 8127 / 1013 |
+| 最後更新 | 2026-11-13 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
-| 已掃描檔案 | 432 個 |
-| 檢查時間 | 2026-11-12 02:10 |
+| 已掃描檔案 | 434 個 |
+| 檢查時間 | 2026-11-13 01:44 |
 
 ## 風險摘要
 
@@ -47,13 +47,13 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_targets/types.py`
+> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（457 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（468 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 13 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 15 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -63,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 2 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8119｜fork 1011｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-11
+⭐ 8127｜fork 1013｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-13
 
 ---
 
