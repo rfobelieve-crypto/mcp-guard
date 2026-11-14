@@ -7,11 +7,11 @@
 | 稽核對象 | `umbraco/Umbraco-CMS-MCP-Dev` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 39 / 7 |
-| 最後更新 | 2026-11-12 |
+| 最後更新 | 2026-11-13 |
 | 授權 | MIT License |
 | npm 套件 | `@umbraco-cms/mcp-dev` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-13 01:48 |
+| 檢查時間 | 2026-11-14 01:22 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.28.0、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.47、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.47、dotenv@^16.5.0…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.2、@types/uuid@^10.0.0、@types/yargs@^17.0.33、@umbraco-cms/mcp-hosted@^1.0.0-beta.48、@umbraco-cms/mcp-server-sdk@^1.0.0-beta.48、dotenv@^16.5.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`jest.config.ts、jest.setup.ts、scripts/smoke-media-upload.mjs、scripts/test-changed.mjs、src/__tests__/cli-call-stdin.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 16 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 17 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39｜fork 7｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-11-12
+⭐ 39｜fork 7｜語言 TypeScript｜建立 2025-08-22｜最後推送 2026-11-13
 
 ---
 

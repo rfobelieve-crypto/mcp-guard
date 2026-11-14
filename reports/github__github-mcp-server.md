@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `github/github-mcp-server` |
 | 專案說明 | GitHub's official MCP Server |
-| 星數 / Fork | ⭐ 34419 / 5340 |
-| 最後更新 | 2026-11-12 |
+| 星數 / Fork | ⭐ 34446 / 5346 |
+| 最後更新 | 2026-11-13 |
 | 授權 | MIT License |
-| 已掃描檔案 | 397 個 |
-| 檢查時間 | 2026-11-13 01:41 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-11-14 01:17 |
 
 ## 風險摘要
 
@@ -18,35 +18,35 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 60 個外部主機
+### 🟡 中｜[權限] 會連往 48 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`GITHUB.EXAMPLE.COM、agent-plugins.org、anywhere.example.com、api.example.com、api.example.ghe.com、api.example.test、api.ghe.com、api.github.com.attacker.example、api.github.enterprise.com、api.github.test…`
+> 證據：`GITHUB.EXAMPLE.COM、agent-plugins.org、anywhere.example.com、api.example.com、api.example.ghe.com、api.example.test、api.github.com.attacker.example、api.github.enterprise.com、api.github.test、api.githubcopilot.com…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/issue-triage.lock.yml、.github/workflows/pr-triage.lock.yml、ui/scripts/build.mjs、ui/vite.config.ts`
+> 證據：`.github/workflows/issue-triage.lock.yml、.github/workflows/pr-triage.lock.yml`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`pkg/github/issues_test.go、pkg/sanitize/sanitize_test.go、ui/src/hooks/useMcpApp.ts`
+> 證據：`pkg/github/issues_test.go、pkg/sanitize/sanitize_test.go`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（456 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（457 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 19 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）`
+> 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、pkg/skills/catalog/skills/account-and-team-context/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/codebase-exploration/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/copilot-task-delegation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/discussion-participation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/issue-authoring/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 689 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 686 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 34419｜fork 5340｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-12
+⭐ 34446｜fork 5346｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-13
 
 ---
 

@@ -11,7 +11,7 @@
 | 授權 | MIT License |
 | npm 套件 | `healthclaw-guardrails-mcp`（registry 查無） |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-11-13 01:47 |
+| 檢查時間 | 2026-11-14 01:22 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ bidi 覆寫字元會讓「你在畫面上讀到的程式碼」與「編譯器實
 
 > 證據：`.github/workflows/careagents-deploy.yml、.github/workflows/careagents-drift.yml、.github/workflows/pr-risk.yml、.github/workflows/prod-watch.yml、api/index.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（113 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（122 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 

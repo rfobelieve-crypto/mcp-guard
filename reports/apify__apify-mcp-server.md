@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `apify/apify-mcp-server` |
 | 專案說明 | The Apify MCP server enables your AI agents to extract data from social media, s |
-| 星數 / Fork | ⭐ 15993 / 450 |
+| 星數 / Fork | ⭐ 16151 / 452 |
 | 最後更新 | 2026-11-13 |
 | 授權 | MIT License |
 | npm 套件 | `@apify/actors-mcp-server` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-13 01:46 |
+| 檢查時間 | 2026-11-14 01:21 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 62 個外部主機
+### 🟡 中｜[權限] 會連往 64 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`Acme-MCP-Server.apify.actor、a.com、acme-mcp-server.apify.actor、actor.example、agi.apify.com、api-securitybyobscurity.apify.com、api.apify.com、api.example.com、api.example.test、api.internal.example…`
+> 證據：`Acme-MCP-Server.apify.actor、a.com、acme-mcp-server.apify.actor、actor.example、actors-mcp-server.apify.actor、agi.apify.com、api-securitybyobscurity.apify.com、api.apify.com、api.example.com、api.example.test…`
 
-### 🔵 低｜[供應鏈] 有 29 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 28 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@apify/datastructures@^2.0.3、@apify/log@^2.5.16、@apify/utilities@^2.25.1、@modelcontextprotocol/ext-apps@^1.1.2、@segment/analytics-node@^2.3.0、@sentry/node@^10.78.0…`
+> 證據：`@apify/utilities@^2.25.1、@modelcontextprotocol/ext-apps@^1.1.2、@segment/analytics-node@^2.3.0、@sentry/node@^10.78.0、ajv@^8.17.1、algoliasearch@^5.31.0…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`evals/scripts/export_dataset.ts、src/utils/logging.ts、src/web/build.js、src/web/src/utils/mock-openai.ts、tests/unit/resources.service.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（270 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（263 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -87,7 +87,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 15993｜fork 450｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-11-13
+⭐ 16151｜fork 452｜語言 TypeScript｜建立 2025-01-02｜最後推送 2026-11-13
 
 ---
 

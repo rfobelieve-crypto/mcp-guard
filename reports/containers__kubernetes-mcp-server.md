@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2244 / 491 |
+| 星數 / Fork | ⭐ 2246 / 491 |
 | 最後更新 | 2026-11-13 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-13 01:46 |
+| 檢查時間 | 2026-11-14 01:21 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/mcpchecker-report.yaml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（146 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（142 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2244｜fork 491｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-13
+⭐ 2246｜fork 491｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-13
 
 ---
 

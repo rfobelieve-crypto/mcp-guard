@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1314 / 84 |
-| 最後更新 | 2026-11-12 |
+| 星數 / Fork | ⭐ 1314 / 85 |
+| 最後更新 | 2026-11-14 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 457 個 |
-| 檢查時間 | 2026-11-13 01:47 |
+| 檢查時間 | 2026-11-14 01:21 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 58 個外部主機
+### 🟡 中｜[權限] 會連往 61 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`10.metrics.example.com、127.metrics.example.com、192.168.example.com、a.b.localhost、access.redhat.com、analytics.internal.example.com、api.example.com、api.first.org、app.localhost、betterdb.com…`
+> 證據：`10.metrics.example.com、127.metrics.example.com、192.168.example.com、a.b.localhost、a.relay.internal、access.redhat.com、analytics.internal.example.com、api.example.com、api.first.org、app.localhost…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（62 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -101,7 +101,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1314｜fork 84｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-12
+⭐ 1314｜fork 85｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-14
 
 ---
 

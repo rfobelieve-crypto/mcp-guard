@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 30192 / 2752 |
-| 最後更新 | 2026-11-12 |
+| 星數 / Fork | ⭐ 30307 / 2754 |
+| 最後更新 | 2026-11-13 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 497 個 |
-| 檢查時間 | 2026-11-13 01:43 |
+| 檢查時間 | 2026-11-14 01:18 |
 
 ## 風險摘要
 
@@ -41,11 +41,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 36 個外部主機
+### 🟡 中｜[權限] 會連往 34 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`afdian.com、api.adoptium.net、api.atlascloud.ai、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、archive.ubuntu.com、azure.archive.ubuntu.com、cache.example.test…`
+> 證據：`afdian.com、api.adoptium.net、api.cloudflare.com、api.cnb.cool、api.deepseek.com、api.github.test、archive.ubuntu.com、azure.archive.ubuntu.com、cache.example.test、dbxio.com…`
 
 ### 🔵 低｜[供應鏈] 有 75 個依賴未鎖定版本
 
@@ -63,15 +63,15 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/actions-efficiency.test.mjs、.github/scripts/ai-issue-priority.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-change-base.mjs`
+> 證據：`.github/scripts/actions-efficiency.test.mjs、.github/scripts/backfill-similar-issues.mjs、.github/scripts/bump-agent-versions.mjs、.github/scripts/ci-change-base.mjs、.github/scripts/ci-change-base.test.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/ai-issue-priority.mjs、.github/scripts/ci-gradle.py、.github/scripts/ci-gradle.test.py、.github/scripts/ci-install-mold.test.py、.github/scripts/ci-install-system-deps.py`
+> 證據：`.github/scripts/ci-gradle.py、.github/scripts/ci-gradle.test.py、.github/scripts/ci-install-mold.test.py、.github/scripts/ci-install-system-deps.py、.github/scripts/ci-install-system-deps.test.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1804 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1792 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 48 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 42 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -99,7 +99,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-13`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 30192｜fork 2752｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-12
+⭐ 30307｜fork 2754｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-13
 
 ---
 
