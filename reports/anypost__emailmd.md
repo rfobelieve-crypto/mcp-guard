@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `anypost/emailmd` |
 | 專案說明 | Render markdown into email-safe HTML |
-| 星數 / Fork | ⭐ 1390 / 41 |
-| 最後更新 | 2026-11-13 |
+| 星數 / Fork | ⭐ 1391 / 41 |
+| 最後更新 | 2026-11-14 |
 | 授權 | MIT License |
 | npm 套件 | `emailmd-monorepo`（registry 查無） |
-| 已掃描檔案 | 209 個 |
-| 檢查時間 | 2026-11-14 01:21 |
+| 已掃描檔案 | 210 個 |
+| 檢查時間 | 2026-11-15 00:50 |
 
 ## 風險摘要
 
@@ -31,11 +31,11 @@
 
 > 證據：`apps/web/scripts/social-icons.mjs、packages/emailmd/tests/cli.test.ts`
 
-### 🟡 中｜[權限] 會連往 38 個外部主機
+### 🟡 中｜[權限] 會連往 40 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.com、acme.com、anypost.com、b.com、blog.example.com、c.com、cdn.example、cdn.example.com、claude.ai、e.example…`
+> 證據：`a.com、a.example、acme.com、anypost.com、b.com、b.example、blog.example.com、c.com、cdn.example、cdn.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 1 個依賴未鎖定版本
 
@@ -65,11 +65,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-13`
+> 證據：`最後推送 2026-11-14`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -79,7 +79,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1390｜fork 41｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-11-13
+⭐ 1391｜fork 41｜語言 TypeScript｜建立 2026-02-16｜最後推送 2026-11-14
 
 ---
 

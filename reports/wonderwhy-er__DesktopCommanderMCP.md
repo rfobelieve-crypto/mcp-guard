@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10306 / 1286 |
+| 星數 / Fork | ⭐ 10315 / 1286 |
 | 最後更新 | 2026-11-12 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-14 01:17 |
+| 檢查時間 | 2026-11-15 00:46 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count-tokens.js、scripts/ripgrep-wrapper.js、setup-claude-server.js、src/bootstrap.ts、src/remote-device/desktop-commander-integration.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（344 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（346 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10306｜fork 1286｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-12
+⭐ 10315｜fork 1286｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-12
 
 ---
 

@@ -10,7 +10,7 @@
 | 最後更新 | 2026-05-03 |
 | 授權 | MIT License |
 | 已掃描檔案 | 313 個 |
-| 檢查時間 | 2026-11-14 01:23 |
+| 檢查時間 | 2026-11-15 00:52 |
 
 ## 風險摘要
 
@@ -24,7 +24,7 @@
 
 > 證據：`astro.build、cloud.umami.is、dotenvx.com、feross.org、locize.com、midos.dev、opencollective.com、patreon.com、paulmillr.com、paypal.me…`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 
