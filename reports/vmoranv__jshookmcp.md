@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2114 / 465 |
-| 最後更新 | 2026-11-14 |
+| 星數 / Fork | ⭐ 2116 / 466 |
+| 最後更新 | 2026-11-15 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-15 00:49 |
+| 檢查時間 | 2026-11-16 00:49 |
 
 ## 風險摘要
 
@@ -57,7 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/count-tools.js、scripts/count-tools.mjs、scripts/generate-domains-index.mjs、scripts/runtime-probes/phases/browser/page-interaction.mjs、scripts/runtime-probes/phases/runtime-observability/console-intercept-jsdom.mjs`
+> 證據：`scripts/generate-domains-index.mjs、scripts/runtime-probes/phases/browser/page-interaction.mjs、scripts/runtime-probes/phases/runtime-observability/console-intercept-jsdom.mjs、scripts/scan-domain-audit.mjs、scripts/tune-env.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、skills/configuration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/getting-started/SKILL.md（Agent Skill 指令（SKILL.md））、skills/telemetry/SKILL.md（Agent Skill 指令（SKILL.md））、skills/tool-selection/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 59 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 55 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-14`
+> 證據：`最後推送 2026-11-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2114｜fork 465｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-14
+⭐ 2116｜fork 466｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-15
 
 ---
 

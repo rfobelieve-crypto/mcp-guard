@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5521 / 649 |
-| 最後更新 | 2026-11-14 |
+| 星數 / Fork | ⭐ 5522 / 650 |
+| 最後更新 | 2026-11-15 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-15 00:48 |
+| 檢查時間 | 2026-11-16 00:47 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`.github/scripts/release.py、.github/workflows/live_sources.yml、.github/workflows/mcp_registry.yml、.github/workflows/unit_tests.yml、docker-compose.yml`
 
-### 🟡 中｜[權限] 會連往 91 個外部主機
+### 🟡 中｜[權限] 會連往 92 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、api.bls.gov、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、app.example…`
+> 證據：`api.bls.gov、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、apps.bea.gov、arch.readthedocs.io…`
 
 ### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
@@ -46,7 +46,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/release.py、financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/fixedincome/fixedincome_controller.py、financetoolkit/helpers.py`
+> 證據：`.github/scripts/release.py、financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/base/base_controller.py、financetoolkit/fixedincome/base/base_controller.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-14`
+> 證據：`最後推送 2026-11-15`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5521｜fork 649｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-14
+⭐ 5522｜fork 650｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-15
 
 ---
 
