@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 56923 / 4811 |
-| 最後更新 | 2026-11-15 |
+| 星數 / Fork | ⭐ 57752 / 4855 |
+| 最後更新 | 2026-11-16 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
 | 已掃描檔案 | 361 個 |
-| 檢查時間 | 2026-11-16 00:46 |
+| 檢查時間 | 2026-11-17 03:25 |
 
 ## 風險摘要
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/footprint_mcp.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（133 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（128 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,11 +89,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-15`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 56923｜fork 4811｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-15
+⭐ 57752｜fork 4855｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-16
 
 ---
 

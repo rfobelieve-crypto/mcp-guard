@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 44176 / 4159 |
-| 最後更新 | 2026-11-16 |
+| 星數 / Fork | ⭐ 44183 / 4158 |
+| 最後更新 | 2026-11-17 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-16 00:46 |
+| 檢查時間 | 2026-11-17 03:25 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`src/backend/core/http/middleware/puterSite.ts`
+> 證據：`src/backend/clients/redis/RedisClient.test.ts、src/backend/core/http/middleware/puterSite.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44176｜fork 4159｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-16
+⭐ 44183｜fork 4158｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-17
 
 ---
 

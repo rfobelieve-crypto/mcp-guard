@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `Vrun-design/openflowkit` |
 | 專案說明 | Free, open-source diagram canvas. Draw it, write it as code (Mermaid, D2, Struct |
-| 星數 / Fork | ⭐ 982 / 183 |
+| 星數 / Fork | ⭐ 989 / 183 |
 | 最後更新 | 2026-11-07 |
 | 授權 | MIT License |
 | npm 套件 | `openflowkit-app`（registry 查無） |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-16 00:52 |
+| 檢查時間 | 2026-11-17 03:30 |
 
 ## 風險摘要
 
@@ -79,7 +79,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 10 天內有更新
 
 專案仍在活躍維護中。
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 982｜fork 183｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-11-07
+⭐ 989｜fork 183｜語言 TypeScript｜建立 2026-02-10｜最後推送 2026-11-07
 
 ---
 

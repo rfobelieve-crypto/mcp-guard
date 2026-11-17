@@ -7,11 +7,11 @@
 | 稽核對象 | `n24q02m/better-notion-mcp` |
 | 專案說明 | Markdown-first Notion for AI agents -- pages, databases, blocks, and comments in |
 | 星數 / Fork | ⭐ 36 / 11 |
-| 最後更新 | 2026-11-15 |
+| 最後更新 | 2026-11-17 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@n24q02m/notion` |
 | 已掃描檔案 | 131 個 |
-| 檢查時間 | 2026-11-16 00:52 |
+| 檢查時間 | 2026-11-17 03:31 |
 
 ## 風險摘要
 
@@ -41,7 +41,7 @@
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/sdk@^1.32.2、@n24q02m/hull@^0.7.0、@notionhq/client@^5.31.1、zod@^4.6.7、@biomejs/biome@^2.6.6、@types/node@^26.6.6…`
+> 證據：`@modelcontextprotocol/sdk@^1.32.2、@n24q02m/hull@^0.8.0、@notionhq/client@^5.31.1、zod@^4.6.7、@biomejs/biome@^2.6.6、@types/node@^26.6.6…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -75,11 +75,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-15`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-11-15
+⭐ 36｜fork 11｜語言 TypeScript｜建立 2025-12-06｜最後推送 2026-11-17
 
 ---
 

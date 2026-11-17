@@ -7,11 +7,11 @@
 | 稽核對象 | `cyanheads/cdc-health-mcp-server` |
 | 專案說明 | Search and query CDC public health data — mortality, vaccinations, surveillance, |
 | 星數 / Fork | ⭐ 5 / 0 |
-| 最後更新 | 2026-11-13 |
+| 最後更新 | 2026-11-16 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@cyanheads/cdc-health-mcp-server` |
-| 已掃描檔案 | 197 個 |
-| 檢查時間 | 2026-11-16 00:51 |
+| 已掃描檔案 | 217 個 |
+| 檢查時間 | 2026-11-17 03:30 |
 
 ## 風險摘要
 
@@ -19,17 +19,17 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 27 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`a.example、agent-plugins.org、api.us.socrata.com、b.example、caseyjhand.com、cdc.caseyjhand.com、cdn.ymaws.com、chronicdata.cdc.gov、custom-catalog.example.com、custom.cdc.gov…`
+> 證據：`a.example、agent-plugins.org、api.us.socrata.com、b.example、caseyjhand.com、cdc-mirror.example、cdc.caseyjhand.com、cdn.ymaws.com、chronicdata.cdc.gov、custom-catalog.example.com…`
 
-### 🔵 低｜[供應鏈] 有 12 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@cyanheads/mcp-ts-core@^0.13.18、pino-pretty@^13.2.0、zod@^4.6.7、@opentelemetry/api@^1.10.0、@socketsecurity/bun-security-scanner@^1.1.3、@vitest/coverage-istanbul@^5.0.5…`
+> 證據：`@cyanheads/mcp-ts-core@^0.13.22、@duckdb/node-api@^2.0.0-r.1、pino-pretty@^13.2.0、zod@^4.6.7、@opentelemetry/api@^1.10.0、@socketsecurity/bun-security-scanner@^1.1.3…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -49,7 +49,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、framework-skills/add-app-tool/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-prompt/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-resource/SKILL.md（Agent Skill 指令（SKILL.md））、framework-skills/add-service/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 11 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -63,11 +63,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-13`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -77,7 +77,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-11-13
+⭐ 5｜fork 0｜語言 TypeScript｜建立 2026-04-03｜最後推送 2026-11-16
 
 ---
 

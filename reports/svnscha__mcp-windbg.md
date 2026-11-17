@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `svnscha/mcp-windbg` |
 | 專案說明 | Model Context Protocol for WinDbg. |
-| 星數 / Fork | ⭐ 1672 / 170 |
-| 最後更新 | 2026-10-28 |
+| 星數 / Fork | ⭐ 1673 / 170 |
+| 最後更新 | 2026-11-16 |
 | 授權 | MIT License |
-| 已掃描檔案 | 124 個 |
-| 檢查時間 | 2026-11-16 00:50 |
+| 已掃描檔案 | 132 個 |
+| 檢查時間 | 2026-11-17 03:29 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`scripts/test_signing_http.py、scripts/validate-server-schema.py、src/mcp_windbg/cdb_session.py、src/mcp_windbg/debug_session.py、src/mcp_windbg/kd_session.py`
 
-### 🟡 中｜[權限] 會連往 4 個外部主機
+### 🟡 中｜[權限] 會連往 6 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`msdl.microsoft.com、static.modelcontextprotocol.io、svnscha.github.io、unpkg.com`
+> 證據：`go.microsoft.com、ifconfig.me、msdl.microsoft.com、static.modelcontextprotocol.io、svnscha.github.io、unpkg.com`
 
 ### 🔵 低｜[供應鏈] 有 4 個依賴未鎖定版本
 
@@ -66,13 +66,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 18 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-10-28`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1672｜fork 170｜語言 Python｜建立 2025-05-02｜最後推送 2026-10-28
+⭐ 1673｜fork 170｜語言 Python｜建立 2025-05-02｜最後推送 2026-11-16
 
 ---
 

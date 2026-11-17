@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4162 / 383 |
-| 最後更新 | 2026-11-15 |
+| 星數 / Fork | ⭐ 4163 / 384 |
+| 最後更新 | 2026-11-16 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
-| 已掃描檔案 | 406 個 |
-| 檢查時間 | 2026-11-16 00:48 |
+| 已掃描檔案 | 409 個 |
+| 檢查時間 | 2026-11-17 03:27 |
 
 ## 風險摘要
 
@@ -23,13 +23,13 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`e2e/cypress/common/flakyReport.ts、e2e/scripts/baseQuery/perf-test.sh`
+> 證據：`e2e/cypress/common/flakyReport.ts`
 
-### 🟡 中｜[權限] 會連往 25 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、app.tolgee.io、cdn.jsdelivr.net、cdndev.tolg.ee、docs.tolgee.io、dummy-url.com、e2e-site.test、extension.test、feross.org、grafana.com…`
+> 證據：`accounts.google.com、cdn.jsdelivr.net、cdndev.tolg.ee、dummy-url.com、e2e-site.test、extension.test、grafana.com、hibernate.atlassian.net、host.docker.internal、mock.test…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -43,7 +43,7 @@
 
 > 證據：`backend/app/build.gradle、backend/data/build.gradle、backend/testing/build.gradle、build.gradle、e2e/cypress/common/flakyReport.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（207 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（206 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -71,11 +71,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-15`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4162｜fork 383｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-11-15
+⭐ 4163｜fork 384｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-11-16
 
 ---
 

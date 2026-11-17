@@ -1,20 +1,20 @@
 # MCP 安檢報告：stripe/ai
 
-> **結論：🟡 需人工複核**　發現 4 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 2064 / 385 |
-| 最後更新 | 2026-11-16 |
+| 星數 / Fork | ⭐ 2069 / 385 |
+| 最後更新 | 2026-11-17 |
 | 授權 | MIT License |
 | 已掃描檔案 | 469 個 |
-| 檢查時間 | 2026-11-16 00:49 |
+| 檢查時間 | 2026-11-17 03:28 |
 
 ## 風險摘要
 
-🟠 高 4　🟡 中 1　🔵 低 3　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -22,19 +22,7 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「…M". allowed-tools: - Bash(stripe *) - Bash(which stripe) - Bash(curl -fsSL https://cli.stripe.com/install.sh | sh) - Bash(npx skills add https://docs.stripe.com *) - Skill - Rea…」（另 5 個檔案有相同內容）`
-
-### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
-
-叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
-
 > 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「```sh curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 5 個檔案有相同內容）`
-
-### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
-
-叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
-
-> 證據：`providers/agent-plugins/plugin/skills/stripe-projects/SKILL.md｜「…ce. allowed-tools: - Bash(stripe *) - Bash(which stripe) - Bash(curl -fsSL https://cli.stripe.com/install.sh | sh) - Skill - Read」（另 5 個檔案有相同內容）`
 
 ### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
 
@@ -88,11 +76,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2064｜fork 385｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-16
+⭐ 2069｜fork 385｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-17
 
 ---
 

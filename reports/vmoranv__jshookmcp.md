@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2116 / 466 |
-| 最後更新 | 2026-11-15 |
+| 星數 / Fork | ⭐ 2121 / 466 |
+| 最後更新 | 2026-11-16 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-16 00:49 |
+| 檢查時間 | 2026-11-17 03:28 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`afdian.com、codeload.github.com、developer.android.com、docs.codacy.com、docs.npmjs.com、docs.renovatebot.com、example.invalid、fonts.googleapis.com、fonts.gstatic.com、glama.ai…`
 
-### 🔵 低｜[供應鏈] 有 41 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 40 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/.vitepress/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-runtime-probes.mjs、scripts/audit-tools.mjs`
+> 證據：`docs/.vitepress/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-eval-consistency.mjs、scripts/audit-event-contracts.mjs、scripts/audit-runtime-probes.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-15`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2116｜fork 466｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-15
+⭐ 2121｜fork 466｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-16
 
 ---
 

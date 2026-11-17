@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `github/github-mcp-server` |
 | 專案說明 | GitHub's official MCP Server |
-| 星數 / Fork | ⭐ 34496 / 5354 |
-| 最後更新 | 2026-11-15 |
+| 星數 / Fork | ⭐ 34535 / 5362 |
+| 最後更新 | 2026-11-16 |
 | 授權 | MIT License |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-16 00:45 |
+| 檢查時間 | 2026-11-17 03:24 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`pkg/github/issues_test.go、pkg/sanitize/sanitize_test.go`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（463 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（460 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -46,7 +46,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、pkg/skills/catalog/skills/account-and-team-context/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/codebase-exploration/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/copilot-task-delegation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/discussion-participation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/issue-authoring/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 686 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 692 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-15`
+> 證據：`最後推送 2026-11-16`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 34496｜fork 5354｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-15
+⭐ 34535｜fork 5362｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-16
 
 ---
 

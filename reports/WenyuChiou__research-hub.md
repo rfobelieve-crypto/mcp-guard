@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `WenyuChiou/research-hub` |
 | 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
-| 星數 / Fork | ⭐ 68 / 15 |
+| 星數 / Fork | ⭐ 69 / 15 |
 | 最後更新 | 2026-11-16 |
 | 授權 | MIT License |
-| 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-11-16 00:52 |
+| 已掃描檔案 | 414 個 |
+| 檢查時間 | 2026-11-17 03:31 |
 
 ## 風險摘要
 
@@ -38,7 +38,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`networkx>=3.0,<4.0、httpx>=0.27,<1.0、jsonschema>=4.21,<5、platformdirs>=4.0,<6.0、pyzotero>=1.5.18,<2.0、pyyaml>=6,<7…`
+> 證據：`networkx>=3.0,<4.0、httpx>=0.28.1,<1.0、jsonschema>=4.21,<5、platformdirs>=4.0,<6.0、pyzotero>=1.5.18,<2.0、pyyaml>=6,<7…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -50,13 +50,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/check_ci_checkout.py、scripts/check_profile_bundle_compatibility.py、scripts/check_summary_consumer_recovery.py、scripts/check_summary_fault_boundaries.py、scripts/generate_sqlite_ui_fixture.py`
+> 證據：`scripts/check_ci_checkout.py、scripts/check_profile_bundle_compatibility.py、scripts/check_summary_consumer_recovery.py、scripts/check_summary_fault_boundaries.py、scripts/fail_first.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/check_ci_checkout.py、scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py、scripts/workspace_browser_library.py`
+> 證據：`scripts/check_ci_checkout.py、scripts/fail_first.py、scripts/verify_native_research_handoff.py、scripts/verify_setup.py、scripts/workspace_browser_fixtures.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 29 個代理指令檔
 
@@ -78,7 +78,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 68｜fork 15｜語言 Python｜建立 2026-04-06｜最後推送 2026-11-16
+⭐ 69｜fork 15｜語言 Python｜建立 2026-04-06｜最後推送 2026-11-16
 
 ---
 
