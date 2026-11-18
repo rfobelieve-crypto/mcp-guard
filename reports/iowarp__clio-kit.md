@@ -1,20 +1,20 @@
 # MCP 安檢報告：iowarp/clio-kit
 
-> **結論：🟡 需人工複核**　發現 3 項高風險項目，請逐項讀懂後再決定。
+> **結論：🟡 需人工複核**　發現 2 項高風險項目，請逐項讀懂後再決定。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `iowarp/clio-kit` |
 | 專案說明 | Bringing AI practically to science! |
-| 星數 / Fork | ⭐ 31 / 25 |
-| 最後更新 | 2026-11-17 |
+| 星數 / Fork | ⭐ 32 / 25 |
+| 最後更新 | 2026-11-18 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
-| 已掃描檔案 | 482 個 |
-| 檢查時間 | 2026-11-17 03:31 |
+| 已掃描檔案 | 491 個 |
+| 檢查時間 | 2026-11-18 02:51 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 2　🔵 低 3　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -30,21 +30,11 @@
 
 > 證據：`clio-agentic-search/src/clio_agentic_search/tasks.py、evals/claude_planner_eval.py、evals/codex_eval.py、evals/codex_fixtures.py、mcp-servers/adios/tests/test_lazy_import.py`
 
-### 🟠 高｜[權限] ⚠ 使用 eval / 動態執行程式碼（超出宣稱用途）
-
-動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
-
-> 證據：`mcp-servers/hdf5/src/hdf5_mcp/server.py`
-
-### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
-
-eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
-
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`arxiv.org、cesium.com、docs.hdfgroup.org、export.arxiv.org、nominatim.openstreetmap.org、static.modelcontextprotocol.io、tile.openstreetmap.org、toolkit.iowarp.ai、uploads.github.com`
+> 證據：`arxiv.org、bugs.chromium.org、bugs.webkit.org、bugzilla.mozilla.org、developer.mozilla.org、docs.astral.sh、download.pytorch.org、export.arxiv.org、hg.mozilla.org、mozilla.org…`
 
 ### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
 
@@ -72,7 +62,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/clio-dataset-report/skills/dataset-report/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/clio-slicer/skills/slicing/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/chart-select/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/data-clean/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 211 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 146 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -84,13 +74,13 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -100,7 +90,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31｜fork 25｜語言 Python｜建立 2025-04-30｜最後推送 2026-11-17
+⭐ 32｜fork 25｜語言 Python｜建立 2025-04-30｜最後推送 2026-11-18
 
 ---
 

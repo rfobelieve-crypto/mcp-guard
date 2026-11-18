@@ -7,11 +7,11 @@
 | 稽核對象 | `firebase/firebase-tools` |
 | 專案說明 | The Firebase Command Line Tools |
 | 星數 / Fork | ⭐ 4488 / 1286 |
-| 最後更新 | 2026-11-17 |
+| 最後更新 | 2026-11-18 |
 | 授權 | MIT License |
 | npm 套件 | `firebase-tools` |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-17 03:27 |
+| 檢查時間 | 2026-11-18 02:46 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "npm run sanitize:lockfile && npm run clean && npm run build:publish"`
 
-### 🟡 中｜[權限] 會連往 92 個外部主機
+### 🟡 中｜[權限] 會連往 93 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@electric-sql/pglite@^0.3.3、@electric-sql/pglite-tools@^0.2.8、@google-cloud/cloud-sql-connector@^1.3.3、@google-cloud/pubsub@^5.2.0、@inquirer/prompts@^7.10.1、@modelcontextprotocol/sdk@^1.24.0…`
+> 證據：`@electric-sql/pglite@^0.3.3、@electric-sql/pglite-tools@^0.2.8、@google-cloud/cloud-sql-connector@^1.3.3、@google-cloud/pubsub@^5.2.0、@inquirer/prompts@^7.10.1、@modelcontextprotocol/sdk@^1.32.2…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`firebase-vscode/src/core/quickstart.ts、firebase-vscode/src/extension.ts、firebase-vscode/src/test/default_wdio.conf.ts、firebase-vscode/src/test/utils/install-extensions.ts、scripts/emulator-tests/functionsEmulatorRuntime.spec.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1104 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1095 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -83,7 +83,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4488｜fork 1286｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-11-17
+⭐ 4488｜fork 1286｜語言 TypeScript｜建立 2013-12-23｜最後推送 2026-11-18
 
 ---
 

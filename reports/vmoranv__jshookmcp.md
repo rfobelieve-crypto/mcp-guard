@@ -7,11 +7,11 @@
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
 | 星數 / Fork | ⭐ 2121 / 466 |
-| 最後更新 | 2026-11-16 |
+| 最後更新 | 2026-11-17 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-17 03:28 |
+| 檢查時間 | 2026-11-18 02:48 |
 
 ## 風險摘要
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、skills/configuration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/getting-started/SKILL.md（Agent Skill 指令（SKILL.md））、skills/telemetry/SKILL.md（Agent Skill 指令（SKILL.md））、skills/tool-selection/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 55 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2121｜fork 466｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-16
+⭐ 2121｜fork 466｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-17
 
 ---
 

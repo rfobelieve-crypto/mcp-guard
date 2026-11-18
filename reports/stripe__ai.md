@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 2069 / 385 |
-| 最後更新 | 2026-11-17 |
+| 星數 / Fork | ⭐ 2072 / 385 |
+| 最後更新 | 2026-11-18 |
 | 授權 | MIT License |
-| 已掃描檔案 | 469 個 |
-| 檢查時間 | 2026-11-17 03:28 |
+| 已掃描檔案 | 475 個 |
+| 檢查時間 | 2026-11-18 02:48 |
 
 ## 風險摘要
 
@@ -52,11 +52,11 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 66 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 72 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`providers/agent-plugins/plugin/skills/connect-recommend/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/connect-required-verification-information/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/metronome/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-apps/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`providers/agent-plugins/plugin/skills/connect-recommend/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/connect-required-verification-information/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/metronome/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-apps/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、providers/agent-plugins/plugin/skills/stripe-bfcm-dashboard/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 63 段 description）
 
@@ -76,11 +76,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2069｜fork 385｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-17
+⭐ 2072｜fork 385｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-18
 
 ---
 

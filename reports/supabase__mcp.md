@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 3016 / 435 |
-| 最後更新 | 2026-11-16 |
+| 星數 / Fork | ⭐ 3018 / 436 |
+| 最後更新 | 2026-11-17 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 160 個 |
-| 檢查時間 | 2026-11-17 03:28 |
+| 已掃描檔案 | 173 個 |
+| 檢查時間 | 2026-11-18 02:47 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`actixlblmrqglneypada.supabase.co、ai-sdk.dev、api.example.com、api.supabase.com、api.supabase.green、api.supabase.green.example.com、app.acme.com、app.example.com、biomejs.dev、blog.modelcontextprotocol.io…`
 
-### 🔵 低｜[供應鏈] 有 2 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 3 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`pkg-pr-new@^0.0.68、supabase@^2.1.1`
+> 證據：`@modelcontextprotocol/inspector@^2.15.0、pkg-pr-new@^0.0.68、supabase@^2.1.1`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`scripts/dev-http.mjs、scripts/test-packed-platform-consumer.mjs`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（136 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（127 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -66,11 +66,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3016｜fork 435｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-11-16
+⭐ 3018｜fork 436｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-11-17
 
 ---
 

@@ -11,7 +11,7 @@
 | 授權 | GNU Lesser General Public License v3.0 |
 | npm 套件 | `@codefuturist/email-mcp` |
 | 已掃描檔案 | 250 個 |
-| 檢查時間 | 2026-11-17 03:31 |
+| 檢查時間 | 2026-11-18 02:51 |
 
 ## 風險摘要
 

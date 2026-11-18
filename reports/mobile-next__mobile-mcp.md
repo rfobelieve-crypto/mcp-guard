@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10628 / 950 |
-| 最後更新 | 2026-11-11 |
+| 星數 / Fork | ⭐ 10667 / 955 |
+| 最後更新 | 2026-11-17 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 80 個 |
-| 檢查時間 | 2026-11-17 03:26 |
+| 檢查時間 | 2026-11-18 02:46 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（69 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-11`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10628｜fork 950｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-11
+⭐ 10667｜fork 955｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-17
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `microsoft/playwright-mcp` |
 | 專案說明 | Playwright MCP server |
-| 星數 / Fork | ⭐ 39754 / 3449 |
-| 最後更新 | 2026-11-16 |
+| 星數 / Fork | ⭐ 39811 / 3451 |
+| 最後更新 | 2026-11-17 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@playwright/mcp` |
 | 已掃描檔案 | 35 個 |
-| 檢查時間 | 2026-11-17 03:24 |
+| 檢查時間 | 2026-11-18 02:44 |
 
 ## 風險摘要
 
@@ -47,7 +47,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`roll.js、tests/fixtures.ts、tests/library.spec.ts、update-readme.js`
+> 證據：`roll.js、tests/cli.spec.ts、tests/fixtures.ts、tests/library.spec.ts、update-readme.js`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-17`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 39754｜fork 3449｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-16
+⭐ 39811｜fork 3451｜語言 TypeScript｜建立 2025-03-21｜最後推送 2026-11-17
 
 ---
 

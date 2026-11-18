@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `screenpipe/screenpipe` |
-| 專案說明 | YC (S26) | Open Computer History | Continuously record your company computer wor |
-| 星數 / Fork | ⭐ 22403 / 2297 |
+| 專案說明 | YC (S26) | Screenpipe finds the work worth automating | Continuously record comp |
+| 星數 / Fork | ⭐ 22419 / 2301 |
 | 最後更新 | 2026-11-17 |
 | 授權 | Other |
 | 已掃描檔案 | 0 個 |
-| 檢查時間 | 2026-11-17 03:26 |
+| 檢查時間 | 2026-11-18 02:45 |
 
 > ⚠️ 倉庫過大（約 701 MB），已略過原始碼掃描：權限、投毒、供應鏈這幾項因此不完整，請自行檢視原始碼。
 
@@ -46,7 +46,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 22403｜fork 2297｜語言 Rust｜建立 2024-06-19｜最後推送 2026-11-17
+⭐ 22419｜fork 2301｜語言 Rust｜建立 2024-06-19｜最後推送 2026-11-17
 
 ---
 
