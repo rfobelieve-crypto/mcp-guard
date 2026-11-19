@@ -10,7 +10,7 @@
 | 最後更新 | 2026-02-07 |
 | 授權 | 無 |
 | 已掃描檔案 | 285 個 |
-| 檢查時間 | 2026-11-18 02:51 |
+| 檢查時間 | 2026-11-19 02:23 |
 
 ## 風險摘要
 
@@ -34,7 +34,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`YOUR-URL.ngrok-free.app、anthropic.com、api.notion.com、api.open-meteo.com、api.openai.com、api.openchargemap.io、api.slack.com、astral.sh、cdn.platform.openai.com、clerk.com…`
 
-### 🟡 中｜[維護] 約 9 個月沒有更新
+### 🟡 中｜[維護] 約 10 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

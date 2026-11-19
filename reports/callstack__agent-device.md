@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `callstack/agent-device` |
 | 專案說明 | Open source device layer for AI coding agents: a CLI, MCP server, and typed Node |
-| 星數 / Fork | ⭐ 5435 / 411 |
-| 最後更新 | 2026-11-18 |
+| 星數 / Fork | ⭐ 5444 / 415 |
+| 最後更新 | 2026-11-19 |
 | 授權 | MIT License |
 | npm 套件 | `agent-device` |
 | 已掃描檔案 | 444 個 |
-| 檢查時間 | 2026-11-18 02:47 |
+| 檢查時間 | 2026-11-19 02:19 |
 
 ## 風險摘要
 
@@ -37,7 +37,7 @@
 
 > 證據：`agent-device.dev、discourse.gnome.org、docs.renovatebot.com、en.wikipedia.org、get.maestro.mobile.dev、glama.ai、instance.invalid、metro.example.dev、news.ycombinator.com、reactnative.dev…`
 
-### 🔵 低｜[供應鏈] 有 27 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 23 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/actions/boot-ios-test-simulator/action.yml、.github/actions/setup-fixture-app/trusted-artifact.mjs、.github/actions/smoke-ios-run/action.yml、docs/evidence/ios-other-paths-latency-2026-10-19.json、examples/sdk/ai-sdk-tools.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（154 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（172 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,11 +81,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-19`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5435｜fork 411｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-11-18
+⭐ 5444｜fork 415｜語言 TypeScript｜建立 2026-01-30｜最後推送 2026-11-19
 
 ---
 

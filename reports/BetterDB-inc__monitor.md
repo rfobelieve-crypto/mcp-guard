@@ -7,11 +7,11 @@
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
 | 星數 / Fork | ⭐ 1315 / 85 |
-| 最後更新 | 2026-11-17 |
+| 最後更新 | 2026-11-18 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 458 個 |
-| 檢查時間 | 2026-11-18 02:49 |
+| 檢查時間 | 2026-11-19 02:21 |
 
 ## 風險摘要
 
@@ -57,9 +57,9 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/index-docs.ts`
+> 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/cluster-load/ports.ts、apps/api/scripts/cluster-load/remote-cluster.ts、apps/api/scripts/cluster-load/run.ts、apps/api/scripts/index-docs.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（59 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 488 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 490 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -101,7 +101,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1315｜fork 85｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-17
+⭐ 1315｜fork 85｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-18
 
 ---
 

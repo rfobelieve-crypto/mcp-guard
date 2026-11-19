@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10667 / 955 |
-| 最後更新 | 2026-11-17 |
+| 星數 / Fork | ⭐ 10693 / 957 |
+| 最後更新 | 2026-11-18 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 80 個 |
-| 檢查時間 | 2026-11-18 02:46 |
+| 已掃描檔案 | 81 個 |
+| 檢查時間 | 2026-11-19 02:19 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（73 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -65,7 +65,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`skills/mobile-automation/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 3 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 2 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10667｜fork 955｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-17
+⭐ 10693｜fork 957｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-18
 
 ---
 

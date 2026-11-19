@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 30646 / 2791 |
+| 星數 / Fork | ⭐ 30799 / 2805 |
 | 最後更新 | 2026-11-18 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
-| 已掃描檔案 | 497 個 |
-| 檢查時間 | 2026-11-18 02:45 |
+| 已掃描檔案 | 498 個 |
+| 檢查時間 | 2026-11-19 02:18 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/ci-gradle.py、.github/scripts/ci-gradle.test.py、.github/scripts/ci-install-mold.test.py、.github/scripts/ci-install-system-deps.py、.github/scripts/ci-install-system-deps.test.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1730 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1775 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`skills/dbx/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 42 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 43 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 30646｜fork 2791｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-18
+⭐ 30799｜fork 2805｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-18
 
 ---
 

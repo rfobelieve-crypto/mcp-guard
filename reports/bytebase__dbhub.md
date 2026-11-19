@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `bytebase/dbhub` |
 | 專案說明 | Token conscious database MCP server for Postgres, MySQL, SQL Server, Oracle, Mar |
-| 星數 / Fork | ⭐ 3869 / 339 |
-| 最後更新 | 2026-11-17 |
+| 星數 / Fork | ⭐ 3876 / 342 |
+| 最後更新 | 2026-11-18 |
 | 授權 | MIT License |
 | npm 套件 | `dbhub` |
-| 已掃描檔案 | 278 個 |
-| 檢查時間 | 2026-11-18 02:47 |
+| 已掃描檔案 | 293 個 |
+| 檢查時間 | 2026-11-19 02:20 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 20 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`app.internal、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、glama.ai、mintlify.com、registry.modelcontextprotocol.io、static.modelcontextprotocol.io…`
+> 證據：`app.internal、bucket.s3.amazonaws.com、ch.example.com、coss.com、database.windows.net、dbhub.ai、evil.attacker.test、evil.com、glama.ai、mintlify.com…`
 
 ### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
 
@@ -49,19 +49,19 @@
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/build-mcpb.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/connectors/__tests__/postgres-client-cert.integration.test.ts`
+> 證據：`scripts/build-mcpb.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/spawn-http-server.ts、src/connectors/__tests__/clickhouse.test.ts、src/connectors/__tests__/postgres-client-cert.integration.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/mcpb-common.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/config/__tests__/env.test.ts`
+> 證據：`scripts/mcpb-common.mjs、scripts/smoke-test-mcpb.mjs、src/__tests__/spawn-http-server.ts、src/config/__tests__/env.test.ts、src/config/__tests__/ssh-config-integration.test.ts`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/sync-version.mjs、src/__tests__/http-bind-host.integration.test.ts、src/__tests__/json-rpc-integration.test.ts、src/__tests__/plugin-consistency.test.ts、src/config/__tests__/env.test.ts`
+> 證據：`scripts/sync-version.mjs、src/__tests__/plugin-consistency.test.ts、src/__tests__/spawn-http-server.ts、src/config/__tests__/env.test.ts、src/config/__tests__/toml-loader.test.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
@@ -69,7 +69,7 @@
 
 > 證據：`.claude/skills/fix-bug/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/testing/SKILL.md（Agent Skill 指令（SKILL.md））、.github/copilot-instructions.md（GitHub Copilot 指令）、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugin/skills/explore/SKILL.md（Agent Skill 指令（SKILL.md））、plugin/skills/setup/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 8 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 9 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,11 +83,11 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-17`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +97,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3869｜fork 339｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-11-17
+⭐ 3876｜fork 342｜語言 TypeScript｜建立 2025-03-09｜最後推送 2026-11-18
 
 ---
 

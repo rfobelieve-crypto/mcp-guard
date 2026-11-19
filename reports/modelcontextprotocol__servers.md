@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Reference Servers |
-| 星數 / Fork | ⭐ 92074 / 11976 |
-| 最後更新 | 2026-11-12 |
+| 星數 / Fork | ⭐ 92090 / 11978 |
+| 最後更新 | 2026-11-18 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 386 個 |
-| 檢查時間 | 2026-11-18 02:44 |
+| 已掃描檔案 | 401 個 |
+| 檢查時間 | 2026-11-19 02:16 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 26 個外部主機
+### 🟡 中｜[權限] 會連往 40 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`anycast.example.com、docs.astral.sh、docs.example.com、elsewhere.example、eslint.org、example.jp、feross.org、internal.example.com、intranet.example.com、l.example…`
+> 證據：`anycast.example.com、docs.astral.sh、docs.example.com、elsewhere.example、eslint.org、evil.example、example.jp、feross.org、first.test、git.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 130 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 122 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -85,17 +85,17 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-12`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 92074｜fork 11976｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-12
+⭐ 92090｜fork 11978｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-18
 
 ---
 

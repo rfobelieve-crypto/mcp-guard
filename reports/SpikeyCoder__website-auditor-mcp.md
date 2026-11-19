@@ -7,11 +7,11 @@
 | 稽核對象 | `SpikeyCoder/website-auditor-mcp` |
 | 專案說明 | （無） |
 | 星數 / Fork | ⭐ 1 / 0 |
-| 最後更新 | 2026-11-13 |
+| 最後更新 | 2026-11-18 |
 | 授權 | MIT License |
 | npm 套件 | `website-auditor-mcp` |
-| 已掃描檔案 | 155 個 |
-| 檢查時間 | 2026-11-18 02:50 |
+| 已掃描檔案 | 156 個 |
+| 檢查時間 | 2026-11-19 02:22 |
 
 ## 風險摘要
 
@@ -49,11 +49,11 @@
 
 > 證據：`tests/codexPluginPack.test.ts、tests/codexPluginVersion.test.ts、tests/releaseFinishesWhatItStarts.test.ts`
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 10 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 11 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`codex-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/build-growth-plan/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/check-ai-visibility/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/compare-to-competitor/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/see-sample-report/SKILL.md（Agent Skill 指令（SKILL.md））、cursor-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））…`
+> 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、codex-plugin/skills/audit-my-site/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/build-growth-plan/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/check-ai-visibility/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/compare-to-competitor/SKILL.md（Agent Skill 指令（SKILL.md））、codex-plugin/skills/see-sample-report/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
 ### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 33 段 description）
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-13`
+> 證據：`最後推送 2026-11-18`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-11-13
+⭐ 1｜fork 0｜語言 TypeScript｜建立 2026-07-01｜最後推送 2026-11-18
 
 ---
 
