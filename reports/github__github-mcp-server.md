@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `github/github-mcp-server` |
 | 專案說明 | GitHub's official MCP Server |
-| 星數 / Fork | ⭐ 34571 / 5373 |
-| 最後更新 | 2026-11-18 |
+| 星數 / Fork | ⭐ 34596 / 5375 |
+| 最後更新 | 2026-11-19 |
 | 授權 | MIT License |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-19 02:16 |
+| 已掃描檔案 | 405 個 |
+| 檢查時間 | 2026-11-20 02:01 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 49 個外部主機
+### 🟡 中｜[權限] 會連往 50 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -36,7 +36,7 @@
 
 > 證據：`pkg/github/issues_test.go、pkg/sanitize/sanitize_test.go`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（469 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（448 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -46,7 +46,7 @@
 
 > 證據：`.github/copilot-instructions.md（GitHub Copilot 指令）、pkg/skills/catalog/skills/account-and-team-context/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/codebase-exploration/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/copilot-task-delegation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/discussion-participation/SKILL.md（Agent Skill 指令（SKILL.md））、pkg/skills/catalog/skills/issue-authoring/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 692 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 715 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -64,7 +64,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 34571｜fork 5373｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-18
+⭐ 34596｜fork 5375｜語言 Go｜建立 2025-03-04｜最後推送 2026-11-19
 
 ---
 

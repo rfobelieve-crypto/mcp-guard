@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `supabase/mcp` |
 | 專案說明 | Connect Supabase to your AI assistants |
-| 星數 / Fork | ⭐ 3018 / 437 |
-| 最後更新 | 2026-11-18 |
+| 星數 / Fork | ⭐ 3019 / 437 |
+| 最後更新 | 2026-11-19 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 172 個 |
-| 檢查時間 | 2026-11-19 02:20 |
+| 已掃描檔案 | 201 個 |
+| 檢查時間 | 2026-11-20 02:05 |
 
 ## 風險摘要
 
@@ -24,17 +24,17 @@
 
 > 證據：`actixlblmrqglneypada.supabase.co、ai-sdk.dev、api.example.com、api.supabase.com、api.supabase.green、api.supabase.green.example.com、app.acme.com、app.example.com、biomejs.dev、blog.modelcontextprotocol.io…`
 
-### 🔵 低｜[供應鏈] 有 3 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@modelcontextprotocol/inspector@^2.15.0、pkg-pr-new@^0.0.68、supabase@^2.1.1`
+> 證據：`@modelcontextprotocol/inspector@^2.15.0、concurrently@^10.0.7、pkg-pr-new@^0.0.68、supabase@^2.1.1、wait-on@^9.5.1`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/mcp-server-supabase/src/cli.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts`
+> 證據：`packages/mcp-server-supabase/dev/mock-api.ts、packages/mcp-server-supabase/src/cli.ts、packages/mcp-server-supabase/test/stdio.integration.ts、packages/mcp-server-supabase/vitest.setup.ts、scripts/dev-mock.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -46,13 +46,13 @@
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 2 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
-> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））`
+> 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、packages/mcp-ui/.agents/skills/mcp-ui-css/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 53 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -70,7 +70,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3018｜fork 437｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-11-18
+⭐ 3019｜fork 437｜語言 TypeScript｜建立 2024-12-20｜最後推送 2026-11-19
 
 ---
 

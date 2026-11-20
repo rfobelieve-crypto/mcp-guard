@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `idosal/git-mcp` |
 | 專案說明 | Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP ser |
-| 星數 / Fork | ⭐ 8527 / 766 |
+| 星數 / Fork | ⭐ 8530 / 767 |
 | 最後更新 | 2026-05-08 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `git-mcp` |
 | 已掃描檔案 | 120 個 |
-| 檢查時間 | 2026-11-19 02:17 |
+| 檢查時間 | 2026-11-20 02:01 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`augmentcode.com、autorag-cache.gitmcp.internal、biomejs.dev、cdn.prod.website-files.com、cdn.tailwindcss.com、chat-api-worker.idosalomon.workers.dev、claude.ai、cline.bot、cline.tools、code.visualstudio.com…`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8527｜fork 766｜語言 TypeScript｜建立 2025-03-29｜最後推送 2026-05-08
+⭐ 8530｜fork 767｜語言 TypeScript｜建立 2025-03-29｜最後推送 2026-05-08
 
 ---
 

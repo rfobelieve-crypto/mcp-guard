@@ -7,11 +7,11 @@
 | 稽核對象 | `akutishevsky/nutrition-mcp` |
 | 專案說明 | A remote MCP server for personal nutrition tracking — log meals, track macros, a |
 | 星數 / Fork | ⭐ 98 / 34 |
-| 最後更新 | 2026-11-18 |
+| 最後更新 | 2026-11-19 |
 | 授權 | MIT License |
 | npm 套件 | `nutrition-mcp` |
-| 已掃描檔案 | 312 個 |
-| 檢查時間 | 2026-11-19 02:22 |
+| 已掃描檔案 | 270 個 |
+| 檢查時間 | 2026-11-20 02:07 |
 
 ## 風險摘要
 
@@ -35,11 +35,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 53 個外部主機
+### 🟡 中｜[權限] 會連往 52 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`-a.example、a-.example、a-b.example、a.example、accounts.google.com、analytics.google.com、api.nal.usda.gov、blog.modelcontextprotocol.io、c.bing.com、cdn.jsdelivr.net…`
+> 證據：`-a.example、a-.example、a-b.example、a.example、accounts.google.com、analytics.google.com、api.nal.usda.gov、c.bing.com、cdn.jsdelivr.net、chatgpt.com…`
 
 ### 🔵 低｜[供應鏈] 有 6 個依賴未鎖定版本
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、public/llms.txt（給模型讀的站點說明（llms.txt））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1017 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 251 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 98｜fork 34｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-11-18
+⭐ 98｜fork 34｜語言 TypeScript｜建立 2026-03-08｜最後推送 2026-11-19
 
 ---
 

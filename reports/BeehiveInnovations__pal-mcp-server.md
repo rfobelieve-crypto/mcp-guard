@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `BeehiveInnovations/pal-mcp-server` |
 | 專案說明 | The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter  |
-| 星數 / Fork | ⭐ 11842 / 1038 |
+| 星數 / Fork | ⭐ 11846 / 1039 |
 | 最後更新 | 2025-12-15 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-11-19 02:17 |
+| 檢查時間 | 2026-11-20 02:02 |
 
 ## 風險摘要
 
@@ -60,7 +60,7 @@
 
 > 證據：`clink/agents/base.py、run-server.sh、simulator_tests/test_analyze_validation.py、simulator_tests/test_codereview_validation.py、simulator_tests/test_debug_validation.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（156 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（155 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11842｜fork 1038｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15
+⭐ 11846｜fork 1039｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15
 
 ---
 

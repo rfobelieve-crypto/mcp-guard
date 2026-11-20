@@ -9,8 +9,8 @@
 | 星數 / Fork | ⭐ 32 / 25 |
 | 最後更新 | 2026-11-19 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
-| 已掃描檔案 | 498 個 |
-| 檢查時間 | 2026-11-19 02:23 |
+| 已掃描檔案 | 500 個 |
+| 檢查時間 | 2026-11-20 02:09 |
 
 ## 風險摘要
 
@@ -62,7 +62,7 @@
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、plugins/clio-dataset-report/skills/dataset-report/SKILL.md（Agent Skill 指令（SKILL.md））、plugins/clio-slicer/skills/slicing/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/chart-select/SKILL.md（Agent Skill 指令（SKILL.md））、skills/clio-analysis-skills/skills/data-clean/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 153 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 155 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 8181 / 1033 |
-| 最後更新 | 2026-11-18 |
+| 星數 / Fork | ⭐ 8178 / 1038 |
+| 最後更新 | 2026-11-19 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
-| 已掃描檔案 | 457 個 |
-| 檢查時間 | 2026-11-19 02:19 |
+| 已掃描檔案 | 459 個 |
+| 檢查時間 | 2026-11-20 02:04 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 11 個外部主機
+### 🟡 中｜[權限] 會連往 10 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.repowise.dev、cursor.com、developers.openai.com、docs.claude.com、docs.github.com、evil.example、glama.ai、npm.pkg.github.com、repowise.dev、rubygems.org…`
+> 證據：`api.repowise.dev、cursor.com、developers.openai.com、docs.claude.com、evil.example、glama.ai、npm.pkg.github.com、repowise.dev、rubygems.org、www.repowise.dev`
 
 ### 🔵 低｜[供應鏈] 有 33 個依賴未鎖定版本
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（450 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（417 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-19`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8181｜fork 1033｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-18
+⭐ 8178｜fork 1038｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-19
 
 ---
 
