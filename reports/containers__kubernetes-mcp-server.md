@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `containers/kubernetes-mcp-server` |
 | 專案說明 | Model Context Protocol (MCP) server for Kubernetes and OpenShift |
-| 星數 / Fork | ⭐ 2267 / 492 |
+| 星數 / Fork | ⭐ 2270 / 492 |
 | 最後更新 | 2026-11-20 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 404 個 |
-| 檢查時間 | 2026-11-20 02:06 |
+| 檢查時間 | 2026-11-21 02:03 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 11 個外部主機
+### 🟡 中｜[權限] 會連往 12 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、kubernetes.default.svc、kubernetes.io、kubevirt.io、login.microsoftonline.com…`
+> 證據：`docs.npmjs.com、gateway-api.sigs.k8s.io、helm.sh、istio.io、keycloak.keycloak.svc、kiali.io、korrel8r.github.io、kubernetes.default.svc、kubernetes.io、kubevirt.io…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -36,7 +36,7 @@
 
 > 證據：`.github/workflows/mcpchecker-report.yaml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（147 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（145 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -74,7 +74,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2267｜fork 492｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-20
+⭐ 2270｜fork 492｜語言 Go｜建立 2025-02-11｜最後推送 2026-11-20
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `firecrawl/firecrawl-mcp-server` |
 | 專案說明 | Official Firecrawl MCP server, the context API for AI agents: search, scrape, an |
-| 星數 / Fork | ⭐ 7864 / 939 |
-| 最後更新 | 2026-11-19 |
+| 星數 / Fork | ⭐ 7872 / 940 |
+| 最後更新 | 2026-11-20 |
 | 授權 | MIT License |
 | npm 套件 | `firecrawl-mcp` |
 | 已掃描檔案 | 131 個 |
-| 檢查時間 | 2026-11-20 02:01 |
+| 檢查時間 | 2026-11-21 01:58 |
 
 ## 風險摘要
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/surface-common.mjs、src/index.ts、src/mcp/runtime.ts、src/service/auth.ts、src/service/profiles.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（198 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（200 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -81,7 +81,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-19`
+> 證據：`最後推送 2026-11-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 7864｜fork 939｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-11-19
+⭐ 7872｜fork 940｜語言 JavaScript｜建立 2024-12-06｜最後推送 2026-11-20
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 58377 / 4876 |
-| 最後更新 | 2026-11-19 |
+| 星數 / Fork | ⭐ 58547 / 4885 |
+| 最後更新 | 2026-11-20 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
 | 已掃描檔案 | 366 個 |
-| 檢查時間 | 2026-11-20 02:02 |
+| 檢查時間 | 2026-11-21 01:59 |
 
 ## 風險摘要
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/footprint_mcp.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（135 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（138 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-19`
+> 證據：`最後推送 2026-11-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 58377｜fork 4876｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-19
+⭐ 58547｜fork 4885｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-20
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `MervinPraison/PraisonAI` |
 | 專案說明 | Private AI agents for highly regulated teams, and for anyone who wants AI on the |
-| 星數 / Fork | ⭐ 9345 / 1514 |
-| 最後更新 | 2026-11-19 |
+| 星數 / Fork | ⭐ 9374 / 1522 |
+| 最後更新 | 2026-11-20 |
 | 授權 | MIT License |
 | 已掃描檔案 | 443 個 |
-| 檢查時間 | 2026-11-20 02:03 |
+| 檢查時間 | 2026-11-21 02:00 |
 
 ## 風險摘要
 
@@ -58,7 +58,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/outsider-review.js、.github/scripts/release-gate.js、examples/catalog/run_all_catalog_examples.py、examples/doctor/ci_integration.py、examples/endpoints_example.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（106 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（118 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -82,11 +82,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-19`
+> 證據：`最後推送 2026-11-20`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -96,7 +96,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 9345｜fork 1514｜語言 Python｜建立 2024-03-19｜最後推送 2026-11-19
+⭐ 9374｜fork 1522｜語言 Python｜建立 2024-03-19｜最後推送 2026-11-20
 
 ---
 

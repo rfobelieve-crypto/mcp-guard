@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28673 / 2631 |
-| 最後更新 | 2026-11-20 |
+| 星數 / Fork | ⭐ 28695 / 2634 |
+| 最後更新 | 2026-11-21 |
 | 授權 | Apache License 2.0 |
 | 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-11-20 02:02 |
+| 檢查時間 | 2026-11-21 01:59 |
 
 ## 風險摘要
 
@@ -18,11 +18,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 40 個外部主機
+### 🟡 中｜[權限] 會連往 41 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agents-md-generator.fastmcp.app、api.example.com、api.mintlify.com、api.prefect.cloud、api.surgemsg.com、api2.amplitude.com、app.prefect.cloud、archive.org、attacker.example、bsky.app…`
+> 證據：`agents-md-generator.fastmcp.app、api.anthropic.com、api.example.com、api.mintlify.com、api.prefect.cloud、api.surgemsg.com、api2.amplitude.com、app.prefect.cloud、archive.org、attacker.example…`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -42,7 +42,7 @@
 
 > 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/tests/test_agentic_claims.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（233 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（238 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.agents/skills/adversarial-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 34 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 30 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-21`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28673｜fork 2631｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-20
+⭐ 28695｜fork 2634｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-21
 
 ---
 

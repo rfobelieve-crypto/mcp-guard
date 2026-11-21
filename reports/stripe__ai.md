@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 2074 / 384 |
-| 最後更新 | 2026-11-20 |
+| 星數 / Fork | ⭐ 2076 / 385 |
+| 最後更新 | 2026-11-21 |
 | 授權 | MIT License |
-| 已掃描檔案 | 469 個 |
-| 檢查時間 | 2026-11-20 02:06 |
+| 已掃描檔案 | 480 個 |
+| 檢查時間 | 2026-11-21 02:03 |
 
 ## 風險摘要
 
@@ -22,13 +22,13 @@
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「```sh curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 5 個檔案有相同內容）`
+> 證據：`providers/agent-plugins/plugin/skills/stripe-directory/SKILL.md｜「```sh curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 6 個檔案有相同內容）`
 
 ### 🟠 高｜[代理指令檔] 指令檔要求下載並直接執行遠端腳本
 
 叫模型把遠端內容直接餵進 shell，執行的是什麼由對方伺服器當下決定——你稽核過的原始碼完全管不到它。
 
-> 證據：`providers/agent-plugins/plugin/skills/stripe-projects/SKILL.md｜「```bash curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 5 個檔案有相同內容）`
+> 證據：`providers/agent-plugins/plugin/skills/stripe-projects/SKILL.md｜「```bash curl -fsSL https://cli.stripe.com/install.sh | sh ```」（另 6 個檔案有相同內容）`
 
 ### 🟡 中｜[權限] 會連往 26 個外部主機
 
@@ -52,7 +52,7 @@
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
 
-### ⚪ 資訊｜[代理指令檔] 已掃描 66 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 77 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
@@ -76,11 +76,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-21`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2074｜fork 384｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-20
+⭐ 2076｜fork 385｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-21
 
 ---
 

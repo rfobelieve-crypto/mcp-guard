@@ -7,11 +7,11 @@
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
 | 星數 / Fork | ⭐ 3465 / 214 |
-| 最後更新 | 2026-11-19 |
+| 最後更新 | 2026-11-21 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
-| 已掃描檔案 | 278 個 |
-| 檢查時間 | 2026-11-20 02:05 |
+| 已掃描檔案 | 282 個 |
+| 檢查時間 | 2026-11-21 02:02 |
 
 ## 風險摘要
 
@@ -25,7 +25,7 @@
 
 > 證據：`docs.github.com、opencollective.com、paulmillr.com、rv-grid.com、stenciljs.com、tidelift.com`
 
-### 🔵 低｜[供應鏈] 有 33 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 32 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
@@ -41,7 +41,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/hydrate-types.plugin.ts、scripts/package-version.mjs`
+> 證據：`scripts/demo-dropdown-styles.plugin.ts、scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/hydrate-types.plugin.ts、scripts/package-version.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -73,7 +73,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-19`
+> 證據：`最後推送 2026-11-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3465｜fork 214｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-19
+⭐ 3465｜fork 214｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-21
 
 ---
 

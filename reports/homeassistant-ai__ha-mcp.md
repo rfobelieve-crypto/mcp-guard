@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | Configure and automate Home Assistant with Claude, ChatGPT, and other AI assista |
-| 星數 / Fork | ⭐ 8001 / 472 |
-| 最後更新 | 2026-11-20 |
+| 星數 / Fork | ⭐ 8025 / 469 |
+| 最後更新 | 2026-11-21 |
 | 授權 | MIT License |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-20 02:04 |
+| 檢查時間 | 2026-11-21 02:01 |
 
 ## 風險摘要
 
@@ -70,7 +70,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.claude/skills/bat-adhoc/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/bat-story-eval/references/evaluation-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/bat-story-eval/references/regression-protocol.md（AI 客戶端設定目錄下的指令檔）、.claude/skills/contrib-pr-review/SKILL.md（Agent Skill 指令（SKILL.md））、.claude/skills/contributors-update/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 23 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 20 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-21`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8001｜fork 472｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-20
+⭐ 8025｜fork 469｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-21
 
 ---
 
