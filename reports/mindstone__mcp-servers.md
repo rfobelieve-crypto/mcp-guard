@@ -7,10 +7,10 @@
 | 稽核對象 | `mindstone/mcp-servers` |
 | 專案說明 | Production-ready MCP connectors for popular SaaS tools. Works with Claude Deskto |
 | 星數 / Fork | ⭐ 14 / 4 |
-| 最後更新 | 2026-11-16 |
+| 最後更新 | 2026-11-22 |
 | 授權 | Other |
-| 已掃描檔案 | 438 個 |
-| 檢查時間 | 2026-11-21 02:05 |
+| 已掃描檔案 | 440 個 |
+| 檢查時間 | 2026-11-22 01:04 |
 
 ## 風險摘要
 
@@ -24,11 +24,11 @@
 
 > 證據：`connectors/browserbase/src/tools/agent-runs.ts｜「Start an agent run: an AI agent drives a cloud browser to accomplish a natural-language task (extract data, fill forms, 」`
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 43 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`acme.zendesk.com、api.browserbase.com、api.elevenlabs.io、api.example.com、api.machines.dev、cdn.browserbase.com、compute.googleapis.com、console.cloud.google.com、docs.example.com、e2b.dev…`
+> 證據：`COMPUTE.googleapis.com、acme.zendesk.com、api.browserbase.com、api.elevenlabs.io、api.example.com、api.machines.dev、app.example.com、callbacks.example.com、cdn.browserbase.com、compute.googleapis.com…`
 
 ### 🔵 低｜[工具描述投毒] 描述含「優先呼叫本工具」的措辭
 
@@ -78,11 +78,11 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-16`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ THIS IS YOUR PRIMARY DISCOVERY TOOL. Always call t」`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-16
+⭐ 14｜fork 4｜語言 TypeScript｜建立 2026-04-08｜最後推送 2026-11-22
 
 ---
 

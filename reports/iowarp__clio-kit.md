@@ -7,14 +7,14 @@
 | 稽核對象 | `iowarp/clio-kit` |
 | 專案說明 | Bringing AI practically to science! |
 | 星數 / Fork | ⭐ 32 / 25 |
-| 最後更新 | 2026-11-20 |
+| 最後更新 | 2026-11-22 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
 | 已掃描檔案 | 500 個 |
-| 檢查時間 | 2026-11-21 02:06 |
+| 檢查時間 | 2026-11-22 01:05 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -56,6 +56,10 @@
 
 > 證據：`clio-agentic-search/src/clio_agentic_search/api/app.py、clio-agentic-search/src/clio_agentic_search/connectors/filesystem/connector.py、clio-agentic-search/src/clio_agentic_search/connectors/object_store/connector.py、clio-agentic-search/src/clio_agentic_search/core/namespace_config.py、clio-agentic-search/src/clio_agentic_search/core/namespace_registry.py`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 63 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -80,7 +84,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -90,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 32｜fork 25｜語言 Python｜建立 2025-04-30｜最後推送 2026-11-20
+⭐ 32｜fork 25｜語言 Python｜建立 2025-04-30｜最後推送 2026-11-22
 
 ---
 

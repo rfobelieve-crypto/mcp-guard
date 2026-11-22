@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Reference Servers |
-| 星數 / Fork | ⭐ 92136 / 11971 |
+| 星數 / Fork | ⭐ 92146 / 11973 |
 | 最後更新 | 2026-11-19 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-21 01:58 |
+| 檢查時間 | 2026-11-22 00:57 |
 
 ## 風險摘要
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 92136｜fork 11971｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-19
+⭐ 92146｜fork 11973｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-19
 
 ---
 

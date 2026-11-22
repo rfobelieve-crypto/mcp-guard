@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JerBouma/FinanceToolkit` |
 | 專案說明 | Transparent and Efficient Financial Analysis |
-| 星數 / Fork | ⭐ 5546 / 654 |
-| 最後更新 | 2026-11-19 |
+| 星數 / Fork | ⭐ 5554 / 655 |
+| 最後更新 | 2026-11-22 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-21 02:00 |
+| 檢查時間 | 2026-11-22 01:00 |
 
 ## 風險摘要
 
@@ -30,11 +30,11 @@
 
 > 證據：`.github/scripts/release.py、.github/workflows/live_sources.yml、.github/workflows/mcp_registry.yml、.github/workflows/unit_tests.yml、docker-compose.yml`
 
-### 🟡 中｜[權限] 會連往 92 個外部主機
+### 🟡 中｜[權限] 會連往 101 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.bls.gov、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、apisidra.ibge.gov.br、apps.bea.gov、arch.readthedocs.io…`
+> 證據：`api.bls.gov、api.example、api.fiscaldata.treasury.gov、api.imf.org、api.manager.ece.iiasa.ac.at、api.riksbank.se、api.statistiken.bundesbank.de、api.stlouisfed.org、api.worldbank.org、apisidra.ibge.gov.br…`
 
 ### 🔵 低｜[供應鏈] 有 8 個依賴未鎖定版本
 
@@ -46,13 +46,13 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/scripts/release.py、financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/base/base_controller.py、financetoolkit/fixedincome/base/base_controller.py`
+> 證據：`.github/scripts/release.py、financetoolkit/cache/cache_controller.py、financetoolkit/discovery/discovery_controller.py、financetoolkit/economics/economics_controller.py、financetoolkit/fixedincome/fixedincome_controller.py`
 
 ### ⚪ 資訊｜[代理指令檔] 沒有代理指令檔
 
 這個專案沒有 SKILL.md／AGENTS.md／CLAUDE.md／.cursorrules 之類會被 AI 客戶端自動讀進上下文的指令檔，因此不存在這個攻擊面。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 44 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 48 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -66,11 +66,11 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-19`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -80,7 +80,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 5546｜fork 654｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-19
+⭐ 5554｜fork 655｜語言 Python｜建立 2019-04-08｜最後推送 2026-11-22
 
 ---
 
