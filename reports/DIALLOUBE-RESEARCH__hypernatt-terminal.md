@@ -7,11 +7,11 @@
 | 稽核對象 | `DIALLOUBE-RESEARCH/hypernatt-terminal` |
 | 專案說明 | Liquidation radar, Hyperliquid execution context and Li.Fi swap for AI agents. 6 |
 | 星數 / Fork | ⭐ 3 / 0 |
-| 最後更新 | 2026-11-21 |
+| 最後更新 | 2026-11-23 |
 | 授權 | MIT License |
 | npm 套件 | `natt-node-mcp`（registry 查無） |
 | 已掃描檔案 | 81 個 |
-| 檢查時間 | 2026-11-22 01:05 |
+| 檢查時間 | 2026-11-23 01:32 |
 
 ## 風險摘要
 
@@ -19,11 +19,11 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟡 中｜[權限] 會連往 8 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.cdp.coinbase.com、api.mainnet-beta.solana.com、basescan.org、feross.org、hypernatt.com、opencollective.com、paulmillr.com、static.modelcontextprotocol.io、www.npmjs.com、www.patreon.com`
+> 證據：`api.cdp.coinbase.com、api.mainnet-beta.solana.com、feross.org、hypernatt.com、opencollective.com、paulmillr.com、static.modelcontextprotocol.io、www.patreon.com`
 
 ### 🔵 低｜[供應鏈] 有 9 個依賴未鎖定版本
 
@@ -53,7 +53,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 14 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 12 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-21`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-11-21
+⭐ 3｜fork 0｜語言 JavaScript｜建立 2026-05-30｜最後推送 2026-11-23
 
 ---
 

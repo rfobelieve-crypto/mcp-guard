@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10788 / 962 |
-| 最後更新 | 2026-11-18 |
+| 星數 / Fork | ⭐ 10806 / 965 |
+| 最後更新 | 2026-11-22 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
-| 已掃描檔案 | 81 個 |
-| 檢查時間 | 2026-11-22 01:00 |
+| 已掃描檔案 | 85 個 |
+| 檢查時間 | 2026-11-23 01:26 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`.github/workflows/build.yml、plugin/hooks/register.tsx、src/server.ts、src/telemetry-quota.ts、src/utils.ts`
+> 證據：`plugin/hooks/register.tsx、scripts/pack-mcpb.sh、src/server.ts、src/telemetry-quota.ts、src/utils.ts`
 
 ### 🟠 高｜[權限] ⚠ 會執行外部指令 / 開子行程（超出宣稱用途）
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`"prepare": "husky"`
 
-### 🟡 中｜[權限] 會連往 9 個外部主機
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、eslint.org、glama.ai、mobilenext.ai、opencollective.com、static.modelcontextprotocol.io、static.scarf.sh、us.i.posthog.com、www.example.com`
+> 證據：`agent-plugins.org、eslint.org、glama.ai、mobilenext.ai、opencollective.com、staging.example.com、static.modelcontextprotocol.io、static.scarf.sh、us.i.posthog.com、www.example.com…`
 
 ### 🔵 低｜[供應鏈] 有 23 個依賴未鎖定版本
 
@@ -53,9 +53,9 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/build.yml、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
+> 證據：`scripts/pack-mcpb.sh、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 4 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10788｜fork 962｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-18
+⭐ 10806｜fork 965｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-22
 
 ---
 

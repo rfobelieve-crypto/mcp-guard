@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `mbailey/voicemode` |
 | 專案說明 | Natural voice conversations with Claude Code |
-| 星數 / Fork | ⭐ 1472 / 203 |
-| 最後更新 | 2026-11-21 |
+| 星數 / Fork | ⭐ 1472 / 205 |
+| 最後更新 | 2026-11-22 |
 | 授權 | MIT License |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-22 01:02 |
+| 檢查時間 | 2026-11-23 01:29 |
 
 ## 風險摘要
 
-🟠 高 3　🟡 中 1　🔵 低 3　⚪ 資訊 7
+🟠 高 3　🟡 中 1　🔵 低 2　⚪ 資訊 7
 
 ## 詳細發現
 
@@ -34,9 +34,9 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`installer/voicemode_install/checker.py、installer/voicemode_install/cli.py、installer/voicemode_install/installer.py、scripts/diagnose-wsl-audio.py、scripts/release.py`
+> 證據：`installer/voicemode_install/checker.py、installer/voicemode_install/cli.py、installer/voicemode_install/installer.py、installer/voicemode_install/system.py、scripts/diagnose-wsl-audio.py`
 
-### 🟡 中｜[權限] 會連往 43 個外部主機
+### 🟡 中｜[權限] 會連往 44 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -52,11 +52,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「第三方 API 串接」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py、scripts/test-stt-direct.py`
-
-### 🔵 低｜[維護] 未處理 issue 偏多（56 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
+> 證據：`installer/voicemode_install/checker.py、installer/voicemode_install/cli.py、scripts/conversation_browser.py、scripts/diagnose-wsl-audio.py、scripts/release.py`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 14 個代理指令檔
 
@@ -82,7 +78,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-21`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -92,7 +88,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1472｜fork 203｜語言 Python｜建立 2025-06-08｜最後推送 2026-11-21
+⭐ 1472｜fork 205｜語言 Python｜建立 2025-06-08｜最後推送 2026-11-22
 
 ---
 

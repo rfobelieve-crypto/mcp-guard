@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `L337-org/docker-mcp` |
 | 專案說明 | Docker-MCP-Server - An MCP server covering the full management surface of Docker |
-| 星數 / Fork | ⭐ 13 / 0 |
+| 星數 / Fork | ⭐ 14 / 0 |
 | 最後更新 | 2026-11-16 |
 | 授權 | MIT License |
 | 已掃描檔案 | 185 個 |
-| 檢查時間 | 2026-11-22 01:05 |
+| 檢查時間 | 2026-11-23 01:32 |
 
 ## 風險摘要
 
@@ -62,7 +62,7 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 6 天內有更新
+### ⚪ 資訊｜[維護] 最近 7 天內有更新
 
 專案仍在活躍維護中。
 
@@ -76,7 +76,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 13｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-11-16
+⭐ 14｜fork 0｜語言 Python｜建立 2026-05-01｜最後推送 2026-11-16
 
 ---
 

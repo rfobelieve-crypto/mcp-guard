@@ -7,11 +7,11 @@
 | 稽核對象 | `Ataraxy-Labs/sem` |
 | 專案說明 | Semantic version control => entity-level diffs, blame, and impact analysis on to |
 | 星數 / Fork | ⭐ 3462 / 111 |
-| 最後更新 | 2026-11-14 |
+| 最後更新 | 2026-11-22 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@ataraxy-labs/sem` |
 | 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-22 01:01 |
+| 檢查時間 | 2026-11-23 01:28 |
 
 ## 風險摘要
 
@@ -37,11 +37,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`pi/src/codemode/tool.ts｜「A short async JavaScript program run against the `sem` API (see the types injected into the system prompt).」`
 
-### 🟡 中｜[權限] 會連往 10 個外部主機
+### 🟡 中｜[權限] 會連往 11 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`agent-plugins.org、api.typesafe.ai、app.com、ataraxy-labs.com、code.claude.com、evil.example、feross.org、opencollective.com、paypal.me、www.patreon.com`
+> 證據：`agent-plugins.org、api.typesafe.ai、app.com、ataraxy-labs.com、code.claude.com、evil.example、feross.org、opencollective.com、paypal.me、static.rust-lang.org…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -77,11 +77,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 8 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-14`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -91,7 +91,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3462｜fork 111｜語言 Rust｜建立 2026-02-05｜最後推送 2026-11-14
+⭐ 3462｜fork 111｜語言 Rust｜建立 2026-02-05｜最後推送 2026-11-22
 
 ---
 

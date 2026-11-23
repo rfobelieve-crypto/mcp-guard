@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `t8y2/dbx` |
 | 專案說明 | 25 MB lightweight cross-platform database client for 100+ databases, including M |
-| 星數 / Fork | ⭐ 31101 / 2832 |
+| 星數 / Fork | ⭐ 31153 / 2837 |
 | 最後更新 | 2026-11-22 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `dbx` |
 | 已掃描檔案 | 498 個 |
-| 檢查時間 | 2026-11-22 00:59 |
+| 檢查時間 | 2026-11-23 01:26 |
 
 ## 風險摘要
 
@@ -71,7 +71,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/scripts/ci-gradle.py、.github/scripts/ci-gradle.test.py、.github/scripts/ci-install-mold.test.py、.github/scripts/ci-install-system-deps.py、.github/scripts/ci-install-system-deps.test.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（1754 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（1752 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 31101｜fork 2832｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-22
+⭐ 31153｜fork 2837｜語言 Rust｜建立 2026-04-29｜最後推送 2026-11-22
 
 ---
 

@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `modelscope/FunASR` |
 | 專案說明 | Open-source speech recognition toolkit for training, inference, streaming ASR, V |
-| 星數 / Fork | ⭐ 21092 / 2141 |
-| 最後更新 | 2026-11-21 |
+| 星數 / Fork | ⭐ 21100 / 2143 |
+| 最後更新 | 2026-11-22 |
 | 授權 | MIT License |
 | 已掃描檔案 | 413 個 |
-| 檢查時間 | 2026-11-22 00:59 |
+| 檢查時間 | 2026-11-23 01:26 |
 
 ## 風險摘要
 
@@ -52,7 +52,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`examples/industrial_data_pretraining/qwen3_asr/transcribe_vllm_offline.py、examples/mcp_server/smoke_test.py、examples/mcp_server/test_funasr_mcp.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（65 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -78,7 +78,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-21`
+> 證據：`最後推送 2026-11-22`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 21092｜fork 2141｜語言 Python｜建立 2022-11-24｜最後推送 2026-11-21
+⭐ 21100｜fork 2143｜語言 Python｜建立 2022-11-24｜最後推送 2026-11-22
 
 ---
 

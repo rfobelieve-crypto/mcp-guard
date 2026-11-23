@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `PrefectHQ/fastmcp` |
 | 專案說明 | 🚀 The fast, Pythonic way to build MCP servers and clients. |
-| 星數 / Fork | ⭐ 28706 / 2638 |
-| 最後更新 | 2026-11-22 |
+| 星數 / Fork | ⭐ 28715 / 2642 |
+| 最後更新 | 2026-11-23 |
 | 授權 | Apache License 2.0 |
-| 已掃描檔案 | 405 個 |
-| 檢查時間 | 2026-11-22 00:58 |
+| 已掃描檔案 | 406 個 |
+| 檢查時間 | 2026-11-23 01:25 |
 
 ## 風險摘要
 
@@ -18,7 +18,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 41 個外部主機
+### 🟡 中｜[權限] 會連往 45 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -40,9 +40,9 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/tests/test_agentic_claims.py`
+> 證據：`.github/agentic/flows/agentic_pr_verification.py、.github/agentic/flows/agentic_stack_runtime.py、.github/agentic/flows/agentic_triage.py、.github/agentic/flows/agentic_validate_patch.py、.github/agentic/memory_server.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（245 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（228 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -56,7 +56,7 @@
 
 > 證據：`.agents/skills/adversarial-review/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/docs/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/fix-issue/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/python-tests/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/release/SKILL.md（Agent Skill 指令（SKILL.md））、.agents/skills/review-issue/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 17 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 28 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -74,11 +74,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 28706｜fork 2638｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-22
+⭐ 28715｜fork 2642｜語言 Python｜建立 2024-11-30｜最後推送 2026-11-23
 
 ---
 

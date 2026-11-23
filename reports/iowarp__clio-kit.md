@@ -9,8 +9,8 @@
 | 星數 / Fork | ⭐ 32 / 25 |
 | 最後更新 | 2026-11-22 |
 | 授權 | BSD 3-Clause "New" or "Revised" License |
-| 已掃描檔案 | 500 個 |
-| 檢查時間 | 2026-11-22 01:05 |
+| 已掃描檔案 | 512 個 |
+| 檢查時間 | 2026-11-23 01:32 |
 
 ## 風險摘要
 
@@ -44,6 +44,14 @@
 
 > 證據：`skills/clio-coder-skills/skills/clio-kit-credentials/SKILL.md｜「…ks typed reads and writes of secret-shaped paths (`.env` variants, `~/.ssh/`, `~/.aws/`, key and pem files, netrc, kubeconfigs) by default. That…」`
 
+### 🔵 低｜[代理指令檔] 指令檔提及金鑰或 SSH 路徑（疑為引述或警告）
+
+若這份指令的主題本來就是金鑰管理屬正常；否則要問：一份操作說明為什麼需要讓模型知道私鑰放在哪裡。
+
+這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
+
+> 證據：`skills/clio-core-skills/skills/clio-cae/SKILL.md｜「…, `.vault-token`, `.npmrc`, `.pypirc`, `.boto`, `.s3cfg`, `.my.cnf`, `id_rsa`; `/proc`, `/sys`, `/dev`, `/etc/shadow`, `/etc/gshadow`, `/etc/sudoe…」`
+
 ### 🔵 低｜[供應鏈] 有 3 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
@@ -56,11 +64,7 @@
 
 > 證據：`clio-agentic-search/src/clio_agentic_search/api/app.py、clio-agentic-search/src/clio_agentic_search/connectors/filesystem/connector.py、clio-agentic-search/src/clio_agentic_search/connectors/object_store/connector.py、clio-agentic-search/src/clio_agentic_search/core/namespace_config.py、clio-agentic-search/src/clio_agentic_search/core/namespace_registry.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
-
-可能代表維護者回應不及，遇到問題時求助無門。
-
-### ⚪ 資訊｜[代理指令檔] 已掃描 63 個代理指令檔
+### ⚪ 資訊｜[代理指令檔] 已掃描 75 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
 
