@@ -10,7 +10,7 @@
 | 最後更新 | 2026-05-12 |
 | 授權 | Other |
 | 已掃描檔案 | 466 個 |
-| 檢查時間 | 2026-11-23 01:31 |
+| 檢查時間 | 2026-11-24 05:14 |
 
 ## 風險摘要
 
@@ -36,7 +36,7 @@
 
 > 證據：`a.klaviyo.com、about.gitlab.com、account.box.com、accounts.google.com、ahrefs.com、airtable.com、analyticsdata.googleapis.com、api.agentql.com、api.ahrefs.com、api.airtable.com…`
 
-### 🟡 中｜[維護] 約 6 個月沒有更新
+### 🟡 中｜[維護] 約 7 個月沒有更新
 
 更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
 

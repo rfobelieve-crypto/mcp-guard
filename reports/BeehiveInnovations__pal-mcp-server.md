@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `BeehiveInnovations/pal-mcp-server` |
 | 專案說明 | The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter  |
-| 星數 / Fork | ⭐ 11847 / 1040 |
-| 最後更新 | 2025-12-15 |
+| 星數 / Fork | ⭐ 11847 / 1042 |
+| 最後更新 | 2026-11-23 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-11-23 01:25 |
+| 檢查時間 | 2026-11-24 05:09 |
 
 ## 風險摘要
 
-🟡 中 2　🔵 低 7　⚪ 資訊 5
+🟡 中 1　🔵 低 7　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -23,12 +23,6 @@
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
 > 證據：`api.example.com、api.openai.com、api.x.ai、bootstrap.pypa.io、claude.ai、core.dialx.ai、custom.dialx.ai、custom.openai.com、custom.x.ai、dialx.ai…`
-
-### 🟡 中｜[維護] 約 11 個月沒有更新
-
-更新頻率偏低，導入前先確認它仍相容你的 MCP 客戶端。
-
-> 證據：`最後推送 2025-12-15`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -88,9 +82,15 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
+
+專案仍在活躍維護中。
+
+> 證據：`最後推送 2026-11-23`
+
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11847｜fork 1040｜語言 Python｜建立 2025-06-08｜最後推送 2025-12-15
+⭐ 11847｜fork 1042｜語言 Python｜建立 2025-06-08｜最後推送 2026-11-23
 
 ---
 

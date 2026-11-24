@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 58846 / 4916 |
-| 最後更新 | 2026-11-22 |
+| 星數 / Fork | ⭐ 59074 / 4910 |
+| 最後更新 | 2026-11-23 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
 | 已掃描檔案 | 366 個 |
-| 檢查時間 | 2026-11-23 01:25 |
+| 檢查時間 | 2026-11-24 05:09 |
 
 ## 風險摘要
 
@@ -35,7 +35,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 50 個外部主機
+### 🟡 中｜[權限] 會連往 51 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -45,7 +45,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@blackwell-systems/gcf@^2.2.2、@google/genai@^3.0.0、@stylistic/eslint-plugin@^5.4.0、@toon-format/toon@^4.1.0、@types/node@^26.0.0、@types/semver@^7.7.1…`
+> 證據：`@blackwell-systems/gcf@^2.2.2、@google/genai@^3.0.0、@stylistic/eslint-plugin@^6.0.0、@toon-format/toon@^4.1.0、@types/node@^26.0.0、@types/semver@^7.7.1…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/footprint_mcp.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（138 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（119 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,7 +75,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、skills/a11y-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools-cli/SKILL.md（Agent Skill 指令（SKILL.md））、skills/chrome-devtools/SKILL.md（Agent Skill 指令（SKILL.md））、skills/cookie-debugging/SKILL.md（Agent Skill 指令（SKILL.md））、skills/debug-optimize-lcp/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 308 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 310 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -89,11 +89,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -103,7 +103,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 58846｜fork 4916｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-22
+⭐ 59074｜fork 4910｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-23
 
 ---
 

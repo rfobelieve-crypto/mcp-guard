@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `upstash/context7` |
 | 專案說明 | Context7 Platform -- Up-to-date docs for AI agents |
-| 星數 / Fork | ⭐ 65295 / 3268 |
-| 最後更新 | 2026-11-22 |
+| 星數 / Fork | ⭐ 65352 / 3267 |
+| 最後更新 | 2026-11-23 |
 | 授權 | MIT License |
 | npm 套件 | `@upstash/context7`（registry 查無） |
-| 已掃描檔案 | 338 個 |
-| 檢查時間 | 2026-11-23 01:25 |
+| 已掃描檔案 | 339 個 |
+| 檢查時間 | 2026-11-24 05:09 |
 
 ## 風險摘要
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`packages/admin-mcp/src/ui/console-html.ts、packages/admin-mcp/test/admin-mcp.test.ts、packages/admin-mcp/ui/demo/host.ts、packages/admin-mcp/ui/src/host.ts、packages/cli/src/__tests__/auth-utils.test.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（58 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（55 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -101,7 +101,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 65295｜fork 3268｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-22
+⭐ 65352｜fork 3267｜語言 TypeScript｜建立 2025-03-26｜最後推送 2026-11-23
 
 ---
 

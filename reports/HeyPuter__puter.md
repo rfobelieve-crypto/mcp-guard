@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `HeyPuter/puter` |
 | 專案說明 | 🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. |
-| 星數 / Fork | ⭐ 44233 / 4163 |
-| 最後更新 | 2026-11-22 |
+| 星數 / Fork | ⭐ 44240 / 4163 |
+| 最後更新 | 2026-11-24 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `puter.com` |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-23 01:25 |
+| 檢查時間 | 2026-11-24 05:09 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「程式碼／版控工具」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`src/backend/clients/redis/RedisClient.test.ts、src/backend/core/http/middleware/puterSite.ts`
+> 證據：`src/backend/clients/redis/RedisClient.test.ts、src/backend/core/http/middleware/privateAppGate.test.ts、src/backend/core/http/middleware/puterSite.ts`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -41,11 +41,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 113 個外部主機
+### 🟡 中｜[權限] 會連往 128 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`SUB.app.puter.localhost、a.sheets.example.test、a.test、acme.pagerduty.com、an-app.puter.site、api.example.test、api.pagerduty.com、api.prelude.dev、api.puter.com、api.puter.localhost…`
+> 證據：`SUB.app.puter.localhost、a.sheets.example.test、a.test、acme.pagerduty.com、an-app.puter.site、api.anthropic.com、api.deepseek.com、api.elevenlabs.io、api.example.test、api.groq.com…`
 
 ### 🔵 低｜[供應鏈] 有 35 個依賴未鎖定版本
 
@@ -95,7 +95,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -105,7 +105,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 44233｜fork 4163｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-22
+⭐ 44240｜fork 4163｜語言 TypeScript｜建立 2024-03-03｜最後推送 2026-11-24
 
 ---
 

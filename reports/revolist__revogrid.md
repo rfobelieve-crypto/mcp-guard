@@ -7,11 +7,11 @@
 | 稽核對象 | `revolist/revogrid` |
 | 專案說明 | Powerful virtual data table smartsheet with advanced customization. Best feature |
 | 星數 / Fork | ⭐ 3463 / 214 |
-| 最後更新 | 2026-11-22 |
+| 最後更新 | 2026-11-23 |
 | 授權 | MIT License |
 | npm 套件 | `@revolist/revogrid` |
-| 已掃描檔案 | 282 個 |
-| 檢查時間 | 2026-11-23 01:28 |
+| 已掃描檔案 | 288 個 |
+| 檢查時間 | 2026-11-24 05:11 |
 
 ## 風險摘要
 
@@ -31,23 +31,23 @@
 
 > 證據：`@angular/core@^20.3.0、@playwright/test@^1.58.2、@revolist/stencil-angular-output@^1.1.3、@revolist/stencil-dash-output-target@^1.0.4、@revolist/stencil-vue2-output-target@^0.0.6、@stencil/playwright@^0.5.1…`
 
+### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
+
+這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`e2e/exploratory.spec.ts、scripts/package-formats.test.mjs`
+
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`playwright.config.ts、scripts/package-formats.test.mjs`
+> 證據：`e2e/exploratory.spec.ts、playwright.config.ts、scripts/package-formats.test.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`scripts/demo-dropdown-styles.plugin.ts、scripts/event-list.plugin.ts、scripts/generate_readme.mjs、scripts/hydrate-types.plugin.ts、scripts/package-version.mjs`
-
-### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
-
-這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`scripts/package-formats.test.mjs`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 1 個代理指令檔
 
@@ -69,11 +69,11 @@
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -83,7 +83,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 3463｜fork 214｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-22
+⭐ 3463｜fork 214｜語言 TypeScript｜建立 2020-05-04｜最後推送 2026-11-23
 
 ---
 

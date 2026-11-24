@@ -7,11 +7,11 @@
 | 稽核對象 | `SidneyBissoli/medical-terminologies-mcp` |
 | 專案說明 | Unified MCP server for six medical terminologies (ICD-11, LOINC, RxNorm, MeSH, A |
 | 星數 / Fork | ⭐ 16 / 6 |
-| 最後更新 | 2026-11-20 |
+| 最後更新 | 2026-11-24 |
 | 授權 | MIT License |
 | npm 套件 | `medical-terminologies-mcp` |
-| 已掃描檔案 | 215 個 |
-| 檢查時間 | 2026-11-23 01:30 |
+| 已掃描檔案 | 223 個 |
+| 檢查時間 | 2026-11-24 05:14 |
 
 ## 風險摘要
 
@@ -29,11 +29,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 34 個外部主機
+### 🟡 中｜[權限] 會連往 37 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.example.test、atcddd.fhi.no、clinicaltables.nlm.nih.gov、creativecommons.org、dev.to、exemplo.invalid、glama.ai、icd.who.int、icdaccessmanagement.who.int、icdcdn.who.int…`
+> 證據：`api.example.test、atcddd.fhi.no、clinicaltables.nlm.nih.gov、creativecommons.org、dev.to、exemplo.invalid、glama.ai、hl7.org、icd.who.int、icdaccessmanagement.who.int…`
 
 ### 🔵 低｜[供應鏈] 有 18 個依賴未鎖定版本
 
@@ -59,7 +59,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`CLAUDE.md（Claude Code 專案指令（CLAUDE.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 44 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 47 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -73,11 +73,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -87,7 +87,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 16｜fork 6｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-11-20
+⭐ 16｜fork 6｜語言 TypeScript｜建立 2026-01-18｜最後推送 2026-11-24
 
 ---
 

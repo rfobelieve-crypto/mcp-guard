@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `vmoranv/jshookmcp` |
 | 專案說明 | A search-first, profile-aware reverse-engineering workspace for AI agents — 735  |
-| 星數 / Fork | ⭐ 2123 / 468 |
-| 最後更新 | 2026-11-22 |
+| 星數 / Fork | ⭐ 2126 / 469 |
+| 最後更新 | 2026-11-23 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `@jshookmcp/jshook` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-23 01:28 |
+| 檢查時間 | 2026-11-24 05:12 |
 
 ## 風險摘要
 
@@ -23,7 +23,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「瀏覽器／網頁自動化」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、scripts/verify-ghidra-bridge-tcp.ts、src/modules/analyzer/SecurityCodeAnalyzer.ts`
+> 證據：`scripts/release/manual/verify-ghidra-bridge-tcp.ts、scripts/runtime-probes/phases/browser/core.mjs、scripts/runtime-probes/phases/maintenance-workflow.mjs、src/modules/analyzer/SecurityCodeAnalyzer.ts`
 
 ### 🟡 中｜[權限] 使用動態執行（eval）需額外留意
 
@@ -35,29 +35,29 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`afdian.com、codeload.github.com、developer.android.com、docs.codacy.com、docs.npmjs.com、docs.renovatebot.com、example.invalid、fonts.googleapis.com、fonts.gstatic.com、glama.ai…`
 
-### 🔵 低｜[供應鏈] 有 40 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 39 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@alexaltea/capstone-js@^5.0.9、@babel/generator@^8.1.2、@babel/parser@^8.1.2、@babel/traverse@^8.1.2、@babel/types@^8.1.2、@huggingface/tokenizers@^0.2.0…`
+> 證據：`@alexaltea/capstone-js@^5.0.9、@babel/generator@^8.1.2、@babel/parser@^8.1.2、@babel/traverse@^8.1.2、@babel/types@^8.1.2、@modelcontextprotocol/client@^2.4.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`docs/.vitepress/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-eval-consistency.mjs、scripts/audit-event-contracts.mjs、scripts/audit-runtime-probes.mjs`
+> 證據：`docs/.vitepress/shared.ts、scripts/audit/domain-integrity.mjs、scripts/audit/eval-consistency.mjs、scripts/audit/event-contracts.mjs、scripts/audit/runtime-probes.mjs`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/audit-domain-integrity.mjs、scripts/audit-event-contracts.mjs、scripts/audit-event-contracts.selftest.mjs、scripts/audit-promise-assertions.selftest.mjs`
+> 證據：`packages/extension-sdk/src/bridges/shared.ts、scripts/audit/domain-integrity.mjs、scripts/audit/event-contracts.mjs、scripts/audit/event-contracts.selftest.mjs、scripts/audit/promise-assertions.selftest.mjs`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「瀏覽器／網頁自動化」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/generate-domains-index.mjs、scripts/runtime-probes/phases/browser/page-interaction.mjs、scripts/runtime-probes/phases/runtime-observability/console-intercept-jsdom.mjs、scripts/scan-domain-audit.mjs、scripts/tune-env.mjs`
+> 證據：`scripts/audit/scan.mjs、scripts/audit/update-scores.mjs、scripts/dev/tune-env.mjs、scripts/generate/domains-index.mjs、scripts/release/manual/verify-frida-remote-mumu.ts`
 
 ### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
@@ -65,7 +65,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`docs/public/llms.txt（給模型讀的站點說明（llms.txt））、skills/best-practices/SKILL.md（Agent Skill 指令（SKILL.md））、skills/configuration/SKILL.md（Agent Skill 指令（SKILL.md））、skills/getting-started/SKILL.md（Agent Skill 指令（SKILL.md））、skills/telemetry/SKILL.md（Agent Skill 指令（SKILL.md））、skills/tool-selection/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 62 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -83,7 +83,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-22`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2123｜fork 468｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-22
+⭐ 2126｜fork 469｜語言 TypeScript｜建立 2026-02-21｜最後推送 2026-11-23
 
 ---
 

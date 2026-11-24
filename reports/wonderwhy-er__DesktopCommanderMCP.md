@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `wonderwhy-er/DesktopCommanderMCP` |
 | 專案說明 | This is MCP server for Claude that gives it terminal control, file system search |
-| 星數 / Fork | ⭐ 10398 / 1308 |
-| 最後更新 | 2026-11-20 |
+| 星數 / Fork | ⭐ 10409 / 1310 |
+| 最後更新 | 2026-11-23 |
 | 授權 | MIT License |
 | npm 套件 | `@wonderwhy-er/desktop-commander` |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-23 01:24 |
+| 檢查時間 | 2026-11-24 05:08 |
 
 ## 風險摘要
 
@@ -95,11 +95,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-20`
+> 證據：`最後推送 2026-11-23`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -109,7 +109,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10398｜fork 1308｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-20
+⭐ 10409｜fork 1310｜語言 JavaScript｜建立 2024-12-04｜最後推送 2026-11-23
 
 ---
 
