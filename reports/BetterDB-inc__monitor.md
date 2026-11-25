@@ -6,16 +6,16 @@
 |---|---|
 | 稽核對象 | `BetterDB-inc/monitor` |
 | 專案說明 | Real-time monitoring, slowlog analysis, and audit trails for Valkey and Redis |
-| 星數 / Fork | ⭐ 1307 / 86 |
-| 最後更新 | 2026-11-23 |
+| 星數 / Fork | ⭐ 1308 / 86 |
+| 最後更新 | 2026-11-24 |
 | 授權 | Other |
 | npm 套件 | `betterdb-monitor`（registry 查無） |
 | 已掃描檔案 | 458 個 |
-| 檢查時間 | 2026-11-24 05:13 |
+| 檢查時間 | 2026-11-25 04:02 |
 
 ## 風險摘要
 
-🟠 高 1　🟡 中 2　🔵 低 4　⚪ 資訊 8
+🟠 高 1　🟡 中 2　🔵 低 5　⚪ 資訊 8
 
 ## 詳細發現
 
@@ -59,6 +59,10 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`.github/workflows/ai-py-facade-release.yml、apps/api/scripts/cluster-load/ports.ts、apps/api/scripts/cluster-load/remote-cluster.ts、apps/api/scripts/cluster-load/run.ts、apps/api/scripts/index-docs.ts`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（51 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### ⚪ 資訊｜[代理指令檔] 已掃描 7 個代理指令檔
 
 這些檔案會被 AI 客戶端自動讀進模型上下文，內容等同於一段你不會逐字讀、模型卻完全服從的提示詞。即使本次沒有命中，安裝前也值得親自看過。
@@ -83,11 +87,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-23`
+> 證據：`最後推送 2026-11-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -97,7 +101,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1307｜fork 86｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-23
+⭐ 1308｜fork 86｜語言 TypeScript｜建立 2025-12-29｜最後推送 2026-11-24
 
 ---
 

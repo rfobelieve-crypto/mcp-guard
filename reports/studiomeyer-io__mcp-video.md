@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `studiomeyer-io/mcp-video` |
 | 專案說明 | Cinema-grade video production MCP server — 8 tools for recording, editing, effec |
-| 星數 / Fork | ⭐ 6 / 2 |
+| 星數 / Fork | ⭐ 7 / 2 |
 | 最後更新 | 2026-11-13 |
 | 授權 | MIT License |
 | npm 套件 | `@studiomeyer/mcp-video` |
 | 已掃描檔案 | 78 個 |
-| 檢查時間 | 2026-11-24 05:15 |
+| 檢查時間 | 2026-11-25 04:03 |
 
 ## 風險摘要
 
@@ -67,7 +67,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 11 天內有更新
+### ⚪ 資訊｜[維護] 最近 12 天內有更新
 
 專案仍在活躍維護中。
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 6｜fork 2｜語言 TypeScript｜建立 2026-03-14｜最後推送 2026-11-13
+⭐ 7｜fork 2｜語言 TypeScript｜建立 2026-03-14｜最後推送 2026-11-13
 
 ---
 

@@ -7,11 +7,11 @@
 | 稽核對象 | `awkoy/notion-mcp-server` |
 | 專案說明 | Notion MCP server with token auth: connect Claude Code, Claude Desktop, Cursor,  |
 | 星數 / Fork | ⭐ 182 / 42 |
-| 最後更新 | 2026-11-18 |
+| 最後更新 | 2026-11-25 |
 | 授權 | MIT License |
 | npm 套件 | `notion-mcp-server` |
-| 已掃描檔案 | 165 個 |
-| 檢查時間 | 2026-11-24 05:15 |
+| 已掃描檔案 | 172 個 |
+| 檢查時間 | 2026-11-25 04:04 |
 
 ## 風險摘要
 
@@ -61,7 +61,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`plugins/notion-mcp-server/skills/notion-workflow/SKILL.md（Agent Skill 指令（SKILL.md））`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 60 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 61 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -75,11 +75,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 5 天內有更新
+### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-18`
+> 證據：`最後推送 2026-11-25`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 182｜fork 42｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-11-18
+⭐ 182｜fork 42｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-11-25
 
 ---
 

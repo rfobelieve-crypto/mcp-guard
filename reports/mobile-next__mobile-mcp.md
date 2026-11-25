@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `mobile-next/mobile-mcp` |
 | 專案說明 | Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simula |
-| 星數 / Fork | ⭐ 10836 / 967 |
-| 最後更新 | 2026-11-23 |
+| 星數 / Fork | ⭐ 10863 / 968 |
+| 最後更新 | 2026-11-24 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `@mobilenext/mobile-mcp` |
 | 已掃描檔案 | 85 個 |
-| 檢查時間 | 2026-11-24 05:10 |
+| 檢查時間 | 2026-11-25 03:59 |
 
 ## 風險摘要
 
@@ -43,11 +43,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`agent-plugins.org、consoledonottrack.com、eslint.org、glama.ai、mobilenext.ai、opencollective.com、staging.example.com、static.modelcontextprotocol.io、static.scarf.sh、us.i.posthog.com…`
 
-### 🔵 低｜[供應鏈] 有 23 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 24 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
-> 證據：`@clack/prompts@^0.9.1、@modelcontextprotocol/node@^2.1.2、add-mcp@^2.6.0、ajv@^8.18.0、qs@^6.15.0、zod@^4.2.0…`
+> 證據：`@clack/prompts@^0.9.1、@modelcontextprotocol/node@^2.1.2、add-mcp@^2.6.0、ajv@^8.18.0、mobilewright@^0.0.72、qs@^6.15.0…`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -55,7 +55,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`scripts/pack-mcpb.sh、scripts/verify-streamable-http.mjs、src/android.ts、src/index.ts、src/ios.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（66 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（64 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -79,11 +79,11 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-23`
+> 證據：`最後推送 2026-11-24`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -93,7 +93,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 10836｜fork 967｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-23
+⭐ 10863｜fork 968｜語言 TypeScript｜建立 2025-03-28｜最後推送 2026-11-24
 
 ---
 

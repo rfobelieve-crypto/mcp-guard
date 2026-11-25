@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/inspector` |
 | 專案說明 | Deterministic testing tools for MCP servers |
-| 星數 / Fork | ⭐ 11349 / 1586 |
+| 星數 / Fork | ⭐ 11355 / 1587 |
 | 最後更新 | 2026-11-24 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/inspector` |
 | 已掃描檔案 | 402 個 |
-| 檢查時間 | 2026-11-24 05:08 |
+| 檢查時間 | 2026-11-25 03:56 |
 
 ## 風險摘要
 
@@ -87,7 +87,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11349｜fork 1586｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-11-24
+⭐ 11355｜fork 1587｜語言 TypeScript｜建立 2024-10-03｜最後推送 2026-11-24
 
 ---
 

@@ -6,15 +6,15 @@
 |---|---|
 | 稽核對象 | `stripe/ai` |
 | 專案說明 | One-stop shop for building AI-powered products and businesses with Stripe. |
-| 星數 / Fork | ⭐ 2086 / 392 |
-| 最後更新 | 2026-11-24 |
+| 星數 / Fork | ⭐ 2089 / 393 |
+| 最後更新 | 2026-11-25 |
 | 授權 | MIT License |
 | 已掃描檔案 | 480 個 |
-| 檢查時間 | 2026-11-24 05:12 |
+| 檢查時間 | 2026-11-25 04:01 |
 
 ## 風險摘要
 
-🟠 高 2　🟡 中 1　🔵 低 3　⚪ 資訊 6
+🟠 高 2　🟡 中 1　🔵 低 4　⚪ 資訊 6
 
 ## 詳細發現
 
@@ -48,6 +48,10 @@
 
 > 證據：`benchmarks/furever/environment/app/(dashboard)/settings/layout.tsx、benchmarks/furever/environment/scripts/setup-accounts.py、benchmarks/furever/grader/payments.py`
 
+### 🔵 低｜[維護] 未處理 issue 偏多（53 則）
+
+可能代表維護者回應不及，遇到問題時求助無門。
+
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
 這個專案沒有出現在 modelcontextprotocol.io 的官方註冊表中。很多好用的 MCP 都還沒登錄，這本身不是問題；但也代表沒有任何第三方驗證過「發布者是誰」，你得自己確認來源。
@@ -76,11 +80,11 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-24`
+> 證據：`最後推送 2026-11-25`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2086｜fork 392｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-24
+⭐ 2089｜fork 393｜語言 TypeScript｜建立 2024-11-11｜最後推送 2026-11-25
 
 ---
 
