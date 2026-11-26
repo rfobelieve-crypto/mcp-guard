@@ -1,22 +1,28 @@
 # MCP 安檢報告：BeehiveInnovations/pal-mcp-server
 
-> **結論：🟢 未發現明顯風險**　常見風險樣式均未命中；仍建議只給最小權限憑證。
+> **結論：🟡 需人工複核**　有 1 項高風險項目，確認它是功能必需後才安裝。
 
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `BeehiveInnovations/pal-mcp-server` |
 | 專案說明 | The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter  |
-| 星數 / Fork | ⭐ 11848 / 1041 |
+| 星數 / Fork | ⭐ 11853 / 1041 |
 | 最後更新 | 2026-11-23 |
 | 授權 | Other |
 | 已掃描檔案 | 348 個 |
-| 檢查時間 | 2026-11-25 03:58 |
+| 檢查時間 | 2026-11-26 03:23 |
 
 ## 風險摘要
 
-🟡 中 1　🔵 低 7　⚪ 資訊 6
+🟠 高 1　🟡 中 1　🔵 低 6　⚪ 資訊 6
 
 ## 詳細發現
+
+### 🟠 高｜[供應鏈] PyPI 套件標示的倉庫與實際來源不一致
+
+套件指向的 repo 跟我們稽核的這個不是同一個。這可能是改名／monorepo，也可能是仿冒（typosquatting），需人工確認。
+
+> 證據：`PyPI 連結=https://pypi.org/project/palaver-mcp-server/ https://github.com/laurigates/palaver-mcp-server｜稽核對象=BeehiveInnovations/pal-mcp-server`
 
 ### 🟡 中｜[權限] 會連往 20 個外部主機
 
@@ -29,12 +35,6 @@
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
 > 證據：`mcp>=1.0.0、google-genai>=1.19.0、openai>=1.55.2、pydantic>=2.0.0、python-dotenv>=1.0.0`
-
-### 🔵 低｜[供應鏈] PyPI 套件未標示原始碼位置
-
-套件沒有填任何專案連結，因此**無法自動核對**它是否真的由這個 repo 建置。這不代表有問題，但也代表少了一道可驗證性。
-
-> 證據：`PyPI: pal-mcp-server`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -82,7 +82,7 @@
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 3 天內有更新
 
 專案仍在活躍維護中。
 
@@ -90,7 +90,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 11848｜fork 1041｜語言 Python｜建立 2025-06-08｜最後推送 2026-11-23
+⭐ 11853｜fork 1041｜語言 Python｜建立 2025-06-08｜最後推送 2026-11-23
 
 ---
 

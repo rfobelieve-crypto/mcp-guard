@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `llmsresearch/paperbanana` |
 | 專案說明 | Open source implementation and extension of Google Research’s PaperBanana for au |
-| 星數 / Fork | ⭐ 2510 / 344 |
+| 星數 / Fork | ⭐ 2511 / 344 |
 | 最後更新 | 2026-09-17 |
 | 授權 | MIT License |
 | 已掃描檔案 | 255 個 |
-| 檢查時間 | 2026-11-25 04:01 |
+| 檢查時間 | 2026-11-26 03:26 |
 
 ## 風險摘要
 
@@ -82,7 +82,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2510｜fork 344｜語言 Python｜建立 2026-02-04｜最後推送 2026-09-17
+⭐ 2511｜fork 344｜語言 Python｜建立 2026-02-04｜最後推送 2026-09-17
 
 ---
 

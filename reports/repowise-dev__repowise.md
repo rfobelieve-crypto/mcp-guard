@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 8251 / 1052 |
+| 星數 / Fork | ⭐ 8281 / 1067 |
 | 最後更新 | 2026-11-25 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
 | 已掃描檔案 | 463 個 |
-| 檢查時間 | 2026-11-25 03:59 |
+| 檢查時間 | 2026-11-26 03:25 |
 
 ## 風險摘要
 
@@ -49,7 +49,7 @@
 
 > 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（458 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（492 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8251｜fork 1052｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-25
+⭐ 8281｜fork 1067｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-25
 
 ---
 
