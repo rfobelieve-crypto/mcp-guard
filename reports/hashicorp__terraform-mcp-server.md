@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `hashicorp/terraform-mcp-server` |
 | 專案說明 | The Terraform MCP Server provides seamless integration with Terraform ecosystem, |
-| 星數 / Fork | ⭐ 1562 / 202 |
+| 星數 / Fork | ⭐ 1563 / 202 |
 | 最後更新 | 2026-11-25 |
 | 授權 | Mozilla Public License 2.0 |
 | 已掃描檔案 | 400 個 |
-| 檢查時間 | 2026-11-26 03:27 |
+| 檢查時間 | 2026-11-27 03:33 |
 
 ## 風險摘要
 
@@ -48,7 +48,7 @@
 
 > 證據：`PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -62,7 +62,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 1562｜fork 202｜語言 Go｜建立 2025-04-19｜最後推送 2026-11-25
+⭐ 1563｜fork 202｜語言 Go｜建立 2025-04-19｜最後推送 2026-11-25
 
 ---
 

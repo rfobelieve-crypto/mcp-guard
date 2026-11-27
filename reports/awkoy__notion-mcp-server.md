@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `awkoy/notion-mcp-server` |
 | 專案說明 | Notion MCP server with token auth: connect Claude Code, Claude Desktop, Cursor,  |
-| 星數 / Fork | ⭐ 182 / 42 |
+| 星數 / Fork | ⭐ 183 / 42 |
 | 最後更新 | 2026-11-25 |
 | 授權 | MIT License |
 | npm 套件 | `notion-mcp-server` |
 | 已掃描檔案 | 172 個 |
-| 檢查時間 | 2026-11-26 03:29 |
+| 檢查時間 | 2026-11-27 03:35 |
 
 ## 風險摘要
 
@@ -75,7 +75,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 1 天內有更新
+### ⚪ 資訊｜[維護] 最近 2 天內有更新
 
 專案仍在活躍維護中。
 
@@ -89,7 +89,7 @@ npm/pnpm 安裝過程就會執行這段指令——你還沒使用它，程式�
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 182｜fork 42｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-11-25
+⭐ 183｜fork 42｜語言 TypeScript｜建立 2025-03-18｜最後推送 2026-11-25
 
 ---
 

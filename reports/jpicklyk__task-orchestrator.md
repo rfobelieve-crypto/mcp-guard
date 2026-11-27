@@ -7,10 +7,10 @@
 | 稽核對象 | `jpicklyk/task-orchestrator` |
 | 專案說明 | Server-enforced workflow discipline for AI agents. An MCP server providing persi |
 | 星數 / Fork | ⭐ 215 / 25 |
-| 最後更新 | 2026-11-26 |
+| 最後更新 | 2026-11-27 |
 | 授權 | MIT License |
 | 已掃描檔案 | 433 個 |
-| 檢查時間 | 2026-11-26 03:29 |
+| 檢查時間 | 2026-11-27 03:35 |
 
 ## 風險摘要
 
@@ -28,11 +28,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 14 個外部主機
+### 🟡 中｜[權限] 會連往 15 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`127.0.0.1.evil.example、127.evil.example、api.fedex.example、api.ups.example、env.example、evil.example、evil.localhost、example.test、explicit.example、localhost.evil.example…`
+> 證據：`127.0.0.1.evil.example、127.evil.example、api.fedex.example、api.ups.example、claude.ai、env.example、evil.example、evil.localhost、example.test、explicit.example…`
 
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
@@ -76,7 +76,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-26`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -86,7 +86,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 215｜fork 25｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-11-26
+⭐ 215｜fork 25｜語言 Kotlin｜建立 2025-05-22｜最後推送 2026-11-27
 
 ---
 

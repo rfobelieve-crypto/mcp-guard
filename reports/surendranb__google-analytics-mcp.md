@@ -7,10 +7,10 @@
 | 稽核對象 | `surendranb/google-analytics-mcp` |
 | 專案說明 | Google Analytics 4 data to AI agents, agentic workflows, and MCP clients. Give a |
 | 星數 / Fork | ⭐ 243 / 47 |
-| 最後更新 | 2026-11-23 |
+| 最後更新 | 2026-11-26 |
 | 授權 | MIT License |
-| 已掃描檔案 | 238 個 |
-| 檢查時間 | 2026-11-26 03:28 |
+| 已掃描檔案 | 240 個 |
+| 檢查時間 | 2026-11-27 03:34 |
 
 ## 風險摘要
 
@@ -42,17 +42,17 @@
 
 > 證據：`mcp>=2.0.0,<3`
 
+### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
+
+環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/scripts/assert-live-release.mjs、ga4_mcp/coordinator.py、ga4_mcp/server.py、ga4_mcp/setup_flow.py、ga4_mcp/telemetry.py`
+
 ### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
 > 證據：`ga4_mcp/coordinator.py、ga4_mcp/telemetry.py、ga4_mcp/tools/skills.py、ga4_mcp/updates.py、scripts/generate_downloads_banner.py`
-
-### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
-
-環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`ga4_mcp/coordinator.py、ga4_mcp/server.py、ga4_mcp/setup_flow.py、ga4_mcp/telemetry.py、ga4_mcp/tools/metadata.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -80,11 +80,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 3 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-23`
+> 證據：`最後推送 2026-11-26`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -94,7 +94,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 243｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-11-23
+⭐ 243｜fork 47｜語言 Python｜建立 2025-05-24｜最後推送 2026-11-26
 
 ---
 

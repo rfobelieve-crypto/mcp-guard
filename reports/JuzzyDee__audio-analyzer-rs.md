@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `JuzzyDee/audio-analyzer-rs` |
 | 專案說明 | MCP server that gives Claude the ability to hear music. Pure Rust audio analysis |
-| 星數 / Fork | ⭐ 78 / 14 |
+| 星數 / Fork | ⭐ 79 / 14 |
 | 最後更新 | 2026-03-15 |
 | 授權 | MIT License |
 | 已掃描檔案 | 8 個 |
-| 檢查時間 | 2026-11-26 03:29 |
+| 檢查時間 | 2026-11-27 03:35 |
 
 ## 風險摘要
 
@@ -50,7 +50,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 78｜fork 14｜語言 Rust｜建立 2026-03-08｜最後推送 2026-03-15
+⭐ 79｜fork 14｜語言 Rust｜建立 2026-03-08｜最後推送 2026-03-15
 
 ---
 
