@@ -6,11 +6,11 @@
 |---|---|
 | 稽核對象 | `homeassistant-ai/ha-mcp` |
 | 專案說明 | Configure and automate Home Assistant with Claude, ChatGPT, and other AI assista |
-| 星數 / Fork | ⭐ 8141 / 480 |
-| 最後更新 | 2026-11-27 |
+| 星數 / Fork | ⭐ 8154 / 481 |
+| 最後更新 | 2026-11-28 |
 | 授權 | MIT License |
-| 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-27 03:32 |
+| 已掃描檔案 | 412 個 |
+| 檢查時間 | 2026-11-28 03:08 |
 
 ## 風險摘要
 
@@ -34,7 +34,7 @@
 
 動態執行字串會讓靜態稽核失效，需確認來源不可被外部輸入操控。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`custom_components/ha_mcp_tools/card_definitions.py、site/scripts/a11y-audit.mjs`
+> 證據：`custom_components/ha_mcp_tools/card_definitions.py`
 
 ### 🟡 中｜[供應鏈] 使用非標準的建置後端
 
@@ -46,11 +46,11 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 24 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`astral.sh、astro.build、chatgpt.com、claude.ai、claude.com、code.claude.com、coderabbit.ai、docs.renovatebot.com、eslint.org、example.customurl.com…`
+> 證據：`astral.sh、chatgpt.com、claude.ai、claude.com、code.claude.com、coderabbit.ai、docs.renovatebot.com、example.customurl.com、generativelanguage.googleapis.com、ghcr.io…`
 
 ### 🔵 低｜[供應鏈] 有 15 個依賴未鎖定版本
 
@@ -88,7 +88,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-27`
+> 證據：`最後推送 2026-11-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -98,7 +98,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8141｜fork 480｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-27
+⭐ 8154｜fork 481｜語言 Python｜建立 2025-09-14｜最後推送 2026-11-28
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `repowise-dev/repowise` |
 | 專案說明 | Codebase intelligence for AI and humans: code health scores, auto-generated docs |
-| 星數 / Fork | ⭐ 8329 / 1084 |
-| 最後更新 | 2026-11-26 |
+| 星數 / Fork | ⭐ 8347 / 1090 |
+| 最後更新 | 2026-11-27 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `repowise-root`（registry 查無） |
-| 已掃描檔案 | 463 個 |
-| 檢查時間 | 2026-11-27 03:31 |
+| 已掃描檔案 | 465 個 |
+| 檢查時間 | 2026-11-28 03:08 |
 
 ## 風險摘要
 
@@ -19,13 +19,13 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 8 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`api.repowise.dev、cursor.com、evil.example、glama.ai、npm.pkg.github.com、repowise.dev、rubygems.org、www.repowise.dev`
+> 證據：`api.repowise.dev、code.visualstudio.com、cursor.com、developers.openai.com、docs.claude.com、docs.github.com、docs.windsurf.com、glama.ai、hermes-agent.nousresearch.com、img.shields.io…`
 
-### 🔵 低｜[供應鏈] 有 33 個依賴未鎖定版本
+### 🔵 低｜[供應鏈] 有 32 個依賴未鎖定版本
 
 依賴沒有釘死版本，代表未來安裝時拉到的新版可能與你稽核過的內容不同。
 
@@ -35,21 +35,21 @@
 
 確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/ci.yml、ci/github/summary.sh、docs/design/contrast_check.py、packages/claude-mod/src/mod-api.ts、packages/claude-mod/src/register.ts`
+> 證據：`.github/workflows/ci.yml、ci/github/summary.sh、docs/design/contrast_check.py、packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_adapters/claude_code.py`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`.github/workflows/ci.yml、ci/github/summary.sh、packages/claude-mod/scripts/e2e.mjs、packages/cli/src/repowise/cli/_helpers/config.py、packages/cli/src/repowise/cli/_helpers/paths.py`
+> 證據：`.github/workflows/ci.yml、ci/github/summary.sh、packages/cli/src/repowise/cli/_helpers/config.py、packages/cli/src/repowise/cli/_helpers/paths.py、packages/cli/src/repowise/cli/_helpers/providers.py`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
 這個 MCP 能在你的電腦上執行系統指令。「程式碼／版控工具」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`packages/claude-mod/scripts/e2e.mjs、packages/claude-mod/scripts/mod-test.mjs、packages/cli/src/repowise/cli/_helpers/markers.py`
+> 證據：`packages/cli/src/repowise/cli/_helpers/markers.py、packages/cli/src/repowise/cli/agent_targets/types.py、packages/cli/src/repowise/cli/ci.py、packages/cli/src/repowise/cli/commands/augment_cmd/bash_staleness.py、packages/cli/src/repowise/cli/commands/augment_cmd/decision_capture.py`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（527 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（552 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -63,7 +63,7 @@
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 1 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 2 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -75,13 +75,13 @@
 
 安裝前先確認這些金鑰的權限範圍，盡量給最小權限、可隨時撤銷的憑證。
 
-> 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
+> 證據：`API_KEY、SECRET、TOKEN`
 
 ### ⚪ 資訊｜[維護] 最近 0 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-26`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -91,7 +91,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 8329｜fork 1084｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-26
+⭐ 8347｜fork 1090｜語言 Python｜建立 2026-03-23｜最後推送 2026-11-27
 
 ---
 

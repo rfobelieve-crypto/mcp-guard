@@ -5,12 +5,12 @@
 | 項目 | 內容 |
 |---|---|
 | 稽核對象 | `WenyuChiou/research-hub` |
-| 專案說明 | AI-operable research workspace for Zotero, Obsidian, and NotebookLM. Use any two |
-| 星數 / Fork | ⭐ 71 / 16 |
-| 最後更新 | 2026-11-27 |
+| 專案說明 | Local-first, evidence-grounded research workstation connecting AI agents (Claude |
+| 星數 / Fork | ⭐ 72 / 17 |
+| 最後更新 | 2026-11-28 |
 | 授權 | MIT License |
 | 已掃描檔案 | 415 個 |
-| 檢查時間 | 2026-11-27 03:36 |
+| 檢查時間 | 2026-11-28 03:13 |
 
 ## 風險摘要
 
@@ -28,7 +28,7 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 48 個外部主機
+### 🟡 中｜[權限] 會連往 49 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -64,7 +64,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`AGENTS.md（Agent 指令（AGENTS.md 慣例））、CLAUDE.md（Claude Code 專案指令（CLAUDE.md））、SKILL.md（Agent Skill 指令（SKILL.md））、skills/gap-to-topic/SKILL.md（Agent Skill 指令（SKILL.md））、skills/literature-triage-matrix/SKILL.md（Agent Skill 指令（SKILL.md））、skills/notebooklm-brief-verifier/SKILL.md（Agent Skill 指令（SKILL.md））…`
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 64 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 65 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -82,7 +82,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-27`
+> 證據：`最後推送 2026-11-28`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -92,7 +92,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 71｜fork 16｜語言 Python｜建立 2026-04-06｜最後推送 2026-11-27
+⭐ 72｜fork 17｜語言 Python｜建立 2026-04-06｜最後推送 2026-11-28
 
 ---
 

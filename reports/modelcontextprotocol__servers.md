@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `modelcontextprotocol/servers` |
 | 專案說明 | Model Context Protocol Reference Servers |
-| 星數 / Fork | ⭐ 92282 / 11993 |
-| 最後更新 | 2026-11-25 |
+| 星數 / Fork | ⭐ 92300 / 11999 |
+| 最後更新 | 2026-11-27 |
 | 授權 | Other |
 | npm 套件 | `@modelcontextprotocol/servers`（registry 查無） |
-| 已掃描檔案 | 401 個 |
-| 檢查時間 | 2026-11-27 03:29 |
+| 已掃描檔案 | 402 個 |
+| 檢查時間 | 2026-11-28 03:05 |
 
 ## 風險摘要
 
@@ -29,17 +29,23 @@
 
 eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻可能來自外部輸入。請確認被執行的字串不可被使用者或遠端資料操控。
 
-### 🟡 中｜[權限] 會連往 40 個外部主機
+### 🟡 中｜[權限] 會連往 44 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`anycast.example.com、docs.astral.sh、docs.example.com、elsewhere.example、eslint.org、evil.example、example.jp、feross.org、first.test、git.example.com…`
+> 證據：`anycast.example.com、docs.astral.sh、docs.example.com、elsewhere.example、eslint.org、evil.example、example.jp、feross.org、first.test、git-lfs.github.com…`
 
 ### 🔵 低｜[供應鏈] 有 13 個依賴未鎖定版本
 
 依賴用浮動版號，代表未來自動拉到的新版可能與你稽核過的內容不同。
 
 > 證據：`@modelcontextprotocol/server-everything@*、@modelcontextprotocol/server-filesystem@*、@modelcontextprotocol/server-memory@*、@modelcontextprotocol/server-sequential-thinking@*、@changesets/cli@^3.0.3、@eslint/js@^10.0.1…`
+
+### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
+
+確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
+
+> 證據：`.github/workflows/release.yml、scripts/image-smoke.mjs、src/everything/__tests__/collections.test.ts、src/everything/__tests__/gzip-file-as-resource.test.ts、src/everything/__tests__/icons.test.ts`
 
 ### 🔵 低｜[權限] 會讀取環境變數（符合宣稱用途）
 
@@ -51,13 +57,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 這個 MCP 能在你的電腦上執行系統指令。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`scripts/dependabot-alerts.mjs、scripts/dependency-refresh.mjs、scripts/gate-lease.mjs、scripts/gate-lease.test.mjs、scripts/interface-diff.mjs`
-
-### 🔵 低｜[權限] 會讀寫本機檔案（符合宣稱用途）
-
-確認它存取的路徑範圍，避免它能讀到憑證、金鑰或私人文件。「開發框架／工具鏈」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
-
-> 證據：`src/everything/__tests__/collections.test.ts、src/everything/__tests__/gzip-file-as-resource.test.ts、src/everything/__tests__/icons.test.ts、src/everything/__tests__/input-descriptions.test.ts、src/everything/__tests__/long-running-cancel.test.ts`
+> 證據：`scripts/dependabot-alerts.mjs、scripts/dependency-refresh.mjs、scripts/gate-lease.mjs、scripts/gate-lease.test.mjs、scripts/image-smoke.mjs`
 
 ### 🔵 低｜[身分] 未登錄官方 MCP registry
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 原始碼宣告了套件名但 registry 查不到，代表尚未發佈或用其他方式散布。
 
-### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 122 段 description）
+### ⚪ 資訊｜[工具描述投毒] 未發現可疑工具描述（已掃描 125 段 description）
 
 沒有偵測到已知的注入樣式與隱藏字元。這不等於絕對安全，但常見的 tool poisoning 手法都沒有命中。
 
@@ -87,15 +87,15 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-25`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 92282｜fork 11993｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-25
+⭐ 92300｜fork 11999｜語言 TypeScript｜建立 2024-11-19｜最後推送 2026-11-27
 
 ---
 

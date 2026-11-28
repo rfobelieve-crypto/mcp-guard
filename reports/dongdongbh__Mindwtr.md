@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `dongdongbh/Mindwtr` |
 | 專案說明 | Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobil |
-| 星數 / Fork | ⭐ 2482 / 174 |
+| 星數 / Fork | ⭐ 2487 / 174 |
 | 最後更新 | 2026-11-27 |
 | 授權 | GNU Affero General Public License v3.0 |
 | npm 套件 | `mindwtr-monorepo`（registry 查無） |
 | 已掃描檔案 | 419 個 |
-| 檢查時間 | 2026-11-27 03:33 |
+| 檢查時間 | 2026-11-28 03:10 |
 
 ## 風險摘要
 
@@ -29,7 +29,7 @@
 
 這個 MCP 能在你的電腦上執行系統指令。但它自述是「第三方 API 串接」，這類用途通常**不需要**這個能力。請確認這是必要功能，而不是多餘或被夾帶的權限。
 
-> 證據：`apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-dropbox-parity.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-about-device.mjs、apps/android-native/scripts/check-ai-device.mjs`
+> 證據：`apps/android-native/scripts/build-bytecode.mjs、apps/android-native/scripts/build-upgrade-harness.mjs、apps/android-native/scripts/capture-dropbox-parity.mjs、apps/android-native/scripts/capture-parity-screens.mjs、apps/android-native/scripts/check-about-device.mjs`
 
 ### 🟡 中｜[權限] 會連往 69 個外部主機
 
@@ -49,7 +49,7 @@
 
 > 證據：`.github/workflows/appstore-status.yml、.github/workflows/msstore-flight-id.yml、.github/workflows/native-platform-ci.yml、.github/workflows/release-macos-appstore.yml、.github/workflows/release-macos.yml`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（146 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（143 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -89,7 +89,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 2482｜fork 174｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-11-27
+⭐ 2487｜fork 174｜語言 TypeScript｜建立 2025-12-08｜最後推送 2026-11-27
 
 ---
 

@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `tolgee/tolgee-platform` |
 | 專案說明 | Developer & translator friendly web-based localization platform |
-| 星數 / Fork | ⭐ 4166 / 381 |
-| 最後更新 | 2026-11-26 |
+| 星數 / Fork | ⭐ 4166 / 382 |
+| 最後更新 | 2026-11-27 |
 | 授權 | Other |
 | npm 套件 | `@tolgee/server`（registry 查無） |
 | 已掃描檔案 | 409 個 |
-| 檢查時間 | 2026-11-27 03:32 |
+| 檢查時間 | 2026-11-28 03:08 |
 
 ## 風險摘要
 
@@ -25,11 +25,11 @@
 
 > 證據：`e2e/cypress/common/flakyReport.ts`
 
-### 🟡 中｜[權限] 會連往 20 個外部主機
+### 🟡 中｜[權限] 會連往 18 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
-> 證據：`accounts.google.com、cdn.jsdelivr.net、cdndev.tolg.ee、dl.google.com、dummy-url.com、e2e-site.test、extension.test、grafana.com、hibernate.atlassian.net、host.docker.internal…`
+> 證據：`accounts.google.com、cdn.jsdelivr.net、cdndev.tolg.ee、dummy-url.com、e2e-site.test、extension.test、grafana.com、hibernate.atlassian.net、host.docker.internal、mock.test…`
 
 ### 🔵 低｜[供應鏈] 有 5 個依賴未鎖定版本
 
@@ -43,7 +43,7 @@
 
 > 證據：`backend/app/build.gradle、backend/data/build.gradle、backend/testing/build.gradle、build.gradle、e2e/cypress/common/flakyReport.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（223 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（225 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -75,7 +75,7 @@
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-26`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -85,7 +85,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4166｜fork 381｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-11-26
+⭐ 4166｜fork 382｜語言 TypeScript｜建立 2020-10-13｜最後推送 2026-11-27
 
 ---
 

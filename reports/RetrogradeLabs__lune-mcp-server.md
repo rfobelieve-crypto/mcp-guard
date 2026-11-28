@@ -7,11 +7,11 @@
 | 稽核對象 | `RetrogradeLabs/lune-mcp-server` |
 | 專案說明 | Official MCP server for Lune Research: search top-tier papers and methodology gu |
 | 星數 / Fork | ⭐ 4 / 1 |
-| 最後更新 | 2026-11-25 |
+| 最後更新 | 2026-11-27 |
 | 授權 | MIT License |
 | npm 套件 | `@retrograde-labs/lune-mcp-server` |
 | 已掃描檔案 | 88 個 |
-| 檢查時間 | 2026-11-27 03:36 |
+| 檢查時間 | 2026-11-28 03:13 |
 
 ## 風險摘要
 
@@ -19,7 +19,7 @@
 
 ## 詳細發現
 
-### 🟡 中｜[權限] 會連往 16 個外部主機
+### 🟡 中｜[權限] 會連往 17 個外部主機
 
 確認這些連線是功能必需的，而不是把你的資料送到第三方。
 
@@ -35,7 +35,7 @@
 
 環境變數常存放 API 金鑰。確認它只讀自己需要的那幾個。「桌面／終端控制」類工具本來就需要這個能力，屬預期範圍；重點是你**知情**並給予對應的信任。
 
-> 證據：`src/analytics.ts、src/auth/token.ts、src/cache.ts、src/cli-runner.ts、src/conformance.ts`
+> 證據：`src/analytics.ts、src/api/client.ts、src/auth/token.ts、src/cache.ts、src/cli-runner.ts`
 
 ### 🔵 低｜[權限] 會執行外部指令 / 開子行程（符合宣稱用途）
 
@@ -67,11 +67,11 @@
 
 > 證據：`API_KEY、PASSWORD、PRIVATE_KEY、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 2 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-25`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：網域驗證
 
@@ -81,7 +81,7 @@
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 4｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-11-25
+⭐ 4｜fork 1｜語言 TypeScript｜建立 2026-05-10｜最後推送 2026-11-27
 
 ---
 

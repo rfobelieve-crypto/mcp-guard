@@ -6,12 +6,12 @@
 |---|---|
 | 稽核對象 | `ChromeDevTools/chrome-devtools-mcp` |
 | 專案說明 | Chrome DevTools for coding agents |
-| 星數 / Fork | ⭐ 59521 / 4898 |
-| 最後更新 | 2026-11-26 |
+| 星數 / Fork | ⭐ 59641 / 4857 |
+| 最後更新 | 2026-11-27 |
 | 授權 | Apache License 2.0 |
 | npm 套件 | `chrome-devtools-mcp` |
 | 已掃描檔案 | 378 個 |
-| 檢查時間 | 2026-11-27 03:30 |
+| 檢查時間 | 2026-11-28 03:06 |
 
 ## 風險摘要
 
@@ -31,7 +31,7 @@
 
 這段文字帶有講解或警告的語氣（被引號包住、或鄰近出現「不要／避免／untrusted」之類的字眼），因此已降級——安全類專案的文件經常引述這些寫法，把防禦方指控成攻擊方是更難挽回的錯誤。請確認它確實是在說明，而不是在指示。
 
-> 證據：`skills/inspect-in-devtools/SKILL.md｜「…server with a newer `--channel` (for example, `--channel=canary`). 3. Do not tell the user that the page is ready for review in DevTools.」`
+> 證據：`skills/inspect-in-devtools/SKILL.md｜「…server with a newer `--channel` (for example, `--channel=canary`). 3. Do not tell the user that the page is ready for review in DevTools. 4. If a background wat…」`
 
 ### 🟡 中｜[供應鏈] 安裝時會自動執行腳本：prepare
 
@@ -73,7 +73,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`scripts/count_tokens.ts、scripts/eval_gemini.ts、scripts/gclient-sync.ts、scripts/profile/footprint_mcp.ts、scripts/profile/profile_mcp.ts`
 
-### 🔵 低｜[維護] 未處理 issue 偏多（114 則）
+### 🔵 低｜[維護] 未處理 issue 偏多（112 則）
 
 可能代表維護者回應不及，遇到問題時求助無門。
 
@@ -97,11 +97,11 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 > 證據：`API_KEY、PASSWORD、SECRET、TOKEN`
 
-### ⚪ 資訊｜[維護] 最近 0 天內有更新
+### ⚪ 資訊｜[維護] 最近 1 天內有更新
 
 專案仍在活躍維護中。
 
-> 證據：`最後推送 2026-11-26`
+> 證據：`最後推送 2026-11-27`
 
 ### ⚪ 資訊｜[身分] 官方 registry：GitHub 帳號驗證
 
@@ -111,7 +111,7 @@ eval 會讓靜態稽核失效——原始碼看起來安全，執行的內容卻
 
 ### ⚪ 資訊｜[身分] 倉庫基本資料
 
-⭐ 59521｜fork 4898｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-26
+⭐ 59641｜fork 4857｜語言 TypeScript｜建立 2025-09-11｜最後推送 2026-11-27
 
 ---
 
